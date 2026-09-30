@@ -99,7 +99,8 @@ var PLUGINS = [
       { p: 'Per salvare una sola parte del modello si copia, si apre un nuovo file e si incolla sul posto.', s: 'Un comando: selezioni ed esporti.' },
       { p: 'Salvare "con nome" e cancellare il resto rischia di rovinare il file originale.', s: 'L\'esportazione avviene senza modificare il file aperto.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Export object'], ['Barra strumenti', '1 pulsante'], ['Formato', 'File .skp'], ['Annullamento', 'Il modello non viene modificato']]
+    specs: [['Menu', 'Robo Tool › robo Export object'], ['Barra strumenti', '1 pulsante'], ['Formato', 'File .skp'], ['Annullamento', 'Il modello non viene modificato']],
+    images: ['assets/img/screenshots/export_object-2.png']
   },
 
   /* ---------------------------------------------------------------- FILLET */
@@ -329,7 +330,8 @@ var PLUGINS = [
       { p: 'I comandi base sono sparsi tra menu e barre diverse.', s: 'Una sola barra con tutto quello che serve.' },
       { p: 'Incollare nella posizione originale richiede di cercare il comando nei menu.', s: 'Un pulsante dedicato.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Standard (11 voci)'], ['Barra strumenti', '11 pulsanti in 4 gruppi'], ['Comandi', 'Nuovo, Apri, Salva, Salva con nome, Taglia, Copia, Incolla, Incolla sul posto, Elimina, Annulla, Ripristina'], ['Annullamento', 'Un solo Ctrl+Z per azione']]
+    specs: [['Menu', 'Robo Tool › robo Standard (11 voci)'], ['Barra strumenti', '11 pulsanti in 4 gruppi'], ['Comandi', 'Nuovo, Apri, Salva, Salva con nome, Taglia, Copia, Incolla, Incolla sul posto, Elimina, Annulla, Ripristina'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
+    images: ['assets/img/screenshots/standard-1.png']
   },
 
   /* ----------------------------------------------------------------- START */
@@ -349,7 +351,8 @@ var PLUGINS = [
       { p: 'Le operazioni ripetitive richiedono menu e clic destro ogni volta.', s: 'Un pulsante, o una scorciatoia, per ciascuna.' },
       { p: 'Rimuovere guide o quote sparse nel modello è noioso.', s: 'Un pulsante le rimuove tutte.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo start (Elenco scorciatoie, Impostazioni, Guida)'], ['Barra strumenti', 'robo start, personalizzabile'], ['Guida', 'Finestra con elenco comandi'], ['Annullamento', 'Un solo Ctrl+Z per azione']]
+    specs: [['Menu', 'Robo Tool › robo start (Elenco scorciatoie, Impostazioni, Guida)'], ['Barra strumenti', 'robo start, personalizzabile'], ['Guida', 'Finestra con elenco comandi'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
+    images: ['assets/img/screenshots/start-1.png']
   },
 
   /* --------------------------------------------------------------- TANGENT */
