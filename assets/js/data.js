@@ -166,26 +166,6 @@ var PLUGINS = [
     specs: [['Finestra', '820 × 570 px, ridimensionabile'], ['Menu', 'Robo Tool › Robo Impact Objects'], ['Colonne', 'Livello, Entità, Istanze, Totale, MB'], ['Annullamento', 'Stato del modello ripristinato']]
   },
 
-  /* ---------------------------------------------------------------- LEANS ON */
-  {
-    id: 'leans_on', name: 'robo Leans on', version: '0.1', category: 'Modellazione', hue: 285,
-    tagline: 'Appoggia gli oggetti a una superficie, come nella realtà.',
-    simple: 'Seleziona un mobile o qualsiasi oggetto e indica la superficie: Robo lo appoggia esattamente lì, sul piano della faccia scelta oppure fermandolo al primo ostacolo che incontra.',
-    steps: ['Seleziona gli oggetti da appoggiare.', 'Scegli lo strumento: "Lean On Surface" oppure "Lean Until Blocked".', 'Passa sulla superficie, guarda l\'anteprima e clicca per appoggiare.'],
-    how: [
-      { t: 'Due strumenti', d: '"Lean On Surface" porta gli oggetti sul piano della faccia scelta; "Lean Until Blocked" li fa scendere lungo un raggio finché non toccano il primo ostacolo reale, ideale per pareti, pavimenti e superfici inclinate o organiche.' },
-      { t: 'Distanza e perpendicolarità', d: 'Da una piccola finestra Opzioni (o digitando nella casella delle misure) imposti la distanza dalla superficie e se l\'oggetto deve disporsi perpendicolare ad essa.' },
-      { t: 'Calcolo geometrico', d: 'Per ogni oggetto viene calcolato l\'ingombro reale e la normale della superficie, quindi la traslazione e la rotazione necessarie per farlo aderire.' },
-      { t: 'Annullamento semplice', d: 'Ogni appoggio è un\'unica operazione: Ctrl+Z lo annulla; ESC interrompe lo strumento.' }
-    ],
-    pros: ['Appoggio preciso in un clic', 'Funziona anche su superfici inclinate', 'Si ferma al primo ostacolo vero', 'Distanza e perpendicolarità regolabili'],
-    solves: [
-      { p: 'Far aderire un oggetto a una parete o a un piano inclinato richiede movimenti e rotazioni a occhio.', s: 'Lo strumento calcola posizione e orientamento in automatico.' },
-      { p: 'Oggetti che restano sospesi o affondano nella superficie.', s: 'La distanza impostata evita sia il vuoto sia la compenetrazione.' }
-    ],
-    specs: [['Menu', 'Robo Tool › robo Leans on (4 voci)'], ['Barra strumenti', '1 pulsante (apre il pannello con entrambi gli strumenti)'], ['Opzioni', 'Distanza + Perpendicolare'], ['Annullamento', 'Un solo Ctrl+Z']]
-  },
-
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
     id: 'library_explorer', name: 'robo Library Explorer', version: '1.0', category: 'Organizzazione', hue: 190,
@@ -429,7 +409,6 @@ var TOOLBARS = {
   extract: { name: 'robo Extract', groups: [[{ i: 'copy.png', l: 'robo Extract: copia facce e linee fuori dal gruppo' }]] },
   demolition: { name: 'robo Demolition', groups: [[{ i: 'demolition.png', l: 'robo Demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo Export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
-  leans_on: { name: 'robo Leans on', groups: [[{ i: 'face.png', l: "Lean On Surface: appoggia alla faccia (apre il pannello con anche Lean Until Blocked)" }]] },
   library_explorer: { name: 'robo Library Explorer', groups: [[{ i: 'explorer.png', l: "Apri robo Library Explorer" }]] },
   standard: { name: 'robo Standard', groups: [[{ i: 'nuovo.png', l: "Nuovo" }, { i: 'apri.png', l: "Apri" }, { i: 'salva.png', l: "Salva" }, { i: 'salvanome.png', l: "Salva con nome" }], [{ i: 'taglia.png', l: "Taglia" }, { i: 'copia.png', l: "Copia" }, { i: 'incolla.png', l: "Incolla" }, { i: 'incollaposto.png', l: "Incolla sul posto" }], [{ i: 'elimina.png', l: "Elimina" }], [{ i: 'annulla.png', l: "Annulla" }, { i: 'ripristina.png', l: "Ripristina" }]] }
 };
