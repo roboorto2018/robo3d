@@ -245,6 +245,31 @@ section { padding: 88px 0; }
 }
 .lightbox-close:hover { background: var(--red, #e02424); }
 
+/* Prev/next + counter, shown only when the source gallery has more than one item. */
+.lightbox-btn, .lightbox-count { display: none; }
+.lightbox.multi .lightbox-btn { display: flex; }
+.lightbox.multi .lightbox-count { display: block; }
+.lightbox-btn {
+  position: absolute; top: 50%; transform: translateY(-50%); align-items: center; justify-content: center;
+  width: 48px; height: 48px; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.12); color: #fff; cursor: pointer; transition: background .15s;
+}
+.lightbox-btn svg { width: 22px; height: 22px; }
+.lightbox-btn:hover { background: var(--red, #e02424); }
+.lightbox-prev { left: 18px; }
+.lightbox-next { right: 18px; }
+.lightbox-count {
+  position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+  font-size: .85rem; font-weight: 600; color: #fff; background: rgba(255,255,255,.12);
+  padding: 4px 12px; border-radius: 999px; letter-spacing: .02em;
+}
+@media (max-width: 720px) {
+  .lightbox { padding: 16px; }
+  .lightbox-btn { width: 40px; height: 40px; }
+  .lightbox-prev { left: 6px; }
+  .lightbox-next { right: 6px; }
+}
+
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .usage { display: grid; gap: 14px; margin-top: 8px; }
 .usage li { list-style: none; display: flex; gap: 14px; align-items: flex-start; }
