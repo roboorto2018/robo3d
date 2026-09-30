@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robo Tools — Plugin per SketchUp</title>
+  <meta name="description" content="Robo Tools: diciotto plugin per SketchUp che semplificano modellazione, distribuzione di oggetti, ottimizzazione e produttività.">
+  <link rel="icon" href="assets/img/icons/baseform.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Plugin per SketchUp</span>
+          <h1 style="margin-top:14px">Meno clic. <em>Più design.</em></h1>
+          <p class="lead">Robo Tools è una raccolta di plugin pensati per chi usa SketchUp ogni giorno: modellare con precisione, distribuire oggetti, alleggerire i modelli e risparmiare tempo sulle operazioni ripetitive.</p>
+          <div class="actions">
+            <a class="btn btn-red" href="#plugin">Scopri i plugin</a>
+            <a class="btn btn-ghost" href="#installazione">Come si installano</a>
+          </div>
+          <div class="hero-stats">
+            <div><b id="count">18</b><span>plugin</span></div>
+            <div><b>2021.1 – 2026</b><span>versioni di SketchUp</span></div>
+            <div><b>1 menu</b><span>Estensioni › Robo Tool</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <polygon points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" fill="#f4f4f5"/>
+            <g transform="translate(100 55) scale(.84) translate(-100 -55)"><polygon points="100,10 177.9,55 100,100 22.1,55" fill="#16171a"/></g>
+            <g transform="translate(61 122.5) scale(.84) translate(-61 -122.5)"><polygon points="22.1,55 100,100 100,190 22.1,145" fill="#16171a"/></g>
+            <g transform="translate(139 122.5) scale(.84) translate(-139 -122.5)"><polygon points="100,100 177.9,55 177.9,145 100,190" fill="#16171a"/></g>
+            <g transform="translate(100 55) scale(.5) translate(-100 -55)"><polygon points="100,10 177.9,55 100,100 22.1,55" fill="#e02424"/></g>
+            <g transform="translate(61 122.5) scale(.5) translate(-61 -122.5)"><polygon points="22.1,55 100,100 100,190 22.1,145" fill="#8b8d94"/></g>
+            <g transform="translate(139 122.5) scale(.5) translate(-139 -122.5)"><polygon points="100,100 177.9,55 177.9,145 100,190" fill="#8b8d94"/></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Perché Robo Tools</span>
+          <h2>Strumenti coerenti, pensati per lavorare insieme</h2>
+          <p>Ogni plugin risolve un problema preciso e si comporta come gli altri: stessa grafica, stessi criteri, stesso menu.</p>
+        </div>
+        <div class="values">
+          <div class="value">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></div>
+            <h3>Un solo menu</h3>
+            <p>Tutti i plugin si trovano in Estensioni › Robo Tool, con la loro icona, anche nel menu di SketchUp 2026.</p>
+          </div>
+          <div class="value">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div>
+            <h3>Sempre annullabile</h3>
+            <p>Ogni operazione sul modello è un unico passo: un solo Ctrl+Z e torni indietro, senza geometria lasciata a metà.</p>
+          </div>
+          <div class="value">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 3.8 8.4 9 9 5.2-.6 9-4 9-9V7l-9-5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Rispettano il tuo modello</h3>
+            <p>Usano le unità e la precisione del tuo file, mostrano un'anteprima prima di agire e non modificano ciò che non hai selezionato.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plugin" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">I plugin</span>
+          <h2>Diciassette strumenti, uno per ogni problema</h2>
+          <p>Apri la scheda di ciascuno per una spiegazione semplice, una presentazione tecnica, i vantaggi e i problemi che risolve.</p>
+        </div>
+        <div class="chips" id="chips"></div>
+        <div class="grid" id="grid"></div>
+        <noscript><p>Per vedere l'elenco dei plugin è necessario abilitare JavaScript.</p></noscript>
+      </div>
+    </section>
+
+    <section id="installazione">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Installazione</span>
+          <h2>Pronti in tre passi</h2>
+          <p>I plugin sono compatibili con SketchUp 2021.1 e successivi, su Windows e macOS.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><h3>Installa</h3><p>In SketchUp apri Finestra › Gestione estensioni › Installa estensione e scegli il file .rbz del plugin.</p></div>
+          <div class="step"><h3>Riavvia</h3><p>Riavvia SketchUp: i plugin compaiono in Estensioni › Robo Tool e nelle barre degli strumenti.</p></div>
+          <div class="step"><h3>Attiva la barra</h3><p>Se non vedi il pulsante, apri Vista › Barre degli strumenti e spunta quella del plugin.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
