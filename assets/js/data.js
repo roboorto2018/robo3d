@@ -314,6 +314,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- SPACING */
   {
     id: 'spacing_tool', name: 'robo Spacing Tool', version: '1.2', category: 'Distribuzione', hue: 268,
+    images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
     tagline: 'Copie perfettamente spaziate lungo una linea o una curva.',
     simple: 'Scegli un oggetto e un percorso (una linea, un arco, una curva anche chiusa): Robo mette le copie a distanza regolare lungo il percorso, come lampioni lungo una strada o sedie attorno a un tavolo.',
     steps: ['Seleziona l\'oggetto e il percorso (le linee).', 'Scegli "Numero" di copie oppure "Distanza" fissa.', 'Regola rotazione e scala, guarda l\'anteprima e conferma.'],
@@ -374,6 +375,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- TANGENT */
   {
     id: 'tangent', name: 'robo Tangent', version: '1.2', category: 'Modellazione', hue: 160,
+    images: ['assets/img/screenshots/tangent-1.png', 'assets/img/screenshots/tangent-2.png', 'assets/img/screenshots/tangent-3.png', 'assets/img/screenshots/tangent-4.png', 'assets/img/screenshots/tangent-5.png', 'assets/img/screenshots/tangent-6.png', 'assets/img/screenshots/tangent-7.png'],
     tagline: 'La tangente esatta tra archi, cerchi e segmenti.',
     simple: 'Clicca due cerchi (o un cerchio e una linea) e lo strumento disegna la linea che li tocca esattamente in un punto ciascuno. Vedi le possibilità in anteprima e scegli quella che ti serve muovendo il mouse.',
     steps: ['Attiva robo Tangent: passa sopra gli elementi, si illuminano di giallo.', 'Clicca il primo (rosso) e il secondo elemento (blu).', 'Muovi il mouse per scegliere la tangente verde e clicca per disegnarla.'],
