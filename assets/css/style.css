@@ -44,6 +44,26 @@ p { margin: 0; }
 .nav .cta { background: var(--ink); color: #fff; }
 .nav .cta:hover { background: var(--red); color: #fff; }
 
+/* Language switcher: black globe + label, dropdown (same pattern as the plugins' own dialogs). */
+.lang-wrap { position: relative; margin-left: 2px; }
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: #fff; color: var(--ink); font-size: .88rem; font-weight: 500; cursor: pointer;
+}
+.lang-btn:hover { border-color: var(--ink); background: var(--bg-soft); }
+.lang-menu {
+  position: absolute; top: 40px; right: 0; background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: var(--shadow-lg); list-style: none; min-width: 140px; z-index: 200; padding: 6px; margin: 0;
+}
+.lang-menu[hidden] { display: none; }
+.lang-item {
+  display: block; width: 100%; padding: 8px 10px; border: none; border-radius: 6px; background: #fff;
+  color: var(--ink); font-size: .9rem; text-align: left; cursor: pointer;
+}
+.lang-item:hover { background: var(--bg-soft); }
+.lang-item.active { background: var(--ink); color: #fff; font-weight: 700; }
+@media (max-width: 720px) { .lang-btn span { display: none; } .lang-btn { padding: 0 9px; } }
+
 /* ------------------------------------------------------------------ hero */
 .hero {
   position: relative; overflow: hidden; color: #fff;

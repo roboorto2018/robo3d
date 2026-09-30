@@ -8,7 +8,7 @@
    ============================================================================ */
 var SITE = {
   name: 'Robo Tools',
-  compat: 'SketchUp 2021.1 – 2026',
+  compat: 'SketchUp 2021.1 – 2027',
   menu: 'Estensioni › Robo Tool'
 };
 
@@ -18,6 +18,7 @@ var PLUGINS = [
   /* ------------------------------------------------------------------ BASEFORM */
   {
     id: 'baseform', name: 'robo baseform', version: '1.0', category: 'Modellazione', hue: 12,
+    images: ['assets/img/screenshots/baseform-1.png', 'assets/img/screenshots/baseform-2.png', 'assets/img/screenshots/baseform-3.png'],
     tagline: 'Cubo, cilindro, cono, sfere e toro: forme precise in un clic.',
     simple: 'Scegli dall\'elenco l\'oggetto che ti serve (cubo, cilindro, cono, tronco di cono, sfera, icosfera o toro), imposta le misure e clicca nel modello: la forma compare esattamente dove vuoi, già liscia e pronta all\'uso.',
     steps: ['Apri robo baseform dalla barra strumenti o dal menu Robo Tool.', 'Scegli l\'oggetto dall\'elenco e inserisci le sue misure.', 'Muovi il mouse: vedi la forma fantasma. Clicca per posizionarla.'],
@@ -44,6 +45,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- EXTRACT */
   {
     id: 'extract', name: 'robo Extract', version: '1.0', category: 'Modellazione', hue: 170,
+    images: ['assets/img/screenshots/extract-1.png'],
     tagline: 'Copia facce e linee fuori dai gruppi, nella stessa posizione.',
     simple: 'Passa il mouse su una faccia o una linea di qualsiasi gruppo o componente, anche chiuso: Robo la evidenzia e, con un clic, ne crea una copia fuori dal gruppo, nella stessa identica posizione e inclinazione. Funziona su piani inclinati e su forme organiche, e non serve aprire né selezionare nulla.',
     steps: ['Clicca il pulsante robo Extract nella barra strumenti (o nel menu): parte lo strumento e si apre la finestra delle preferenze.', 'Passa il mouse su una faccia o una linea: diventa arancione e la barra di stato dice dove andrà la copia.', 'Clicca: la copia compare in un nuovo gruppo, già selezionata. Maiusc+clic per aggiungerne altre.'],
@@ -64,6 +66,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- DEMOLITION */
   {
     id: 'demolition', name: 'robo Demolition', version: '1.0', category: 'Modellazione', hue: 15,
+    images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
     simple: 'Seleziona facce, gruppi o componenti pesanti: robo Demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Usa Open3D (Python, in locale sul tuo computer); gli oggetti interni restano oggetti e i materiali restano al loro posto.',
     steps: ['Seleziona le facce, i gruppi o i componenti da alleggerire.', 'Premi Anteprima: la mesh più leggera viene disegnata in blu sul modello. Muovi la barra per demolire di più o di meno.', 'Premi Applica: un solo Ctrl+Z ripristina tutto.'],
@@ -102,6 +105,7 @@ var PLUGINS = [
   /* ---------------------------------------------------------------- FILLET */
   {
     id: 'fillet', name: 'robo Fillet', version: '1.1', category: 'Modellazione', hue: 200,
+    images: ['assets/img/screenshots/fillet-1.png', 'assets/img/screenshots/fillet-2.png', 'assets/img/screenshots/fillet-3.png', 'assets/img/screenshots/fillet-4.png', 'assets/img/screenshots/fillet-5.png'],
     tagline: 'Raccordi e smussi tra due linee, su qualsiasi piano.',
     simple: 'Clicca due linee che si incontrano in un angolo, scegli il raggio: l\'angolo spigoloso diventa una curva morbida (oppure uno smusso). Funziona su qualsiasi piano nello spazio, non solo sul pavimento.',
     steps: ['Attiva robo Fillet e clicca la prima linea (si colora di rosso).', 'Clicca la seconda linea (blu) e inserisci raggio e numero di segmenti.', 'Controlla l\'anteprima verde e premi Applica.'],
@@ -122,6 +126,7 @@ var PLUGINS = [
   /* ------------------------------------------------------- GROUP TO COMPONENT */
   {
     id: 'group_to_component', name: 'robo Group to Component', version: '1.2', category: 'Organizzazione', hue: 32,
+    images: ['assets/img/screenshots/group_to_component-1.png', 'assets/img/screenshots/group_to_component-2.png', 'assets/img/screenshots/group_to_component-3.png', 'assets/img/screenshots/group_to_component-4.png'],
     tagline: 'Trasforma i gruppi in componenti, unendo quelli identici.',
     simple: 'Seleziona molti gruppi: Robo riconosce quelli con la stessa forma e li trasforma in copie dello stesso componente. Il file diventa più leggero e, modificandone uno, cambiano tutti.',
     steps: ['Seleziona i gruppi da convertire.', 'Apri robo Group to Component: vedi quanti sono identici e quanti unici.', 'Scegli nome e opzioni e conferma.'],
@@ -142,6 +147,7 @@ var PLUGINS = [
   /* ---------------------------------------------------------------- IMPACT */
   {
     id: 'impact_object', name: 'robo Impact Object', version: '1.1', category: 'Ottimizzazione', hue: 348,
+    images: ['assets/img/screenshots/impact_object-1.png', 'assets/img/screenshots/impact_object-2.png'],
     tagline: 'Scopri quali oggetti appesantiscono il tuo modello.',
     simple: 'Una tabella ordinabile ti mostra quanto "pesa" ogni componente del modello, tenendo conto anche di quante volte è ripetuto. Così trovi subito alberi, arredi o dettagli che rallentano SketchUp.',
     steps: ['Apri robo Impact Object dal menu.', 'Ordina la tabella per Totale e individua le righe più pesanti.', 'Selezionale, isolale con lo zoom o elimina ciò che non serve.'],
@@ -204,6 +210,7 @@ var PLUGINS = [
   /* ------------------------------------------------------------- PLACEMENT */
   {
     id: 'placement', name: 'robo Placement', version: '0.9', category: 'Distribuzione', hue: 130,
+    images: ['assets/img/screenshots/placement-1.png', 'assets/img/screenshots/placement-2.png', 'assets/img/screenshots/placement-3.png', 'assets/img/screenshots/placement-4.png'],
     tagline: 'Distribuisci oggetti a caso su qualsiasi superficie.',
     simple: 'Scegli un oggetto (un albero, un sasso, un mobile) e una superficie: Robo ne dispone tante copie sparse in modo naturale, con scala e rotazione leggermente diverse per ogni copia.',
     steps: ['Seleziona il componente o gruppo da distribuire.', 'Indica la faccia bersaglio e regola quantità, scala e rotazione.', 'Guarda l\'anteprima dal vivo e premi Applica.'],
@@ -224,6 +231,7 @@ var PLUGINS = [
   /* ----------------------------------------------------------------- PROXY */
   {
     id: 'proxy_manager', name: 'robo Proxy Manager', version: '0.5', category: 'Ottimizzazione', hue: 220,
+    images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
     tagline: 'Sostituisci gli oggetti pesanti con proxy leggeri.',
     simple: 'Alberi, arredi e persone dettagliati rendono il modello lentissimo. Con Robo li sostituisci con "segnaposto" leggeri e li ritrovi identici quando ti servono, con un clic destro.',
     steps: ['Seleziona gli oggetti pesanti e scegli il tipo di proxy.', 'Robo salva l\'originale in un file esterno e mette al suo posto il proxy.', 'Gestisci o ripristina gli originali dal Proxy Manager o col clic destro.'],
@@ -264,6 +272,7 @@ var PLUGINS = [
   /* ----------------------------------------------------------------- SCALE */
   {
     id: 'scale_definition', name: 'robo Scale Definition', version: '0.7', category: 'Organizzazione', hue: 24,
+    images: ['assets/img/screenshots/scale_definition-1.png', 'assets/img/screenshots/scale_definition-2.png', 'assets/img/screenshots/scale_definition-3.png'],
     tagline: 'Fissa la scala nella geometria e riporta tutto a 1.0.',
     simple: 'Se hai ingrandito o rimpicciolito un componente, SketchUp ricorda quel "fattore di scala" a parte. Robo lo incorpora nella geometria e riporta la scala a 1.0: dimensioni e materiali diventano corretti per il rendering.',
     steps: ['Seleziona uno o più gruppi o componenti.', 'Apri robo Scale Definition e scegli la modalità.', 'Clicca Applica: leggi il riepilogo dell\'operazione.'],
@@ -284,6 +293,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- SECTION */
   {
     id: 'section', name: 'robo section', version: '1.2', category: 'Organizzazione', hue: 210,
+    images: ['assets/img/screenshots/section-1.png', 'assets/img/screenshots/section-2.png', 'assets/img/screenshots/section-3.png', 'assets/img/screenshots/section-4.png', 'assets/img/screenshots/section-5.png'],
     tagline: 'Tutti i piani di sezione in un solo pannello.',
     simple: 'Nei modelli complessi i piani di sezione sono sparsi dentro gruppi e componenti. Robo li trova tutti, li mostra in un elenco e ti permette di attivarli, rinominarli, spostarli e collegarli alle scene.',
     steps: ['Apri il pannello robo section: compare l\'elenco di tutti i piani.', 'Attiva, rinomina o seleziona un piano dalla lista.', 'Salva lo stato nelle scene, oppure isola gli oggetti in un gruppo sezionabile.'],

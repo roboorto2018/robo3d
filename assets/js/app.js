@@ -123,13 +123,44 @@
     return (part ? list.slice(cut) : list.slice(0, cut)).join('</a>') + '</a>';
   }
 
+  /* GLOBE (nera) — stesso disegno usato nelle finestre dei plugin (vedi robo Fillet). */
+  var GLOBE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20"></path></svg>';
+
+  function buildLangMenu() {
+    var menu = $('#langMenu');
+    if (!menu) { return; }
+    var cur = getLang(), html = '';
+    for (var i = 0; i < LANGS.length; i++) {
+      html += '<li><button type="button" class="lang-item' + (LANGS[i][0] === cur ? ' active' : '') + '" data-lang="' + LANGS[i][0] + '">' + esc(LANGS[i][1]) + '</button></li>';
+    }
+    menu.innerHTML = html;
+  }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('#langBtn') : null;
+    var menu = $('#langMenu');
+    if (btn) {
+      e.preventDefault(); e.stopPropagation();
+      if (menu) { menu.hidden = !menu.hidden; }
+      return;
+    }
+    var item = e.target.closest ? e.target.closest('.lang-item') : null;
+    if (item) {
+      setLang(item.getAttribute('data-lang'));
+      location.reload();
+      return;
+    }
+    if (menu && !menu.hidden && (!e.target.closest || !e.target.closest('.lang-wrap'))) { menu.hidden = true; }
+  });
+
   /* ------------------------------------------------------ header + footer */
   function chrome(isHome) {
     var base = isHome ? '' : 'index.html';
     $('#site-header').innerHTML =
       '<div class="wrap"><a class="brand" href="index.html">' + LOGO + '<span>' + esc(SITE.name) + '</span></a>' +
-      '<nav class="nav"><a href="' + base + '#plugin">Plugin</a><a href="' + base + '#installazione">Installazione</a><a href="contatti.html">Contatti</a>' +
-      '<a class="cta" href="' + base + '#plugin">Scopri i plugin</a></nav></div>';
+      '<nav class="nav"><a href="' + base + '#plugin">' + tUI('nav.plugin') + '</a><a href="' + base + '#installazione">' + tUI('nav.install') + '</a><a href="contatti.html">' + tUI('nav.contact') + '</a>' +
+      '<div class="lang-wrap"><button class="lang-btn" id="langBtn" type="button" title="' + esc(tUI('lang.title')) + '">' + GLOBE + '<span>' + esc(tUI('lang.label')) + '</span></button><ul class="lang-menu" id="langMenu" hidden></ul></div>' +
+      '<a class="cta" href="' + base + '#plugin">' + tUI('nav.cta') + '</a></nav></div>';
+    buildLangMenu();
 
     var links = '';
     for (var i = 0; i < PLUGINS.length; i++) {
@@ -137,27 +168,28 @@
     }
     $('#site-footer').innerHTML =
       '<div class="wrap"><div><a class="brand" href="index.html">' + LOGO + '<span>' + esc(SITE.name) + '</span></a>' +
-      '<p>Plugin per SketchUp che semplificano il lavoro di ogni giorno.<br>Compatibili con ' + esc(SITE.compat) + '.</p>' +
-      '<p style="margin-top:10px"><a href="contatti.html" style="display:inline;font-weight:600;color:#fff">Contattaci →</a></p></div>' +
-      '<div><h4>Plugin</h4>' + half(links, 0) + '</div>' +
+      '<p>' + tUI('footer.tagline') + '<br>' + tUI('footer.compat') + ' ' + esc(SITE.compat) + '.</p>' +
+      '<p style="margin-top:10px"><a href="contatti.html" style="display:inline;font-weight:600;color:#fff">' + tUI('footer.contact') + '</a></p></div>' +
+      '<div><h4>' + tUI('nav.plugin') + '</h4>' + half(links, 0) + '</div>' +
       '<div><h4>&nbsp;</h4>' + half(links, 1) + '</div>' +
-      '<p class="copy">© ' + new Date().getFullYear() + ' Robo Tools. Tutti i diritti riservati.</p></div>';
+      '<p class="copy">© ' + new Date().getFullYear() + ' Robo Tools. ' + tUI('footer.copy') + '</p></div>';
   }
 
   /* ------------------------------------------------------------------ home */
   function card(p) {
     return '<a class="card" href="plugin.html?id=' + p.id + '" data-cat="' + esc(p.category) + '">' +
-      '<div class="thumb">' + gallery(imgs(p), 0, 'Anteprima di ' + p.name, '<span class="badge">' + esc(p.category) + '</span>') + '</div>' +
+      '<div class="thumb">' + gallery(imgs(p), 0, tUI('gal.previewof').replace('{n}', p.name), '<span class="badge">' + esc(catLabel(p.category)) + '</span>') + '</div>' +
       '<div class="body"><div class="head">' + icon(p) + '<div><h3>' + esc(p.name) + '</h3><span class="ver">v' + esc(p.version) + '</span></div></div>' +
-      '<p>' + esc(p.tagline) + '</p><span class="more">Scopri di più →</span></div></a>';
+      '<p>' + esc(pf(p, 'tagline')) + '</p><span class="more">' + tUI('card.more') + '</span></div></a>';
   }
 
   function home() {
     chrome(true);
+    applyStaticI18n();
     $('#count').textContent = PLUGINS.length;
-    var chips = '<button class="chip on" data-f="">Tutti</button>';
+    var chips = '<button class="chip on" data-f="">' + tUI('chip.all') + '</button>';
     for (var i = 0; i < CATEGORIES.length; i++) {
-      chips += '<button class="chip" data-f="' + esc(CATEGORIES[i]) + '">' + esc(CATEGORIES[i]) + '</button>';
+      chips += '<button class="chip" data-f="' + esc(CATEGORIES[i]) + '">' + esc(catLabel(CATEGORIES[i])) + '</button>';
     }
     $('#chips').innerHTML = chips;
     var html = '';
@@ -184,30 +216,31 @@
     var idx = m ? byId(m[1]) : -1;
     var root = $('#plugin-root');
     if (idx < 0) {
-      root.innerHTML = '<div class="wrap" style="padding:120px 0"><h1>Plugin non trovato</h1><p class="muted" style="margin-top:12px">Torna alla <a href="index.html#plugin" style="color:var(--red)">lista dei plugin</a>.</p></div>';
+      root.innerHTML = '<div class="wrap" style="padding:120px 0"><h1>' + tUI('plugin.notfound.title') + '</h1><p class="muted" style="margin-top:12px"><a href="index.html#plugin" style="color:var(--red)">' + tUI('plugin.notfound.back') + '</a></p></div>';
       return;
     }
     var p = PLUGINS[idx];
     var im = imgs(p);
+    var tagline = pf(p, 'tagline'), simple = pf(p, 'simple'), pSteps = pf(p, 'steps'), pHow = pf(p, 'how'), pPros = pf(p, 'pros'), pSolves = pf(p, 'solves'), pSpecs = pf(p, 'specs');
     document.title = p.name + ' — Robo Tools';
     var meta = $('meta[name="description"]');
-    if (meta) { meta.setAttribute('content', p.tagline + ' ' + p.simple); }
+    if (meta) { meta.setAttribute('content', tagline + ' ' + simple); }
 
     var steps = '';
-    for (var a = 0; a < p.steps.length; a++) { steps += '<li><span>' + esc(p.steps[a]) + '</span></li>'; }
+    for (var a = 0; a < pSteps.length; a++) { steps += '<li><span>' + esc(pSteps[a]) + '</span></li>'; }
     var how = '';
-    for (var b = 0; b < p.how.length; b++) {
-      how += '<div class="item"><h3><i>0' + (b + 1) + '</i>' + esc(p.how[b].t) + '</h3><p>' + esc(p.how[b].d) + '</p></div>';
+    for (var b = 0; b < pHow.length; b++) {
+      how += '<div class="item"><h3><i>0' + (b + 1) + '</i>' + esc(pHow[b].t) + '</h3><p>' + esc(pHow[b].d) + '</p></div>';
     }
     var pros = '';
-    for (var c = 0; c < p.pros.length; c++) { pros += '<li>' + CHECK + '<span>' + esc(p.pros[c]) + '</span></li>'; }
+    for (var c = 0; c < pPros.length; c++) { pros += '<li>' + CHECK + '<span>' + esc(pPros[c]) + '</span></li>'; }
     var solve = '';
-    for (var d = 0; d < p.solves.length; d++) {
-      solve += '<div class="row"><div class="p"><small>Il problema</small>' + esc(p.solves[d].p) + '</div>' +
-        '<div class="arrow">' + ARROW + '</div><div class="s"><small>Con ' + esc(p.name) + '</small>' + esc(p.solves[d].s) + '</div></div>';
+    for (var d = 0; d < pSolves.length; d++) {
+      solve += '<div class="row"><div class="p"><small>' + tUI('plugin.solve.problem') + '</small>' + esc(pSolves[d].p) + '</div>' +
+        '<div class="arrow">' + ARROW + '</div><div class="s"><small>' + tUI('plugin.solve.with') + esc(p.name) + '</small>' + esc(pSolves[d].s) + '</div></div>';
     }
-    var specs = '<tr><th>Versione</th><td>' + esc(p.version) + '</td></tr><tr><th>Compatibilità</th><td>' + esc(SITE.compat) + '</td></tr>';
-    for (var e = 0; e < p.specs.length; e++) { specs += '<tr><th>' + esc(p.specs[e][0]) + '</th><td>' + esc(p.specs[e][1]) + '</td></tr>'; }
+    var specs = '<tr><th>' + tUI('specs.version') + '</th><td>' + esc(p.version) + '</td></tr><tr><th>' + tUI('specs.compat') + '</th><td>' + esc(SITE.compat) + '</td></tr>';
+    for (var e = 0; e < pSpecs.length; e++) { specs += '<tr><th>' + esc(pSpecs[e][0]) + '</th><td>' + esc(pSpecs[e][1]) + '</td></tr>'; }
 
     var tb = TOOLBARS[p.id];
     var tbHtml = '';
@@ -232,9 +265,9 @@
         }
         shapesHtml += '</ul>';
       }
-      tbHtml = '<section><div class="wrap"><div class="section-head"><span class="eyebrow">Nella barra strumenti</span>' +
-        '<h2>' + (total === 1 ? 'Un solo pulsante' : total + ' pulsanti') + ' a portata di clic</h2>' +
-        '<p>Ecco come compare la barra <b>' + esc(tb.name) + '</b> in SketchUp. Passa il mouse sui pulsanti per leggerne il nome.</p></div>' +
+      tbHtml = '<section><div class="wrap"><div class="section-head"><span class="eyebrow">' + tUI('tb.eyebrow') + '</span>' +
+        '<h2>' + tUI(total === 1 ? 'tb.h2.one' : 'tb.h2.many').replace('{n}', total) + '</h2>' +
+        '<p>' + tUI('tb.lead').replace('{tb}', '<b>' + esc(tb.name) + '</b>') + '</p></div>' +
         '<div class="tb-frame"><div class="tb-bar' + (total > 8 ? ' compact' : '') + '"><span class="tb-grip"></span>' + groups + '</div></div>' +
         '<ul class="tb-legend' + (total > 8 ? ' many' : '') + '">' + legend + '</ul>' + shapesHtml + '</div></section>';
     }
@@ -243,35 +276,35 @@
     var next = PLUGINS[(idx + 1) % PLUGINS.length];
 
     root.innerHTML =
-      '<div class="wrap crumbs"><a href="index.html">Home</a> / <a href="index.html#plugin">Plugin</a> / ' + esc(p.name) + '</div>' +
+      '<div class="wrap crumbs"><a href="index.html">' + tUI('crumb.home') + '</a> / <a href="index.html#plugin">' + tUI('nav.plugin') + '</a> / ' + esc(p.name) + '</div>' +
       '<div class="p-hero"><div class="wrap"><div>' +
-        '<span class="eyebrow">' + esc(p.category) + '</span>' +
+        '<span class="eyebrow">' + esc(catLabel(p.category)) + '</span>' +
         '<div class="p-title">' + icon(p) + '<h1>' + esc(p.name) + '</h1><span class="pill dark">v' + esc(p.version) + '</span></div>' +
-        '<p class="tag">' + esc(p.tagline) + '</p>' +
-        '<p class="simple">' + esc(p.simple) + '</p>' +
-        '<div class="actions"><a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/' + esc(p.id) + '.rbz" download>Scarica (.rbz)</a><a class="btn btn-dark" href="#tecnica">Come funziona</a><a class="btn btn-outline" href="index.html#plugin">Tutti i plugin</a></div>' +
-      '</div><div class="shot">' + gallery(im, 0, 'Immagine di ' + p.name) + '</div></div></div>' +
+        '<p class="tag">' + esc(tagline) + '</p>' +
+        '<p class="simple">' + esc(simple) + '</p>' +
+        '<div class="actions"><a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/' + esc(p.id) + '.rbz" download>' + tUI('plugin.download') + '</a><a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
+      '</div><div class="shot">' + gallery(im, 0, tUI('gal.imageof').replace('{n}', p.name)) + '</div></div></div>' +
 
       tbHtml +
-      '<section class="alt"><div class="wrap two"><div class="shot">' + gallery(im, 1, p.name + ' in uso') + '</div>' +
-        '<div><span class="eyebrow">In parole semplici</span><h2 style="margin:10px 0 18px;font-size:clamp(1.6rem,3vw,2.2rem)">Come si usa</h2>' +
+      '<section class="alt"><div class="wrap two"><div class="shot">' + gallery(im, 1, tUI('gal.inuse').replace('{n}', p.name)) + '</div>' +
+        '<div><span class="eyebrow">' + tUI('plugin.simple.eyebrow') + '</span><h2 style="margin:10px 0 18px;font-size:clamp(1.6rem,3vw,2.2rem)">' + tUI('plugin.simple.h2') + '</h2>' +
         '<ol class="usage">' + steps + '</ol></div></div></section>' +
 
-      '<section id="tecnica"><div class="wrap"><div class="section-head"><span class="eyebrow">Approfondimento tecnico</span>' +
-        '<h2>Come funziona</h2><p>Cosa succede dietro le quinte quando usi ' + esc(p.name) + '.</p></div><div class="tech">' + how + '</div></div></section>' +
+      '<section id="tecnica"><div class="wrap"><div class="section-head"><span class="eyebrow">' + tUI('plugin.tech.eyebrow') + '</span>' +
+        '<h2>' + tUI('plugin.tech.h2') + '</h2><p>' + tUI('plugin.tech.lead') + esc(p.name) + '.</p></div><div class="tech">' + how + '</div></div></section>' +
 
-      '<section class="alt"><div class="wrap"><div class="section-head"><span class="eyebrow">Perché sceglierlo</span><h2>I vantaggi</h2></div>' +
+      '<section class="alt"><div class="wrap"><div class="section-head"><span class="eyebrow">' + tUI('plugin.pros.eyebrow') + '</span><h2>' + tUI('plugin.pros.h2') + '</h2></div>' +
         '<ul class="pros">' + pros + '</ul></div></section>' +
 
-      '<section><div class="wrap"><div class="section-head"><span class="eyebrow">Prima e dopo</span><h2>Quali problemi risolve</h2></div>' +
+      '<section><div class="wrap"><div class="section-head"><span class="eyebrow">' + tUI('plugin.solve.eyebrow') + '</span><h2>' + tUI('plugin.solve.h2') + '</h2></div>' +
         '<div class="solve">' + solve + '</div></div></section>' +
 
-      '<section class="alt"><div class="wrap"><div class="section-head"><span class="eyebrow">In sintesi</span><h2>Scheda tecnica</h2></div>' +
+      '<section class="alt"><div class="wrap"><div class="section-head"><span class="eyebrow">' + tUI('plugin.specs.eyebrow') + '</span><h2>' + tUI('plugin.specs.h2') + '</h2></div>' +
         '<table class="specs"><tbody>' + specs + '</tbody></table></div></section>' +
 
       '<section><div class="wrap"><div class="pn">' +
-        '<a href="plugin.html?id=' + prev.id + '"><small>← Precedente</small><b>' + esc(prev.name) + '</b></a>' +
-        '<a class="next" href="plugin.html?id=' + next.id + '"><small>Successivo →</small><b>' + esc(next.name) + '</b></a></div></div></section>';
+        '<a href="plugin.html?id=' + prev.id + '"><small>' + tUI('nav.prev') + '</small><b>' + esc(prev.name) + '</b></a>' +
+        '<a class="next" href="plugin.html?id=' + next.id + '"><small>' + tUI('nav.next') + '</small><b>' + esc(next.name) + '</b></a></div></div></section>';
   }
 
   /* ------------------------------------------------------------- contatti */
@@ -281,8 +314,10 @@
 
   function contact() {
     chrome(false);
+    applyStaticI18n();
     var sel = $('#f-plugin');
-    var opts = '<option value="Informazioni generali">Informazioni generali</option>';
+    var generalLabel = tUI('form.topic.general');
+    var opts = '<option value="' + esc(generalLabel) + '">' + esc(generalLabel) + '</option>';
     for (var i = 0; i < PLUGINS.length; i++) {
       opts += '<option value="' + esc(PLUGINS[i].name) + '">' + esc(PLUGINS[i].name) + '</option>';
     }
@@ -300,36 +335,36 @@
       if ($('#f-honey').value) { return; } // hidden field only robots fill in
       var name = $('#f-name').value.trim(), email = $('#f-email').value.trim(), msg = $('#f-msg').value.trim();
       if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || msg.length < 10) {
-        say('err', 'Controlla i campi: servono nome, un\'email valida e un messaggio di almeno 10 caratteri.');
+        say('err', tUI('form.err.fields'));
         return;
       }
       if (!$('#f-privacy').checked) {
-        say('err', 'Per inviare la richiesta devi acconsentire al trattamento dei dati.');
+        say('err', tUI('form.err.privacy'));
         return;
       }
       btn.disabled = true;
-      say('info', 'Invio in corso…');
+      say('info', tUI('form.sending'));
       var data = new FormData();
       data.append('Nome', name);
       data.append('Email', email);
       data.append('Argomento', sel.value);
       data.append('Messaggio', msg);
-      data.append('_subject', 'Richiesta informazioni dal sito Robo Tools — ' + sel.value);
+      data.append('_subject', tUI('form.subject.formsubmit') + sel.value);
       data.append('_replyto', email);
       data.append('_template', 'table');
-      var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Richiesta informazioni — ' + sel.value) +
+      var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(tUI('form.subject.mailto') + sel.value) +
         '&body=' + encodeURIComponent(msg + '\n\n' + name + ' (' + email + ')');
       fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data })
         .then(function (r) { return r.json(); })
         .then(function (j) {
           if (j && (j.success === true || j.success === 'true')) {
             form.reset();
-            say('ok', '<b>Richiesta inviata.</b> Grazie! Ti risponderò all\'indirizzo che hai indicato.');
+            say('ok', tUI('form.ok'));
           } else {
             throw new Error((j && j.message) || 'errore');
           }
         })['catch'](function () {
-          say('err', 'Non è stato possibile inviare il messaggio. Riprova più tardi oppure <a href="' + mailto + '">scrivi direttamente via email</a>.');
+          say('err', tUI('form.err.network') + '<a href="' + mailto + '">' + tUI('form.err.network.link') + '</a>.');
         })['then'](function () { btn.disabled = false; });
     });
   }
