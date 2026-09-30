@@ -394,7 +394,7 @@ var PLUGINS = [
       { p: 'Con più livelli annidati non è chiaro dove finiscono gli oggetti.', s: 'Vanno sempre esattamente un livello più in alto.' }
     ],
     specs: [['Comando', 'Estrai al Livello Superiore'], ['Barra strumenti', '1 pulsante'], ['Livelli', 'Un livello alla volta'], ['Annullamento', 'Un solo Ctrl+Z']],
-    images: ['assets/img/screenshots/uplevel-1.png']
+    images: ['assets/img/screenshots/uplevel-1.png', 'assets/img/screenshots/uplevel-2.png']
   }
 ];
 
