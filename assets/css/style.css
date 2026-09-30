@@ -38,6 +38,10 @@ p { margin: 0; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem; letter-spacing: -.02em; }
 .brand svg { width: 30px; height: 30px; }
+/* Wordmark: "robo" logo image (same cap-height as the nameplate text) + "Tools". */
+.brand-word { display: inline-flex; align-items: center; gap: 6px; }
+.brand-word img { height: 1em; width: auto; display: block; }
+.site-footer .brand-word img { filter: invert(1); }
 .nav { display: flex; align-items: center; gap: 6px; }
 .nav a { padding: 8px 14px; border-radius: 999px; font-size: .94rem; font-weight: 500; color: var(--ink-soft); transition: .15s; }
 .nav a:hover { color: var(--ink); background: var(--bg-soft); }

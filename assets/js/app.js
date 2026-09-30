@@ -113,6 +113,9 @@
     '<g transform="translate(61 122.5) scale(.45) translate(-61 -122.5)"><polygon points="22.1,55 100,100 100,190 22.1,145" fill="#9a9ca3"/></g>' +
     '<g transform="translate(139 122.5) scale(.45) translate(-139 -122.5)"><polygon points="100,100 177.9,55 177.9,145 100,190" fill="#9a9ca3"/></g></svg>';
 
+  /* brand wordmark: "robo" logo image (same height as the nameplate text) + "Tools" */
+  var BRAND_WORD = '<span class="brand-word"><img src="assets/img/logo-robo-word.png" alt="robo"><span>Tools</span></span>';
+
   var CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
   var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
@@ -164,7 +167,7 @@
   function chrome(isHome) {
     var base = isHome ? '' : 'index.html';
     $('#site-header').innerHTML =
-      '<div class="wrap"><a class="brand" href="index.html">' + LOGO + '<span>' + esc(SITE.name) + '</span></a>' +
+      '<div class="wrap"><a class="brand" href="index.html">' + LOGO + BRAND_WORD + '</a>' +
       '<nav class="nav"><a class="navlink" data-nav="plugin" href="' + base + '#plugin">' + tUI('nav.plugin') + '</a><a class="navlink" data-nav="install" href="' + base + '#installazione">' + tUI('nav.install') + '</a><a class="navlink" data-nav="contact" href="contatti.html">' + tUI('nav.contact') + '</a>' +
       '<div class="lang-wrap"><button class="lang-btn" id="langBtn" type="button" title="' + esc(tUI('lang.title')) + '">' + GLOBE + '<span>' + esc(tUI('lang.label')) + '</span></button><ul class="lang-menu" id="langMenu" hidden></ul></div>' +
       '</nav></div>';
@@ -175,7 +178,7 @@
       links += '<a href="plugin.html?id=' + PLUGINS[i].id + '">' + esc(PLUGINS[i].name) + '</a>';
     }
     $('#site-footer').innerHTML =
-      '<div class="wrap"><div><a class="brand" href="index.html">' + LOGO + '<span>' + esc(SITE.name) + '</span></a>' +
+      '<div class="wrap"><div><a class="brand" href="index.html">' + LOGO + BRAND_WORD + '</a>' +
       '<p>' + tUI('footer.tagline') + '<br>' + tUI('footer.compat') + ' ' + esc(SITE.compat) + '.</p>' +
       '<p style="margin-top:10px"><a href="contatti.html" style="display:inline;font-weight:600;color:#fff">' + tUI('footer.contact') + '</a></p></div>' +
       '<div><h4>' + tUI('nav.plugin') + '</h4>' + half(links, 0) + '</div>' +
