@@ -249,7 +249,7 @@
         '<div class="p-title">' + icon(p) + '<h1>' + esc(p.name) + '</h1><span class="pill dark">v' + esc(p.version) + '</span></div>' +
         '<p class="tag">' + esc(p.tagline) + '</p>' +
         '<p class="simple">' + esc(p.simple) + '</p>' +
-        '<div class="actions"><a class="btn btn-red" href="#tecnica">Come funziona</a><a class="btn btn-dark" href="index.html#plugin">Tutti i plugin</a></div>' +
+        '<div class="actions"><a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/' + esc(p.id) + '.rbz" download>Scarica (.rbz)</a><a class="btn btn-dark" href="#tecnica">Come funziona</a><a class="btn btn-outline" href="index.html#plugin">Tutti i plugin</a></div>' +
       '</div><div class="shot">' + gallery(im, 0, 'Immagine di ' + p.name) + '</div></div></div>' +
 
       tbHtml +
