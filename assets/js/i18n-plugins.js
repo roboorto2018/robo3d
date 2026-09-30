@@ -529,7 +529,7 @@ I18N_PLUGINS.en.leans_on = {
     { p: 'Making an object stick to a wall or a tilted plane by eye takes trial-and-error moving and rotating.', s: 'The tool calculates position and orientation automatically.' },
     { p: 'Objects left floating or sinking into the surface.', s: 'The set distance avoids both the gap and the overlap.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo Leans on (4 entries)'], ['Toolbar', '2 buttons'], ['Options', 'Distance + Perpendicular'], ['Undo', 'A single Ctrl+Z']]
+  specs: [['Menu', 'Robo Tool › robo Leans on (4 entries)'], ['Toolbar', '1 button (opens the panel with both tools)'], ['Options', 'Distance + Perpendicular'], ['Undo', 'A single Ctrl+Z']]
 };
 I18N_PLUGINS.de.leans_on = {
   tagline: 'Lehnt Objekte an eine Oberfläche an, wie in der Realität.',
@@ -546,7 +546,7 @@ I18N_PLUGINS.de.leans_on = {
     { p: 'Ein Objekt von Auge an eine Wand oder geneigte Ebene anzupassen erfordert Bewegen und Drehen nach Gefühl.', s: 'Das Werkzeug berechnet Position und Ausrichtung automatisch.' },
     { p: 'Objekte, die schweben oder in der Oberfläche versinken.', s: 'Der eingestellte Abstand vermeidet sowohl Lücke als auch Durchdringung.' }
   ],
-  specs: [['Menü', 'Robo Tool › robo Leans on (4 Einträge)'], ['Symbolleiste', '2 Schaltflächen'], ['Optionen', 'Abstand + Senkrecht'], ['Rückgängig', 'Ein einziges Strg+Z']]
+  specs: [['Menü', 'Robo Tool › robo Leans on (4 Einträge)'], ['Symbolleiste', '1 Schaltfläche (öffnet das Panel mit beiden Werkzeugen)'], ['Optionen', 'Abstand + Senkrecht'], ['Rückgängig', 'Ein einziges Strg+Z']]
 };
 I18N_PLUGINS.fr.leans_on = {
   tagline: 'Appuie les objets contre une surface, comme dans la réalité.',
@@ -563,7 +563,7 @@ I18N_PLUGINS.fr.leans_on = {
     { p: 'Faire adhérer un objet à un mur ou un plan incliné à l\'œil demande des déplacements et rotations approximatifs.', s: 'L\'outil calcule position et orientation automatiquement.' },
     { p: 'Des objets qui restent en suspension ou s\'enfoncent dans la surface.', s: 'La distance définie évite à la fois le vide et la pénétration.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo Leans on (4 entrées)'], ['Barre d\'outils', '2 boutons'], ['Options', 'Distance + Perpendiculaire'], ['Annulation', 'Un seul Ctrl+Z']]
+  specs: [['Menu', 'Robo Tool › robo Leans on (4 entrées)'], ['Barre d\'outils', '1 bouton (ouvre le panneau avec les deux outils)'], ['Options', 'Distance + Perpendiculaire'], ['Annulation', 'Un seul Ctrl+Z']]
 };
 I18N_PLUGINS.es.leans_on = {
   tagline: 'Apoya los objetos contra una superficie, como en la realidad.',
@@ -580,7 +580,7 @@ I18N_PLUGINS.es.leans_on = {
     { p: 'Hacer que un objeto se adhiera a una pared o un plano inclinado a ojo requiere mover y rotar por prueba y error.', s: 'La herramienta calcula posición y orientación automáticamente.' },
     { p: 'Objetos que quedan flotando o se hunden en la superficie.', s: 'La distancia establecida evita tanto el hueco como la compenetración.' }
   ],
-  specs: [['Menú', 'Robo Tool › robo Leans on (4 entradas)'], ['Barra de herramientas', '2 botones'], ['Opciones', 'Distancia + Perpendicular'], ['Deshacer', 'Un solo Ctrl+Z']]
+  specs: [['Menú', 'Robo Tool › robo Leans on (4 entradas)'], ['Barra de herramientas', '1 botón (abre el panel con ambas herramientas)'], ['Opciones', 'Distancia + Perpendicular'], ['Deshacer', 'Un solo Ctrl+Z']]
 };
 
 /* -------------------------------------------------------- LIBRARY EXPLORER */

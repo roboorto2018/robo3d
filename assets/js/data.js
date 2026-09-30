@@ -183,7 +183,7 @@ var PLUGINS = [
       { p: 'Far aderire un oggetto a una parete o a un piano inclinato richiede movimenti e rotazioni a occhio.', s: 'Lo strumento calcola posizione e orientamento in automatico.' },
       { p: 'Oggetti che restano sospesi o affondano nella superficie.', s: 'La distanza impostata evita sia il vuoto sia la compenetrazione.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Leans on (4 voci)'], ['Barra strumenti', '2 pulsanti'], ['Opzioni', 'Distanza + Perpendicolare'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Menu', 'Robo Tool › robo Leans on (4 voci)'], ['Barra strumenti', '1 pulsante (apre il pannello con entrambi gli strumenti)'], ['Opzioni', 'Distanza + Perpendicolare'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
@@ -429,7 +429,7 @@ var TOOLBARS = {
   extract: { name: 'robo Extract', groups: [[{ i: 'copy.png', l: 'robo Extract: copia facce e linee fuori dal gruppo' }]] },
   demolition: { name: 'robo Demolition', groups: [[{ i: 'demolition.png', l: 'robo Demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo Export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
-  leans_on: { name: 'robo Leans on', groups: [[{ i: 'face.png', l: "Lean On Surface: appoggia alla faccia" }, { i: 'obstacle.png', l: "Lean Until Blocked: fino al primo ostacolo" }]] },
+  leans_on: { name: 'robo Leans on', groups: [[{ i: 'face.png', l: "Lean On Surface: appoggia alla faccia (apre il pannello con anche Lean Until Blocked)" }]] },
   library_explorer: { name: 'robo Library Explorer', groups: [[{ i: 'explorer.png', l: "Apri robo Library Explorer" }]] },
   standard: { name: 'robo Standard', groups: [[{ i: 'nuovo.png', l: "Nuovo" }, { i: 'apri.png', l: "Apri" }, { i: 'salva.png', l: "Salva" }, { i: 'salvanome.png', l: "Salva con nome" }], [{ i: 'taglia.png', l: "Taglia" }, { i: 'copia.png', l: "Copia" }, { i: 'incolla.png', l: "Incolla" }, { i: 'incollaposto.png', l: "Incolla sul posto" }], [{ i: 'elimina.png', l: "Elimina" }], [{ i: 'annulla.png', l: "Annulla" }, { i: 'ripristina.png', l: "Ripristina" }]] }
 };
