@@ -18,6 +18,7 @@ var PLUGINS = [
   /* ------------------------------------------------------------------ BASEFORM */
   {
     id: 'baseform', name: 'robo baseform', version: '1.0', category: 'Modellazione', hue: 12,
+    video: 'cxTEqsZ_Cpo',
     images: ['assets/img/screenshots/baseform-1.png', 'assets/img/screenshots/baseform-2.png', 'assets/img/screenshots/baseform-3.png'],
     tagline: 'Cubo, cilindro, cono, sfere e toro: forme precise in un clic.',
     simple: 'Scegli dall\'elenco l\'oggetto che ti serve (cubo, cilindro, cono, tronco di cono, sfera, icosfera o toro), imposta le misure e clicca nel modello: la forma compare esattamente dove vuoi, già liscia e pronta all\'uso.',
@@ -45,6 +46,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- EXTRACT */
   {
     id: 'extract', name: 'robo Extract', version: '1.0', category: 'Modellazione', hue: 170,
+    video: 'Gi4nG6UZF0I',
     images: ['assets/img/screenshots/extract-1.png'],
     tagline: 'Copia facce e linee fuori dai gruppi, nella stessa posizione.',
     simple: 'Passa il mouse su una faccia o una linea di qualsiasi gruppo o componente, anche chiuso: Robo la evidenzia e, con un clic, ne crea una copia fuori dal gruppo, nella stessa identica posizione e inclinazione. Funziona su piani inclinati e su forme organiche, e non serve aprire né selezionare nulla.',
@@ -66,6 +68,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- DEMOLITION */
   {
     id: 'demolition', name: 'robo Demolition', version: '1.0', category: 'Modellazione', hue: 15,
+    video: 'cTL5-mmn7tE',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
     simple: 'Seleziona facce, gruppi o componenti pesanti: robo Demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Usa Open3D (Python, in locale sul tuo computer); gli oggetti interni restano oggetti e i materiali restano al loro posto.',
@@ -106,6 +109,7 @@ var PLUGINS = [
   /* ---------------------------------------------------------------- FILLET */
   {
     id: 'fillet', name: 'robo Fillet', version: '1.1', category: 'Modellazione', hue: 200,
+    video: 'sGrRxU-Thlo',
     images: ['assets/img/screenshots/fillet-1.png', 'assets/img/screenshots/fillet-2.png', 'assets/img/screenshots/fillet-3.png', 'assets/img/screenshots/fillet-4.png', 'assets/img/screenshots/fillet-5.png'],
     tagline: 'Raccordi e smussi tra due linee, su qualsiasi piano.',
     simple: 'Clicca due linee che si incontrano in un angolo, scegli il raggio: l\'angolo spigoloso diventa una curva morbida (oppure uno smusso). Funziona su qualsiasi piano nello spazio, non solo sul pavimento.',
@@ -127,6 +131,7 @@ var PLUGINS = [
   /* ------------------------------------------------------- GROUP TO COMPONENT */
   {
     id: 'group_to_component', name: 'robo Group to Component', version: '1.2', category: 'Organizzazione', hue: 32,
+    video: 'BLo3ZGXY1F4',
     images: ['assets/img/screenshots/group_to_component-1.png', 'assets/img/screenshots/group_to_component-2.png', 'assets/img/screenshots/group_to_component-3.png', 'assets/img/screenshots/group_to_component-4.png'],
     tagline: 'Trasforma i gruppi in componenti, unendo quelli identici.',
     simple: 'Seleziona molti gruppi: Robo riconosce quelli con la stessa forma e li trasforma in copie dello stesso componente. Il file diventa più leggero e, modificandone uno, cambiano tutti.',
@@ -148,6 +153,7 @@ var PLUGINS = [
   /* ---------------------------------------------------------------- IMPACT */
   {
     id: 'impact_object', name: 'robo Impact Object', version: '1.1', category: 'Ottimizzazione', hue: 348,
+    video: 'hU1Xp5oTKqg',
     images: ['assets/img/screenshots/impact_object-1.png', 'assets/img/screenshots/impact_object-2.png'],
     tagline: 'Scopri quali oggetti appesantiscono il tuo modello.',
     simple: 'Una tabella ordinabile ti mostra quanto "pesa" ogni componente del modello, tenendo conto anche di quante volte è ripetuto. Così trovi subito alberi, arredi o dettagli che rallentano SketchUp.',
@@ -169,7 +175,7 @@ var PLUGINS = [
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
     id: 'library_explorer', name: 'robo Library Explorer', version: '1.0', category: 'Organizzazione', hue: 190,
-    video: 'xW22R5CD1Dk',
+    video: '27grL1GDQQM',
     images: ['assets/img/screenshots/library_explorer-1.png', 'assets/img/screenshots/library_explorer-2.png', 'assets/img/screenshots/library_explorer-3.png', 'assets/img/screenshots/library_explorer-4.png', 'assets/img/screenshots/library_explorer-5.png', 'assets/img/screenshots/library_explorer-6.png', 'assets/img/screenshots/library_explorer-7.png'],
     tagline: 'Sfoglia le tue librerie con anteprime vere e inserisci con un clic.',
     simple: 'Indica le cartelle dove tieni componenti e materiali: Robo li mostra con le anteprime, ordinati per cartella, con tag e preferiti. Un clic e l\'oggetto entra nel modello.',
@@ -191,6 +197,7 @@ var PLUGINS = [
   /* ------------------------------------------------------------- PLACEMENT */
   {
     id: 'placement', name: 'robo Placement', version: '0.9', category: 'Distribuzione', hue: 130,
+    video: 'BuxBGvKxEGM',
     images: ['assets/img/screenshots/placement-1.png', 'assets/img/screenshots/placement-2.png', 'assets/img/screenshots/placement-3.png', 'assets/img/screenshots/placement-4.png'],
     tagline: 'Distribuisci oggetti a caso su qualsiasi superficie.',
     simple: 'Scegli un oggetto (un albero, un sasso, un mobile) e una superficie: Robo ne dispone tante copie sparse in modo naturale, con scala e rotazione leggermente diverse per ogni copia.',
@@ -212,6 +219,7 @@ var PLUGINS = [
   /* ----------------------------------------------------------------- PROXY */
   {
     id: 'proxy_manager', name: 'robo Proxy Manager', version: '0.5', category: 'Ottimizzazione', hue: 220,
+    video: 'ThxhD9J6eC0',
     images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
     tagline: 'Sostituisci gli oggetti pesanti con proxy leggeri.',
     simple: 'Alberi, arredi e persone dettagliati rendono il modello lentissimo. Con Robo li sostituisci con "segnaposto" leggeri e li ritrovi identici quando ti servono, con un clic destro.',
@@ -233,6 +241,7 @@ var PLUGINS = [
   /* ----------------------------------------------------------------- SCALE */
   {
     id: 'scale_definition', name: 'robo Scale Definition', version: '0.7', category: 'Organizzazione', hue: 24,
+    video: 'GI1vYGhCF_E',
     images: ['assets/img/screenshots/scale_definition-1.png', 'assets/img/screenshots/scale_definition-2.png', 'assets/img/screenshots/scale_definition-3.png'],
     tagline: 'Fissa la scala nella geometria e riporta tutto a 1.0.',
     simple: 'Se hai ingrandito o rimpicciolito un componente, SketchUp ricorda quel "fattore di scala" a parte. Robo lo incorpora nella geometria e riporta la scala a 1.0: dimensioni e materiali diventano corretti per il rendering.',
