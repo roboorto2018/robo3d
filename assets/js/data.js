@@ -393,7 +393,8 @@ var PLUGINS = [
       { p: 'Estrarre oggetti da un gruppo con taglia e incolla rischia di spostarli o di sbagliare livello.', s: 'La trasformazione viene compensata automaticamente.' },
       { p: 'Con più livelli annidati non è chiaro dove finiscono gli oggetti.', s: 'Vanno sempre esattamente un livello più in alto.' }
     ],
-    specs: [['Comando', 'Estrai al Livello Superiore'], ['Barra strumenti', '1 pulsante'], ['Livelli', 'Un livello alla volta'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Comando', 'Estrai al Livello Superiore'], ['Barra strumenti', '1 pulsante'], ['Livelli', 'Un livello alla volta'], ['Annullamento', 'Un solo Ctrl+Z']],
+    images: ['assets/img/screenshots/uplevel-1.png']
   }
 ];
 
