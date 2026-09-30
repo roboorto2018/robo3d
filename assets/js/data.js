@@ -249,26 +249,6 @@ var PLUGINS = [
     specs: [['Finestre', 'Manager, Impostazioni, Low Resolution, Guida'], ['Menu', 'Robo Tool › robo Proxy Manager (6 voci)'], ['Barra strumenti', '6 pulsanti'], ['Cartella asset', 'Robo_ProxyAssets']]
   },
 
-  /* ---------------------------------------------------------------- RELOAD */
-  {
-    id: 'reload', name: 'Robo Reload', version: '1.0', category: 'Sviluppo', hue: 240,
-    tagline: 'Ricarica un plugin Ruby senza riavviare SketchUp.',
-    simple: 'Strumento per chi sviluppa plugin: modifichi il codice, premi un pulsante e SketchUp ricarica subito il plugin, senza chiudere e riaprire il programma.',
-    steps: ['Con "Change Target Plugin" scegli il file del plugin da ricaricare.', 'Modifica il codice nel tuo editor.', 'Premi "Reload Plugin": il plugin viene ricaricato subito.'],
-    how: [
-      { t: 'Purga e ricarico', d: 'Robo individua il file di avvio e la cartella con lo stesso nome, toglie tutti i loro file dall\'elenco dei file già caricati (anche nelle varianti cifrate .rbe) e li carica di nuovo.' },
-      { t: 'Codice davvero rieseguito', d: 'Dopo il file di avvio viene ricaricato anche il punto di ingresso indicato nell\'estensione, così il codice modificato viene realmente applicato.' },
-      { t: 'Impostazioni di sessione', d: 'Una finestra mostra il plugin bersaglio, lo stato e la cartella da cui iniziare la ricerca; in "modalità persistente" il bersaglio viene ricordato al riavvio.' },
-      { t: 'Errori chiari', d: 'Eventuali errori appaiono in un messaggio e nella Console Ruby con i dettagli. Le finestre HTML già aperte vanno chiuse e riaperte per vedere le modifiche.' }
-    ],
-    pros: ['Cicli di prova molto più rapidi', 'Nessun riavvio di SketchUp', 'Bersaglio ricordato tra le sessioni', 'Errori mostrati in modo chiaro'],
-    solves: [
-      { p: 'Ogni modifica al codice richiede di chiudere e riaprire SketchUp.', s: 'Un pulsante e il plugin è aggiornato.' },
-      { p: 'Ricaricare a mano nella Console Ruby è lungo e soggetto a errori.', s: 'Robo purga e ricarica tutti i file del plugin in automatico.' }
-    ],
-    specs: [['Menu', 'Robo Tool › Robo Reload (4 voci)'], ['Barra strumenti', '2 pulsanti'], ['Destinatari', 'Sviluppatori di plugin'], ['Persistenza', 'Bersaglio e cartella ricordati']]
-  },
-
   /* ----------------------------------------------------------------- SCALE */
   {
     id: 'scale_definition', name: 'robo Scale Definition', version: '0.7', category: 'Organizzazione', hue: 24,
@@ -447,6 +427,5 @@ var TOOLBARS = {
   export_object: { name: 'robo Export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   leans_on: { name: 'robo Leans on', groups: [[{ i: 'face.png', l: "Lean On Surface: appoggia alla faccia" }, { i: 'obstacle.png', l: "Lean Until Blocked: fino al primo ostacolo" }]] },
   library_explorer: { name: 'robo Library Explorer', groups: [[{ i: 'explorer.png', l: "Apri robo Library Explorer" }]] },
-  reload: { name: 'Robo Reload', groups: [[{ i: 'reload.png', l: "Reload Plugin: ricarica il plugin" }, { i: 'target.png', l: "Change Target Plugin: scegli il plugin" }]] },
   standard: { name: 'robo Standard', groups: [[{ i: 'nuovo.png', l: "Nuovo" }, { i: 'apri.png', l: "Apri" }, { i: 'salva.png', l: "Salva" }, { i: 'salvanome.png', l: "Salva con nome" }], [{ i: 'taglia.png', l: "Taglia" }, { i: 'copia.png', l: "Copia" }, { i: 'incolla.png', l: "Incolla" }, { i: 'incollaposto.png', l: "Incolla sul posto" }], [{ i: 'elimina.png', l: "Elimina" }], [{ i: 'annulla.png', l: "Annulla" }, { i: 'ripristina.png', l: "Ripristina" }]] }
 };
