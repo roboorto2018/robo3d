@@ -67,7 +67,7 @@ function applyStaticI18n() {
 
 var I18N_UI = {
   it: {
-    'nav.plugin': 'Plugin', 'nav.install': 'Installazione', 'nav.contact': 'Contatti', 'nav.cta': 'Scopri i plugin',
+    'nav.plugin': 'Plugin', 'nav.install': 'Installazione', 'nav.contact': 'Contatti',
     'cat.Modellazione': 'Modellazione', 'cat.Distribuzione': 'Distribuzione', 'cat.Organizzazione': 'Organizzazione', 'cat.Ottimizzazione': 'Ottimizzazione', 'cat.Produttività': 'Produttività', 'cat.Sviluppo': 'Sviluppo',
     'lang.title': 'Cambia lingua', 'lang.label': 'Lingua',
     'hero.eyebrow': 'Plugin per SketchUp', 'hero.h1': 'Meno clic. ', 'hero.h1em': 'Più design.',
@@ -120,7 +120,7 @@ var I18N_UI = {
     'form.subject.formsubmit': 'Richiesta informazioni dal sito Robo Tools — ', 'form.subject.mailto': 'Richiesta informazioni — '
   },
   en: {
-    'nav.plugin': 'Plugins', 'nav.install': 'Installation', 'nav.contact': 'Contact', 'nav.cta': 'Explore the plugins',
+    'nav.plugin': 'Plugins', 'nav.install': 'Installation', 'nav.contact': 'Contact',
     'cat.Modellazione': 'Modeling', 'cat.Distribuzione': 'Distribution', 'cat.Organizzazione': 'Organization', 'cat.Ottimizzazione': 'Optimization', 'cat.Produttività': 'Productivity', 'cat.Sviluppo': 'Development',
     'lang.title': 'Change language', 'lang.label': 'Language',
     'hero.eyebrow': 'Plugins for SketchUp', 'hero.h1': 'Fewer clicks. ', 'hero.h1em': 'More design.',
@@ -173,7 +173,7 @@ var I18N_UI = {
     'form.subject.formsubmit': 'Information request from the Robo Tools site — ', 'form.subject.mailto': 'Information request — '
   },
   de: {
-    'nav.plugin': 'Plugins', 'nav.install': 'Installation', 'nav.contact': 'Kontakt', 'nav.cta': 'Plugins entdecken',
+    'nav.plugin': 'Plugins', 'nav.install': 'Installation', 'nav.contact': 'Kontakt',
     'cat.Modellazione': 'Modellierung', 'cat.Distribuzione': 'Verteilung', 'cat.Organizzazione': 'Organisation', 'cat.Ottimizzazione': 'Optimierung', 'cat.Produttività': 'Produktivität', 'cat.Sviluppo': 'Entwicklung',
     'lang.title': 'Sprache ändern', 'lang.label': 'Sprache',
     'hero.eyebrow': 'Plugins für SketchUp', 'hero.h1': 'Weniger Klicks. ', 'hero.h1em': 'Mehr Design.',
@@ -226,7 +226,7 @@ var I18N_UI = {
     'form.subject.formsubmit': 'Informationsanfrage von der Robo-Tools-Website — ', 'form.subject.mailto': 'Informationsanfrage — '
   },
   fr: {
-    'nav.plugin': 'Plugins', 'nav.install': 'Installation', 'nav.contact': 'Contact', 'nav.cta': 'Découvrir les plugins',
+    'nav.plugin': 'Plugins', 'nav.install': 'Installation', 'nav.contact': 'Contact',
     'cat.Modellazione': 'Modélisation', 'cat.Distribuzione': 'Distribution', 'cat.Organizzazione': 'Organisation', 'cat.Ottimizzazione': 'Optimisation', 'cat.Produttività': 'Productivité', 'cat.Sviluppo': 'Développement',
     'lang.title': 'Changer de langue', 'lang.label': 'Langue',
     'hero.eyebrow': 'Plugins pour SketchUp', 'hero.h1': 'Moins de clics. ', 'hero.h1em': 'Plus de design.',
@@ -279,7 +279,7 @@ var I18N_UI = {
     'form.subject.formsubmit': 'Demande d\'information depuis le site Robo Tools — ', 'form.subject.mailto': 'Demande d\'information — '
   },
   es: {
-    'nav.plugin': 'Plugins', 'nav.install': 'Instalación', 'nav.contact': 'Contacto', 'nav.cta': 'Descubre los plugins',
+    'nav.plugin': 'Plugins', 'nav.install': 'Instalación', 'nav.contact': 'Contacto',
     'cat.Modellazione': 'Modelado', 'cat.Distribuzione': 'Distribución', 'cat.Organizzazione': 'Organización', 'cat.Ottimizzazione': 'Optimización', 'cat.Produttività': 'Productividad', 'cat.Sviluppo': 'Desarrollo',
     'lang.title': 'Cambiar idioma', 'lang.label': 'Idioma',
     'hero.eyebrow': 'Plugins para SketchUp', 'hero.h1': 'Menos clics. ', 'hero.h1em': 'Más diseño.',

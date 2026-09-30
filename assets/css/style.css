@@ -41,8 +41,8 @@ p { margin: 0; }
 .nav { display: flex; align-items: center; gap: 6px; }
 .nav a { padding: 8px 14px; border-radius: 999px; font-size: .94rem; font-weight: 500; color: var(--ink-soft); transition: .15s; }
 .nav a:hover { color: var(--ink); background: var(--bg-soft); }
-.nav .cta { background: var(--ink); color: #fff; }
-.nav .cta:hover { background: var(--red); color: #fff; }
+/* Current section/page: black background, bold white text. */
+.nav a.nav-active, .nav a.nav-active:hover { background: var(--ink); color: #fff; font-weight: 700; }
 
 /* Language switcher: black globe + label, dropdown (same pattern as the plugins' own dialogs). */
 .lang-wrap { position: relative; margin-left: 2px; }

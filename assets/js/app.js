@@ -153,13 +153,21 @@
   });
 
   /* ------------------------------------------------------ header + footer */
+  /* Highlights the nav link for the current section/page (black background, bold white text). */
+  function setActiveNav(which) {
+    var all = document.querySelectorAll('.nav a.navlink');
+    for (var i = 0; i < all.length; i++) {
+      all[i].classList.toggle('nav-active', all[i].getAttribute('data-nav') === which);
+    }
+  }
+
   function chrome(isHome) {
     var base = isHome ? '' : 'index.html';
     $('#site-header').innerHTML =
       '<div class="wrap"><a class="brand" href="index.html">' + LOGO + '<span>' + esc(SITE.name) + '</span></a>' +
-      '<nav class="nav"><a href="' + base + '#plugin">' + tUI('nav.plugin') + '</a><a href="' + base + '#installazione">' + tUI('nav.install') + '</a><a href="contatti.html">' + tUI('nav.contact') + '</a>' +
+      '<nav class="nav"><a class="navlink" data-nav="plugin" href="' + base + '#plugin">' + tUI('nav.plugin') + '</a><a class="navlink" data-nav="install" href="' + base + '#installazione">' + tUI('nav.install') + '</a><a class="navlink" data-nav="contact" href="contatti.html">' + tUI('nav.contact') + '</a>' +
       '<div class="lang-wrap"><button class="lang-btn" id="langBtn" type="button" title="' + esc(tUI('lang.title')) + '">' + GLOBE + '<span>' + esc(tUI('lang.label')) + '</span></button><ul class="lang-menu" id="langMenu" hidden></ul></div>' +
-      '<a class="cta" href="' + base + '#plugin">' + tUI('nav.cta') + '</a></nav></div>';
+      '</nav></div>';
     buildLangMenu();
 
     var links = '';
@@ -207,11 +215,25 @@
         cards[m].style.display = (!f || cards[m].getAttribute('data-cat') === f) ? '' : 'none';
       }
     });
+
+    /* Scroll-spy: highlights "Plugin" or "Installazione" in the nav as that section scrolls into view. */
+    if (window.IntersectionObserver) {
+      var sections = [['plugin', $('#plugin')], ['install', $('#installazione')]].filter(function (pair) { return pair[1]; });
+      var observer = new IntersectionObserver(function (entries) {
+        var visible = entries.filter(function (en) { return en.isIntersecting; });
+        if (!visible.length) { return; }
+        visible.sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; });
+        var id = visible[0].target.id === 'installazione' ? 'install' : visible[0].target.id;
+        setActiveNav(id);
+      }, { rootMargin: '-45% 0px -45% 0px', threshold: [0, .25, .5, .75, 1] });
+      sections.forEach(function (pair) { observer.observe(pair[1]); });
+    }
   }
 
   /* ---------------------------------------------------------------- plugin */
   function plugin() {
     chrome(false);
+    setActiveNav('plugin');
     var m = /[?&]id=([a-z_]+)/.exec(location.search);
     var idx = m ? byId(m[1]) : -1;
     var root = $('#plugin-root');
@@ -314,6 +336,7 @@
 
   function contact() {
     chrome(false);
+    setActiveNav('contact');
     applyStaticI18n();
     var sel = $('#f-plugin');
     var generalLabel = tUI('form.topic.general');
