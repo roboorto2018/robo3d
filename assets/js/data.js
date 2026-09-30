@@ -263,6 +263,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- SECTION */
   {
     id: 'section', name: 'robo section', version: '1.2', category: 'Organizzazione', hue: 210,
+    video: 'KAbKr1Lui84',
     images: ['assets/img/screenshots/section-1.png', 'assets/img/screenshots/section-2.png', 'assets/img/screenshots/section-3.png', 'assets/img/screenshots/section-4.png', 'assets/img/screenshots/section-5.png'],
     tagline: 'Tutti i piani di sezione in un solo pannello.',
     simple: 'Nei modelli complessi i piani di sezione sono sparsi dentro gruppi e componenti. Robo li trova tutti, li mostra in un elenco e ti permette di attivarli, rinominarli, spostarli e collegarli alle scene.',
@@ -347,7 +348,8 @@ var PLUGINS = [
   /* --------------------------------------------------------------- TANGENT */
   {
     id: 'tangent', name: 'robo Tangent', version: '1.2', category: 'Modellazione', hue: 160,
-    images: ['assets/img/screenshots/tangent-1.png', 'assets/img/screenshots/tangent-2.png', 'assets/img/screenshots/tangent-3.png', 'assets/img/screenshots/tangent-4.png', 'assets/img/screenshots/tangent-5.png', 'assets/img/screenshots/tangent-6.png', 'assets/img/screenshots/tangent-7.png'],
+    video: 'RsSOjk3k7NE',
+    images: ['assets/img/screenshots/tangent-1.png', 'assets/img/screenshots/tangent-2.png', 'assets/img/screenshots/tangent-3.png', 'assets/img/screenshots/tangent-4.png', 'assets/img/screenshots/tangent-5.png', 'assets/img/screenshots/tangent-6.png', 'assets/img/screenshots/tangent-7.png', 'assets/img/screenshots/tangent-8.png'],
     tagline: 'La tangente esatta tra archi, cerchi e segmenti.',
     simple: 'Clicca due cerchi (o un cerchio e una linea) e lo strumento disegna la linea che li tocca esattamente in un punto ciascuno. Vedi le possibilità in anteprima e scegli quella che ti serve muovendo il mouse.',
     steps: ['Attiva robo Tangent: passa sopra gli elementi, si illuminano di giallo.', 'Clicca il primo (rosso) e il secondo elemento (blu).', 'Muovi il mouse per scegliere la tangente verde e clicca per disegnarla.'],
@@ -368,6 +370,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- UPLEVEL */
   {
     id: 'uplevel', name: 'robo Uplevel', version: '1.0', category: 'Produttività', hue: 45,
+    video: 'whuBMKHEvjE',
     tagline: 'Porta gli oggetti fuori dal gruppo, senza spostarli.',
     simple: 'Sei dentro un gruppo o un componente e vuoi tirare fuori alcuni oggetti al livello superiore, restando esattamente dove sono. Un clic e li sposta nella gerarchia senza cambiarne la posizione.',
     steps: ['Entra nel gruppo o componente e seleziona gli oggetti.', 'Premi il pulsante robo Uplevel.', 'Gli oggetti passano al livello superiore, nella stessa posizione.'],
