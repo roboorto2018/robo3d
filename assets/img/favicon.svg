@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <polygon points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" fill="#16171a"/>
+  <g transform="translate(100 55) scale(.84) translate(-100 -55)"><polygon points="100,10 177.9,55 100,100 22.1,55" fill="#fff"/></g>
+  <g transform="translate(61 122.5) scale(.84) translate(-61 -122.5)"><polygon points="22.1,55 100,100 100,190 22.1,145" fill="#fff"/></g>
+  <g transform="translate(139 122.5) scale(.84) translate(-139 -122.5)"><polygon points="100,100 177.9,55 177.9,145 100,190" fill="#fff"/></g>
+  <g transform="translate(100 55) scale(.45) translate(-100 -55)"><polygon points="100,10 177.9,55 100,100 22.1,55" fill="#e02424"/></g>
+  <g transform="translate(61 122.5) scale(.45) translate(-61 -122.5)"><polygon points="22.1,55 100,100 100,190 22.1,145" fill="#9a9ca3"/></g>
+  <g transform="translate(139 122.5) scale(.45) translate(-139 -122.5)"><polygon points="100,100 177.9,55 177.9,145 100,190" fill="#9a9ca3"/></g>
+</svg>
