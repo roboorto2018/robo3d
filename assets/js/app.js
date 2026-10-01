@@ -356,7 +356,7 @@
         '<div class="p-title">' + icon(p) + '<h1>' + esc(p.name) + '</h1><span class="pill dark">v' + esc(p.version) + '</span></div>' +
         '<p class="tag">' + esc(tagline) + '</p>' +
         '<p class="simple">' + esc(simple) + '</p>' +
-        '<div class="actions"><a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/' + esc(p.id) + '.rbz" download>' + tUI('plugin.download') + '</a><a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
+        '<div class="actions"><a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz" download>' + tUI('plugin.download') + '</a><a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
       '</div><div class="shot">' + gallery(im, 0, tUI('gal.imageof').replace('{n}', p.name)) + '</div></div></div>' +
 
       tbHtml +

@@ -65,26 +65,6 @@ var PLUGINS = [
     specs: [['Menu', 'Robo Tool › robo Extract (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Lingue', 'Italiano, English, Deutsch, Français, Español'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
-  /* --------------------------------------------------------------- DEMOLITION */
-  {
-    id: 'demolition', name: 'robo Demolition', version: '1.0', category: 'Modellazione', hue: 15,
-    video: 'cTL5-mmn7tE',
-    images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
-    tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
-    simple: 'Seleziona facce, gruppi o componenti pesanti: robo Demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Usa Open3D (Python, in locale sul tuo computer); gli oggetti interni restano oggetti e i materiali restano al loro posto.',
-    steps: ['Seleziona le facce, i gruppi o i componenti da alleggerire.', 'Premi Anteprima: la mesh più leggera viene disegnata in blu sul modello. Muovi la barra per demolire di più o di meno.', 'Premi Applica: un solo Ctrl+Z ripristina tutto.'],
-    how: [
-      { t: 'Tutto in locale', d: 'Nessun server e nessun servizio online: il plugin avvia direttamente uno script Python con Open3D, in background, senza bloccare SketchUp. Il tempo trascorso è visibile e c\'è un pulsante Annulla.' },
-      { t: 'Due metodi', d: 'Quadric toglie i triangoli che cambiano meno la forma (qualità migliore). Voxel unisce i punti in celle di una griglia (velocissimo e leggerissimo).' },
-      { t: 'Oggetti, materiali e facce', d: 'Ogni gruppo e componente annidato viene ridotto nel proprio posto: resta un oggetto separato e non viene unito agli altri. I materiali (fronte e retro) e i tag vengono mantenuti, e le facce rovesciate sulle forme chiuse vengono corrette.' }
-    ],
-    pros: ['Gratuito e offline', 'Anteprima con barra di regolazione', 'Gruppi e componenti restano oggetti separati', 'Materiali mantenuti', 'Un solo Undo'],
-    solves: [
-      { p: 'Le mesh importate hanno centinaia di migliaia di triangoli e rallentano il modello.', s: 'Una copia con la percentuale di triangoli che scegli, con la forma quasi identica.' }
-    ],
-    specs: [['Menu', 'Robo Tool › robo Demolition (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'Python 3 + Open3D (pip install open3d)'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
-  },
-
   /* --------------------------------------------------------------- EXPORT OBJECT */
   {
     id: 'export_object', name: 'robo Export object', version: '0.1', category: 'Produttività', hue: 5,
@@ -420,7 +400,6 @@ var TOOLBARS = {
   uplevel: { name: 'Robo Uplevel', groups: [[{ i: 'uplevel.png', l: 'Estrai al livello superiore' }]] },
   start: { name: 'robo start', groups: [[{ i: 'enter.png', l: 'Robo Enter' }, { i: 'rsel.png', l: 'Robo Select All' }], [{ i: 'grp.png', l: 'Crea gruppo' }, { i: 'cmp.png', l: 'Crea componente' }, { i: 'uniq.png', l: 'Rendi unico' }], [{ i: 'expl.png', l: 'Esplodi' }, { i: 'explc.png', l: 'Esplodi curve' }], [{ i: 'sall.png', l: 'Seleziona tutto' }, { i: 'inv.png', l: 'Inverti selezione' }, { i: 'clr.png', l: 'Deseleziona' }, { i: 'close.png', l: 'Chiudi gruppo' }, { i: 'up.png', l: 'Estrai al livello superiore' }, { i: 'weld.png', l: 'Salda spigoli' }, { i: 'face.png', l: 'Crea faccia' }], [{ i: 'hide.png', l: 'Nascondi oggetto' }, { i: 'unh1.png', l: "Mostra l'ultimo nascosto" }, { i: 'unhall.png', l: 'Mostra tutto' }], [{ i: 'guides.png', l: 'Rimuovi guide' }, { i: 'dims.png', l: 'Rimuovi quote' }], [{ i: 'zoom.png', l: 'Zoom sulla selezione' }, { i: 'center.png', l: 'Trova il centro' }], [{ i: 'cpt.png', l: 'Aggiungi punto centrale' }], [{ i: 'fix.png', l: 'Fix 101' }], [{ i: 'help.png', l: 'Guida' }]] },
   extract: { name: 'robo Extract', groups: [[{ i: 'copy.png', l: 'robo Extract: copia facce e linee fuori dal gruppo' }]] },
-  demolition: { name: 'robo Demolition', groups: [[{ i: 'demolition.png', l: 'robo Demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo Export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo Library Explorer', groups: [[{ i: 'explorer.png', l: "Apri robo Library Explorer" }]] },
   standard: { name: 'robo Standard', groups: [[{ i: 'nuovo.png', l: "Nuovo" }, { i: 'apri.png', l: "Apri" }, { i: 'salva.png', l: "Salva" }, { i: 'salvanome.png', l: "Salva con nome" }], [{ i: 'taglia.png', l: "Taglia" }, { i: 'copia.png', l: "Copia" }, { i: 'incolla.png', l: "Incolla" }, { i: 'incollaposto.png', l: "Incolla sul posto" }], [{ i: 'elimina.png', l: "Elimina" }], [{ i: 'annulla.png', l: "Annulla" }, { i: 'ripristina.png', l: "Ripristina" }]] }
