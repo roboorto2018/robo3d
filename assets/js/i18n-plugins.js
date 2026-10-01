@@ -171,6 +171,68 @@ I18N_PLUGINS.es.extract = {
   specs: [['Menú', 'Robo Tool › robo Extract (una sola entrada)'], ['Barra de herramientas', '1 botón'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español'], ['Deshacer', 'Un solo Ctrl+Z']]
 };
 
+/* ================================================================ DEMOLITION */
+I18N_PLUGINS.en.demolition = {
+  tagline: 'Reduces the triangle count of a heavy mesh, keeping its shape.',
+  simple: 'Select heavy faces, groups or components: robo Demolition previews a lighter version, drawn on the model, and a slider lets you decide how much to reduce. Uses Open3D (Python, locally on your computer); nested objects stay separate objects and materials stay in place.',
+  steps: ['Select the faces, groups or components to lighten.', 'Press Preview: the lighter mesh is drawn in blue on the model. Move the slider to reduce more or less.', 'Press Apply: a single Ctrl+Z restores everything.'],
+  how: [
+    { t: 'Everything local', d: 'No server, no online service: the plugin runs a Python script with Open3D directly, in the background, without blocking SketchUp. Elapsed time is shown and there\'s a Cancel button.' },
+    { t: 'Two methods', d: 'Quadric removes the triangles that change the shape least (better quality). Voxel merges points into grid cells (very fast and very light).' },
+    { t: 'Objects, materials and faces', d: 'Every nested group and component is reduced in its own place: it stays a separate object and is never merged with the others. Materials (front and back) and tags are kept, and reversed faces on closed shapes are corrected.' }
+  ],
+  pros: ['Free and offline', 'Preview with an adjustment slider', 'Groups and components stay separate objects', 'Materials preserved', 'A single Undo'],
+  solves: [
+    { p: 'Imported meshes have hundreds of thousands of triangles and slow the model down.', s: 'A copy with the triangle percentage you choose, with nearly the same shape.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo Demolition (one entry)'], ['Toolbar', '1 button'], ['Requires', 'Python 3 + Open3D (pip install open3d)'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_PLUGINS.de.demolition = {
+  tagline: 'Reduziert die Dreiecke eines schweren Mesh, ohne die Form zu verändern.',
+  simple: 'Wählen Sie schwere Flächen, Gruppen oder Komponenten: robo Demolition zeigt die leichtere Version als Vorschau direkt im Modell, und ein Regler bestimmt, wie stark reduziert wird. Nutzt Open3D (Python, lokal auf Ihrem Computer); innere Objekte bleiben eigene Objekte, Materialien bleiben an ihrem Platz.',
+  steps: ['Wählen Sie die zu erleichternden Flächen, Gruppen oder Komponenten aus.', 'Drücken Sie Vorschau: das leichtere Mesh wird blau im Modell gezeichnet. Bewegen Sie den Regler, um mehr oder weniger zu reduzieren.', 'Drücken Sie Anwenden: ein einziges Strg+Z stellt alles wieder her.'],
+  how: [
+    { t: 'Alles lokal', d: 'Kein Server, kein Online-Dienst: das Plugin startet direkt ein Python-Skript mit Open3D im Hintergrund, ohne SketchUp zu blockieren. Die verstrichene Zeit ist sichtbar, und es gibt eine Abbrechen-Schaltfläche.' },
+    { t: 'Zwei Methoden', d: 'Quadric entfernt die Dreiecke, die die Form am wenigsten verändern (bessere Qualität). Voxel fasst Punkte in Rasterzellen zusammen (sehr schnell und sehr leicht).' },
+    { t: 'Objekte, Materialien und Flächen', d: 'Jede verschachtelte Gruppe und Komponente wird an ihrem Platz reduziert: sie bleibt ein eigenes Objekt und wird nicht mit anderen zusammengeführt. Materialien (Vorder- und Rückseite) und Tags bleiben erhalten, umgekehrte Flächen auf geschlossenen Formen werden korrigiert.' }
+  ],
+  pros: ['Kostenlos und offline', 'Vorschau mit Regler', 'Gruppen und Komponenten bleiben eigene Objekte', 'Materialien bleiben erhalten', 'Ein einziges Undo'],
+  solves: [
+    { p: 'Importierte Meshes haben Hunderttausende Dreiecke und verlangsamen das Modell.', s: 'Eine Kopie mit dem gewählten Dreiecksanteil, mit fast identischer Form.' }
+  ],
+  specs: [['Menü', 'Robo Tool › robo Demolition (ein Eintrag)'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'Python 3 + Open3D (pip install open3d)'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_PLUGINS.fr.demolition = {
+  tagline: 'Réduit les triangles d\'un maillage lourd, en gardant la forme.',
+  simple: 'Sélectionnez des faces, groupes ou composants lourds : robo Demolition affiche un aperçu de la version plus légère, dessinée sur le modèle, et une barre permet de décider combien démolir. Utilise Open3D (Python, en local sur votre ordinateur) ; les objets internes restent des objets et les matériaux restent en place.',
+  steps: ['Sélectionnez les faces, groupes ou composants à alléger.', 'Appuyez sur Aperçu : le maillage plus léger est dessiné en bleu sur le modèle. Déplacez la barre pour démolir plus ou moins.', 'Appuyez sur Appliquer : un seul Ctrl+Z restaure tout.'],
+  how: [
+    { t: 'Tout en local', d: 'Aucun serveur ni service en ligne : le plugin lance directement un script Python avec Open3D, en arrière-plan, sans bloquer SketchUp. Le temps écoulé est visible et un bouton Annuler est disponible.' },
+    { t: 'Deux méthodes', d: 'Quadric retire les triangles qui changent le moins la forme (meilleure qualité). Voxel fusionne les points en cellules d\'une grille (très rapide et très léger).' },
+    { t: 'Objets, matériaux et faces', d: 'Chaque groupe et composant imbriqué est réduit à sa place : il reste un objet séparé et n\'est pas fusionné avec les autres. Les matériaux (avant et arrière) et les tags sont conservés, et les faces inversées sur les formes fermées sont corrigées.' }
+  ],
+  pros: ['Gratuit et hors ligne', 'Aperçu avec curseur de réglage', 'Groupes et composants restent des objets séparés', 'Matériaux conservés', 'Un seul Undo'],
+  solves: [
+    { p: 'Les maillages importés ont des centaines de milliers de triangles et ralentissent le modèle.', s: 'Une copie avec le pourcentage de triangles choisi, avec une forme presque identique.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo Demolition (une seule entrée)'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'Python 3 + Open3D (pip install open3d)'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_PLUGINS.es.demolition = {
+  tagline: 'Reduce los triángulos de una malla pesada, manteniendo la forma.',
+  simple: 'Selecciona caras, grupos o componentes pesados: robo Demolition muestra una vista previa de la versión más ligera, dibujada sobre el modelo, y una barra decide cuánto demoler. Usa Open3D (Python, en local en tu ordenador); los objetos internos siguen siendo objetos y los materiales permanecen en su sitio.',
+  steps: ['Selecciona las caras, grupos o componentes a aligerar.', 'Pulsa Vista previa: la malla más ligera se dibuja en azul sobre el modelo. Mueve la barra para demoler más o menos.', 'Pulsa Aplicar: un solo Ctrl+Z restaura todo.'],
+  how: [
+    { t: 'Todo en local', d: 'Sin servidor ni servicio en línea: el plugin ejecuta directamente un script Python con Open3D en segundo plano, sin bloquear SketchUp. El tiempo transcurrido es visible y hay un botón Cancelar.' },
+    { t: 'Dos métodos', d: 'Quadric elimina los triángulos que cambian menos la forma (mejor calidad). Voxel une los puntos en celdas de una cuadrícula (muy rápido y muy ligero).' },
+    { t: 'Objetos, materiales y caras', d: 'Cada grupo y componente anidado se reduce en su propio lugar: sigue siendo un objeto separado y no se fusiona con los demás. Los materiales (frente y reverso) y las etiquetas se mantienen, y las caras invertidas en formas cerradas se corrigen.' }
+  ],
+  pros: ['Gratis y sin conexión', 'Vista previa con control deslizante', 'Grupos y componentes siguen siendo objetos separados', 'Materiales conservados', 'Un solo deshacer'],
+  solves: [
+    { p: 'Las mallas importadas tienen cientos de miles de triángulos y ralentizan el modelo.', s: 'Una copia con el porcentaje de triángulos que elijas, con la forma casi idéntica.' }
+  ],
+  specs: [['Menú', 'Robo Tool › robo Demolition (una sola entrada)'], ['Barra de herramientas', '1 botón'], ['Requiere', 'Python 3 + Open3D (pip install open3d)'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+};
+
 /* ============================================================= EXPORT OBJECT */
 I18N_PLUGINS.en.export_object = {
   tagline: 'Export the selected objects to a new .skp file.',
