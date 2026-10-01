@@ -356,7 +356,10 @@
         '<div class="p-title">' + icon(p) + '<h1>' + esc(p.name) + '</h1><span class="pill dark">v' + esc(p.version) + '</span></div>' +
         '<p class="tag">' + esc(tagline) + '</p>' +
         '<p class="simple">' + esc(simple) + '</p>' +
-        '<div class="actions">' + (p.noDownload ? '' : '<a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz" download>' + tUI('plugin.download') + '</a>') + '<a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
+        '<div class="actions">' + (p.noDownload
+          ? '<button type="button" class="btn btn-red" id="dl-unavailable">' + tUI('plugin.download') + '</button>'
+          : '<a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz" download>' + tUI('plugin.download') + '</a>') +
+          '<a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
       '</div><div class="shot">' + gallery(im, 0, tUI('gal.imageof').replace('{n}', p.name)) + '</div></div></div>' +
 
       tbHtml +
@@ -379,6 +382,9 @@
       '<section><div class="wrap"><div class="pn">' +
         '<a href="plugin.html?id=' + prev.id + '"><small>' + tUI('nav.prev') + '</small><b>' + esc(prev.name) + '</b></a>' +
         '<a class="next" href="plugin.html?id=' + next.id + '"><small>' + tUI('nav.next') + '</small><b>' + esc(next.name) + '</b></a></div></div></section>';
+
+    var dlBtn = $('#dl-unavailable');
+    if (dlBtn) { dlBtn.addEventListener('click', function () { alert(tUI('plugin.unavailable')); }); }
   }
 
   /* ------------------------------------------------------------- contatti */
