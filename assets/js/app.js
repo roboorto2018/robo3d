@@ -122,6 +122,77 @@
     lbItems = []; lbSourceGal = null;
   }
 
+  /* ---------------------------------------------------------- donate gate */
+  // Shown before a .rbz download on plugins with donationPrompt: true (data.js).
+  // "Fai un'offerta" opens the PayPal donation page in a new tab and still starts
+  // the download right after; "Continua gratuitamente" just starts the download.
+  var DONATE_URL = 'https://www.paypal.com/donate/?hosted_button_id=XB6JEM2GHLLT6';
+
+  function triggerDownload(url) {
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = '';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  function donateModalEl() {
+    var box = $('#donate-modal');
+    if (box) { return box; }
+    box = document.createElement('div');
+    box.id = 'donate-modal';
+    box.className = 'donate-modal';
+    box.innerHTML =
+      '<div class="donate-box">' +
+        '<button type="button" class="donate-close" aria-label="Chiudi">&times;</button>' +
+        '<h3 id="donate-title"></h3>' +
+        '<p id="donate-text"></p>' +
+        '<div class="donate-actions">' +
+          '<button type="button" class="btn btn-outline" id="donate-free"></button>' +
+          '<button type="button" class="btn btn-red" id="donate-offer"></button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(box);
+    box.addEventListener('click', function (e) {
+      if (e.target === box || (e.target.closest && e.target.closest('.donate-close'))) { closeDonateModal(); }
+    });
+    return box;
+  }
+
+  function openDonateModal(url) {
+    var box = donateModalEl();
+    box.setAttribute('data-url', url);
+    $('#donate-title').textContent = tUI('donate.title');
+    $('#donate-text').textContent = tUI('donate.text');
+    $('#donate-free').textContent = tUI('donate.free');
+    $('#donate-offer').textContent = tUI('donate.offer');
+    box.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDonateModal() {
+    var box = $('#donate-modal');
+    if (!box) { return; }
+    box.classList.remove('on');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('#donate-free')) {
+      var url1 = $('#donate-modal').getAttribute('data-url');
+      closeDonateModal();
+      triggerDownload(url1);
+      return;
+    }
+    if (e.target.closest && e.target.closest('#donate-offer')) {
+      var url2 = $('#donate-modal').getAttribute('data-url');
+      window.open(DONATE_URL, '_blank', 'noopener');
+      closeDonateModal();
+      triggerDownload(url2);
+    }
+  });
+
   document.addEventListener('click', function (e) {
     var zoom = e.target.closest ? e.target.closest('.gal-zoom, .gal-play') : null;
     if (zoom) {
@@ -356,9 +427,12 @@
         '<div class="p-title">' + icon(p) + '<h1>' + esc(p.name) + '</h1><span class="pill dark">v' + esc(p.version) + '</span></div>' +
         '<p class="tag">' + esc(tagline) + '</p>' +
         '<p class="simple">' + esc(simple) + '</p>' +
-        '<div class="actions">' + (p.noDownload
-          ? '<button type="button" class="btn btn-red" id="dl-unavailable">' + tUI('plugin.download') + '</button>'
-          : '<a class="btn btn-red" href="https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz" download>' + tUI('plugin.download') + '</a>') +
+        '<div class="actions">' + (function () {
+          var rbzUrl = 'https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz';
+          if (p.noDownload) { return '<button type="button" class="btn btn-red" id="dl-unavailable">' + tUI('plugin.download') + '</button>'; }
+          if (p.donationPrompt) { return '<button type="button" class="btn btn-red" id="dl-gate" data-url="' + rbzUrl + '">' + tUI('plugin.download') + '</button>'; }
+          return '<a class="btn btn-red" href="' + rbzUrl + '" download>' + tUI('plugin.download') + '</a>';
+        })() +
           '<a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
       '</div><div class="shot">' + gallery(im, 0, tUI('gal.imageof').replace('{n}', p.name)) + '</div></div></div>' +
 
@@ -385,6 +459,8 @@
 
     var dlBtn = $('#dl-unavailable');
     if (dlBtn) { dlBtn.addEventListener('click', function () { alert(tUI('plugin.unavailable')); }); }
+    var gateBtn = $('#dl-gate');
+    if (gateBtn) { gateBtn.addEventListener('click', function () { openDonateModal(gateBtn.getAttribute('data-url')); }); }
   }
 
   /* ------------------------------------------------------------- contatti */

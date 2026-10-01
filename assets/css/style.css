@@ -270,6 +270,25 @@ section { padding: 88px 0; }
   .lightbox-next { right: 6px; }
 }
 
+/* donate gate: shown before a .rbz download on plugins with donationPrompt */
+.donate-modal {
+  position: fixed; inset: 0; z-index: 999; display: flex; align-items: center; justify-content: center;
+  padding: 20px; background: rgba(10,10,12,.72); opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+.donate-modal.on { opacity: 1; pointer-events: auto; }
+.donate-box {
+  position: relative; width: min(420px, 100%); background: #fff; border-radius: 14px;
+  padding: 32px 28px 26px; box-shadow: var(--shadow-lg, 0 20px 60px rgba(0,0,0,.3)); text-align: center;
+}
+.donate-box h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
+.donate-box p { color: var(--ink-soft); font-size: .95rem; line-height: 1.55; margin-bottom: 22px; }
+.donate-actions { display: flex; flex-direction: column; gap: 10px; }
+.donate-close {
+  position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border: 0; border-radius: 50%;
+  background: var(--bg-soft); color: var(--ink); font-size: 20px; line-height: 1; cursor: pointer;
+}
+.donate-close:hover { background: var(--red, #e02424); color: #fff; }
+
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .usage { display: grid; gap: 14px; margin-top: 8px; }
 .usage li { list-style: none; display: flex; gap: 14px; align-items: flex-start; }

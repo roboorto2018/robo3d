@@ -110,6 +110,7 @@ var PLUGINS = [
   /* ---------------------------------------------------------------- FILLET */
   {
     id: 'fillet', name: 'robo Fillet', version: '1.1', category: 'Modellazione', hue: 200,
+    donationPrompt: true,
     video: 'sGrRxU-Thlo',
     images: ['assets/img/screenshots/fillet-1.png', 'assets/img/screenshots/fillet-2.png', 'assets/img/screenshots/fillet-3.png', 'assets/img/screenshots/fillet-4.png', 'assets/img/screenshots/fillet-5.png'],
     tagline: 'Raccordi e smussi tra due linee, su qualsiasi piano.',
