@@ -412,7 +412,8 @@
       }
       tbHtml = '<section><div class="wrap"><div class="section-head"><span class="eyebrow">' + tUI('tb.eyebrow') + '</span>' +
         '<h2>' + tUI(total === 1 ? 'tb.h2.one' : 'tb.h2.many').replace('{n}', total) + '</h2>' +
-        '<p>' + tUI('tb.lead').replace('{tb}', '<b>' + esc(tb.name) + '</b>') + '</p></div>' +
+        '<p>' + tUI('tb.lead').replace('{tb}', '<b>' + esc(tb.name) + '</b>') + '</p>' +
+        (tb.note ? '<p>' + esc(tb.note) + '</p>' : '') + '</div>' +
         '<div class="tb-frame"><div class="tb-bar' + (total > 8 ? ' compact' : '') + '"><span class="tb-grip"></span>' + groups + '</div></div>' +
         '<ul class="tb-legend' + (total > 8 ? ' many' : '') + '">' + legend + '</ul>' + shapesHtml + '</div></section>';
     }

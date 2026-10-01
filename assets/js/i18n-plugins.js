@@ -1006,7 +1006,7 @@ I18N_PLUGINS.es.standard = {
 /* ----------------------------------------------------------------- START */
 I18N_PLUGINS.en.start = {
   tagline: 'Over 20 quick commands in a single toolbar.',
-  simple: 'A toolbar with everyday operations: create groups and components, select, hide, delete guides and dimensions. Every button has its own icon and a keyboard shortcut.',
+  simple: 'A toolbar with everyday operations: create groups and components, select, hide, delete guides and dimensions. Every button has its own icon and a keyboard shortcut. From Settings you can also enable or disable the individual buttons you want to see on the toolbar.',
   steps: ['Turn on the "robo start" toolbar from View › Toolbars.', 'Use the buttons or the keyboard shortcuts.', 'From Settings choose which buttons to show.'],
   how: [
     { t: 'Grouped commands', d: 'Groups and components, explode, selection (all, invert, deselect), visibility, guides and dimensions, zoom and find centre: every function is a button.' },
@@ -1023,7 +1023,7 @@ I18N_PLUGINS.en.start = {
 };
 I18N_PLUGINS.de.start = {
   tagline: 'Über 20 schnelle Befehle in einer Symbolleiste.',
-  simple: 'Eine Symbolleiste mit den täglichen Aufgaben: Gruppen und Komponenten erstellen, auswählen, ausblenden, Hilfslinien und Maße löschen. Jede Schaltfläche hat ein eigenes Icon und eine Tastenkombination.',
+  simple: 'Eine Symbolleiste mit den täglichen Aufgaben: Gruppen und Komponenten erstellen, auswählen, ausblenden, Hilfslinien und Maße löschen. Jede Schaltfläche hat ein eigenes Icon und eine Tastenkombination. In den Einstellungen können Sie außerdem die einzelnen Schaltflächen aktivieren oder deaktivieren, die in der Symbolleiste erscheinen sollen.',
   steps: ['Aktivieren Sie die Symbolleiste "robo start" über Ansicht › Symbolleisten.', 'Nutzen Sie die Schaltflächen oder die Tastenkombinationen.', 'Wählen Sie in den Einstellungen, welche Schaltflächen angezeigt werden.'],
   how: [
     { t: 'Gruppierte Befehle', d: 'Gruppen und Komponenten, Explodieren, Auswahl (alles, umkehren, aufheben), Sichtbarkeit, Hilfslinien und Maße, Zoom und Mittelpunktsuche: jede Funktion ist eine Schaltfläche.' },
@@ -1040,7 +1040,7 @@ I18N_PLUGINS.de.start = {
 };
 I18N_PLUGINS.fr.start = {
   tagline: 'Plus de 20 commandes rapides dans une seule barre.',
-  simple: 'Une barre avec les opérations quotidiennes : créer des groupes et composants, sélectionner, masquer, supprimer les repères et cotes. Chaque bouton a sa propre icône et un raccourci clavier.',
+  simple: 'Une barre avec les opérations quotidiennes : créer des groupes et composants, sélectionner, masquer, supprimer les repères et cotes. Chaque bouton a sa propre icône et un raccourci clavier. Depuis Paramètres, vous pouvez aussi activer ou désactiver les boutons que vous souhaitez voir dans la barre.',
   steps: ['Activez la barre « robo start » depuis Affichage › Barres d\'outils.', 'Utilisez les boutons ou les raccourcis clavier.', 'Depuis Paramètres, choisissez quels boutons afficher.'],
   how: [
     { t: 'Commandes regroupées', d: 'Groupes et composants, exploser, sélection (tout, inverser, désélectionner), visibilité, repères et cotes, zoom et recherche du centre : chaque fonction est un bouton.' },
@@ -1057,7 +1057,7 @@ I18N_PLUGINS.fr.start = {
 };
 I18N_PLUGINS.es.start = {
   tagline: 'Más de 20 comandos rápidos en una sola barra.',
-  simple: 'Una barra con las operaciones de cada día: crea grupos y componentes, selecciona, oculta, borra guías y cotas. Cada botón tiene su icono y un atajo de teclado.',
+  simple: 'Una barra con las operaciones de cada día: crea grupos y componentes, selecciona, oculta, borra guías y cotas. Cada botón tiene su icono y un atajo de teclado. Desde Ajustes también puedes activar o desactivar los botones que quieras ver en la barra.',
   steps: ['Activa la barra "robo start" desde Ver › Barras de herramientas.', 'Usa los botones o los atajos de teclado.', 'Desde Ajustes elige qué botones mostrar.'],
   how: [
     { t: 'Comandos agrupados', d: 'Grupos y componentes, explosionar, selección (todo, invertir, deseleccionar), visibilidad, guías y cotas, zoom y búsqueda de centro: cada función es un botón.' },
