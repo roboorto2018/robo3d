@@ -285,6 +285,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- SPACING */
   {
     id: 'spacing_tool', name: 'robo Spacing Tool', version: '1.2', category: 'Distribuzione', hue: 268,
+    video: 'mMk6vg4fEns',
     images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
     tagline: 'Copie perfettamente spaziate lungo una linea o una curva.',
     simple: 'Scegli un oggetto e un percorso (una linea, un arco, una curva anche chiusa): Robo mette le copie a distanza regolare lungo il percorso, come lampioni lungo una strada o sedie attorno a un tavolo.',
