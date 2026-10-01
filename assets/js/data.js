@@ -71,7 +71,7 @@ var PLUGINS = [
   {
     id: 'demolition', name: 'robo Demolition', version: '1.0', category: 'Modellazione', hue: 15,
     noDownload: true,
-    video: 'cTL5-mmn7tE',
+    video: 'Zgdt30Fkshw',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
     simple: 'Seleziona facce, gruppi o componenti pesanti: robo Demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Usa Open3D (Python, in locale sul tuo computer); gli oggetti interni restano oggetti e i materiali restano al loro posto.',
