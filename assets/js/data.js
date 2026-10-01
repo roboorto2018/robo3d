@@ -18,6 +18,7 @@ var PLUGINS = [
   /* ------------------------------------------------------------------ BASEFORM */
   {
     id: 'baseform', name: 'robo baseform', version: '1.0', category: 'Modellazione', hue: 12,
+    donationPrompt: true,
     video: 'cxTEqsZ_Cpo',
     images: ['assets/img/screenshots/baseform-1.png', 'assets/img/screenshots/baseform-2.png', 'assets/img/screenshots/baseform-3.png'],
     tagline: 'Cubo, cilindro, cono, sfere e toro: forme precise in un clic.',
@@ -46,6 +47,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- EXTRACT */
   {
     id: 'extract', name: 'robo Extract', version: '1.0', category: 'Modellazione', hue: 170,
+    donationPrompt: true,
     video: 'Gi4nG6UZF0I',
     images: ['assets/img/screenshots/extract-1.png'],
     tagline: 'Copia facce e linee fuori dai gruppi, nella stessa posizione.',
@@ -89,6 +91,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- EXPORT OBJECT */
   {
     id: 'export_object', name: 'robo Export object', version: '0.1', category: 'Produttività', hue: 5,
+    donationPrompt: true,
     tagline: 'Esporta gli oggetti selezionati in un nuovo file .skp.',
     simple: 'Selezioni una parte del modello, scegli cartella e nome: Robo la salva in un file SketchUp separato, nella stessa posizione, senza toccare il tuo modello aperto.',
     steps: ['Seleziona gli oggetti da esportare.', 'Premi robo Export object e scegli la cartella di destinazione.', 'Conferma il nome del file: viene creato il nuovo .skp.'],
@@ -133,6 +136,7 @@ var PLUGINS = [
   /* ------------------------------------------------------- GROUP TO COMPONENT */
   {
     id: 'group_to_component', name: 'robo Group to Component', version: '1.2', category: 'Organizzazione', hue: 32,
+    donationPrompt: true,
     video: 'BLo3ZGXY1F4',
     images: ['assets/img/screenshots/group_to_component-1.png', 'assets/img/screenshots/group_to_component-2.png', 'assets/img/screenshots/group_to_component-3.png', 'assets/img/screenshots/group_to_component-4.png'],
     tagline: 'Trasforma i gruppi in componenti, unendo quelli identici.',
@@ -155,6 +159,7 @@ var PLUGINS = [
   /* ---------------------------------------------------------------- IMPACT */
   {
     id: 'impact_object', name: 'robo Impact Object', version: '1.1', category: 'Ottimizzazione', hue: 348,
+    donationPrompt: true,
     video: 'hU1Xp5oTKqg',
     images: ['assets/img/screenshots/impact_object-1.png', 'assets/img/screenshots/impact_object-2.png'],
     tagline: 'Scopri quali oggetti appesantiscono il tuo modello.',
@@ -177,6 +182,7 @@ var PLUGINS = [
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
     id: 'library_explorer', name: 'robo Library Explorer', version: '1.0', category: 'Organizzazione', hue: 190,
+    donationPrompt: true,
     video: '27grL1GDQQM',
     images: ['assets/img/screenshots/library_explorer-1.png', 'assets/img/screenshots/library_explorer-2.png', 'assets/img/screenshots/library_explorer-3.png', 'assets/img/screenshots/library_explorer-4.png', 'assets/img/screenshots/library_explorer-5.png', 'assets/img/screenshots/library_explorer-6.png', 'assets/img/screenshots/library_explorer-7.png'],
     tagline: 'Sfoglia le tue librerie con anteprime vere e inserisci con un clic.',
@@ -199,6 +205,7 @@ var PLUGINS = [
   /* ------------------------------------------------------------- PLACEMENT */
   {
     id: 'placement', name: 'robo Placement', version: '0.9', category: 'Distribuzione', hue: 130,
+    donationPrompt: true,
     video: 'BuxBGvKxEGM',
     images: ['assets/img/screenshots/placement-1.png', 'assets/img/screenshots/placement-2.png', 'assets/img/screenshots/placement-3.png', 'assets/img/screenshots/placement-4.png'],
     tagline: 'Distribuisci oggetti a caso su qualsiasi superficie.',
@@ -221,6 +228,7 @@ var PLUGINS = [
   /* ----------------------------------------------------------------- PROXY */
   {
     id: 'proxy_manager', name: 'robo Proxy Manager', version: '0.5', category: 'Ottimizzazione', hue: 220,
+    donationPrompt: true,
     video: 'ThxhD9J6eC0',
     images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
     tagline: 'Sostituisci gli oggetti pesanti con proxy leggeri.',
@@ -243,6 +251,7 @@ var PLUGINS = [
   /* ----------------------------------------------------------------- SCALE */
   {
     id: 'scale_definition', name: 'robo Scale Definition', version: '0.7', category: 'Organizzazione', hue: 24,
+    donationPrompt: true,
     video: 'GI1vYGhCF_E',
     images: ['assets/img/screenshots/scale_definition-1.png', 'assets/img/screenshots/scale_definition-2.png', 'assets/img/screenshots/scale_definition-3.png'],
     tagline: 'Fissa la scala nella geometria e riporta tutto a 1.0.',
@@ -265,6 +274,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- SECTION */
   {
     id: 'section', name: 'robo section', version: '1.2', category: 'Organizzazione', hue: 210,
+    donationPrompt: true,
     video: 'KAbKr1Lui84',
     images: ['assets/img/screenshots/section-1.png', 'assets/img/screenshots/section-2.png', 'assets/img/screenshots/section-3.png', 'assets/img/screenshots/section-4.png', 'assets/img/screenshots/section-5.png'],
     tagline: 'Tutti i piani di sezione in un solo pannello.',
@@ -287,6 +297,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- SPACING */
   {
     id: 'spacing_tool', name: 'robo Spacing Tool', version: '1.2', category: 'Distribuzione', hue: 268,
+    donationPrompt: true,
     video: 'mMk6vg4fEns',
     images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
     tagline: 'Copie perfettamente spaziate lungo una linea o una curva.',
@@ -309,6 +320,7 @@ var PLUGINS = [
   /* ---------------------------------------------------------------- STANDARD */
   {
     id: 'standard', name: 'robo Standard', version: '1.1', category: 'Produttività', hue: 100,
+    donationPrompt: true,
     tagline: 'I comandi di tutti i giorni in una barra con icone Robo.',
     simple: 'Nuovo, Apri, Salva, Taglia, Copia, Incolla, Annulla… i comandi più usati di SketchUp riuniti in una sola barra, con icone chiare e nello stile Robo.',
     steps: ['Attiva la barra "robo Standard" da Vista › Barre degli strumenti.', 'Usa i pulsanti al posto dei menu.', 'Gli stessi comandi sono anche in Estensioni › Robo Tool › robo Standard.'],
@@ -330,6 +342,7 @@ var PLUGINS = [
   /* ----------------------------------------------------------------- START */
   {
     id: 'start', name: 'robo start', version: '1.0', category: 'Produttività', hue: 350,
+    donationPrompt: true,
     tagline: 'Oltre 20 comandi rapidi in un\'unica barra.',
     simple: 'Una barra con le operazioni di ogni giorno: crea gruppi e componenti, seleziona, nascondi, cancella guide e quote. Ogni pulsante ha una sua icona e una scorciatoia da tastiera.',
     steps: ['Attiva la barra "robo start" da Vista › Barre degli strumenti.', 'Usa i pulsanti o le scorciatoie da tastiera.', 'Da Impostazioni scegli quali pulsanti mostrare.'],
@@ -351,6 +364,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- TANGENT */
   {
     id: 'tangent', name: 'robo Tangent', version: '1.2', category: 'Modellazione', hue: 160,
+    donationPrompt: true,
     video: 'RsSOjk3k7NE',
     images: ['assets/img/screenshots/tangent-1.png', 'assets/img/screenshots/tangent-2.png', 'assets/img/screenshots/tangent-3.png', 'assets/img/screenshots/tangent-4.png', 'assets/img/screenshots/tangent-5.png', 'assets/img/screenshots/tangent-6.png', 'assets/img/screenshots/tangent-7.png', 'assets/img/screenshots/tangent-8.png'],
     tagline: 'La tangente esatta tra archi, cerchi e segmenti.',
@@ -373,6 +387,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- UPLEVEL */
   {
     id: 'uplevel', name: 'robo Uplevel', version: '1.0', category: 'Produttività', hue: 45,
+    donationPrompt: true,
     video: 'whuBMKHEvjE',
     tagline: 'Porta gli oggetti fuori dal gruppo, senza spostarli.',
     simple: 'Sei dentro un gruppo o un componente e vuoi tirare fuori alcuni oggetti al livello superiore, restando esattamente dove sono. Un clic e li sposta nella gerarchia senza cambiarne la posizione.',
