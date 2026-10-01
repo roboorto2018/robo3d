@@ -382,9 +382,11 @@
   }
 
   /* ------------------------------------------------------------- contatti */
-  // The site is static, so the form is sent through FormSubmit (formsubmit.co), a free service that forwards the
-  // message to CONTACT_EMAIL. The first message ever sent asks the owner of the address to confirm it (one time).
+  // The site is static, so the form is sent through Formspree, a free service that forwards the
+  // message to the inbox tied to FORMSPREE_ENDPOINT. The first message ever sent asks the owner
+  // of the address to confirm it (one time).
   var CONTACT_EMAIL = 'roberto.bolletta@gmail.com';
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/moevboal';
 
   function contact() {
     chrome(false);
@@ -426,17 +428,17 @@
       data.append('Messaggio', msg);
       data.append('_subject', tUI('form.subject.formsubmit') + sel.value);
       data.append('_replyto', email);
-      data.append('_template', 'table');
       var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(tUI('form.subject.mailto') + sel.value) +
         '&body=' + encodeURIComponent(msg + '\n\n' + name + ' (' + email + ')');
-      fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data })
-        .then(function (r) { return r.json(); })
-        .then(function (j) {
-          if (j && (j.success === true || j.success === 'true')) {
+      fetch(FORMSPREE_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
+        .then(function (res) {
+          if (res.ok && res.body && res.body.ok === true) {
             form.reset();
             say('ok', tUI('form.ok'));
           } else {
-            throw new Error((j && j.message) || 'errore');
+            var msgTxt = (res.body && res.body.errors && res.body.errors[0] && res.body.errors[0].message) || 'errore';
+            throw new Error(msgTxt);
           }
         })['catch'](function () {
           say('err', tUI('form.err.network') + '<a href="' + mailto + '">' + tUI('form.err.network.link') + '</a>.');
