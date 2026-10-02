@@ -235,72 +235,84 @@ I18N_PLUGINS.es.demolition = {
 
 /* ============================================================= EXPORT OBJECT */
 I18N_PLUGINS.en.export_object = {
-  tagline: 'Export the selected objects to a new .skp file.',
-  simple: 'Select part of the model, choose a folder and a name: Robo saves it as a separate SketchUp file, in the same position, without touching your open model.',
-  steps: ['Select the objects to export.', 'Press robo Export object and choose the destination folder.', 'Confirm the file name: the new .skp is created.'],
+  tagline: 'Export the selected objects to a new .skp file, in the version you choose.',
+  simple: 'Select part of the model: a window opens with the name already filled in (that of the group or component), the folder and the SketchUp version. Robo saves it as a separate file, in the same position, without touching your open model.',
+  steps: ['Select the objects to export.', 'Press robo Export object: the file name is already that of the group or component, you can change it.', 'Choose the folder and the SketchUp version, then press Export.'],
   how: [
     { t: 'The model stays untouched', d: 'The selection is briefly wrapped in a temporary group, saved to disk, and the operation is undone right after: the open model is never closed, reopened or altered.' },
+    { t: 'Name already filled in', d: 'With a single group or component selected, the file name is its own (or its definition\'s); with several objects it proposes name_selection. You edit it in the window; characters not valid on Windows are replaced.' },
+    { t: 'SketchUp version of your choice', d: 'Pick the version to save for from the menu: the current one, or 2021 and earlier. The choice is available from SketchUp 2022. An older version may lose what it does not know (styles, recent features), and your SketchUp may refuse very old versions.' },
     { t: 'Original position kept', d: 'Objects in the new file stay at the same coordinates they had in the model, so you can re-import or align them without any shift.' },
     { t: 'With everything it needs', d: 'The components and materials the objects use are saved along with them, without dragging along the rest of the model.' },
-    { t: 'Suggested name and protections', d: 'The proposed name comes from the current file (name_selection); characters not valid on Windows are replaced, and if the file already exists you\'re asked whether to overwrite it.' }
+    { t: 'Robo window, Help and five languages', d: 'The window follows the Robo style, fits its height to the content and remembers the folder and version you chose. The Help button and the globe at the top right open the guide and change the language (Italian, English, German, French, Spanish). If the file already exists you are asked whether to overwrite it.' }
   ],
-  pros: ['A clean file with only what\'s needed', 'The open model is never touched', 'No copy-paste between windows', 'Original coordinates preserved'],
+  pros: ['Name already filled in and editable', 'SketchUp version of your choice (from SketchUp 2022)', 'A clean file with only what\'s needed', 'The open model is never touched', 'Original coordinates preserved', 'Window and guide in five languages'],
   solves: [
     { p: 'Saving just one part of the model means copying, opening a new file and pasting in place.', s: 'One command: select and export.' },
+    { p: 'Someone with an older SketchUp cannot open the file.', s: 'Choose the save version right in the window.' },
     { p: '"Save as" and deleting the rest risks ruining the original file.', s: 'The export happens without modifying the open file.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo Export object'], ['Toolbar', '1 button'], ['Format', '.skp file'], ['Undo', 'The model is never modified']]
+  specs: [['Menu', 'Robo Tool › robo Export object'], ['Toolbar', '1 button'], ['Window', 'File name, folder and version; automatic height'], ['Save version', 'Your choice, from SketchUp 2022'], ['Format', '.skp file'], ['Languages', '5 (IT, EN, DE, FR, ES)'], ['Undo', 'The model is never modified']]
 };
 I18N_PLUGINS.de.export_object = {
-  tagline: 'Exportiert die ausgewählten Objekte in eine neue .skp-Datei.',
-  simple: 'Wählen Sie einen Teil des Modells aus, wählen Sie Ordner und Namen: Robo speichert ihn als separate SketchUp-Datei, an derselben Position, ohne Ihr geöffnetes Modell zu berühren.',
-  steps: ['Wählen Sie die zu exportierenden Objekte aus.', 'Drücken Sie robo Export object und wählen Sie den Zielordner.', 'Bestätigen Sie den Dateinamen: die neue .skp-Datei wird erstellt.'],
+  tagline: 'Exportiere die ausgewählten Objekte in eine neue .skp-Datei, in der gewünschten Version.',
+  simple: 'Wähle einen Teil des Modells aus: Es öffnet sich ein Fenster mit bereits ausgefülltem Namen (dem der Gruppe oder Komponente), dem Ordner und der SketchUp-Version. Robo speichert ihn als separate Datei, an derselben Position, ohne dein geöffnetes Modell anzutasten.',
+  steps: ['Die zu exportierenden Objekte auswählen.', 'robo Export object drücken: Der Dateiname ist schon der der Gruppe oder Komponente, du kannst ihn ändern.', 'Ordner und SketchUp-Version wählen und auf Exportieren drücken.'],
   how: [
-    { t: 'Das Modell bleibt unberührt', d: 'Die Auswahl wird kurz in eine temporäre Gruppe eingeschlossen, auf der Festplatte gespeichert, und der Vorgang wird sofort danach rückgängig gemacht: das geöffnete Modell wird nie geschlossen, wieder geöffnet oder verändert.' },
-    { t: 'Ursprüngliche Position erhalten', d: 'Die Objekte in der neuen Datei behalten dieselben Koordinaten wie im Modell, sodass Sie sie ohne Verschiebung wieder importieren oder ausrichten können.' },
-    { t: 'Mit allem Nötigen', d: 'Die von den Objekten verwendeten Komponenten und Materialien werden mitgespeichert, ohne den Rest des Modells mitzunehmen.' },
-    { t: 'Vorgeschlagener Name und Schutz', d: 'Der vorgeschlagene Name stammt aus der aktuellen Datei (name_auswahl); für Windows ungültige Zeichen werden ersetzt, und falls die Datei bereits existiert, werden Sie gefragt, ob überschrieben werden soll.' }
+    { t: 'Das Modell bleibt unberührt', d: 'Die Auswahl wird kurz in eine temporäre Gruppe gepackt, auf die Festplatte gespeichert und der Vorgang gleich danach rückgängig gemacht: Das geöffnete Modell wird weder geschlossen, neu geöffnet noch verändert.' },
+    { t: 'Name bereits ausgefüllt', d: 'Ist genau eine Gruppe oder Komponente ausgewählt, ist der Dateiname ihr eigener (oder der ihrer Definition); bei mehreren Objekten schlägt er name_auswahl vor. Du änderst ihn im Fenster; unter Windows ungültige Zeichen werden ersetzt.' },
+    { t: 'SketchUp-Version nach Wahl', d: 'Im Menü wählst du die Version, für die gespeichert wird: die aktuelle oder 2021 und älter. Die Auswahl gibt es ab SketchUp 2022. Eine ältere Version kann verlieren, was sie nicht kennt (Stile, neue Funktionen), und dein SketchUp lehnt sehr alte Versionen eventuell ab.' },
+    { t: 'Ursprüngliche Position bleibt erhalten', d: 'Die Objekte in der neuen Datei behalten dieselben Koordinaten wie im Modell, sodass du sie ohne Verschiebung wieder importieren oder ausrichten kannst.' },
+    { t: 'Mit allem, was dazugehört', d: 'Die von den Objekten verwendeten Komponenten und Materialien werden mitgespeichert, ohne den Rest des Modells mitzuschleppen.' },
+    { t: 'Robo-Fenster, Hilfe und fünf Sprachen', d: 'Das Fenster folgt dem Robo-Stil, passt seine Höhe dem Inhalt an und merkt sich Ordner und Version. Die Hilfe-Schaltfläche und die Weltkugel oben rechts öffnen die Anleitung und ändern die Sprache (Italienisch, Englisch, Deutsch, Französisch, Spanisch). Existiert die Datei schon, wirst du gefragt, ob sie überschrieben werden soll.' }
   ],
-  pros: ['Eine saubere Datei mit nur dem Nötigen', 'Das geöffnete Modell wird nie berührt', 'Kein Kopieren-Einfügen zwischen Fenstern', 'Ursprüngliche Koordinaten erhalten'],
+  pros: ['Name bereits ausgefüllt und änderbar', 'SketchUp-Version nach Wahl (ab SketchUp 2022)', 'Eine saubere Datei nur mit dem Nötigen', 'Das geöffnete Modell wird nie angetastet', 'Ursprüngliche Koordinaten bleiben erhalten', 'Fenster und Anleitung in fünf Sprachen'],
   solves: [
-    { p: 'Um nur einen Teil des Modells zu speichern, muss man kopieren, eine neue Datei öffnen und einfügen.', s: 'Ein Befehl: auswählen und exportieren.' },
-    { p: '"Speichern unter" und den Rest löschen riskiert, die Originaldatei zu beschädigen.', s: 'Der Export erfolgt, ohne die geöffnete Datei zu verändern.' }
+    { p: 'Um nur einen Teil des Modells zu speichern, kopiert man, öffnet eine neue Datei und fügt an der Stelle ein.', s: 'Ein Befehl: auswählen und exportieren.' },
+    { p: 'Wer ein älteres SketchUp hat, kann die Datei nicht öffnen.', s: 'Die Speicherversion direkt im Fenster wählen.' },
+    { p: '„Speichern unter“ und den Rest löschen kann die Originaldatei ruinieren.', s: 'Der Export erfolgt, ohne die geöffnete Datei zu verändern.' }
   ],
-  specs: [['Menü', 'Robo Tool › robo Export object'], ['Symbolleiste', '1 Schaltfläche'], ['Format', '.skp-Datei'], ['Rückgängig', 'Das Modell wird nie verändert']]
+  specs: [['Menü', 'Robo Tool › robo Export object'], ['Symbolleiste', '1 Schaltfläche'], ['Fenster', 'Dateiname, Ordner und Version; automatische Höhe'], ['Speicherversion', 'Nach Wahl, ab SketchUp 2022'], ['Format', '.skp-Datei'], ['Sprachen', '5 (IT, EN, DE, FR, ES)'], ['Rückgängig', 'Das Modell wird nie verändert']]
 };
 I18N_PLUGINS.fr.export_object = {
-  tagline: 'Exporte les objets sélectionnés dans un nouveau fichier .skp.',
-  simple: 'Sélectionnez une partie du modèle, choisissez un dossier et un nom : Robo l\'enregistre dans un fichier SketchUp séparé, à la même position, sans toucher votre modèle ouvert.',
-  steps: ['Sélectionnez les objets à exporter.', 'Appuyez sur robo Export object et choisissez le dossier de destination.', 'Confirmez le nom du fichier : le nouveau .skp est créé.'],
+  tagline: 'Exporte les objets sélectionnés vers un nouveau fichier .skp, dans la version de ton choix.',
+  simple: 'Sélectionne une partie du modèle : une fenêtre s\'ouvre avec le nom déjà rempli (celui du groupe ou du composant), le dossier et la version de SketchUp. Robo l\'enregistre dans un fichier séparé, à la même position, sans toucher à ton modèle ouvert.',
+  steps: ['Sélectionne les objets à exporter.', 'Appuie sur robo Export object : le nom du fichier est déjà celui du groupe ou du composant, tu peux le modifier.', 'Choisis le dossier et la version de SketchUp, puis appuie sur Exporter.'],
   how: [
-    { t: 'Le modèle reste intact', d: 'La sélection est brièvement enfermée dans un groupe temporaire, enregistrée sur disque, puis l\'opération est immédiatement annulée : le modèle ouvert n\'est jamais fermé, rouvert ni modifié.' },
-    { t: 'Position d\'origine conservée', d: 'Les objets du nouveau fichier gardent les mêmes coordonnées qu\'ils avaient dans le modèle, afin de pouvoir les réimporter ou les aligner sans décalage.' },
-    { t: 'Avec tout ce qu\'il faut', d: 'Les composants et matériaux utilisés par les objets sont enregistrés avec eux, sans emporter le reste du modèle.' },
-    { t: 'Nom suggéré et protections', d: 'Le nom proposé vient du fichier actuel (nom_sélection) ; les caractères non valides pour Windows sont remplacés, et si le fichier existe déjà, on vous demande si vous voulez l\'écraser.' }
+    { t: 'Le modèle reste intact', d: 'La sélection est brièvement placée dans un groupe temporaire, enregistrée sur le disque, puis l\'opération est annulée aussitôt : le modèle ouvert n\'est jamais fermé, rouvert ni modifié.' },
+    { t: 'Nom déjà rempli', d: 'Avec un seul groupe ou composant sélectionné, le nom du fichier est le sien (ou celui de sa définition) ; avec plusieurs objets, il propose nom_selection. Tu le modifies dans la fenêtre ; les caractères non valides sous Windows sont remplacés.' },
+    { t: 'Version de SketchUp au choix', d: 'Dans le menu, choisis la version pour laquelle enregistrer : la version actuelle, ou 2021 et antérieures. Le choix est disponible à partir de SketchUp 2022. Une version plus ancienne peut perdre ce qu\'elle ne connaît pas (styles, fonctions récentes), et ton SketchUp peut refuser les versions très anciennes.' },
+    { t: 'Position d\'origine conservée', d: 'Les objets du nouveau fichier gardent les mêmes coordonnées que dans le modèle, tu peux donc les réimporter ou les aligner sans décalage.' },
+    { t: 'Avec tout ce qu\'il faut', d: 'Les composants et matériaux utilisés par les objets sont enregistrés avec eux, sans traîner le reste du modèle.' },
+    { t: 'Fenêtre Robo, aide et cinq langues', d: 'La fenêtre suit le style Robo, ajuste sa hauteur au contenu et mémorise le dossier et la version choisis. Le bouton Aide et le globe en haut à droite ouvrent le guide et changent la langue (italien, anglais, allemand, français, espagnol). Si le fichier existe déjà, on te demande s\'il faut le remplacer.' }
   ],
-  pros: ['Un fichier propre avec seulement le nécessaire', 'Le modèle ouvert n\'est jamais touché', 'Aucun copier-coller entre fenêtres', 'Coordonnées d\'origine préservées'],
+  pros: ['Nom déjà rempli et modifiable', 'Version de SketchUp au choix (à partir de SketchUp 2022)', 'Un fichier propre avec seulement l\'essentiel', 'Le modèle ouvert n\'est jamais touché', 'Coordonnées d\'origine préservées', 'Fenêtre et guide en cinq langues'],
   solves: [
-    { p: 'Pour enregistrer une seule partie du modèle, il faut copier, ouvrir un nouveau fichier et coller.', s: 'Une commande : vous sélectionnez et exportez.' },
-    { p: '« Enregistrer sous » puis supprimer le reste risque d\'abîmer le fichier d\'origine.', s: 'L\'export se fait sans modifier le fichier ouvert.' }
+    { p: 'Pour n\'enregistrer qu\'une partie du modèle, on copie, on ouvre un nouveau fichier et on colle sur place.', s: 'Une commande : tu sélectionnes et tu exportes.' },
+    { p: 'Quelqu\'un avec un SketchUp plus ancien ne peut pas ouvrir le fichier.', s: 'Choisis la version d\'enregistrement directement dans la fenêtre.' },
+    { p: '« Enregistrer sous » puis supprimer le reste risque d\'abîmer le fichier d\'origine.', s: 'L\'exportation se fait sans modifier le fichier ouvert.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo Export object'], ['Barre d\'outils', '1 bouton'], ['Format', 'Fichier .skp'], ['Annulation', 'Le modèle n\'est jamais modifié']]
+  specs: [['Menu', 'Robo Tool › robo Export object'], ['Barre d\'outils', '1 bouton'], ['Fenêtre', 'Nom du fichier, dossier et version ; hauteur automatique'], ['Version d\'enregistrement', 'Au choix, à partir de SketchUp 2022'], ['Format', 'Fichier .skp'], ['Langues', '5 (IT, EN, DE, FR, ES)'], ['Annulation', 'Le modèle n\'est jamais modifié']]
 };
 I18N_PLUGINS.es.export_object = {
-  tagline: 'Exporta los objetos seleccionados a un nuevo archivo .skp.',
-  simple: 'Selecciona una parte del modelo, elige carpeta y nombre: Robo la guarda en un archivo SketchUp separado, en la misma posición, sin tocar tu modelo abierto.',
-  steps: ['Selecciona los objetos a exportar.', 'Pulsa robo Export object y elige la carpeta de destino.', 'Confirma el nombre del archivo: se crea el nuevo .skp.'],
+  tagline: 'Exporta los objetos seleccionados a un nuevo archivo .skp, en la versión que elijas.',
+  simple: 'Selecciona una parte del modelo: se abre una ventana con el nombre ya escrito (el del grupo o componente), la carpeta y la versión de SketchUp. Robo la guarda en un archivo aparte, en la misma posición, sin tocar tu modelo abierto.',
+  steps: ['Selecciona los objetos a exportar.', 'Pulsa robo Export object: el nombre del archivo ya es el del grupo o componente, puedes cambiarlo.', 'Elige la carpeta y la versión de SketchUp y pulsa Exportar.'],
   how: [
-    { t: 'El modelo permanece intacto', d: 'La selección se encierra brevemente en un grupo temporal, se guarda en disco y justo después la operación se deshace: el modelo abierto nunca se cierra, se reabre ni se modifica.' },
-    { t: 'Posición original mantenida', d: 'Los objetos en el nuevo archivo conservan las mismas coordenadas que tenían en el modelo, para poder reimportarlos o alinearlos sin desplazamientos.' },
+    { t: 'El modelo queda intacto', d: 'La selección se envuelve un instante en un grupo temporal, se guarda en disco y justo después la operación se deshace: el modelo abierto nunca se cierra, se reabre ni se modifica.' },
+    { t: 'Nombre ya escrito', d: 'Con un solo grupo o componente seleccionado, el nombre del archivo es el suyo (o el de su definición); con varios objetos propone nombre_seleccion. Lo editas en la ventana; los caracteres no válidos en Windows se sustituyen.' },
+    { t: 'Versión de SketchUp a elegir', d: 'En el menú eliges la versión para la que guardar: la actual, o 2021 y anteriores. La elección está disponible desde SketchUp 2022. Una versión más antigua puede perder lo que no conoce (estilos, funciones recientes) y tu SketchUp puede rechazar las versiones muy antiguas.' },
+    { t: 'Posición original conservada', d: 'Los objetos del nuevo archivo mantienen las mismas coordenadas que tenían en el modelo, así puedes reimportarlos o alinearlos sin desplazamientos.' },
     { t: 'Con todo lo necesario', d: 'Los componentes y materiales que usan los objetos se guardan junto con ellos, sin arrastrar el resto del modelo.' },
-    { t: 'Nombre sugerido y protecciones', d: 'El nombre propuesto deriva del archivo actual (nombre_selección); los caracteres no válidos en Windows se sustituyen, y si el archivo ya existe se pregunta si sobrescribirlo.' }
+    { t: 'Ventana Robo, ayuda y cinco idiomas', d: 'La ventana sigue el estilo Robo, ajusta su altura al contenido y recuerda la carpeta y la versión elegidas. El botón Ayuda y el globo arriba a la derecha abren la guía y cambian el idioma (italiano, inglés, alemán, francés, español). Si el archivo ya existe, se pregunta si se quiere sobrescribir.' }
   ],
-  pros: ['Un archivo limpio con solo lo necesario', 'El modelo abierto nunca se toca', 'Sin copiar y pegar entre ventanas', 'Coordenadas originales preservadas'],
+  pros: ['Nombre ya escrito y editable', 'Versión de SketchUp a elegir (desde SketchUp 2022)', 'Un archivo limpio solo con lo necesario', 'El modelo abierto nunca se toca', 'Coordenadas originales preservadas', 'Ventana y guía en cinco idiomas'],
   solves: [
-    { p: 'Guardar solo una parte del modelo obliga a copiar, abrir un nuevo archivo y pegar.', s: 'Un comando: seleccionas y exportas.' },
-    { p: '"Guardar como" y borrar el resto arriesga a dañar el archivo original.', s: 'La exportación ocurre sin modificar el archivo abierto.' }
+    { p: 'Para guardar solo una parte del modelo hay que copiar, abrir un archivo nuevo y pegar en su sitio.', s: 'Un comando: seleccionas y exportas.' },
+    { p: 'Quien tiene un SketchUp más antiguo no puede abrir el archivo.', s: 'Elige la versión de guardado directamente en la ventana.' },
+    { p: '«Guardar como» y borrar el resto arriesga estropear el archivo original.', s: 'La exportación se hace sin modificar el archivo abierto.' }
   ],
-  specs: [['Menú', 'Robo Tool › robo Export object'], ['Barra de herramientas', '1 botón'], ['Formato', 'Archivo .skp'], ['Deshacer', 'El modelo nunca se modifica']]
+  specs: [['Menú', 'Robo Tool › robo Export object'], ['Barra de herramientas', '1 botón'], ['Ventana', 'Nombre del archivo, carpeta y versión; altura automática'], ['Versión de guardado', 'A elegir, desde SketchUp 2022'], ['Formato', 'Archivo .skp'], ['Idiomas', '5 (IT, EN, DE, FR, ES)'], ['Deshacer', 'El modelo nunca se modifica']]
 };
 
 /* ---------------------------------------------------------------- FILLET */

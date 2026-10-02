@@ -92,21 +92,24 @@ var PLUGINS = [
   {
     id: 'export_object', name: 'robo Export object', version: '0.2', category: 'Produttività', hue: 5,
     donationPrompt: true,
-    tagline: 'Esporta gli oggetti selezionati in un nuovo file .skp.',
-    simple: 'Selezioni una parte del modello, scegli cartella e nome: Robo la salva in un file SketchUp separato, nella stessa posizione, senza toccare il tuo modello aperto.',
-    steps: ['Seleziona gli oggetti da esportare.', 'Premi robo Export object e scegli la cartella di destinazione.', 'Conferma il nome del file: viene creato il nuovo .skp.'],
+    tagline: 'Esporta gli oggetti selezionati in un nuovo file .skp, nella versione che scegli.',
+    simple: 'Selezioni una parte del modello: si apre una finestra con il nome già compilato (quello del gruppo o componente), la cartella e la versione di SketchUp. Robo la salva in un file separato, nella stessa posizione, senza toccare il tuo modello aperto.',
+    steps: ['Seleziona gli oggetti da esportare.', 'Premi robo Export object: il nome del file è già quello del gruppo o componente, puoi cambiarlo.', 'Scegli cartella e versione di SketchUp e premi Esporta.'],
     how: [
       { t: 'Il modello resta intatto', d: 'La selezione viene racchiusa per un istante in un gruppo temporaneo, salvata su disco e subito dopo l\'operazione viene annullata: il modello aperto non viene chiuso, riaperto né modificato.' },
+      { t: 'Nome già compilato', d: 'Con un solo gruppo o componente selezionato, il nome del file è il suo (o quello della definizione); con più oggetti propone nome_selezione. Lo modifichi nella finestra; i caratteri non validi per Windows vengono sostituiti.' },
+      { t: 'Versione di SketchUp a scelta', d: 'Dal menu scegli la versione per cui salvare: quella corrente oppure 2021 e precedenti. La scelta è disponibile da SketchUp 2022. Una versione più vecchia può perdere ciò che non conosce (stili, funzioni recenti) e il tuo SketchUp potrebbe non accettare le versioni molto vecchie.' },
       { t: 'Posizione originale mantenuta', d: 'Gli oggetti nel nuovo file restano nelle stesse coordinate che avevano nel modello, così puoi riimportarli o allinearli senza spostamenti.' },
       { t: 'Con tutto ciò che serve', d: 'Insieme agli oggetti vengono salvati i componenti e i materiali che usano, senza portarsi dietro il resto del modello.' },
-      { t: 'Nome suggerito e protezioni', d: 'Il nome proposto deriva dal file corrente (nome_selezione); i caratteri non validi per Windows vengono sostituiti e, se il file esiste già, ti viene chiesto se sovrascriverlo.' }
+      { t: 'Finestra Robo, Help e cinque lingue', d: 'La finestra segue lo stile Robo, si adatta in altezza al contenuto e ricorda cartella e versione scelte. Il pulsante Help e il globo in alto a destra aprono la guida e cambiano la lingua (italiano, inglese, tedesco, francese, spagnolo). Se il file esiste già, ti viene chiesto se sovrascriverlo.' }
     ],
-    pros: ['Un file pulito con solo ciò che serve', 'Il modello aperto non viene toccato', 'Nessun copia-incolla tra finestre', 'Coordinate originali preservate'],
+    pros: ['Nome già compilato e modificabile', 'Versione di SketchUp a scelta (da SketchUp 2022)', 'Un file pulito con solo ciò che serve', 'Il modello aperto non viene toccato', 'Coordinate originali preservate', 'Finestra e guida in cinque lingue'],
     solves: [
       { p: 'Per salvare una sola parte del modello si copia, si apre un nuovo file e si incolla sul posto.', s: 'Un comando: selezioni ed esporti.' },
+      { p: 'Chi ha una versione di SketchUp più vecchia non riesce ad aprire il file.', s: 'Scegli la versione di salvataggio direttamente nella finestra.' },
       { p: 'Salvare "con nome" e cancellare il resto rischia di rovinare il file originale.', s: 'L\'esportazione avviene senza modificare il file aperto.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Export object'], ['Barra strumenti', '1 pulsante'], ['Formato', 'File .skp'], ['Annullamento', 'Il modello non viene modificato']],
+    specs: [['Menu', 'Robo Tool › robo Export object'], ['Barra strumenti', '1 pulsante'], ['Finestra', 'Nome file, cartella e versione; altezza automatica'], ['Versione di salvataggio', 'A scelta da SketchUp 2022'], ['Formato', 'File .skp'], ['Lingue', '5 (IT, EN, DE, FR, ES)'], ['Annullamento', 'Il modello non viene modificato']],
     images: ['assets/img/screenshots/export_object-2.png']
   },
 
