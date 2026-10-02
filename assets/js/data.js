@@ -366,7 +366,7 @@ var PLUGINS = [
     id: 'tangent', name: 'robo Tangent', version: '1.2', category: 'Modellazione', hue: 160,
     donationPrompt: true,
     video: 'RsSOjk3k7NE',
-    images: ['assets/img/screenshots/tangent-1.png', 'assets/img/screenshots/tangent-2.png', 'assets/img/screenshots/tangent-3.png', 'assets/img/screenshots/tangent-4.png', 'assets/img/screenshots/tangent-5.png', 'assets/img/screenshots/tangent-6.png', 'assets/img/screenshots/tangent-7.png', 'assets/img/screenshots/tangent-8.png'],
+    images: ['assets/img/screenshots/tangent-8.png'],
     tagline: 'La tangente esatta tra archi, cerchi e segmenti.',
     simple: 'Clicca due cerchi (o un cerchio e una linea) e lo strumento disegna la linea che li tocca esattamente in un punto ciascuno. Vedi le possibilità in anteprima e scegli quella che ti serve muovendo il mouse.',
     steps: ['Attiva robo Tangent: passa sopra gli elementi, si illuminano di giallo.', 'Clicca il primo (rosso) e il secondo elemento (blu).', 'Muovi il mouse per scegliere la tangente verde e clicca per disegnarla.'],
