@@ -90,7 +90,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- EXPORT OBJECT */
   {
-    id: 'export_object', name: 'robo Export object', version: '0.1', category: 'Produttività', hue: 5,
+    id: 'export_object', name: 'robo Export object', version: '0.2', category: 'Produttività', hue: 5,
     donationPrompt: true,
     tagline: 'Esporta gli oggetti selezionati in un nuovo file .skp.',
     simple: 'Selezioni una parte del modello, scegli cartella e nome: Robo la salva in un file SketchUp separato, nella stessa posizione, senza toccare il tuo modello aperto.',
