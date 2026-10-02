@@ -184,7 +184,7 @@ var PLUGINS = [
 
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
-    id: 'library_explorer', name: 'robo Library Explorer', version: '1.0', category: 'Organizzazione', hue: 190,
+    id: 'library_explorer', name: 'robo Library Explorer', version: '1.1', category: 'Organizzazione', hue: 190,
     donationPrompt: true,
     video: '27grL1GDQQM',
     images: ['assets/img/screenshots/library_explorer-1.png', 'assets/img/screenshots/library_explorer-2.png', 'assets/img/screenshots/library_explorer-3.png', 'assets/img/screenshots/library_explorer-4.png', 'assets/img/screenshots/library_explorer-5.png', 'assets/img/screenshots/library_explorer-6.png', 'assets/img/screenshots/library_explorer-7.png'],
@@ -195,7 +195,9 @@ var PLUGINS = [
       { t: 'Un elenco per ogni cartella', d: 'Ogni cartella aggiunta diventa un argomento a sé, con le sue sottocartelle. Puoi anche rinominare il nome mostrato di una cartella (tasto destro › Edit Name) senza toccare la cartella sul disco.' },
       { t: 'Anteprime reali', d: 'L\'immagine di un file .skp è quella salvata da SketchUp dentro il file; per i materiali .skm viene ricavata caricandoli un istante nel modello. Le anteprime mancanti vengono create in background.' },
       { t: 'Tag, preferiti e viste', d: 'Etichetta gli oggetti con tag, segna i preferiti con il cuore, cerca per nome e scegli tra vista a dettagli e icone piccole, medie o grandi.' },
-      { t: 'Proxy, 3D Warehouse e cloud', d: 'Per gli oggetti creati con robo Proxy Manager mostra anche il proxy. Un pulsante apre il 3D Warehouse per scaricare modelli nella libreria, e il backup nel cloud salva l\'elenco in una cartella OneDrive o Google Drive: la password non passa mai dal plugin.' }
+      { t: 'Proxy, 3D Warehouse e cloud', d: 'Per gli oggetti creati con robo Proxy Manager mostra anche il proxy. Un pulsante apre il 3D Warehouse per scaricare modelli nella libreria, e il backup nel cloud salva l\'elenco in una cartella OneDrive o Google Drive: la password non passa mai dal plugin.' },
+      { t: 'File di versioni più recenti', d: 'Se un componente è stato salvato con una versione di SketchUp più recente della tua, viene inserito come con File › Importa (SketchUp ti avvisa) invece di fallire o caricarne solo una parte. I file vuoti (0 byte) non vengono più elencati.' },
+      { t: 'Aggiorna e anteprime più veloci', d: 'La scansione esplora ogni cartella una sola volta e, per molti file, l\'anteprima viene letta direttamente dall\'inizio del .skp, senza aprirlo.' }
     ],
     pros: ['Anteprime vere, non solo nomi di file', 'Inserimento con un clic', 'Tag, preferiti e ricerca', 'I file sul disco non vengono toccati'],
     solves: [

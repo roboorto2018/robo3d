@@ -534,7 +534,9 @@ I18N_PLUGINS.en.library_explorer = {
     { t: 'A list for every folder', d: 'Every added folder becomes its own topic, with its subfolders. You can also rename a folder\'s displayed name (right-click › Edit Name) without touching the folder on disk.' },
     { t: 'Real previews', d: 'The image of a .skp file is the one SketchUp itself saved inside the file; for .skm materials it\'s obtained by loading them for a moment into the model. Missing previews are generated in the background.' },
     { t: 'Tags, favourites and views', d: 'Label objects with tags, mark favourites with the heart, search by name, and choose between a detail view and small, medium or large icons.' },
-    { t: 'Proxy, 3D Warehouse and cloud', d: 'For objects created with robo Proxy Manager it also shows the proxy. A button opens 3D Warehouse to download models into the library, and cloud backup saves the list in a OneDrive or Google Drive folder: the password never passes through the plugin.' }
+    { t: 'Proxy, 3D Warehouse and cloud', d: 'For objects created with robo Proxy Manager it also shows the proxy. A button opens 3D Warehouse to download models into the library, and cloud backup saves the list in a OneDrive or Google Drive folder: the password never passes through the plugin.' },
+    { t: 'Files from newer versions', d: 'If a component was saved with a newer SketchUp than yours, it is inserted the way File › Import does (SketchUp warns you) instead of failing or loading only part of it. Empty files (0 bytes) are no longer listed.' },
+    { t: 'Faster Refresh and previews', d: 'The scan walks each folder only once and, for many files, the preview is read straight from the start of the .skp, without opening it.' }
   ],
   pros: ['Real previews, not just file names', 'One-click insertion', 'Tags, favourites and search', 'Files on disk are never touched'],
   solves: [
@@ -551,7 +553,9 @@ I18N_PLUGINS.de.library_explorer = {
     { t: 'Eine Liste pro Ordner', d: 'Jeder hinzugefügte Ordner wird zu einem eigenen Thema, mit seinen Unterordnern. Sie können auch den angezeigten Namen eines Ordners ändern (Rechtsklick › Namen bearbeiten), ohne den Ordner auf der Festplatte zu berühren.' },
     { t: 'Echte Vorschauen', d: 'Das Bild einer .skp-Datei ist das, was SketchUp selbst in der Datei gespeichert hat; bei .skm-Materialien wird es durch kurzes Laden ins Modell gewonnen. Fehlende Vorschauen werden im Hintergrund erstellt.' },
     { t: 'Tags, Favoriten und Ansichten', d: 'Beschriften Sie Objekte mit Tags, markieren Sie Favoriten mit dem Herz, suchen Sie nach Namen und wählen Sie zwischen Detailansicht und kleinen, mittleren oder großen Symbolen.' },
-    { t: 'Proxy, 3D Warehouse und Cloud', d: 'Für mit robo Proxy Manager erstellte Objekte wird auch der Proxy angezeigt. Eine Schaltfläche öffnet 3D Warehouse zum Herunterladen von Modellen in die Bibliothek, und das Cloud-Backup speichert die Liste in einem OneDrive- oder Google-Drive-Ordner: das Passwort läuft nie über das Plugin.' }
+    { t: 'Proxy, 3D Warehouse und Cloud', d: 'Für mit robo Proxy Manager erstellte Objekte wird auch der Proxy angezeigt. Eine Schaltfläche öffnet 3D Warehouse zum Herunterladen von Modellen in die Bibliothek, und das Cloud-Backup speichert die Liste in einem OneDrive- oder Google-Drive-Ordner: das Passwort läuft nie über das Plugin.' },
+    { t: 'Dateien aus neueren Versionen', d: 'Wurde eine Komponente mit einem neueren SketchUp als deinem gespeichert, wird sie wie bei Datei › Importieren eingefügt (SketchUp warnt dich), statt zu scheitern oder nur teilweise zu laden. Leere Dateien (0 Byte) werden nicht mehr aufgelistet.' },
+    { t: 'Schnelleres Aktualisieren und Vorschauen', d: 'Der Scan durchläuft jeden Ordner nur einmal, und bei vielen Dateien wird die Vorschau direkt vom Anfang der .skp gelesen, ohne sie zu öffnen.' }
   ],
   pros: ['Echte Vorschauen, nicht nur Dateinamen', 'Einfügen mit einem Klick', 'Tags, Favoriten und Suche', 'Dateien auf der Festplatte werden nie berührt'],
   solves: [
@@ -568,7 +572,9 @@ I18N_PLUGINS.fr.library_explorer = {
     { t: 'Une liste par dossier', d: 'Chaque dossier ajouté devient un sujet à part, avec ses sous-dossiers. Vous pouvez aussi renommer le nom affiché d\'un dossier (clic droit › Edit Name) sans toucher au dossier sur le disque.' },
     { t: 'Aperçus réels', d: 'L\'image d\'un fichier .skp est celle enregistrée par SketchUp lui-même dans le fichier ; pour les matériaux .skm, elle est obtenue en les chargeant un instant dans le modèle. Les aperçus manquants sont créés en arrière-plan.' },
     { t: 'Tags, favoris et vues', d: 'Étiquetez les objets avec des tags, marquez les favoris avec le cœur, cherchez par nom et choisissez entre vue détaillée et icônes petites, moyennes ou grandes.' },
-    { t: 'Proxy, 3D Warehouse et cloud', d: 'Pour les objets créés avec robo Proxy Manager, le proxy est aussi affiché. Un bouton ouvre 3D Warehouse pour télécharger des modèles dans la bibliothèque, et la sauvegarde cloud enregistre la liste dans un dossier OneDrive ou Google Drive : le mot de passe ne passe jamais par le plugin.' }
+    { t: 'Proxy, 3D Warehouse et cloud', d: 'Pour les objets créés avec robo Proxy Manager, le proxy est aussi affiché. Un bouton ouvre 3D Warehouse pour télécharger des modèles dans la bibliothèque, et la sauvegarde cloud enregistre la liste dans un dossier OneDrive ou Google Drive : le mot de passe ne passe jamais par le plugin.' },
+    { t: 'Fichiers de versions plus récentes', d: 'Si un composant a été enregistré avec une version de SketchUp plus récente que la tienne, il est inséré comme avec Fichier › Importer (SketchUp t\'avertit) au lieu d\'échouer ou de n\'en charger qu\'une partie. Les fichiers vides (0 octet) ne sont plus listés.' },
+    { t: 'Actualisation et aperçus plus rapides', d: 'L\'analyse ne parcourt chaque dossier qu\'une fois et, pour beaucoup de fichiers, l\'aperçu est lu directement au début du .skp, sans l\'ouvrir.' }
   ],
   pros: ['De vrais aperçus, pas seulement des noms de fichiers', 'Insertion en un clic', 'Tags, favoris et recherche', 'Les fichiers sur le disque ne sont jamais touchés'],
   solves: [
@@ -585,7 +591,9 @@ I18N_PLUGINS.es.library_explorer = {
     { t: 'Una lista por cada carpeta', d: 'Cada carpeta añadida se convierte en un tema propio, con sus subcarpetas. También puedes renombrar el nombre mostrado de una carpeta (clic derecho › Edit Name) sin tocar la carpeta en el disco.' },
     { t: 'Vistas previas reales', d: 'La imagen de un archivo .skp es la que el propio SketchUp guardó dentro del archivo; para los materiales .skm se obtiene cargándolos un instante en el modelo. Las vistas previas que faltan se generan en segundo plano.' },
     { t: 'Etiquetas, favoritos y vistas', d: 'Etiqueta objetos con tags, marca favoritos con el corazón, busca por nombre y elige entre vista de detalles e iconos pequeños, medianos o grandes.' },
-    { t: 'Proxy, 3D Warehouse y nube', d: 'Para los objetos creados con robo Proxy Manager también muestra el proxy. Un botón abre 3D Warehouse para descargar modelos a la biblioteca, y la copia de seguridad en la nube guarda la lista en una carpeta de OneDrive o Google Drive: la contraseña nunca pasa por el plugin.' }
+    { t: 'Proxy, 3D Warehouse y nube', d: 'Para los objetos creados con robo Proxy Manager también muestra el proxy. Un botón abre 3D Warehouse para descargar modelos a la biblioteca, y la copia de seguridad en la nube guarda la lista en una carpeta de OneDrive o Google Drive: la contraseña nunca pasa por el plugin.' },
+    { t: 'Archivos de versiones más recientes', d: 'Si un componente se guardó con un SketchUp más reciente que el tuyo, se inserta como con Archivo › Importar (SketchUp te avisa) en lugar de fallar o cargar solo una parte. Los archivos vacíos (0 bytes) ya no se listan.' },
+    { t: 'Actualizar y vistas previas más rápidas', d: 'El análisis recorre cada carpeta una sola vez y, en muchos archivos, la vista previa se lee directamente del inicio del .skp, sin abrirlo.' }
   ],
   pros: ['Vistas previas reales, no solo nombres de archivo', 'Inserción con un clic', 'Etiquetas, favoritos y búsqueda', 'Los archivos del disco nunca se tocan'],
   solves: [
