@@ -46,7 +46,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- EXTRACT */
   {
-    id: 'extract', name: 'robo Extract', version: '1.0', category: 'Modellazione', hue: 170,
+    id: 'extract', name: 'robo Extract', version: '1.1', category: 'Modellazione', hue: 170,
     donationPrompt: true,
     video: 'Gi4nG6UZF0I',
     images: ['assets/img/screenshots/extract-1.png'],
@@ -57,7 +57,8 @@ var PLUGINS = [
       { t: 'Raggiunge qualsiasi contesto', d: 'Lo strumento arriva alle facce e alle linee dentro gruppi e componenti chiusi, anche annidati, e legge la posizione dall\'istanza esatta sotto il cursore: traslazioni, rotazioni, scale e specchi non spostano la copia.' },
       { t: 'Dove va la copia', d: 'Con niente di aperto la copia nasce nella radice del modello, fuori dal gruppo di origine. Con un gruppo aperto: se scegli la geometria di un altro gruppo entra nel gruppo aperto, se scegli la sua stessa geometria sale di un livello.' },
       { t: 'Forme organiche', d: 'Su una superficie organica una faccia si estende alle facce vicine finché la piega non supera il "limite di levigatezza". Nelle Preferenze uno slider con anteprima in tempo reale mostra quanto cambia la selezione.' },
-      { t: 'Selezione multipla e curve', d: 'Maiusc+clic aggiunge più facce, segmenti o curve dello stesso gruppo e li copia insieme in un unico gruppo. Puntando un segmento di un arco o di un cerchio si prende l\'intera curva.' }
+      { t: 'Selezione multipla e curve', d: 'Maiusc+clic aggiunge più facce, segmenti o curve dello stesso gruppo e li copia insieme in un unico gruppo. Puntando un segmento di un arco o di un cerchio si prende l\'intera curva.' },
+      { t: 'Stessa posizione o accanto', d: 'Nelle preferenze, "Copia nella stessa posizione" (attiva di default) mette la copia esattamente sopra l\'originale; disattivandola la copia compare accanto, spostata di lato, così le vedi entrambe. La geometria alla radice del modello viene duplicata sul posto. Il pulsante "Applica" salva le impostazioni e conferma gli elementi raccolti, come il tasto Invio.' }
     ],
     pros: ['Non serve aprire i gruppi', 'Posizione e inclinazione identiche all\'originale', 'Funziona su superfici inclinate e organiche', 'Materiali, tag e interfaccia in 5 lingue'],
     solves: [

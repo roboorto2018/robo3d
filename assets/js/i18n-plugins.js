@@ -110,7 +110,8 @@ I18N_PLUGINS.en.extract = {
     { t: 'Reaches any context', d: 'The tool reaches faces and lines inside closed groups and components, even nested ones, and reads the position from the exact instance under the cursor: translations, rotations, scaling and mirroring never move the copy.' },
     { t: 'Where the copy goes', d: 'With nothing open the copy is created at the model root, outside the source group. With a group open: if you pick geometry from another group it goes into the open group; if you pick geometry from the same group it goes up one level.' },
     { t: 'Organic shapes', d: 'On an organic surface a face extends to neighbouring faces until the fold exceeds the "smoothness limit". In Preferences a slider with a live preview shows how much the selection changes.' },
-    { t: 'Multi-select and curves', d: 'Shift+click adds several faces, segments or curves from the same group and copies them together into one group. Pointing at one segment of an arc or a circle takes the whole curve.' }
+    { t: 'Multi-select and curves', d: 'Shift+click adds several faces, segments or curves from the same group and copies them together into one group. Pointing at one segment of an arc or a circle takes the whole curve.' },
+    { t: 'Same position or beside it', d: 'In the preferences, "Copy in the same position" (on by default) puts the copy exactly on top of the original; switched off, the copy appears beside it, shifted sideways, so you see both. Geometry at the model root is duplicated in place. The "Apply" button saves the settings and confirms the collected items, like the Enter key.' }
   ],
   pros: ['No need to open groups', 'Position and slope identical to the original', 'Works on tilted and organic surfaces', 'Materials, tags and interface in 5 languages'],
   solves: [
@@ -127,7 +128,8 @@ I18N_PLUGINS.de.extract = {
     { t: 'Erreicht jeden Kontext', d: 'Das Werkzeug erreicht Flächen und Linien in geschlossenen, auch verschachtelten Gruppen und Komponenten und liest die Position aus der exakten Instanz unter dem Cursor: Verschiebungen, Drehungen, Skalierungen und Spiegelungen verschieben die Kopie nicht.' },
     { t: 'Wohin die Kopie geht', d: 'Ohne geöffneten Kontext entsteht die Kopie an der Modellwurzel, außerhalb der Ursprungsgruppe. Bei geöffneter Gruppe: Wählen Sie Geometrie einer anderen Gruppe, landet sie in der geöffneten Gruppe; wählen Sie Geometrie derselben Gruppe, geht sie eine Ebene höher.' },
     { t: 'Organische Formen', d: 'Auf einer organischen Oberfläche erweitert sich eine Fläche auf benachbarte Flächen, bis die Knickung das "Glättungslimit" überschreitet. In den Einstellungen zeigt ein Schieberegler mit Live-Vorschau, wie stark sich die Auswahl ändert.' },
-    { t: 'Mehrfachauswahl und Kurven', d: 'Umschalt+Klick fügt mehrere Flächen, Segmente oder Kurven derselben Gruppe hinzu und kopiert sie zusammen in eine Gruppe. Zeigt man auf ein Segment eines Bogens oder Kreises, wird die ganze Kurve übernommen.' }
+    { t: 'Mehrfachauswahl und Kurven', d: 'Umschalt+Klick fügt mehrere Flächen, Segmente oder Kurven derselben Gruppe hinzu und kopiert sie zusammen in eine Gruppe. Zeigt man auf ein Segment eines Bogens oder Kreises, wird die ganze Kurve übernommen.' },
+    { t: 'Gleiche Position oder daneben', d: 'In den Einstellungen legt "In derselben Position kopieren" (standardmäßig an) die Kopie genau auf das Original; ausgeschaltet erscheint die Kopie daneben, seitlich verschoben, sodass Sie beide sehen. Geometrie im Modellstamm wird an Ort und Stelle dupliziert. Die Schaltfläche "Anwenden" speichert die Einstellungen und bestätigt die gesammelten Elemente, wie die Enter-Taste.' }
   ],
   pros: ['Gruppen müssen nicht geöffnet werden', 'Position und Neigung identisch zum Original', 'Funktioniert auf geneigten und organischen Oberflächen', 'Materialien, Tags und Oberfläche in 5 Sprachen'],
   solves: [
@@ -144,7 +146,8 @@ I18N_PLUGINS.fr.extract = {
     { t: 'Atteint n\'importe quel contexte', d: 'L\'outil atteint les faces et les lignes à l\'intérieur de groupes et composants fermés, même imbriqués, et lit la position depuis l\'instance exacte sous le curseur : translations, rotations, mises à l\'échelle et symétries ne déplacent jamais la copie.' },
     { t: 'Où va la copie', d: 'Sans rien d\'ouvert, la copie naît à la racine du modèle, hors du groupe d\'origine. Avec un groupe ouvert : si vous choisissez la géométrie d\'un autre groupe, elle entre dans le groupe ouvert ; si vous choisissez sa propre géométrie, elle monte d\'un niveau.' },
     { t: 'Formes organiques', d: 'Sur une surface organique, une face s\'étend aux faces voisines jusqu\'à ce que le pli dépasse la « limite de lissage ». Dans les Préférences, un curseur avec aperçu en direct montre à quel point la sélection change.' },
-    { t: 'Sélection multiple et courbes', d: 'Maj+clic ajoute plusieurs faces, segments ou courbes du même groupe et les copie ensemble dans un seul groupe. Pointer un segment d\'un arc ou d\'un cercle prend toute la courbe.' }
+    { t: 'Sélection multiple et courbes', d: 'Maj+clic ajoute plusieurs faces, segments ou courbes du même groupe et les copie ensemble dans un seul groupe. Pointer un segment d\'un arc ou d\'un cercle prend toute la courbe.' },
+    { t: 'Même position ou à côté', d: 'Dans les préférences, « Copier à la même position » (activé par défaut) place la copie exactement sur l\'original ; désactivé, la copie apparaît à côté, décalée latéralement, pour voir les deux. La géométrie à la racine du modèle est dupliquée sur place. Le bouton « Appliquer » enregistre les réglages et valide les éléments collectés, comme la touche Entrée.' }
   ],
   pros: ['Pas besoin d\'ouvrir les groupes', 'Position et inclinaison identiques à l\'original', 'Fonctionne sur surfaces inclinées et organiques', 'Matériaux, tags et interface en 5 langues'],
   solves: [
@@ -161,7 +164,8 @@ I18N_PLUGINS.es.extract = {
     { t: 'Llega a cualquier contexto', d: 'La herramienta llega a caras y líneas dentro de grupos y componentes cerrados, incluso anidados, y lee la posición desde la instancia exacta bajo el cursor: traslaciones, rotaciones, escalados y simetrías nunca mueven la copia.' },
     { t: 'Adónde va la copia', d: 'Sin nada abierto la copia nace en la raíz del modelo, fuera del grupo de origen. Con un grupo abierto: si eliges geometría de otro grupo entra en el grupo abierto; si eliges su propia geometría, sube un nivel.' },
     { t: 'Formas orgánicas', d: 'En una superficie orgánica una cara se extiende a las caras vecinas hasta que el pliegue supera el "límite de suavizado". En Preferencias, un deslizador con vista previa en vivo muestra cuánto cambia la selección.' },
-    { t: 'Selección múltiple y curvas', d: 'Mayús+clic añade varias caras, segmentos o curvas del mismo grupo y las copia juntas en un solo grupo. Señalar un segmento de un arco o círculo toma toda la curva.' }
+    { t: 'Selección múltiple y curvas', d: 'Mayús+clic añade varias caras, segmentos o curvas del mismo grupo y las copia juntas en un solo grupo. Señalar un segmento de un arco o círculo toma toda la curva.' },
+    { t: 'Misma posición o al lado', d: 'En las preferencias, «Copiar en la misma posición» (activado por defecto) coloca la copia exactamente sobre el original; desactivado, la copia aparece al lado, desplazada lateralmente, para ver ambos. La geometría en la raíz del modelo se duplica en el sitio. El botón «Aplicar» guarda los ajustes y confirma los elementos reunidos, como la tecla Intro.' }
   ],
   pros: ['No hace falta abrir los grupos', 'Posición e inclinación idénticas al original', 'Funciona en superficies inclinadas y orgánicas', 'Materiales, etiquetas e interfaz en 5 idiomas'],
   solves: [
