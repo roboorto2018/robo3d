@@ -94,7 +94,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- DEMOLITION */
   {
-    id: 'demolition', name: 'robo Demolition', version: '1.0', category: 'Modellazione', hue: 15,
+    id: 'demolition', name: 'robo Demolition', version: '1.1', category: 'Modellazione', hue: 15,
     noDownload: true,
     video: 'Zgdt30Fkshw',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
@@ -353,7 +353,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------------- PROXY */
   {
-    id: 'proxy_manager', name: 'robo Proxy Manager', version: '0.5', category: 'Ottimizzazione', hue: 220,
+    id: 'proxy_manager', name: 'robo Proxy Manager', version: '0.6', category: 'Ottimizzazione', hue: 220,
     donationPrompt: true,
     video: 'ThxhD9J6eC0',
     images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
