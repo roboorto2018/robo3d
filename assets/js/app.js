@@ -418,6 +418,19 @@
         '<ul class="tb-legend' + (total > 8 ? ' many' : '') + '">' + legend + '</ul>' + shapesHtml + '</div></section>';
     }
 
+    var aboutIntro = pf(p, 'intro') || [], aboutMain = pf(p, 'main') || [], aboutHtml = '';
+    if (aboutIntro.length || aboutMain.length) {
+      var introP = '', mainItems = '';
+      for (var ia = 0; ia < aboutIntro.length; ia++) { introP += '<p>' + esc(aboutIntro[ia]) + '</p>'; }
+      for (var ib = 0; ib < aboutMain.length; ib++) {
+        mainItems += '<div class="item"><h3><i>0' + (ib + 1) + '</i>' + esc(aboutMain[ib].t) + '</h3><p>' + esc(aboutMain[ib].d) + '</p></div>';
+      }
+      aboutHtml = '<section' + (tb ? ' class="alt"' : '') + ' id="cose"><div class="wrap"><div class="section-head"><span class="eyebrow">' + tUI('plugin.about.eyebrow') + '</span>' +
+        '<h2>' + tUI('plugin.about.h2') + '</h2>' + introP + '</div>' +
+        (mainItems ? '<h3 class="about-sub">' + tUI('plugin.about.main') + '</h3><div class="tech">' + mainItems + '</div>' : '') +
+        '</div></section>';
+    }
+
     var prev = PLUGINS[(idx + PLUGINS.length - 1) % PLUGINS.length];
     var next = PLUGINS[(idx + 1) % PLUGINS.length];
 
@@ -437,6 +450,7 @@
           '<a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
       '</div><div class="shot">' + gallery(im, 0, tUI('gal.imageof').replace('{n}', p.name)) + '</div></div></div>' +
 
+      aboutHtml +
       tbHtml +
       '<section class="alt"><div class="wrap two"><div class="shot">' + gallery(im, 1, tUI('gal.inuse').replace('{n}', p.name)) + '</div>' +
         '<div><span class="eyebrow">' + tUI('plugin.simple.eyebrow') + '</span><h2 style="margin:10px 0 18px;font-size:clamp(1.6rem,3vw,2.2rem)">' + tUI('plugin.simple.h2') + '</h2>' +

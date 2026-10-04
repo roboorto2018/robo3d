@@ -414,3 +414,5 @@ section { padding: 88px 0; }
 .tb-shapes img { width: 40px; height: 40px; flex: none; }
 .tb-shapes b { display: block; font-size: .95rem; }
 .tb-shapes span { display: block; font-size: .85rem; color: var(--muted, #666); line-height: 1.35; }
+
+.about-sub { font-size: 1.15rem; font-weight: 800; margin: 0 0 18px; }
