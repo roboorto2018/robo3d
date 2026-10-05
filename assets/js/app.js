@@ -220,7 +220,7 @@
     g.setAttribute('data-i', n);
   }, true);
   function icon(p, big) {
-    return '<span class="plugin-icon"' + (big ? '' : '') + '><img src="assets/img/icons/' + esc(p.id) + '.png" alt="" width="32" height="32"></span>';
+    return '<span class="plugin-icon"' + (big ? '' : '') + '><img src="' + esc(p.icon || ('assets/img/icons/' + p.id + '.png')) + '" alt="" width="32" height="32"></span>';
   }
 
   /* logo: cubo isometrico con faccia rossa */

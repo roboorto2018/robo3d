@@ -638,15 +638,16 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TOOLBAR */
   {
-    id: 'toolbar', name: 'robo Toolbar', version: '1.0', category: 'Produttività', hue: 270,
+    id: 'toolbar', name: 'robo toolbar', version: '1.0', category: 'Produttività', hue: 270,
     noDownload: true,
+    icon: 'assets/img/icons/toolbar.svg',
     video: 'hBBJ5wyCEUQ',
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Costruisci le tue barre degli strumenti, trascinando i comandi.',
     simple: 'Scegli i comandi che usi di più — gli strumenti di SketchUp, i pulsanti dei plugin Robo e le voci del menu Estensioni — e trascinali in una barra tutta tua. Dai un nome alla barra, salvala e la ritrovi in SketchUp, sempre pronta.',
     intro: [
-      'robo Toolbar ti permette di creare le tue barre degli strumenti di SketchUp. Apri la finestra, trascini i comandi che ti servono nell’anteprima della barra, li riordini, scrivi il nome e salvi: la barra compare subito in SketchUp.',
-      'Serve quando i pulsanti che usi ogni giorno sono sparsi in tante barre e menu. Con robo Toolbar li raccogli tutti in un punto solo, nell’ordine che preferisci, e puoi creare quante barre vuoi, una per ogni tipo di lavoro.'
+      'robo toolbar ti permette di creare le tue barre degli strumenti di SketchUp. Apri la finestra, trascini i comandi che ti servono nell’anteprima della barra, li riordini, scrivi il nome e salvi: la barra compare subito in SketchUp.',
+      'Serve quando i pulsanti che usi ogni giorno sono sparsi in tante barre e menu. Con robo toolbar li raccogli tutti in un punto solo, nell’ordine che preferisci, e puoi creare quante barre vuoi, una per ogni tipo di lavoro.'
     ],
     main: [
       { t: 'Trascina e riordina', d: 'Trascini i comandi nell’anteprima della barra, li sposti per cambiarne l’ordine e li togli con la x rossa. In alternativa clicchi il + accanto al comando.' },
@@ -656,24 +657,27 @@ var PLUGINS = [
       { t: 'Barre salvate, modificabili', d: 'Nell’elenco “Le mie barre” puoi modificare, mostrare o eliminare ogni barra. Se hai modifiche non salvate, il plugin te lo ricorda prima di passare a un’altra barra.' },
       { t: 'In cinque lingue', d: 'Finestra, messaggi e guida sono in italiano, inglese, tedesco, francese e spagnolo.' }
     ],
-    steps: ['Apri robo Toolbar dal menu Estensioni › Robo Tool.', 'Trascina i comandi nell’anteprima della barra e riordinali.', 'Scrivi il nome della barra e premi Salva barra: compare subito in SketchUp.'],
+    steps: ['Apri robo toolbar dal menu Estensioni › Robo Tool.', 'Trascina i comandi nell’anteprima della barra e riordinali.', 'Scrivi il nome della barra e premi Salva barra: compare subito in SketchUp.'],
     how: [
-      { t: 'Il problema che risolve', d: 'In SketchUp i comandi che usi di continuo sono sparsi in molte barre e in menu annidati, e le barre standard non si possono ricomporre a piacere. robo Toolbar ti dà una barra costruita su misura, con solo ciò che serve a te.' },
+      { t: 'Il problema che risolve', d: 'In SketchUp i comandi che usi di continuo sono sparsi in molte barre e in menu annidati, e le barre standard non si possono ricomporre a piacere. robo toolbar ti dà una barra costruita su misura, con solo ciò che serve a te.' },
       { t: 'Passo 1 · Scegli i comandi', d: 'A sinistra trovi l’elenco di tutti i comandi disponibili. Con il menu in alto filtri per plugin, oppure scegli “Solo plugin senza icone” o “Solo plugin con icone”; la voce Scorciatoie mostra solo i comandi che hanno una scorciatoia da tastiera. Il campo di ricerca cerca per nome.' },
       { t: 'Passo 2 · Componi la barra', d: 'Trascina i comandi nell’anteprima, oppure clicca il + accanto al comando. Per cambiare l’ordine trascina le icone già inserite, per toglierne una clicca la x rossa che compare al passaggio del mouse. “Inserisci separatore” aggiunge una linea verticale a destra dell’ultima icona; puoi anche trascinarla tra due icone.' },
       { t: 'Passo 3 · Salva', d: 'Scrivi il nome della barra e premi Salva barra. Una barra nuova compare subito in SketchUp. Le modifiche a una barra già esistente (icone tolte, aggiunte o riordinate) si vedono al prossimo avvio di SketchUp, perché SketchUp non può togliere pulsanti da una barra già aperta.' },
       { t: 'Icone generiche: come cambiarle', d: 'I comandi senza icona hanno un’icona generica grigia con un crocino rosso. Passandoci sopra nell’anteprima compare un contorno rosso con una matita: cliccala. Scegli prima un’immagine da 16 × 16 pixel, poi una da 24 × 24 (PNG, JPG o BMP), oppure un solo file SVG, nel qual caso la seconda non serve. Se l’immagine non ha la misura giusta, un messaggio ti dice quanto è grande e quanto serve, e puoi riprovare. L’icona resta legata a quel comando in tutte le barre.' },
       { t: 'Le mie barre e le modifiche non salvate', d: 'In basso trovi le barre salvate, con i pulsanti Modifica, Mostra ed Elimina (per eliminare si clicca due volte). Se premi Modifica su un’altra barra mentre hai modifiche non salvate, una finestra ti chiede se vuoi salvarle: Sì le salva e apre l’altra barra, No le scarta, Annulla ti lascia dove sei.' },
-      { t: 'Un esempio concreto', d: 'Lavori spesso con linea, rettangolo, sposta, ruota, scala e hai due plugin Robo che usi di continuo. Apri robo Toolbar, li trascini in una barra chiamata “Modellazione”, metti un separatore tra gli strumenti di SketchUp e quelli dei plugin e salvi. Da quel momento hai tutto sotto mano in una sola barra, nell’ordine che hai deciso.' }
+      { t: 'Un esempio concreto', d: 'Lavori spesso con linea, rettangolo, sposta, ruota, scala e hai due plugin Robo che usi di continuo. Apri robo toolbar, li trascini in una barra chiamata “Modellazione”, metti un separatore tra gli strumenti di SketchUp e quelli dei plugin e salvi. Da quel momento hai tutto sotto mano in una sola barra, nell’ordine che hai deciso.' }
     ],
     pros: ['Barre su misura, quante ne vuoi', 'Strumenti SketchUp e plugin Robo nello stesso elenco', 'Icone personalizzabili (PNG o SVG)', 'Avviso se hai modifiche non salvate'],
     solves: [
       { p: 'I comandi che usi più spesso sono sparsi in tante barre e menu.', s: 'Li raccogli in una sola barra, nell’ordine che preferisci.' },
       { p: 'Alcuni comandi dei plugin non hanno un’icona da mettere in una barra.', s: 'Ricevono un’icona generica che puoi sostituire con la tua.' }
     ],
-    specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo Toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   }
 ];
+
+/* Elenco dei plugin sempre in ordine alfabetico (per nome, senza distinguere maiuscole). */
+PLUGINS.sort(function (x, y) { return x.name.toLowerCase().localeCompare(y.name.toLowerCase()); });
 
 /* ------------------------------------------------------------------
    Barre strumenti mostrate nelle schede (icone reali dei plugin,
@@ -704,7 +708,7 @@ var TOOLBARS = {
   uplevel: { name: 'Robo Uplevel', groups: [[{ i: 'uplevel.png', l: 'Estrai al livello superiore' }]] },
   start: { name: 'robo start', note: 'Dalle Impostazioni di robo start puoi abilitare o disabilitare i singoli pulsanti che vuoi vedere nella barra.', groups: [[{ i: 'enter.png', l: 'Robo Enter' }, { i: 'rsel.png', l: 'Robo Select All' }], [{ i: 'grp.png', l: 'Crea gruppo' }, { i: 'cmp.png', l: 'Crea componente' }, { i: 'uniq.png', l: 'Rendi unico' }], [{ i: 'expl.png', l: 'Esplodi' }, { i: 'explc.png', l: 'Esplodi curve' }], [{ i: 'sall.png', l: 'Seleziona tutto' }, { i: 'inv.png', l: 'Inverti selezione' }, { i: 'clr.png', l: 'Deseleziona' }, { i: 'close.png', l: 'Chiudi gruppo' }, { i: 'up.png', l: 'Estrai al livello superiore' }, { i: 'weld.png', l: 'Salda spigoli' }, { i: 'face.png', l: 'Crea faccia' }], [{ i: 'hide.png', l: 'Nascondi oggetto' }, { i: 'unh1.png', l: "Mostra l'ultimo nascosto" }, { i: 'unhall.png', l: 'Mostra tutto' }], [{ i: 'guides.png', l: 'Rimuovi guide' }, { i: 'dims.png', l: 'Rimuovi quote' }], [{ i: 'zoom.png', l: 'Zoom sulla selezione' }, { i: 'center.png', l: 'Trova il centro' }], [{ i: 'cpt.png', l: 'Aggiungi punto centrale' }], [{ i: 'fix.png', l: 'Fix 101' }], [{ i: 'help.png', l: 'Guida' }]] },
   extract: { name: 'robo Extract', groups: [[{ i: 'copy.png', l: 'robo Extract: copia facce e linee fuori dal gruppo' }]] },
-  toolbar: { name: 'robo Toolbar', groups: [[{ i: 'toolbar.png', l: 'robo Toolbar: costruisci le tue barre degli strumenti' }]] },
+  toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.svg', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
   demolition: { name: 'robo Demolition', groups: [[{ i: 'demolition.png', l: 'robo Demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo Export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo Library Explorer', groups: [[{ i: 'explorer.png', l: "Apri robo Library Explorer" }]] },

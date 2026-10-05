@@ -2645,13 +2645,13 @@ I18N_PLUGINS.es.uplevel.how = [
   { t: 'Un ejemplo concreto', d: 'Estás trabajando dentro del grupo «Cocina» y notas que el fregadero, modelado allí dentro, en realidad debe mantenerse como objeto aparte en el grupo «Casa». Lo seleccionas, pulsas robo Uplevel: el fregadero sale un nivel, quedándose en exactamente la misma posición. Antes hacía falta cortar, salir y pegar en el sitio, con el riesgo de equivocarse.' }
 ];
 
-/* ------------------------------------------------------------------ robo Toolbar */
+/* ------------------------------------------------------------------ robo toolbar */
 I18N_PLUGINS.en.toolbar = {
   tagline: 'Build your own toolbars by dragging commands.',
   simple: 'Pick the commands you use most — SketchUp tools, Robo plugin buttons and Extensions menu items — and drag them into a toolbar of your own. Give it a name, save it and it is there in SketchUp, always ready.',
   intro: [
-    'robo Toolbar lets you create your own SketchUp toolbars. Open the window, drag the commands you need into the toolbar preview, reorder them, type a name and save: the toolbar appears in SketchUp right away.',
-    'It is useful when the buttons you use every day are scattered across many toolbars and menus. With robo Toolbar you gather them in one place, in the order you prefer, and you can create as many toolbars as you like, one for each kind of work.'
+    'robo toolbar lets you create your own SketchUp toolbars. Open the window, drag the commands you need into the toolbar preview, reorder them, type a name and save: the toolbar appears in SketchUp right away.',
+    'It is useful when the buttons you use every day are scattered across many toolbars and menus. With robo toolbar you gather them in one place, in the order you prefer, and you can create as many toolbars as you like, one for each kind of work.'
   ],
   main: [
     { t: 'Drag and reorder', d: 'Drag commands into the toolbar preview, move them to change the order and remove them with the red x. Or just click the + next to a command.' },
@@ -2661,29 +2661,29 @@ I18N_PLUGINS.en.toolbar = {
     { t: 'Saved toolbars, editable', d: 'In the “My toolbars” list you can edit, show or delete each toolbar. If you have unsaved changes, the plugin reminds you before you switch to another toolbar.' },
     { t: 'In five languages', d: 'Window, messages and help are in Italian, English, German, French and Spanish.' }
   ],
-  steps: ['Open robo Toolbar from Extensions › Robo Tool.', 'Drag the commands into the toolbar preview and reorder them.', 'Type the toolbar name and press Save toolbar: it appears in SketchUp right away.'],
+  steps: ['Open robo toolbar from Extensions › Robo Tool.', 'Drag the commands into the toolbar preview and reorder them.', 'Type the toolbar name and press Save toolbar: it appears in SketchUp right away.'],
   how: [
-    { t: 'The problem it solves', d: 'In SketchUp the commands you use all the time are scattered across many toolbars and nested menus, and the standard toolbars cannot be recomposed freely. robo Toolbar gives you a custom toolbar with only what you need.' },
+    { t: 'The problem it solves', d: 'In SketchUp the commands you use all the time are scattered across many toolbars and nested menus, and the standard toolbars cannot be recomposed freely. robo toolbar gives you a custom toolbar with only what you need.' },
     { t: 'Step 1 · Choose the commands', d: 'On the left is the list of all available commands. Use the menu on top to filter by plugin, or pick “Only plugins without icons” or “Only plugins with icons”; the Shortcuts entry shows only commands that have a keyboard shortcut. The search box looks up by name.' },
     { t: 'Step 2 · Build the toolbar', d: 'Drag commands into the preview, or click the + next to a command. To change the order drag the icons already placed; to remove one click the red x that appears when you hover it. “Insert separator” adds a vertical line to the right of the last icon; you can also drag it between two icons.' },
     { t: 'Step 3 · Save', d: 'Type the toolbar name and press Save toolbar. A new toolbar appears in SketchUp right away. Changes to an existing toolbar (icons removed, added or reordered) show up the next time SketchUp starts, because SketchUp cannot remove buttons from a toolbar that is already open.' },
     { t: 'Generic icons: how to change them', d: 'Commands with no icon have a grey generic icon with a red cross. Hover it in the preview: a red outline and a pencil appear — click it. First choose a 16 × 16 pixel image, then a 24 × 24 one (PNG, JPG or BMP), or a single SVG file, in which case the second is not needed. If the image has the wrong size, a message tells you how big it is and how big it must be, and you can try again. The icon stays tied to that command in every toolbar.' },
     { t: 'My toolbars and unsaved changes', d: 'Below you find the saved toolbars, with the Edit, Show and Delete buttons (click twice to delete). If you press Edit on another toolbar while you have unsaved changes, a window asks whether to save them: Yes saves them and opens the other toolbar, No discards them, Cancel leaves you where you are.' },
-    { t: 'A concrete example', d: 'You often work with line, rectangle, move, rotate and scale, and you have two Robo plugins you use all the time. Open robo Toolbar, drag them into a toolbar called “Modeling”, put a separator between the SketchUp tools and the plugin ones, and save. From then on everything is at hand in a single toolbar, in the order you decided.' }
+    { t: 'A concrete example', d: 'You often work with line, rectangle, move, rotate and scale, and you have two Robo plugins you use all the time. Open robo toolbar, drag them into a toolbar called “Modeling”, put a separator between the SketchUp tools and the plugin ones, and save. From then on everything is at hand in a single toolbar, in the order you decided.' }
   ],
   pros: ['Custom toolbars, as many as you like', 'SketchUp tools and Robo plugins in the same list', 'Customizable icons (PNG or SVG)', 'A warning if you have unsaved changes'],
   solves: [
     { p: 'The commands you use most are scattered across many toolbars and menus.', s: 'You gather them in a single toolbar, in the order you prefer.' },
     { p: 'Some plugin commands have no icon to put in a toolbar.', s: 'They get a generic icon that you can replace with your own.' }
   ],
-  specs: [['Window', '900 × 600 px, resizable'], ['Menu', 'Robo Tool › robo Toolbar'], ['Custom icons', 'PNG 16 and 24 px, or SVG'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Window', '900 × 600 px, resizable'], ['Menu', 'Robo Tool › robo toolbar'], ['Custom icons', 'PNG 16 and 24 px, or SVG'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_PLUGINS.de.toolbar = {
   tagline: 'Eigene Symbolleisten bauen, indem Sie Befehle ziehen.',
   simple: 'Wählen Sie die Befehle, die Sie am meisten brauchen — SketchUp-Werkzeuge, Schaltflächen der Robo-Plugins und Einträge des Menüs Erweiterungen — und ziehen Sie sie in eine eigene Leiste. Namen vergeben, speichern, und die Leiste ist in SketchUp immer bereit.',
   intro: [
-    'Mit robo Toolbar erstellen Sie eigene SketchUp-Symbolleisten. Fenster öffnen, die benötigten Befehle in die Leistenvorschau ziehen, ordnen, einen Namen eingeben und speichern: Die Leiste erscheint sofort in SketchUp.',
-    'Das lohnt sich, wenn die täglich benutzten Schaltflächen über viele Leisten und Menüs verteilt sind. Mit robo Toolbar sammeln Sie sie an einem Ort, in der gewünschten Reihenfolge, und Sie können beliebig viele Leisten anlegen, eine für jede Art von Arbeit.'
+    'Mit robo toolbar erstellen Sie eigene SketchUp-Symbolleisten. Fenster öffnen, die benötigten Befehle in die Leistenvorschau ziehen, ordnen, einen Namen eingeben und speichern: Die Leiste erscheint sofort in SketchUp.',
+    'Das lohnt sich, wenn die täglich benutzten Schaltflächen über viele Leisten und Menüs verteilt sind. Mit robo toolbar sammeln Sie sie an einem Ort, in der gewünschten Reihenfolge, und Sie können beliebig viele Leisten anlegen, eine für jede Art von Arbeit.'
   ],
   main: [
     { t: 'Ziehen und ordnen', d: 'Ziehen Sie Befehle in die Leistenvorschau, verschieben Sie sie, um die Reihenfolge zu ändern, und entfernen Sie sie mit dem roten x. Oder klicken Sie einfach auf das + neben dem Befehl.' },
@@ -2693,29 +2693,29 @@ I18N_PLUGINS.de.toolbar = {
     { t: 'Gespeicherte Leisten, bearbeitbar', d: 'In der Liste „Meine Leisten“ können Sie jede Leiste bearbeiten, anzeigen oder löschen. Bei ungespeicherten Änderungen erinnert Sie das Plugin, bevor Sie zu einer anderen Leiste wechseln.' },
     { t: 'In fünf Sprachen', d: 'Fenster, Meldungen und Hilfe gibt es auf Italienisch, Englisch, Deutsch, Französisch und Spanisch.' }
   ],
-  steps: ['Öffnen Sie robo Toolbar über Erweiterungen › Robo Tool.', 'Ziehen Sie die Befehle in die Leistenvorschau und ordnen Sie sie.', 'Geben Sie den Namen der Leiste ein und klicken Sie auf Leiste speichern: Sie erscheint sofort in SketchUp.'],
+  steps: ['Öffnen Sie robo toolbar über Erweiterungen › Robo Tool.', 'Ziehen Sie die Befehle in die Leistenvorschau und ordnen Sie sie.', 'Geben Sie den Namen der Leiste ein und klicken Sie auf Leiste speichern: Sie erscheint sofort in SketchUp.'],
   how: [
-    { t: 'Das Problem, das es löst', d: 'In SketchUp sind die ständig genutzten Befehle über viele Leisten und verschachtelte Menüs verteilt, und die Standardleisten lassen sich nicht frei zusammenstellen. robo Toolbar gibt Ihnen eine maßgeschneiderte Leiste mit nur dem, was Sie brauchen.' },
+    { t: 'Das Problem, das es löst', d: 'In SketchUp sind die ständig genutzten Befehle über viele Leisten und verschachtelte Menüs verteilt, und die Standardleisten lassen sich nicht frei zusammenstellen. robo toolbar gibt Ihnen eine maßgeschneiderte Leiste mit nur dem, was Sie brauchen.' },
     { t: 'Schritt 1 · Befehle wählen', d: 'Links steht die Liste aller verfügbaren Befehle. Mit dem Menü oben filtern Sie nach Plugin oder wählen „Nur Plugins ohne Symbole“ bzw. „Nur Plugins mit Symbolen“; der Eintrag Tastenkürzel zeigt nur Befehle mit Tastenkürzel. Das Suchfeld sucht nach dem Namen.' },
     { t: 'Schritt 2 · Leiste zusammenstellen', d: 'Ziehen Sie Befehle in die Vorschau oder klicken Sie auf das + neben dem Befehl. Zum Umordnen ziehen Sie die bereits gesetzten Symbole; zum Entfernen klicken Sie auf das rote x, das beim Darüberfahren erscheint. „Trennlinie einfügen“ setzt eine senkrechte Linie rechts vom letzten Symbol; Sie können sie auch zwischen zwei Symbole ziehen.' },
     { t: 'Schritt 3 · Speichern', d: 'Namen eingeben und auf Leiste speichern klicken. Eine neue Leiste erscheint sofort in SketchUp. Änderungen an einer bestehenden Leiste (Symbole entfernt, hinzugefügt oder umgeordnet) erscheinen beim nächsten Start von SketchUp, weil SketchUp keine Schaltflächen aus einer bereits geöffneten Leiste entfernen kann.' },
     { t: 'Generische Symbole ändern', d: 'Befehle ohne Symbol haben ein graues generisches Symbol mit rotem Kreuz. Fahren Sie in der Vorschau darüber: Ein roter Rahmen mit Stift erscheint — klicken Sie darauf. Wählen Sie zuerst ein Bild mit 16 × 16 Pixel, dann eines mit 24 × 24 (PNG, JPG oder BMP) oder eine einzelne SVG-Datei, dann entfällt das zweite. Hat das Bild die falsche Größe, nennt eine Meldung die tatsächliche und die benötigte Größe, und Sie können es erneut versuchen. Das Symbol bleibt in jeder Leiste an diesen Befehl gebunden.' },
     { t: 'Meine Leisten und ungespeicherte Änderungen', d: 'Unten stehen die gespeicherten Leisten mit den Schaltflächen Bearbeiten, Anzeigen und Löschen (zum Löschen zweimal klicken). Wenn Sie bei ungespeicherten Änderungen auf Bearbeiten einer anderen Leiste klicken, fragt ein Fenster, ob gespeichert werden soll: Ja speichert und öffnet die andere Leiste, Nein verwirft die Änderungen, Abbrechen lässt alles, wie es ist.' },
-    { t: 'Ein konkretes Beispiel', d: 'Sie arbeiten oft mit Linie, Rechteck, Verschieben, Drehen und Skalieren und haben zwei Robo-Plugins, die Sie ständig brauchen. Sie öffnen robo Toolbar, ziehen sie in eine Leiste namens „Modellierung“, setzen eine Trennlinie zwischen SketchUp-Werkzeuge und Plugin-Befehle und speichern. Ab jetzt ist alles in einer Leiste griffbereit, in der von Ihnen bestimmten Reihenfolge.' }
+    { t: 'Ein konkretes Beispiel', d: 'Sie arbeiten oft mit Linie, Rechteck, Verschieben, Drehen und Skalieren und haben zwei Robo-Plugins, die Sie ständig brauchen. Sie öffnen robo toolbar, ziehen sie in eine Leiste namens „Modellierung“, setzen eine Trennlinie zwischen SketchUp-Werkzeuge und Plugin-Befehle und speichern. Ab jetzt ist alles in einer Leiste griffbereit, in der von Ihnen bestimmten Reihenfolge.' }
   ],
   pros: ['Eigene Leisten, so viele Sie möchten', 'SketchUp-Werkzeuge und Robo-Plugins in derselben Liste', 'Anpassbare Symbole (PNG oder SVG)', 'Warnung bei ungespeicherten Änderungen'],
   solves: [
     { p: 'Die am häufigsten genutzten Befehle sind über viele Leisten und Menüs verteilt.', s: 'Sie sammeln sie in einer Leiste, in der gewünschten Reihenfolge.' },
     { p: 'Manche Plugin-Befehle haben kein Symbol für eine Leiste.', s: 'Sie erhalten ein generisches Symbol, das Sie durch ein eigenes ersetzen können.' }
   ],
-  specs: [['Fenster', '900 × 600 px, skalierbar'], ['Menü', 'Robo Tool › robo Toolbar'], ['Eigene Symbole', 'PNG 16 und 24 px oder SVG'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Fenster', '900 × 600 px, skalierbar'], ['Menü', 'Robo Tool › robo toolbar'], ['Eigene Symbole', 'PNG 16 und 24 px oder SVG'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_PLUGINS.fr.toolbar = {
   tagline: 'Créez vos propres barres d’outils en faisant glisser les commandes.',
   simple: 'Choisissez les commandes que vous utilisez le plus — outils SketchUp, boutons des plugins Robo et éléments du menu Extensions — et faites-les glisser dans une barre à vous. Donnez-lui un nom, enregistrez-la et elle est là dans SketchUp, toujours prête.',
   intro: [
-    'robo Toolbar vous permet de créer vos propres barres d’outils SketchUp. Ouvrez la fenêtre, faites glisser les commandes dont vous avez besoin dans l’aperçu de la barre, réorganisez-les, saisissez un nom et enregistrez : la barre apparaît tout de suite dans SketchUp.',
-    'C’est utile quand les boutons que vous utilisez chaque jour sont dispersés dans de nombreuses barres et menus. Avec robo Toolbar, vous les réunissez à un seul endroit, dans l’ordre que vous préférez, et vous pouvez créer autant de barres que vous voulez, une pour chaque type de travail.'
+    'robo toolbar vous permet de créer vos propres barres d’outils SketchUp. Ouvrez la fenêtre, faites glisser les commandes dont vous avez besoin dans l’aperçu de la barre, réorganisez-les, saisissez un nom et enregistrez : la barre apparaît tout de suite dans SketchUp.',
+    'C’est utile quand les boutons que vous utilisez chaque jour sont dispersés dans de nombreuses barres et menus. Avec robo toolbar, vous les réunissez à un seul endroit, dans l’ordre que vous préférez, et vous pouvez créer autant de barres que vous voulez, une pour chaque type de travail.'
   ],
   main: [
     { t: 'Glisser et réorganiser', d: 'Faites glisser les commandes dans l’aperçu de la barre, déplacez-les pour changer l’ordre et retirez-les avec le x rouge. Ou cliquez simplement sur le + à côté de la commande.' },
@@ -2725,29 +2725,29 @@ I18N_PLUGINS.fr.toolbar = {
     { t: 'Barres enregistrées, modifiables', d: 'Dans la liste « Mes barres », vous pouvez modifier, afficher ou supprimer chaque barre. En cas de modifications non enregistrées, le plugin vous le rappelle avant de passer à une autre barre.' },
     { t: 'En cinq langues', d: 'Fenêtre, messages et aide sont en italien, anglais, allemand, français et espagnol.' }
   ],
-  steps: ['Ouvrez robo Toolbar depuis Extensions › Robo Tool.', 'Faites glisser les commandes dans l’aperçu de la barre et réorganisez-les.', 'Saisissez le nom de la barre et cliquez sur Enregistrer la barre : elle apparaît tout de suite dans SketchUp.'],
+  steps: ['Ouvrez robo toolbar depuis Extensions › Robo Tool.', 'Faites glisser les commandes dans l’aperçu de la barre et réorganisez-les.', 'Saisissez le nom de la barre et cliquez sur Enregistrer la barre : elle apparaît tout de suite dans SketchUp.'],
   how: [
-    { t: 'Le problème résolu', d: 'Dans SketchUp, les commandes que vous utilisez en permanence sont dispersées dans de nombreuses barres et menus imbriqués, et les barres standard ne se recomposent pas librement. robo Toolbar vous offre une barre sur mesure, avec seulement ce dont vous avez besoin.' },
+    { t: 'Le problème résolu', d: 'Dans SketchUp, les commandes que vous utilisez en permanence sont dispersées dans de nombreuses barres et menus imbriqués, et les barres standard ne se recomposent pas librement. robo toolbar vous offre une barre sur mesure, avec seulement ce dont vous avez besoin.' },
     { t: 'Étape 1 · Choisissez les commandes', d: 'À gauche se trouve la liste de toutes les commandes disponibles. Avec le menu du haut, filtrez par plugin ou choisissez « Seulement plugins sans icônes » ou « Seulement plugins avec icônes » ; l’entrée Raccourcis n’affiche que les commandes dotées d’un raccourci clavier. Le champ de recherche cherche par nom.' },
     { t: 'Étape 2 · Composez la barre', d: 'Faites glisser les commandes dans l’aperçu, ou cliquez sur le + à côté de la commande. Pour changer l’ordre, faites glisser les icônes déjà placées ; pour en retirer une, cliquez sur le x rouge qui apparaît au survol. « Insérer un séparateur » ajoute une ligne verticale à droite de la dernière icône ; vous pouvez aussi la faire glisser entre deux icônes.' },
     { t: 'Étape 3 · Enregistrez', d: 'Saisissez le nom de la barre et cliquez sur Enregistrer la barre. Une nouvelle barre apparaît tout de suite dans SketchUp. Les modifications d’une barre existante (icônes retirées, ajoutées ou réorganisées) apparaissent au prochain démarrage de SketchUp, car SketchUp ne peut pas retirer de boutons d’une barre déjà ouverte.' },
     { t: 'Icônes génériques : comment les changer', d: 'Les commandes sans icône ont une icône générique grise avec une croix rouge. Survolez-la dans l’aperçu : un contour rouge avec un crayon apparaît — cliquez dessus. Choisissez d’abord une image de 16 × 16 pixels, puis une de 24 × 24 (PNG, JPG ou BMP), ou un seul fichier SVG, auquel cas la seconde n’est pas nécessaire. Si l’image n’a pas la bonne taille, un message indique sa taille réelle et celle qu’il faut, et vous pouvez réessayer. L’icône reste liée à cette commande dans toutes les barres.' },
     { t: 'Mes barres et modifications non enregistrées', d: 'En bas se trouvent les barres enregistrées, avec les boutons Modifier, Afficher et Supprimer (cliquez deux fois pour supprimer). Si vous cliquez sur Modifier pour une autre barre alors que vous avez des modifications non enregistrées, une fenêtre demande s’il faut les enregistrer : Oui les enregistre et ouvre l’autre barre, Non les abandonne, Annuler vous laisse où vous êtes.' },
-    { t: 'Un exemple concret', d: 'Vous travaillez souvent avec ligne, rectangle, déplacer, pivoter et échelle, et vous avez deux plugins Robo que vous utilisez en permanence. Vous ouvrez robo Toolbar, vous les faites glisser dans une barre appelée « Modélisation », vous mettez un séparateur entre les outils SketchUp et ceux des plugins, puis vous enregistrez. Dès lors, tout est à portée de main dans une seule barre, dans l’ordre que vous avez décidé.' }
+    { t: 'Un exemple concret', d: 'Vous travaillez souvent avec ligne, rectangle, déplacer, pivoter et échelle, et vous avez deux plugins Robo que vous utilisez en permanence. Vous ouvrez robo toolbar, vous les faites glisser dans une barre appelée « Modélisation », vous mettez un séparateur entre les outils SketchUp et ceux des plugins, puis vous enregistrez. Dès lors, tout est à portée de main dans une seule barre, dans l’ordre que vous avez décidé.' }
   ],
   pros: ['Barres sur mesure, autant que vous voulez', 'Outils SketchUp et plugins Robo dans la même liste', 'Icônes personnalisables (PNG ou SVG)', 'Avertissement en cas de modifications non enregistrées'],
   solves: [
     { p: 'Les commandes les plus utilisées sont dispersées dans de nombreuses barres et menus.', s: 'Vous les réunissez dans une seule barre, dans l’ordre que vous préférez.' },
     { p: 'Certaines commandes de plugins n’ont pas d’icône à placer dans une barre.', s: 'Elles reçoivent une icône générique que vous pouvez remplacer par la vôtre.' }
   ],
-  specs: [['Fenêtre', '900 × 600 px, redimensionnable'], ['Menu', 'Robo Tool › robo Toolbar'], ['Icônes personnalisées', 'PNG 16 et 24 px, ou SVG'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Fenêtre', '900 × 600 px, redimensionnable'], ['Menu', 'Robo Tool › robo toolbar'], ['Icônes personnalisées', 'PNG 16 et 24 px, ou SVG'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_PLUGINS.es.toolbar = {
   tagline: 'Crea tus propias barras de herramientas arrastrando comandos.',
   simple: 'Elige los comandos que más usas — herramientas de SketchUp, botones de los plugins Robo y elementos del menú Extensiones — y arrástralos a una barra tuya. Ponle un nombre, guárdala y la tendrás en SketchUp, siempre lista.',
   intro: [
-    'robo Toolbar te permite crear tus propias barras de herramientas de SketchUp. Abres la ventana, arrastras los comandos que necesitas a la vista previa de la barra, los reordenas, escribes un nombre y guardas: la barra aparece enseguida en SketchUp.',
-    'Resulta útil cuando los botones que usas cada día están repartidos entre muchas barras y menús. Con robo Toolbar los reúnes en un solo lugar, en el orden que prefieras, y puedes crear tantas barras como quieras, una para cada tipo de trabajo.'
+    'robo toolbar te permite crear tus propias barras de herramientas de SketchUp. Abres la ventana, arrastras los comandos que necesitas a la vista previa de la barra, los reordenas, escribes un nombre y guardas: la barra aparece enseguida en SketchUp.',
+    'Resulta útil cuando los botones que usas cada día están repartidos entre muchas barras y menús. Con robo toolbar los reúnes en un solo lugar, en el orden que prefieras, y puedes crear tantas barras como quieras, una para cada tipo de trabajo.'
   ],
   main: [
     { t: 'Arrastra y reordena', d: 'Arrastra los comandos a la vista previa de la barra, muévelos para cambiar el orden y quítalos con la x roja. O simplemente haz clic en el + junto al comando.' },
@@ -2757,24 +2757,24 @@ I18N_PLUGINS.es.toolbar = {
     { t: 'Barras guardadas, editables', d: 'En la lista «Mis barras» puedes editar, mostrar o eliminar cada barra. Si tienes cambios sin guardar, el plugin te lo recuerda antes de pasar a otra barra.' },
     { t: 'En cinco idiomas', d: 'La ventana, los mensajes y la ayuda están en italiano, inglés, alemán, francés y español.' }
   ],
-  steps: ['Abre robo Toolbar desde Extensiones › Robo Tool.', 'Arrastra los comandos a la vista previa de la barra y reordénalos.', 'Escribe el nombre de la barra y pulsa Guardar barra: aparece enseguida en SketchUp.'],
+  steps: ['Abre robo toolbar desde Extensiones › Robo Tool.', 'Arrastra los comandos a la vista previa de la barra y reordénalos.', 'Escribe el nombre de la barra y pulsa Guardar barra: aparece enseguida en SketchUp.'],
   how: [
-    { t: 'El problema que resuelve', d: 'En SketchUp, los comandos que usas continuamente están repartidos entre muchas barras y menús anidados, y las barras estándar no se pueden recomponer a voluntad. robo Toolbar te da una barra a medida, con solo lo que necesitas.' },
+    { t: 'El problema que resuelve', d: 'En SketchUp, los comandos que usas continuamente están repartidos entre muchas barras y menús anidados, y las barras estándar no se pueden recomponer a voluntad. robo toolbar te da una barra a medida, con solo lo que necesitas.' },
     { t: 'Paso 1 · Elige los comandos', d: 'A la izquierda está la lista de todos los comandos disponibles. Con el menú superior filtras por plugin, o eliges «Solo plugins sin iconos» o «Solo plugins con iconos»; la entrada Atajos muestra solo los comandos que tienen un atajo de teclado. El campo de búsqueda busca por nombre.' },
     { t: 'Paso 2 · Compón la barra', d: 'Arrastra los comandos a la vista previa, o haz clic en el + junto al comando. Para cambiar el orden arrastra los iconos ya colocados; para quitar uno haz clic en la x roja que aparece al pasar el ratón. «Insertar separador» añade una línea vertical a la derecha del último icono; también puedes arrastrarla entre dos iconos.' },
     { t: 'Paso 3 · Guarda', d: 'Escribe el nombre de la barra y pulsa Guardar barra. Una barra nueva aparece enseguida en SketchUp. Los cambios en una barra existente (iconos quitados, añadidos o reordenados) se ven al reiniciar SketchUp, porque SketchUp no puede quitar botones de una barra ya abierta.' },
     { t: 'Iconos genéricos: cómo cambiarlos', d: 'Los comandos sin icono tienen un icono genérico gris con una cruz roja. Pasa el ratón por encima en la vista previa: aparece un contorno rojo con un lápiz — haz clic. Elige primero una imagen de 16 × 16 píxeles y luego una de 24 × 24 (PNG, JPG o BMP), o un solo archivo SVG, en cuyo caso no hace falta la segunda. Si la imagen no tiene el tamaño correcto, un mensaje indica cuánto mide y cuánto debe medir, y puedes volver a intentarlo. El icono queda asociado a ese comando en todas las barras.' },
     { t: 'Mis barras y cambios sin guardar', d: 'Abajo están las barras guardadas, con los botones Editar, Mostrar y Eliminar (haz clic dos veces para eliminar). Si pulsas Editar en otra barra mientras tienes cambios sin guardar, una ventana pregunta si quieres guardarlos: Sí los guarda y abre la otra barra, No los descarta, Cancelar te deja donde estás.' },
-    { t: 'Un ejemplo concreto', d: 'Trabajas a menudo con línea, rectángulo, mover, rotar y escalar, y tienes dos plugins Robo que usas continuamente. Abres robo Toolbar, los arrastras a una barra llamada «Modelado», pones un separador entre las herramientas de SketchUp y las de los plugins y guardas. Desde ese momento tienes todo a mano en una sola barra, en el orden que decidiste.' }
+    { t: 'Un ejemplo concreto', d: 'Trabajas a menudo con línea, rectángulo, mover, rotar y escalar, y tienes dos plugins Robo que usas continuamente. Abres robo toolbar, los arrastras a una barra llamada «Modelado», pones un separador entre las herramientas de SketchUp y las de los plugins y guardas. Desde ese momento tienes todo a mano en una sola barra, en el orden que decidiste.' }
   ],
   pros: ['Barras a medida, tantas como quieras', 'Herramientas de SketchUp y plugins Robo en la misma lista', 'Iconos personalizables (PNG o SVG)', 'Aviso si tienes cambios sin guardar'],
   solves: [
     { p: 'Los comandos que más usas están repartidos entre muchas barras y menús.', s: 'Los reúnes en una sola barra, en el orden que prefieras.' },
     { p: 'Algunos comandos de plugins no tienen un icono para poner en una barra.', s: 'Reciben un icono genérico que puedes sustituir por el tuyo.' }
   ],
-  specs: [['Ventana', '900 × 600 px, redimensionable'], ['Menú', 'Robo Tool › robo Toolbar'], ['Iconos personalizados', 'PNG 16 y 24 px, o SVG'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Ventana', '900 × 600 px, redimensionable'], ['Menú', 'Robo Tool › robo toolbar'], ['Iconos personalizados', 'PNG 16 y 24 px, o SVG'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.en.toolbar = { 'toolbar.png': 'robo Toolbar: build your own toolbars' };
-I18N_TOOLBARS.de.toolbar = { 'toolbar.png': 'robo Toolbar: eigene Symbolleisten bauen' };
-I18N_TOOLBARS.fr.toolbar = { 'toolbar.png': 'robo Toolbar : créez vos propres barres d’outils' };
-I18N_TOOLBARS.es.toolbar = { 'toolbar.png': 'robo Toolbar: crea tus propias barras de herramientas' };
+I18N_TOOLBARS.en.toolbar = { 'toolbar.png': 'robo toolbar: build your own toolbars' };
+I18N_TOOLBARS.de.toolbar = { 'toolbar.png': 'robo toolbar: eigene Symbolleisten bauen' };
+I18N_TOOLBARS.fr.toolbar = { 'toolbar.png': 'robo toolbar : créez vos propres barres d’outils' };
+I18N_TOOLBARS.es.toolbar = { 'toolbar.png': 'robo toolbar: crea tus propias barras de herramientas' };
