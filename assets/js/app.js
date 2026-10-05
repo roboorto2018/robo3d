@@ -246,7 +246,7 @@
     return (part ? list.slice(cut) : list.slice(0, cut)).join('</a>') + '</a>';
   }
 
-  /* GLOBE (nera) — stesso disegno usato nelle finestre dei plugin (vedi robo Fillet). */
+  /* GLOBE (nera) — stesso disegno usato nelle finestre dei plugin (vedi robo fillet). */
   var GLOBE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20"></path></svg>';
 
   function buildLangMenu() {

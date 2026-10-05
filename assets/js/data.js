@@ -57,14 +57,14 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- EXTRACT */
   {
-    id: 'extract', name: 'robo Extract', version: '1.1', category: 'Modellazione', hue: 170,
+    id: 'extract', name: 'robo extract', version: '1.1', category: 'Modellazione', hue: 170,
     donationPrompt: true,
     video: 'Gi4nG6UZF0I',
     images: ['assets/img/screenshots/extract-1.png'],
     tagline: 'Copia facce e linee fuori dai gruppi, nella stessa posizione.',
     simple: 'Passa il mouse su una faccia o una linea di qualsiasi gruppo o componente, anche chiuso: Robo la evidenzia e, con un clic, ne crea una copia fuori dal gruppo, nella stessa identica posizione e inclinazione. Funziona su piani inclinati e su forme organiche, e non serve aprire né selezionare nulla.',
     intro: [
-      'robo Extract è lo strumento per prendere una faccia o una linea dall\'interno di un gruppo o di un componente e averne una copia fuori, nella stessa identica posizione. Non devi aprire il gruppo, né copiare e incollare: basta passare il mouse e cliccare.',
+      'robo extract è lo strumento per prendere una faccia o una linea dall\'interno di un gruppo o di un componente e averne una copia fuori, nella stessa identica posizione. Non devi aprire il gruppo, né copiare e incollare: basta passare il mouse e cliccare.',
       'Serve ogni volta che ti occorre usare una parte di un oggetto già modellato: la sagoma di una parete per disegnarci sopra, il profilo di un pezzo per costruirne un altro, una superficie organica da riutilizzare. La copia arriva già al posto giusto, anche su piani inclinati.'
     ],
     main: [
@@ -73,35 +73,35 @@ var PLUGINS = [
       { t: 'Superfici organiche', d: 'Su una forma curva prende in un colpo solo tutta la zona liscia, con un limite regolabile da una barra con anteprima.' },
       { t: 'Più elementi insieme', d: 'Con Maiusc aggiungi altre facce o linee e le copi tutte in un unico nuovo gruppo. Su un arco o un cerchio prende la curva intera.' }
     ],
-    steps: ['Clicca il pulsante robo Extract nella barra strumenti (o nel menu): parte lo strumento e si apre la finestra delle preferenze.', 'Passa il mouse su una faccia o una linea: diventa arancione e la barra di stato dice dove andrà la copia.', 'Clicca: la copia compare in un nuovo gruppo, già selezionata. Maiusc+clic per aggiungerne altre.'],
+    steps: ['Clicca il pulsante robo extract nella barra strumenti (o nel menu): parte lo strumento e si apre la finestra delle preferenze.', 'Passa il mouse su una faccia o una linea: diventa arancione e la barra di stato dice dove andrà la copia.', 'Clicca: la copia compare in un nuovo gruppo, già selezionata. Maiusc+clic per aggiungerne altre.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Quando una faccia o una linea sta dentro un gruppo o un componente, per usarla devi aprire il gruppo, copiare, uscire e incollare, con il rischio di spostarla o di sbagliare livello. Se poi l\'oggetto è stato ruotato, ingrandito o specchiato, rimetterla nel punto esatto diventa un lavoro lungo. robo Extract fa tutto con un clic, senza aprire nulla.' },
-      { t: 'Passo 1 · Attiva lo strumento', d: 'Premi il pulsante robo Extract (o la voce di menu): parte lo strumento e si apre la finestra delle preferenze. Non devi selezionare niente prima e non devi entrare nei gruppi: lo strumento arriva da solo a facce e linee dentro gruppi e componenti chiusi, anche annidati.' },
+      { t: 'Il problema che risolve', d: 'Quando una faccia o una linea sta dentro un gruppo o un componente, per usarla devi aprire il gruppo, copiare, uscire e incollare, con il rischio di spostarla o di sbagliare livello. Se poi l\'oggetto è stato ruotato, ingrandito o specchiato, rimetterla nel punto esatto diventa un lavoro lungo. robo extract fa tutto con un clic, senza aprire nulla.' },
+      { t: 'Passo 1 · Attiva lo strumento', d: 'Premi il pulsante robo extract (o la voce di menu): parte lo strumento e si apre la finestra delle preferenze. Non devi selezionare niente prima e non devi entrare nei gruppi: lo strumento arriva da solo a facce e linee dentro gruppi e componenti chiusi, anche annidati.' },
       { t: 'Passo 2 · Passa il mouse e guarda', d: 'Muovendo il mouse sopra una faccia o una linea, questa diventa arancione e la barra di stato ti dice dove andrà la copia. Il plugin legge la posizione dall\'istanza esatta sotto il cursore, quindi traslazioni, rotazioni, scale e specchi non spostano il risultato.' },
       { t: 'Passo 3 · Clicca per copiare', d: 'Con un clic la copia compare in un nuovo gruppo, già selezionata. Con Maiusc+clic aggiungi altre facce, segmenti o curve dello stesso gruppo e li copi tutti insieme. Se punti un segmento di un arco o di un cerchio, prende la curva intera.' },
       { t: 'Dove finisce la copia', d: 'Con niente di aperto la copia nasce nella radice del modello, fuori dal gruppo di origine. Se hai un gruppo aperto per la modifica, e scegli la geometria di un altro gruppo, la copia entra nel gruppo aperto; se scegli la sua stessa geometria, sale di un livello.' },
       { t: 'Superfici organiche', d: 'Una superficie curva è fatta di centinaia di piccole facce. Cliccandone una, lo strumento la estende alle facce vicine finché la piega non supera il "limite di levigatezza". Nelle Preferenze uno slider con anteprima in tempo reale mostra quanto cambia la selezione.' },
       { t: 'Stessa posizione o accanto', d: 'Di default la copia si sovrappone esattamente all\'originale. Disattivando "Copia nella stessa posizione" compare invece accanto, spostata di lato, così le vedi entrambe. Il pulsante "Applica" salva le impostazioni e conferma gli elementi raccolti, come il tasto Invio. Materiali, tag e interfaccia sono disponibili in cinque lingue.' },
-      { t: 'Un esempio concreto', d: 'Hai un edificio modellato in tanti gruppi e vuoi disegnare un serramento sulla facciata di una parete inclinata. Attivi robo Extract, passi il mouse sulla parete, che si colora, e clicchi: la copia della faccia appare esattamente sulla parete, con la stessa inclinazione, fuori dal gruppo. Ora puoi disegnarci sopra senza aprire niente. Un Ctrl+Z annulla la copia.' }
+      { t: 'Un esempio concreto', d: 'Hai un edificio modellato in tanti gruppi e vuoi disegnare un serramento sulla facciata di una parete inclinata. Attivi robo extract, passi il mouse sulla parete, che si colora, e clicchi: la copia della faccia appare esattamente sulla parete, con la stessa inclinazione, fuori dal gruppo. Ora puoi disegnarci sopra senza aprire niente. Un Ctrl+Z annulla la copia.' }
     ],
     pros: ['Non serve aprire i gruppi', 'Posizione e inclinazione identiche all\'originale', 'Funziona su superfici inclinate e organiche', 'Materiali, tag e interfaccia in 5 lingue'],
     solves: [
       { p: 'Estrarre una faccia da un gruppo significa aprirlo, copiare e incollare, con il rischio di spostarla.', s: 'Un clic crea la copia già nella posizione giusta, senza aprire nulla.' },
       { p: 'Le superfici organiche sono fatte di centinaia di piccole facce.', s: 'La porzione liscia viene presa tutta in un colpo, con un limite regolabile.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Extract (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Lingue', 'Italiano, English, Deutsch, Français, Español'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Menu', 'Robo Tool › robo extract (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Lingue', 'Italiano, English, Deutsch, Français, Español'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* --------------------------------------------------------------- DEMOLITION */
   {
-    id: 'demolition', name: 'robo Demolition', version: '1.1', category: 'Modellazione', hue: 15,
+    id: 'demolition', name: 'robo demolition', version: '1.1', category: 'Modellazione', hue: 15,
     noDownload: true,
     video: 'Zgdt30Fkshw',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
-    simple: 'Seleziona facce, gruppi o componenti pesanti: robo Demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Usa Open3D (Python, in locale sul tuo computer); gli oggetti interni restano oggetti e i materiali restano al loro posto.',
+    simple: 'Seleziona facce, gruppi o componenti pesanti: robo demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Usa Open3D (Python, in locale sul tuo computer); gli oggetti interni restano oggetti e i materiali restano al loro posto.',
     intro: [
-      'robo Demolition alleggerisce gli oggetti con troppi triangoli, per esempio quelli importati da altri programmi o scaricati da internet. Ne crea una versione più semplice che conserva la forma, ma pesa molto meno.',
+      'robo demolition alleggerisce gli oggetti con troppi triangoli, per esempio quelli importati da altri programmi o scaricati da internet. Ne crea una versione più semplice che conserva la forma, ma pesa molto meno.',
       'Serve quando il modello è lento, il file è enorme o SketchUp fatica a muoversi. Vedi il risultato in anteprima sul modello e decidi tu quanto semplificare con una barra, prima di applicare.'
     ],
     main: [
@@ -113,7 +113,7 @@ var PLUGINS = [
     ],
     steps: ['Seleziona le facce, i gruppi o i componenti da alleggerire.', 'Premi Anteprima: la mesh più leggera viene disegnata in blu sul modello. Muovi la barra per demolire di più o di meno.', 'Premi Applica: un solo Ctrl+Z ripristina tutto.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Ogni superficie in SketchUp è fatta di facce, e un oggetto curvo o scansionato può averne centinaia di migliaia. Il modello diventa lento, la vista va a scatti, il file pesa decine di megabyte e il rendering fatica. Molte di quelle facce però sono invisibili a occhio: su una superficie quasi piatta servono pochissimi triangoli per avere lo stesso aspetto. robo Demolition elimina quelli inutili e tiene quelli che contano.' },
+      { t: 'Il problema che risolve', d: 'Ogni superficie in SketchUp è fatta di facce, e un oggetto curvo o scansionato può averne centinaia di migliaia. Il modello diventa lento, la vista va a scatti, il file pesa decine di megabyte e il rendering fatica. Molte di quelle facce però sono invisibili a occhio: su una superficie quasi piatta servono pochissimi triangoli per avere lo stesso aspetto. robo demolition elimina quelli inutili e tiene quelli che contano.' },
       { t: 'Passo 1 · Scegli cosa alleggerire', d: 'Seleziona facce sciolte, gruppi o componenti, anche tanti insieme. La finestra mostra subito quante facce contiene la selezione. Se è enorme, il plugin avvisa che il lavoro può richiedere tempo e chiede se vuoi continuare.' },
       { t: 'Passo 2 · Muovi la barra e guarda', d: 'Con la barra "Quantità di demolizione" decidi quanto togliere: più è alta, più il modello è leggero. Premi Anteprima e una bozza dell\'oggetto semplificato viene disegnata in blu sopra l\'originale, con sotto i numeri "facce prima → dopo" e la percentuale in meno. Muovi la barra e rivedi il risultato finché la forma ti soddisfa: nel modello non cambia nulla finché non confermi.' },
       { t: 'Passo 3 · Applica, o conserva l\'originale', d: 'Con "Applica" il risultato entra nel modello in un\'unica operazione: un solo Ctrl+Z ripristina tutto. Di default l\'originale resta e accanto, nella stessa posizione, nasce la copia demolita; se disattivi "Mantieni l\'oggetto originale", l\'originale viene sostituito. Dopo l\'anteprima, se modifichi il modello, il plugin ti chiede di rifarla, per non applicare un risultato non più valido.' },
@@ -127,17 +127,17 @@ var PLUGINS = [
     solves: [
       { p: 'Le mesh importate hanno centinaia di migliaia di triangoli e rallentano il modello.', s: 'Una copia con la percentuale di triangoli che scegli, con la forma quasi identica.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Demolition (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'Python 3 + Open3D (pip install open3d)'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Menu', 'Robo Tool › robo demolition (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'Python 3 + Open3D (pip install open3d)'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
 
   /* --------------------------------------------------------------- EXPORT OBJECT */
   {
-    id: 'export_object', name: 'robo Export object', version: '0.2', category: 'Produttività', hue: 5,
+    id: 'export_object', name: 'robo export object', version: '0.2', category: 'Produttività', hue: 5,
     donationPrompt: true,
     tagline: 'Esporta gli oggetti selezionati in un nuovo file .skp, nella versione che scegli.',
     simple: 'Selezioni una parte del modello: si apre una finestra con il nome già compilato (quello del gruppo o componente), la cartella e la versione di SketchUp. Robo la salva in un file separato, nella stessa posizione, senza toccare il tuo modello aperto.',
     intro: [
-      'robo Export object salva solo la parte del modello che selezioni in un nuovo file .skp, separato dal tuo progetto. Non devi più copiare, aprire un file vuoto e incollare.',
+      'robo export object salva solo la parte del modello che selezioni in un nuovo file .skp, separato dal tuo progetto. Non devi più copiare, aprire un file vuoto e incollare.',
       'Serve per condividere un singolo mobile, un arredo o un dettaglio con un collega o un cliente, per costruirti una libreria personale di componenti, o per consegnare un file che si apra anche con una versione di SketchUp più vecchia.'
     ],
     main: [
@@ -147,16 +147,16 @@ var PLUGINS = [
       { t: 'Il tuo modello non viene toccato', d: 'Il file aperto resta com\'è: non viene modificato, chiuso o salvato.' },
       { t: 'Stessa posizione', d: 'Gli oggetti mantengono le coordinate che avevano, così puoi reimportarli senza spostamenti.' }
     ],
-    steps: ['Seleziona gli oggetti da esportare.', 'Premi robo Export object: il nome del file è già quello del gruppo o componente, puoi cambiarlo.', 'Scegli cartella e versione di SketchUp e premi Esporta.'],
+    steps: ['Seleziona gli oggetti da esportare.', 'Premi robo export object: il nome del file è già quello del gruppo o componente, puoi cambiarlo.', 'Scegli cartella e versione di SketchUp e premi Esporta.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Per salvare una sola parte del modello, di solito devi copiarla, aprire un nuovo file, incollarla sul posto e salvare; oppure salvare "con nome" e cancellare il resto, rischiando di rovinare il file originale. robo Export object fa tutto con un comando: selezioni, scegli nome e versione, esporti.' },
-      { t: 'Passo 1 · Seleziona gli oggetti', d: 'Seleziona nel modello uno o più gruppi o componenti. Premi il pulsante robo Export object: si apre una finestra con il nome del file già compilato. Se hai selezionato un solo gruppo o componente, il nome è il suo (o quello della definizione); con più oggetti propone nome_selezione.' },
+      { t: 'Il problema che risolve', d: 'Per salvare una sola parte del modello, di solito devi copiarla, aprire un nuovo file, incollarla sul posto e salvare; oppure salvare "con nome" e cancellare il resto, rischiando di rovinare il file originale. robo export object fa tutto con un comando: selezioni, scegli nome e versione, esporti.' },
+      { t: 'Passo 1 · Seleziona gli oggetti', d: 'Seleziona nel modello uno o più gruppi o componenti. Premi il pulsante robo export object: si apre una finestra con il nome del file già compilato. Se hai selezionato un solo gruppo o componente, il nome è il suo (o quello della definizione); con più oggetti propone nome_selezione.' },
       { t: 'Passo 2 · Scegli nome, cartella e versione', d: 'Puoi cambiare il nome, scegliere la cartella e la versione di SketchUp per cui salvare: quella corrente oppure 2021 e precedenti (scelta disponibile da SketchUp 2022). I caratteri non validi per Windows nel nome vengono sostituiti da soli. Se il file esiste già, ti viene chiesto se vuoi sovrascriverlo.' },
       { t: 'Passo 3 · Esporta', d: 'Premi Esporta e il file .skp viene creato. Il tuo modello non viene chiuso, riaperto né modificato: la selezione viene racchiusa per un istante in un gruppo temporaneo, salvata su disco e subito dopo l\'operazione viene annullata.' },
       { t: 'Posizione e contenuto', d: 'Gli oggetti nel nuovo file restano nelle stesse coordinate che avevano nel modello, così puoi reimportarli o allinearli senza spostamenti. Insieme agli oggetti vengono salvati i componenti e i materiali che usano, senza portarsi dietro il resto del modello: ottieni un file pulito.' },
       { t: 'Attenzione alle versioni più vecchie', d: 'Salvando per una versione più vecchia puoi perdere ciò che quella versione non conosce, come stili o funzioni recenti. Inoltre il tuo SketchUp potrebbe non accettare le versioni molto vecchie.' },
       { t: 'Finestra, guida e lingue', d: 'La finestra segue lo stile Robo, si adatta in altezza al contenuto e ricorda cartella e versione scelte. Il pulsante Help e il globo in alto a destra aprono la guida e cambiano la lingua: italiano, inglese, tedesco, francese o spagnolo.' },
-      { t: 'Un esempio concreto', d: 'Hai un progetto d\'arredo con una cucina completa e vuoi mandare al cliente solo il mobile bar. Lo selezioni, premi robo Export object: il nome proposto è "Mobile_bar". Scegli la cartella e la versione 2021, perché il cliente ha un programma più vecchio, e premi Esporta. In pochi secondi hai un file leggero con solo quel mobile, nelle sue coordinate, mentre il tuo progetto è rimasto intatto.' }
+      { t: 'Un esempio concreto', d: 'Hai un progetto d\'arredo con una cucina completa e vuoi mandare al cliente solo il mobile bar. Lo selezioni, premi robo export object: il nome proposto è "Mobile_bar". Scegli la cartella e la versione 2021, perché il cliente ha un programma più vecchio, e premi Esporta. In pochi secondi hai un file leggero con solo quel mobile, nelle sue coordinate, mentre il tuo progetto è rimasto intatto.' }
     ],
     pros: ['Nome già compilato e modificabile', 'Versione di SketchUp a scelta (da SketchUp 2022)', 'Un file pulito con solo ciò che serve', 'Il modello aperto non viene toccato', 'Coordinate originali preservate', 'Finestra e guida in cinque lingue'],
     solves: [
@@ -164,20 +164,20 @@ var PLUGINS = [
       { p: 'Chi ha una versione di SketchUp più vecchia non riesce ad aprire il file.', s: 'Scegli la versione di salvataggio direttamente nella finestra.' },
       { p: 'Salvare "con nome" e cancellare il resto rischia di rovinare il file originale.', s: 'L\'esportazione avviene senza modificare il file aperto.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Export object'], ['Barra strumenti', '1 pulsante'], ['Finestra', 'Nome file, cartella e versione; altezza automatica'], ['Versione di salvataggio', 'A scelta da SketchUp 2022'], ['Formato', 'File .skp'], ['Lingue', '5 (IT, EN, DE, FR, ES)'], ['Annullamento', 'Il modello non viene modificato']],
+    specs: [['Menu', 'Robo Tool › robo export object'], ['Barra strumenti', '1 pulsante'], ['Finestra', 'Nome file, cartella e versione; altezza automatica'], ['Versione di salvataggio', 'A scelta da SketchUp 2022'], ['Formato', 'File .skp'], ['Lingue', '5 (IT, EN, DE, FR, ES)'], ['Annullamento', 'Il modello non viene modificato']],
     images: ['assets/img/screenshots/export_object-2.png']
   },
 
   /* ---------------------------------------------------------------- FILLET */
   {
-    id: 'fillet', name: 'robo Fillet', version: '1.2', category: 'Modellazione', hue: 200,
+    id: 'fillet', name: 'robo fillet', version: '1.2', category: 'Modellazione', hue: 200,
     donationPrompt: true,
     video: 'sGrRxU-Thlo',
     images: ['assets/img/screenshots/fillet-1.png', 'assets/img/screenshots/fillet-2.png', 'assets/img/screenshots/fillet-3.png', 'assets/img/screenshots/fillet-4.png', 'assets/img/screenshots/fillet-5.png'],
     tagline: 'Raccordi e smussi tra due linee, su qualsiasi piano.',
     simple: 'Clicca due linee che si incontrano in un angolo, scegli il raggio: l\'angolo spigoloso diventa una curva morbida (oppure uno smusso). Funziona su qualsiasi piano nello spazio, non solo sul pavimento.',
     intro: [
-      'robo Fillet arrotonda l\'angolo formato da due linee: lo trasforma in una curva morbida, detta raccordo, oppure in uno smusso. Clicchi le due linee, scrivi il raggio e l\'angolo viene sistemato.',
+      'robo fillet arrotonda l\'angolo formato da due linee: lo trasforma in una curva morbida, detta raccordo, oppure in uno smusso. Clicchi le due linee, scrivi il raggio e l\'angolo viene sistemato.',
       'Serve nel disegno di profili, piante, mobili, lamiere e in qualsiasi forma con spigoli da ammorbidire. A differenza di altri metodi funziona su qualsiasi piano, anche inclinato, e anche quando le due linee non si toccano davvero.'
     ],
     main: [
@@ -187,34 +187,34 @@ var PLUGINS = [
       { t: 'Su qualsiasi piano', d: 'Funziona anche su piani inclinati e nello spazio, non solo sul piano orizzontale.' },
       { t: 'Pronto per il raccordo successivo', d: 'Dopo aver applicato lo strumento resta attivo e ricorda raggio e segmenti, per arrotondare gli angoli uno dopo l\'altro.' }
     ],
-    steps: ['Attiva robo Fillet e clicca la prima linea (si colora di rosso).', 'Clicca la seconda linea (blu) e inserisci raggio e numero di segmenti.', 'Controlla l\'anteprima verde e premi Applica.'],
+    steps: ['Attiva robo fillet e clicca la prima linea (si colora di rosso).', 'Clicca la seconda linea (blu) e inserisci raggio e numero di segmenti.', 'Controlla l\'anteprima verde e premi Applica.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Arrotondare l\'angolo tra due spigoli in SketchUp richiede di costruire l\'arco a mano, trovare il centro giusto, tagliare le due linee nel punto di tangenza e cancellare i pezzi che avanzano. Sui piani inclinati diventa lento e impreciso. robo Fillet fa tutto con due clic e un raggio.' },
-      { t: 'Passo 1 · Scegli le due linee', d: 'Attivi robo Fillet e clicchi la prima linea, che si colora di rosso, poi la seconda, che diventa blu. Le linee devono giacere sullo stesso piano: lo strumento lo verifica e calcola da solo il punto in cui si incontrano, anche quando non si toccano davvero (un "angolo virtuale").' },
+      { t: 'Il problema che risolve', d: 'Arrotondare l\'angolo tra due spigoli in SketchUp richiede di costruire l\'arco a mano, trovare il centro giusto, tagliare le due linee nel punto di tangenza e cancellare i pezzi che avanzano. Sui piani inclinati diventa lento e impreciso. robo fillet fa tutto con due clic e un raggio.' },
+      { t: 'Passo 1 · Scegli le due linee', d: 'Attivi robo fillet e clicchi la prima linea, che si colora di rosso, poi la seconda, che diventa blu. Le linee devono giacere sullo stesso piano: lo strumento lo verifica e calcola da solo il punto in cui si incontrano, anche quando non si toccano davvero (un "angolo virtuale").' },
       { t: 'Passo 2 · Imposta raggio e segmenti', d: 'Scrivi il raggio nelle unità del tuo modello e il numero di segmenti, da 1 a 99. Con 1 segmento ottieni uno smusso netto; con più segmenti un arco sempre più liscio. Il raggio massimo possibile viene calcolato per te, così non ottieni raccordi impossibili.' },
       { t: 'Passo 3 · Controlla l\'anteprima e applica', d: 'Mentre cambi i valori vedi subito l\'arco risultante, disegnato in verde. Quando ti piace premi Applica: le due linee vengono tagliate al punto giusto e l\'arco viene creato. Un solo Ctrl+Z annulla il raccordo.' },
       { t: 'Su qualsiasi piano', d: 'Il calcolo avviene sul piano delle due linee, qualunque sia la sua orientazione: orizzontale, verticale o inclinato nello spazio. Non serve ruotare la vista né costruire piani ausiliari.' },
       { t: 'Pronto per il raccordo successivo', d: 'Dopo Applica lo strumento resta attivo e ricorda raggio e segmenti, così puoi arrotondare gli angoli uno dopo l\'altro. Se le linee non si toccavano, propone di unirle; al centro dell\'arco viene lasciato un punto guida.' },
-      { t: 'Un esempio concreto', d: 'Hai disegnato in pianta il contorno di un bancone con quattro angoli vivi e vuoi arrotondarli con raggio 10 cm. Attivi robo Fillet, clicchi le due linee del primo angolo, scrivi 10 e vedi l\'arco verde. Premi Applica e passi all\'angolo successivo: il raggio è già impostato, bastano due clic. In meno di un minuto il contorno è completo e pulito.' }
+      { t: 'Un esempio concreto', d: 'Hai disegnato in pianta il contorno di un bancone con quattro angoli vivi e vuoi arrotondarli con raggio 10 cm. Attivi robo fillet, clicchi le due linee del primo angolo, scrivi 10 e vedi l\'arco verde. Premi Applica e passi all\'angolo successivo: il raggio è già impostato, bastano due clic. In meno di un minuto il contorno è completo e pulito.' }
     ],
     pros: ['Raggio preciso nelle unità del modello', 'Funziona su piani inclinati e in 3D', 'Anche con spigoli che non si toccano', 'Raggio e segmenti ricordati tra un raccordo e l\'altro'],
     solves: [
       { p: 'Arrotondare un angolo tra due spigoli richiede di costruire l\'arco a mano e poi tagliare le linee.', s: 'Due clic e un raggio: arco costruito e spigoli sistemati.' },
       { p: 'Sui piani inclinati costruire un arco tangente è lento e impreciso.', s: 'Il calcolo avviene sul piano delle due linee, qualunque sia la sua orientazione.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Fillet'], ['Segmenti', '1 – 99 (1 = smusso)'], ['Piani', 'Qualsiasi orientamento'], ['Annullamento', 'Un solo Ctrl+Z per raccordo']]
+    specs: [['Menu', 'Robo Tool › robo fillet'], ['Segmenti', '1 – 99 (1 = smusso)'], ['Piani', 'Qualsiasi orientamento'], ['Annullamento', 'Un solo Ctrl+Z per raccordo']]
   },
 
   /* ------------------------------------------------------- GROUP TO COMPONENT */
   {
-    id: 'group_to_component', name: 'robo Group to Component', version: '1.2', category: 'Organizzazione', hue: 32,
+    id: 'group_to_component', name: 'robo group to component', version: '1.2', category: 'Organizzazione', hue: 32,
     donationPrompt: true,
     video: 'BLo3ZGXY1F4',
     images: ['assets/img/screenshots/group_to_component-1.png', 'assets/img/screenshots/group_to_component-2.png', 'assets/img/screenshots/group_to_component-3.png', 'assets/img/screenshots/group_to_component-4.png'],
     tagline: 'Trasforma i gruppi in componenti, unendo quelli identici.',
     simple: 'Seleziona molti gruppi: Robo riconosce quelli con la stessa forma e li trasforma in copie dello stesso componente. Il file diventa più leggero e, modificandone uno, cambiano tutti.',
     intro: [
-      'robo Group to Component trasforma i gruppi in componenti e, soprattutto, riconosce i gruppi identici e li fa diventare copie dello stesso componente. Prima di convertire ti mostra quanti sono uguali e quanti unici.',
+      'robo group to component trasforma i gruppi in componenti e, soprattutto, riconosce i gruppi identici e li fa diventare copie dello stesso componente. Prima di convertire ti mostra quanti sono uguali e quanti unici.',
       'Serve quando il modello è pieno di gruppi duplicati, per esempio sedie, finestre o viti copiate e incollate. Con un solo componente il file pesa meno e, modificandone uno, cambiano tutti. È anche un buon passo di preparazione per rendering e proxy.'
     ],
     main: [
@@ -223,34 +223,34 @@ var PLUGINS = [
       { t: 'Precisione regolabile', d: 'Puoi scegliere quanto rigoroso deve essere il confronto: più veloce o più preciso.' },
       { t: 'Nomi e numerazione automatici', d: 'Dai un nome al componente e le copie vengono numerate in ordine.' }
     ],
-    steps: ['Seleziona i gruppi da convertire.', 'Apri robo Group to Component: vedi quanti sono identici e quanti unici.', 'Scegli nome e opzioni e conferma.'],
+    steps: ['Seleziona i gruppi da convertire.', 'Apri robo group to component: vedi quanti sono identici e quanti unici.', 'Scegli nome e opzioni e conferma.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Un modello pieno di gruppi duplicati, per esempio sedie o finestre copiate e incollate, pesa molto e va modificato copia per copia. Un gruppo, a differenza di un componente, non condivide la geometria con le sue copie. Capire a occhio quali gruppi sono davvero uguali è impossibile. robo Group to Component li riconosce e li trasforma in copie dello stesso componente.' },
-      { t: 'Passo 1 · Seleziona i gruppi', d: 'Seleziona i gruppi da convertire, anche centinaia. Apri robo Group to Component: il pannello analizza la selezione e ti mostra quanti gruppi sono identici e quanti unici, prima di cambiare qualsiasi cosa.' },
+      { t: 'Il problema che risolve', d: 'Un modello pieno di gruppi duplicati, per esempio sedie o finestre copiate e incollate, pesa molto e va modificato copia per copia. Un gruppo, a differenza di un componente, non condivide la geometria con le sue copie. Capire a occhio quali gruppi sono davvero uguali è impossibile. robo group to component li riconosce e li trasforma in copie dello stesso componente.' },
+      { t: 'Passo 1 · Seleziona i gruppi', d: 'Seleziona i gruppi da convertire, anche centinaia. Apri robo group to component: il pannello analizza la selezione e ti mostra quanti gruppi sono identici e quanti unici, prima di cambiare qualsiasi cosa.' },
       { t: 'Come li riconosce', d: 'Per ogni gruppo viene calcolata una "impronta" geometrica: numero di facce, volume e posizione dei vertici. Due gruppi con la stessa impronta sono considerati identici, anche se si trovano in punti diversi o ruotati nel modello.' },
       { t: 'Passo 2 · Regola il confronto', d: 'Puoi regolare la tolleranza, cioè quanto due forme possono differire per essere considerate uguali. Con il confronto vertice per vertice ("Deep Vertex Hash") l\'analisi è più lenta ma più rigorosa: utile quando forme simili ma non identiche rischierebbero di essere unite.' },
       { t: 'Passo 3 · Nome, numerazione e conferma', d: 'Assegni un nome al componente e scegli la numerazione automatica: Nome_1, Nome_2… oppure 0001, 0002… Confermi e i gruppi identici diventano istanze della stessa definizione: la geometria è memorizzata una sola volta.' },
       { t: 'Cosa ottieni', d: 'Il file diventa più leggero, e modificando un componente cambiano tutte le sue copie. Il modello è anche pronto per usare proxy leggeri e per il rendering. Un solo Ctrl+Z ripristina tutto.' },
-      { t: 'Un esempio concreto', d: 'Hai un ristorante con 60 sedie, tutte gruppi copiati e incollati. Le selezioni e apri robo Group to Component: il pannello dice "58 identici, 2 unici". Scrivi il nome "Sedia", scegli la numerazione e confermi. Ora ci sono due componenti "Sedia" e le 58 copie condividono la stessa definizione: il file pesa meno e, se cambi il colore della seduta in una, cambia in tutte.' }
+      { t: 'Un esempio concreto', d: 'Hai un ristorante con 60 sedie, tutte gruppi copiati e incollati. Le selezioni e apri robo group to component: il pannello dice "58 identici, 2 unici". Scrivi il nome "Sedia", scegli la numerazione e confermi. Ora ci sono due componenti "Sedia" e le 58 copie condividono la stessa definizione: il file pesa meno e, se cambi il colore della seduta in una, cambia in tutte.' }
     ],
     pros: ['File più leggero', 'Una modifica si propaga a tutte le copie', 'Prepara il modello per proxy e rendering', 'Nomi e numerazione automatici'],
     solves: [
       { p: 'Un modello pieno di gruppi duplicati pesa molto e va modificato copia per copia.', s: 'I duplicati diventano un solo componente, modificabile una volta.' },
       { p: 'Capire quali gruppi sono davvero uguali a occhio è impossibile.', s: 'Il pannello di analisi mostra identici e unici prima di convertire.' }
     ],
-    specs: [['Finestra', '480 × 700 px, ridimensionabile'], ['Menu', 'Robo Tool › Robo Group to Component'], ['Confronto', 'Impronta geometrica + tolleranza'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Finestra', '480 × 700 px, ridimensionabile'], ['Menu', 'Robo Tool › robo group to component'], ['Confronto', 'Impronta geometrica + tolleranza'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* ---------------------------------------------------------------- IMPACT */
   {
-    id: 'impact_object', name: 'robo Impact Object', version: '1.2', category: 'Ottimizzazione', hue: 348,
+    id: 'impact_object', name: 'robo impact object', version: '1.2', category: 'Ottimizzazione', hue: 348,
     donationPrompt: true,
     video: 'hU1Xp5oTKqg',
     images: ['assets/img/screenshots/impact_object-1.png', 'assets/img/screenshots/impact_object-2.png'],
     tagline: 'Scopri quali oggetti appesantiscono il tuo modello.',
     simple: 'Una tabella ordinabile ti mostra quanto "pesa" ogni componente del modello, tenendo conto anche di quante volte è ripetuto. Così trovi subito alberi, arredi o dettagli che rallentano SketchUp.',
     intro: [
-      'robo Impact Object è una tabella che mostra quanto pesa ogni componente del modello, tenendo conto anche di quante volte è ripetuto. In pratica ti dice chi sta rallentando SketchUp.',
+      'robo impact object è una tabella che mostra quanto pesa ogni componente del modello, tenendo conto anche di quante volte è ripetuto. In pratica ti dice chi sta rallentando SketchUp.',
       'Serve quando il modello è lento e non sai da dove cominciare: alberi, arredi molto dettagliati o piccoli oggetti ripetuti centinaia di volte diventano subito visibili, così sai su cosa intervenire.'
     ],
     main: [
@@ -260,34 +260,34 @@ var PLUGINS = [
       { t: 'Azioni dalla stessa riga', d: 'Selezioni l\'oggetto nel modello, lo isoli, ci fai zoom o ripulisci i componenti inutilizzati.' },
       { t: 'Dimensione in MB su richiesta', d: 'Il peso in MB si calcola solo quando lo chiedi, così i modelli grandi non rallentano.' }
     ],
-    steps: ['Apri robo Impact Object dal menu.', 'Ordina la tabella per Totale e individua le righe più pesanti.', 'Selezionale, isolale con lo zoom o elimina ciò che non serve.'],
+    steps: ['Apri robo impact object dal menu.', 'Ordina la tabella per Totale e individua le righe più pesanti.', 'Selezionale, isolale con lo zoom o elimina ciò che non serve.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Un modello lento è difficile da diagnosticare: non si vede quale oggetto lo appesantisce. Spesso il colpevole non è l\'oggetto più grande, ma uno piccolo copiato centinaia di volte, come un albero, un arredo o un dettaglio. robo Impact Object mette in classifica tutti i componenti per peso reale.' },
-      { t: 'Passo 1 · Apri la tabella', d: 'Dal menu apri robo Impact Object: compare una tabella con una riga per ogni definizione del modello e le colonne Livello, Entità, Istanze, Totale e MB. I componenti contenuti in altri componenti si espandono ad albero: all\'apertura vedi solo i livelli principali, un clic apre i figli.' },
+      { t: 'Il problema che risolve', d: 'Un modello lento è difficile da diagnosticare: non si vede quale oggetto lo appesantisce. Spesso il colpevole non è l\'oggetto più grande, ma uno piccolo copiato centinaia di volte, come un albero, un arredo o un dettaglio. robo impact object mette in classifica tutti i componenti per peso reale.' },
+      { t: 'Passo 1 · Apri la tabella', d: 'Dal menu apri robo impact object: compare una tabella con una riga per ogni definizione del modello e le colonne Livello, Entità, Istanze, Totale e MB. I componenti contenuti in altri componenti si espandono ad albero: all\'apertura vedi solo i livelli principali, un clic apre i figli.' },
       { t: 'Come si calcola il peso', d: 'Per ogni definizione viene contato il numero di entità (facce, linee, gruppi…) e quante volte compare nel modello. Il prodotto, entità × istanze, è l\'impatto reale sul programma, e si legge nella colonna Totale.' },
       { t: 'Passo 2 · Ordina e individua', d: 'Ordini la tabella per Totale e in pochi secondi vedi le righe più pesanti. Un oggetto piccolo ma molto ripetuto può pesare più di uno grande e unico: la tabella rende visibile questo effetto.' },
       { t: 'Passo 3 · Agisci dalla riga', d: 'Per ogni riga puoi selezionare l\'oggetto nel modello, isolarlo e fare zoom, oppure pulire i componenti inutilizzati. La selezione è sincronizzata nei due sensi: selezioni nel modello e si evidenzia la riga, e viceversa. Dopo lo zoom, lo stato del modello viene ripristinato.' },
       { t: 'Dimensione in MB su richiesta', d: 'Il peso in MB viene calcolato solo quando lo chiedi, così i modelli molto grandi non rallentano all\'apertura della tabella.' },
-      { t: 'Un esempio concreto', d: 'Il tuo modello di giardino è lentissimo. Apri robo Impact Object e ordini per Totale: in cima c\'è "Siepe", un piccolo componente di 800 entità copiato 300 volte. Lo selezioni, vedi dove si trova nel modello e decidi di sostituirlo con un proxy leggero, magari con robo Proxy Manager. Il modello torna fluido.' }
+      { t: 'Un esempio concreto', d: 'Il tuo modello di giardino è lentissimo. Apri robo impact object e ordini per Totale: in cima c\'è "Siepe", un piccolo componente di 800 entità copiato 300 volte. Lo selezioni, vedi dove si trova nel modello e decidi di sostituirlo con un proxy leggero, magari con robo proxy manager. Il modello torna fluido.' }
     ],
     pros: ['Trovi i colli di bottiglia in pochi secondi', 'Tabella ordinabile e albero espandibile', 'Nessun rallentamento sui modelli grandi', 'Isolamento e pulizia dallo stesso pannello'],
     solves: [
       { p: 'Il modello è lento ma non sai quale oggetto è il colpevole.', s: 'La classifica per peso totale lo mostra subito.' },
       { p: 'Un piccolo oggetto molto ripetuto pesa più di uno grande e unico.', s: 'Il calcolo entità × istanze rende visibile l\'effetto della ripetizione.' }
     ],
-    specs: [['Finestra', '820 × 570 px, ridimensionabile'], ['Menu', 'Robo Tool › Robo Impact Objects'], ['Colonne', 'Livello, Entità, Istanze, Totale, MB'], ['Annullamento', 'Stato del modello ripristinato']]
+    specs: [['Finestra', '820 × 570 px, ridimensionabile'], ['Menu', 'Robo Tool › robo impact objects'], ['Colonne', 'Livello, Entità, Istanze, Totale, MB'], ['Annullamento', 'Stato del modello ripristinato']]
   },
 
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
-    id: 'library_explorer', name: 'robo Library Explorer', version: '1.2', category: 'Organizzazione', hue: 190,
+    id: 'library_explorer', name: 'robo library explorer', version: '1.2', category: 'Organizzazione', hue: 190,
     donationPrompt: true,
     video: '27grL1GDQQM',
     images: ['assets/img/screenshots/library_explorer-1.png', 'assets/img/screenshots/library_explorer-2.png', 'assets/img/screenshots/library_explorer-3.png', 'assets/img/screenshots/library_explorer-4.png', 'assets/img/screenshots/library_explorer-5.png', 'assets/img/screenshots/library_explorer-6.png', 'assets/img/screenshots/library_explorer-7.png'],
     tagline: 'Sfoglia le tue librerie con anteprime vere e inserisci con un clic.',
     simple: 'Indica le cartelle dove tieni componenti e materiali: Robo li mostra con le anteprime, ordinati per cartella, con tag e preferiti. Un clic e l\'oggetto entra nel modello.',
     intro: [
-      'robo Library Explorer è un pannello per sfogliare le tue librerie di componenti e materiali con le anteprime vere, come in una galleria. Indichi le cartelle dove tieni i file e li ritrovi tutti in un unico posto.',
+      'robo library explorer è un pannello per sfogliare le tue librerie di componenti e materiali con le anteprime vere, come in una galleria. Indichi le cartelle dove tieni i file e li ritrovi tutti in un unico posto.',
       'Serve quando hai centinaia di file .skp e .skm e non vuoi aprirli uno a uno per capire cosa contengono. Cerchi per nome o per tag, trovi l\'oggetto che ti serve e lo inserisci nel modello con un clic.'
     ],
     main: [
@@ -299,33 +299,33 @@ var PLUGINS = [
     ],
     steps: ['Premi "Cartella" e scegli la cartella della tua libreria.', 'Sfoglia le anteprime, filtra per tag o cerca per nome.', 'Clicca un componente per inserirlo, un materiale per applicarlo alla selezione.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Chi lavora da anni ha centinaia di componenti e materiali sparsi in molte cartelle. Trovarne uno significa aprire i file uno a uno o ricordarsi il nome esatto. robo Library Explorer li raccoglie in un solo pannello, con le anteprime vere, e li inserisce nel modello con un clic.' },
+      { t: 'Il problema che risolve', d: 'Chi lavora da anni ha centinaia di componenti e materiali sparsi in molte cartelle. Trovarne uno significa aprire i file uno a uno o ricordarsi il nome esatto. robo library explorer li raccoglie in un solo pannello, con le anteprime vere, e li inserisce nel modello con un clic.' },
       { t: 'Passo 1 · Aggiungi le tue cartelle', d: 'Premi "Cartella" e scegli la cartella della tua libreria. Ogni cartella aggiunta diventa un elenco a sé, con le sue sottocartelle. Puoi anche rinominare il nome mostrato (tasto destro › Edit Name) senza toccare la cartella sul disco: i tuoi file non vengono mai modificati.' },
       { t: 'Anteprime reali', d: 'Per i file .skp l\'anteprima è l\'immagine che SketchUp ha salvato dentro il file; per i materiali .skm viene ricavata caricandoli un istante nel modello. Le anteprime mancanti vengono create in background. Per molti file l\'immagine viene letta direttamente dall\'inizio del .skp, senza aprirlo, e la scansione esplora ogni cartella una sola volta: l\'aggiornamento è rapido.' },
       { t: 'Passo 2 · Sfoglia, filtra, cerca', d: 'Scegli la vista a dettagli oppure a icone piccole, medie o grandi. Cerca per nome, etichetta gli oggetti con i tag e segna i preferiti con il cuore per ritrovarli subito.' },
       { t: 'Passo 3 · Inserisci con un clic', d: 'Clicca un componente e viene inserito nel modello; clicca un materiale e viene applicato alla selezione. Se un componente è stato salvato con una versione di SketchUp più recente della tua, viene inserito come con File › Importa (SketchUp ti avvisa) invece di fallire. I file vuoti non vengono elencati.' },
-      { t: 'Proxy, 3D Warehouse e cloud', d: 'Per gli oggetti creati con robo Proxy Manager mostra anche il proxy. Un pulsante apre il 3D Warehouse per scaricare modelli nella libreria. Il backup nel cloud salva l\'elenco in una cartella OneDrive o Google Drive: la password non passa mai dal plugin.' },
+      { t: 'Proxy, 3D Warehouse e cloud', d: 'Per gli oggetti creati con robo proxy manager mostra anche il proxy. Un pulsante apre il 3D Warehouse per scaricare modelli nella libreria. Il backup nel cloud salva l\'elenco in una cartella OneDrive o Google Drive: la password non passa mai dal plugin.' },
       { t: 'Sicurezza', d: 'Il plugin elimina file solo dentro le cartelle di libreria, e solo dopo la tua conferma.' },
-      { t: 'Un esempio concreto', d: 'Stai arredando un bagno e ricordi di avere un lavabo "bianco, tondo" da qualche parte tra 400 file. Apri robo Library Explorer, scrivi "lavabo" nella ricerca e vedi tre anteprime. Clicchi quella giusta e il componente entra nel modello. Lo segni con il cuore: la prossima volta lo trovi tra i preferiti.' }
+      { t: 'Un esempio concreto', d: 'Stai arredando un bagno e ricordi di avere un lavabo "bianco, tondo" da qualche parte tra 400 file. Apri robo library explorer, scrivi "lavabo" nella ricerca e vedi tre anteprime. Clicchi quella giusta e il componente entra nel modello. Lo segni con il cuore: la prossima volta lo trovi tra i preferiti.' }
     ],
     pros: ['Anteprime vere, non solo nomi di file', 'Inserimento con un clic', 'Tag, preferiti e ricerca', 'I file sul disco non vengono toccati'],
     solves: [
       { p: 'Trovare un componente tra centinaia di file obbliga ad aprirli uno a uno.', s: 'Le anteprime e i filtri lo mostrano subito.' },
       { p: 'Le librerie sparse in molte cartelle sono difficili da tenere in ordine.', s: 'Un unico pannello le raccoglie, ciascuna con il suo elenco.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Library Explorer'], ['Barra strumenti', '1 pulsante'], ['File', '.skp (componenti) e .skm (materiali)'], ['Sicurezza', 'Elimina solo file dentro le cartelle di libreria, dopo conferma']]
+    specs: [['Menu', 'Robo Tool › robo library explorer'], ['Barra strumenti', '1 pulsante'], ['File', '.skp (componenti) e .skm (materiali)'], ['Sicurezza', 'Elimina solo file dentro le cartelle di libreria, dopo conferma']]
   },
 
   /* ------------------------------------------------------------- PLACEMENT */
   {
-    id: 'placement', name: 'robo Placement', version: '0.9', category: 'Distribuzione', hue: 130,
+    id: 'placement', name: 'robo placement', version: '0.9', category: 'Distribuzione', hue: 130,
     donationPrompt: true,
     video: 'BuxBGvKxEGM',
     images: ['assets/img/screenshots/placement-1.png', 'assets/img/screenshots/placement-2.png', 'assets/img/screenshots/placement-3.png', 'assets/img/screenshots/placement-4.png'],
     tagline: 'Distribuisci oggetti a caso su qualsiasi superficie.',
     simple: 'Scegli un oggetto (un albero, un sasso, un mobile) e una superficie: Robo ne dispone tante copie sparse in modo naturale, con scala e rotazione leggermente diverse per ogni copia.',
     intro: [
-      'robo Placement distribuisce molte copie di un oggetto su una superficie, in modo casuale e naturale. Scegli l\'oggetto e la superficie, regoli quantità e variazioni, e le copie vengono sparse da sole.',
+      'robo placement distribuisce molte copie di un oggetto su una superficie, in modo casuale e naturale. Scegli l\'oggetto e la superficie, regoli quantità e variazioni, e le copie vengono sparse da sole.',
       'Serve per riempire in fretta un terreno di alberi, cespugli o sassi, o per disporre elementi che non devono sembrare messi in fila. Ogni copia ha scala e rotazione leggermente diverse, così il risultato è credibile.'
     ],
     main: [
@@ -336,7 +336,7 @@ var PLUGINS = [
     ],
     steps: ['Seleziona il componente o gruppo da distribuire.', 'Indica la faccia bersaglio e regola quantità, scala e rotazione.', 'Guarda l\'anteprima dal vivo e premi Applica.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Piazzare a mano decine di alberi, sassi o cespugli su un terreno è lungo, e il risultato viene quasi sempre troppo regolare. Le copie che si compenetrano rovinano il render. robo Placement distribuisce fino a 1000 copie in una sola operazione, con variazioni casuali e senza sovrapposizioni.' },
+      { t: 'Il problema che risolve', d: 'Piazzare a mano decine di alberi, sassi o cespugli su un terreno è lungo, e il risultato viene quasi sempre troppo regolare. Le copie che si compenetrano rovinano il render. robo placement distribuisce fino a 1000 copie in una sola operazione, con variazioni casuali e senza sovrapposizioni.' },
       { t: 'Passo 1 · Scegli oggetto e superficie', d: 'Seleziona il componente o il gruppo da distribuire, poi indica la faccia bersaglio. Funziona su facce piane, inclinate e su mesh organiche: sceglie i punti sull\'intera superficie collegata, in proporzione alla sua area.' },
       { t: 'Passo 2 · Regola le variazioni', d: 'Imposti la quantità, da 1 a 1000, la scala minima e massima, la rotazione casuale sui tre assi e l\'allineamento alla normale della superficie. C\'è anche un "seme" (seed): con lo stesso seme ottieni sempre lo stesso risultato, cambiandolo ottieni una disposizione nuova.' },
       { t: 'Distanza minima e ostacoli', d: 'Un controllo anti-collisione sulle scatole di ingombro evita che le copie si sovrappongano; puoi anche indicare ostacoli da evitare, come un sentiero o una costruzione.' },
@@ -348,19 +348,19 @@ var PLUGINS = [
       { p: 'Piazzare a mano decine di alberi o sassi è lungo e viene sempre troppo regolare.', s: 'Una sola operazione distribuisce fino a 1000 copie con variazioni casuali.' },
       { p: 'Le copie che si compenetrano rovinano il render.', s: 'La distanza minima le tiene separate.' }
     ],
-    specs: [['Finestra', '400 × 567 px, espandibile'], ['Menu', 'Robo Tool › robo Placement'], ['Quantità', '1 – 1000 copie'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Finestra', '400 × 567 px, espandibile'], ['Menu', 'Robo Tool › robo placement'], ['Quantità', '1 – 1000 copie'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* ----------------------------------------------------------------- PROXY */
   {
-    id: 'proxy_manager', name: 'robo Proxy Manager', version: '0.6', category: 'Ottimizzazione', hue: 220,
+    id: 'proxy_manager', name: 'robo proxy manager', version: '0.6', category: 'Ottimizzazione', hue: 220,
     donationPrompt: true,
     video: 'ThxhD9J6eC0',
     images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
     tagline: 'Sostituisci gli oggetti pesanti con proxy leggeri.',
     simple: 'Alberi, arredi e persone dettagliati rendono il modello lentissimo. Con Robo li sostituisci con "segnaposto" leggeri e li ritrovi identici quando ti servono, con un clic destro.',
     intro: [
-      'robo Proxy Manager sostituisce gli oggetti molto pesanti, come alberi, persone e arredi dettagliati, con segnaposto leggeri chiamati proxy. L\'originale viene salvato in un file e resta sempre recuperabile.',
+      'robo proxy manager sostituisce gli oggetti molto pesanti, come alberi, persone e arredi dettagliati, con segnaposto leggeri chiamati proxy. L\'originale viene salvato in un file e resta sempre recuperabile.',
       'Serve per lavorare con fluidità nelle scene grandi: orbiti, fai zoom e disegni senza scatti. Quando ti serve il dettaglio, per esempio per il rendering, ripristini gli originali con un clic.'
     ],
     main: [
@@ -371,7 +371,7 @@ var PLUGINS = [
     ],
     steps: ['Seleziona gli oggetti pesanti e scegli il tipo di proxy.', 'Robo salva l\'originale in un file esterno e mette al suo posto il proxy.', 'Gestisci o ripristina gli originali dal Proxy Manager o col clic destro.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Alberi, persone e arredi dettagliati possono avere centinaia di migliaia di facce ciascuno. In una scena con molti oggetti così, orbitare o fare zoom diventa impossibile. Cancellarli per alleggerire fa perdere il lavoro. robo Proxy Manager li sostituisce con segnaposto leggeri e conserva gli originali, che puoi riavere in qualsiasi momento.' },
+      { t: 'Il problema che risolve', d: 'Alberi, persone e arredi dettagliati possono avere centinaia di migliaia di facce ciascuno. In una scena con molti oggetti così, orbitare o fare zoom diventa impossibile. Cancellarli per alleggerire fa perdere il lavoro. robo proxy manager li sostituisce con segnaposto leggeri e conserva gli originali, che puoi riavere in qualsiasi momento.' },
       { t: 'Passo 1 · Seleziona e scegli il tipo', d: 'Seleziona gli oggetti pesanti e scegli il tipo di proxy. Il proxy a scatola (Bounding Box) è il più leggero: una semplice scatola delle stesse dimensioni. Il proxy Low Resolution mantiene una versione semplificata della forma reale, così riconosci ancora l\'oggetto.' },
       { t: 'Passo 2 · L\'originale viene messo al sicuro', d: 'Il plugin salva la geometria originale come file .skp nella cartella Robo_ProxyAssets, insieme alle informazioni per ritrovarla, e mette al suo posto il proxy. Il modello si alleggerisce senza perdere nulla.' },
       { t: 'Passo 3 · Ripristina quando serve', d: 'Con "Restore Proxy", dal pannello o dal clic destro sull\'oggetto, torni all\'originale. Nelle impostazioni scegli, tra l\'altro, se cancellare il file esterno dopo il ripristino.' },
@@ -383,19 +383,19 @@ var PLUGINS = [
       { p: 'Scene con vegetazione e arredi dettagliati sono impossibili da orbitare.', s: 'I proxy leggeri rendono la vista fluida; gli originali tornano per il render.' },
       { p: 'Cancellare gli oggetti per alleggerire fa perdere il lavoro.', s: 'L\'originale è salvato su disco e ripristinabile in ogni momento.' }
     ],
-    specs: [['Finestre', 'Manager, Impostazioni, Low Resolution, Guida'], ['Menu', 'Robo Tool › robo Proxy Manager (6 voci)'], ['Barra strumenti', '6 pulsanti'], ['Cartella asset', 'Robo_ProxyAssets']]
+    specs: [['Finestre', 'Manager, Impostazioni, Low Resolution, Guida'], ['Menu', 'Robo Tool › robo proxy manager (6 voci)'], ['Barra strumenti', '6 pulsanti'], ['Cartella asset', 'Robo_ProxyAssets']]
   },
 
   /* ----------------------------------------------------------------- SCALE */
   {
-    id: 'scale_definition', name: 'robo Scale Definition', version: '0.7', category: 'Organizzazione', hue: 24,
+    id: 'scale_definition', name: 'robo scale definition', version: '0.7', category: 'Organizzazione', hue: 24,
     donationPrompt: true,
     video: 'GI1vYGhCF_E',
     images: ['assets/img/screenshots/scale_definition-1.png', 'assets/img/screenshots/scale_definition-2.png', 'assets/img/screenshots/scale_definition-3.png'],
     tagline: 'Fissa la scala nella geometria e riporta tutto a 1.0.',
     simple: 'Se hai ingrandito o rimpicciolito un componente, SketchUp ricorda quel "fattore di scala" a parte. Robo lo incorpora nella geometria e riporta la scala a 1.0: dimensioni e materiali diventano corretti per il rendering.',
     intro: [
-      'Quando ingrandisci o rimpicciolisci un gruppo o un componente, SketchUp non cambia la sua geometria: ricorda a parte un fattore di scala. robo Scale Definition incorpora quel fattore nella geometria e riporta la scala a 1.0.',
+      'Quando ingrandisci o rimpicciolisci un gruppo o un componente, SketchUp non cambia la sua geometria: ricorda a parte un fattore di scala. robo scale definition incorpora quel fattore nella geometria e riporta la scala a 1.0.',
       'Serve per avere oggetti con dimensioni vere e materiali corretti, in particolare prima del rendering o dell\'esportazione. Le texture non risultano più stirate o fuori misura, e il lavoro si fa su tutta la selezione in una volta.'
     ],
     main: [
@@ -405,11 +405,11 @@ var PLUGINS = [
       { t: 'Le altre copie non cambiano', d: 'Ogni oggetto viene reso unico prima della modifica, così le copie con la stessa definizione restano intatte.' },
       { t: 'Riepilogo finale', d: 'Alla fine vedi cosa è stato fatto e cosa è stato saltato, con il motivo.' }
     ],
-    steps: ['Seleziona uno o più gruppi o componenti.', 'Apri robo Scale Definition e scegli la modalità.', 'Clicca Applica: leggi il riepilogo dell\'operazione.'],
+    steps: ['Seleziona uno o più gruppi o componenti.', 'Apri robo scale definition e scegli la modalità.', 'Clicca Applica: leggi il riepilogo dell\'operazione.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Quando ingrandisci o rimpicciolisci un gruppo o un componente, SketchUp non modifica la sua geometria: ricorda a parte un fattore di scala. Le dimensioni sembrano giuste, ma texture, misure e alcuni rendering risultano sbagliati. Il "Reset scala" nativo è limitato e non gestisce le texture. robo Scale Definition incorpora la scala nella geometria e la riporta a 1.0.' },
+      { t: 'Il problema che risolve', d: 'Quando ingrandisci o rimpicciolisci un gruppo o un componente, SketchUp non modifica la sua geometria: ricorda a parte un fattore di scala. Le dimensioni sembrano giuste, ma texture, misure e alcuni rendering risultano sbagliati. Il "Reset scala" nativo è limitato e non gestisce le texture. robo scale definition incorpora la scala nella geometria e la riporta a 1.0.' },
       { t: 'Passo 1 · Seleziona', d: 'Seleziona uno o più gruppi o componenti, anche tanti insieme e anche annidati. Gli elementi nidificati sono elaborati dal più interno al più esterno, così ogni livello viene sistemato una sola volta.' },
-      { t: 'Passo 2 · Scegli la modalità', d: 'Apri robo Scale Definition e scegli tra tre modalità. "Solo scala" cambia la geometria e basta. "Scala + Tri-Planar World" riproietta le texture in coordinate globali. "Scala + Tri-Planar Fit" le riproietta in coordinate locali, così la texture segue l\'oggetto.' },
+      { t: 'Passo 2 · Scegli la modalità', d: 'Apri robo scale definition e scegli tra tre modalità. "Solo scala" cambia la geometria e basta. "Scala + Tri-Planar World" riproietta le texture in coordinate globali. "Scala + Tri-Planar Fit" le riproietta in coordinate locali, così la texture segue l\'oggetto.' },
       { t: 'Cosa succede alla geometria', d: 'La scala visiva di ogni istanza, anche non uniforme, viene applicata ai punti della definizione e la trasformazione torna a 1.0. Prima di farlo le istanze vengono rese uniche, così le altre copie della stessa definizione non vengono toccate.' },
       { t: 'Passo 3 · Applica e leggi il riepilogo', d: 'Premi Applica: il lavoro avviene in blocco su tutta la selezione e un solo Ctrl+Z annulla tutto. Alla fine leggi un riepilogo di ciò che è stato fatto.' },
       { t: 'Casi speciali', d: 'Componenti dinamici, oggetti bloccati e riferimenti specchiati o deformati non vengono modificati: sono elencati a fine operazione con il motivo, così sai cosa è stato saltato e perché.' },
@@ -420,7 +420,7 @@ var PLUGINS = [
       { p: 'Componenti scalati possono dare texture e dimensioni sbagliate nel render.', s: 'Con scala 1.0 e geometria corretta il risultato è prevedibile.' },
       { p: 'Il "Reset scala" nativo è limitato e non gestisce le texture.', s: 'Robo lavora in blocco e riproietta le texture se lo chiedi.' }
     ],
-    specs: [['Finestra', '340 × 490 px (guida 360 × 620)'], ['Menu', 'Robo Tool › Robo Scale Definition'], ['Tolleranza', '0.0001'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Finestra', '340 × 490 px (guida 360 × 620)'], ['Menu', 'Robo Tool › robo scale definition'], ['Tolleranza', '0.0001'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* --------------------------------------------------------------- SECTION */
@@ -461,14 +461,14 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- SPACING */
   {
-    id: 'spacing_tool', name: 'robo Spacing Tool', version: '1.2', category: 'Distribuzione', hue: 268,
+    id: 'spacing_tool', name: 'robo spacing tool', version: '1.2', category: 'Distribuzione', hue: 268,
     donationPrompt: true,
     video: 'mMk6vg4fEns',
     images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
     tagline: 'Copie perfettamente spaziate lungo una linea o una curva.',
     simple: 'Scegli un oggetto e un percorso (una linea, un arco, una curva anche chiusa): Robo mette le copie a distanza regolare lungo il percorso, come lampioni lungo una strada o sedie attorno a un tavolo.',
     intro: [
-      'robo Spacing Tool crea copie di un oggetto lungo una linea, un arco o una curva, a distanza regolare. Scegli l\'oggetto e il percorso e le copie si dispongono da sole, senza misurare né copiare a mano.',
+      'robo spacing tool crea copie di un oggetto lungo una linea, un arco o una curva, a distanza regolare. Scegli l\'oggetto e il percorso e le copie si dispongono da sole, senza misurare né copiare a mano.',
       'Serve per tutto ciò che si ripete con ordine: lampioni lungo una strada, pali di una recinzione, alberi di un viale, sedie attorno a un tavolo. Se cambi idea sul numero o sulla distanza, aggiorni il valore e rivedi subito il risultato.'
     ],
     main: [
@@ -479,7 +479,7 @@ var PLUGINS = [
     ],
     steps: ['Seleziona l\'oggetto e il percorso (le linee).', 'Scegli "Numero" di copie oppure "Distanza" fissa.', 'Regola rotazione e scala, guarda l\'anteprima e conferma.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Copiare e posizionare a mano oggetti lungo una curva dà distanze irregolari, e se cambi idea sul numero di copie devi rifare tutto. robo Spacing Tool calcola i punti lungo il percorso con precisione, e se modifichi un valore l\'anteprima si aggiorna subito.' },
+      { t: 'Il problema che risolve', d: 'Copiare e posizionare a mano oggetti lungo una curva dà distanze irregolari, e se cambi idea sul numero di copie devi rifare tutto. robo spacing tool calcola i punti lungo il percorso con precisione, e se modifichi un valore l\'anteprima si aggiorna subito.' },
       { t: 'Passo 1 · Scegli oggetto e percorso', d: 'Seleziona l\'oggetto da copiare e il percorso, cioè le linee. Il percorso può essere un segmento, un arco, una curva, anche chiusa ad anello. Con "Linea intera" la selezione si estende a tutta la catena di segmenti collegati.' },
       { t: 'Passo 2 · Numero o distanza', d: 'Con "Numero" ottieni N copie equidistanti lungo il percorso. Con "Distanza" ottieni un passo fisso, per esempio 100 cm tra una copia e l\'altra. Puoi impostare anche uno scarto iniziale e finale.' },
       { t: 'Rotazione e scala', d: 'Rotazione e scala possono essere casuali oppure progressive, cioè crescono o diminuiscono con gradualità lungo il percorso. Puoi scegliere l\'asse di inserimento e mantenere la verticale rispetto al mondo.' },
@@ -491,17 +491,17 @@ var PLUGINS = [
       { p: 'Copiare e posizionare a mano oggetti lungo una curva dà distanze irregolari.', s: 'Robo calcola i punti lungo il percorso con precisione.' },
       { p: 'Cambiare il numero di copie significa rifare tutto.', s: 'Modifichi il valore e l\'anteprima si aggiorna.' }
     ],
-    specs: [['Finestra', '500 × 640 px, non modale'], ['Menu', 'Robo Tool › robo Spacing Tool'], ['Modalità', 'Numero / Distanza'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Finestra', '500 × 640 px, non modale'], ['Menu', 'Robo Tool › robo spacing tool'], ['Modalità', 'Numero / Distanza'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* ---------------------------------------------------------------- STANDARD */
   {
-    id: 'standard', name: 'robo Standard', version: '1.1', category: 'Produttività', hue: 100,
+    id: 'standard', name: 'robo standard', version: '1.1', category: 'Produttività', hue: 100,
     donationPrompt: true,
     tagline: 'I comandi di tutti i giorni in una barra con icone Robo.',
     simple: 'Nuovo, Apri, Salva, Taglia, Copia, Incolla, Annulla… i comandi più usati di SketchUp riuniti in una sola barra, con icone chiare e nello stile Robo.',
     intro: [
-      'robo Standard è una barra degli strumenti con i comandi che usi più spesso: Nuovo, Apri, Salva, Taglia, Copia, Incolla, Annulla e Ripristina. Hanno icone chiare, nello stesso stile degli altri plugin Robo.',
+      'robo standard è una barra degli strumenti con i comandi che usi più spesso: Nuovo, Apri, Salva, Taglia, Copia, Incolla, Annulla e Ripristina. Hanno icone chiare, nello stesso stile degli altri plugin Robo.',
       'Serve a non cercare i comandi di base tra i menu. Include anche due funzioni utili, Incolla sul posto ed Elimina, ciascuna in un solo pulsante.'
     ],
     main: [
@@ -510,10 +510,10 @@ var PLUGINS = [
       { t: 'Elimina la selezione', d: 'Cancella gli oggetti selezionati con un pulsante.' },
       { t: 'Anche nel menu', d: 'Gli stessi comandi sono in Estensioni › Robo Tool, con la loro icona.' }
     ],
-    steps: ['Attiva la barra "robo Standard" da Vista › Barre degli strumenti.', 'Usa i pulsanti al posto dei menu.', 'Gli stessi comandi sono anche in Estensioni › Robo Tool › robo Standard.'],
+    steps: ['Attiva la barra "robo standard" da Vista › Barre degli strumenti.', 'Usa i pulsanti al posto dei menu.', 'Gli stessi comandi sono anche in Estensioni › Robo Tool › robo standard.'],
     how: [
-      { t: 'Il problema che risolve', d: 'I comandi più usati di SketchUp, come Nuovo, Apri, Salva o Incolla, sono sparsi tra menu e barre diverse, e alcune azioni utili, come incollare nella posizione originale, richiedono di cercare la voce giusta ogni volta. robo Standard li riunisce in una sola barra, con icone chiare e nello stile Robo.' },
-      { t: 'Passo 1 · Attiva la barra', d: 'Dal menu Vista › Barre degli strumenti attiva "robo Standard". Gli stessi comandi sono anche in Estensioni › Robo Tool › robo Standard, ciascuno con la sua icona.' },
+      { t: 'Il problema che risolve', d: 'I comandi più usati di SketchUp, come Nuovo, Apri, Salva o Incolla, sono sparsi tra menu e barre diverse, e alcune azioni utili, come incollare nella posizione originale, richiedono di cercare la voce giusta ogni volta. robo standard li riunisce in una sola barra, con icone chiare e nello stile Robo.' },
+      { t: 'Passo 1 · Attiva la barra', d: 'Dal menu Vista › Barre degli strumenti attiva "robo standard". Gli stessi comandi sono anche in Estensioni › Robo Tool › robo standard, ciascuno con la sua icona.' },
       { t: 'Passo 2 · Usa i pulsanti', d: 'I pulsanti sono divisi in quattro gruppi, File, Appunti, Modifica e altri, e nella barra di stato compare la scorciatoia abituale di ogni comando. Nuovo, Apri, Taglia, Copia e Incolla richiamano le azioni di SketchUp; Salva e Salva con nome usano le finestre standard.' },
       { t: 'Incolla sul posto', d: 'Incolla gli oggetti esattamente nella loro posizione originale, sia su Windows sia su macOS, in un\'unica operazione annullabile. È utile per spostare oggetti da un file all\'altro senza perdere le coordinate.' },
       { t: 'Elimina la selezione', d: 'Cancella gli oggetti selezionati in un solo passo, annullabile con un Ctrl+Z.' },
@@ -524,7 +524,7 @@ var PLUGINS = [
       { p: 'I comandi base sono sparsi tra menu e barre diverse.', s: 'Una sola barra con tutto quello che serve.' },
       { p: 'Incollare nella posizione originale richiede di cercare il comando nei menu.', s: 'Un pulsante dedicato.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Standard (11 voci)'], ['Barra strumenti', '11 pulsanti in 4 gruppi'], ['Comandi', 'Nuovo, Apri, Salva, Salva con nome, Taglia, Copia, Incolla, Incolla sul posto, Elimina, Annulla, Ripristina'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
+    specs: [['Menu', 'Robo Tool › robo standard (11 voci)'], ['Barra strumenti', '11 pulsanti in 4 gruppi'], ['Comandi', 'Nuovo, Apri, Salva, Salva con nome, Taglia, Copia, Incolla, Incolla sul posto, Elimina, Annulla, Ripristina'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
     images: ['assets/img/screenshots/standard-1.png']
   },
 
@@ -565,14 +565,14 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TANGENT */
   {
-    id: 'tangent', name: 'robo Tangent', version: '1.2', category: 'Modellazione', hue: 160,
+    id: 'tangent', name: 'robo tangent', version: '1.2', category: 'Modellazione', hue: 160,
     donationPrompt: true,
     video: 'RsSOjk3k7NE',
     images: ['assets/img/screenshots/tangent-8.png'],
     tagline: 'La tangente esatta tra archi, cerchi e segmenti.',
     simple: 'Clicca due cerchi (o un cerchio e una linea) e lo strumento disegna la linea che li tocca esattamente in un punto ciascuno. Vedi le possibilità in anteprima e scegli quella che ti serve muovendo il mouse.',
     intro: [
-      'robo Tangent disegna la linea tangente tra due cerchi o archi, oppure tra un cerchio e una linea. La tangente è la linea che sfiora la curva in un solo punto, senza attraversarla.',
+      'robo tangent disegna la linea tangente tra due cerchi o archi, oppure tra un cerchio e una linea. La tangente è la linea che sfiora la curva in un solo punto, senza attraversarla.',
       'Serve nel disegno di profili, ingranaggi, pulegge, cinghie, tracciati stradali e in ogni forma dove una linea deve raccordarsi a una curva con precisione. Con i soli strumenti di SketchUp non è possibile trovare quel punto esatto.'
     ],
     main: [
@@ -581,34 +581,34 @@ var PLUGINS = [
       { t: 'Protezione dagli errori', d: 'Se i due elementi non sono sullo stesso piano, lo strumento lo segnala invece di disegnare una linea sbagliata.' },
       { t: 'Precisione a scelta', d: 'Puoi usare il punto esatto oppure agganciare il vertice reale della curva, utile quando il cerchio è fatto di segmenti.' }
     ],
-    steps: ['Attiva robo Tangent: passa sopra gli elementi, si illuminano di giallo.', 'Clicca il primo (rosso) e il secondo elemento (blu).', 'Muovi il mouse per scegliere la tangente verde e clicca per disegnarla.'],
+    steps: ['Attiva robo tangent: passa sopra gli elementi, si illuminano di giallo.', 'Clicca il primo (rosso) e il secondo elemento (blu).', 'Muovi il mouse per scegliere la tangente verde e clicca per disegnarla.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Una tangente è la linea che sfiora una curva in un solo punto, senza attraversarla. Con le sole inferenze di SketchUp è impossibile trovarla esattamente tra due cerchi. Inoltre le curve di SketchUp sono poligoni: una tangente "esatta" può non toccare mai la curva. robo Tangent calcola il punto di tangenza per te.' },
-      { t: 'Passo 1 · Scegli i due elementi', d: 'Attiva robo Tangent e passa sopra gli elementi: si illuminano di giallo. Clicca il primo (diventa rosso) e il secondo (diventa blu). Possono essere due cerchi, due archi, oppure un cerchio e un segmento.' },
+      { t: 'Il problema che risolve', d: 'Una tangente è la linea che sfiora una curva in un solo punto, senza attraversarla. Con le sole inferenze di SketchUp è impossibile trovarla esattamente tra due cerchi. Inoltre le curve di SketchUp sono poligoni: una tangente "esatta" può non toccare mai la curva. robo tangent calcola il punto di tangenza per te.' },
+      { t: 'Passo 1 · Scegli i due elementi', d: 'Attiva robo tangent e passa sopra gli elementi: si illuminano di giallo. Clicca il primo (diventa rosso) e il secondo (diventa blu). Possono essere due cerchi, due archi, oppure un cerchio e un segmento.' },
       { t: 'Calcolo con la geometria', d: 'Le tangenti sono calcolate analiticamente, non "a occhio". Per due cerchi esistono fino a quattro soluzioni: due esterne e due interne. Per un cerchio e un segmento se ne trovano due per ogni estremo.' },
       { t: 'Passo 2 · Scegli la tangente in anteprima', d: 'Le soluzioni possibili compaiono in anteprima: quella più vicina al cursore è verde, le altre restano grigie e tratteggiate. Muovendo il mouse scegli quella che ti serve.' },
       { t: 'Passo 3 · Clicca per disegnare', d: 'Un clic disegna la linea e lo strumento riparte da capo, pronto per la coppia successiva. ESC annulla la scelta in corso; Ctrl+Z toglie l\'ultima linea disegnata.' },
       { t: 'Protezione dai casi impossibili', d: 'Se i due elementi non stanno sullo stesso piano, la coppia viene rifiutata invece di produrre una linea sbagliata.' },
       { t: 'Precisione a scelta', d: 'Da Impostazioni scegli tra "Esatta", il punto matematico, e "Arrotondata", in cui la linea tocca il vertice reale della curva poligonale: utile con cerchi fatti di segmenti, perché la linea tocca davvero la curva.' },
-      { t: 'Un esempio concreto', d: 'Devi disegnare la cinghia che collega due pulegge di diametro diverso. Attivi robo Tangent, clicchi la prima puleggia e poi la seconda: compaiono le quattro tangenti possibili. Muovi il mouse verso quella esterna superiore, che diventa verde, e clicchi. Ripeti per la tangente inferiore: la cinghia è completa e le linee toccano davvero i cerchi.' }
+      { t: 'Un esempio concreto', d: 'Devi disegnare la cinghia che collega due pulegge di diametro diverso. Attivi robo tangent, clicchi la prima puleggia e poi la seconda: compaiono le quattro tangenti possibili. Muovi il mouse verso quella esterna superiore, che diventa verde, e clicchi. Ripeti per la tangente inferiore: la cinghia è completa e le linee toccano davvero i cerchi.' }
     ],
     pros: ['Tangenti esatte, senza tentativi', 'Vedi tutte le soluzioni prima di scegliere', 'Rifiuta i casi non validi', 'Modalità che agganciano davvero la curva'],
     solves: [
       { p: 'Disegnare a mano una tangente comune non è possibile con le sole inferenze di SketchUp.', s: 'Il punto di tangenza viene calcolato per te.' },
       { p: 'Le curve di SketchUp sono poligoni: una tangente "esatta" può non toccare mai la curva.', s: 'La modalità Arrotondata aggancia il vertice più vicino, così la linea tocca davvero.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo Tangent (+ Impostazioni)'], ['Soluzioni', '2 – 4 candidate'], ['Precisione', 'Esatta / Arrotondata'], ['Annullamento', 'ESC annulla, Ctrl+Z toglie l\'ultima linea']]
+    specs: [['Menu', 'Robo Tool › robo tangent (+ Impostazioni)'], ['Soluzioni', '2 – 4 candidate'], ['Precisione', 'Esatta / Arrotondata'], ['Annullamento', 'ESC annulla, Ctrl+Z toglie l\'ultima linea']]
   },
 
   /* --------------------------------------------------------------- UPLEVEL */
   {
-    id: 'uplevel', name: 'robo Uplevel', version: '1.0', category: 'Produttività', hue: 45,
+    id: 'uplevel', name: 'robo uplevel', version: '1.0', category: 'Produttività', hue: 45,
     donationPrompt: true,
     video: 'whuBMKHEvjE',
     tagline: 'Porta gli oggetti fuori dal gruppo, senza spostarli.',
     simple: 'Sei dentro un gruppo o un componente e vuoi tirare fuori alcuni oggetti al livello superiore, restando esattamente dove sono. Un clic e li sposta nella gerarchia senza cambiarne la posizione.',
     intro: [
-      'robo Uplevel porta degli oggetti fuori dal gruppo o dal componente in cui si trovano, di un livello verso l\'alto, senza spostarli nello spazio. Rimangono esattamente dove sono: cambia solo la loro posizione nella gerarchia.',
+      'robo uplevel porta degli oggetti fuori dal gruppo o dal componente in cui si trovano, di un livello verso l\'alto, senza spostarli nello spazio. Rimangono esattamente dove sono: cambia solo la loro posizione nella gerarchia.',
       'Serve quando, lavorando dentro un gruppo, ti accorgi che alcuni elementi devono stare fuori. Il metodo normale, taglia e incolla sul posto, richiede più passaggi e può sbagliare livello nei gruppi annidati.'
     ],
     main: [
@@ -617,15 +617,15 @@ var PLUGINS = [
       { t: 'Funziona anche nei gruppi annidati', d: 'Sai sempre dove finiscono gli oggetti: un livello alla volta.' },
       { t: 'Un solo Ctrl+Z', d: 'Se qualcosa non va, annulli tutto in un passo.' }
     ],
-    steps: ['Entra nel gruppo o componente e seleziona gli oggetti.', 'Premi il pulsante robo Uplevel.', 'Gli oggetti passano al livello superiore, nella stessa posizione.'],
+    steps: ['Entra nel gruppo o componente e seleziona gli oggetti.', 'Premi il pulsante robo uplevel.', 'Gli oggetti passano al livello superiore, nella stessa posizione.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Quando sei dentro un gruppo e ti accorgi che alcuni elementi devono stare fuori, il metodo normale è taglia, esci e "incolla sul posto". Sono più passaggi, e con più livelli annidati è facile sbagliare livello o spostare gli oggetti. robo Uplevel li porta al livello superiore con un clic, restando esattamente dove sono.' },
+      { t: 'Il problema che risolve', d: 'Quando sei dentro un gruppo e ti accorgi che alcuni elementi devono stare fuori, il metodo normale è taglia, esci e "incolla sul posto". Sono più passaggi, e con più livelli annidati è facile sbagliare livello o spostare gli oggetti. robo uplevel li porta al livello superiore con un clic, restando esattamente dove sono.' },
       { t: 'Passo 1 · Entra e seleziona', d: 'Entra nel gruppo o nel componente per la modifica e seleziona gli oggetti da portare fuori. Se non sei dentro un gruppo, o non hai selezionato nulla, un messaggio te lo spiega.' },
-      { t: 'Passo 2 · Premi il pulsante', d: 'Premi robo Uplevel (anche disponibile in robo start). Il comando parte dal gruppo o componente aperto e porta gli oggetti nel contenitore che lo contiene o, se è il livello più alto, nel modello.' },
+      { t: 'Passo 2 · Premi il pulsante', d: 'Premi robo uplevel (anche disponibile in robo start). Il comando parte dal gruppo o componente aperto e porta gli oggetti nel contenitore che lo contiene o, se è il livello più alto, nel modello.' },
       { t: 'Come mantiene la posizione', d: 'Gli oggetti passano per un contenitore temporaneo che compone la trasformazione del livello interno con quella del livello esterno. Il contenitore viene poi esploso: nessuna geometria si sposta, né in posizione, né in rotazione, né in scala.' },
       { t: 'Un livello alla volta', d: 'Gli oggetti salgono sempre esattamente di un livello. Con più livelli annidati sai così dove finiscono, e puoi ripetere il comando per salire ancora.' },
       { t: 'Un solo annullamento', d: 'L\'intera operazione è racchiusa in un unico passo: un Ctrl+Z la annulla e, in caso di errore, tutto torna come prima.' },
-      { t: 'Un esempio concreto', d: 'Stai lavorando dentro il gruppo "Cucina" e noti che il lavello, modellato lì dentro, in realtà va tenuto come oggetto a sé nel gruppo "Casa". Lo selezioni, premi robo Uplevel: il lavello esce di un livello, restando nella stessa identica posizione. Prima servivano taglia, esci e incolla sul posto, con il rischio di sbagliare.' }
+      { t: 'Un esempio concreto', d: 'Stai lavorando dentro il gruppo "Cucina" e noti che il lavello, modellato lì dentro, in realtà va tenuto come oggetto a sé nel gruppo "Casa". Lo selezioni, premi robo uplevel: il lavello esce di un livello, restando nella stessa identica posizione. Prima servivano taglia, esci e incolla sul posto, con il rischio di sbagliare.' }
     ],
     pros: ['Sposta di livello senza spostare nello spazio', 'Un clic al posto di taglia e "incolla sul posto"', 'Annullabile con un solo Ctrl+Z', 'Disponibile anche in robo start'],
     solves: [
@@ -696,21 +696,21 @@ var TOOLBARS = {
       { i: 'shape_icosphere.svg', l: 'Icosphere', d: 'Sfera a triangoli, con suddivisioni 0–4.' },
       { i: 'shape_torus.svg', l: 'Toro', d: 'Anello con raggio del cerchio e del tubo.' }
     ] },
-  fillet: { name: 'robo Fillet', groups: [[{ i: 'fillet.png', l: 'robo Fillet: raccorda due linee' }]] },
-  tangent: { name: 'robo Tangent', groups: [[{ i: 'tangent.png', l: 'robo Tangent: disegna la tangente' }]] },
-  group_to_component: { name: 'Robo Group to Component', groups: [[{ i: 'g2c.png', l: 'Converti i gruppi in componenti' }]] },
-  impact_object: { name: 'Robo Impact Object', groups: [[{ i: 'impact.png', l: 'Apri il report del peso geometrico' }]] },
-  placement: { name: 'robo Placement', groups: [[{ i: 'placement.png', l: 'robo Placement: distribuisci su superficie' }]] },
-  spacing_tool: { name: 'robo Spacing Tool', groups: [[{ i: 'spacing.png', l: 'robo Spacing Tool: copie lungo un percorso' }]] },
-  proxy_manager: { name: 'robo Proxy Manager', groups: [[{ i: 'bbox.png', l: 'Crea proxy (scatola)' }, { i: 'lowres.png', l: 'Crea proxy (bassa risoluzione)' }, { i: 'restore.png', l: 'Ripristina proxy' }, { i: 'manager.png', l: 'Proxy Manager' }, { i: 'settings.png', l: 'Impostazioni' }, { i: 'help.png', l: 'Guida' }]] },
-  scale_definition: { name: 'robo Scale Definition', groups: [[{ i: 'scale.png', l: 'Applica la scala alla geometria' }]] },
+  fillet: { name: 'robo fillet', groups: [[{ i: 'fillet.png', l: 'robo fillet: raccorda due linee' }]] },
+  tangent: { name: 'robo tangent', groups: [[{ i: 'tangent.png', l: 'robo tangent: disegna la tangente' }]] },
+  group_to_component: { name: 'robo group to component', groups: [[{ i: 'g2c.png', l: 'Converti i gruppi in componenti' }]] },
+  impact_object: { name: 'robo impact object', groups: [[{ i: 'impact.png', l: 'Apri il report del peso geometrico' }]] },
+  placement: { name: 'robo placement', groups: [[{ i: 'placement.png', l: 'robo placement: distribuisci su superficie' }]] },
+  spacing_tool: { name: 'robo spacing tool', groups: [[{ i: 'spacing.png', l: 'robo spacing tool: copie lungo un percorso' }]] },
+  proxy_manager: { name: 'robo proxy manager', groups: [[{ i: 'bbox.png', l: 'Crea proxy (scatola)' }, { i: 'lowres.png', l: 'Crea proxy (bassa risoluzione)' }, { i: 'restore.png', l: 'Ripristina proxy' }, { i: 'manager.png', l: 'Proxy Manager' }, { i: 'settings.png', l: 'Impostazioni' }, { i: 'help.png', l: 'Guida' }]] },
+  scale_definition: { name: 'robo scale definition', groups: [[{ i: 'scale.png', l: 'Applica la scala alla geometria' }]] },
   section: { name: 'robo section', groups: [[{ i: 'main.png', l: 'Pannello dei piani di sezione' }, { i: 'isolate.png', l: 'Sposta / isola in un gruppo sezionabile' }]] },
-  uplevel: { name: 'Robo Uplevel', groups: [[{ i: 'uplevel.png', l: 'Estrai al livello superiore' }]] },
+  uplevel: { name: 'robo uplevel', groups: [[{ i: 'uplevel.png', l: 'Estrai al livello superiore' }]] },
   start: { name: 'robo start', note: 'Dalle Impostazioni di robo start puoi abilitare o disabilitare i singoli pulsanti che vuoi vedere nella barra.', groups: [[{ i: 'enter.png', l: 'Robo Enter' }, { i: 'rsel.png', l: 'Robo Select All' }], [{ i: 'grp.png', l: 'Crea gruppo' }, { i: 'cmp.png', l: 'Crea componente' }, { i: 'uniq.png', l: 'Rendi unico' }], [{ i: 'expl.png', l: 'Esplodi' }, { i: 'explc.png', l: 'Esplodi curve' }], [{ i: 'sall.png', l: 'Seleziona tutto' }, { i: 'inv.png', l: 'Inverti selezione' }, { i: 'clr.png', l: 'Deseleziona' }, { i: 'close.png', l: 'Chiudi gruppo' }, { i: 'up.png', l: 'Estrai al livello superiore' }, { i: 'weld.png', l: 'Salda spigoli' }, { i: 'face.png', l: 'Crea faccia' }], [{ i: 'hide.png', l: 'Nascondi oggetto' }, { i: 'unh1.png', l: "Mostra l'ultimo nascosto" }, { i: 'unhall.png', l: 'Mostra tutto' }], [{ i: 'guides.png', l: 'Rimuovi guide' }, { i: 'dims.png', l: 'Rimuovi quote' }], [{ i: 'zoom.png', l: 'Zoom sulla selezione' }, { i: 'center.png', l: 'Trova il centro' }], [{ i: 'cpt.png', l: 'Aggiungi punto centrale' }], [{ i: 'fix.png', l: 'Fix 101' }], [{ i: 'help.png', l: 'Guida' }]] },
-  extract: { name: 'robo Extract', groups: [[{ i: 'copy.png', l: 'robo Extract: copia facce e linee fuori dal gruppo' }]] },
+  extract: { name: 'robo extract', groups: [[{ i: 'copy.png', l: 'robo extract: copia facce e linee fuori dal gruppo' }]] },
   toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.svg', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
-  demolition: { name: 'robo Demolition', groups: [[{ i: 'demolition.png', l: 'robo Demolition: riduce i triangoli della selezione' }]] },
-  export_object: { name: 'robo Export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
-  library_explorer: { name: 'robo Library Explorer', groups: [[{ i: 'explorer.png', l: "Apri robo Library Explorer" }]] },
-  standard: { name: 'robo Standard', groups: [[{ i: 'nuovo.png', l: "Nuovo" }, { i: 'apri.png', l: "Apri" }, { i: 'salva.png', l: "Salva" }, { i: 'salvanome.png', l: "Salva con nome" }], [{ i: 'taglia.png', l: "Taglia" }, { i: 'copia.png', l: "Copia" }, { i: 'incolla.png', l: "Incolla" }, { i: 'incollaposto.png', l: "Incolla sul posto" }], [{ i: 'elimina.png', l: "Elimina" }], [{ i: 'annulla.png', l: "Annulla" }, { i: 'ripristina.png', l: "Ripristina" }]] }
+  demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
+  export_object: { name: 'robo export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
+  library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },
+  standard: { name: 'robo standard', groups: [[{ i: 'nuovo.png', l: "Nuovo" }, { i: 'apri.png', l: "Apri" }, { i: 'salva.png', l: "Salva" }, { i: 'salvanome.png', l: "Salva con nome" }], [{ i: 'taglia.png', l: "Taglia" }, { i: 'copia.png', l: "Copia" }, { i: 'incolla.png', l: "Incolla" }, { i: 'incollaposto.png', l: "Incolla sul posto" }], [{ i: 'elimina.png', l: "Elimina" }], [{ i: 'annulla.png', l: "Annulla" }, { i: 'ripristina.png', l: "Ripristina" }]] }
 };
