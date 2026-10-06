@@ -640,7 +640,6 @@ var PLUGINS = [
   {
     id: 'toolbar', name: 'robo toolbar', version: '1.0', category: 'Produttività', hue: 270,
     noDownload: true,
-    icon: 'assets/img/icons/toolbar.svg',
     video: 'hBBJ5wyCEUQ',
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Costruisci le tue barre degli strumenti, trascinando i comandi.',
@@ -712,7 +711,7 @@ var TOOLBARS = {
   uplevel: { name: 'robo uplevel', groups: [[{ i: 'uplevel.png', l: 'Estrai al livello superiore' }]] },
   start: { name: 'robo start', note: 'Dalle Impostazioni di robo start puoi abilitare o disabilitare i singoli pulsanti che vuoi vedere nella barra.', groups: [[{ i: 'enter.png', l: 'Robo Enter' }, { i: 'rsel.png', l: 'Robo Select All' }], [{ i: 'grp.png', l: 'Crea gruppo' }, { i: 'cmp.png', l: 'Crea componente' }, { i: 'uniq.png', l: 'Rendi unico' }], [{ i: 'expl.png', l: 'Esplodi' }, { i: 'explc.png', l: 'Esplodi curve' }], [{ i: 'sall.png', l: 'Seleziona tutto' }, { i: 'inv.png', l: 'Inverti selezione' }, { i: 'clr.png', l: 'Deseleziona' }, { i: 'close.png', l: 'Chiudi gruppo' }, { i: 'up.png', l: 'Estrai al livello superiore' }, { i: 'weld.png', l: 'Salda spigoli' }, { i: 'face.png', l: 'Crea faccia' }], [{ i: 'hide.png', l: 'Nascondi oggetto' }, { i: 'unh1.png', l: "Mostra l'ultimo nascosto" }, { i: 'unhall.png', l: 'Mostra tutto' }], [{ i: 'guides.png', l: 'Rimuovi guide' }, { i: 'dims.png', l: 'Rimuovi quote' }], [{ i: 'zoom.png', l: 'Zoom sulla selezione' }, { i: 'center.png', l: 'Trova il centro' }], [{ i: 'cpt.png', l: 'Aggiungi punto centrale' }], [{ i: 'fix.png', l: 'Fix 101' }], [{ i: 'help.png', l: 'Guida' }]] },
   extract: { name: 'robo extract', groups: [[{ i: 'copy.png', l: 'robo extract: copia facce e linee fuori dal gruppo' }]] },
-  toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.svg', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
+  toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.png', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },
