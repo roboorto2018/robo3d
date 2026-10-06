@@ -639,8 +639,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- TOOLBAR */
   {
     id: 'toolbar', name: 'robo toolbar', version: '1.0', category: 'Produttività', hue: 270,
-    noDownload: true,
-    video: 'hBBJ5wyCEUQ',
+    videos: ['hBBJ5wyCEUQ', 'T_43GUUfdlo'],
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Costruisci le tue barre degli strumenti, trascinando i comandi.',
     simple: 'Scegli i comandi che usi di più — gli strumenti di SketchUp, i pulsanti dei plugin Robo e le voci del menu Estensioni — e trascinali in una barra tutta tua. Dai un nome alla barra, salvala e la ritrovi in SketchUp, sempre pronta.',

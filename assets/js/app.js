@@ -10,10 +10,12 @@
     for (var i = 0; i < PLUGINS.length; i++) { if (PLUGINS[i].id === id) { return i; } }
     return -1;
   }
-  /* p.video (id YouTube) diventa la prima voce della galleria, come "yt:<id>" */
+  /* p.video (id YouTube) o p.videos (elenco di id) diventano le prime voci della galleria, come "yt:<id>" */
   function imgs(p) {
     var list = p.images || ['assets/img/placeholder/' + p.id + '-1.svg', 'assets/img/placeholder/' + p.id + '-2.svg'];
-    return p.video ? ['yt:' + p.video].concat(list) : list;
+    var ids = p.videos || (p.video ? [p.video] : []), vids = [], i;
+    for (i = 0; i < ids.length; i++) { vids.push('yt:' + ids[i]); }
+    return vids.concat(list);
   }
   /* galleria 16:9: tutte le immagini (e l'eventuale video) nello stesso riquadro, frecce per scorrere */
   var ARR_L = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>';
