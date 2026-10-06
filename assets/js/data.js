@@ -655,6 +655,8 @@ var PLUGINS = [
       { t: 'Anche le voci senza icona', d: 'I comandi che non hanno un’icona compaiono con un’icona generica grigia. Puoi sostituirla con la tua: due immagini PNG da 16 e 24 pixel, oppure un solo file SVG.' },
       { t: 'Linee di separazione', d: 'Con “Inserisci separatore” aggiungi una linea verticale tra i pulsanti, per raggrupparli come nelle barre di SketchUp.' },
       { t: 'Barre salvate, modificabili', d: 'Nell’elenco “Le mie barre” puoi modificare, mostrare o eliminare ogni barra. Se hai modifiche non salvate, il plugin te lo ricorda prima di passare a un’altra barra.' },
+      { t: 'Backup e ripristino', d: 'Con “Esporta backup” salvi tutte le barre (e le icone personalizzate) in un file; con “Importa backup” le ripristini, anche su un altro SketchUp.' },
+      { t: 'Avviso sui comandi spariti', d: 'Se il plugin di un pulsante viene eliminato, il pulsante diventa rosso con un crocino bianco e un messaggio ti spiega cosa è successo; lo togli quando vuoi.' },
       { t: 'In cinque lingue', d: 'Finestra, messaggi e guida sono in italiano, inglese, tedesco, francese e spagnolo.' }
     ],
     steps: ['Apri robo toolbar dal menu Estensioni › Robo Tool.', 'Trascina i comandi nell’anteprima della barra e riordinali.', 'Scrivi il nome della barra e premi Salva barra: compare subito in SketchUp.'],
@@ -665,14 +667,16 @@ var PLUGINS = [
       { t: 'Passo 3 · Salva', d: 'Scrivi il nome della barra e premi Salva barra. Una barra nuova compare subito in SketchUp. Le modifiche a una barra già esistente (icone tolte, aggiunte o riordinate) si vedono al prossimo avvio di SketchUp, perché SketchUp non può togliere pulsanti da una barra già aperta.' },
       { t: 'Icone generiche: come cambiarle', d: 'I comandi senza icona hanno un’icona generica grigia con un crocino rosso. Passandoci sopra nell’anteprima compare un contorno rosso con una matita: cliccala. Scegli prima un’immagine da 16 × 16 pixel, poi una da 24 × 24 (PNG, JPG o BMP), oppure un solo file SVG, nel qual caso la seconda non serve. Se l’immagine non ha la misura giusta, un messaggio ti dice quanto è grande e quanto serve, e puoi riprovare. L’icona resta legata a quel comando in tutte le barre.' },
       { t: 'Le mie barre e le modifiche non salvate', d: 'In basso trovi le barre salvate, con i pulsanti Modifica, Mostra ed Elimina (per eliminare si clicca due volte). Se premi Modifica su un’altra barra mentre hai modifiche non salvate, una finestra ti chiede se vuoi salvarle: Sì le salva e apre l’altra barra, No le scarta, Annulla ti lascia dove sei.' },
+      { t: 'Backup delle barre', d: 'In alto trovi Esporta backup e Importa backup. Esporta salva in un unico file .json tutte le barre e le icone personalizzate che hai scelto: serve come copia di sicurezza o per portare le barre su un altro computer. Importa legge il file e ricrea le barre: quelle nuove compaiono subito; se ne esiste già una con lo stesso nome, una finestra chiede se sostituirla (Sì), tenere l’attuale (No) o interrompere (Annulla). I pulsanti ritrovano i comandi per nome, quindi sull’altro computer servono gli stessi plugin.' },
+      { t: 'L’icona grigia e l’icona rossa', d: 'L’icona grigia con il crocino rosso indica un comando senza icona propria, che puoi sostituire con la tua. L’icona rossa con il crocino bianco indica un comando non più disponibile, perché il suo plugin è stato eliminato o non è installato: il controllo avviene a ogni avvio di SketchUp e ogni volta che apri la finestra. Nella barra di SketchUp il pulsante rosso mostra un messaggio; nella finestra lo togli con la x rossa.' },
       { t: 'Un esempio concreto', d: 'Lavori spesso con linea, rettangolo, sposta, ruota, scala e hai due plugin Robo che usi di continuo. Apri robo toolbar, li trascini in una barra chiamata “Modellazione”, metti un separatore tra gli strumenti di SketchUp e quelli dei plugin e salvi. Da quel momento hai tutto sotto mano in una sola barra, nell’ordine che hai deciso.' }
     ],
-    pros: ['Barre su misura, quante ne vuoi', 'Strumenti SketchUp e plugin Robo nello stesso elenco', 'Icone personalizzabili (PNG o SVG)', 'Avviso se hai modifiche non salvate'],
+    pros: ['Barre su misura, quante ne vuoi', 'Strumenti SketchUp e plugin Robo nello stesso elenco', 'Icone personalizzabili (PNG o SVG)', 'Avviso se hai modifiche non salvate', 'Backup e ripristino anche su un altro SketchUp'],
     solves: [
       { p: 'I comandi che usi più spesso sono sparsi in tante barre e menu.', s: 'Li raccogli in una sola barra, nell’ordine che preferisci.' },
       { p: 'Alcuni comandi dei plugin non hanno un’icona da mettere in una barra.', s: 'Ricevono un’icona generica che puoi sostituire con la tua.' }
     ],
-    specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Backup', 'File .json con barre e icone personalizzate'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   }
 ];
 
