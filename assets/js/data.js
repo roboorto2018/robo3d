@@ -638,7 +638,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TOOLBAR */
   {
-    id: 'toolbar', name: 'robo toolbar', version: '1.0', category: 'Produttività', hue: 270,
+    id: 'toolbar', name: 'robo toolbar', version: '1.1', category: 'Produttività', hue: 270,
     videos: ['hBBJ5wyCEUQ', 'T_43GUUfdlo'],
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Costruisci le tue barre degli strumenti, trascinando i comandi.',
