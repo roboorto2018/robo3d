@@ -721,17 +721,17 @@ var PLUGINS = [
     video: 'viy_7E77m4g',
     images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.png', 'assets/img/screenshots/fillet_3d-4.png', 'assets/img/screenshots/fillet_3d-5.png', 'assets/img/screenshots/fillet_3d-6.png', 'assets/img/screenshots/fillet_3d-7.png', 'assets/img/screenshots/fillet_3d-8.png', 'assets/img/screenshots/fillet_3d-9.png', 'assets/img/screenshots/fillet_3d-10.png', 'assets/img/screenshots/fillet_3d-11.png', 'assets/img/screenshots/fillet_3d-12.png', 'assets/img/screenshots/fillet_3d-13.png'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
-    simple: 'Seleziona un gruppo o un componente e scegli Arrotondamento o Smusso 45°: i bordi vivi diventano curve morbide fatte di quadrilateri, pronti per SubD e QuadFace Tools. Puoi scegliere anche solo certi bordi o facce col mouse, anche dentro oggetti nidificati.',
+    simple: 'Seleziona un gruppo o un componente e scegli Arrotondamento o Smusso 45°: i bordi vivi diventano curve morbide fatte di quadrilateri. Puoi scegliere anche solo certi bordi o facce col mouse, anche dentro oggetti nidificati.',
     intro: [
-      'robo fillet 3D arrotonda o smussa i bordi e gli angoli di gruppi e componenti, sul modello di RoundCorner di Fredo6. Il risultato è fatto di quadrilateri con le diagonali nascoste, quindi si può suddividere con SubD o QuadFace Tools senza ripulire nulla.',
-      'Serve quando un solido spigoloso deve diventare morbido: mobili, pezzi meccanici, oggetti da modellare in SubD. Scegli lo scostamento (che è il raggio) e vedi l’anteprima sul modello prima di applicare.'
+      'robo fillet 3D arrotonda o smussa i bordi e gli angoli di gruppi e componenti, sul modello di RoundCorner di Fredo6. Il risultato è fatto di quadrilateri regolari con le diagonali nascoste.',
+      'Serve quando un solido spigoloso deve diventare morbido: mobili, pezzi meccanici, oggetti da modellare. Scegli lo scostamento (che è il raggio) e vedi l’anteprima sul modello prima di applicare.'
     ],
     main: [
       { t: 'Tre modalità', d: 'Arrotondamento con da 2 a 30 segmenti, Smusso a 45° con una sola striscia piana, oppure Solo linee, che traccia sul modello le linee parallele ai bordi senza cambiare la geometria.' },
       { t: 'Lo scostamento è il raggio', d: 'Il plugin non lo modifica mai. Se l’oggetto non può contenerlo, non fa nulla: disegna in rosso le parti che lo impediscono e un messaggio lampeggiante indica lo scostamento massimo. Con il lucchetto si può superare il limite.' },
       { t: 'Anteprima verde e anteprima della curva', d: 'Le linee guida verdi mostrano dove inizia l’arrotondamento e seguono ogni modifica. L’anteprima della curva aggiunge una fascia azzurra con quattro righe blu, sempre leggibile.' },
       { t: 'Bordi scelti col mouse', d: 'Passa su una linea o su una faccia e fai clic: anche da fuori, a qualsiasi livello di gruppi e componenti nidificati. Con Maiusc aggiungi o togli. Se il gruppo ne contiene altri, scegli col mouse quello da arrotondare.' },
-      { t: 'Quadrilateri pronti per SubD', d: 'Ogni quadrilatero non piano è costruito con la diagonale nascosta, ammorbidita e smussata, come in QuadFace Tools. Facce con fori e angoli concavi sono gestiti, e le giunzioni tra due bordi sono a mitra pulita.' },
+      { t: 'Quadrilateri regolari', d: 'Ogni quadrilatero non piano è costruito con la diagonale nascosta, ammorbidita e smussata. Facce con fori e angoli concavi sono gestiti, e le giunzioni tra due bordi sono a mitra pulita.' },
       { t: 'Finestra chiara, in cinque lingue', d: 'Campi con le unità e i decimali di SketchUp, frecce su e giù, icone per ogni opzione, aiuto integrato e messaggi nella lingua di SketchUp. Dopo Applica la finestra si chiude e un solo Ctrl+Z annulla tutto.' }
     ],
     steps: ['Seleziona uno o più gruppi o componenti e apri robo fillet 3D.', 'Scegli Arrotondamento, Smusso 45° o Solo linee, scrivi lo scostamento e guarda l’anteprima verde.', 'Premi Applica: nasce il nuovo gruppo arrotondato, e un solo Ctrl+Z annulla tutto.'],
@@ -745,7 +745,7 @@ var PLUGINS = [
       { t: 'Solo linee', d: 'Traccia sul modello vere linee parallele ai bordi scelti, alla distanza dello scostamento, in stile Contorno oppure Reticolo. Utile come guida per tagli, rilievi o suddivisioni.' },
       { t: 'Il risultato', d: 'La copia arrotondata è un nuovo gruppo accanto all’oggetto, che resta nascosto (o viene cancellato, se vuoi). Puoi attivare la griglia regolare sulle facce piane, con la dimensione della cella che scegli.' }
     ],
-    pros: ['Arrotondamento e smusso con quadrilateri', 'Pronto per SubD e QuadFace Tools', 'Bordi e facce scelti col mouse, anche nidificati', 'Lo scostamento è il raggio, mai modificato', 'Anteprima in tempo reale, un solo Ctrl+Z'],
+    pros: ['Arrotondamento e smusso con quadrilateri', 'Quadrilateri regolari con diagonali nascoste', 'Bordi e facce scelti col mouse, anche nidificati', 'Lo scostamento è il raggio, mai modificato', 'Anteprima in tempo reale, un solo Ctrl+Z'],
     solves: [
       { p: 'Arrotondare i bordi a mano è lungo e dà triangoli disordinati.', s: 'Un solo passaggio, con quadrilateri regolari e le diagonali nascoste.' },
       { p: 'Con gruppi dentro altri gruppi è difficile arrotondare solo una parte.', s: 'Scegli col mouse il gruppo, la linea o la faccia, a qualsiasi livello.' }

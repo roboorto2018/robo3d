@@ -2931,17 +2931,17 @@ I18N_TOOLBARS.es.quick_align = { 'x_min.png': 'Alinear a la izquierda (eje rojo 
 
 I18N_PLUGINS.en.fillet_3d = {
   tagline: 'Rounds or chamfers the edges of groups and components, with quads ready for subdivision.',
-  simple: 'Select a group or component and choose Rounding or Chamfer 45°: the sharp edges become soft curves made of quads, ready for SubD and QuadFace Tools. You can also pick just some edges or faces with the mouse, even inside nested objects.',
+  simple: 'Select a group or component and choose Rounding or Chamfer 45°: the sharp edges become soft curves made of quads. You can also pick just some edges or faces with the mouse, even inside nested objects.',
   intro: [
-    'robo fillet 3D rounds or chamfers the edges and corners of groups and components, in the way of Fredo6’s RoundCorner. The result is made of quads with the diagonals hidden, so it can be subdivided with SubD or QuadFace Tools without cleaning anything.',
-    'It is useful when an angular solid has to become soft: furniture, mechanical parts, objects to model in SubD. You choose the offset (which is the radius) and see the preview on the model before applying.'
+    'robo fillet 3D rounds or chamfers the edges and corners of groups and components, in the way of Fredo6’s RoundCorner. The result is made of regular quads with the diagonals hidden.',
+    'It is useful when an angular solid has to become soft: furniture, mechanical parts, objects to model. You choose the offset (which is the radius) and see the preview on the model before applying.'
   ],
   main: [
     { t: 'Three modes', d: 'Rounding with 2 to 30 segments, Chamfer 45° with a single flat strip, or Lines only, which draws on the model the lines parallel to the edges without changing the geometry.' },
     { t: 'The offset is the radius', d: 'The plugin never changes it. If the object cannot hold it, nothing is done: the parts that stop it are drawn in red and a flashing message gives the biggest offset. The padlock lets you go past the limit.' },
     { t: 'Green preview and curve preview', d: 'The green guide lines show where the rounding starts and follow every change. The curve preview adds a light blue band with four blue lines, always readable.' },
     { t: 'Edges picked with the mouse', d: 'Point at a line or a face and click: also from outside, at any level of nested groups and components. Shift adds or removes. If the group contains others, choose with the mouse the one to round.' },
-    { t: 'Quads ready for SubD', d: 'Every non-flat quad is built with its diagonal hidden, soft and smooth, as in QuadFace Tools. Faces with holes and concave corners are handled, and the joins between two edges are clean mitres.' },
+    { t: 'Regular quads', d: 'Every non-flat quad is built with its diagonal hidden, soft and smooth. Faces with holes and concave corners are handled, and the joins between two edges are clean mitres.' },
     { t: 'A clear window, in five languages', d: 'Fields with SketchUp’s units and decimals, up and down arrows, an icon for every option, built-in help and messages in SketchUp’s language. After Apply the window closes and a single Ctrl+Z undoes everything.' }
   ],
   steps: ['Select one or more groups or components and open robo fillet 3D.', 'Choose Rounding, Chamfer 45° or Lines only, type the offset and watch the green preview.', 'Press Apply: the new rounded group is made, and a single Ctrl+Z undoes everything.'],
@@ -2955,7 +2955,7 @@ I18N_PLUGINS.en.fillet_3d = {
     { t: 'Lines only', d: 'Draws on the model real lines parallel to the chosen edges, at the offset distance, in Contour or Grid style. Useful as a guide for cuts, reliefs or subdivisions.' },
     { t: 'The result', d: 'The rounded copy is a new group next to the object, which stays hidden (or is erased, if you want). You can turn on the regular grid on the flat faces, with the cell size you choose.' }
   ],
-  pros: ['Rounding and chamfer with quads', 'Ready for SubD and QuadFace Tools', 'Edges and faces picked with the mouse, even nested', 'The offset is the radius, never changed', 'Real-time preview, a single Ctrl+Z'],
+  pros: ['Rounding and chamfer with quads', 'Regular quads with hidden diagonals', 'Edges and faces picked with the mouse, even nested', 'The offset is the radius, never changed', 'Real-time preview, a single Ctrl+Z'],
   solves: [
     { p: 'Rounding edges by hand is slow and gives untidy triangles.', s: 'A single step, with regular quads and hidden diagonals.' },
     { p: 'With groups inside other groups it is hard to round just one part.', s: 'You choose the group, the line or the face with the mouse, at any level.' }
@@ -2966,17 +2966,17 @@ I18N_TOOLBARS.en.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: round or chamfe
 
 I18N_PLUGINS.de.fillet_3d = {
   tagline: 'Rundet oder fast die Kanten von Gruppen und Komponenten, mit Vierecken, bereit zur Unterteilung.',
-  simple: 'Wählen Sie eine Gruppe oder Komponente und wählen Sie Rundung oder Fase 45°: die scharfen Kanten werden zu weichen Kurven aus Vierecken, bereit für SubD und QuadFace Tools. Sie können auch nur einzelne Kanten oder Flächen mit der Maus wählen, selbst in verschachtelten Objekten.',
+  simple: 'Wählen Sie eine Gruppe oder Komponente und wählen Sie Rundung oder Fase 45°: die scharfen Kanten werden zu weichen Kurven aus Vierecken. Sie können auch nur einzelne Kanten oder Flächen mit der Maus wählen, selbst in verschachtelten Objekten.',
   intro: [
-    'robo fillet 3D rundet oder fast die Kanten und Ecken von Gruppen und Komponenten, nach dem Vorbild von Fredo6s RoundCorner. Das Ergebnis besteht aus Vierecken mit versteckten Diagonalen und lässt sich mit SubD oder QuadFace Tools unterteilen, ohne etwas aufzuräumen.',
-    'Es hilft, wenn ein kantiger Körper weich werden soll: Möbel, mechanische Teile, Objekte für die SubD-Modellierung. Sie wählen den Abstand (er ist der Radius) und sehen die Vorschau am Modell, bevor Sie anwenden.'
+    'robo fillet 3D rundet oder fast die Kanten und Ecken von Gruppen und Komponenten, nach dem Vorbild von Fredo6s RoundCorner. Das Ergebnis besteht aus regelmäßigen Vierecken mit versteckten Diagonalen.',
+    'Es hilft, wenn ein kantiger Körper weich werden soll: Möbel, mechanische Teile, Objekte zum Modellieren. Sie wählen den Abstand (er ist der Radius) und sehen die Vorschau am Modell, bevor Sie anwenden.'
   ],
   main: [
     { t: 'Drei Modi', d: 'Rundung mit 2 bis 30 Segmenten, Fase 45° mit einem einzigen flachen Streifen oder Nur Linien, das Linien parallel zu den Kanten ins Modell zeichnet, ohne die Geometrie zu ändern.' },
     { t: 'Der Abstand ist der Radius', d: 'Das Plugin ändert ihn nie. Kann das Objekt ihn nicht aufnehmen, geschieht nichts: die Stellen, die ihn verhindern, werden rot gezeichnet und eine blinkende Meldung nennt den größten Abstand. Mit dem Schloss lässt sich die Grenze überschreiten.' },
     { t: 'Grüne Vorschau und Kurvenvorschau', d: 'Die grünen Hilfslinien zeigen, wo die Rundung beginnt, und folgen jeder Änderung. Die Kurvenvorschau fügt ein hellblaues Band mit vier blauen Linien hinzu, immer lesbar.' },
     { t: 'Kanten mit der Maus gewählt', d: 'Zeigen Sie auf eine Linie oder Fläche und klicken Sie: auch von außen, auf jeder Ebene verschachtelter Gruppen und Komponenten. Mit Umschalt fügen Sie hinzu oder entfernen. Enthält die Gruppe weitere, wählen Sie mit der Maus die zu rundende.' },
-    { t: 'Vierecke, bereit für SubD', d: 'Jedes nicht ebene Viereck wird mit versteckter, weicher und geglätteter Diagonale gebaut, wie in QuadFace Tools. Flächen mit Löchern und konkave Ecken werden berücksichtigt, und die Verbindungen zweier Kanten sind saubere Gehrungen.' },
+    { t: 'Regelmäßige Vierecke', d: 'Jedes nicht ebene Viereck wird mit versteckter, weicher und geglätteter Diagonale gebaut. Flächen mit Löchern und konkave Ecken werden berücksichtigt, und die Verbindungen zweier Kanten sind saubere Gehrungen.' },
     { t: 'Klares Fenster, in fünf Sprachen', d: 'Felder mit den Einheiten und Dezimalstellen von SketchUp, Pfeile auf und ab, ein Symbol für jede Option, integrierte Hilfe und Meldungen in der Sprache von SketchUp. Nach Anwenden schließt sich das Fenster, ein einziges Strg+Z macht alles rückgängig.' }
   ],
   steps: ['Wählen Sie eine oder mehrere Gruppen oder Komponenten und öffnen Sie robo fillet 3D.', 'Wählen Sie Rundung, Fase 45° oder Nur Linien, geben Sie den Abstand ein und sehen Sie die grüne Vorschau.', 'Klicken Sie auf Anwenden: die neue gerundete Gruppe entsteht, ein einziges Strg+Z macht alles rückgängig.'],
@@ -2990,7 +2990,7 @@ I18N_PLUGINS.de.fillet_3d = {
     { t: 'Nur Linien', d: 'Zeichnet echte Linien parallel zu den gewählten Kanten im Abstand ins Modell, im Stil Kontur oder Raster. Nützlich als Hilfe für Schnitte, Reliefs oder Unterteilungen.' },
     { t: 'Das Ergebnis', d: 'Die gerundete Kopie ist eine neue Gruppe neben dem Objekt, das ausgeblendet bleibt (oder gelöscht wird, wenn Sie möchten). Auf ebenen Flächen können Sie das regelmäßige Raster mit der gewählten Zellgröße einschalten.' }
   ],
-  pros: ['Rundung und Fase mit Vierecken', 'Bereit für SubD und QuadFace Tools', 'Kanten und Flächen mit der Maus gewählt, auch verschachtelt', 'Der Abstand ist der Radius, nie verändert', 'Echtzeit-Vorschau, ein einziges Strg+Z'],
+  pros: ['Rundung und Fase mit Vierecken', 'Regelmäßige Vierecke mit versteckten Diagonalen', 'Kanten und Flächen mit der Maus gewählt, auch verschachtelt', 'Der Abstand ist der Radius, nie verändert', 'Echtzeit-Vorschau, ein einziges Strg+Z'],
   solves: [
     { p: 'Kanten von Hand zu runden ist langsam und ergibt unordentliche Dreiecke.', s: 'Ein einziger Schritt, mit regelmäßigen Vierecken und versteckten Diagonalen.' },
     { p: 'Bei Gruppen in anderen Gruppen ist es schwer, nur einen Teil zu runden.', s: 'Sie wählen Gruppe, Linie oder Fläche mit der Maus, auf jeder Ebene.' }
@@ -3001,17 +3001,17 @@ I18N_TOOLBARS.de.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: Kanten runden o
 
 I18N_PLUGINS.fr.fillet_3d = {
   tagline: 'Arrondit ou chanfreine les arêtes des groupes et composants, avec des quadrilatères prêts pour la subdivision.',
-  simple: 'Sélectionnez un groupe ou un composant et choisissez Arrondi ou Chanfrein 45° : les arêtes vives deviennent des courbes douces faites de quadrilatères, prêtes pour SubD et QuadFace Tools. Vous pouvez aussi choisir à la souris seulement certaines arêtes ou faces, même dans des objets imbriqués.',
+  simple: 'Sélectionnez un groupe ou un composant et choisissez Arrondi ou Chanfrein 45° : les arêtes vives deviennent des courbes douces faites de quadrilatères. Vous pouvez aussi choisir à la souris seulement certaines arêtes ou faces, même dans des objets imbriqués.',
   intro: [
-    'robo fillet 3D arrondit ou chanfreine les arêtes et les coins des groupes et composants, à la manière de RoundCorner de Fredo6. Le résultat est fait de quadrilatères aux diagonales masquées : on peut le subdiviser avec SubD ou QuadFace Tools sans rien nettoyer.',
-    'C’est utile quand un solide anguleux doit devenir doux : meubles, pièces mécaniques, objets à modéliser en SubD. Vous choisissez le décalage (qui est le rayon) et voyez l’aperçu sur le modèle avant d’appliquer.'
+    'robo fillet 3D arrondit ou chanfreine les arêtes et les coins des groupes et composants, à la manière de RoundCorner de Fredo6. Le résultat est fait de quadrilatères réguliers aux diagonales masquées.',
+    'C’est utile quand un solide anguleux doit devenir doux : meubles, pièces mécaniques, objets à modéliser. Vous choisissez le décalage (qui est le rayon) et voyez l’aperçu sur le modèle avant d’appliquer.'
   ],
   main: [
     { t: 'Trois modes', d: 'Arrondi de 2 à 30 segments, Chanfrein 45° avec une seule bande plane, ou Lignes seules, qui trace sur le modèle les lignes parallèles aux arêtes sans changer la géométrie.' },
     { t: 'Le décalage est le rayon', d: 'Le plugin ne le modifie jamais. Si l’objet ne peut pas le contenir, rien n’est fait : les parties qui l’empêchent sont dessinées en rouge et un message clignotant donne le décalage maximal. Le cadenas permet de dépasser la limite.' },
     { t: 'Aperçu vert et aperçu de la courbe', d: 'Les lignes guides vertes montrent où commence l’arrondi et suivent chaque changement. L’aperçu de la courbe ajoute une bande bleu clair avec quatre lignes bleues, toujours lisible.' },
     { t: 'Arêtes choisies à la souris', d: 'Pointez une ligne ou une face et cliquez : même de l’extérieur, à tout niveau de groupes et composants imbriqués. Maj ajoute ou retire. Si le groupe en contient d’autres, choisissez à la souris celui à arrondir.' },
-    { t: 'Quadrilatères prêts pour SubD', d: 'Chaque quadrilatère non plan est construit avec sa diagonale masquée, adoucie et lissée, comme dans QuadFace Tools. Les faces avec trous et les coins concaves sont gérés, et les jonctions entre deux arêtes sont de onglets propres.' },
+    { t: 'Quadrilatères réguliers', d: 'Chaque quadrilatère non plan est construit avec sa diagonale masquée, adoucie et lissée. Les faces avec trous et les coins concaves sont gérés, et les jonctions entre deux arêtes sont de onglets propres.' },
     { t: 'Une fenêtre claire, en cinq langues', d: 'Champs avec les unités et décimales de SketchUp, flèches haut et bas, une icône pour chaque option, aide intégrée et messages dans la langue de SketchUp. Après Appliquer la fenêtre se ferme et un seul Ctrl+Z annule tout.' }
   ],
   steps: ['Sélectionnez un ou plusieurs groupes ou composants et ouvrez robo fillet 3D.', 'Choisissez Arrondi, Chanfrein 45° ou Lignes seules, saisissez le décalage et regardez l’aperçu vert.', 'Cliquez sur Appliquer : le nouveau groupe arrondi est créé, et un seul Ctrl+Z annule tout.'],
@@ -3025,7 +3025,7 @@ I18N_PLUGINS.fr.fillet_3d = {
     { t: 'Lignes seules', d: 'Trace sur le modèle de vraies lignes parallèles aux arêtes choisies, à la distance du décalage, en style Contour ou Quadrillage. Utile comme guide pour des coupes, des reliefs ou des subdivisions.' },
     { t: 'Le résultat', d: 'La copie arrondie est un nouveau groupe à côté de l’objet, qui reste masqué (ou est effacé, si vous le voulez). Vous pouvez activer la grille régulière sur les faces planes, avec la taille de cellule que vous choisissez.' }
   ],
-  pros: ['Arrondi et chanfrein avec quadrilatères', 'Prêt pour SubD et QuadFace Tools', 'Arêtes et faces choisies à la souris, même imbriquées', 'Le décalage est le rayon, jamais modifié', 'Aperçu en temps réel, un seul Ctrl+Z'],
+  pros: ['Arrondi et chanfrein avec quadrilatères', 'Quadrilatères réguliers aux diagonales masquées', 'Arêtes et faces choisies à la souris, même imbriquées', 'Le décalage est le rayon, jamais modifié', 'Aperçu en temps réel, un seul Ctrl+Z'],
   solves: [
     { p: 'Arrondir les arêtes à la main est long et donne des triangles désordonnés.', s: 'Une seule étape, avec des quadrilatères réguliers et des diagonales masquées.' },
     { p: 'Avec des groupes dans d’autres groupes, il est difficile d’arrondir une seule partie.', s: 'Vous choisissez à la souris le groupe, la ligne ou la face, à tout niveau.' }
@@ -3036,17 +3036,17 @@ I18N_TOOLBARS.fr.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D : arrondit ou ch
 
 I18N_PLUGINS.es.fillet_3d = {
   tagline: 'Redondea o biseliza los bordes de grupos y componentes, con cuadriláteros listos para la subdivisión.',
-  simple: 'Selecciona un grupo o componente y elige Redondeo o Bisel 45°: los bordes vivos se convierten en curvas suaves hechas de cuadriláteros, listas para SubD y QuadFace Tools. También puedes elegir con el ratón solo algunos bordes o caras, incluso dentro de objetos anidados.',
+  simple: 'Selecciona un grupo o componente y elige Redondeo o Bisel 45°: los bordes vivos se convierten en curvas suaves hechas de cuadriláteros. También puedes elegir con el ratón solo algunos bordes o caras, incluso dentro de objetos anidados.',
   intro: [
-    'robo fillet 3D redondea o biseliza los bordes y las esquinas de grupos y componentes, al estilo de RoundCorner de Fredo6. El resultado está hecho de cuadriláteros con las diagonales ocultas, así que se puede subdividir con SubD o QuadFace Tools sin limpiar nada.',
-    'Sirve cuando un sólido anguloso debe volverse suave: muebles, piezas mecánicas, objetos para modelar en SubD. Eliges el desplazamiento (que es el radio) y ves la vista previa en el modelo antes de aplicar.'
+    'robo fillet 3D redondea o biseliza los bordes y las esquinas de grupos y componentes, al estilo de RoundCorner de Fredo6. El resultado está hecho de cuadriláteros regulares con las diagonales ocultas.',
+    'Sirve cuando un sólido anguloso debe volverse suave: muebles, piezas mecánicas, objetos para modelar. Eliges el desplazamiento (que es el radio) y ves la vista previa en el modelo antes de aplicar.'
   ],
   main: [
     { t: 'Tres modos', d: 'Redondeo de 2 a 30 segmentos, Bisel 45° con una sola tira plana, o Solo líneas, que traza en el modelo las líneas paralelas a los bordes sin cambiar la geometría.' },
     { t: 'El desplazamiento es el radio', d: 'El plugin nunca lo modifica. Si el objeto no lo admite, no hace nada: las partes que lo impiden se dibujan en rojo y un mensaje parpadeante indica el desplazamiento máximo. El candado permite superar el límite.' },
     { t: 'Vista previa verde y de la curva', d: 'Las líneas guía verdes muestran dónde empieza el redondeo y siguen cada cambio. La vista previa de la curva añade una banda azul claro con cuatro líneas azules, siempre legible.' },
     { t: 'Bordes elegidos con el ratón', d: 'Apunta a una línea o una cara y haz clic: también desde fuera, en cualquier nivel de grupos y componentes anidados. Con Mayús añades o quitas. Si el grupo contiene otros, eliges con el ratón el que redondear.' },
-    { t: 'Cuadriláteros listos para SubD', d: 'Cada cuadrilátero no plano se construye con la diagonal oculta, suave y alisada, como en QuadFace Tools. Se gestionan caras con agujeros y esquinas cóncavas, y las uniones entre dos bordes son ingletas limpias.' },
+    { t: 'Cuadriláteros regulares', d: 'Cada cuadrilátero no plano se construye con la diagonal oculta, suave y alisada. Se gestionan caras con agujeros y esquinas cóncavas, y las uniones entre dos bordes son ingletas limpias.' },
     { t: 'Ventana clara, en cinco idiomas', d: 'Campos con las unidades y decimales de SketchUp, flechas arriba y abajo, un icono para cada opción, ayuda integrada y mensajes en el idioma de SketchUp. Tras Aplicar la ventana se cierra y un solo Ctrl+Z lo deshace todo.' }
   ],
   steps: ['Selecciona uno o más grupos o componentes y abre robo fillet 3D.', 'Elige Redondeo, Bisel 45° o Solo líneas, escribe el desplazamiento y mira la vista previa verde.', 'Pulsa Aplicar: se crea el nuevo grupo redondeado, y un solo Ctrl+Z lo deshace todo.'],
@@ -3060,7 +3060,7 @@ I18N_PLUGINS.es.fillet_3d = {
     { t: 'Solo líneas', d: 'Traza en el modelo líneas reales paralelas a los bordes elegidos, a la distancia del desplazamiento, en estilo Contorno o Rejilla. Útil como guía para cortes, relieves o subdivisiones.' },
     { t: 'El resultado', d: 'La copia redondeada es un grupo nuevo junto al objeto, que queda oculto (o se borra, si quieres). Puedes activar la rejilla regular en las caras planas, con el tamaño de celda que elijas.' }
   ],
-  pros: ['Redondeo y bisel con cuadriláteros', 'Listo para SubD y QuadFace Tools', 'Bordes y caras elegidos con el ratón, incluso anidados', 'El desplazamiento es el radio, nunca modificado', 'Vista previa en tiempo real, un solo Ctrl+Z'],
+  pros: ['Redondeo y bisel con cuadriláteros', 'Cuadriláteros regulares con diagonales ocultas', 'Bordes y caras elegidos con el ratón, incluso anidados', 'El desplazamiento es el radio, nunca modificado', 'Vista previa en tiempo real, un solo Ctrl+Z'],
   solves: [
     { p: 'Redondear bordes a mano es lento y da triángulos desordenados.', s: 'Un solo paso, con cuadriláteros regulares y diagonales ocultas.' },
     { p: 'Con grupos dentro de otros grupos es difícil redondear solo una parte.', s: 'Eliges con el ratón el grupo, la línea o la cara, en cualquier nivel.' }
