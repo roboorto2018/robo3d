@@ -750,7 +750,7 @@ var PLUGINS = [
       { p: 'Arrotondare i bordi a mano è lungo e dà triangoli disordinati.', s: 'Un solo passaggio, con quadrilateri regolari e le diagonali nascoste.' },
       { p: 'Con gruppi dentro altri gruppi è difficile arrotondare solo una parte.', s: 'Scegli col mouse il gruppo, la linea o la faccia, a qualsiasi livello.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   }
 ];
 

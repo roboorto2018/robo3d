@@ -2960,7 +2960,7 @@ I18N_PLUGINS.en.fillet_3d = {
     { p: 'Rounding edges by hand is slow and gives untidy triangles.', s: 'A single step, with regular quads and hidden diagonals.' },
     { p: 'With groups inside other groups it is hard to round just one part.', s: 'You choose the group, the line or the face with the mouse, at any level.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2021.1 or later'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2023 or later'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_TOOLBARS.en.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: round or chamfer the edges' };
 
@@ -2995,7 +2995,7 @@ I18N_PLUGINS.de.fillet_3d = {
     { p: 'Kanten von Hand zu runden ist langsam und ergibt unordentliche Dreiecke.', s: 'Ein einziger Schritt, mit regelmäßigen Vierecken und versteckten Diagonalen.' },
     { p: 'Bei Gruppen in anderen Gruppen ist es schwer, nur einen Teil zu runden.', s: 'Sie wählen Gruppe, Linie oder Fläche mit der Maus, auf jeder Ebene.' }
   ],
-  specs: [['Menü', 'Robo Tool › robo fillet 3D'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2021.1 oder neuer'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menü', 'Robo Tool › robo fillet 3D'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2023 oder neuer'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_TOOLBARS.de.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: Kanten runden oder anfasen' };
 
@@ -3030,7 +3030,7 @@ I18N_PLUGINS.fr.fillet_3d = {
     { p: 'Arrondir les arêtes à la main est long et donne des triangles désordonnés.', s: 'Une seule étape, avec des quadrilatères réguliers et des diagonales masquées.' },
     { p: 'Avec des groupes dans d’autres groupes, il est difficile d’arrondir une seule partie.', s: 'Vous choisissez à la souris le groupe, la ligne ou la face, à tout niveau.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'SketchUp 2021.1 ou plus récent'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'SketchUp 2023 ou plus récent'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_TOOLBARS.fr.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D : arrondit ou chanfreine les arêtes' };
 
@@ -3065,6 +3065,6 @@ I18N_PLUGINS.es.fillet_3d = {
     { p: 'Redondear bordes a mano es lento y da triángulos desordenados.', s: 'Un solo paso, con cuadriláteros regulares y diagonales ocultas.' },
     { p: 'Con grupos dentro de otros grupos es difícil redondear solo una parte.', s: 'Eliges con el ratón el grupo, la línea o la cara, en cualquier nivel.' }
   ],
-  specs: [['Menú', 'Robo Tool › robo fillet 3D'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2021.1 o posterior'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menú', 'Robo Tool › robo fillet 3D'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_TOOLBARS.es.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: redondea o biseliza los bordes' };
