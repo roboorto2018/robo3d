@@ -2794,3 +2794,277 @@ I18N_TOOLBARS.en.toolbar = { 'toolbar.png': 'robo toolbar: build your own toolba
 I18N_TOOLBARS.de.toolbar = { 'toolbar.png': 'robo toolbar: eigene Symbolleisten bauen' };
 I18N_TOOLBARS.fr.toolbar = { 'toolbar.png': 'robo toolbar : créez vos propres barres d’outils' };
 I18N_TOOLBARS.es.toolbar = { 'toolbar.png': 'robo toolbar: crea tus propias barras de herramientas' };
+
+/* ------------------------------------------------------------------ robo quick align */
+I18N_PLUGINS.en.quick_align = {
+  tagline: 'Align groups and components on the axes, in one click.',
+  simple: 'Select two or more groups or components and align them left, center or right — or bottom, center and top, or front and back. You choose whether to use the general axes of the model or those of the group or component you are working in.',
+  intro: [
+    'robo quick align lines up the selected groups and components along one of SketchUp’s three axes: red (X), blue (Z, height) or green (Y). Every axis has three alignments: to the minimum side, to the center and to the maximum side, for a total of nine commands.',
+    'It is useful when you have to put objects in a row: doors and windows at the same height, furniture on the same line, pillars on the same alignment. Instead of measuring and moving each object by hand, you select, press a button and everything goes in place.'
+  ],
+  main: [
+    { t: 'Nine alignments on three axes', d: 'Red axis: left, center, right. Blue axis (height): bottom, center, top. Green axis: front, center, back.' },
+    { t: 'General axes or group axes', d: 'As the base of the alignment you can use the general axes of the model or those of the group or component you have opened for editing. Useful when the group is rotated or tilted.' },
+    { t: 'The choice is remembered', d: 'With two entries at the bottom of the menu you choose which axes to use, and SketchUp remembers it the next time too.' },
+    { t: 'A single Ctrl+Z', d: 'The whole alignment is one operation: if you do not like it, a single command undoes it.' },
+    { t: 'Toolbar and menu', d: 'Nine buttons in three groups, one per colour, and the same entries in the Extensions menu, with the icon in front.' },
+    { t: 'Help in five languages', d: 'A help window explains every alignment with the icons, and menus and messages follow the language of SketchUp.' }
+  ],
+  steps: ['Select two or more groups or components.', 'Choose the axes to use (general or of the open group) from the robo quick align menu.', 'Click one of the nine buttons: the objects line up, and a single Ctrl+Z undoes everything.'],
+  how: [
+    { t: 'The problem it solves', d: 'Aligning objects in SketchUp means measuring positions and moving them one at a time, or trusting your eye. With many objects, or objects of different sizes, it is slow and imprecise: robo quick align does it in one click.' },
+    { t: 'Step 1 · Select', d: 'Select two or more groups or components. Loose faces and edges, and locked objects, are ignored: at least two objects are needed.' },
+    { t: 'Step 2 · Choose the axis and the side', d: 'The nine buttons are split into three groups: red (left, center, right), blue (bottom, center, top) and green (front, center, back). “Minimum side” brings all the objects to the edge of the most extreme object on that side; “center” brings them with their centers on the same line, the center of the whole selection.' },
+    { t: 'General axes or group axes', d: 'Alignments are always calculated against a set of axes, and you can choose which. With the general axes of the model, left and right, top and bottom, front and back are SketchUp’s absolute ones. With the axes of the group or component, the axes of the container you opened for editing apply instead: if that group is rotated by 30 degrees, “left” means left according to the group, not according to the model. The two checked entries are at the bottom of the robo quick align menu; outside any group the two systems coincide.' },
+    { t: 'How it is calculated', d: 'For every object the bounding box is taken and its minimum and maximum along the chosen axis are derived. From all the objects the minimum, the maximum and the center of the whole selection are found, and every object is moved by the distance it lacks to reach the reference. The box of a rotated object can be a little larger than the real geometry.' },
+    { t: 'A single undo', d: 'All the moves are enclosed in one operation: a single Ctrl+Z puts the objects back where they were. If something fails, the plugin cancels everything and tells you, without leaving the model half done.' },
+    { t: 'A concrete example', d: 'You have five windows of different heights on a facade and you want them all to have the same lintel. You select them, press “Align top” (blue axis) and the tops go to the same level. Then press “Align center” on the red axis to put them on a single vertical line. If the facade group is tilted, open the group and leave the group axes: the alignments follow the tilt of the facade.' }
+  ],
+  pros: ['Nine alignments in one click', 'Model or group axes, your choice', 'A single Ctrl+Z undoes everything', 'Help with icons in five languages'],
+  solves: [
+    { p: 'Aligning objects of different sizes by hand is slow and imprecise.', s: 'One click brings all the objects to the same side or to the same center line.' },
+    { p: 'Inside a rotated group the axes of the model do not match those of the drawing.', s: 'You can align along the axes of the open group, or along the general ones.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo quick align'], ['Toolbar', '9 buttons in 3 groups (red, blue, green)'], ['Reference axes', 'Of the model, or of the open group or component'], ['Undo', 'A single Ctrl+Z'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_PLUGINS.de.quick_align = {
+  tagline: 'Gruppen und Komponenten mit einem Klick an den Achsen ausrichten.',
+  simple: 'Wählen Sie zwei oder mehr Gruppen oder Komponenten und richten Sie sie links, zentriert oder rechts aus — oder unten, zentriert und oben, oder vorne und hinten. Sie entscheiden, ob die allgemeinen Achsen des Modells oder die der Gruppe oder Komponente gelten, in der Sie arbeiten.',
+  intro: [
+    'robo quick align richtet die ausgewählten Gruppen und Komponenten entlang einer der drei Achsen von SketchUp aus: rot (X), blau (Z, Höhe) oder grün (Y). Jede Achse hat drei Ausrichtungen: an der Minimumseite, zentriert und an der Maximumseite, insgesamt neun Befehle.',
+    'Das ist nützlich, wenn Objekte in eine Reihe gebracht werden müssen: Türen und Fenster auf gleicher Höhe, Möbel auf einer Linie, Pfeiler in einer Flucht. Statt jedes Objekt von Hand zu messen und zu verschieben, wählen Sie aus, drücken eine Schaltfläche, und alles sitzt.'
+  ],
+  main: [
+    { t: 'Neun Ausrichtungen auf drei Achsen', d: 'Rote Achse: links, zentriert, rechts. Blaue Achse (Höhe): unten, zentriert, oben. Grüne Achse: vorne, zentriert, hinten.' },
+    { t: 'Allgemeine Achsen oder Gruppenachsen', d: 'Als Grundlage der Ausrichtung können Sie die allgemeinen Achsen des Modells oder die der Gruppe oder Komponente verwenden, die Sie zum Bearbeiten geöffnet haben. Nützlich, wenn die Gruppe gedreht oder geneigt ist.' },
+    { t: 'Die Wahl wird gespeichert', d: 'Mit zwei Einträgen am Ende des Menüs wählen Sie die Achsen, und SketchUp merkt sich das auch beim nächsten Mal.' },
+    { t: 'Ein einziges Strg+Z', d: 'Die gesamte Ausrichtung ist eine einzige Operation: Gefällt sie nicht, macht ein einziger Befehl sie rückgängig.' },
+    { t: 'Leiste und Menü', d: 'Neun Schaltflächen in drei Gruppen, eine pro Farbe, und dieselben Einträge im Menü Erweiterungen, mit dem Symbol davor.' },
+    { t: 'Hilfe in fünf Sprachen', d: 'Ein Hilfefenster erklärt jede Ausrichtung mit den Symbolen, und Menüs und Meldungen folgen der Sprache von SketchUp.' }
+  ],
+  steps: ['Wählen Sie zwei oder mehr Gruppen oder Komponenten.', 'Wählen Sie im Menü robo quick align die zu verwendenden Achsen (allgemein oder der geöffneten Gruppe).', 'Klicken Sie auf eine der neun Schaltflächen: Die Objekte richten sich aus, und ein einziges Strg+Z macht alles rückgängig.'],
+  how: [
+    { t: 'Das Problem, das es löst', d: 'Objekte in SketchUp auszurichten bedeutet, Positionen zu messen und die Objekte einzeln zu verschieben, oder sich auf das Auge zu verlassen. Bei vielen oder unterschiedlich großen Objekten ist das langsam und ungenau: robo quick align erledigt es mit einem Klick.' },
+    { t: 'Schritt 1 · Auswählen', d: 'Wählen Sie zwei oder mehr Gruppen oder Komponenten. Lose Flächen und Kanten sowie gesperrte Objekte werden ignoriert: Es sind mindestens zwei Objekte nötig.' },
+    { t: 'Schritt 2 · Achse und Seite wählen', d: 'Die neun Schaltflächen sind in drei Gruppen geteilt: rot (links, zentriert, rechts), blau (unten, zentriert, oben) und grün (vorne, zentriert, hinten). „Minimumseite“ bringt alle Objekte an die Kante des auf dieser Seite äußersten Objekts; „zentriert“ bringt sie mit den Mittelpunkten auf dieselbe Linie, die Mitte der gesamten Auswahl.' },
+    { t: 'Allgemeine Achsen oder Gruppenachsen', d: 'Ausrichtungen werden immer gegen ein Achsensystem berechnet, und Sie können wählen, gegen welches. Mit den allgemeinen Achsen des Modells sind links und rechts, oben und unten, vorne und hinten die absoluten von SketchUp. Mit den Achsen der Gruppe oder Komponente gelten stattdessen die Achsen des Containers, den Sie zum Bearbeiten geöffnet haben: Ist diese Gruppe um 30 Grad gedreht, bedeutet „links“ links gemäß der Gruppe, nicht gemäß dem Modell. Die beiden Einträge mit Häkchen stehen am Ende des Menüs robo quick align; außerhalb jeder Gruppe sind beide Systeme gleich.' },
+    { t: 'So wird berechnet', d: 'Für jedes Objekt wird der Begrenzungsrahmen genommen und daraus Minimum und Maximum entlang der gewählten Achse abgeleitet. Aus allen Objekten ergeben sich Minimum, Maximum und Mitte der gesamten Auswahl, und jedes Objekt wird um die Strecke verschoben, die ihm bis zur Referenz fehlt. Der Rahmen eines gedrehten Objekts kann etwas größer sein als die tatsächliche Geometrie.' },
+    { t: 'Ein einziges Rückgängig', d: 'Alle Verschiebungen sind in einer Operation zusammengefasst: Ein einziges Strg+Z stellt die Objekte wieder her. Schlägt etwas fehl, bricht das Plugin alles ab und sagt es Ihnen, ohne das Modell halb fertig zu lassen.' },
+    { t: 'Ein konkretes Beispiel', d: 'Sie haben fünf Fenster unterschiedlicher Höhe an einer Fassade und alle sollen denselben Sturz haben. Sie wählen sie aus, drücken „Oben ausrichten“ (blaue Achse), und die Oberkanten gehen auf dieselbe Höhe. Dann „Zentriert ausrichten“ auf der roten Achse, um sie auf eine senkrechte Linie zu bringen. Ist die Fassadengruppe geneigt, öffnen Sie die Gruppe und lassen die Gruppenachsen: Die Ausrichtungen folgen der Neigung der Fassade.' }
+  ],
+  pros: ['Neun Ausrichtungen mit einem Klick', 'Achsen des Modells oder der Gruppe, nach Wahl', 'Ein einziges Strg+Z macht alles rückgängig', 'Hilfe mit Symbolen in fünf Sprachen'],
+  solves: [
+    { p: 'Objekte unterschiedlicher Größe von Hand auszurichten ist langsam und ungenau.', s: 'Ein Klick bringt alle Objekte an dieselbe Seite oder auf dieselbe Mittellinie.' },
+    { p: 'In einer gedrehten Gruppe stimmen die Achsen des Modells nicht mit denen der Zeichnung überein.', s: 'Sie können nach den Achsen der geöffneten Gruppe oder nach den allgemeinen ausrichten.' }
+  ],
+  specs: [['Menü', 'Robo Tool › robo quick align'], ['Symbolleiste', '9 Schaltflächen in 3 Gruppen (rot, blau, grün)'], ['Bezugsachsen', 'Des Modells oder der geöffneten Gruppe bzw. Komponente'], ['Rückgängig', 'Ein einziges Strg+Z'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_PLUGINS.fr.quick_align = {
+  tagline: 'Alignez groupes et composants sur les axes, en un clic.',
+  simple: 'Sélectionnez deux groupes ou composants ou plus et alignez-les à gauche, au centre ou à droite — ou en bas, au centre et en haut, ou devant et derrière. Vous choisissez d’utiliser les axes généraux du modèle ou ceux du groupe ou composant dans lequel vous travaillez.',
+  intro: [
+    'robo quick align aligne les groupes et composants sélectionnés le long de l’un des trois axes de SketchUp : rouge (X), bleu (Z, hauteur) ou vert (Y). Chaque axe a trois alignements : sur le côté minimum, au centre et sur le côté maximum, soit neuf commandes au total.',
+    'C’est utile quand il faut mettre des objets en ligne : portes et fenêtres à la même hauteur, meubles sur le même alignement, poteaux sur la même ligne. Au lieu de mesurer et déplacer chaque objet à la main, vous sélectionnez, appuyez sur un bouton et tout se place.'
+  ],
+  main: [
+    { t: 'Neuf alignements sur trois axes', d: 'Axe rouge : gauche, centre, droite. Axe bleu (hauteur) : bas, centre, haut. Axe vert : devant, centre, derrière.' },
+    { t: 'Axes généraux ou axes du groupe', d: 'Comme base de l’alignement, vous pouvez utiliser les axes généraux du modèle ou ceux du groupe ou composant que vous avez ouvert pour le modifier. Utile quand le groupe est pivoté ou incliné.' },
+    { t: 'Le choix est mémorisé', d: 'Avec deux entrées en bas du menu, vous choisissez les axes à utiliser, et SketchUp s’en souvient aussi à la prochaine ouverture.' },
+    { t: 'Un seul Ctrl+Z', d: 'Tout l’alignement est une seule opération : s’il ne vous plaît pas, une seule commande l’annule.' },
+    { t: 'Barre et menu', d: 'Neuf boutons en trois groupes, un par couleur, et les mêmes entrées dans le menu Extensions, avec l’icône devant.' },
+    { t: 'Aide en cinq langues', d: 'Une fenêtre d’aide explique chaque alignement avec les icônes, et menus et messages suivent la langue de SketchUp.' }
+  ],
+  steps: ['Sélectionnez deux groupes ou composants ou plus.', 'Choisissez les axes à utiliser (généraux ou du groupe ouvert) dans le menu robo quick align.', 'Cliquez sur l’un des neuf boutons : les objets s’alignent, et un seul Ctrl+Z annule tout.'],
+  how: [
+    { t: 'Le problème résolu', d: 'Aligner des objets dans SketchUp, c’est mesurer des positions et les déplacer un par un, ou se fier à l’œil. Avec beaucoup d’objets, ou d’objets de tailles différentes, c’est long et imprécis : robo quick align le fait en un clic.' },
+    { t: 'Étape 1 · Sélectionnez', d: 'Sélectionnez deux groupes ou composants ou plus. Les faces et arêtes isolées, ainsi que les objets verrouillés, sont ignorés : il faut au moins deux objets.' },
+    { t: 'Étape 2 · Choisissez l’axe et le côté', d: 'Les neuf boutons sont répartis en trois groupes : rouge (gauche, centre, droite), bleu (bas, centre, haut) et vert (devant, centre, derrière). « Côté minimum » amène tous les objets au bord de l’objet le plus extrême de ce côté ; « centre » les amène avec leurs centres sur la même ligne, celle du centre de toute la sélection.' },
+    { t: 'Axes généraux ou axes du groupe', d: 'Les alignements sont toujours calculés par rapport à un système d’axes, et vous pouvez choisir lequel. Avec les axes généraux du modèle, gauche et droite, haut et bas, devant et derrière sont ceux, absolus, de SketchUp. Avec les axes du groupe ou composant, ce sont les axes du conteneur que vous avez ouvert pour le modifier : si ce groupe est pivoté de 30 degrés, « à gauche » signifie à gauche selon le groupe, pas selon le modèle. Les deux entrées cochées sont en bas du menu robo quick align ; en dehors de tout groupe, les deux systèmes coïncident.' },
+    { t: 'Comment c’est calculé', d: 'Pour chaque objet, on prend la boîte englobante et on en tire le minimum et le maximum le long de l’axe choisi. De tous les objets, on tire le minimum, le maximum et le centre de toute la sélection, et chaque objet est déplacé de la distance qui lui manque pour atteindre la référence. La boîte d’un objet pivoté peut être un peu plus grande que la géométrie réelle.' },
+    { t: 'Une seule annulation', d: 'Tous les déplacements sont réunis en une seule opération : un seul Ctrl+Z remet les objets où ils étaient. Si quelque chose échoue, le plugin annule tout et vous le dit, sans laisser le modèle à moitié fait.' },
+    { t: 'Un exemple concret', d: 'Vous avez cinq fenêtres de hauteurs différentes sur une façade et vous voulez qu’elles aient toutes le même linteau. Vous les sélectionnez, appuyez sur « Aligner en haut » (axe bleu) et les sommets vont au même niveau. Puis « Aligner au centre » sur l’axe rouge pour les mettre sur une seule ligne verticale. Si le groupe de la façade est incliné, ouvrez le groupe et gardez les axes du groupe : les alignements suivent l’inclinaison de la façade.' }
+  ],
+  pros: ['Neuf alignements en un clic', 'Axes du modèle ou du groupe, au choix', 'Un seul Ctrl+Z annule tout', 'Aide avec icônes en cinq langues'],
+  solves: [
+    { p: 'Aligner à la main des objets de tailles différentes est long et imprécis.', s: 'Un clic amène tous les objets sur le même côté ou sur la même ligne de centre.' },
+    { p: 'Dans un groupe pivoté, les axes du modèle ne correspondent pas à ceux du dessin.', s: 'Vous pouvez aligner selon les axes du groupe ouvert, ou selon les axes généraux.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo quick align'], ['Barre d’outils', '9 boutons en 3 groupes (rouge, bleu, vert)'], ['Axes de référence', 'Du modèle, ou du groupe ou composant ouvert'], ['Annulation', 'Un seul Ctrl+Z'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_PLUGINS.es.quick_align = {
+  tagline: 'Alinea grupos y componentes en los ejes, con un clic.',
+  simple: 'Selecciona dos o más grupos o componentes y alinéalos a la izquierda, al centro o a la derecha — o abajo, al centro y arriba, o al frente y atrás. Tú eliges si usar los ejes generales del modelo o los del grupo o componente en el que trabajas.',
+  intro: [
+    'robo quick align alinea los grupos y componentes seleccionados a lo largo de uno de los tres ejes de SketchUp: rojo (X), azul (Z, altura) o verde (Y). Cada eje tiene tres alineaciones: en el lado mínimo, al centro y en el lado máximo, nueve comandos en total.',
+    'Resulta útil cuando hay que poner objetos en fila: puertas y ventanas a la misma altura, muebles en la misma línea, pilares en la misma alineación. En lugar de medir y mover cada objeto a mano, seleccionas, pulsas un botón y todo queda en su sitio.'
+  ],
+  main: [
+    { t: 'Nueve alineaciones en tres ejes', d: 'Eje rojo: izquierda, centro, derecha. Eje azul (altura): abajo, centro, arriba. Eje verde: frente, centro, atrás.' },
+    { t: 'Ejes generales o ejes del grupo', d: 'Como base de la alineación puedes usar los ejes generales del modelo o los del grupo o componente que has abierto para editarlo. Útil cuando el grupo está girado o inclinado.' },
+    { t: 'La elección se recuerda', d: 'Con dos entradas al final del menú eliges qué ejes usar, y SketchUp lo recuerda también la próxima vez.' },
+    { t: 'Un solo Ctrl+Z', d: 'Toda la alineación es una sola operación: si no te gusta, un solo comando la deshace.' },
+    { t: 'Barra y menú', d: 'Nueve botones en tres grupos, uno por color, y las mismas entradas en el menú Extensiones, con el icono delante.' },
+    { t: 'Ayuda en cinco idiomas', d: 'Una ventana de ayuda explica cada alineación con los iconos, y los menús y mensajes siguen el idioma de SketchUp.' }
+  ],
+  steps: ['Selecciona dos o más grupos o componentes.', 'Elige los ejes a usar (generales o del grupo abierto) en el menú robo quick align.', 'Haz clic en uno de los nueve botones: los objetos se alinean, y un solo Ctrl+Z lo deshace todo.'],
+  how: [
+    { t: 'El problema que resuelve', d: 'Alinear objetos en SketchUp significa medir posiciones y moverlos uno a uno, o fiarse del ojo. Con muchos objetos, o de tamaños distintos, es lento e impreciso: robo quick align lo hace con un clic.' },
+    { t: 'Paso 1 · Selecciona', d: 'Selecciona dos o más grupos o componentes. Las caras y aristas sueltas, y los objetos bloqueados, se ignoran: se necesitan al menos dos objetos.' },
+    { t: 'Paso 2 · Elige el eje y el lado', d: 'Los nueve botones se dividen en tres grupos: rojo (izquierda, centro, derecha), azul (abajo, centro, arriba) y verde (frente, centro, atrás). «Lado mínimo» lleva todos los objetos al borde del objeto más extremo de ese lado; «centro» los lleva con los centros en la misma línea, la del centro de toda la selección.' },
+    { t: 'Ejes generales o ejes del grupo', d: 'Las alineaciones se calculan siempre respecto a un sistema de ejes, y puedes elegir cuál. Con los ejes generales del modelo, izquierda y derecha, arriba y abajo, frente y atrás son los absolutos de SketchUp. Con los ejes del grupo o componente, valen en cambio los ejes del contenedor que has abierto para editarlo: si ese grupo está girado 30 grados, «a la izquierda» significa a la izquierda según el grupo, no según el modelo. Las dos entradas con marca están al final del menú robo quick align; fuera de cualquier grupo los dos sistemas coinciden.' },
+    { t: 'Cómo se calcula', d: 'De cada objeto se toma la caja delimitadora y se obtiene su mínimo y máximo a lo largo del eje elegido. De todos los objetos se obtienen el mínimo, el máximo y el centro de toda la selección, y cada objeto se mueve la distancia que le falta para llegar a la referencia. La caja de un objeto girado puede ser algo mayor que la geometría real.' },
+    { t: 'Un solo deshacer', d: 'Todos los movimientos están reunidos en una operación: un solo Ctrl+Z devuelve los objetos a su sitio. Si algo falla, el plugin lo cancela todo y te lo dice, sin dejar el modelo a medias.' },
+    { t: 'Un ejemplo concreto', d: 'Tienes cinco ventanas de alturas distintas en una fachada y quieres que todas tengan el mismo dintel. Las seleccionas, pulsas «Alinear arriba» (eje azul) y las partes superiores van al mismo nivel. Luego «Alinear al centro» en el eje rojo para ponerlas en una sola línea vertical. Si el grupo de la fachada está inclinado, abre el grupo y deja los ejes del grupo: las alineaciones siguen la inclinación de la fachada.' }
+  ],
+  pros: ['Nueve alineaciones con un clic', 'Ejes del modelo o del grupo, a elegir', 'Un solo Ctrl+Z lo deshace todo', 'Ayuda con iconos en cinco idiomas'],
+  solves: [
+    { p: 'Alinear a mano objetos de distintos tamaños es lento e impreciso.', s: 'Un clic lleva todos los objetos al mismo lado o a la misma línea central.' },
+    { p: 'Dentro de un grupo girado, los ejes del modelo no coinciden con los del dibujo.', s: 'Puedes alinear según los ejes del grupo abierto, o según los generales.' }
+  ],
+  specs: [['Menú', 'Robo Tool › robo quick align'], ['Barra de herramientas', '9 botones en 3 grupos (rojo, azul, verde)'], ['Ejes de referencia', 'Del modelo, o del grupo o componente abierto'], ['Deshacer', 'Un solo Ctrl+Z'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.en.quick_align = { 'x_min.png': 'Align left (red axis X)', 'x_center.png': 'Align center (red axis X)', 'x_max.png': 'Align right (red axis X)', 'z_min.png': 'Align bottom (blue axis Z)', 'z_center.png': 'Align center (blue axis Z)', 'z_max.png': 'Align top (blue axis Z)', 'y_min.png': 'Align front (green axis Y)', 'y_center.png': 'Align center (green axis Y)', 'y_max.png': 'Align back (green axis Y)' };
+I18N_TOOLBARS.de.quick_align = { 'x_min.png': 'Links ausrichten (rote Achse X)', 'x_center.png': 'Zentriert ausrichten (rote Achse X)', 'x_max.png': 'Rechts ausrichten (rote Achse X)', 'z_min.png': 'Unten ausrichten (blaue Achse Z)', 'z_center.png': 'Zentriert ausrichten (blaue Achse Z)', 'z_max.png': 'Oben ausrichten (blaue Achse Z)', 'y_min.png': 'Vorne ausrichten (grüne Achse Y)', 'y_center.png': 'Zentriert ausrichten (grüne Achse Y)', 'y_max.png': 'Hinten ausrichten (grüne Achse Y)' };
+I18N_TOOLBARS.fr.quick_align = { 'x_min.png': 'Aligner à gauche (axe rouge X)', 'x_center.png': 'Aligner au centre (axe rouge X)', 'x_max.png': 'Aligner à droite (axe rouge X)', 'z_min.png': 'Aligner en bas (axe bleu Z)', 'z_center.png': 'Aligner au centre (axe bleu Z)', 'z_max.png': 'Aligner en haut (axe bleu Z)', 'y_min.png': 'Aligner devant (axe vert Y)', 'y_center.png': 'Aligner au centre (axe vert Y)', 'y_max.png': 'Aligner derrière (axe vert Y)' };
+I18N_TOOLBARS.es.quick_align = { 'x_min.png': 'Alinear a la izquierda (eje rojo X)', 'x_center.png': 'Alinear al centro (eje rojo X)', 'x_max.png': 'Alinear a la derecha (eje rojo X)', 'z_min.png': 'Alinear abajo (eje azul Z)', 'z_center.png': 'Alinear al centro (eje azul Z)', 'z_max.png': 'Alinear arriba (eje azul Z)', 'y_min.png': 'Alinear al frente (eje verde Y)', 'y_center.png': 'Alinear al centro (eje verde Y)', 'y_max.png': 'Alinear atrás (eje verde Y)' };
+
+I18N_PLUGINS.en.fillet_3d = {
+  tagline: 'Rounds or chamfers the edges of groups and components, with quads ready for subdivision.',
+  simple: 'Select a group or component and choose Rounding or Chamfer 45°: the sharp edges become soft curves made of quads, ready for SubD and QuadFace Tools. You can also pick just some edges or faces with the mouse, even inside nested objects.',
+  intro: [
+    'robo fillet 3D rounds or chamfers the edges and corners of groups and components, in the way of Fredo6’s RoundCorner. The result is made of quads with the diagonals hidden, so it can be subdivided with SubD or QuadFace Tools without cleaning anything.',
+    'It is useful when an angular solid has to become soft: furniture, mechanical parts, objects to model in SubD. You choose the offset (which is the radius) and see the preview on the model before applying.'
+  ],
+  main: [
+    { t: 'Three modes', d: 'Rounding with 2 to 30 segments, Chamfer 45° with a single flat strip, or Lines only, which draws on the model the lines parallel to the edges without changing the geometry.' },
+    { t: 'The offset is the radius', d: 'The plugin never changes it. If the object cannot hold it, nothing is done: the parts that stop it are drawn in red and a flashing message gives the biggest offset. The padlock lets you go past the limit.' },
+    { t: 'Green preview and curve preview', d: 'The green guide lines show where the rounding starts and follow every change. The curve preview adds a light blue band with four blue lines, always readable.' },
+    { t: 'Edges picked with the mouse', d: 'Point at a line or a face and click: also from outside, at any level of nested groups and components. Shift adds or removes. If the group contains others, choose with the mouse the one to round.' },
+    { t: 'Quads ready for SubD', d: 'Every non-flat quad is built with its diagonal hidden, soft and smooth, as in QuadFace Tools. Faces with holes and concave corners are handled, and the joins between two edges are clean mitres.' },
+    { t: 'A clear window, in five languages', d: 'Fields with SketchUp’s units and decimals, up and down arrows, an icon for every option, built-in help and messages in SketchUp’s language. After Apply the window closes and a single Ctrl+Z undoes everything.' }
+  ],
+  steps: ['Select one or more groups or components and open robo fillet 3D.', 'Choose Rounding, Chamfer 45° or Lines only, type the offset and watch the green preview.', 'Press Apply: the new rounded group is made, and a single Ctrl+Z undoes everything.'],
+  how: [
+    { t: 'The problem it solves', d: 'In SketchUp the edges of a solid are sharp. Rounding them by hand takes many steps and the result is often made of untidy triangles that are hard to subdivide. robo fillet 3D does it in one step and builds regular quads.' },
+    { t: 'Step 1 · Choose what to round', d: 'Select the groups or components: with “All the edges” every edge sharper than the angle you set (30° by default) is rounded, hollows included. With “Only the chosen edges” you pick lines or faces with the mouse.' },
+    { t: 'Step 2 · Offset and segments', d: 'The offset is the distance from the edge where the rounding starts: it is the radius. The segments split the arc into quads (2 to 30, always even with quad topology). The chamfer uses a single 45° strip.' },
+    { t: 'Step 3 · Preview and offset limit', d: 'The green lines follow the values in real time. If the offset does not fit the object, the parts that stop it appear in red, a flashing message explains why and gives the maximum; unticking the padlock rounds anyway.' },
+    { t: 'Edges and faces with the mouse', d: 'With “Only the chosen edges” you move over a line (it lights up) or a face (its outline lights up, holes included) and click. Shift adds or removes, Esc clears the choice. It also works from outside and inside nested groups.' },
+    { t: 'Nested groups and components', d: 'If the selected group contains others, “All the edges” cannot work on it: move the mouse over the group or component you want, a light blue transparent box shows it, click or press Enter and only that one is rounded.' },
+    { t: 'Lines only', d: 'Draws on the model real lines parallel to the chosen edges, at the offset distance, in Contour or Grid style. Useful as a guide for cuts, reliefs or subdivisions.' },
+    { t: 'The result', d: 'The rounded copy is a new group next to the object, which stays hidden (or is erased, if you want). You can turn on the regular grid on the flat faces, with the cell size you choose.' }
+  ],
+  pros: ['Rounding and chamfer with quads', 'Ready for SubD and QuadFace Tools', 'Edges and faces picked with the mouse, even nested', 'The offset is the radius, never changed', 'Real-time preview, a single Ctrl+Z'],
+  solves: [
+    { p: 'Rounding edges by hand is slow and gives untidy triangles.', s: 'A single step, with regular quads and hidden diagonals.' },
+    { p: 'With groups inside other groups it is hard to round just one part.', s: 'You choose the group, the line or the face with the mouse, at any level.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2021.1 or later'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.en.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: round or chamfer the edges' };
+
+I18N_PLUGINS.de.fillet_3d = {
+  tagline: 'Rundet oder fast die Kanten von Gruppen und Komponenten, mit Vierecken, bereit zur Unterteilung.',
+  simple: 'Wählen Sie eine Gruppe oder Komponente und wählen Sie Rundung oder Fase 45°: die scharfen Kanten werden zu weichen Kurven aus Vierecken, bereit für SubD und QuadFace Tools. Sie können auch nur einzelne Kanten oder Flächen mit der Maus wählen, selbst in verschachtelten Objekten.',
+  intro: [
+    'robo fillet 3D rundet oder fast die Kanten und Ecken von Gruppen und Komponenten, nach dem Vorbild von Fredo6s RoundCorner. Das Ergebnis besteht aus Vierecken mit versteckten Diagonalen und lässt sich mit SubD oder QuadFace Tools unterteilen, ohne etwas aufzuräumen.',
+    'Es hilft, wenn ein kantiger Körper weich werden soll: Möbel, mechanische Teile, Objekte für die SubD-Modellierung. Sie wählen den Abstand (er ist der Radius) und sehen die Vorschau am Modell, bevor Sie anwenden.'
+  ],
+  main: [
+    { t: 'Drei Modi', d: 'Rundung mit 2 bis 30 Segmenten, Fase 45° mit einem einzigen flachen Streifen oder Nur Linien, das Linien parallel zu den Kanten ins Modell zeichnet, ohne die Geometrie zu ändern.' },
+    { t: 'Der Abstand ist der Radius', d: 'Das Plugin ändert ihn nie. Kann das Objekt ihn nicht aufnehmen, geschieht nichts: die Stellen, die ihn verhindern, werden rot gezeichnet und eine blinkende Meldung nennt den größten Abstand. Mit dem Schloss lässt sich die Grenze überschreiten.' },
+    { t: 'Grüne Vorschau und Kurvenvorschau', d: 'Die grünen Hilfslinien zeigen, wo die Rundung beginnt, und folgen jeder Änderung. Die Kurvenvorschau fügt ein hellblaues Band mit vier blauen Linien hinzu, immer lesbar.' },
+    { t: 'Kanten mit der Maus gewählt', d: 'Zeigen Sie auf eine Linie oder Fläche und klicken Sie: auch von außen, auf jeder Ebene verschachtelter Gruppen und Komponenten. Mit Umschalt fügen Sie hinzu oder entfernen. Enthält die Gruppe weitere, wählen Sie mit der Maus die zu rundende.' },
+    { t: 'Vierecke, bereit für SubD', d: 'Jedes nicht ebene Viereck wird mit versteckter, weicher und geglätteter Diagonale gebaut, wie in QuadFace Tools. Flächen mit Löchern und konkave Ecken werden berücksichtigt, und die Verbindungen zweier Kanten sind saubere Gehrungen.' },
+    { t: 'Klares Fenster, in fünf Sprachen', d: 'Felder mit den Einheiten und Dezimalstellen von SketchUp, Pfeile auf und ab, ein Symbol für jede Option, integrierte Hilfe und Meldungen in der Sprache von SketchUp. Nach Anwenden schließt sich das Fenster, ein einziges Strg+Z macht alles rückgängig.' }
+  ],
+  steps: ['Wählen Sie eine oder mehrere Gruppen oder Komponenten und öffnen Sie robo fillet 3D.', 'Wählen Sie Rundung, Fase 45° oder Nur Linien, geben Sie den Abstand ein und sehen Sie die grüne Vorschau.', 'Klicken Sie auf Anwenden: die neue gerundete Gruppe entsteht, ein einziges Strg+Z macht alles rückgängig.'],
+  how: [
+    { t: 'Das Problem, das es löst', d: 'In SketchUp sind die Kanten eines Körpers scharf. Von Hand zu runden braucht viele Schritte, und das Ergebnis besteht oft aus unordentlichen Dreiecken, die sich schlecht unterteilen lassen. robo fillet 3D erledigt es in einem Schritt und baut regelmäßige Vierecke.' },
+    { t: 'Schritt 1 · Wählen, was gerundet wird', d: 'Wählen Sie die Gruppen oder Komponenten: mit „Alle Kanten“ wird jede Kante gerundet, die schärfer ist als der eingestellte Winkel (standardmäßig 30°), auch Vertiefungen. Mit „Nur die gewählten Kanten“ wählen Sie Linien oder Flächen mit der Maus.' },
+    { t: 'Schritt 2 · Abstand und Segmente', d: 'Der Abstand ist die Entfernung von der Kante, wo die Rundung beginnt: er ist der Radius. Die Segmente teilen den Bogen in Vierecke (2 bis 30, mit Vierecks-Topologie immer gerade). Die Fase nutzt einen einzigen 45°-Streifen.' },
+    { t: 'Schritt 3 · Vorschau und Abstandsblock', d: 'Die grünen Linien folgen den Werten in Echtzeit. Passt der Abstand nicht auf das Objekt, erscheinen die Stellen, die ihn verhindern, rot, eine blinkende Meldung nennt den Grund und das Maximum; ohne Häkchen am Schloss wird trotzdem gerundet.' },
+    { t: 'Kanten und Flächen mit der Maus', d: 'Mit „Nur die gewählten Kanten“ fahren Sie über eine Linie (sie leuchtet) oder eine Fläche (ihre Kontur leuchtet, Löcher eingeschlossen) und klicken. Umschalt fügt hinzu oder entfernt, Esc leert die Auswahl. Es funktioniert auch von außen und in verschachtelten Gruppen.' },
+    { t: 'Verschachtelte Gruppen und Komponenten', d: 'Enthält die gewählte Gruppe weitere, kann „Alle Kanten“ nicht damit arbeiten: fahren Sie mit der Maus über die gewünschte Gruppe oder Komponente, eine hellblaue transparente Box zeigt sie, klicken Sie oder drücken Sie die Eingabetaste, und nur diese wird gerundet.' },
+    { t: 'Nur Linien', d: 'Zeichnet echte Linien parallel zu den gewählten Kanten im Abstand ins Modell, im Stil Kontur oder Raster. Nützlich als Hilfe für Schnitte, Reliefs oder Unterteilungen.' },
+    { t: 'Das Ergebnis', d: 'Die gerundete Kopie ist eine neue Gruppe neben dem Objekt, das ausgeblendet bleibt (oder gelöscht wird, wenn Sie möchten). Auf ebenen Flächen können Sie das regelmäßige Raster mit der gewählten Zellgröße einschalten.' }
+  ],
+  pros: ['Rundung und Fase mit Vierecken', 'Bereit für SubD und QuadFace Tools', 'Kanten und Flächen mit der Maus gewählt, auch verschachtelt', 'Der Abstand ist der Radius, nie verändert', 'Echtzeit-Vorschau, ein einziges Strg+Z'],
+  solves: [
+    { p: 'Kanten von Hand zu runden ist langsam und ergibt unordentliche Dreiecke.', s: 'Ein einziger Schritt, mit regelmäßigen Vierecken und versteckten Diagonalen.' },
+    { p: 'Bei Gruppen in anderen Gruppen ist es schwer, nur einen Teil zu runden.', s: 'Sie wählen Gruppe, Linie oder Fläche mit der Maus, auf jeder Ebene.' }
+  ],
+  specs: [['Menü', 'Robo Tool › robo fillet 3D'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2021.1 oder neuer'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.de.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: Kanten runden oder anfasen' };
+
+I18N_PLUGINS.fr.fillet_3d = {
+  tagline: 'Arrondit ou chanfreine les arêtes des groupes et composants, avec des quadrilatères prêts pour la subdivision.',
+  simple: 'Sélectionnez un groupe ou un composant et choisissez Arrondi ou Chanfrein 45° : les arêtes vives deviennent des courbes douces faites de quadrilatères, prêtes pour SubD et QuadFace Tools. Vous pouvez aussi choisir à la souris seulement certaines arêtes ou faces, même dans des objets imbriqués.',
+  intro: [
+    'robo fillet 3D arrondit ou chanfreine les arêtes et les coins des groupes et composants, à la manière de RoundCorner de Fredo6. Le résultat est fait de quadrilatères aux diagonales masquées : on peut le subdiviser avec SubD ou QuadFace Tools sans rien nettoyer.',
+    'C’est utile quand un solide anguleux doit devenir doux : meubles, pièces mécaniques, objets à modéliser en SubD. Vous choisissez le décalage (qui est le rayon) et voyez l’aperçu sur le modèle avant d’appliquer.'
+  ],
+  main: [
+    { t: 'Trois modes', d: 'Arrondi de 2 à 30 segments, Chanfrein 45° avec une seule bande plane, ou Lignes seules, qui trace sur le modèle les lignes parallèles aux arêtes sans changer la géométrie.' },
+    { t: 'Le décalage est le rayon', d: 'Le plugin ne le modifie jamais. Si l’objet ne peut pas le contenir, rien n’est fait : les parties qui l’empêchent sont dessinées en rouge et un message clignotant donne le décalage maximal. Le cadenas permet de dépasser la limite.' },
+    { t: 'Aperçu vert et aperçu de la courbe', d: 'Les lignes guides vertes montrent où commence l’arrondi et suivent chaque changement. L’aperçu de la courbe ajoute une bande bleu clair avec quatre lignes bleues, toujours lisible.' },
+    { t: 'Arêtes choisies à la souris', d: 'Pointez une ligne ou une face et cliquez : même de l’extérieur, à tout niveau de groupes et composants imbriqués. Maj ajoute ou retire. Si le groupe en contient d’autres, choisissez à la souris celui à arrondir.' },
+    { t: 'Quadrilatères prêts pour SubD', d: 'Chaque quadrilatère non plan est construit avec sa diagonale masquée, adoucie et lissée, comme dans QuadFace Tools. Les faces avec trous et les coins concaves sont gérés, et les jonctions entre deux arêtes sont de onglets propres.' },
+    { t: 'Une fenêtre claire, en cinq langues', d: 'Champs avec les unités et décimales de SketchUp, flèches haut et bas, une icône pour chaque option, aide intégrée et messages dans la langue de SketchUp. Après Appliquer la fenêtre se ferme et un seul Ctrl+Z annule tout.' }
+  ],
+  steps: ['Sélectionnez un ou plusieurs groupes ou composants et ouvrez robo fillet 3D.', 'Choisissez Arrondi, Chanfrein 45° ou Lignes seules, saisissez le décalage et regardez l’aperçu vert.', 'Cliquez sur Appliquer : le nouveau groupe arrondi est créé, et un seul Ctrl+Z annule tout.'],
+  how: [
+    { t: 'Le problème qu’il résout', d: 'Dans SketchUp les arêtes d’un solide sont vives. Les arrondir à la main demande beaucoup d’étapes et le résultat est souvent fait de triangles désordonnés, difficiles à subdiviser. robo fillet 3D le fait en une seule étape et construit des quadrilatères réguliers.' },
+    { t: 'Étape 1 · Choisissez quoi arrondir', d: 'Sélectionnez les groupes ou composants : avec « Toutes les arêtes » toute arête plus aiguë que l’angle réglé (30° par défaut) est arrondie, creux compris. Avec « Seulement les arêtes choisies » vous choisissez lignes ou faces à la souris.' },
+    { t: 'Étape 2 · Décalage et segments', d: 'Le décalage est la distance à partir de l’arête où commence l’arrondi : c’est le rayon. Les segments divisent l’arc en quadrilatères (de 2 à 30, toujours pair avec la topologie en quadrilatères). Le chanfrein utilise une seule bande à 45°.' },
+    { t: 'Étape 3 · Aperçu et blocage du décalage', d: 'Les lignes vertes suivent les valeurs en temps réel. Si le décalage ne tient pas sur l’objet, les parties qui l’empêchent apparaissent en rouge, un message clignotant en explique la raison et donne le maximum ; en décochant le cadenas on arrondit quand même.' },
+    { t: 'Arêtes et faces à la souris', d: 'Avec « Seulement les arêtes choisies » vous survolez une ligne (elle s’éclaire) ou une face (son contour s’éclaire, trous compris) et cliquez. Maj ajoute ou retire, Échap vide le choix. Cela marche aussi de l’extérieur et dans des groupes imbriqués.' },
+    { t: 'Groupes et composants imbriqués', d: 'Si le groupe sélectionné en contient d’autres, « Toutes les arêtes » ne peut pas travailler dessus : passez la souris sur le groupe ou composant voulu, une boîte bleu clair transparente le montre, cliquez ou appuyez sur Entrée et seul celui-ci est arrondi.' },
+    { t: 'Lignes seules', d: 'Trace sur le modèle de vraies lignes parallèles aux arêtes choisies, à la distance du décalage, en style Contour ou Quadrillage. Utile comme guide pour des coupes, des reliefs ou des subdivisions.' },
+    { t: 'Le résultat', d: 'La copie arrondie est un nouveau groupe à côté de l’objet, qui reste masqué (ou est effacé, si vous le voulez). Vous pouvez activer la grille régulière sur les faces planes, avec la taille de cellule que vous choisissez.' }
+  ],
+  pros: ['Arrondi et chanfrein avec quadrilatères', 'Prêt pour SubD et QuadFace Tools', 'Arêtes et faces choisies à la souris, même imbriquées', 'Le décalage est le rayon, jamais modifié', 'Aperçu en temps réel, un seul Ctrl+Z'],
+  solves: [
+    { p: 'Arrondir les arêtes à la main est long et donne des triangles désordonnés.', s: 'Une seule étape, avec des quadrilatères réguliers et des diagonales masquées.' },
+    { p: 'Avec des groupes dans d’autres groupes, il est difficile d’arrondir une seule partie.', s: 'Vous choisissez à la souris le groupe, la ligne ou la face, à tout niveau.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'SketchUp 2021.1 ou plus récent'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.fr.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D : arrondit ou chanfreine les arêtes' };
+
+I18N_PLUGINS.es.fillet_3d = {
+  tagline: 'Redondea o biseliza los bordes de grupos y componentes, con cuadriláteros listos para la subdivisión.',
+  simple: 'Selecciona un grupo o componente y elige Redondeo o Bisel 45°: los bordes vivos se convierten en curvas suaves hechas de cuadriláteros, listas para SubD y QuadFace Tools. También puedes elegir con el ratón solo algunos bordes o caras, incluso dentro de objetos anidados.',
+  intro: [
+    'robo fillet 3D redondea o biseliza los bordes y las esquinas de grupos y componentes, al estilo de RoundCorner de Fredo6. El resultado está hecho de cuadriláteros con las diagonales ocultas, así que se puede subdividir con SubD o QuadFace Tools sin limpiar nada.',
+    'Sirve cuando un sólido anguloso debe volverse suave: muebles, piezas mecánicas, objetos para modelar en SubD. Eliges el desplazamiento (que es el radio) y ves la vista previa en el modelo antes de aplicar.'
+  ],
+  main: [
+    { t: 'Tres modos', d: 'Redondeo de 2 a 30 segmentos, Bisel 45° con una sola tira plana, o Solo líneas, que traza en el modelo las líneas paralelas a los bordes sin cambiar la geometría.' },
+    { t: 'El desplazamiento es el radio', d: 'El plugin nunca lo modifica. Si el objeto no lo admite, no hace nada: las partes que lo impiden se dibujan en rojo y un mensaje parpadeante indica el desplazamiento máximo. El candado permite superar el límite.' },
+    { t: 'Vista previa verde y de la curva', d: 'Las líneas guía verdes muestran dónde empieza el redondeo y siguen cada cambio. La vista previa de la curva añade una banda azul claro con cuatro líneas azules, siempre legible.' },
+    { t: 'Bordes elegidos con el ratón', d: 'Apunta a una línea o una cara y haz clic: también desde fuera, en cualquier nivel de grupos y componentes anidados. Con Mayús añades o quitas. Si el grupo contiene otros, eliges con el ratón el que redondear.' },
+    { t: 'Cuadriláteros listos para SubD', d: 'Cada cuadrilátero no plano se construye con la diagonal oculta, suave y alisada, como en QuadFace Tools. Se gestionan caras con agujeros y esquinas cóncavas, y las uniones entre dos bordes son ingletas limpias.' },
+    { t: 'Ventana clara, en cinco idiomas', d: 'Campos con las unidades y decimales de SketchUp, flechas arriba y abajo, un icono para cada opción, ayuda integrada y mensajes en el idioma de SketchUp. Tras Aplicar la ventana se cierra y un solo Ctrl+Z lo deshace todo.' }
+  ],
+  steps: ['Selecciona uno o más grupos o componentes y abre robo fillet 3D.', 'Elige Redondeo, Bisel 45° o Solo líneas, escribe el desplazamiento y mira la vista previa verde.', 'Pulsa Aplicar: se crea el nuevo grupo redondeado, y un solo Ctrl+Z lo deshace todo.'],
+  how: [
+    { t: 'El problema que resuelve', d: 'En SketchUp los bordes de un sólido son vivos. Redondearlos a mano requiere muchos pasos y el resultado suele estar hecho de triángulos desordenados, difíciles de subdividir. robo fillet 3D lo hace en un solo paso y construye cuadriláteros regulares.' },
+    { t: 'Paso 1 · Elige qué redondear', d: 'Selecciona los grupos o componentes: con «Todos los bordes» se redondea cada borde más agudo que el ángulo fijado (30° por defecto), también los huecos. Con «Solo los bordes elegidos» eliges líneas o caras con el ratón.' },
+    { t: 'Paso 2 · Desplazamiento y segmentos', d: 'El desplazamiento es la distancia desde el borde donde empieza el redondeo: es el radio. Los segmentos dividen el arco en cuadriláteros (de 2 a 30, siempre par con la topología de cuadriláteros). El bisel usa una sola tira a 45°.' },
+    { t: 'Paso 3 · Vista previa y bloqueo del desplazamiento', d: 'Las líneas verdes siguen los valores en tiempo real. Si el desplazamiento no cabe en el objeto, las partes que lo impiden aparecen en rojo, un mensaje parpadeante explica el motivo e indica el máximo; quitando la marca del candado se redondea igualmente.' },
+    { t: 'Bordes y caras con el ratón', d: 'Con «Solo los bordes elegidos» pasas sobre una línea (se ilumina) o una cara (se ilumina su contorno, agujeros incluidos) y haces clic. Mayús añade o quita, Esc vacía la elección. Funciona también desde fuera y dentro de grupos anidados.' },
+    { t: 'Grupos y componentes anidados', d: 'Si el grupo seleccionado contiene otros, «Todos los bordes» no puede trabajar con él: pasa el ratón sobre el grupo o componente que quieras, una caja azul claro transparente lo muestra, haz clic o pulsa Intro y se redondea solo ese.' },
+    { t: 'Solo líneas', d: 'Traza en el modelo líneas reales paralelas a los bordes elegidos, a la distancia del desplazamiento, en estilo Contorno o Rejilla. Útil como guía para cortes, relieves o subdivisiones.' },
+    { t: 'El resultado', d: 'La copia redondeada es un grupo nuevo junto al objeto, que queda oculto (o se borra, si quieres). Puedes activar la rejilla regular en las caras planas, con el tamaño de celda que elijas.' }
+  ],
+  pros: ['Redondeo y bisel con cuadriláteros', 'Listo para SubD y QuadFace Tools', 'Bordes y caras elegidos con el ratón, incluso anidados', 'El desplazamiento es el radio, nunca modificado', 'Vista previa en tiempo real, un solo Ctrl+Z'],
+  solves: [
+    { p: 'Redondear bordes a mano es lento y da triángulos desordenados.', s: 'Un solo paso, con cuadriláteros regulares y diagonales ocultas.' },
+    { p: 'Con grupos dentro de otros grupos es difícil redondear solo una parte.', s: 'Eliges con el ratón el grupo, la línea o la cara, en cualquier nivel.' }
+  ],
+  specs: [['Menú', 'Robo Tool › robo fillet 3D'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2021.1 o posterior'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.es.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: redondea o biseliza los bordes' };

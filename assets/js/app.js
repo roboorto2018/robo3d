@@ -359,7 +359,7 @@
   function plugin() {
     chrome(false);
     setActiveNav('plugin');
-    var m = /[?&]id=([a-z_]+)/.exec(location.search);
+    var m = /[?&]id=([a-z0-9_]+)/.exec(location.search);
     var idx = m ? byId(m[1]) : -1;
     var root = $('#plugin-root');
     if (idx < 0) {
@@ -498,7 +498,7 @@
       opts += '<option value="' + esc(PLUGINS[i].name) + '">' + esc(PLUGINS[i].name) + '</option>';
     }
     sel.innerHTML = opts;
-    var pre = /[?&]plugin=([a-z_]+)/.exec(location.search);
+    var pre = /[?&]plugin=([a-z0-9_]+)/.exec(location.search);
     if (pre && byId(pre[1]) >= 0) { sel.value = PLUGINS[byId(pre[1])].name; }
 
     var form = $('#contact-form'), status = $('#f-status'), btn = $('#f-send');

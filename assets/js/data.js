@@ -675,6 +675,82 @@ var PLUGINS = [
       { p: 'Alcuni comandi dei plugin non hanno un’icona da mettere in una barra.', s: 'Ricevono un’icona generica che puoi sostituire con la tua.' }
     ],
     specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Backup', 'File .json con barre e icone personalizzate'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+  },
+
+  /* ----------------------------------------------------------- QUICK ALIGN */
+  {
+    id: 'quick_align', name: 'robo quick align', version: '1.0', category: 'Modellazione', hue: 200,
+    donationPrompt: true,
+    images: ['assets/img/screenshots/quick_align-1.png'],
+    tagline: 'Allinea gruppi e componenti sugli assi, con un clic.',
+    simple: 'Seleziona due o più gruppi o componenti e allineali a sinistra, al centro o a destra — oppure in basso, al centro e in alto, o davanti e dietro. Scegli tu se usare gli assi generali del modello o quelli del gruppo o componente in cui stai lavorando.',
+    intro: [
+      'robo quick align allinea tra loro i gruppi e i componenti selezionati lungo uno dei tre assi di SketchUp: rosso (X), blu (Z, altezza) o verde (Y). Per ogni asse ci sono tre allineamenti: sul lato minimo, al centro e sul lato massimo, per un totale di nove comandi.',
+      'Serve quando devi mettere in fila degli oggetti: porte e finestre alla stessa altezza, arredi sullo stesso filo, pilastri sulla stessa linea. Invece di misurare e spostare a mano ogni oggetto, selezioni, premi un pulsante e tutto va al suo posto.'
+    ],
+    main: [
+      { t: 'Nove allineamenti su tre assi', d: 'Asse rosso: a sinistra, al centro, a destra. Asse blu (altezza): in basso, al centro, in alto. Asse verde: davanti, al centro, dietro.' },
+      { t: 'Assi generali o assi del gruppo', d: 'Puoi usare come base dell’allineamento gli assi generali del modello oppure quelli del gruppo o componente che hai aperto per modificarlo. Utile quando il gruppo è ruotato o inclinato.' },
+      { t: 'La scelta si ricorda', d: 'Con due voci in fondo al menu scegli quali assi usare, e SketchUp se lo ricorda anche alla prossima apertura.' },
+      { t: 'Un solo Ctrl+Z', d: 'L’intero allineamento è un’unica operazione: se non ti piace, lo annulli con un solo comando.' },
+      { t: 'Barra e menu', d: 'Nove pulsanti in tre gruppi, uno per colore, e le stesse voci nel menu Estensioni, con l’icona davanti.' },
+      { t: 'Aiuto in cinque lingue', d: 'Una finestra di aiuto spiega ogni allineamento con le icone, e menu e messaggi seguono la lingua di SketchUp.' }
+    ],
+    steps: ['Seleziona due o più gruppi o componenti.', 'Scegli gli assi da usare (generali o del gruppo aperto) dal menu robo quick align.', 'Clicca uno dei nove pulsanti: gli oggetti si allineano, e un solo Ctrl+Z annulla tutto.'],
+    how: [
+      { t: 'Il problema che risolve', d: 'Allineare degli oggetti in SketchUp significa misurare le posizioni e spostarli uno alla volta, oppure fidarsi dell’occhio. Con molti oggetti, o con oggetti di misure diverse, è lungo e impreciso: robo quick align lo fa in un clic.' },
+      { t: 'Passo 1 · Seleziona', d: 'Seleziona due o più gruppi o componenti. Facce e spigoli sciolti, e gli oggetti bloccati, vengono ignorati: servono almeno due oggetti.' },
+      { t: 'Passo 2 · Scegli l’asse e il lato', d: 'I nove pulsanti sono divisi in tre gruppi: rosso (a sinistra, al centro, a destra), blu (in basso, al centro, in alto) e verde (davanti, al centro, dietro). “Sul lato minimo” porta tutti gli oggetti sul bordo dell’oggetto più estremo da quella parte; “al centro” li porta con il centro sulla stessa linea, quella del centro dell’intera selezione.' },
+      { t: 'Assi generali o assi del gruppo', d: 'Gli allineamenti si calcolano sempre rispetto a un sistema di assi, e puoi scegliere quale. Con gli assi generali del modello, sinistra e destra, alto e basso, davanti e dietro sono quelli assoluti di SketchUp. Con gli assi del gruppo o componente, valgono invece gli assi del contenitore che hai aperto per modificarlo: se quel gruppo è ruotato di 30 gradi, “a sinistra” significa a sinistra secondo il gruppo, non secondo il modello. Le due voci con la spunta sono in fondo al menu robo quick align; fuori da ogni gruppo i due sistemi coincidono.' },
+      { t: 'Come si calcola', d: 'Per ogni oggetto si prende il riquadro (BoundingBox) e se ne ricava il valore minimo e massimo lungo l’asse scelto. Da tutti gli oggetti si ricavano il minimo, il massimo e il centro dell’intera selezione, e ogni oggetto viene spostato della distanza che gli manca per arrivare al riferimento. Il riquadro di un oggetto ruotato può essere un po’ più grande della geometria reale.' },
+      { t: 'Un solo annullamento', d: 'Tutti gli spostamenti sono racchiusi in un’unica operazione: un solo Ctrl+Z riporta gli oggetti dov’erano. Se qualcosa non riesce, il plugin annulla tutto e te lo dice, senza lasciare il modello a metà.' },
+      { t: 'Un esempio concreto', d: 'Hai cinque finestre di altezze diverse su una facciata e vuoi che abbiano tutte la stessa architrave. Le selezioni, premi “Allinea in alto” (asse blu) e le sommità si portano alla stessa quota. Poi premi “Allinea al centro” sull’asse rosso per distribuirle su un unico filo verticale. Se il gruppo della facciata è inclinato, apri il gruppo e lascia gli assi del gruppo: gli allineamenti seguono l’inclinazione della facciata.' }
+    ],
+    pros: ['Nove allineamenti con un clic', 'Assi del modello o del gruppo, a scelta', 'Un solo Ctrl+Z annulla tutto', 'Aiuto con le icone in cinque lingue'],
+    solves: [
+      { p: 'Allineare a mano oggetti di misure diverse è lungo e impreciso.', s: 'Un clic porta tutti gli oggetti sullo stesso lato o sulla stessa linea di centro.' },
+      { p: 'Dentro un gruppo ruotato gli assi del modello non coincidono con quelli del disegno.', s: 'Puoi allineare secondo gli assi del gruppo aperto, oppure secondo quelli generali.' }
+    ],
+    specs: [['Menu', 'Robo Tool › robo quick align'], ['Barra strumenti', '9 pulsanti in 3 gruppi (rosso, blu, verde)'], ['Assi di riferimento', 'Del modello oppure del gruppo o componente aperto'], ['Annullamento', 'Un solo Ctrl+Z'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+  },
+
+  /* --------------------------------------------------------------- FILLET 3D */
+  {
+    id: 'fillet_3d', name: 'robo fillet 3D', version: '1.0', category: 'Modellazione', hue: 175,
+    noDownload: true,
+    video: 'viy_7E77m4g',
+    images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.png', 'assets/img/screenshots/fillet_3d-4.png', 'assets/img/screenshots/fillet_3d-5.png', 'assets/img/screenshots/fillet_3d-6.png', 'assets/img/screenshots/fillet_3d-7.png', 'assets/img/screenshots/fillet_3d-8.png', 'assets/img/screenshots/fillet_3d-9.png', 'assets/img/screenshots/fillet_3d-10.png', 'assets/img/screenshots/fillet_3d-11.png', 'assets/img/screenshots/fillet_3d-12.png', 'assets/img/screenshots/fillet_3d-13.png'],
+    tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
+    simple: 'Seleziona un gruppo o un componente e scegli Arrotondamento o Smusso 45°: i bordi vivi diventano curve morbide fatte di quadrilateri, pronti per SubD e QuadFace Tools. Puoi scegliere anche solo certi bordi o facce col mouse, anche dentro oggetti nidificati.',
+    intro: [
+      'robo fillet 3D arrotonda o smussa i bordi e gli angoli di gruppi e componenti, sul modello di RoundCorner di Fredo6. Il risultato è fatto di quadrilateri con le diagonali nascoste, quindi si può suddividere con SubD o QuadFace Tools senza ripulire nulla.',
+      'Serve quando un solido spigoloso deve diventare morbido: mobili, pezzi meccanici, oggetti da modellare in SubD. Scegli lo scostamento (che è il raggio) e vedi l’anteprima sul modello prima di applicare.'
+    ],
+    main: [
+      { t: 'Tre modalità', d: 'Arrotondamento con da 2 a 30 segmenti, Smusso a 45° con una sola striscia piana, oppure Solo linee, che traccia sul modello le linee parallele ai bordi senza cambiare la geometria.' },
+      { t: 'Lo scostamento è il raggio', d: 'Il plugin non lo modifica mai. Se l’oggetto non può contenerlo, non fa nulla: disegna in rosso le parti che lo impediscono e un messaggio lampeggiante indica lo scostamento massimo. Con il lucchetto si può superare il limite.' },
+      { t: 'Anteprima verde e anteprima della curva', d: 'Le linee guida verdi mostrano dove inizia l’arrotondamento e seguono ogni modifica. L’anteprima della curva aggiunge una fascia azzurra con quattro righe blu, sempre leggibile.' },
+      { t: 'Bordi scelti col mouse', d: 'Passa su una linea o su una faccia e fai clic: anche da fuori, a qualsiasi livello di gruppi e componenti nidificati. Con Maiusc aggiungi o togli. Se il gruppo ne contiene altri, scegli col mouse quello da arrotondare.' },
+      { t: 'Quadrilateri pronti per SubD', d: 'Ogni quadrilatero non piano è costruito con la diagonale nascosta, ammorbidita e smussata, come in QuadFace Tools. Facce con fori e angoli concavi sono gestiti, e le giunzioni tra due bordi sono a mitra pulita.' },
+      { t: 'Finestra chiara, in cinque lingue', d: 'Campi con le unità e i decimali di SketchUp, frecce su e giù, icone per ogni opzione, aiuto integrato e messaggi nella lingua di SketchUp. Dopo Applica la finestra si chiude e un solo Ctrl+Z annulla tutto.' }
+    ],
+    steps: ['Seleziona uno o più gruppi o componenti e apri robo fillet 3D.', 'Scegli Arrotondamento, Smusso 45° o Solo linee, scrivi lo scostamento e guarda l’anteprima verde.', 'Premi Applica: nasce il nuovo gruppo arrotondato, e un solo Ctrl+Z annulla tutto.'],
+    how: [
+      { t: 'Il problema che risolve', d: 'In SketchUp i bordi di un solido sono vivi. Per arrotondarli a mano servono molti passaggi e il risultato è spesso fatto di triangoli disordinati, difficili da suddividere. robo fillet 3D lo fa in un solo passaggio e costruisce quadrilateri regolari.' },
+      { t: 'Passo 1 · Scegli cosa arrotondare', d: 'Seleziona i gruppi o i componenti: con “Tutti i bordi” vengono arrotondati tutti i bordi più acuti dell’angolo che imposti (30° di base), anche gli incavi. Con “Solo i bordi scelti” scegli tu le linee o le facce col mouse.' },
+      { t: 'Passo 2 · Scostamento e segmenti', d: 'Lo scostamento è la distanza dal bordo dove inizia l’arrotondamento: è il raggio. I segmenti dividono l’arco in quadrilateri (da 2 a 30, sempre pari con la topologia a quadrilateri). Lo smusso usa una sola striscia a 45°.' },
+      { t: 'Passo 3 · Anteprima e blocco scostamento', d: 'Le linee verdi seguono i valori in tempo reale. Se lo scostamento non sta sull’oggetto compaiono in rosso le parti che lo impediscono, un messaggio lampeggiante spiega il motivo e indica il massimo; togliendo la spunta al lucchetto l’arrotondamento si fa comunque.' },
+      { t: 'Bordi e facce col mouse', d: 'Con “Solo i bordi scelti” passi sopra una linea (si illumina) o una faccia (si illumina il contorno, fori compresi) e fai clic. Maiusc aggiunge o toglie, Esc svuota la scelta. Funziona anche da fuori e dentro gruppi nidificati.' },
+      { t: 'Gruppi e componenti nidificati', d: 'Se il gruppo selezionato ne contiene altri, “Tutti i bordi” non può lavorarci: passa il mouse sul gruppo o componente che vuoi, un box azzurro trasparente lo mostra, fai clic o premi Invio e viene arrotondato solo quello.' },
+      { t: 'Solo linee', d: 'Traccia sul modello vere linee parallele ai bordi scelti, alla distanza dello scostamento, in stile Contorno oppure Reticolo. Utile come guida per tagli, rilievi o suddivisioni.' },
+      { t: 'Il risultato', d: 'La copia arrotondata è un nuovo gruppo accanto all’oggetto, che resta nascosto (o viene cancellato, se vuoi). Puoi attivare la griglia regolare sulle facce piane, con la dimensione della cella che scegli.' }
+    ],
+    pros: ['Arrotondamento e smusso con quadrilateri', 'Pronto per SubD e QuadFace Tools', 'Bordi e facce scelti col mouse, anche nidificati', 'Lo scostamento è il raggio, mai modificato', 'Anteprima in tempo reale, un solo Ctrl+Z'],
+    solves: [
+      { p: 'Arrotondare i bordi a mano è lungo e dà triangoli disordinati.', s: 'Un solo passaggio, con quadrilateri regolari e le diagonali nascoste.' },
+      { p: 'Con gruppi dentro altri gruppi è difficile arrotondare solo una parte.', s: 'Scegli col mouse il gruppo, la linea o la faccia, a qualsiasi livello.' }
+    ],
+    specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   }
 ];
 
@@ -710,7 +786,12 @@ var TOOLBARS = {
   uplevel: { name: 'robo uplevel', groups: [[{ i: 'uplevel.png', l: 'Estrai al livello superiore' }]] },
   start: { name: 'robo start', note: 'Dalle Impostazioni di robo start puoi abilitare o disabilitare i singoli pulsanti che vuoi vedere nella barra.', groups: [[{ i: 'enter.png', l: 'Robo Enter' }, { i: 'rsel.png', l: 'Robo Select All' }], [{ i: 'grp.png', l: 'Crea gruppo' }, { i: 'cmp.png', l: 'Crea componente' }, { i: 'uniq.png', l: 'Rendi unico' }], [{ i: 'expl.png', l: 'Esplodi' }, { i: 'explc.png', l: 'Esplodi curve' }], [{ i: 'sall.png', l: 'Seleziona tutto' }, { i: 'inv.png', l: 'Inverti selezione' }, { i: 'clr.png', l: 'Deseleziona' }, { i: 'close.png', l: 'Chiudi gruppo' }, { i: 'up.png', l: 'Estrai al livello superiore' }, { i: 'weld.png', l: 'Salda spigoli' }, { i: 'face.png', l: 'Crea faccia' }], [{ i: 'hide.png', l: 'Nascondi oggetto' }, { i: 'unh1.png', l: "Mostra l'ultimo nascosto" }, { i: 'unhall.png', l: 'Mostra tutto' }], [{ i: 'guides.png', l: 'Rimuovi guide' }, { i: 'dims.png', l: 'Rimuovi quote' }], [{ i: 'zoom.png', l: 'Zoom sulla selezione' }, { i: 'center.png', l: 'Trova il centro' }], [{ i: 'cpt.png', l: 'Aggiungi punto centrale' }], [{ i: 'fix.png', l: 'Fix 101' }], [{ i: 'help.png', l: 'Guida' }]] },
   extract: { name: 'robo extract', groups: [[{ i: 'copy.png', l: 'robo extract: copia facce e linee fuori dal gruppo' }]] },
+  quick_align: { name: 'robo quick align', groups: [
+    [{ i: 'x_min.png', l: 'Allinea a sinistra (asse rosso X)' }, { i: 'x_center.png', l: 'Allinea al centro (asse rosso X)' }, { i: 'x_max.png', l: 'Allinea a destra (asse rosso X)' }],
+    [{ i: 'z_min.png', l: 'Allinea in basso (asse blu Z)' }, { i: 'z_center.png', l: 'Allinea al centro (asse blu Z)' }, { i: 'z_max.png', l: 'Allinea in alto (asse blu Z)' }],
+    [{ i: 'y_min.png', l: 'Allinea davanti (asse verde Y)' }, { i: 'y_center.png', l: 'Allinea al centro (asse verde Y)' }, { i: 'y_max.png', l: 'Allinea dietro (asse verde Y)' }]] },
   toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.png', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
+  fillet_3d: { name: 'robo fillet 3D', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3D: arrotonda o smussa i bordi' }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },
