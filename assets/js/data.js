@@ -132,7 +132,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- EXPORT OBJECT */
   {
-    id: 'export_object', name: 'robo export object', version: '0.2', category: 'Produttività', hue: 5,
+    id: 'export_object', name: 'robo export object', version: '1.1', category: 'Produttività', hue: 5,
     donationPrompt: true,
     tagline: 'Esporta gli oggetti selezionati in un nuovo file .skp, nella versione che scegli.',
     simple: 'Selezioni una parte del modello: si apre una finestra con il nome già compilato (quello del gruppo o componente), la cartella e la versione di SketchUp. Robo la salva in un file separato, nella stessa posizione, senza toccare il tuo modello aperto.',
