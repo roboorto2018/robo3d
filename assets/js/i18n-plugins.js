@@ -2933,7 +2933,7 @@ I18N_PLUGINS.en.fillet_3d = {
   tagline: 'Rounds or chamfers the edges of groups and components, with quads ready for subdivision.',
   simple: 'Select a group or component and choose Rounding or Chamfer 45°: the sharp edges become soft curves made of quads. You can also pick just some edges or faces with the mouse, even inside nested objects.',
   intro: [
-    'robo fillet 3D rounds or chamfers the edges and corners of groups and components, in the way of Fredo6’s RoundCorner. The result is made of regular quads with the diagonals hidden.',
+    'robo fillet 3d rounds or chamfers the edges and corners of groups and components, in the way of Fredo6’s RoundCorner. The result is made of regular quads with the diagonals hidden.',
     'It is useful when an angular solid has to become soft: furniture, mechanical parts, objects to model. You choose the offset (which is the radius) and see the preview on the model before applying.'
   ],
   main: [
@@ -2944,9 +2944,9 @@ I18N_PLUGINS.en.fillet_3d = {
     { t: 'Regular quads', d: 'Every non-flat quad is built with its diagonal hidden, soft and smooth. Faces with holes and concave corners are handled, and the joins between two edges are clean mitres.' },
     { t: 'A clear window, in five languages', d: 'Fields with SketchUp’s units and decimals, up and down arrows, an icon for every option, built-in help and messages in SketchUp’s language. After Apply the window closes and a single Ctrl+Z undoes everything.' }
   ],
-  steps: ['Select one or more groups or components and open robo fillet 3D.', 'Choose Rounding, Chamfer 45° or Lines only, type the offset and watch the green preview.', 'Press Apply: the new rounded group is made, and a single Ctrl+Z undoes everything.'],
+  steps: ['Select one or more groups or components and open robo fillet 3d.', 'Choose Rounding, Chamfer 45° or Lines only, type the offset and watch the green preview.', 'Press Apply: the new rounded group is made, and a single Ctrl+Z undoes everything.'],
   how: [
-    { t: 'The problem it solves', d: 'In SketchUp the edges of a solid are sharp. Rounding them by hand takes many steps and the result is often made of untidy triangles that are hard to subdivide. robo fillet 3D does it in one step and builds regular quads.' },
+    { t: 'The problem it solves', d: 'In SketchUp the edges of a solid are sharp. Rounding them by hand takes many steps and the result is often made of untidy triangles that are hard to subdivide. robo fillet 3d does it in one step and builds regular quads.' },
     { t: 'Step 1 · Choose what to round', d: 'Select the groups or components: with “All the edges” every edge sharper than the angle you set (30° by default) is rounded, hollows included. With “Only the chosen edges” you pick lines or faces with the mouse.' },
     { t: 'Step 2 · Offset and segments', d: 'The offset is the distance from the edge where the rounding starts: it is the radius. The segments split the arc into quads (2 to 30, always even with quad topology). The chamfer uses a single 45° strip.' },
     { t: 'Step 3 · Preview and offset limit', d: 'The green lines follow the values in real time. If the offset does not fit the object, the parts that stop it appear in red, a flashing message explains why and gives the maximum; unticking the padlock rounds anyway.' },
@@ -2960,15 +2960,15 @@ I18N_PLUGINS.en.fillet_3d = {
     { p: 'Rounding edges by hand is slow and gives untidy triangles.', s: 'A single step, with regular quads and hidden diagonals.' },
     { p: 'With groups inside other groups it is hard to round just one part.', s: 'You choose the group, the line or the face with the mouse, at any level.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2023 or later'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo fillet 3d'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2023 or later'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.en.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: round or chamfer the edges' };
+I18N_TOOLBARS.en.fillet_3d = { 'fillet_3d.png': 'robo fillet 3d: round or chamfer the edges' };
 
 I18N_PLUGINS.de.fillet_3d = {
   tagline: 'Rundet oder fast die Kanten von Gruppen und Komponenten, mit Vierecken, bereit zur Unterteilung.',
   simple: 'Wählen Sie eine Gruppe oder Komponente und wählen Sie Rundung oder Fase 45°: die scharfen Kanten werden zu weichen Kurven aus Vierecken. Sie können auch nur einzelne Kanten oder Flächen mit der Maus wählen, selbst in verschachtelten Objekten.',
   intro: [
-    'robo fillet 3D rundet oder fast die Kanten und Ecken von Gruppen und Komponenten, nach dem Vorbild von Fredo6s RoundCorner. Das Ergebnis besteht aus regelmäßigen Vierecken mit versteckten Diagonalen.',
+    'robo fillet 3d rundet oder fast die Kanten und Ecken von Gruppen und Komponenten, nach dem Vorbild von Fredo6s RoundCorner. Das Ergebnis besteht aus regelmäßigen Vierecken mit versteckten Diagonalen.',
     'Es hilft, wenn ein kantiger Körper weich werden soll: Möbel, mechanische Teile, Objekte zum Modellieren. Sie wählen den Abstand (er ist der Radius) und sehen die Vorschau am Modell, bevor Sie anwenden.'
   ],
   main: [
@@ -2979,9 +2979,9 @@ I18N_PLUGINS.de.fillet_3d = {
     { t: 'Regelmäßige Vierecke', d: 'Jedes nicht ebene Viereck wird mit versteckter, weicher und geglätteter Diagonale gebaut. Flächen mit Löchern und konkave Ecken werden berücksichtigt, und die Verbindungen zweier Kanten sind saubere Gehrungen.' },
     { t: 'Klares Fenster, in fünf Sprachen', d: 'Felder mit den Einheiten und Dezimalstellen von SketchUp, Pfeile auf und ab, ein Symbol für jede Option, integrierte Hilfe und Meldungen in der Sprache von SketchUp. Nach Anwenden schließt sich das Fenster, ein einziges Strg+Z macht alles rückgängig.' }
   ],
-  steps: ['Wählen Sie eine oder mehrere Gruppen oder Komponenten und öffnen Sie robo fillet 3D.', 'Wählen Sie Rundung, Fase 45° oder Nur Linien, geben Sie den Abstand ein und sehen Sie die grüne Vorschau.', 'Klicken Sie auf Anwenden: die neue gerundete Gruppe entsteht, ein einziges Strg+Z macht alles rückgängig.'],
+  steps: ['Wählen Sie eine oder mehrere Gruppen oder Komponenten und öffnen Sie robo fillet 3d.', 'Wählen Sie Rundung, Fase 45° oder Nur Linien, geben Sie den Abstand ein und sehen Sie die grüne Vorschau.', 'Klicken Sie auf Anwenden: die neue gerundete Gruppe entsteht, ein einziges Strg+Z macht alles rückgängig.'],
   how: [
-    { t: 'Das Problem, das es löst', d: 'In SketchUp sind die Kanten eines Körpers scharf. Von Hand zu runden braucht viele Schritte, und das Ergebnis besteht oft aus unordentlichen Dreiecken, die sich schlecht unterteilen lassen. robo fillet 3D erledigt es in einem Schritt und baut regelmäßige Vierecke.' },
+    { t: 'Das Problem, das es löst', d: 'In SketchUp sind die Kanten eines Körpers scharf. Von Hand zu runden braucht viele Schritte, und das Ergebnis besteht oft aus unordentlichen Dreiecken, die sich schlecht unterteilen lassen. robo fillet 3d erledigt es in einem Schritt und baut regelmäßige Vierecke.' },
     { t: 'Schritt 1 · Wählen, was gerundet wird', d: 'Wählen Sie die Gruppen oder Komponenten: mit „Alle Kanten“ wird jede Kante gerundet, die schärfer ist als der eingestellte Winkel (standardmäßig 30°), auch Vertiefungen. Mit „Nur die gewählten Kanten“ wählen Sie Linien oder Flächen mit der Maus.' },
     { t: 'Schritt 2 · Abstand und Segmente', d: 'Der Abstand ist die Entfernung von der Kante, wo die Rundung beginnt: er ist der Radius. Die Segmente teilen den Bogen in Vierecke (2 bis 30, mit Vierecks-Topologie immer gerade). Die Fase nutzt einen einzigen 45°-Streifen.' },
     { t: 'Schritt 3 · Vorschau und Abstandsblock', d: 'Die grünen Linien folgen den Werten in Echtzeit. Passt der Abstand nicht auf das Objekt, erscheinen die Stellen, die ihn verhindern, rot, eine blinkende Meldung nennt den Grund und das Maximum; ohne Häkchen am Schloss wird trotzdem gerundet.' },
@@ -2995,15 +2995,15 @@ I18N_PLUGINS.de.fillet_3d = {
     { p: 'Kanten von Hand zu runden ist langsam und ergibt unordentliche Dreiecke.', s: 'Ein einziger Schritt, mit regelmäßigen Vierecken und versteckten Diagonalen.' },
     { p: 'Bei Gruppen in anderen Gruppen ist es schwer, nur einen Teil zu runden.', s: 'Sie wählen Gruppe, Linie oder Fläche mit der Maus, auf jeder Ebene.' }
   ],
-  specs: [['Menü', 'Robo Tool › robo fillet 3D'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2023 oder neuer'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menü', 'Robo Tool › robo fillet 3d'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2023 oder neuer'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.de.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: Kanten runden oder anfasen' };
+I18N_TOOLBARS.de.fillet_3d = { 'fillet_3d.png': 'robo fillet 3d: Kanten runden oder anfasen' };
 
 I18N_PLUGINS.fr.fillet_3d = {
   tagline: 'Arrondit ou chanfreine les arêtes des groupes et composants, avec des quadrilatères prêts pour la subdivision.',
   simple: 'Sélectionnez un groupe ou un composant et choisissez Arrondi ou Chanfrein 45° : les arêtes vives deviennent des courbes douces faites de quadrilatères. Vous pouvez aussi choisir à la souris seulement certaines arêtes ou faces, même dans des objets imbriqués.',
   intro: [
-    'robo fillet 3D arrondit ou chanfreine les arêtes et les coins des groupes et composants, à la manière de RoundCorner de Fredo6. Le résultat est fait de quadrilatères réguliers aux diagonales masquées.',
+    'robo fillet 3d arrondit ou chanfreine les arêtes et les coins des groupes et composants, à la manière de RoundCorner de Fredo6. Le résultat est fait de quadrilatères réguliers aux diagonales masquées.',
     'C’est utile quand un solide anguleux doit devenir doux : meubles, pièces mécaniques, objets à modéliser. Vous choisissez le décalage (qui est le rayon) et voyez l’aperçu sur le modèle avant d’appliquer.'
   ],
   main: [
@@ -3014,9 +3014,9 @@ I18N_PLUGINS.fr.fillet_3d = {
     { t: 'Quadrilatères réguliers', d: 'Chaque quadrilatère non plan est construit avec sa diagonale masquée, adoucie et lissée. Les faces avec trous et les coins concaves sont gérés, et les jonctions entre deux arêtes sont de onglets propres.' },
     { t: 'Une fenêtre claire, en cinq langues', d: 'Champs avec les unités et décimales de SketchUp, flèches haut et bas, une icône pour chaque option, aide intégrée et messages dans la langue de SketchUp. Après Appliquer la fenêtre se ferme et un seul Ctrl+Z annule tout.' }
   ],
-  steps: ['Sélectionnez un ou plusieurs groupes ou composants et ouvrez robo fillet 3D.', 'Choisissez Arrondi, Chanfrein 45° ou Lignes seules, saisissez le décalage et regardez l’aperçu vert.', 'Cliquez sur Appliquer : le nouveau groupe arrondi est créé, et un seul Ctrl+Z annule tout.'],
+  steps: ['Sélectionnez un ou plusieurs groupes ou composants et ouvrez robo fillet 3d.', 'Choisissez Arrondi, Chanfrein 45° ou Lignes seules, saisissez le décalage et regardez l’aperçu vert.', 'Cliquez sur Appliquer : le nouveau groupe arrondi est créé, et un seul Ctrl+Z annule tout.'],
   how: [
-    { t: 'Le problème qu’il résout', d: 'Dans SketchUp les arêtes d’un solide sont vives. Les arrondir à la main demande beaucoup d’étapes et le résultat est souvent fait de triangles désordonnés, difficiles à subdiviser. robo fillet 3D le fait en une seule étape et construit des quadrilatères réguliers.' },
+    { t: 'Le problème qu’il résout', d: 'Dans SketchUp les arêtes d’un solide sont vives. Les arrondir à la main demande beaucoup d’étapes et le résultat est souvent fait de triangles désordonnés, difficiles à subdiviser. robo fillet 3d le fait en une seule étape et construit des quadrilatères réguliers.' },
     { t: 'Étape 1 · Choisissez quoi arrondir', d: 'Sélectionnez les groupes ou composants : avec « Toutes les arêtes » toute arête plus aiguë que l’angle réglé (30° par défaut) est arrondie, creux compris. Avec « Seulement les arêtes choisies » vous choisissez lignes ou faces à la souris.' },
     { t: 'Étape 2 · Décalage et segments', d: 'Le décalage est la distance à partir de l’arête où commence l’arrondi : c’est le rayon. Les segments divisent l’arc en quadrilatères (de 2 à 30, toujours pair avec la topologie en quadrilatères). Le chanfrein utilise une seule bande à 45°.' },
     { t: 'Étape 3 · Aperçu et blocage du décalage', d: 'Les lignes vertes suivent les valeurs en temps réel. Si le décalage ne tient pas sur l’objet, les parties qui l’empêchent apparaissent en rouge, un message clignotant en explique la raison et donne le maximum ; en décochant le cadenas on arrondit quand même.' },
@@ -3030,15 +3030,15 @@ I18N_PLUGINS.fr.fillet_3d = {
     { p: 'Arrondir les arêtes à la main est long et donne des triangles désordonnés.', s: 'Une seule étape, avec des quadrilatères réguliers et des diagonales masquées.' },
     { p: 'Avec des groupes dans d’autres groupes, il est difficile d’arrondir une seule partie.', s: 'Vous choisissez à la souris le groupe, la ligne ou la face, à tout niveau.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'SketchUp 2023 ou plus récent'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo fillet 3d'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'SketchUp 2023 ou plus récent'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.fr.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D : arrondit ou chanfreine les arêtes' };
+I18N_TOOLBARS.fr.fillet_3d = { 'fillet_3d.png': 'robo fillet 3d : arrondit ou chanfreine les arêtes' };
 
 I18N_PLUGINS.es.fillet_3d = {
   tagline: 'Redondea o biseliza los bordes de grupos y componentes, con cuadriláteros listos para la subdivisión.',
   simple: 'Selecciona un grupo o componente y elige Redondeo o Bisel 45°: los bordes vivos se convierten en curvas suaves hechas de cuadriláteros. También puedes elegir con el ratón solo algunos bordes o caras, incluso dentro de objetos anidados.',
   intro: [
-    'robo fillet 3D redondea o biseliza los bordes y las esquinas de grupos y componentes, al estilo de RoundCorner de Fredo6. El resultado está hecho de cuadriláteros regulares con las diagonales ocultas.',
+    'robo fillet 3d redondea o biseliza los bordes y las esquinas de grupos y componentes, al estilo de RoundCorner de Fredo6. El resultado está hecho de cuadriláteros regulares con las diagonales ocultas.',
     'Sirve cuando un sólido anguloso debe volverse suave: muebles, piezas mecánicas, objetos para modelar. Eliges el desplazamiento (que es el radio) y ves la vista previa en el modelo antes de aplicar.'
   ],
   main: [
@@ -3049,9 +3049,9 @@ I18N_PLUGINS.es.fillet_3d = {
     { t: 'Cuadriláteros regulares', d: 'Cada cuadrilátero no plano se construye con la diagonal oculta, suave y alisada. Se gestionan caras con agujeros y esquinas cóncavas, y las uniones entre dos bordes son ingletas limpias.' },
     { t: 'Ventana clara, en cinco idiomas', d: 'Campos con las unidades y decimales de SketchUp, flechas arriba y abajo, un icono para cada opción, ayuda integrada y mensajes en el idioma de SketchUp. Tras Aplicar la ventana se cierra y un solo Ctrl+Z lo deshace todo.' }
   ],
-  steps: ['Selecciona uno o más grupos o componentes y abre robo fillet 3D.', 'Elige Redondeo, Bisel 45° o Solo líneas, escribe el desplazamiento y mira la vista previa verde.', 'Pulsa Aplicar: se crea el nuevo grupo redondeado, y un solo Ctrl+Z lo deshace todo.'],
+  steps: ['Selecciona uno o más grupos o componentes y abre robo fillet 3d.', 'Elige Redondeo, Bisel 45° o Solo líneas, escribe el desplazamiento y mira la vista previa verde.', 'Pulsa Aplicar: se crea el nuevo grupo redondeado, y un solo Ctrl+Z lo deshace todo.'],
   how: [
-    { t: 'El problema que resuelve', d: 'En SketchUp los bordes de un sólido son vivos. Redondearlos a mano requiere muchos pasos y el resultado suele estar hecho de triángulos desordenados, difíciles de subdividir. robo fillet 3D lo hace en un solo paso y construye cuadriláteros regulares.' },
+    { t: 'El problema que resuelve', d: 'En SketchUp los bordes de un sólido son vivos. Redondearlos a mano requiere muchos pasos y el resultado suele estar hecho de triángulos desordenados, difíciles de subdividir. robo fillet 3d lo hace en un solo paso y construye cuadriláteros regulares.' },
     { t: 'Paso 1 · Elige qué redondear', d: 'Selecciona los grupos o componentes: con «Todos los bordes» se redondea cada borde más agudo que el ángulo fijado (30° por defecto), también los huecos. Con «Solo los bordes elegidos» eliges líneas o caras con el ratón.' },
     { t: 'Paso 2 · Desplazamiento y segmentos', d: 'El desplazamiento es la distancia desde el borde donde empieza el redondeo: es el radio. Los segmentos dividen el arco en cuadriláteros (de 2 a 30, siempre par con la topología de cuadriláteros). El bisel usa una sola tira a 45°.' },
     { t: 'Paso 3 · Vista previa y bloqueo del desplazamiento', d: 'Las líneas verdes siguen los valores en tiempo real. Si el desplazamiento no cabe en el objeto, las partes que lo impiden aparecen en rojo, un mensaje parpadeante explica el motivo e indica el máximo; quitando la marca del candado se redondea igualmente.' },
@@ -3065,14 +3065,14 @@ I18N_PLUGINS.es.fillet_3d = {
     { p: 'Redondear bordes a mano es lento y da triángulos desordenados.', s: 'Un solo paso, con cuadriláteros regulares y diagonales ocultas.' },
     { p: 'Con grupos dentro de otros grupos es difícil redondear solo una parte.', s: 'Eliges con el ratón el grupo, la línea o la cara, en cualquier nivel.' }
   ],
-  specs: [['Menú', 'Robo Tool › robo fillet 3D'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menú', 'Robo Tool › robo fillet 3d'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.es.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: redondea o biseliza los bordes' };
+I18N_TOOLBARS.es.fillet_3d = { 'fillet_3d.png': 'robo fillet 3d: redondea o biseliza los bordes' };
 I18N_PLUGINS.en.doctor = {
 tagline: 'Checks that groups and components are solid, shows where the holes and errors are and repairs them with quads.',
-simple: 'Select a group or component: robo Doctor tells you whether it is solid (closed, without holes, with the faces pointing outward) and draws in the model, in different colours, the points to fix. Then you close the holes one by one or all together.',
+simple: 'Select a group or component: robo doctor tells you whether it is solid (closed, without holes, with the faces pointing outward) and draws in the model, in different colours, the points to fix. Then you close the holes one by one or all together.',
 intro: [
-  'robo Doctor checks groups and components, nested ones too, with a simple question: is the object a solid? If it is not, it shows you where and why, and helps you repair it.',
+  'robo doctor checks groups and components, nested ones too, with a simple question: is the object a solid? If it is not, it shows you where and why, and helps you repair it.',
       'It is useful before 3D printing, exporting or subdividing a model: a solid with holes, flipped faces or extra lines gives trouble to almost every program. The plugin changes nothing until you decide.'
 ],
 main: [
@@ -3083,9 +3083,9 @@ main: [
     { t: 'Cleaning useless lines', d: 'It joins coplanar faces, also only through hidden or soft lines, removes useless triangles and diagonals without opening holes and erases stray lines. The colours of the faces are respected, unless you choose to ignore them.' },
     { t: 'A clear window, in five languages', d: 'Buttons always visible at the bottom, built-in help with a topic for every subject, language choice with the globe and options that are remembered. Every operation can be undone with Ctrl+Z.' }
 ],
-steps: ['Select a group or component (or pick the nested one with the mouse) and open robo Doctor.', 'Look at the state and at the errors in colour in the model, then press Make solid to open the list of holes.', 'Close the holes with Solve, Close quads, Close triangles or Solve all, and go back with Undo if needed.'],
+steps: ['Select a group or component (or pick the nested one with the mouse) and open robo doctor.', 'Look at the state and at the errors in colour in the model, then press Make solid to open the list of holes.', 'Close the holes with Solve, Close quads, Close triangles or Solve all, and go back with Undo if needed.'],
 how: [
-    { t: 'The problem it solves', d: 'In SketchUp it is easy to make objects that look closed but are not: a small hole, a flipped face, two almost equal points. Finding them by eye takes long, and closing them by hand often makes untidy triangles. robo Doctor looks for them and closes them with quads.' },
+    { t: 'The problem it solves', d: 'In SketchUp it is easy to make objects that look closed but are not: a small hole, a flipped face, two almost equal points. Finding them by eye takes long, and closing them by hand often makes untidy triangles. robo doctor looks for them and closes them with quads.' },
     { t: 'Step 1 · Choose the object', d: 'Select a group or component, or use “Choose a group or component (nested too)”: as you move the mouse a light blue box shows the object, the click opens the groups down to it. Nested objects are checked together.' },
     { t: 'Step 2 · Read the errors', d: 'Every kind of error has a colour and a box to show or hide it: open edges (red), more than two faces (violet), mixed normals (green), near vertices (blue), stray lines (yellow), inward normals (brown).' },
     { t: 'Step 3 · Make solid', d: 'It opens the holes and errors window: every hole has the lens to go to it, the Solve button and the colour that says how it will close. A hole left open by a single missing line closes by joining the two ends.' },
@@ -3098,14 +3098,14 @@ solves: [
     { p: 'An object looks closed but is not, and it is hard to see where.', s: 'The errors appear in the model in their colour, also through the object.' },
     { p: 'Closing holes by hand makes untidy triangles.', s: 'The plugin builds flat quads and leaves the choice of triangles to you.' }
 ],
-specs: [['Menu', 'Robo Tool › robo Doctor'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2023 or later'], ['Undo', 'Every closing is one operation: Ctrl+Z or the Undo button'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+specs: [['Menu', 'Robo Tool › robo doctor'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2023 or later'], ['Undo', 'Every closing is one operation: Ctrl+Z or the Undo button'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.en.doctor = { 'doctor.png': 'robo Doctor: check and repair solids' };
+I18N_TOOLBARS.en.doctor = { 'doctor.png': 'robo doctor: check and repair solids' };
 I18N_PLUGINS.de.doctor = {
 tagline: 'Prüft, ob Gruppen und Komponenten solide sind, zeigt, wo Löcher und Fehler sind, und repariert sie mit Vierecken.',
-simple: 'Wähle eine Gruppe oder Komponente: robo Doctor sagt dir, ob sie solide ist (geschlossen, ohne Löcher, mit nach außen gerichteten Flächen), und zeichnet die zu korrigierenden Stellen in verschiedenen Farben ins Modell. Dann schließt du die Löcher einzeln oder alle zusammen.',
+simple: 'Wähle eine Gruppe oder Komponente: robo doctor sagt dir, ob sie solide ist (geschlossen, ohne Löcher, mit nach außen gerichteten Flächen), und zeichnet die zu korrigierenden Stellen in verschiedenen Farben ins Modell. Dann schließt du die Löcher einzeln oder alle zusammen.',
 intro: [
-  'robo Doctor prüft Gruppen und Komponenten, auch verschachtelte, mit einer einfachen Frage: Ist das Objekt ein Volumenkörper? Wenn nicht, zeigt es dir wo und warum und hilft bei der Reparatur.',
+  'robo doctor prüft Gruppen und Komponenten, auch verschachtelte, mit einer einfachen Frage: Ist das Objekt ein Volumenkörper? Wenn nicht, zeigt es dir wo und warum und hilft bei der Reparatur.',
       'Das ist nützlich vor dem 3D-Druck, Export oder Unterteilen eines Modells: Ein Körper mit Löchern, gewendeten Flächen oder überflüssigen Linien macht fast jedem Programm Probleme. Das Plugin ändert nichts, bis du es entscheidest.'
 ],
 main: [
@@ -3116,9 +3116,9 @@ main: [
     { t: 'Unnötige Linien bereinigen', d: 'Verbindet ebene Flächen, auch nur über versteckte oder weiche Linien, entfernt unnötige Dreiecke und Diagonalen, ohne Löcher zu öffnen, und löscht lose Linien. Die Farben der Flächen werden beachtet, außer du entscheidest, sie zu ignorieren.' },
     { t: 'Klares Fenster, in fünf Sprachen', d: 'Immer sichtbare Schaltflächen unten, eingebaute Hilfe mit einem Thema für jedes Thema, Sprachwahl mit dem Globus und gespeicherte Optionen. Jeder Vorgang lässt sich mit Strg+Z rückgängig machen.' }
 ],
-steps: ['Wähle eine Gruppe oder Komponente (oder die verschachtelte mit der Maus) und öffne robo Doctor.', 'Sieh dir den Status und die Fehler in Farbe im Modell an und drücke dann Solide machen, um die Lochliste zu öffnen.', 'Schließe die Löcher mit Lösen, Vierecke schließen, Dreiecke schließen oder Alle lösen und gehe bei Bedarf mit Rückgängig zurück.'],
+steps: ['Wähle eine Gruppe oder Komponente (oder die verschachtelte mit der Maus) und öffne robo doctor.', 'Sieh dir den Status und die Fehler in Farbe im Modell an und drücke dann Solide machen, um die Lochliste zu öffnen.', 'Schließe die Löcher mit Lösen, Vierecke schließen, Dreiecke schließen oder Alle lösen und gehe bei Bedarf mit Rückgängig zurück.'],
 how: [
-    { t: 'Das Problem, das es löst', d: 'In SketchUp entstehen leicht Objekte, die geschlossen aussehen, es aber nicht sind: ein kleines Loch, eine gewendete Fläche, zwei fast gleiche Punkte. Sie von Auge zu finden dauert, und sie von Hand zu schließen erzeugt oft unordentliche Dreiecke. robo Doctor sucht sie für dich und schließt sie mit Vierecken.' },
+    { t: 'Das Problem, das es löst', d: 'In SketchUp entstehen leicht Objekte, die geschlossen aussehen, es aber nicht sind: ein kleines Loch, eine gewendete Fläche, zwei fast gleiche Punkte. Sie von Auge zu finden dauert, und sie von Hand zu schließen erzeugt oft unordentliche Dreiecke. robo doctor sucht sie für dich und schließt sie mit Vierecken.' },
     { t: 'Schritt 1 · Objekt wählen', d: 'Wähle eine Gruppe oder Komponente oder nutze „Gruppe oder Komponente wählen (auch verschachtelt)“: Beim Bewegen der Maus zeigt ein hellblauer Kasten das Objekt, der Klick öffnet die Gruppen bis dorthin. Verschachtelte Objekte werden zusammen geprüft.' },
     { t: 'Schritt 2 · Fehler lesen', d: 'Jede Fehlerart hat eine Farbe und ein Kästchen zum Zeigen oder Ausblenden: offene Kanten (Rot), mehr als zwei Flächen (Violett), widersprüchliche Normalen (Grün), nahe Punkte (Blau), lose Linien (Gelb), Normalen nach innen (Braun).' },
     { t: 'Schritt 3 · Solide machen', d: 'Öffnet das Fenster Löcher und Fehler: Jedes Loch hat die Lupe, die Schaltfläche Lösen und die Farbe, die zeigt, wie es sich schließt. Ein Loch, das durch eine einzige fehlende Linie offen ist, schließt sich, indem die beiden Enden verbunden werden.' },
@@ -3131,14 +3131,14 @@ solves: [
     { p: 'Ein Objekt sieht geschlossen aus, ist es aber nicht, und man sieht nicht wo.', s: 'Die Fehler erscheinen im Modell in ihrer Farbe, auch durch das Objekt.' },
     { p: 'Löcher von Hand zu schließen erzeugt unordentliche Dreiecke.', s: 'Das Plugin baut ebene Vierecke und überlässt dir die Wahl der Dreiecke.' }
 ],
-specs: [['Menü', 'Robo Tool › robo Doctor'], ['Werkzeugleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2023 oder neuer'], ['Rückgängig', 'Jedes Schließen ist ein Vorgang: Strg+Z oder die Schaltfläche Rückgängig'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+specs: [['Menü', 'Robo Tool › robo doctor'], ['Werkzeugleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2023 oder neuer'], ['Rückgängig', 'Jedes Schließen ist ein Vorgang: Strg+Z oder die Schaltfläche Rückgängig'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.de.doctor = { 'doctor.png': 'robo Doctor: Volumenkörper prüfen und reparieren' };
+I18N_TOOLBARS.de.doctor = { 'doctor.png': 'robo doctor: Volumenkörper prüfen und reparieren' };
 I18N_PLUGINS.fr.doctor = {
 tagline: 'Vérifie que les groupes et composants sont solides, montre où sont les trous et les erreurs et les répare avec des quadrilatères.',
-simple: 'Sélectionnez un groupe ou un composant : robo Doctor vous dit s’il est solide (fermé, sans trous, avec les faces tournées vers l’extérieur) et dessine dans le modèle, en couleurs différentes, les points à corriger. Ensuite vous fermez les trous un par un ou tous ensemble.',
+simple: 'Sélectionnez un groupe ou un composant : robo doctor vous dit s’il est solide (fermé, sans trous, avec les faces tournées vers l’extérieur) et dessine dans le modèle, en couleurs différentes, les points à corriger. Ensuite vous fermez les trous un par un ou tous ensemble.',
 intro: [
-  'robo Doctor contrôle les groupes et composants, même imbriqués, avec une question simple : l’objet est-il un solide ? Sinon, il vous montre où et pourquoi, et vous aide à le réparer.',
+  'robo doctor contrôle les groupes et composants, même imbriqués, avec une question simple : l’objet est-il un solide ? Sinon, il vous montre où et pourquoi, et vous aide à le réparer.',
       'C’est utile avant d’imprimer en 3D, d’exporter ou de subdiviser un modèle : un solide avec des trous, des faces retournées ou des lignes en trop pose problème à presque tous les programmes. Le plugin ne change rien tant que vous ne décidez pas.'
 ],
 main: [
@@ -3149,9 +3149,9 @@ main: [
     { t: 'Nettoyage des lignes inutiles', d: 'Fusionne les faces coplanaires, même seulement à travers les lignes masquées ou adoucies, retire les triangles et diagonales inutiles sans ouvrir de trous et efface les lignes isolées. Les couleurs des faces sont respectées, sauf si vous choisissez de les ignorer.' },
     { t: 'Fenêtre claire, en cinq langues', d: 'Boutons toujours visibles en bas, aide intégrée avec un sujet pour chaque thème, choix de la langue avec le globe et options mémorisées. Chaque opération s’annule avec Ctrl+Z.' }
 ],
-steps: ['Sélectionnez un groupe ou un composant (ou choisissez l’imbriqué à la souris) et ouvrez robo Doctor.', 'Regardez l’état et les erreurs en couleur dans le modèle, puis appuyez sur Rendre solide pour ouvrir la liste des trous.', 'Fermez les trous avec Résoudre, Fermer quads, Fermer triangles ou Tout résoudre, et revenez avec Annuler si besoin.'],
+steps: ['Sélectionnez un groupe ou un composant (ou choisissez l’imbriqué à la souris) et ouvrez robo doctor.', 'Regardez l’état et les erreurs en couleur dans le modèle, puis appuyez sur Rendre solide pour ouvrir la liste des trous.', 'Fermez les trous avec Résoudre, Fermer quads, Fermer triangles ou Tout résoudre, et revenez avec Annuler si besoin.'],
 how: [
-    { t: 'Le problème résolu', d: 'Dans SketchUp il est facile de créer des objets qui semblent fermés mais ne le sont pas : un petit trou, une face retournée, deux points presque égaux. Les trouver à l’œil prend du temps, et les fermer à la main crée souvent des triangles en désordre. robo Doctor les cherche pour vous et les ferme avec des quadrilatères.' },
+    { t: 'Le problème résolu', d: 'Dans SketchUp il est facile de créer des objets qui semblent fermés mais ne le sont pas : un petit trou, une face retournée, deux points presque égaux. Les trouver à l’œil prend du temps, et les fermer à la main crée souvent des triangles en désordre. robo doctor les cherche pour vous et les ferme avec des quadrilatères.' },
     { t: 'Étape 1 · Choisir l’objet', d: 'Sélectionnez un groupe ou composant, ou utilisez « Choisir un groupe ou composant (même imbriqué) » : en passant la souris, une boîte bleu clair montre l’objet, le clic ouvre les groupes jusqu’à lui. Les objets imbriqués sont contrôlés ensemble.' },
     { t: 'Étape 2 · Lire les erreurs', d: 'Chaque type d’erreur a une couleur et une case pour l’afficher ou le masquer : arêtes ouvertes (rouge), plus de deux faces (violet), normales incohérentes (vert), sommets proches (bleu), lignes isolées (jaune), normales vers l’intérieur (marron).' },
     { t: 'Étape 3 · Rendre solide', d: 'Ouvre la fenêtre trous et erreurs : chaque trou a la loupe pour y aller, le bouton Résoudre et la couleur qui dit comment il se fermera. Un trou laissé ouvert par une seule ligne manquante se ferme en joignant les deux extrémités.' },
@@ -3164,14 +3164,14 @@ solves: [
     { p: 'Un objet semble fermé mais ne l’est pas, et on ne voit pas où.', s: 'Les erreurs apparaissent dans le modèle dans leur couleur, aussi à travers l’objet.' },
     { p: 'Fermer les trous à la main crée des triangles en désordre.', s: 'Le plugin construit des quadrilatères plans et vous laisse le choix des triangles.' }
 ],
-specs: [['Menu', 'Robo Tool › robo Doctor'], ['Barre d’outils', '1 bouton'], ['Requiert', 'SketchUp 2023 ou ultérieur'], ['Annulation', 'Chaque fermeture est une opération : Ctrl+Z ou le bouton Annuler'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+specs: [['Menu', 'Robo Tool › robo doctor'], ['Barre d’outils', '1 bouton'], ['Requiert', 'SketchUp 2023 ou ultérieur'], ['Annulation', 'Chaque fermeture est une opération : Ctrl+Z ou le bouton Annuler'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.fr.doctor = { 'doctor.png': 'robo Doctor : contrôle et répare les solides' };
+I18N_TOOLBARS.fr.doctor = { 'doctor.png': 'robo doctor : contrôle et répare les solides' };
 I18N_PLUGINS.es.doctor = {
 tagline: 'Comprueba si los grupos y componentes son sólidos, muestra dónde están los agujeros y errores y los repara con cuadriláteros.',
-simple: 'Selecciona un grupo o componente: robo Doctor te dice si es sólido (cerrado, sin agujeros, con las caras hacia fuera) y dibuja en el modelo, con colores distintos, los puntos por corregir. Luego cierras los agujeros uno a uno o todos juntos.',
+simple: 'Selecciona un grupo o componente: robo doctor te dice si es sólido (cerrado, sin agujeros, con las caras hacia fuera) y dibuja en el modelo, con colores distintos, los puntos por corregir. Luego cierras los agujeros uno a uno o todos juntos.',
 intro: [
-  'robo Doctor revisa grupos y componentes, también anidados, con una pregunta sencilla: ¿el objeto es un sólido? Si no lo es, te muestra dónde y por qué, y te ayuda a repararlo.',
+  'robo doctor revisa grupos y componentes, también anidados, con una pregunta sencilla: ¿el objeto es un sólido? Si no lo es, te muestra dónde y por qué, y te ayuda a repararlo.',
       'Sirve antes de imprimir en 3D, exportar o subdividir un modelo: un sólido con agujeros, caras giradas o líneas de más da problemas a casi todos los programas. El plugin no cambia nada hasta que tú lo decides.'
 ],
 main: [
@@ -3182,9 +3182,9 @@ main: [
     { t: 'Limpieza de líneas inútiles', d: 'Une caras coplanares, también solo a través de líneas ocultas o suaves, quita triángulos y diagonales inútiles sin abrir agujeros y borra las líneas sueltas. Se respetan los colores de las caras, salvo que elijas ignorarlos.' },
     { t: 'Ventana clara, en cinco idiomas', d: 'Botones siempre visibles abajo, ayuda integrada con un tema para cada asunto, elección del idioma con el globo y opciones que se recuerdan. Toda operación se deshace con Ctrl+Z.' }
 ],
-steps: ['Selecciona un grupo o componente (o elige el anidado con el ratón) y abre robo Doctor.', 'Mira el estado y los errores en color en el modelo, y pulsa Hacer sólido para abrir la lista de agujeros.', 'Cierra los agujeros con Resolver, Cerrar cuadriláteros, Cerrar triángulos o Resolver todos, y vuelve con Deshacer si hace falta.'],
+steps: ['Selecciona un grupo o componente (o elige el anidado con el ratón) y abre robo doctor.', 'Mira el estado y los errores en color en el modelo, y pulsa Hacer sólido para abrir la lista de agujeros.', 'Cierra los agujeros con Resolver, Cerrar cuadriláteros, Cerrar triángulos o Resolver todos, y vuelve con Deshacer si hace falta.'],
 how: [
-    { t: 'El problema que resuelve', d: 'En SketchUp es fácil crear objetos que parecen cerrados pero no lo son: un agujero pequeño, una cara girada, dos puntos casi iguales. Encontrarlos a ojo lleva tiempo, y cerrarlos a mano suele dar triángulos desordenados. robo Doctor los busca por ti y los cierra con cuadriláteros.' },
+    { t: 'El problema que resuelve', d: 'En SketchUp es fácil crear objetos que parecen cerrados pero no lo son: un agujero pequeño, una cara girada, dos puntos casi iguales. Encontrarlos a ojo lleva tiempo, y cerrarlos a mano suele dar triángulos desordenados. robo doctor los busca por ti y los cierra con cuadriláteros.' },
     { t: 'Paso 1 · Elige el objeto', d: 'Selecciona un grupo o componente, o usa «Elegir un grupo o componente (también anidado)»: al pasar el ratón una caja azul clara muestra el objeto, el clic abre los grupos hasta él. Los objetos anidados se revisan juntos.' },
     { t: 'Paso 2 · Lee los errores', d: 'Cada tipo de error tiene un color y una casilla para mostrarlo u ocultarlo: aristas abiertas (rojo), más de dos caras (violeta), normales incoherentes (verde), vértices cercanos (azul), líneas sueltas (amarillo), normales hacia dentro (marrón).' },
     { t: 'Paso 3 · Hacer sólido', d: 'Abre la ventana agujeros y errores: cada agujero tiene la lupa para ir a él, el botón Resolver y el color que dice cómo se cerrará. Un agujero abierto por una sola línea que falta se cierra uniendo los dos extremos.' },
@@ -3197,6 +3197,6 @@ solves: [
     { p: 'Un objeto parece cerrado pero no lo está, y no se ve dónde.', s: 'Los errores aparecen en el modelo con su color, también a través del objeto.' },
     { p: 'Cerrar agujeros a mano da triángulos desordenados.', s: 'El plugin construye cuadriláteros planos y te deja la elección de los triángulos.' }
 ],
-specs: [['Menú', 'Robo Tool › robo Doctor'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Deshacer', 'Cada cierre es una operación: Ctrl+Z o el botón Deshacer'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+specs: [['Menú', 'Robo Tool › robo doctor'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Deshacer', 'Cada cierre es una operación: Ctrl+Z o el botón Deshacer'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.es.doctor = { 'doctor.png': 'robo Doctor: comprueba y repara los sólidos' };
+I18N_TOOLBARS.es.doctor = { 'doctor.png': 'robo doctor: comprueba y repara los sólidos' };

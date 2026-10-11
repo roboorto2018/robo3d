@@ -716,14 +716,13 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- FILLET 3D */
   {
-    id: 'fillet_3d', name: 'robo fillet 3D', version: '1.0', category: 'Modellazione', hue: 175,
-    noDownload: true,
+    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.0', category: 'Modellazione', hue: 175,
     video: 'viy_7E77m4g',
     images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.png', 'assets/img/screenshots/fillet_3d-4.png', 'assets/img/screenshots/fillet_3d-5.png', 'assets/img/screenshots/fillet_3d-6.png', 'assets/img/screenshots/fillet_3d-7.png', 'assets/img/screenshots/fillet_3d-8.png', 'assets/img/screenshots/fillet_3d-9.png', 'assets/img/screenshots/fillet_3d-10.png', 'assets/img/screenshots/fillet_3d-11.png', 'assets/img/screenshots/fillet_3d-12.png', 'assets/img/screenshots/fillet_3d-13.png'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
     simple: 'Seleziona un gruppo o un componente e scegli Arrotondamento o Smusso 45°: i bordi vivi diventano curve morbide fatte di quadrilateri. Puoi scegliere anche solo certi bordi o facce col mouse, anche dentro oggetti nidificati.',
     intro: [
-      'robo fillet 3D arrotonda o smussa i bordi e gli angoli di gruppi e componenti, sul modello di RoundCorner di Fredo6. Il risultato è fatto di quadrilateri regolari con le diagonali nascoste.',
+      'robo fillet 3d arrotonda o smussa i bordi e gli angoli di gruppi e componenti, sul modello di RoundCorner di Fredo6. Il risultato è fatto di quadrilateri regolari con le diagonali nascoste.',
       'Serve quando un solido spigoloso deve diventare morbido: mobili, pezzi meccanici, oggetti da modellare. Scegli lo scostamento (che è il raggio) e vedi l’anteprima sul modello prima di applicare.'
     ],
     main: [
@@ -734,9 +733,9 @@ var PLUGINS = [
       { t: 'Quadrilateri regolari', d: 'Ogni quadrilatero non piano è costruito con la diagonale nascosta, ammorbidita e smussata. Facce con fori e angoli concavi sono gestiti, e le giunzioni tra due bordi sono a mitra pulita.' },
       { t: 'Finestra chiara, in cinque lingue', d: 'Campi con le unità e i decimali di SketchUp, frecce su e giù, icone per ogni opzione, aiuto integrato e messaggi nella lingua di SketchUp. Dopo Applica la finestra si chiude e un solo Ctrl+Z annulla tutto.' }
     ],
-    steps: ['Seleziona uno o più gruppi o componenti e apri robo fillet 3D.', 'Scegli Arrotondamento, Smusso 45° o Solo linee, scrivi lo scostamento e guarda l’anteprima verde.', 'Premi Applica: nasce il nuovo gruppo arrotondato, e un solo Ctrl+Z annulla tutto.'],
+    steps: ['Seleziona uno o più gruppi o componenti e apri robo fillet 3d.', 'Scegli Arrotondamento, Smusso 45° o Solo linee, scrivi lo scostamento e guarda l’anteprima verde.', 'Premi Applica: nasce il nuovo gruppo arrotondato, e un solo Ctrl+Z annulla tutto.'],
     how: [
-      { t: 'Il problema che risolve', d: 'In SketchUp i bordi di un solido sono vivi. Per arrotondarli a mano servono molti passaggi e il risultato è spesso fatto di triangoli disordinati, difficili da suddividere. robo fillet 3D lo fa in un solo passaggio e costruisce quadrilateri regolari.' },
+      { t: 'Il problema che risolve', d: 'In SketchUp i bordi di un solido sono vivi. Per arrotondarli a mano servono molti passaggi e il risultato è spesso fatto di triangoli disordinati, difficili da suddividere. robo fillet 3d lo fa in un solo passaggio e costruisce quadrilateri regolari.' },
       { t: 'Passo 1 · Scegli cosa arrotondare', d: 'Seleziona i gruppi o i componenti: con “Tutti i bordi” vengono arrotondati tutti i bordi più acuti dell’angolo che imposti (30° di base), anche gli incavi. Con “Solo i bordi scelti” scegli tu le linee o le facce col mouse.' },
       { t: 'Passo 2 · Scostamento e segmenti', d: 'Lo scostamento è la distanza dal bordo dove inizia l’arrotondamento: è il raggio. I segmenti dividono l’arco in quadrilateri (da 2 a 30, sempre pari con la topologia a quadrilateri). Lo smusso usa una sola striscia a 45°.' },
       { t: 'Passo 3 · Anteprima e blocco scostamento', d: 'Le linee verdi seguono i valori in tempo reale. Se lo scostamento non sta sull’oggetto compaiono in rosso le parti che lo impediscono, un messaggio lampeggiante spiega il motivo e indica il massimo; togliendo la spunta al lucchetto l’arrotondamento si fa comunque.' },
@@ -750,18 +749,18 @@ var PLUGINS = [
       { p: 'Arrotondare i bordi a mano è lungo e dà triangoli disordinati.', s: 'Un solo passaggio, con quadrilateri regolari e le diagonali nascoste.' },
       { p: 'Con gruppi dentro altri gruppi è difficile arrotondare solo una parte.', s: 'Scegli col mouse il gruppo, la linea o la faccia, a qualsiasi livello.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Menu', 'Robo Tool › robo fillet 3d'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
 
   /* --------------------------------------------------------------- DOCTOR */
   {
-    id: 'doctor', name: 'robo Doctor', version: '1.0', category: 'Ottimizzazione', hue: 345,
+    id: 'doctor', name: 'robo doctor', version: '1.0', category: 'Ottimizzazione', hue: 345,
     video: 'j1WqYw7o8M4',
     images: ['assets/img/screenshots/doctor-1.png', 'assets/img/screenshots/doctor-2.png', 'assets/img/screenshots/doctor-3.png', 'assets/img/screenshots/doctor-4.png', 'assets/img/screenshots/doctor-5.png', 'assets/img/screenshots/doctor-6.png', 'assets/img/screenshots/doctor-7.png', 'assets/img/screenshots/doctor-8.png', 'assets/img/screenshots/doctor-9.png', 'assets/img/screenshots/doctor-10.png', 'assets/img/screenshots/doctor-11.png', 'assets/img/screenshots/doctor-12.png', 'assets/img/screenshots/doctor-13.png'],
 tagline: 'Controlla se i gruppi e i componenti sono solidi, mostra dove sono buchi ed errori e li ripara con quadrilateri.',
-simple: 'Seleziona un gruppo o un componente: robo Doctor ti dice se è solido (chiuso, senza buchi, con le facce rivolte verso l’esterno) e disegna nel modello, con colori diversi, i punti da correggere. Poi chiudi i buchi uno per uno o tutti insieme.',
+simple: 'Seleziona un gruppo o un componente: robo doctor ti dice se è solido (chiuso, senza buchi, con le facce rivolte verso l’esterno) e disegna nel modello, con colori diversi, i punti da correggere. Poi chiudi i buchi uno per uno o tutti insieme.',
 intro: [
-  'robo Doctor controlla gruppi e componenti, anche nidificati, e li giudica con una domanda semplice: l’oggetto è un solido? Se non lo è, ti mostra dove e perché, e ti aiuta a ripararlo.',
+  'robo doctor controlla gruppi e componenti, anche nidificati, e li giudica con una domanda semplice: l’oggetto è un solido? Se non lo è, ti mostra dove e perché, e ti aiuta a ripararlo.',
       'Serve prima di stampare in 3D, esportare o suddividere un modello: un solido con buchi, facce girate o linee in più dà problemi a quasi tutti i programmi. Il plugin non cambia nulla finché non decidi tu.'
 ],
 main: [
@@ -772,9 +771,9 @@ main: [
     { t: 'Pulizia delle linee inutili', d: 'Unisce le facce complanari, anche solo attraverso le linee nascoste o morbide, toglie i triangoli e le diagonali inutili senza aprire buchi e cancella le linee isolate. I colori delle facce si rispettano, a meno che tu scelga di ignorarli.' },
     { t: 'Finestra chiara, in cinque lingue', d: 'Pulsanti sempre visibili in fondo, aiuto integrato con un argomento per ogni tema, scelta della lingua con il globo e opzioni che restano memorizzate. Tutte le operazioni si annullano con Ctrl+Z.' }
 ],
-steps: ['Seleziona un gruppo o un componente (o scegli quello annidato col mouse) e apri robo Doctor.', 'Guarda lo stato e gli errori in colore nel modello, poi premi Rendi solido per aprire l’elenco dei buchi.', 'Chiudi i buchi con Risolvi, Chiudi Quad, Chiudi Triangoli o Risolvi tutti, e torna indietro con Annulla se serve.'],
+steps: ['Seleziona un gruppo o un componente (o scegli quello annidato col mouse) e apri robo doctor.', 'Guarda lo stato e gli errori in colore nel modello, poi premi Rendi solido per aprire l’elenco dei buchi.', 'Chiudi i buchi con Risolvi, Chiudi Quad, Chiudi Triangoli o Risolvi tutti, e torna indietro con Annulla se serve.'],
 how: [
-    { t: 'Il problema che risolve', d: 'In SketchUp è facile creare oggetti che sembrano chiusi ma non lo sono: un buco piccolo, una faccia girata, due punti quasi uguali. Trovarli a occhio è lungo, e chiuderli a mano spesso crea triangoli disordinati. robo Doctor li cerca per te e li chiude con quadrilateri.' },
+    { t: 'Il problema che risolve', d: 'In SketchUp è facile creare oggetti che sembrano chiusi ma non lo sono: un buco piccolo, una faccia girata, due punti quasi uguali. Trovarli a occhio è lungo, e chiuderli a mano spesso crea triangoli disordinati. robo doctor li cerca per te e li chiude con quadrilateri.' },
     { t: 'Passo 1 · Scegli l’oggetto', d: 'Seleziona un gruppo o componente, oppure usa “Scegli un gruppo o componente (anche annidato)”: passando il mouse un box azzurro mostra l’oggetto, il clic apre i gruppi fino a lui. Gli oggetti nidificati sono controllati insieme.' },
     { t: 'Passo 2 · Leggi gli errori', d: 'Ogni tipo di errore ha un colore e una casella per mostrarlo o nasconderlo: bordi aperti (rosso), più di due facce (viola), normali incoerenti (verde), vertici vicini (blu), linee isolate (giallo), normali all’interno (marrone).' },
     { t: 'Passo 3 · Rendi solido', d: 'Apre la finestra buchi ed errori: ogni buco ha la lente per andarci, il pulsante Risolvi e il colore che dice come si chiuderà. Un buco aperto da una sola linea mancante si chiude congiungendo le due estremità.' },
@@ -787,7 +786,7 @@ solves: [
     { p: 'Un oggetto sembra chiuso ma non lo è, e non si capisce dove.', s: 'Gli errori compaiono nel modello con il loro colore, anche attraverso l’oggetto.' },
     { p: 'Chiudere i buchi a mano crea triangoli disordinati.', s: 'Il plugin costruisce quadrilateri piani e lascia a te la scelta dei triangoli.' }
 ],
-specs: [['Menu', 'Robo Tool › robo Doctor'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Annullamento', 'Ogni chiusura è un’operazione: Ctrl+Z o il pulsante Annulla'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Annullamento', 'Ogni chiusura è un’operazione: Ctrl+Z o il pulsante Annulla'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   }
 ];
 
@@ -828,8 +827,8 @@ var TOOLBARS = {
     [{ i: 'z_min.png', l: 'Allinea in basso (asse blu Z)' }, { i: 'z_center.png', l: 'Allinea al centro (asse blu Z)' }, { i: 'z_max.png', l: 'Allinea in alto (asse blu Z)' }],
     [{ i: 'y_min.png', l: 'Allinea davanti (asse verde Y)' }, { i: 'y_center.png', l: 'Allinea al centro (asse verde Y)' }, { i: 'y_max.png', l: 'Allinea dietro (asse verde Y)' }]] },
   toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.png', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
-  fillet_3d: { name: 'robo fillet 3D', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3D: arrotonda o smussa i bordi' }]] },
-  doctor: { name: 'robo Doctor', groups: [[{ i: 'doctor.png', l: 'robo Doctor: controlla e ripara i solidi' }]] },
+  fillet_3d: { name: 'robo fillet 3d', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3d: arrotonda o smussa i bordi' }]] },
+  doctor: { name: 'robo doctor', groups: [[{ i: 'doctor.png', l: 'robo doctor: controlla e ripara i solidi' }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },

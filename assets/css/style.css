@@ -193,7 +193,9 @@ section { padding: 88px 0; }
 .pill.dark { background: var(--ink); color: #fff; }
 .p-hero .tag { font-size: 1.3rem; font-weight: 600; letter-spacing: -.01em; }
 .p-hero .simple { margin-top: 16px; color: var(--ink-soft); font-size: 1.08rem; }
-.p-hero .actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+.p-hero .actions { margin-top: 28px; display: flex; gap: 10px; flex-wrap: wrap; }
+/* the three buttons of every plugin page stay on one line also in French (the longest texts) */
+.p-hero .actions .btn { padding: 13px 18px; white-space: nowrap; }
 .shot { border-radius: 22px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--line); background: var(--bg-soft); }
 .shot img { width: 100%; }
 
