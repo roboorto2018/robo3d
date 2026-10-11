@@ -3068,3 +3068,135 @@ I18N_PLUGINS.es.fillet_3d = {
   specs: [['Menú', 'Robo Tool › robo fillet 3D'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_TOOLBARS.es.fillet_3d = { 'fillet_3d.png': 'robo fillet 3D: redondea o biseliza los bordes' };
+I18N_PLUGINS.en.doctor = {
+tagline: 'Checks that groups and components are solid, shows where the holes and errors are and repairs them with quads.',
+simple: 'Select a group or component: robo Doctor tells you whether it is solid (closed, without holes, with the faces pointing outward) and draws in the model, in different colours, the points to fix. Then you close the holes one by one or all together.',
+intro: [
+  'robo Doctor checks groups and components, nested ones too, with a simple question: is the object a solid? If it is not, it shows you where and why, and helps you repair it.',
+      'It is useful before 3D printing, exporting or subdividing a model: a solid with holes, flipped faces or extra lines gives trouble to almost every program. The plugin changes nothing until you decide.'
+],
+main: [
+    { t: 'Solid check', d: 'For every object it says whether it is Solid, Open or Empty (a container of other groups) and lists the errors found: open edges, more than two faces on an edge, mixed normals, almost coincident vertices, stray lines, inward normals.' },
+    { t: 'Errors in their colours', d: 'The errors appear in the model by themselves as soon as you choose the object: red for the holes, orange for the ones that need triangles, violet, green, blue, yellow and brown for the others. The lines show through the object, and the rest of the model is hidden while you look at the errors.' },
+    { t: 'List of holes, with the lens', d: 'Make solid opens the window with all the errors, changing nothing. The lens zooms to the hole, Solve closes it, and the three buttons at the bottom close all the red ones, all the orange ones or everything.' },
+    { t: 'Quads first', d: 'Holes close with flat quads, one single face each. Triangles, which can flatten or deform the object where the surface is curved, are used only when you decide, and you can go back with Undo or Ctrl+Z.' },
+    { t: 'Cleaning useless lines', d: 'It joins coplanar faces, also only through hidden or soft lines, removes useless triangles and diagonals without opening holes and erases stray lines. The colours of the faces are respected, unless you choose to ignore them.' },
+    { t: 'A clear window, in five languages', d: 'Buttons always visible at the bottom, built-in help with a topic for every subject, language choice with the globe and options that are remembered. Every operation can be undone with Ctrl+Z.' }
+],
+steps: ['Select a group or component (or pick the nested one with the mouse) and open robo Doctor.', 'Look at the state and at the errors in colour in the model, then press Make solid to open the list of holes.', 'Close the holes with Solve, Close quads, Close triangles or Solve all, and go back with Undo if needed.'],
+how: [
+    { t: 'The problem it solves', d: 'In SketchUp it is easy to make objects that look closed but are not: a small hole, a flipped face, two almost equal points. Finding them by eye takes long, and closing them by hand often makes untidy triangles. robo Doctor looks for them and closes them with quads.' },
+    { t: 'Step 1 · Choose the object', d: 'Select a group or component, or use “Choose a group or component (nested too)”: as you move the mouse a light blue box shows the object, the click opens the groups down to it. Nested objects are checked together.' },
+    { t: 'Step 2 · Read the errors', d: 'Every kind of error has a colour and a box to show or hide it: open edges (red), more than two faces (violet), mixed normals (green), near vertices (blue), stray lines (yellow), inward normals (brown).' },
+    { t: 'Step 3 · Make solid', d: 'It opens the holes and errors window: every hole has the lens to go to it, the Solve button and the colour that says how it will close. A hole left open by a single missing line closes by joining the two ends.' },
+    { t: 'Red and orange', d: 'A red hole closes with flat quads. An orange one has a border that is not on a plane (rounded corners, curved surfaces): triangles are needed, and they are used only when you ask.' },
+    { t: 'Solve all', d: 'It closes all the holes and also joins near vertices, turns faces over and erases stray lines, then does the same cleanup as the Clean button. Close quads closes only the red ones, Close triangles only the orange ones.' },
+    { t: 'Undo and Close', d: 'The green button with the arrow undoes the last operation, like Ctrl+Z, and more clicks go further back. Close leaves the window and does nothing.' }
+],
+pros: ['Solid check with errors in colour', 'Holes closed with flat quads', 'Triangles only when you decide', 'Cleaning of useless lines', 'Help and interface in five languages'],
+solves: [
+    { p: 'An object looks closed but is not, and it is hard to see where.', s: 'The errors appear in the model in their colour, also through the object.' },
+    { p: 'Closing holes by hand makes untidy triangles.', s: 'The plugin builds flat quads and leaves the choice of triangles to you.' }
+],
+specs: [['Menu', 'Robo Tool › robo Doctor'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2023 or later'], ['Undo', 'Every closing is one operation: Ctrl+Z or the Undo button'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.en.doctor = { 'doctor.png': 'robo Doctor: check and repair solids' };
+I18N_PLUGINS.de.doctor = {
+tagline: 'Prüft, ob Gruppen und Komponenten solide sind, zeigt, wo Löcher und Fehler sind, und repariert sie mit Vierecken.',
+simple: 'Wähle eine Gruppe oder Komponente: robo Doctor sagt dir, ob sie solide ist (geschlossen, ohne Löcher, mit nach außen gerichteten Flächen), und zeichnet die zu korrigierenden Stellen in verschiedenen Farben ins Modell. Dann schließt du die Löcher einzeln oder alle zusammen.',
+intro: [
+  'robo Doctor prüft Gruppen und Komponenten, auch verschachtelte, mit einer einfachen Frage: Ist das Objekt ein Volumenkörper? Wenn nicht, zeigt es dir wo und warum und hilft bei der Reparatur.',
+      'Das ist nützlich vor dem 3D-Druck, Export oder Unterteilen eines Modells: Ein Körper mit Löchern, gewendeten Flächen oder überflüssigen Linien macht fast jedem Programm Probleme. Das Plugin ändert nichts, bis du es entscheidest.'
+],
+main: [
+    { t: 'Prüfung auf Volumenkörper', d: 'Für jedes Objekt sagt es, ob es Solide, Offen oder Leer ist (ein Behälter für andere Gruppen), und listet die gefundenen Fehler: offene Kanten, mehr als zwei Flächen an einer Kante, widersprüchliche Normalen, fast zusammenfallende Punkte, lose Linien, Normalen nach innen.' },
+    { t: 'Fehler in ihren Farben', d: 'Die Fehler erscheinen im Modell von selbst, sobald du das Objekt wählst: Rot für Löcher, Orange für solche, die Dreiecke brauchen, Violett, Grün, Blau, Gelb und Braun für die übrigen. Die Linien sind auch durch das Objekt zu sehen, und der Rest des Modells wird ausgeblendet, solange du die Fehler ansiehst.' },
+    { t: 'Lochliste mit Lupe', d: 'Solide machen öffnet das Fenster mit allen Fehlern, ohne etwas zu ändern. Die Lupe zoomt auf das Loch, Lösen schließt es, und die drei Schaltflächen unten schließen alle roten, alle orangen oder alles.' },
+    { t: 'Zuerst Vierecke', d: 'Löcher schließen sich mit ebenen Vierecken, je eine einzige Fläche. Dreiecke, die das Objekt bei gekrümmter Fläche abflachen oder verformen können, werden nur auf deinen Wunsch benutzt, und mit Rückgängig oder Strg+Z kommst du zurück.' },
+    { t: 'Unnötige Linien bereinigen', d: 'Verbindet ebene Flächen, auch nur über versteckte oder weiche Linien, entfernt unnötige Dreiecke und Diagonalen, ohne Löcher zu öffnen, und löscht lose Linien. Die Farben der Flächen werden beachtet, außer du entscheidest, sie zu ignorieren.' },
+    { t: 'Klares Fenster, in fünf Sprachen', d: 'Immer sichtbare Schaltflächen unten, eingebaute Hilfe mit einem Thema für jedes Thema, Sprachwahl mit dem Globus und gespeicherte Optionen. Jeder Vorgang lässt sich mit Strg+Z rückgängig machen.' }
+],
+steps: ['Wähle eine Gruppe oder Komponente (oder die verschachtelte mit der Maus) und öffne robo Doctor.', 'Sieh dir den Status und die Fehler in Farbe im Modell an und drücke dann Solide machen, um die Lochliste zu öffnen.', 'Schließe die Löcher mit Lösen, Vierecke schließen, Dreiecke schließen oder Alle lösen und gehe bei Bedarf mit Rückgängig zurück.'],
+how: [
+    { t: 'Das Problem, das es löst', d: 'In SketchUp entstehen leicht Objekte, die geschlossen aussehen, es aber nicht sind: ein kleines Loch, eine gewendete Fläche, zwei fast gleiche Punkte. Sie von Auge zu finden dauert, und sie von Hand zu schließen erzeugt oft unordentliche Dreiecke. robo Doctor sucht sie für dich und schließt sie mit Vierecken.' },
+    { t: 'Schritt 1 · Objekt wählen', d: 'Wähle eine Gruppe oder Komponente oder nutze „Gruppe oder Komponente wählen (auch verschachtelt)“: Beim Bewegen der Maus zeigt ein hellblauer Kasten das Objekt, der Klick öffnet die Gruppen bis dorthin. Verschachtelte Objekte werden zusammen geprüft.' },
+    { t: 'Schritt 2 · Fehler lesen', d: 'Jede Fehlerart hat eine Farbe und ein Kästchen zum Zeigen oder Ausblenden: offene Kanten (Rot), mehr als zwei Flächen (Violett), widersprüchliche Normalen (Grün), nahe Punkte (Blau), lose Linien (Gelb), Normalen nach innen (Braun).' },
+    { t: 'Schritt 3 · Solide machen', d: 'Öffnet das Fenster Löcher und Fehler: Jedes Loch hat die Lupe, die Schaltfläche Lösen und die Farbe, die zeigt, wie es sich schließt. Ein Loch, das durch eine einzige fehlende Linie offen ist, schließt sich, indem die beiden Enden verbunden werden.' },
+    { t: 'Rot und Orange', d: 'Ein rotes Loch schließt sich mit ebenen Vierecken. Ein oranges hat einen Rand, der nicht in einer Ebene liegt (gerundete Ecken, gekrümmte Flächen): Dafür braucht man Dreiecke, die nur auf deinen Wunsch benutzt werden.' },
+    { t: 'Alle lösen', d: 'Schließt alle Löcher und verbindet außerdem nahe Punkte, wendet Flächen und löscht lose Linien, dann folgt dieselbe Bereinigung wie bei der Schaltfläche Bereinigen. Vierecke schließen schließt nur die roten, Dreiecke schließen nur die orangen.' },
+    { t: 'Rückgängig und Schließen', d: 'Die grüne Schaltfläche mit dem Pfeil macht den letzten Vorgang rückgängig, wie Strg+Z, weitere Klicks gehen weiter zurück. Schließen verlässt das Fenster, ohne etwas zu tun.' }
+],
+pros: ['Prüfung auf Volumenkörper mit Fehlern in Farbe', 'Löcher mit ebenen Vierecken geschlossen', 'Dreiecke nur, wenn du es entscheidest', 'Bereinigung unnötiger Linien', 'Hilfe und Oberfläche in fünf Sprachen'],
+solves: [
+    { p: 'Ein Objekt sieht geschlossen aus, ist es aber nicht, und man sieht nicht wo.', s: 'Die Fehler erscheinen im Modell in ihrer Farbe, auch durch das Objekt.' },
+    { p: 'Löcher von Hand zu schließen erzeugt unordentliche Dreiecke.', s: 'Das Plugin baut ebene Vierecke und überlässt dir die Wahl der Dreiecke.' }
+],
+specs: [['Menü', 'Robo Tool › robo Doctor'], ['Werkzeugleiste', '1 Schaltfläche'], ['Erfordert', 'SketchUp 2023 oder neuer'], ['Rückgängig', 'Jedes Schließen ist ein Vorgang: Strg+Z oder die Schaltfläche Rückgängig'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.de.doctor = { 'doctor.png': 'robo Doctor: Volumenkörper prüfen und reparieren' };
+I18N_PLUGINS.fr.doctor = {
+tagline: 'Vérifie que les groupes et composants sont solides, montre où sont les trous et les erreurs et les répare avec des quadrilatères.',
+simple: 'Sélectionnez un groupe ou un composant : robo Doctor vous dit s’il est solide (fermé, sans trous, avec les faces tournées vers l’extérieur) et dessine dans le modèle, en couleurs différentes, les points à corriger. Ensuite vous fermez les trous un par un ou tous ensemble.',
+intro: [
+  'robo Doctor contrôle les groupes et composants, même imbriqués, avec une question simple : l’objet est-il un solide ? Sinon, il vous montre où et pourquoi, et vous aide à le réparer.',
+      'C’est utile avant d’imprimer en 3D, d’exporter ou de subdiviser un modèle : un solide avec des trous, des faces retournées ou des lignes en trop pose problème à presque tous les programmes. Le plugin ne change rien tant que vous ne décidez pas.'
+],
+main: [
+    { t: 'Contrôle du solide', d: 'Pour chaque objet il indique s’il est Solide, Ouvert ou Vide (un conteneur d’autres groupes) et liste les erreurs trouvées : arêtes ouvertes, plus de deux faces sur une arête, normales incohérentes, sommets presque confondus, lignes isolées, normales vers l’intérieur.' },
+    { t: 'Erreurs dans leurs couleurs', d: 'Les erreurs apparaissent d’elles-mêmes dans le modèle dès que vous choisissez l’objet : rouge pour les trous, orange pour ceux qui demandent des triangles, violet, vert, bleu, jaune et marron pour les autres. Les lignes se voient aussi à travers l’objet, et le reste du modèle est masqué pendant que vous regardez les erreurs.' },
+    { t: 'Liste des trous, avec la loupe', d: 'Rendre solide ouvre la fenêtre avec toutes les erreurs, sans rien changer. La loupe zoome sur le trou, Résoudre le ferme, et les trois boutons du bas ferment tous les rouges, tous les orange ou tout.' },
+    { t: 'D’abord les quadrilatères', d: 'Les trous se ferment avec des quadrilatères plans, une seule face chacun. Les triangles, qui peuvent aplatir ou déformer l’objet là où la surface est courbe, ne sont utilisés que si vous le décidez, et vous pouvez revenir avec Annuler ou Ctrl+Z.' },
+    { t: 'Nettoyage des lignes inutiles', d: 'Fusionne les faces coplanaires, même seulement à travers les lignes masquées ou adoucies, retire les triangles et diagonales inutiles sans ouvrir de trous et efface les lignes isolées. Les couleurs des faces sont respectées, sauf si vous choisissez de les ignorer.' },
+    { t: 'Fenêtre claire, en cinq langues', d: 'Boutons toujours visibles en bas, aide intégrée avec un sujet pour chaque thème, choix de la langue avec le globe et options mémorisées. Chaque opération s’annule avec Ctrl+Z.' }
+],
+steps: ['Sélectionnez un groupe ou un composant (ou choisissez l’imbriqué à la souris) et ouvrez robo Doctor.', 'Regardez l’état et les erreurs en couleur dans le modèle, puis appuyez sur Rendre solide pour ouvrir la liste des trous.', 'Fermez les trous avec Résoudre, Fermer quads, Fermer triangles ou Tout résoudre, et revenez avec Annuler si besoin.'],
+how: [
+    { t: 'Le problème résolu', d: 'Dans SketchUp il est facile de créer des objets qui semblent fermés mais ne le sont pas : un petit trou, une face retournée, deux points presque égaux. Les trouver à l’œil prend du temps, et les fermer à la main crée souvent des triangles en désordre. robo Doctor les cherche pour vous et les ferme avec des quadrilatères.' },
+    { t: 'Étape 1 · Choisir l’objet', d: 'Sélectionnez un groupe ou composant, ou utilisez « Choisir un groupe ou composant (même imbriqué) » : en passant la souris, une boîte bleu clair montre l’objet, le clic ouvre les groupes jusqu’à lui. Les objets imbriqués sont contrôlés ensemble.' },
+    { t: 'Étape 2 · Lire les erreurs', d: 'Chaque type d’erreur a une couleur et une case pour l’afficher ou le masquer : arêtes ouvertes (rouge), plus de deux faces (violet), normales incohérentes (vert), sommets proches (bleu), lignes isolées (jaune), normales vers l’intérieur (marron).' },
+    { t: 'Étape 3 · Rendre solide', d: 'Ouvre la fenêtre trous et erreurs : chaque trou a la loupe pour y aller, le bouton Résoudre et la couleur qui dit comment il se fermera. Un trou laissé ouvert par une seule ligne manquante se ferme en joignant les deux extrémités.' },
+    { t: 'Rouges et orange', d: 'Un trou rouge se ferme avec des quadrilatères plans. Un orange a un bord qui n’est pas dans un plan (angles arrondis, surfaces courbes) : il faut des triangles, utilisés seulement quand vous le demandez.' },
+    { t: 'Tout résoudre', d: 'Ferme tous les trous et réunit aussi les sommets proches, retourne les faces et efface les lignes isolées, puis fait le même nettoyage que le bouton Nettoyer. Fermer quads ferme seulement les rouges, Fermer triangles seulement les orange.' },
+    { t: 'Annuler et Fermer', d: 'Le bouton vert avec la flèche annule la dernière opération, comme Ctrl+Z, et plusieurs clics reviennent plus loin. Fermer quitte la fenêtre sans rien faire.' }
+],
+pros: ['Contrôle du solide avec erreurs en couleur', 'Trous fermés avec des quadrilatères plans', 'Triangles seulement si vous le décidez', 'Nettoyage des lignes inutiles', 'Aide et interface en cinq langues'],
+solves: [
+    { p: 'Un objet semble fermé mais ne l’est pas, et on ne voit pas où.', s: 'Les erreurs apparaissent dans le modèle dans leur couleur, aussi à travers l’objet.' },
+    { p: 'Fermer les trous à la main crée des triangles en désordre.', s: 'Le plugin construit des quadrilatères plans et vous laisse le choix des triangles.' }
+],
+specs: [['Menu', 'Robo Tool › robo Doctor'], ['Barre d’outils', '1 bouton'], ['Requiert', 'SketchUp 2023 ou ultérieur'], ['Annulation', 'Chaque fermeture est une opération : Ctrl+Z ou le bouton Annuler'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.fr.doctor = { 'doctor.png': 'robo Doctor : contrôle et répare les solides' };
+I18N_PLUGINS.es.doctor = {
+tagline: 'Comprueba si los grupos y componentes son sólidos, muestra dónde están los agujeros y errores y los repara con cuadriláteros.',
+simple: 'Selecciona un grupo o componente: robo Doctor te dice si es sólido (cerrado, sin agujeros, con las caras hacia fuera) y dibuja en el modelo, con colores distintos, los puntos por corregir. Luego cierras los agujeros uno a uno o todos juntos.',
+intro: [
+  'robo Doctor revisa grupos y componentes, también anidados, con una pregunta sencilla: ¿el objeto es un sólido? Si no lo es, te muestra dónde y por qué, y te ayuda a repararlo.',
+      'Sirve antes de imprimir en 3D, exportar o subdividir un modelo: un sólido con agujeros, caras giradas o líneas de más da problemas a casi todos los programas. El plugin no cambia nada hasta que tú lo decides.'
+],
+main: [
+    { t: 'Comprobación del sólido', d: 'Para cada objeto dice si es Sólido, Abierto o Vacío (un contenedor de otros grupos) y lista los errores encontrados: aristas abiertas, más de dos caras en una arista, normales incoherentes, vértices casi coincidentes, líneas sueltas, normales hacia dentro.' },
+    { t: 'Errores con sus colores', d: 'Los errores aparecen en el modelo solos en cuanto eliges el objeto: rojo para los agujeros, naranja para los que necesitan triángulos, violeta, verde, azul, amarillo y marrón para los demás. Las líneas se ven también a través del objeto, y el resto del modelo se oculta mientras miras los errores.' },
+    { t: 'Lista de agujeros, con la lupa', d: 'Hacer sólido abre la ventana con todos los errores, sin cambiar nada. La lupa hace zoom en el agujero, Resolver lo cierra, y los tres botones de abajo cierran todos los rojos, todos los naranjas o todo.' },
+    { t: 'Primero los cuadriláteros', d: 'Los agujeros se cierran con cuadriláteros planos, una sola cara cada uno. Los triángulos, que pueden aplanar o deformar el objeto donde la superficie es curva, se usan solo cuando tú lo decides, y puedes volver con Deshacer o Ctrl+Z.' },
+    { t: 'Limpieza de líneas inútiles', d: 'Une caras coplanares, también solo a través de líneas ocultas o suaves, quita triángulos y diagonales inútiles sin abrir agujeros y borra las líneas sueltas. Se respetan los colores de las caras, salvo que elijas ignorarlos.' },
+    { t: 'Ventana clara, en cinco idiomas', d: 'Botones siempre visibles abajo, ayuda integrada con un tema para cada asunto, elección del idioma con el globo y opciones que se recuerdan. Toda operación se deshace con Ctrl+Z.' }
+],
+steps: ['Selecciona un grupo o componente (o elige el anidado con el ratón) y abre robo Doctor.', 'Mira el estado y los errores en color en el modelo, y pulsa Hacer sólido para abrir la lista de agujeros.', 'Cierra los agujeros con Resolver, Cerrar cuadriláteros, Cerrar triángulos o Resolver todos, y vuelve con Deshacer si hace falta.'],
+how: [
+    { t: 'El problema que resuelve', d: 'En SketchUp es fácil crear objetos que parecen cerrados pero no lo son: un agujero pequeño, una cara girada, dos puntos casi iguales. Encontrarlos a ojo lleva tiempo, y cerrarlos a mano suele dar triángulos desordenados. robo Doctor los busca por ti y los cierra con cuadriláteros.' },
+    { t: 'Paso 1 · Elige el objeto', d: 'Selecciona un grupo o componente, o usa «Elegir un grupo o componente (también anidado)»: al pasar el ratón una caja azul clara muestra el objeto, el clic abre los grupos hasta él. Los objetos anidados se revisan juntos.' },
+    { t: 'Paso 2 · Lee los errores', d: 'Cada tipo de error tiene un color y una casilla para mostrarlo u ocultarlo: aristas abiertas (rojo), más de dos caras (violeta), normales incoherentes (verde), vértices cercanos (azul), líneas sueltas (amarillo), normales hacia dentro (marrón).' },
+    { t: 'Paso 3 · Hacer sólido', d: 'Abre la ventana agujeros y errores: cada agujero tiene la lupa para ir a él, el botón Resolver y el color que dice cómo se cerrará. Un agujero abierto por una sola línea que falta se cierra uniendo los dos extremos.' },
+    { t: 'Rojos y naranjas', d: 'Un agujero rojo se cierra con cuadriláteros planos. Uno naranja tiene el borde fuera de un plano (esquinas redondeadas, superficies curvas): hacen falta triángulos, que se usan solo cuando lo pides.' },
+    { t: 'Resolver todos', d: 'Cierra todos los agujeros y además une vértices cercanos, gira caras y borra líneas sueltas, y después hace la misma limpieza del botón Limpiar. Cerrar cuadriláteros cierra solo los rojos, Cerrar triángulos solo los naranjas.' },
+    { t: 'Deshacer y Cerrar', d: 'El botón verde con la flecha deshace la última operación, como Ctrl+Z, y más clics vuelven más atrás. Cerrar sale de la ventana sin hacer nada.' }
+],
+pros: ['Comprobación del sólido con errores en color', 'Agujeros cerrados con cuadriláteros planos', 'Triángulos solo cuando tú lo decides', 'Limpieza de líneas inútiles', 'Ayuda e interfaz en cinco idiomas'],
+solves: [
+    { p: 'Un objeto parece cerrado pero no lo está, y no se ve dónde.', s: 'Los errores aparecen en el modelo con su color, también a través del objeto.' },
+    { p: 'Cerrar agujeros a mano da triángulos desordenados.', s: 'El plugin construye cuadriláteros planos y te deja la elección de los triángulos.' }
+],
+specs: [['Menú', 'Robo Tool › robo Doctor'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Deshacer', 'Cada cierre es una operación: Ctrl+Z o el botón Deshacer'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+};
+I18N_TOOLBARS.es.doctor = { 'doctor.png': 'robo Doctor: comprueba y repara los sólidos' };

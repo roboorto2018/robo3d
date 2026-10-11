@@ -751,6 +751,44 @@ var PLUGINS = [
       { p: 'Con gruppi dentro altri gruppi è difficile arrotondare solo una parte.', s: 'Scegli col mouse il gruppo, la linea o la faccia, a qualsiasi livello.' }
     ],
     specs: [['Menu', 'Robo Tool › robo fillet 3D'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+  },
+
+  /* --------------------------------------------------------------- DOCTOR */
+  {
+    id: 'doctor', name: 'robo Doctor', version: '1.0', category: 'Ottimizzazione', hue: 345,
+    noDownload: true,
+    video: 'j1WqYw7o8M4',
+    images: ['assets/img/screenshots/doctor-1.png', 'assets/img/screenshots/doctor-2.png', 'assets/img/screenshots/doctor-3.png', 'assets/img/screenshots/doctor-4.png', 'assets/img/screenshots/doctor-5.png', 'assets/img/screenshots/doctor-6.png', 'assets/img/screenshots/doctor-7.png', 'assets/img/screenshots/doctor-8.png', 'assets/img/screenshots/doctor-9.png', 'assets/img/screenshots/doctor-10.png', 'assets/img/screenshots/doctor-11.png', 'assets/img/screenshots/doctor-12.png', 'assets/img/screenshots/doctor-13.png'],
+tagline: 'Controlla se i gruppi e i componenti sono solidi, mostra dove sono buchi ed errori e li ripara con quadrilateri.',
+simple: 'Seleziona un gruppo o un componente: robo Doctor ti dice se è solido (chiuso, senza buchi, con le facce rivolte verso l’esterno) e disegna nel modello, con colori diversi, i punti da correggere. Poi chiudi i buchi uno per uno o tutti insieme.',
+intro: [
+  'robo Doctor controlla gruppi e componenti, anche nidificati, e li giudica con una domanda semplice: l’oggetto è un solido? Se non lo è, ti mostra dove e perché, e ti aiuta a ripararlo.',
+      'Serve prima di stampare in 3D, esportare o suddividere un modello: un solido con buchi, facce girate o linee in più dà problemi a quasi tutti i programmi. Il plugin non cambia nulla finché non decidi tu.'
+],
+main: [
+    { t: 'Controllo del solido', d: 'Per ogni oggetto dice se è Solido, Aperto o Vuoto (un contenitore di altri gruppi) e elenca gli errori trovati: bordi aperti, più di due facce su un bordo, normali incoerenti, vertici quasi coincidenti, linee isolate, normali rivolte all’interno.' },
+    { t: 'Errori con i loro colori', d: 'Gli errori compaiono nel modello da soli appena scegli l’oggetto: rosso per i buchi, arancione per quelli che richiedono triangoli, viola, verde, blu, giallo e marrone per gli altri. Le linee si vedono anche attraverso l’oggetto, e il resto del modello viene nascosto finché guardi gli errori.' },
+    { t: 'Elenco dei buchi, con la lente', d: 'Rendi solido apre la finestra con tutti gli errori, senza cambiare nulla. La lente porta lo zoom sul buco, Risolvi lo chiude, e i tre pulsanti in fondo chiudono tutti i rossi, tutti gli arancioni o tutto.' },
+    { t: 'Prima i quadrilateri', d: 'I buchi si chiudono con quadrilateri piani, una faccia sola ciascuno. I triangoli, che possono appiattire o deformare l’oggetto dove la superficie è curva, si usano solo quando lo decidi tu, e puoi tornare indietro con Annulla o Ctrl+Z.' },
+    { t: 'Pulizia delle linee inutili', d: 'Unisce le facce complanari, anche solo attraverso le linee nascoste o morbide, toglie i triangoli e le diagonali inutili senza aprire buchi e cancella le linee isolate. I colori delle facce si rispettano, a meno che tu scelga di ignorarli.' },
+    { t: 'Finestra chiara, in cinque lingue', d: 'Pulsanti sempre visibili in fondo, aiuto integrato con un argomento per ogni tema, scelta della lingua con il globo e opzioni che restano memorizzate. Tutte le operazioni si annullano con Ctrl+Z.' }
+],
+steps: ['Seleziona un gruppo o un componente (o scegli quello annidato col mouse) e apri robo Doctor.', 'Guarda lo stato e gli errori in colore nel modello, poi premi Rendi solido per aprire l’elenco dei buchi.', 'Chiudi i buchi con Risolvi, Chiudi Quad, Chiudi Triangoli o Risolvi tutti, e torna indietro con Annulla se serve.'],
+how: [
+    { t: 'Il problema che risolve', d: 'In SketchUp è facile creare oggetti che sembrano chiusi ma non lo sono: un buco piccolo, una faccia girata, due punti quasi uguali. Trovarli a occhio è lungo, e chiuderli a mano spesso crea triangoli disordinati. robo Doctor li cerca per te e li chiude con quadrilateri.' },
+    { t: 'Passo 1 · Scegli l’oggetto', d: 'Seleziona un gruppo o componente, oppure usa “Scegli un gruppo o componente (anche annidato)”: passando il mouse un box azzurro mostra l’oggetto, il clic apre i gruppi fino a lui. Gli oggetti nidificati sono controllati insieme.' },
+    { t: 'Passo 2 · Leggi gli errori', d: 'Ogni tipo di errore ha un colore e una casella per mostrarlo o nasconderlo: bordi aperti (rosso), più di due facce (viola), normali incoerenti (verde), vertici vicini (blu), linee isolate (giallo), normali all’interno (marrone).' },
+    { t: 'Passo 3 · Rendi solido', d: 'Apre la finestra buchi ed errori: ogni buco ha la lente per andarci, il pulsante Risolvi e il colore che dice come si chiuderà. Un buco aperto da una sola linea mancante si chiude congiungendo le due estremità.' },
+    { t: 'Rossi e arancioni', d: 'Un buco rosso si chiude con quadrilateri piani. Uno arancione ha il bordo non su un piano (angoli arrotondati, superfici curve): servono triangoli, che si possono usare solo quando lo chiedi.' },
+    { t: 'Risolvi tutti', d: 'Chiude tutti i buchi e inoltre unisce i vertici vicini, gira le facce e cancella le linee isolate, poi fa la stessa pulizia del pulsante Pulisci. Chiudi Quad chiude solo i rossi, Chiudi Triangoli solo gli arancioni.' },
+    { t: 'Annulla e Chiudi', d: 'Il pulsante verde con la freccia annulla l’ultima operazione, come Ctrl+Z, e più clic tornano ancora più indietro. Chiudi esce dalla finestra senza fare nulla.' }
+],
+pros: ['Controllo del solido con errori in colore', 'Buchi chiusi con quadrilateri piani', 'Triangoli solo quando lo decidi tu', 'Pulizia delle linee inutili', 'Aiuto e interfaccia in cinque lingue'],
+solves: [
+    { p: 'Un oggetto sembra chiuso ma non lo è, e non si capisce dove.', s: 'Gli errori compaiono nel modello con il loro colore, anche attraverso l’oggetto.' },
+    { p: 'Chiudere i buchi a mano crea triangoli disordinati.', s: 'Il plugin costruisce quadrilateri piani e lascia a te la scelta dei triangoli.' }
+],
+specs: [['Menu', 'Robo Tool › robo Doctor'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Annullamento', 'Ogni chiusura è un’operazione: Ctrl+Z o il pulsante Annulla'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   }
 ];
 
@@ -792,6 +830,7 @@ var TOOLBARS = {
     [{ i: 'y_min.png', l: 'Allinea davanti (asse verde Y)' }, { i: 'y_center.png', l: 'Allinea al centro (asse verde Y)' }, { i: 'y_max.png', l: 'Allinea dietro (asse verde Y)' }]] },
   toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.png', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
   fillet_3d: { name: 'robo fillet 3D', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3D: arrotonda o smussa i bordi' }]] },
+  doctor: { name: 'robo Doctor', groups: [[{ i: 'doctor.png', l: 'robo Doctor: controlla e ripara i solidi' }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },
