@@ -682,7 +682,7 @@ var PLUGINS = [
   {
     id: 'quick_align', name: 'robo quick align', version: '1.0', category: 'Modellazione', hue: 200,
     donationPrompt: true,
-    images: ['assets/img/screenshots/quick_align-1.png'],
+    images: ['assets/img/screenshots/quick_align-1.png', 'assets/img/screenshots/quick_align-2.png'],
     tagline: 'Allinea gruppi e componenti sugli assi, con un clic.',
     simple: 'Seleziona due o più gruppi o componenti e allineali a sinistra, al centro o a destra — oppure in basso, al centro e in alto, o davanti e dietro. Scegli tu se usare gli assi generali del modello o quelli del gruppo o componente in cui stai lavorando.',
     intro: [
