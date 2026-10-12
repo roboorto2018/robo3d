@@ -461,7 +461,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- SPACING */
   {
-    id: 'spacing_tool', name: 'robo spacing tool', version: '1.2', category: 'Distribuzione', hue: 268,
+    id: 'spacing_tool', name: 'robo spacing tool', version: '1.3', category: 'Distribuzione', hue: 268,
     donationPrompt: true,
     video: 'mMk6vg4fEns',
     images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
@@ -475,7 +475,8 @@ var PLUGINS = [
       { t: 'Numero o distanza', d: 'Scegli quante copie vuoi, equidistanti, oppure un passo fisso, per esempio una ogni metro.' },
       { t: 'Linee, curve e anelli', d: 'Il percorso può essere un segmento, una curva o una forma chiusa come un cerchio.' },
       { t: 'Rotazione e scala', d: 'Le copie possono ruotare e cambiare dimensione, in modo casuale o crescente lungo il percorso.' },
-      { t: 'Anteprima prima di confermare', d: 'Vedi dove andranno le copie e in che direzione, e modifichi i valori fino al risultato voluto.' }
+      { t: 'Anteprima prima di confermare', d: 'Vedi dove andranno le copie e in che direzione, e modifichi i valori fino al risultato voluto.' },
+      { t: 'Scelta del percorso col mouse e Full line', d: 'Con “Solo linee interne contigue + shift” scegli il percorso col mouse, anche dentro gruppi e componenti: una linea, il contorno di una faccia, e con Maiusc aggiungi o togli segmenti. Spuntando Full line viene scelta subito tutta la linea, con tutti i segmenti contigui fino a un’interruzione o a una fine.' }
     ],
     steps: ['Seleziona l\'oggetto e il percorso (le linee).', 'Scegli "Numero" di copie oppure "Distanza" fissa.', 'Regola rotazione e scala, guarda l\'anteprima e conferma.'],
     how: [

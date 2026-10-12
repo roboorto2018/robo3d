@@ -2257,7 +2257,8 @@ I18N_PLUGINS.en.spacing_tool.main = [
   { t: 'Number or distance', d: 'Choose how many copies you want, equally spaced, or a fixed step, for example one every meter.' },
   { t: 'Lines, curves and loops', d: 'The path can be a segment, a curve or a closed shape like a circle.' },
   { t: 'Rotation and scale', d: 'Copies can rotate and change size, randomly or increasing along the path.' },
-  { t: 'Preview before confirming', d: 'You see where the copies will go and in what direction, and change the values until you get the result you want.' }
+  { t: 'Preview before confirming', d: 'You see where the copies will go and in what direction, and change the values until you get the result you want.' },
+  { t: 'Choosing the path with the mouse, and Full line', d: 'With “Contiguous inner lines only + Shift” you pick the path with the mouse, also inside groups and components: a line, the outline of a face, and with Shift you add or remove segments. Ticking Full line selects the whole line at once, with all the contiguous segments up to a break or an end.' }
 ];
 I18N_PLUGINS.en.spacing_tool.how = [
   { t: 'The problem it solves', d: 'Copying and placing objects along a curve by hand gives irregular distances, and if you change your mind about the number of copies you have to start over. robo spacing tool calculates the points along the path precisely, and if you change a value the preview updates right away.' },
@@ -2276,7 +2277,8 @@ I18N_PLUGINS.de.spacing_tool.main = [
   { t: 'Anzahl oder Abstand', d: 'Wählen Sie, wie viele Kopien Sie wollen, gleichmäßig verteilt, oder eine feste Schrittweite, zum Beispiel eine pro Meter.' },
   { t: 'Linien, Kurven und Ringe', d: 'Der Pfad kann ein Segment, eine Kurve oder eine geschlossene Form wie ein Kreis sein.' },
   { t: 'Drehung und Skalierung', d: 'Kopien können sich drehen und die Größe ändern, zufällig oder zunehmend entlang des Pfads.' },
-  { t: 'Vorschau vor der Bestätigung', d: 'Sie sehen, wohin die Kopien kommen und in welche Richtung, und ändern die Werte, bis das Ergebnis passt.' }
+  { t: 'Vorschau vor der Bestätigung', d: 'Sie sehen, wohin die Kopien kommen und in welche Richtung, und ändern die Werte, bis das Ergebnis passt.' },
+  { t: 'Pfad mit der Maus wählen und Ganze Linie', d: 'Mit „Nur zusammenhängende Innenlinien + Umschalt“ wählst du den Pfad mit der Maus, auch in Gruppen und Komponenten: eine Linie, den Umriss einer Fläche, und mit Umschalt fügst du Segmente hinzu oder entfernst sie. Mit Ganze Linie wird sofort die ganze Linie gewählt, mit allen zusammenhängenden Segmenten bis zu einer Unterbrechung oder einem Ende.' }
 ];
 I18N_PLUGINS.de.spacing_tool.how = [
   { t: 'Das Problem, das es löst', d: 'Objekte von Hand entlang einer Kurve zu kopieren und zu platzieren ergibt unregelmäßige Abstände, und wenn Sie Ihre Meinung über die Anzahl der Kopien ändern, müssen Sie von vorn beginnen. robo spacing tool berechnet die Punkte entlang des Pfads präzise, und ändern Sie einen Wert, aktualisiert sich die Vorschau sofort.' },
@@ -2295,7 +2297,8 @@ I18N_PLUGINS.fr.spacing_tool.main = [
   { t: 'Nombre ou distance', d: 'Choisissez combien de copies vous voulez, équidistantes, ou un pas fixe, par exemple une par mètre.' },
   { t: 'Lignes, courbes et anneaux', d: 'Le chemin peut être un segment, une courbe ou une forme fermée comme un cercle.' },
   { t: 'Rotation et échelle', d: 'Les copies peuvent pivoter et changer de taille, de façon aléatoire ou croissante le long du chemin.' },
-  { t: 'Aperçu avant de confirmer', d: 'Vous voyez où iront les copies et dans quelle direction, et modifiez les valeurs jusqu\'au résultat voulu.' }
+  { t: 'Aperçu avant de confirmer', d: 'Vous voyez où iront les copies et dans quelle direction, et modifiez les valeurs jusqu\'au résultat voulu.' },
+  { t: 'Choix du chemin à la souris et Ligne entière', d: 'Avec « Seulement lignes intérieures contiguës + Maj », vous choisissez le chemin à la souris, même dans les groupes et composants : une ligne, le contour d’une face, et avec Maj vous ajoutez ou retirez des segments. En cochant Ligne entière, toute la ligne est sélectionnée aussitôt, avec tous les segments contigus jusqu’à une interruption ou une fin.' }
 ];
 I18N_PLUGINS.fr.spacing_tool.how = [
   { t: 'Le problème qu\'il résout', d: 'Copier et placer à la main des objets le long d\'une courbe donne des distances irrégulières, et si vous changez d\'avis sur le nombre de copies, il faut tout refaire. robo spacing tool calcule précisément les points le long du chemin, et si vous modifiez une valeur, l\'aperçu se met à jour tout de suite.' },
@@ -2314,7 +2317,8 @@ I18N_PLUGINS.es.spacing_tool.main = [
   { t: 'Número o distancia', d: 'Elige cuántas copias quieres, equidistantes, o un paso fijo, por ejemplo una cada metro.' },
   { t: 'Líneas, curvas y anillos', d: 'El recorrido puede ser un segmento, una curva o una forma cerrada como un círculo.' },
   { t: 'Rotación y escala', d: 'Las copias pueden girar y cambiar de tamaño, de forma aleatoria o creciente a lo largo del recorrido.' },
-  { t: 'Vista previa antes de confirmar', d: 'Ves dónde irán las copias y en qué dirección, y cambias los valores hasta el resultado deseado.' }
+  { t: 'Vista previa antes de confirmar', d: 'Ves dónde irán las copias y en qué dirección, y cambias los valores hasta el resultado deseado.' },
+  { t: 'Elegir la trayectoria con el ratón y Línea completa', d: 'Con «Solo líneas interiores contiguas + Mayús» eliges la trayectoria con el ratón, también dentro de grupos y componentes: una línea, el contorno de una cara, y con Mayús añades o quitas segmentos. Al marcar Línea completa se elige al instante toda la línea, con todos los segmentos contiguos hasta una interrupción o un final.' }
 ];
 I18N_PLUGINS.es.spacing_tool.how = [
   { t: 'El problema que resuelve', d: 'Copiar y colocar a mano objetos a lo largo de una curva da distancias irregulares, y si cambias de idea sobre el número de copias tienes que rehacerlo todo. robo spacing tool calcula con precisión los puntos a lo largo del recorrido, y si modificas un valor la vista previa se actualiza enseguida.' },
