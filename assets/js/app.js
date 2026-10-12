@@ -189,9 +189,10 @@
     }
     if (e.target.closest && e.target.closest('#donate-offer')) {
       var url2 = $('#donate-modal').getAttribute('data-url');
-      window.open(DONATE_URL, '_blank', 'noopener');
       closeDonateModal();
       triggerDownload(url2);
+      // the donation page opens in this same tab (a moment later, so the download starts first)
+      setTimeout(function () { window.location.href = DONATE_URL; }, 700);
     }
   });
 

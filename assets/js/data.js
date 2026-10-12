@@ -94,12 +94,11 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- DEMOLITION */
   {
-    id: 'demolition', name: 'robo demolition', version: '1.1', category: 'Modellazione', hue: 15,
-    noDownload: true,
+    id: 'demolition', name: 'robo demolition', version: '1.2', category: 'Modellazione', hue: 15,
     video: 'Zgdt30Fkshw',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
-    simple: 'Seleziona facce, gruppi o componenti pesanti: robo demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Usa Open3D (Python, in locale sul tuo computer); gli oggetti interni restano oggetti e i materiali restano al loro posto.',
+    simple: 'Seleziona facce, gruppi o componenti pesanti: robo demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Il motore è incluso nel plugin, non serve installare nulla; gli oggetti interni restano oggetti e i materiali restano al loro posto.',
     intro: [
       'robo demolition alleggerisce gli oggetti con troppi triangoli, per esempio quelli importati da altri programmi o scaricati da internet. Ne crea una versione più semplice che conserva la forma, ma pesa molto meno.',
       'Serve quando il modello è lento, il file è enorme o SketchUp fatica a muoversi. Vedi il risultato in anteprima sul modello e decidi tu quanto semplificare con una barra, prima di applicare.'
@@ -118,7 +117,7 @@ var PLUGINS = [
       { t: 'Passo 2 · Muovi la barra e guarda', d: 'Con la barra "Quantità di demolizione" decidi quanto togliere: più è alta, più il modello è leggero. Premi Anteprima e una bozza dell\'oggetto semplificato viene disegnata in blu sopra l\'originale, con sotto i numeri "facce prima → dopo" e la percentuale in meno. Muovi la barra e rivedi il risultato finché la forma ti soddisfa: nel modello non cambia nulla finché non confermi.' },
       { t: 'Passo 3 · Applica, o conserva l\'originale', d: 'Con "Applica" il risultato entra nel modello in un\'unica operazione: un solo Ctrl+Z ripristina tutto. Di default l\'originale resta e accanto, nella stessa posizione, nasce la copia demolita; se disattivi "Mantieni l\'oggetto originale", l\'originale viene sostituito. Dopo l\'anteprima, se modifichi il modello, il plugin ti chiede di rifarla, per non applicare un risultato non più valido.' },
       { t: 'Due metodi di riduzione', d: 'Quadric elimina per primi i triangoli che cambiano meno la forma, ed è quello da scegliere quando conta la qualità. Voxel divide lo spazio in una griglia di celle e unisce tutto ciò che sta nella stessa cella: è velocissimo e dà risultati molto leggeri, ma più grossolani. In entrambi i casi la barra significa la stessa cosa, cioè quanto viene tolto.' },
-      { t: 'Tre motori, scegli tu', d: 'Il motore "Veloce" è il consigliato: si installa in pochi secondi (circa 35 MB). "Alta precisione" usa Open3D (circa 300 MB), è un po\' più lento ma in media un po\' più accurato. "Nativo" è incluso nel plugin e non richiede alcuna installazione: è velocissimo, un po\' meno raffinato con riduzioni molto spinte. Se Python o il motore mancano, un assistente li installa per te, passo dopo passo, solo sul tuo computer.' },
+      { t: 'Motore incluso, niente da installare', d: 'Il motore di riduzione è incluso nel plugin: non servono Python né altri programmi, e funziona subito dopo l\'installazione. Il lavoro avviene in locale, in background, e protegge i bordi aperti.' },
       { t: 'Oggetti, materiali e bordi', d: 'Ogni gruppo e componente dentro la selezione viene ridotto al proprio posto: resta un oggetto separato, con il suo nome e la sua posizione, e non viene unito agli altri. I componenti usati più volte sono ridotti una volta sola. Materiali (fronte e retro) e tag restano. Puoi proteggere i bordi aperti, così le superfici non si restringono; correggere le facce rovesciate sulle forme chiuse; e ammorbidire gli spigoli tra facce quasi piane, per un aspetto liscio. Il risultato è fatto di triangoli, ma la mappatura delle texture (UV) viene riportata dalle facce originali: le texture mantengono il loro aspetto.' },
       { t: 'Tutto in locale, senza bloccarti', d: 'Il calcolo gira sul tuo computer: non viene inviato nulla su internet. Avviene in background, quindi SketchUp resta utilizzabile; vedi il tempo trascorso e puoi premere Annulla in qualsiasi momento.' },
       { t: 'Un esempio concreto', d: 'Hai scaricato una poltrona da internet: ha 480.000 facce e il modello si trascina. La selezioni, premi Anteprima e porti la barra al 90%: i numeri mostrano 480.000 → 48.000 facce, e la bozza blu sembra ancora la stessa poltrona. Spingi al 97% e iniziano a vedersi spigoli sui braccioli: torni al 93% e confermi. Applichi: la copia leggera prende il posto dell\'originale (o gli sta accanto, se lo hai conservato) con i suoi tessuti e materiali, e il modello torna fluido. Se non ti piace, un Ctrl+Z e sei di nuovo all\'inizio.' }
@@ -127,7 +126,7 @@ var PLUGINS = [
     solves: [
       { p: 'Le mesh importate hanno centinaia di migliaia di triangoli e rallentano il modello.', s: 'Una copia con la percentuale di triangoli che scegli, con la forma quasi identica.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo demolition (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'Python 3 + Open3D (pip install open3d)'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Menu', 'Robo Tool › robo demolition (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'Nessuna installazione (motore incluso)'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
 
   /* --------------------------------------------------------------- EXPORT OBJECT */
