@@ -6,6 +6,20 @@
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
   function $(sel, root) { return (root || document).querySelector(sel); }
+  /* Internal links always open in the same tab: some browsers (Comet) open them in a new one.
+     Ctrl, Cmd, Shift, Alt and middle click keep their normal meaning; downloads and external links are left alone. */
+  window.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) { return; }
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || a.hasAttribute('download')) { return; }
+    var url;
+    try { url = new URL(a.getAttribute('href'), window.location.href); } catch (err) { return; }
+    if (url.origin !== window.location.origin) { return; }
+    if (url.pathname === window.location.pathname && url.search === window.location.search && url.hash) { return; } /* anchor in this page */
+    e.preventDefault();
+    window.location.assign(url.href);
+  });
+
   function byId(id) {
     for (var i = 0; i < PLUGINS.length; i++) { if (PLUGINS[i].id === id) { return i; } }
     return -1;
