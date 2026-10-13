@@ -475,7 +475,7 @@ var PLUGINS = [
       { t: 'Linee, curve e anelli', d: 'Il percorso può essere un segmento, una curva o una forma chiusa come un cerchio.' },
       { t: 'Rotazione e scala', d: 'Le copie possono ruotare e cambiare dimensione, in modo casuale o crescente lungo il percorso.' },
       { t: 'Anteprima prima di confermare', d: 'Vedi dove andranno le copie e in che direzione, e modifichi i valori fino al risultato voluto.' },
-      { t: 'Scelta del percorso col mouse e Full line', d: 'Con “Solo linee interne contigue + shift” scegli il percorso col mouse, anche dentro gruppi e componenti: una linea, il contorno di una faccia, e con Maiusc aggiungi o togli segmenti. Spuntando Full line viene scelta subito tutta la linea, con tutti i segmenti contigui fino a un’interruzione o a una fine.' }
+      { t: 'Scelta del percorso col mouse e Linea intera', d: 'Con “Scegli segmenti (Maiusc + clic)” scegli il percorso col mouse, anche dentro gruppi e componenti: una linea, il contorno di una faccia, e con Maiusc aggiungi o togli segmenti. Spuntando Full line viene scelta subito tutta la linea, con tutti i segmenti contigui fino a un’interruzione o a una fine.' }
     ],
     steps: ['Seleziona l\'oggetto e il percorso (le linee).', 'Scegli "Numero" di copie oppure "Distanza" fissa.', 'Regola rotazione e scala, guarda l\'anteprima e conferma.'],
     how: [
