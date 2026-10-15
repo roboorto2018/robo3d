@@ -459,12 +459,14 @@
         '<p class="tag">' + esc(tagline) + '</p>' +
         '<p class="simple">' + esc(simple) + '</p>' +
         '<div class="actions">' + (function () {
-          var rbzUrl = 'https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz';
-          if (p.noDownload) { return '<button type="button" class="btn btn-red" id="dl-unavailable">' + tUI('plugin.download') + '</button>'; }
-          if (p.donationPrompt) { return '<button type="button" class="btn btn-red" id="dl-gate" data-url="' + rbzUrl + '">' + tUI('plugin.download') + '</button>'; }
-          return '<a class="btn btn-red" href="' + rbzUrl + '" download>' + tUI('plugin.download') + '</a>';
+          var dlLabel = p.downloadUrl ? tUI('plugin.download').replace('.rbz', '.exe') : tUI('plugin.download'); // an installer (.exe) instead of the .rbz
+          var rbzUrl = p.downloadUrl ? esc(p.downloadUrl) : 'https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz'; // downloadUrl: a plugin that is installed with its own installer (.exe)
+          if (p.noDownload) { return '<button type="button" class="btn btn-red" id="dl-unavailable">' + dlLabel + '</button>'; }
+          if (p.donationPrompt) { return '<button type="button" class="btn btn-red" id="dl-gate" data-url="' + rbzUrl + '">' + dlLabel + '</button>'; }
+          return '<a class="btn btn-red" href="' + rbzUrl + '" download>' + dlLabel + '</a>';
         })() +
           '<a class="btn btn-dark" href="#tecnica">' + tUI('plugin.howbtn') + '</a><a class="btn btn-outline" href="index.html#plugin">' + tUI('plugin.allbtn') + '</a></div>' +
+        (pf(p, 'installNote') ? '<p class="inst-note">' + esc(pf(p, 'installNote')) + '</p>' : '') +
       '</div><div class="shot">' + gallery(im, 0, tUI('gal.imageof').replace('{n}', p.name)) + '</div></div></div>' +
 
       aboutHtml +

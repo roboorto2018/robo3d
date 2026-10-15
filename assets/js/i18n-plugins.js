@@ -3204,3 +3204,143 @@ solves: [
 specs: [['Menú', 'Robo Tool › robo doctor'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior'], ['Deshacer', 'Cada cierre es una operación: Ctrl+Z o el botón Deshacer'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_TOOLBARS.es.doctor = { 'doctor.png': 'robo doctor: comprueba y repara los sólidos' };
+
+/* ================================================================== STP IMPORTER */
+I18N_PLUGINS.en.stp_importer = {
+tagline: 'Imports the STEP and IGES files of CAD programs, with assemblies and colors, and lets you place them where you want.',
+simple: 'Choose a STEP or IGES file, set the detail of the surfaces and press Import: the OpenCascade engine reads the file and the model hangs on the cursor, as when you insert a SKP file. Assemblies and colors become groups and materials.',
+intro: [
+  'robo STP/IGES importer brings the models of CAD programs (STEP .stp and .step, IGES .igs and .iges) into SketchUp. The reading is done by OpenCascade, a free engine widely used in the CAD world, that runs on your computer: no file goes to the internet.',
+  'The model arrives as a component named after the file, with the groups of the assembly and the colors of the file. It is built in one undoable step and you place it with the mouse.'
+],
+main: [
+    { t: 'STEP and IGES with OpenCascade', d: 'It reads .stp, .step, .igs and .iges with the OpenCascade engine (an external program written in Rust). IGES keeps less information than STEP: names and assemblies are often lost.' },
+    { t: 'Assemblies and colors', d: 'Assemblies become groups inside groups, with the names of the file; colors become materials named “STEP RRGGBB”. Repeated parts are numbered.' },
+    { t: 'Quality of your choice', d: 'Draft, Normal, High or a tolerance of your own in millimeters: the smaller it is, the smoother the curves and the heavier the model.' },
+    { t: 'Clean surfaces', d: 'The triangulation edges between flat faces are hidden, and curved surfaces are smoothed up to the angle you choose.' },
+    { t: 'Progress bar and free placement', d: 'A bar next to Import shows how far the import is. Then the model hangs on the cursor: you click where you want (Esc cancels), as for a SKP file.' },
+    { t: 'Window and Help in five languages', d: 'Italian, English, German, French and Spanish, with the globe to change language. The window remembers your choices.' }
+],
+steps: ['Open robo STP/IGES importer from the Robo Tool menu or the toolbar.', 'Press Browse, choose the STEP or IGES file and the detail of the surfaces.', 'Press Import and click in the drawing where you want to place the model.'],
+how: [
+    { t: 'Before you start', d: 'The plugin needs the external engine (robo_stp_engine, with OpenCascade): it does not work without it. The installer copies it together with the plugin.' },
+    { t: 'Step 1 · Choose the file', d: 'Press Browse and choose a .stp, .step, .igs or .iges file. The file is copied to a temporary folder for reading: the original is not touched.' },
+    { t: 'Step 2 · Choose the detail', d: 'Draft is the fastest, High has more triangles and smoother curves. With Custom you write the tolerance in millimeters.' },
+    { t: 'Step 3 · Import and place', d: 'The bar next to the button shows the progress. At the end the model hangs on the cursor: click where you want, or press Esc to cancel.' },
+    { t: 'The options', d: 'One group per part, as in the assembly; the colors of the file; the angle up to which the edges between faces are hidden and smoothed (0 = only between flat faces).' },
+    { t: 'If something goes wrong', d: 'A damaged file or one in an unrecognized format gives a message with the reason. Very large files take time: SketchUp does not respond while it creates the groups.' }
+],
+pros: ['STEP and IGES with a free CAD engine', 'Assemblies and colors kept', 'Free placement with the mouse', 'Progress bar', 'No file goes to the internet'],
+solves: [
+    { p: 'The files of CAD programs do not open directly in SketchUp.', s: 'The plugin reads them with OpenCascade and brings them into the model as a component.' },
+    { p: 'An imported model always ends up at the origin.', s: 'The model hangs on the cursor and you place it where you want.' }
+],
+specs: [['Menu', 'Robo Tool › robo STP/IGES importer'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2021.1 or later, Windows'], ['Engine', 'OpenCascade 7.9.3 (LGPL 2.1 with the OCCT exception), external program included in the installer'], ['Undo', 'The build is one operation: Ctrl+Z']],
+installNote: 'Installation: download the installer (.exe), which includes the plugin and the external file with the OpenCascade engine. This plugin does not work without the external file: do not copy the plugin alone.'
+};
+I18N_TOOLBARS.en.stp_importer = { 'stp_importer.png': 'robo STP/IGES importer: import STEP and IGES files' };
+
+/* ================================================================== STP IMPORTER */
+I18N_PLUGINS.de.stp_importer = {
+tagline: 'Importiert STEP- und IGES-Dateien von CAD-Programmen, mit Baugruppen und Farben, und lässt dich sie frei platzieren.',
+simple: 'Wähle eine STEP- oder IGES-Datei, stelle das Detail der Flächen ein und drücke Importieren: Die OpenCascade-Engine liest die Datei und das Modell hängt am Cursor, wie beim Einfügen einer SKP-Datei. Baugruppen und Farben werden zu Gruppen und Materialien.',
+intro: [
+  'robo STP/IGES importer bringt die Modelle von CAD-Programmen (STEP .stp und .step, IGES .igs und .iges) nach SketchUp. Gelesen wird mit OpenCascade, einer freien, in der CAD-Welt weit verbreiteten Engine, die auf deinem Computer läuft: Keine Datei geht ins Internet.',
+  'Das Modell kommt als Komponente mit dem Dateinamen, mit den Gruppen der Baugruppe und den Farben der Datei. Es entsteht in einem einzigen rückgängig zu machenden Schritt und du platzierst es mit der Maus.'
+],
+main: [
+    { t: 'STEP und IGES mit OpenCascade', d: 'Liest .stp, .step, .igs und .iges mit der OpenCascade-Engine (ein externes, in Rust geschriebenes Programm). IGES enthält weniger Informationen als STEP: Namen und Baugruppen gehen oft verloren.' },
+    { t: 'Baugruppen und Farben', d: 'Baugruppen werden zu verschachtelten Gruppen mit den Namen der Datei; Farben werden zu Materialien namens „STEP RRGGBB“. Wiederholte Teile werden nummeriert.' },
+    { t: 'Qualität nach Wahl', d: 'Entwurf, Normal, Hoch oder eine eigene Toleranz in Millimetern: Je kleiner, desto glatter die Kurven und desto schwerer das Modell.' },
+    { t: 'Saubere Flächen', d: 'Die Triangulationskanten zwischen ebenen Flächen werden ausgeblendet, gekrümmte Flächen bis zum gewählten Winkel geglättet.' },
+    { t: 'Fortschrittsbalken und freie Platzierung', d: 'Ein Balken neben Importieren zeigt den Fortschritt. Dann hängt das Modell am Cursor: Klicke, wo du willst (Esc bricht ab), wie bei einer SKP-Datei.' },
+    { t: 'Fenster und Hilfe in fünf Sprachen', d: 'Italienisch, Englisch, Deutsch, Französisch und Spanisch, mit dem Globus zum Wechseln. Das Fenster merkt sich deine Einstellungen.' }
+],
+steps: ['Öffne robo STP/IGES importer über das Menü Robo Tool oder die Symbolleiste.', 'Drücke Durchsuchen, wähle die STEP- oder IGES-Datei und das Detail der Flächen.', 'Drücke Importieren und klicke in die Zeichnung, wo du das Modell platzieren willst.'],
+how: [
+    { t: 'Bevor du anfängst', d: 'Das Plugin braucht die externe Engine (robo_stp_engine, mit OpenCascade): Ohne sie funktioniert es nicht. Das Installationsprogramm kopiert sie zusammen mit dem Plugin.' },
+    { t: 'Schritt 1 · Datei wählen', d: 'Drücke Durchsuchen und wähle eine .stp-, .step-, .igs- oder .iges-Datei. Zum Lesen wird sie in einen temporären Ordner kopiert: Das Original bleibt unberührt.' },
+    { t: 'Schritt 2 · Detail wählen', d: 'Entwurf ist am schnellsten, Hoch hat mehr Dreiecke und glattere Kurven. Mit Benutzerdefiniert schreibst du die Toleranz in Millimetern.' },
+    { t: 'Schritt 3 · Importieren und platzieren', d: 'Der Balken neben dem Button zeigt den Fortschritt. Am Ende hängt das Modell am Cursor: Klicke, wo du willst, oder drücke Esc zum Abbrechen.' },
+    { t: 'Die Optionen', d: 'Eine Gruppe pro Teil, wie in der Baugruppe; die Farben der Datei; der Winkel, bis zu dem Kanten zwischen Flächen ausgeblendet und geglättet werden (0 = nur zwischen ebenen Flächen).' },
+    { t: 'Wenn etwas nicht klappt', d: 'Eine beschädigte Datei oder ein nicht erkanntes Format ergibt eine Meldung mit dem Grund. Sehr große Dateien brauchen Zeit: SketchUp reagiert nicht, während die Gruppen erstellt werden.' }
+],
+pros: ['STEP und IGES mit einer freien CAD-Engine', 'Baugruppen und Farben bleiben erhalten', 'Freie Platzierung mit der Maus', 'Fortschrittsbalken', 'Keine Datei geht ins Internet'],
+solves: [
+    { p: 'Dateien von CAD-Programmen lassen sich nicht direkt in SketchUp öffnen.', s: 'Das Plugin liest sie mit OpenCascade und bringt sie als Komponente ins Modell.' },
+    { p: 'Ein importiertes Modell landet immer im Ursprung.', s: 'Das Modell hängt am Cursor und du platzierst es, wo du willst.' }
+],
+specs: [['Menü', 'Robo Tool › robo STP/IGES importer'], ['Symbolleiste', '1 Schaltfläche'], ['Voraussetzung', 'SketchUp 2021.1 oder neuer, Windows'], ['Engine', 'OpenCascade 7.9.3 (LGPL 2.1 mit OCCT-Ausnahme), externes Programm im Installationsprogramm enthalten'], ['Rückgängig', 'Der Aufbau ist ein Vorgang: Strg+Z']],
+installNote: 'Installation: Lade das Installationsprogramm (.exe) herunter, das das Plugin und die externe Datei mit der OpenCascade-Engine enthält. Dieses Plugin funktioniert ohne die externe Datei nicht: Kopiere nicht nur das Plugin.'
+};
+I18N_TOOLBARS.de.stp_importer = { 'stp_importer.png': 'robo STP/IGES importer: STEP- und IGES-Dateien importieren' };
+
+/* ================================================================== STP IMPORTER */
+I18N_PLUGINS.fr.stp_importer = {
+tagline: 'Importe les fichiers STEP et IGES des logiciels de CAO, avec assemblages et couleurs, et vous laisse les placer où vous voulez.',
+simple: 'Choisissez un fichier STEP ou IGES, réglez le détail des surfaces et appuyez sur Importer : le moteur OpenCascade lit le fichier et le modèle se fixe au curseur, comme quand vous insérez un fichier SKP. Assemblages et couleurs deviennent groupes et matériaux.',
+intro: [
+  'robo STP/IGES importer amène dans SketchUp les modèles des logiciels de CAO (STEP .stp et .step, IGES .igs et .iges). La lecture est faite par OpenCascade, un moteur libre très répandu dans le monde de la CAO, qui tourne sur votre ordinateur : aucun fichier ne part sur internet.',
+  'Le modèle arrive comme un composant portant le nom du fichier, avec les groupes de l’assemblage et les couleurs du fichier. Il se construit en une seule étape annulable et vous le placez à la souris.'
+],
+main: [
+    { t: 'STEP et IGES avec OpenCascade', d: 'Lit .stp, .step, .igs et .iges avec le moteur OpenCascade (un programme externe écrit en Rust). IGES garde moins d’informations que STEP : noms et assemblages se perdent souvent.' },
+    { t: 'Assemblages et couleurs', d: 'Les assemblages deviennent des groupes dans des groupes, avec les noms du fichier ; les couleurs deviennent des matériaux nommés « STEP RRGGBB ». Les pièces répétées sont numérotées.' },
+    { t: 'Qualité au choix', d: 'Brouillon, Normal, Élevé ou une tolérance à vous en millimètres : plus elle est petite, plus les courbes sont lisses et plus le modèle est lourd.' },
+    { t: 'Surfaces propres', d: 'Les arêtes de triangulation entre faces planes sont masquées, et les surfaces courbes adoucies jusqu’à l’angle choisi.' },
+    { t: 'Barre de progression et placement libre', d: 'Une barre à côté d’Importer montre l’avancement. Ensuite le modèle se fixe au curseur : cliquez où vous voulez (Échap annule), comme pour un fichier SKP.' },
+    { t: 'Fenêtre et Aide en cinq langues', d: 'Italien, anglais, allemand, français et espagnol, avec le globe pour changer de langue. La fenêtre garde vos choix.' }
+],
+steps: ['Ouvrez robo STP/IGES importer depuis le menu Robo Tool ou la barre d’outils.', 'Appuyez sur Parcourir, choisissez le fichier STEP ou IGES et le détail des surfaces.', 'Appuyez sur Importer et cliquez dans le dessin où vous voulez placer le modèle.'],
+how: [
+    { t: 'Avant de commencer', d: 'Le plugin a besoin du moteur externe (robo_stp_engine, avec OpenCascade) : sans lui, il ne fonctionne pas. Le programme d’installation le copie avec le plugin.' },
+    { t: 'Étape 1 · Choisir le fichier', d: 'Appuyez sur Parcourir et choisissez un fichier .stp, .step, .igs ou .iges. Il est copié dans un dossier temporaire pour la lecture : l’original n’est pas touché.' },
+    { t: 'Étape 2 · Choisir le détail', d: 'Brouillon est le plus rapide, Élevé a plus de triangles et des courbes plus lisses. Avec Personnalisé, vous écrivez la tolérance en millimètres.' },
+    { t: 'Étape 3 · Importer et placer', d: 'La barre à côté du bouton montre l’avancement. À la fin, le modèle se fixe au curseur : cliquez où vous voulez, ou appuyez sur Échap pour annuler.' },
+    { t: 'Les options', d: 'Un groupe par pièce, comme dans l’assemblage ; les couleurs du fichier ; l’angle jusqu’auquel les arêtes entre faces sont masquées et adoucies (0 = seulement entre faces planes).' },
+    { t: 'Si quelque chose ne va pas', d: 'Un fichier endommagé ou d’un format non reconnu donne un message avec la raison. Les très gros fichiers demandent du temps : SketchUp ne répond pas pendant la création des groupes.' }
+],
+pros: ['STEP et IGES avec un moteur de CAO libre', 'Assemblages et couleurs conservés', 'Placement libre à la souris', 'Barre de progression', 'Aucun fichier ne part sur internet'],
+solves: [
+    { p: 'Les fichiers des logiciels de CAO ne s’ouvrent pas directement dans SketchUp.', s: 'Le plugin les lit avec OpenCascade et les amène dans le modèle comme composant.' },
+    { p: 'Un modèle importé finit toujours à l’origine.', s: 'Le modèle se fixe au curseur et vous le placez où vous voulez.' }
+],
+specs: [['Menu', 'Robo Tool › robo STP/IGES importer'], ['Barre d’outils', '1 bouton'], ['Nécessite', 'SketchUp 2021.1 ou plus récent, Windows'], ['Moteur', 'OpenCascade 7.9.3 (LGPL 2.1 avec l’exception OCCT), programme externe inclus dans l’installateur'], ['Annulation', 'La construction est une opération : Ctrl+Z']],
+installNote: 'Installation : téléchargez le programme d’installation (.exe), qui comprend le plugin et le fichier externe avec le moteur OpenCascade. Ce plugin ne fonctionne pas sans le fichier externe : ne copiez pas seulement le plugin.'
+};
+I18N_TOOLBARS.fr.stp_importer = { 'stp_importer.png': 'robo STP/IGES importer : importer des fichiers STEP et IGES' };
+
+/* ================================================================== STP IMPORTER */
+I18N_PLUGINS.es.stp_importer = {
+tagline: 'Importa los archivos STEP e IGES de los programas CAD, con ensamblajes y colores, y te deja colocarlos donde quieras.',
+simple: 'Elige un archivo STEP o IGES, ajusta el detalle de las superficies y pulsa Importar: el motor OpenCascade lee el archivo y el modelo se pega al cursor, como cuando insertas un archivo SKP. Ensamblajes y colores se convierten en grupos y materiales.',
+intro: [
+  'robo STP/IGES importer lleva a SketchUp los modelos de los programas CAD (STEP .stp y .step, IGES .igs y .iges). La lectura la hace OpenCascade, un motor libre muy extendido en el mundo CAD, que funciona en tu ordenador: ningún archivo sale a internet.',
+  'El modelo llega como un componente con el nombre del archivo, con los grupos del ensamblaje y los colores del archivo. Se construye en un solo paso reversible y lo colocas tú con el ratón.'
+],
+main: [
+    { t: 'STEP e IGES con OpenCascade', d: 'Lee .stp, .step, .igs y .iges con el motor OpenCascade (un programa externo escrito en Rust). IGES guarda menos información que STEP: los nombres y ensamblajes suelen perderse.' },
+    { t: 'Ensamblajes y colores', d: 'Los ensamblajes se convierten en grupos dentro de grupos, con los nombres del archivo; los colores, en materiales llamados «STEP RRGGBB». Las piezas repetidas se numeran.' },
+    { t: 'Calidad a tu elección', d: 'Borrador, Normal, Alta o una tolerancia tuya en milímetros: cuanto menor, más suaves las curvas y más pesado el modelo.' },
+    { t: 'Superficies limpias', d: 'Las aristas de triangulación entre caras planas se ocultan, y las superficies curvas se suavizan hasta el ángulo que elijas.' },
+    { t: 'Barra de progreso y colocación libre', d: 'Una barra junto a Importar muestra cómo va la importación. Después el modelo se pega al cursor: haces clic donde quieras (Esc cancela), como con un archivo SKP.' },
+    { t: 'Ventana y Ayuda en cinco idiomas', d: 'Italiano, inglés, alemán, francés y español, con el globo para cambiar de idioma. La ventana recuerda tus elecciones.' }
+],
+steps: ['Abre robo STP/IGES importer desde el menú Robo Tool o la barra de herramientas.', 'Pulsa Examinar, elige el archivo STEP o IGES y el detalle de las superficies.', 'Pulsa Importar y haz clic en el dibujo donde quieras colocar el modelo.'],
+how: [
+    { t: 'Antes de empezar', d: 'El plugin necesita el motor externo (robo_stp_engine, con OpenCascade): sin él no funciona. El instalador lo copia junto con el plugin.' },
+    { t: 'Paso 1 · Elige el archivo', d: 'Pulsa Examinar y elige un archivo .stp, .step, .igs o .iges. Se copia a una carpeta temporal para leerlo: el original no se toca.' },
+    { t: 'Paso 2 · Elige el detalle', d: 'Borrador es el más rápido, Alta tiene más triángulos y curvas más suaves. Con Personalizada escribes la tolerancia en milímetros.' },
+    { t: 'Paso 3 · Importa y coloca', d: 'La barra junto al botón muestra el avance. Al final el modelo se pega al cursor: haz clic donde quieras, o pulsa Esc para cancelar.' },
+    { t: 'Las opciones', d: 'Un grupo por pieza, como en el ensamblaje; los colores del archivo; el ángulo hasta el cual las aristas entre caras se ocultan y suavizan (0 = solo entre caras planas).' },
+    { t: 'Si algo no va bien', d: 'Un archivo dañado o de un formato no reconocido da un mensaje con el motivo. Los archivos muy grandes tardan: SketchUp no responde mientras crea los grupos.' }
+],
+pros: ['STEP e IGES con un motor CAD libre', 'Ensamblajes y colores conservados', 'Colocación libre con el ratón', 'Barra de progreso', 'Ningún archivo sale a internet'],
+solves: [
+    { p: 'Los archivos de los programas CAD no se abren directamente en SketchUp.', s: 'El plugin los lee con OpenCascade y los lleva al modelo como componente.' },
+    { p: 'Un modelo importado acaba siempre en el origen.', s: 'El modelo se pega al cursor y lo colocas donde quieras.' }
+],
+specs: [['Menú', 'Robo Tool › robo STP/IGES importer'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2021.1 o posterior, Windows'], ['Motor', 'OpenCascade 7.9.3 (LGPL 2.1 con la excepción OCCT), programa externo incluido en el instalador'], ['Deshacer', 'La construcción es una operación: Ctrl+Z']],
+installNote: 'Instalación: descarga el instalador (.exe), que incluye el plugin y el archivo externo con el motor OpenCascade. Este plugin no funciona sin el archivo externo: no copies solo el plugin.'
+};
+I18N_TOOLBARS.es.stp_importer = { 'stp_importer.png': 'robo STP/IGES importer: importar archivos STEP e IGES' };

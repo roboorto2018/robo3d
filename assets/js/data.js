@@ -787,6 +787,42 @@ solves: [
     { p: 'Chiudere i buchi a mano crea triangoli disordinati.', s: 'Il plugin costruisce quadrilateri piani e lascia a te la scelta dei triangoli.' }
 ],
 specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Annullamento', 'Ogni chiusura è un’operazione: Ctrl+Z o il pulsante Annulla'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+  },
+  /* --------------------------------------------------------------- STP IMPORTER */
+  {
+    id: 'stp_importer', name: 'robo STP/IGES importer', version: '1.0', category: 'Produttività', hue: 205,
+    images: ['assets/img/screenshots/stp_importer-1.png', 'assets/img/screenshots/stp_importer-2.png', 'assets/img/screenshots/stp_importer-3.png'],
+    downloadUrl: 'https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_stp_importer_setup.exe',
+tagline: 'Importa i file STEP e IGES dei programmi CAD, con assiemi e colori, e li posizioni dove vuoi.',
+simple: 'Scegli un file STEP o IGES, imposta il dettaglio delle superfici e premi Importa: il motore OpenCascade legge il file e il modello si attacca al cursore, come quando inserisci un file SKP. Assiemi e colori diventano gruppi e materiali.',
+intro: [
+  'robo STP/IGES importer porta in SketchUp i modelli dei programmi CAD (STEP .stp e .step, IGES .igs e .iges). Il lavoro di lettura lo fa OpenCascade, un motore libero molto diffuso nel mondo CAD, che gira sul tuo computer: nessun file va su internet.',
+  'Il modello arriva come un componente con il nome del file, con i gruppi dell’assieme e i colori del file. Si costruisce in un solo passo annullabile e lo posizioni tu con il mouse.'
+],
+main: [
+    { t: 'STEP e IGES con OpenCascade', d: 'Legge .stp, .step, .igs e .iges con il motore OpenCascade (un programma esterno scritto in Rust). IGES conserva meno informazioni di STEP: nomi e assiemi spesso si perdono.' },
+    { t: 'Assiemi e colori', d: 'Gli assiemi diventano gruppi dentro gruppi, con i nomi del file; i colori diventano materiali chiamati «STEP RRGGBB». Le parti ripetute sono numerate.' },
+    { t: 'Qualità a scelta', d: 'Bozza, Normale, Alta o una tolleranza tua in millimetri: più è piccola, più le curve sono lisce e più il modello è pesante.' },
+    { t: 'Superfici pulite', d: 'Gli spigoli della triangolazione tra facce piane vengono nascosti, e le superfici curve ammorbidite fino all’angolo che scegli.' },
+    { t: 'Barra di avanzamento e posizionamento libero', d: 'Una barra accanto a Importa mostra a che punto è l’importazione. Poi il modello si attacca al cursore: clicchi dove vuoi (Esc annulla), come per un file SKP.' },
+    { t: 'Finestra e Help in cinque lingue', d: 'Italiano, inglese, tedesco, francese e spagnolo, con il globo per cambiare lingua. La finestra ricorda le tue scelte.' }
+],
+steps: ['Apri robo STP/IGES importer dal menu Robo Tool o dalla barra degli strumenti.', 'Premi Sfoglia, scegli il file STEP o IGES e il dettaglio delle superfici.', 'Premi Importa e clicca nel disegno dove vuoi posizionare il modello.'],
+how: [
+    { t: 'Prima di cominciare', d: 'Il plugin ha bisogno del motore esterno (robo_stp_engine, con OpenCascade): senza non funziona. Il programma di installazione lo copia insieme al plugin.' },
+    { t: 'Passo 1 · Scegli il file', d: 'Premi Sfoglia e scegli un file .stp, .step, .igs o .iges. Il file viene copiato in una cartella temporanea per la lettura: l’originale non si tocca.' },
+    { t: 'Passo 2 · Scegli il dettaglio', d: 'Bozza è la più veloce, Alta ha più triangoli e curve più lisce. Con Personalizzata scrivi tu la tolleranza in millimetri.' },
+    { t: 'Passo 3 · Importa e posiziona', d: 'La barra accanto al pulsante mostra l’avanzamento. Alla fine il modello si attacca al cursore: clicca nel punto che vuoi, oppure premi Esc per annullare.' },
+    { t: 'Le opzioni', d: 'Un gruppo per ogni parte, come nell’assieme; i colori del file; l’angolo fino al quale gli spigoli tra facce vengono nascosti e ammorbiditi (0 = solo tra facce piane).' },
+    { t: 'Se qualcosa non va', d: 'Un file danneggiato o in un formato non riconosciuto dà un messaggio con il motivo. I file molto grandi richiedono tempo: SketchUp non risponde mentre crea i gruppi.' }
+],
+pros: ['STEP e IGES con un motore CAD libero', 'Assiemi e colori mantenuti', 'Posizionamento libero con il mouse', 'Barra di avanzamento', 'Nessun file va su internet'],
+solves: [
+    { p: 'I file dei programmi CAD non si aprono direttamente in SketchUp.', s: 'Il plugin li legge con OpenCascade e li porta nel modello come componente.' },
+    { p: 'Un modello importato finisce sempre all’origine.', s: 'Il modello si attacca al cursore e lo posizioni dove vuoi.' }
+],
+specs: [['Menu', 'Robo Tool › robo STP/IGES importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo, Windows'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT), programma esterno incluso nell’installatore'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
+installNote: 'Installazione: scarica il programma di installazione (.exe), che comprende il plugin e il file esterno con il motore OpenCascade. Questo plugin non funziona senza il file esterno: non copiare solo il plugin.'
   }
 ];
 
@@ -829,6 +865,7 @@ var TOOLBARS = {
   toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.png', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
   fillet_3d: { name: 'robo fillet 3d', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3d: arrotonda o smussa i bordi' }]] },
   doctor: { name: 'robo doctor', groups: [[{ i: 'doctor.png', l: 'robo doctor: controlla e ripara i solidi' }]] },
+  stp_importer: { name: 'robo STP/IGES importer', groups: [[{ i: 'stp_importer.png', l: 'robo STP/IGES importer: importa file STEP e IGES' }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },
