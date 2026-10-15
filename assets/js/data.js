@@ -530,7 +530,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------------- START */
   {
-    id: 'start', name: 'robo start', version: '1.0', category: 'Produttività', hue: 350,
+    id: 'start', name: 'robo start', version: '1.1', category: 'Produttività', hue: 350,
     donationPrompt: true,
     tagline: 'Oltre 20 comandi rapidi in un\'unica barra.',
     simple: 'Una barra con le operazioni di ogni giorno: crea gruppi e componenti, seleziona, nascondi, cancella guide e quote. Ogni pulsante ha una sua icona e una scorciatoia da tastiera. Dalle Impostazioni puoi anche abilitare o disabilitare i singoli pulsanti che vuoi vedere nella barra.',
