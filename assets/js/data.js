@@ -792,7 +792,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   {
     id: 'importer', name: 'robo importer', version: '0.3', category: 'Produttività', hue: 205,
     images: ['assets/img/screenshots/importer-1.png', 'assets/img/screenshots/importer-2.png', 'assets/img/screenshots/importer-3.png'],
-    downloadUrl: 'https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_importer_setup.exe',
+    noDownload: true, installer: true,
 tagline: 'Importa in SketchUp i file STEP, IGES, 3ds Max e SolidWorks, con anteprima, e li posizioni dove vuoi.',
 simple: 'Scegli un file STEP, IGES, 3ds Max o SolidWorks, controlla l’anteprima, imposta dettaglio e orientamento e premi Importa: il modello si attacca al cursore, come quando inserisci un file SKP.',
 intro: [
@@ -824,7 +824,8 @@ solves: [
     { p: 'Un modello importato finisce sempre all’origine.', s: 'Il modello si attacca al cursore e lo posizioni dove vuoi.' }
 ],
 specs: [['Menu', 'Robo Tool › robo importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo, Windows'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT), programma esterno incluso nell’installatore'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
-installNote: 'Installazione: scarica il programma di installazione (.exe), che comprende il plugin e il file esterno con il motore OpenCascade. Questo plugin non funziona senza il file esterno: non copiare solo il plugin.'
+installNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.',
+unavailableNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   }
 ];
 

@@ -459,7 +459,7 @@
         '<p class="tag">' + esc(tagline) + '</p>' +
         '<p class="simple">' + esc(simple) + '</p>' +
         '<div class="actions">' + (function () {
-          var dlLabel = p.downloadUrl ? tUI('plugin.download').replace('.rbz', '.exe') : tUI('plugin.download'); // an installer (.exe) instead of the .rbz
+          var dlLabel = (p.downloadUrl || p.installer) ? tUI('plugin.download').replace('.rbz', '.exe') : tUI('plugin.download'); // an installer (.exe) instead of the .rbz
           var rbzUrl = p.downloadUrl ? esc(p.downloadUrl) : 'https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz'; // downloadUrl: a plugin that is installed with its own installer (.exe)
           if (p.noDownload) { return '<button type="button" class="btn btn-red" id="dl-unavailable">' + dlLabel + '</button>'; }
           if (p.donationPrompt) { return '<button type="button" class="btn btn-red" id="dl-gate" data-url="' + rbzUrl + '">' + dlLabel + '</button>'; }
@@ -492,7 +492,7 @@
         '<a class="next" href="plugin.html?id=' + next.id + '"><small>' + tUI('nav.next') + '</small><b>' + esc(next.name) + '</b></a></div></div></section>';
 
     var dlBtn = $('#dl-unavailable');
-    if (dlBtn) { dlBtn.addEventListener('click', function () { alert(tUI('plugin.unavailable')); }); }
+    if (dlBtn) { dlBtn.addEventListener('click', function () { alert(pf(p, 'unavailableNote') || tUI('plugin.unavailable')); }); }
     var gateBtn = $('#dl-gate');
     if (gateBtn) { gateBtn.addEventListener('click', function () { openDonateModal(gateBtn.getAttribute('data-url')); }); }
   }

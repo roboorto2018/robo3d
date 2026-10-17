@@ -3236,7 +3236,8 @@ solves: [
     { p: 'An imported model always ends up at the origin.', s: 'The model hangs on the cursor and you place it where you want.' }
 ],
 specs: [['Menu', 'Robo Tool › robo importer'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2021.1 or later, Windows'], ['Engine', 'OpenCascade 7.9.3 (LGPL 2.1 with the OCCT exception), external program included in the installer'], ['Undo', 'The build is one operation: Ctrl+Z']],
-installNote: 'Installation: download the installer (.exe), which includes the plugin and the external file with the OpenCascade engine. This plugin does not work without the external file: do not copy the plugin alone.'
+installNote: 'robo importer is not available for download yet: it will be published as soon as it is ready.',
+unavailableNote: 'robo importer is not available for download yet: it will be published as soon as it is ready.'
 };
 I18N_TOOLBARS.en.importer = { 'importer.png': 'robo importer: import STEP, IGES, 3ds Max and SolidWorks files' };
 
@@ -3271,7 +3272,8 @@ solves: [
     { p: 'Ein importiertes Modell landet immer im Ursprung.', s: 'Das Modell hängt am Cursor und du platzierst es, wo du willst.' }
 ],
 specs: [['Menü', 'Robo Tool › robo importer'], ['Symbolleiste', '1 Schaltfläche'], ['Voraussetzung', 'SketchUp 2021.1 oder neuer, Windows'], ['Engine', 'OpenCascade 7.9.3 (LGPL 2.1 mit OCCT-Ausnahme), externes Programm im Installationsprogramm enthalten'], ['Rückgängig', 'Der Aufbau ist ein Vorgang: Strg+Z']],
-installNote: 'Installation: Lade das Installationsprogramm (.exe) herunter, das das Plugin und die externe Datei mit der OpenCascade-Engine enthält. Dieses Plugin funktioniert ohne die externe Datei nicht: Kopiere nicht nur das Plugin.'
+installNote: 'robo importer steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.',
+unavailableNote: 'robo importer steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.'
 };
 I18N_TOOLBARS.de.importer = { 'importer.png': 'robo importer: STEP-, IGES-, 3ds-Max- und SolidWorks-Dateien importieren' };
 
@@ -3306,7 +3308,8 @@ solves: [
     { p: 'Un modèle importé finit toujours à l’origine.', s: 'Le modèle se fixe au curseur et vous le placez où vous voulez.' }
 ],
 specs: [['Menu', 'Robo Tool › robo importer'], ['Barre d’outils', '1 bouton'], ['Nécessite', 'SketchUp 2021.1 ou plus récent, Windows'], ['Moteur', 'OpenCascade 7.9.3 (LGPL 2.1 avec l’exception OCCT), programme externe inclus dans l’installateur'], ['Annulation', 'La construction est une opération : Ctrl+Z']],
-installNote: 'Installation : téléchargez le programme d’installation (.exe), qui comprend le plugin et le fichier externe avec le moteur OpenCascade. Ce plugin ne fonctionne pas sans le fichier externe : ne copiez pas seulement le plugin.'
+installNote: 'robo importer n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.',
+unavailableNote: 'robo importer n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.'
 };
 I18N_TOOLBARS.fr.importer = { 'importer.png': 'robo importer : importer des fichiers STEP, IGES, 3ds Max et SolidWorks' };
 
@@ -3341,6 +3344,7 @@ solves: [
     { p: 'Un modelo importado acaba siempre en el origen.', s: 'El modelo se pega al cursor y lo colocas donde quieras.' }
 ],
 specs: [['Menú', 'Robo Tool › robo importer'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2021.1 o posterior, Windows'], ['Motor', 'OpenCascade 7.9.3 (LGPL 2.1 con la excepción OCCT), programa externo incluido en el instalador'], ['Deshacer', 'La construcción es una operación: Ctrl+Z']],
-installNote: 'Instalación: descarga el instalador (.exe), que incluye el plugin y el archivo externo con el motor OpenCascade. Este plugin no funciona sin el archivo externo: no copies solo el plugin.'
+installNote: 'robo importer todavía no está disponible para descargar: se publicará en cuanto esté listo.',
+unavailableNote: 'robo importer todavía no está disponible para descargar: se publicará en cuanto esté listo.'
 };
 I18N_TOOLBARS.es.importer = { 'importer.png': 'robo importer: importar archivos STEP, IGES, 3ds Max y SolidWorks' };
