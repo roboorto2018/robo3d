@@ -189,7 +189,9 @@ I18N_PLUGINS.en.demolition = {
   solves: [
     { p: 'Imported meshes have hundreds of thousands of triangles and slow the model down.', s: 'A copy with the triangle percentage you choose, with nearly the same shape.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo demolition (one entry)'], ['Toolbar', '1 button'], ['Requires', 'Nothing to install (engine included)'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo demolition (one entry)'], ['Toolbar', '1 button'], ['Requires', 'Nothing to install (engine included)'], ['Languages', 'Italiano, English, Deutsch, Français, Español']],
+installNote: 'robo demolition is not available for download yet: it will be published as soon as it is ready.',
+unavailableNote: 'robo demolition is not available for download yet: it will be published as soon as it is ready.'
 };
 I18N_PLUGINS.de.demolition = {
   tagline: 'Reduziert die Dreiecke eines schweren Mesh, ohne die Form zu verändern.',
@@ -204,7 +206,9 @@ I18N_PLUGINS.de.demolition = {
   solves: [
     { p: 'Importierte Meshes haben Hunderttausende Dreiecke und verlangsamen das Modell.', s: 'Eine Kopie mit dem gewählten Dreiecksanteil, mit fast identischer Form.' }
   ],
-  specs: [['Menü', 'Robo Tool › robo demolition (ein Eintrag)'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'Keine Installation (Engine enthalten)'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menü', 'Robo Tool › robo demolition (ein Eintrag)'], ['Symbolleiste', '1 Schaltfläche'], ['Erfordert', 'Keine Installation (Engine enthalten)'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']],
+installNote: 'robo demolition steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.',
+unavailableNote: 'robo demolition steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.'
 };
 I18N_PLUGINS.fr.demolition = {
   tagline: 'Réduit les triangles d\'un maillage lourd, en gardant la forme.',
@@ -219,7 +223,9 @@ I18N_PLUGINS.fr.demolition = {
   solves: [
     { p: 'Les maillages importés ont des centaines de milliers de triangles et ralentissent le modèle.', s: 'Une copie avec le pourcentage de triangles choisi, avec une forme presque identique.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo demolition (une seule entrée)'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'Aucune installation (moteur inclus)'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo demolition (une seule entrée)'], ['Barre d\'outils', '1 bouton'], ['Nécessite', 'Aucune installation (moteur inclus)'], ['Langues', 'Italiano, English, Deutsch, Français, Español']],
+installNote: 'robo demolition n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.',
+unavailableNote: 'robo demolition n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.'
 };
 I18N_PLUGINS.es.demolition = {
   tagline: 'Reduce los triángulos de una malla pesada, manteniendo la forma.',
@@ -234,7 +240,9 @@ I18N_PLUGINS.es.demolition = {
   solves: [
     { p: 'Las mallas importadas tienen cientos de miles de triángulos y ralentizan el modelo.', s: 'Una copia con el porcentaje de triángulos que elijas, con la forma casi idéntica.' }
   ],
-  specs: [['Menú', 'Robo Tool › robo demolition (una sola entrada)'], ['Barra de herramientas', '1 botón'], ['Requiere', 'Ninguna instalación (motor incluido)'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menú', 'Robo Tool › robo demolition (una sola entrada)'], ['Barra de herramientas', '1 botón'], ['Requiere', 'Ninguna instalación (motor incluido)'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']],
+installNote: 'robo demolition todavía no está disponible para descargar: se publicará en cuanto esté listo.',
+unavailableNote: 'robo demolition todavía no está disponible para descargar: se publicará en cuanto esté listo.'
 };
 
 /* ============================================================= EXPORT OBJECT */

@@ -95,6 +95,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- DEMOLITION */
   {
     id: 'demolition', name: 'robo demolition', version: '1.2', category: 'Modellazione', hue: 15,
+    noDownload: true, installer: true,
     video: 'Zgdt30Fkshw',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
@@ -126,7 +127,9 @@ var PLUGINS = [
     solves: [
       { p: 'Le mesh importate hanno centinaia di migliaia di triangoli e rallentano il modello.', s: 'Una copia con la percentuale di triangoli che scegli, con la forma quasi identica.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo demolition (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'Nessuna installazione (motore incluso)'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Menu', 'Robo Tool › robo demolition (una sola voce)'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'Nessuna installazione (motore incluso)'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']],
+    installNote: 'robo demolition non è ancora disponibile per il download: sarà pubblicato appena pronto.',
+    unavailableNote: 'robo demolition non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   },
 
   /* --------------------------------------------------------------- EXPORT OBJECT */
@@ -790,8 +793,8 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   },
   /* --------------------------------------------------------------- IMPORTER */
   {
-    id: 'importer', name: 'robo importer', version: '0.3', category: 'Produttività', hue: 205,
-    images: ['assets/img/screenshots/importer-1.png', 'assets/img/screenshots/importer-2.png', 'assets/img/screenshots/importer-3.png'],
+    id: 'importer', name: 'robo importer', version: '0.5', category: 'Produttività', hue: 205,
+    images: ['assets/img/screenshots/importer-1.png', 'assets/img/screenshots/importer-2.png', 'assets/img/screenshots/importer-3.png', 'assets/img/screenshots/importer-4.png'],
     noDownload: true, installer: true,
 tagline: 'Importa in SketchUp i file STEP, IGES, 3ds Max e SolidWorks, con anteprima, e li posizioni dove vuoi.',
 simple: 'Scegli un file STEP, IGES, 3ds Max o SolidWorks, controlla l’anteprima, imposta dettaglio e orientamento e premi Importa: il modello si attacca al cursore, come quando inserisci un file SKP.',
