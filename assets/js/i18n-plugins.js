@@ -3226,19 +3226,19 @@ main: [
     { t: 'Assemblies and colors', d: 'Assemblies become groups inside groups, with the names of the file; colors become materials named “STEP RRGGBB”. Repeated parts are numbered.' },
     { t: 'Quality of your choice', d: 'Draft, Normal, High or a tolerance of your own in millimeters: the smaller it is, the smoother the curves and the heavier the model.' },
     { t: 'Clean surfaces', d: 'The triangulation edges between flat faces are hidden, and curved surfaces are smoothed up to the angle you choose.' },
-    { t: 'Progress bar and free placement', d: 'A bar next to Import shows how far the import is. Then the model hangs on the cursor: you click where you want (Esc cancels), as for a SKP file.' },
-    { t: 'Window and Help in five languages', d: 'Italian, English, German, French and Spanish, with the globe to change language. The window remembers your choices.' }
+    { t: 'Bar in the drawing, with symbols', d: 'The menu is a fixed bar at the top left of the view, with the areas File, Detail, Orientation, Options and Actions. The symbols: folder to choose the file, eye for the preview, arrow pointing down to import, X to close, ? for Help and globe for the language. Numbers (soften, scale) are typed right in the field.' },
+    { t: 'Preview window and Help in five languages', d: 'The eye opens a window with the preview that you can rotate, zoom and pan; under the bar a strip shows the progress. Italian, English, German, French and Spanish, with the globe to change language.' }
 ],
-steps: ['Open robo importer from the Robo Tool menu or the toolbar.', 'Press Browse and choose the file: the preview appears on the right. Adjust detail, orientation and options.', 'Press Import and click in the drawing where you want to place the model.'],
+steps: ['Open robo importer from the Robo Tool menu or the toolbar.', 'Press the folder in the bar and choose the file: the preview appears in the model. Press the eye to see it in a window. Adjust detail, orientation and options.', 'Press the arrow pointing down (Import) and click in the drawing where you want to place the model.'],
 how: [
     { t: 'Before you start', d: 'The plugin needs the external engine (robo_stp_engine, with OpenCascade): it does not work without it. The installer copies it together with the plugin.' },
-    { t: 'Step 1 · Choose the file', d: 'Press Browse and choose a .stp, .step, .igs or .iges file. The file is copied to a temporary folder for reading: the original is not touched.' },
+    { t: 'Step 1 · Choose the file', d: 'Press the folder symbol (or the box with the name) and choose a .stp, .step, .igs or .iges file. The file is copied to a temporary folder for reading: the original is not touched.' },
     { t: 'Step 2 · Choose the detail', d: 'Draft is the fastest, High has more triangles and smoother curves. With Custom you write the tolerance in millimeters.' },
-    { t: 'Step 3 · Import and place', d: 'The bar next to the button shows the progress. At the end the model hangs on the cursor: click where you want, or press Esc to cancel.' },
+    { t: 'Step 3 · Import and place', d: 'Press the square with the arrow pointing down: a strip under the bar shows the progress. At the end the model hangs on the cursor: click where you want, or press Esc to cancel.' },
     { t: 'The options', d: 'One group per part, as in the assembly; the colors of the file; the angle up to which the edges between faces are hidden and smoothed (0 = only between flat faces).' },
     { t: 'If something goes wrong', d: 'A damaged file or one in an unrecognized format gives a message with the reason. Very large files take time: SketchUp does not respond while it creates the groups.' }
 ],
-pros: ['STEP and IGES with a free CAD engine', 'Assemblies and colors kept', 'Free placement with the mouse', 'Progress bar', 'No file goes to the internet'],
+pros: ['STEP and IGES with a free CAD engine', 'Assemblies and colors kept', 'Free placement with the mouse', 'Bar in the drawing with symbols', 'No file goes to the internet'],
 solves: [
     { p: 'The files of CAD programs do not open directly in SketchUp.', s: 'The plugin reads them with OpenCascade and brings them into the model as a component.' },
     { p: 'An imported model always ends up at the origin.', s: 'The model hangs on the cursor and you place it where you want.' }
@@ -3262,19 +3262,19 @@ main: [
     { t: 'Baugruppen und Farben', d: 'Baugruppen werden zu verschachtelten Gruppen mit den Namen der Datei; Farben werden zu Materialien namens „STEP RRGGBB“. Wiederholte Teile werden nummeriert.' },
     { t: 'Qualität nach Wahl', d: 'Entwurf, Normal, Hoch oder eine eigene Toleranz in Millimetern: Je kleiner, desto glatter die Kurven und desto schwerer das Modell.' },
     { t: 'Saubere Flächen', d: 'Die Triangulationskanten zwischen ebenen Flächen werden ausgeblendet, gekrümmte Flächen bis zum gewählten Winkel geglättet.' },
-    { t: 'Fortschrittsbalken und freie Platzierung', d: 'Ein Balken neben Importieren zeigt den Fortschritt. Dann hängt das Modell am Cursor: Klicke, wo du willst (Esc bricht ab), wie bei einer SKP-Datei.' },
-    { t: 'Fenster und Hilfe in fünf Sprachen', d: 'Italienisch, Englisch, Deutsch, Französisch und Spanisch, mit dem Globus zum Wechseln. Das Fenster merkt sich deine Einstellungen.' }
+    { t: 'Leiste in der Zeichnung, mit Symbolen', d: 'Das Menü ist eine feste Leiste oben links in der Ansicht, mit den Bereichen Datei, Detail, Ausrichtung, Optionen und Aktionen. Die Symbole: Ordner zum Wählen der Datei, Auge für die Vorschau, Pfeil nach unten zum Importieren, X zum Schließen, ? für die Hilfe und Globus für die Sprache. Zahlen (Glätten, Skala) tippst du direkt ins Feld.' },
+    { t: 'Vorschaufenster und Hilfe in fünf Sprachen', d: 'Das Auge öffnet ein Fenster mit der Vorschau, die du drehen, zoomen und verschieben kannst; unter der Leiste zeigt ein Streifen den Fortschritt. Italienisch, Englisch, Deutsch, Französisch und Spanisch, mit dem Globus zum Wechseln der Sprache.' }
 ],
-steps: ['Öffne robo importer im Menü Robo Tool oder in der Symbolleiste.', 'Drücke Durchsuchen und wähle die Datei: Rechts erscheint die Vorschau. Stelle Detail, Ausrichtung und Optionen ein.', 'Drücke Importieren und klicke in die Zeichnung, wohin du das Modell setzen willst.'],
+steps: ['Öffne robo importer im Menü Robo Tool oder in der Symbolleiste.', 'Drücke den Ordner in der Leiste und wähle die Datei: Die Vorschau erscheint im Modell. Drücke das Auge, um sie in einem Fenster zu sehen. Stelle Detail, Ausrichtung und Optionen ein.', 'Drücke den Pfeil nach unten (Importieren) und klicke in die Zeichnung, wohin du das Modell setzen willst.'],
 how: [
     { t: 'Bevor du anfängst', d: 'Das Plugin braucht die externe Engine (robo_stp_engine, mit OpenCascade): Ohne sie funktioniert es nicht. Das Installationsprogramm kopiert sie zusammen mit dem Plugin.' },
-    { t: 'Schritt 1 · Datei wählen', d: 'Drücke Durchsuchen und wähle eine .stp-, .step-, .igs- oder .iges-Datei. Zum Lesen wird sie in einen temporären Ordner kopiert: Das Original bleibt unberührt.' },
+    { t: 'Schritt 1 · Datei wählen', d: 'Drücke das Ordnersymbol (oder das Feld mit dem Namen) und wähle eine .stp-, .step-, .igs- oder .iges-Datei. Die Datei wird zum Lesen in einen temporären Ordner kopiert: Das Original bleibt unberührt.' },
     { t: 'Schritt 2 · Detail wählen', d: 'Entwurf ist am schnellsten, Hoch hat mehr Dreiecke und glattere Kurven. Mit Benutzerdefiniert schreibst du die Toleranz in Millimetern.' },
-    { t: 'Schritt 3 · Importieren und platzieren', d: 'Der Balken neben dem Button zeigt den Fortschritt. Am Ende hängt das Modell am Cursor: Klicke, wo du willst, oder drücke Esc zum Abbrechen.' },
+    { t: 'Schritt 3 · Importieren und platzieren', d: 'Drücke das Quadrat mit dem Pfeil nach unten: Ein Streifen unter der Leiste zeigt den Fortschritt. Am Ende hängt das Modell am Cursor: Klicke, wohin du es haben willst, oder drücke Esc zum Abbrechen.' },
     { t: 'Die Optionen', d: 'Eine Gruppe pro Teil, wie in der Baugruppe; die Farben der Datei; der Winkel, bis zu dem Kanten zwischen Flächen ausgeblendet und geglättet werden (0 = nur zwischen ebenen Flächen).' },
     { t: 'Wenn etwas nicht klappt', d: 'Eine beschädigte Datei oder ein nicht erkanntes Format ergibt eine Meldung mit dem Grund. Sehr große Dateien brauchen Zeit: SketchUp reagiert nicht, während die Gruppen erstellt werden.' }
 ],
-pros: ['STEP und IGES mit einer freien CAD-Engine', 'Baugruppen und Farben bleiben erhalten', 'Freie Platzierung mit der Maus', 'Fortschrittsbalken', 'Keine Datei geht ins Internet'],
+pros: ['STEP und IGES mit einer freien CAD-Engine', 'Baugruppen und Farben bleiben erhalten', 'Freie Platzierung mit der Maus', 'Leiste in der Zeichnung mit Symbolen', 'Keine Datei geht ins Internet'],
 solves: [
     { p: 'Dateien von CAD-Programmen lassen sich nicht direkt in SketchUp öffnen.', s: 'Das Plugin liest sie mit OpenCascade und bringt sie als Komponente ins Modell.' },
     { p: 'Ein importiertes Modell landet immer im Ursprung.', s: 'Das Modell hängt am Cursor und du platzierst es, wo du willst.' }
@@ -3298,19 +3298,19 @@ main: [
     { t: 'Assemblages et couleurs', d: 'Les assemblages deviennent des groupes dans des groupes, avec les noms du fichier ; les couleurs deviennent des matériaux nommés « STEP RRGGBB ». Les pièces répétées sont numérotées.' },
     { t: 'Qualité au choix', d: 'Brouillon, Normal, Élevé ou une tolérance à vous en millimètres : plus elle est petite, plus les courbes sont lisses et plus le modèle est lourd.' },
     { t: 'Surfaces propres', d: 'Les arêtes de triangulation entre faces planes sont masquées, et les surfaces courbes adoucies jusqu’à l’angle choisi.' },
-    { t: 'Barre de progression et placement libre', d: 'Une barre à côté d’Importer montre l’avancement. Ensuite le modèle se fixe au curseur : cliquez où vous voulez (Échap annule), comme pour un fichier SKP.' },
-    { t: 'Fenêtre et Aide en cinq langues', d: 'Italien, anglais, allemand, français et espagnol, avec le globe pour changer de langue. La fenêtre garde vos choix.' }
+    { t: 'Barre dans le dessin, avec symboles', d: 'Le menu est une barre fixe en haut à gauche de la vue, avec les zones Fichier, Détail, Orientation, Options et Actions. Les symboles : dossier pour choisir le fichier, œil pour l’aperçu, flèche vers le bas pour importer, X pour fermer, ? pour l’Aide et globe pour la langue. Les nombres (adoucissement, échelle) se saisissent directement dans le champ.' },
+    { t: 'Fenêtre d’aperçu et Aide en cinq langues', d: 'L’œil ouvre une fenêtre avec l’aperçu que vous pouvez tourner, zoomer et déplacer ; sous la barre, une bande montre l’avancement. Italien, anglais, allemand, français et espagnol, avec le globe pour changer de langue.' }
 ],
-steps: ['Ouvrez robo importer depuis le menu Robo Tool ou la barre d’outils.', 'Cliquez sur Parcourir et choisissez le fichier : l’aperçu apparaît à droite. Réglez détail, orientation et options.', 'Cliquez sur Importer puis dans le dessin à l’endroit où placer le modèle.'],
+steps: ['Ouvrez robo importer depuis le menu Robo Tool ou la barre d’outils.', 'Appuyez sur le dossier dans la barre et choisissez le fichier : l’aperçu apparaît dans le modèle. Appuyez sur l’œil pour le voir dans une fenêtre. Réglez détail, orientation et options.', 'Appuyez sur la flèche vers le bas (Importer) puis cliquez dans le dessin à l’endroit où placer le modèle.'],
 how: [
     { t: 'Avant de commencer', d: 'Le plugin a besoin du moteur externe (robo_stp_engine, avec OpenCascade) : sans lui, il ne fonctionne pas. Le programme d’installation le copie avec le plugin.' },
-    { t: 'Étape 1 · Choisir le fichier', d: 'Appuyez sur Parcourir et choisissez un fichier .stp, .step, .igs ou .iges. Il est copié dans un dossier temporaire pour la lecture : l’original n’est pas touché.' },
+    { t: 'Étape 1 · Choisir le fichier', d: 'Appuyez sur le symbole du dossier (ou le cadre avec le nom) et choisissez un fichier .stp, .step, .igs ou .iges. Le fichier est copié dans un dossier temporaire pour la lecture : l’original n’est pas touché.' },
     { t: 'Étape 2 · Choisir le détail', d: 'Brouillon est le plus rapide, Élevé a plus de triangles et des courbes plus lisses. Avec Personnalisé, vous écrivez la tolérance en millimètres.' },
-    { t: 'Étape 3 · Importer et placer', d: 'La barre à côté du bouton montre l’avancement. À la fin, le modèle se fixe au curseur : cliquez où vous voulez, ou appuyez sur Échap pour annuler.' },
+    { t: 'Étape 3 · Importer et placer', d: 'Appuyez sur le carré avec la flèche vers le bas : une bande sous la barre montre l’avancement. À la fin le modèle s’accroche au curseur : cliquez où vous voulez, ou appuyez sur Échap pour annuler.' },
     { t: 'Les options', d: 'Un groupe par pièce, comme dans l’assemblage ; les couleurs du fichier ; l’angle jusqu’auquel les arêtes entre faces sont masquées et adoucies (0 = seulement entre faces planes).' },
     { t: 'Si quelque chose ne va pas', d: 'Un fichier endommagé ou d’un format non reconnu donne un message avec la raison. Les très gros fichiers demandent du temps : SketchUp ne répond pas pendant la création des groupes.' }
 ],
-pros: ['STEP et IGES avec un moteur de CAO libre', 'Assemblages et couleurs conservés', 'Placement libre à la souris', 'Barre de progression', 'Aucun fichier ne part sur internet'],
+pros: ['STEP et IGES avec un moteur de CAO libre', 'Assemblages et couleurs conservés', 'Placement libre à la souris', 'Barre dans le dessin avec symboles', 'Aucun fichier ne part sur internet'],
 solves: [
     { p: 'Les fichiers des logiciels de CAO ne s’ouvrent pas directement dans SketchUp.', s: 'Le plugin les lit avec OpenCascade et les amène dans le modèle comme composant.' },
     { p: 'Un modèle importé finit toujours à l’origine.', s: 'Le modèle se fixe au curseur et vous le placez où vous voulez.' }
@@ -3334,19 +3334,19 @@ main: [
     { t: 'Ensamblajes y colores', d: 'Los ensamblajes se convierten en grupos dentro de grupos, con los nombres del archivo; los colores, en materiales llamados «STEP RRGGBB». Las piezas repetidas se numeran.' },
     { t: 'Calidad a tu elección', d: 'Borrador, Normal, Alta o una tolerancia tuya en milímetros: cuanto menor, más suaves las curvas y más pesado el modelo.' },
     { t: 'Superficies limpias', d: 'Las aristas de triangulación entre caras planas se ocultan, y las superficies curvas se suavizan hasta el ángulo que elijas.' },
-    { t: 'Barra de progreso y colocación libre', d: 'Una barra junto a Importar muestra cómo va la importación. Después el modelo se pega al cursor: haces clic donde quieras (Esc cancela), como con un archivo SKP.' },
-    { t: 'Ventana y Ayuda en cinco idiomas', d: 'Italiano, inglés, alemán, francés y español, con el globo para cambiar de idioma. La ventana recuerda tus elecciones.' }
+    { t: 'Barra en el dibujo, con símbolos', d: 'El menú es una barra fija arriba a la izquierda de la vista, con las áreas Archivo, Detalle, Orientación, Opciones y Acciones. Los símbolos: carpeta para elegir el archivo, ojo para la vista previa, flecha hacia abajo para importar, X para cerrar, ? para la Ayuda y globo para el idioma. Los números (suavizado, escala) se escriben directamente en el campo.' },
+    { t: 'Ventana de vista previa y Ayuda en cinco idiomas', d: 'El ojo abre una ventana con la vista previa que puedes girar, acercar y desplazar; bajo la barra una franja muestra el avance. Italiano, inglés, alemán, francés y español, con el globo para cambiar de idioma.' }
 ],
-steps: ['Abre robo importer desde el menú Robo Tool o la barra de herramientas.', 'Pulsa Examinar y elige el archivo: a la derecha aparece la vista previa. Ajusta detalle, orientación y opciones.', 'Pulsa Importar y haz clic en el dibujo donde quieras colocar el modelo.'],
+steps: ['Abre robo importer desde el menú Robo Tool o la barra de herramientas.', 'Pulsa la carpeta en la barra y elige el archivo: la vista previa aparece en el modelo. Pulsa el ojo para verla en una ventana. Ajusta detalle, orientación y opciones.', 'Pulsa la flecha hacia abajo (Importar) y haz clic en el dibujo donde quieras colocar el modelo.'],
 how: [
     { t: 'Antes de empezar', d: 'El plugin necesita el motor externo (robo_stp_engine, con OpenCascade): sin él no funciona. El instalador lo copia junto con el plugin.' },
-    { t: 'Paso 1 · Elige el archivo', d: 'Pulsa Examinar y elige un archivo .stp, .step, .igs o .iges. Se copia a una carpeta temporal para leerlo: el original no se toca.' },
+    { t: 'Paso 1 · Elige el archivo', d: 'Pulsa el símbolo de la carpeta (o el recuadro con el nombre) y elige un archivo .stp, .step, .igs o .iges. El archivo se copia a una carpeta temporal para leerlo: el original no se toca.' },
     { t: 'Paso 2 · Elige el detalle', d: 'Borrador es el más rápido, Alta tiene más triángulos y curvas más suaves. Con Personalizada escribes la tolerancia en milímetros.' },
-    { t: 'Paso 3 · Importa y coloca', d: 'La barra junto al botón muestra el avance. Al final el modelo se pega al cursor: haz clic donde quieras, o pulsa Esc para cancelar.' },
+    { t: 'Paso 3 · Importa y coloca', d: 'Pulsa el cuadrado con la flecha hacia abajo: una franja bajo la barra muestra el avance. Al final el modelo se engancha al cursor: haz clic donde quieras, o pulsa Esc para cancelar.' },
     { t: 'Las opciones', d: 'Un grupo por pieza, como en el ensamblaje; los colores del archivo; el ángulo hasta el cual las aristas entre caras se ocultan y suavizan (0 = solo entre caras planas).' },
     { t: 'Si algo no va bien', d: 'Un archivo dañado o de un formato no reconocido da un mensaje con el motivo. Los archivos muy grandes tardan: SketchUp no responde mientras crea los grupos.' }
 ],
-pros: ['STEP e IGES con un motor CAD libre', 'Ensamblajes y colores conservados', 'Colocación libre con el ratón', 'Barra de progreso', 'Ningún archivo sale a internet'],
+pros: ['STEP e IGES con un motor CAD libre', 'Ensamblajes y colores conservados', 'Colocación libre con el ratón', 'Barra en el dibujo con símbolos', 'Ningún archivo sale a internet'],
 solves: [
     { p: 'Los archivos de los programas CAD no se abren directamente en SketchUp.', s: 'El plugin los lee con OpenCascade y los lleva al modelo como componente.' },
     { p: 'Un modelo importado acaba siempre en el origen.', s: 'El modelo se pega al cursor y lo colocas donde quieras.' }

@@ -17,7 +17,7 @@ var CATEGORIES = ['Modellazione', 'Distribuzione', 'Organizzazione', 'Ottimizzaz
 var PLUGINS = [
   /* ------------------------------------------------------------------ BASEFORM */
   {
-    id: 'baseform', name: 'robo baseform', version: '1.0', category: 'Modellazione', hue: 12,
+    id: 'baseform', name: 'robo baseform', version: '1.1', category: 'Modellazione', hue: 12,
     donationPrompt: true,
     video: 'cxTEqsZ_Cpo',
     images: ['assets/img/screenshots/baseform-1.png', 'assets/img/screenshots/baseform-2.png', 'assets/img/screenshots/baseform-3.png'],
@@ -793,13 +793,14 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   },
   /* --------------------------------------------------------------- IMPORTER */
   {
-    id: 'importer', name: 'robo importer', version: '0.5', category: 'Produttività', hue: 205,
-    images: ['assets/img/screenshots/importer-1.png', 'assets/img/screenshots/importer-2.png', 'assets/img/screenshots/importer-3.png', 'assets/img/screenshots/importer-4.png'],
+    id: 'importer', name: 'robo importer', version: '0.6', category: 'Produttività', hue: 205,
+    video: 'L1wkUY3zzVM',
+    images: ['assets/img/screenshots/importer-1.jpg', 'assets/img/screenshots/importer-2.jpg'],
     noDownload: true, installer: true,
 tagline: 'Importa in SketchUp i file STEP, IGES, 3ds Max e SolidWorks, con anteprima, e li posizioni dove vuoi.',
 simple: 'Scegli un file STEP, IGES, 3ds Max o SolidWorks, controlla l’anteprima, imposta dettaglio e orientamento e premi Importa: il modello si attacca al cursore, come quando inserisci un file SKP.',
 intro: [
-  'robo importer porta in SketchUp i modelli di altri programmi: STEP (.stp, .step), IGES (.igs, .iges), 3ds Max (.max) e SolidWorks (.sldprt). Prima di importare si apre un’anteprima. La lettura la fa un motore che gira sul tuo computer (OpenCascade per STEP e IGES, un lettore proprio per .max e .sldprt): nessun file va su internet.',
+  'robo importer porta in SketchUp i modelli di altri programmi: STEP (.stp, .step), IGES (.igs, .iges), 3ds Max (.max) e SolidWorks (.sldprt). Prima di importare compare un’anteprima nel modello. La lettura la fa un motore che gira sul tuo computer (OpenCascade per STEP e IGES, un lettore proprio per .max e .sldprt): nessun file va su internet.',
   'Il modello arriva come un componente con il nome del file, con i gruppi dell’assieme e i colori del file. Si costruisce in un solo passo annullabile e lo posizioni tu con il mouse.'
 ],
 main: [
@@ -809,19 +810,19 @@ main: [
     { t: 'Assiemi e colori', d: 'Gli assiemi diventano gruppi dentro gruppi, con i nomi del file; i colori diventano materiali chiamati «STEP RRGGBB». Le parti ripetute sono numerate.' },
     { t: 'Qualità a scelta', d: 'Bozza, Normale, Alta o una tolleranza tua in millimetri: più è piccola, più le curve sono lisce e più il modello è pesante.' },
     { t: 'Superfici pulite', d: 'Gli spigoli della triangolazione tra facce piane vengono nascosti, e le superfici curve ammorbidite fino all’angolo che scegli.' },
-    { t: 'Barra di avanzamento e posizionamento libero', d: 'Una barra accanto a Importa mostra a che punto è l’importazione. Poi il modello si attacca al cursore: clicchi dove vuoi (Esc annulla), come per un file SKP.' },
-    { t: 'Finestra e Help in cinque lingue', d: 'Italiano, inglese, tedesco, francese e spagnolo, con il globo per cambiare lingua. La finestra ricorda le tue scelte.' }
+    { t: 'Barra nel disegno, con simboli', d: 'Il menu è una barra fissa in alto a sinistra della vista, con le aree File, Dettaglio, Orientamento, Opzioni e Azioni. I simboli: cartella per scegliere il file, occhio per l’anteprima, freccia verso il basso per importare, X per chiudere, ? per l’Help e globo per la lingua. I numeri (ammorbidimento, scala) si scrivono direttamente nel campo.' },
+    { t: 'Anteprima in finestra e Help in cinque lingue', d: 'L’occhio apre una finestra con l’anteprima da ruotare, ingrandire e spostare; sotto la barra una striscia mostra l’avanzamento. Italiano, inglese, tedesco, francese e spagnolo, con il globo per cambiare lingua.' }
 ],
-steps: ['Apri robo importer dal menu Robo Tool o dalla barra degli strumenti.', 'Premi Sfoglia e scegli il file: sulla destra compare l’anteprima. Regola dettaglio, orientamento e opzioni.', 'Premi Importa e clicca nel disegno dove vuoi posizionare il modello.'],
+steps: ['Apri robo importer dal menu Robo Tool o dalla barra degli strumenti.', 'Premi la cartella nella barra e scegli il file: l’anteprima compare nel modello. Premi l’occhio per vederla in una finestra. Regola dettaglio, orientamento e opzioni.', 'Premi la freccia verso il basso (Importa) e clicca nel disegno dove vuoi posizionare il modello.'],
 how: [
     { t: 'Prima di cominciare', d: 'Il plugin ha bisogno del motore esterno (robo_stp_engine, con OpenCascade): senza non funziona. Il programma di installazione lo copia insieme al plugin.' },
-    { t: 'Passo 1 · Scegli il file', d: 'Premi Sfoglia e scegli un file .stp, .step, .igs o .iges. Il file viene copiato in una cartella temporanea per la lettura: l’originale non si tocca.' },
+    { t: 'Passo 1 · Scegli il file', d: 'Premi il simbolo della cartella (o il riquadro con il nome) e scegli un file .stp, .step, .igs o .iges. Il file viene copiato in una cartella temporanea per la lettura: l’originale non si tocca.' },
     { t: 'Passo 2 · Scegli il dettaglio', d: 'Bozza è la più veloce, Alta ha più triangoli e curve più lisce. Con Personalizzata scrivi tu la tolleranza in millimetri.' },
-    { t: 'Passo 3 · Importa e posiziona', d: 'La barra accanto al pulsante mostra l’avanzamento. Alla fine il modello si attacca al cursore: clicca nel punto che vuoi, oppure premi Esc per annullare.' },
+    { t: 'Passo 3 · Importa e posiziona', d: 'Premi il quadrato con la freccia verso il basso: una striscia sotto la barra mostra l’avanzamento. Alla fine il modello si attacca al cursore: clicca nel punto che vuoi, oppure premi Esc per annullare.' },
     { t: 'Le opzioni', d: 'Un gruppo per ogni parte, come nell’assieme; i colori del file; l’angolo fino al quale gli spigoli tra facce vengono nascosti e ammorbiditi (0 = solo tra facce piane).' },
     { t: 'Se qualcosa non va', d: 'Un file danneggiato o in un formato non riconosciuto dà un messaggio con il motivo. I file molto grandi richiedono tempo: SketchUp non risponde mentre crea i gruppi.' }
 ],
-pros: ['STEP e IGES con un motore CAD libero', 'Assiemi e colori mantenuti', 'Posizionamento libero con il mouse', 'Barra di avanzamento', 'Nessun file va su internet'],
+pros: ['STEP e IGES con un motore CAD libero', 'Assiemi e colori mantenuti', 'Posizionamento libero con il mouse', 'Barra nel disegno con simboli', 'Nessun file va su internet'],
 solves: [
     { p: 'I file dei programmi CAD non si aprono direttamente in SketchUp.', s: 'Il plugin li legge con OpenCascade e li porta nel modello come componente.' },
     { p: 'Un modello importato finisce sempre all’origine.', s: 'Il modello si attacca al cursore e lo posizioni dove vuoi.' }
