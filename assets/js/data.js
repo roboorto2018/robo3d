@@ -19,8 +19,8 @@ var PLUGINS = [
   {
     id: 'baseform', name: 'robo baseform', version: '1.1', category: 'Modellazione', hue: 12,
     donationPrompt: true,
-    video: 'cxTEqsZ_Cpo',
-    images: ['assets/img/screenshots/baseform-1.png', 'assets/img/screenshots/baseform-2.png', 'assets/img/screenshots/baseform-3.png'],
+    video: 'Q6nA_fj7CcM',
+    images: ['assets/img/screenshots/baseform-1.jpg'],
     tagline: 'Cubo, cilindro, cono, sfere e toro: forme precise in un clic.',
     simple: 'Scegli dall\'elenco l\'oggetto che ti serve (cubo, cilindro, cono, tronco di cono, sfera, icosfera o toro), imposta le misure e clicca nel modello: la forma compare esattamente dove vuoi, già liscia e pronta all\'uso.',
     intro: [
