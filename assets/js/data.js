@@ -96,8 +96,8 @@ var PLUGINS = [
   {
     id: 'demolition', name: 'robo demolition', version: '1.2', category: 'Modellazione', hue: 15,
     noDownload: true, installer: true,
-    video: 'Zgdt30Fkshw',
-    images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png'],
+    video: 'vXMermVjpUE',
+    images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png', 'assets/img/screenshots/demolition-4.png', 'assets/img/screenshots/demolition-5.png'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
     simple: 'Seleziona facce, gruppi o componenti pesanti: robo demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Il motore è incluso nel plugin, non serve installare nulla; gli oggetti interni restano oggetti e i materiali restano al loro posto.',
     intro: [

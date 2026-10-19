@@ -362,3 +362,16 @@ var I18N_UI = {
 var I18N_PLUGINS = { en: {}, de: {}, fr: {}, es: {} };
 /* Traduzioni delle etichette dei pulsanti nella barra strumenti (vedi data.js/TOOLBARS). */
 var I18N_TOOLBARS = { en: {}, de: {}, fr: {}, es: {} };
+
+/* I titoli delle sezioni della scheda di un plugin restano sempre in inglese, tranne in italiano (l'originale):
+   in tedesco, francese e spagnolo si usano quelli inglesi. */
+(function () {
+  var keys = ['plugin.about.eyebrow', 'plugin.about.h2', 'plugin.about.main', 'plugin.simple.eyebrow', 'plugin.simple.h2',
+    'plugin.tech.eyebrow', 'plugin.tech.h2', 'plugin.pros.eyebrow', 'plugin.pros.h2', 'plugin.solve.eyebrow', 'plugin.solve.h2',
+    'plugin.solve.problem', 'plugin.solve.with', 'plugin.specs.eyebrow', 'plugin.specs.h2'];
+  var others = ['de', 'fr', 'es'];
+  for (var i = 0; i < others.length; i++) {
+    if (!I18N_UI[others[i]]) { continue; }
+    for (var k = 0; k < keys.length; k++) { I18N_UI[others[i]][keys[k]] = I18N_UI.en[keys[k]]; }
+  }
+})();
