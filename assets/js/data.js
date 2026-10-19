@@ -720,8 +720,8 @@ var PLUGINS = [
   /* --------------------------------------------------------------- FILLET 3D */
   {
     id: 'fillet_3d', name: 'robo fillet 3d', version: '1.1', category: 'Modellazione', hue: 175,
-    video: 'viy_7E77m4g',
-    images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.png', 'assets/img/screenshots/fillet_3d-4.png', 'assets/img/screenshots/fillet_3d-5.png', 'assets/img/screenshots/fillet_3d-6.png', 'assets/img/screenshots/fillet_3d-7.png', 'assets/img/screenshots/fillet_3d-8.png', 'assets/img/screenshots/fillet_3d-9.png', 'assets/img/screenshots/fillet_3d-10.png', 'assets/img/screenshots/fillet_3d-11.png', 'assets/img/screenshots/fillet_3d-12.png', 'assets/img/screenshots/fillet_3d-13.png'],
+    video: 'DTb7IONp4FA',
+    images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.jpg', 'assets/img/screenshots/fillet_3d-4.jpg', 'assets/img/screenshots/fillet_3d-5.jpg', 'assets/img/screenshots/fillet_3d-6.jpg', 'assets/img/screenshots/fillet_3d-7.jpg', 'assets/img/screenshots/fillet_3d-8.jpg', 'assets/img/screenshots/fillet_3d-9.jpg', 'assets/img/screenshots/fillet_3d-10.png'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
     simple: 'Seleziona un gruppo o un componente e scegli Arrotondamento o Smusso 45°: i bordi vivi diventano curve morbide fatte di quadrilateri. Puoi scegliere anche solo certi bordi o facce col mouse, anche dentro oggetti nidificati.',
     intro: [
