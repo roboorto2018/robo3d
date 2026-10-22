@@ -717,6 +717,44 @@ var PLUGINS = [
     specs: [['Menu', 'Robo Tool › robo quick align'], ['Barra strumenti', '9 pulsanti in 3 gruppi (rosso, blu, verde)'], ['Assi di riferimento', 'Del modello oppure del gruppo o componente aperto'], ['Annullamento', 'Un solo Ctrl+Z'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
 
+  /* ------------------------------------------------------------------ SMOOTH */
+  {
+    id: 'smooth', name: 'robo smooth', version: '1.0', category: 'Modellazione', hue: 280,
+    donationPrompt: true,
+    images: ['assets/img/screenshots/smooth-1.png', 'assets/img/screenshots/smooth-2.png'],
+    tagline: 'Ammorbidisci e smussa le linee in un clic: sei comandi, nessun altro plugin.',
+    simple: 'Seleziona un oggetto e premi un pulsante: le linee tra le facce che piegano poco spariscono e la superficie diventa liscia, oppure tornano tutte visibili. Dalla finestra scegli l’angolo con un cursore e vedi subito il risultato.',
+    intro: [
+      'robo smooth ammorbidisce e smussa le linee dei tuoi modelli. Una linea morbida non si vede, e se è anche liscia la luce scorre sulle due facce come su un pezzo solo: è così che cilindri, sfere, terreni e oggetti importati sembrano curvi invece che a spicchi.',
+      'Sono sei comandi, gli stessi che chi usa SketchUp conosce da JHS PowerBar con AMS Soften Edges e Smooze, rifatti in robo Tools: non servono altri plugin, e un solo Ctrl+Z annulla ogni comando.'
+    ],
+    main: [
+      { t: 'Una finestra con il cursore dell’angolo', d: 'Scegli fino a che piegatura le linee diventano morbide (da 0 a 180 gradi) e cinque opzioni: smussa, facce sullo stesso piano, curve e archi, materiali diversi, gruppi annidati. La selezione cambia appena lasci il cursore.' },
+      { t: 'Ammorbidisci subito', d: 'Un pulsante applica l’angolo e le opzioni dell’ultima volta, senza aprire la finestra.' },
+      { t: 'Leggero, tutto, mostra tutte', d: 'Tre comandi rapidi: ammorbidisci solo le linee sotto i 25 gradi senza toccare le altre, ammorbidisci ogni linea fra due facce, oppure rendi di nuovo visibili tutte le linee.' },
+      { t: 'Quadrati', d: 'Nelle maglie fatte di triangoli nasconde solo le diagonali: la superficie si vede a quadrati, pronta da leggere e da modificare.' },
+      { t: 'Anche le facce rovesciate', d: 'Due facce sullo stesso piano, con una girata al contrario, vengono riconosciute come piane: la linea fra loro si ammorbidisce come deve.' },
+      { t: 'Barra, menu e Aiuto', d: 'Sei pulsanti in tre gruppi, le stesse voci nel menu Estensioni, e un Aiuto in cinque lingue che mostra le icone dei pulsanti.' }
+    ],
+    steps: ['Seleziona facce, gruppi o componenti.', 'Premi un pulsante della barra robo smooth, oppure apri la finestra e muovi il cursore dell’angolo.', 'Guarda il risultato: se non ti piace, un solo Ctrl+Z annulla tutto.'],
+    how: [
+      { t: 'Il problema che risolve', d: 'In SketchUp le superfici curve sono fatte di tante facce piane. Se le linee fra queste facce restano visibili, un cilindro sembra un prisma e un terreno un mosaico. Nasconderle una per una è impossibile, e il comando di SketchUp lavora solo su ciò che è selezionato, senza entrare nei gruppi. robo smooth lo fa su tutta la selezione, dentro gruppi e componenti, con un clic.' },
+      { t: 'Morbido e liscio', d: 'Sono due cose diverse. Una linea morbida è nascosta: non la vedi, ma le facce restano sfaccettate. Una linea anche liscia unisce l’ombreggiatura delle due facce: la luce scorre come su una superficie curva. Con l’opzione Smussa accesa le linee diventano morbide e lisce insieme.' },
+      { t: 'L’angolo', d: 'Ogni linea sta fra due facce che piegano di un certo angolo. Le linee che piegano meno dell’angolo scelto diventano morbide, le altre tornano visibili: con 0 si vedono tutte, con 180 sono tutte morbide. Per la maggior parte delle superfici curve vanno bene 20-40 gradi: gli spigoli veri restano, le sfaccettature spariscono.' },
+      { t: 'I comandi rapidi', d: 'Leggero ammorbidisce solo le linee sotto i 25 gradi e non tocca le altre, nemmeno quelle già morbide. Tutto ammorbidisce ogni linea fra due facce. Mostra tutte le rende di nuovo visibili. Questi tre lavorano sempre anche nei gruppi e componenti annidati, come in JHS PowerBar.' },
+      { t: 'Quadrati', d: 'Molti oggetti importati, o fatti con plugin di modellazione organica, sono fatti di triangoli che a due a due formano un quadrilatero. Quadrati nasconde la linea in comune fra i due triangoli, che è il lato più lungo di entrambi, e lascia visibili le altre: la superficie si vede a quadrati, come in QuadFace Tools.' },
+      { t: 'Senza selezione', d: 'Se non hai selezionato niente, i comandi della barra chiedono se lavorare su tutto il modello, o sul gruppo che hai aperto. La finestra invece lavora solo sulla selezione, così muovere il cursore non cambia mai il modello intero per sbaglio.' },
+      { t: 'Più veloce e più sicuro', d: 'Un componente con cento copie si lavora una volta sola, perché le copie sono lo stesso oggetto. Una linea si scrive solo se cambia davvero. Gli oggetti bloccati non si toccano. Se qualcosa va storto a metà, l’operazione si annulla da sola e il plugin te lo dice.' }
+    ],
+    pros: ['Sei comandi in una barra, nessun altro plugin', 'Il risultato si vede appena lasci il cursore', 'Riconosce anche le facce rovesciate', 'Un solo Ctrl+Z annulla ogni comando'],
+    solves: [
+      { p: 'Le superfici curve sembrano fatte a spicchi, con tutte le linee visibili.', s: 'Un clic ammorbidisce e smussa le linee: la superficie diventa liscia.' },
+      { p: 'Per avere questi comandi servivano JHS PowerBar e AMS Soften Edges insieme.', s: 'robo smooth li riunisce in un solo plugin, con finestra e Aiuto in cinque lingue.' },
+      { p: 'Un modello fatto di triangoli è difficile da leggere.', s: 'Quadrati nasconde le diagonali e lo mostra a quadrati.' }
+    ],
+    specs: [['Menu', 'Robo Tool › robo smooth'], ['Barra strumenti', '6 pulsanti in 3 gruppi'], ['Finestra', '360 px, l’altezza segue il contenuto'], ['Angolo', 'Da 0 a 180 gradi'], ['Annullamento', 'Un solo Ctrl+Z per comando'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+  },
+
   /* --------------------------------------------------------------- FILLET 3D */
   {
     id: 'fillet_3d', name: 'robo fillet 3d', version: '1.1', category: 'Modellazione', hue: 175,
@@ -869,6 +907,10 @@ var TOOLBARS = {
     [{ i: 'x_min.png', l: 'Allinea a sinistra (asse rosso X)' }, { i: 'x_center.png', l: 'Allinea al centro (asse rosso X)' }, { i: 'x_max.png', l: 'Allinea a destra (asse rosso X)' }],
     [{ i: 'z_min.png', l: 'Allinea in basso (asse blu Z)' }, { i: 'z_center.png', l: 'Allinea al centro (asse blu Z)' }, { i: 'z_max.png', l: 'Allinea in alto (asse blu Z)' }],
     [{ i: 'y_min.png', l: 'Allinea davanti (asse verde Y)' }, { i: 'y_center.png', l: 'Allinea al centro (asse verde Y)' }, { i: 'y_max.png', l: 'Allinea dietro (asse verde Y)' }]] },
+  smooth: { name: 'robo smooth', groups: [
+    [{ i: 'dialog.png', l: 'Ammorbidisci… (finestra con angolo e opzioni)' }, { i: 'run.png', l: 'Ammorbidisci subito (impostazioni dell’ultima volta)' }],
+    [{ i: 'lite.png', l: 'Ammorbidisci leggero (sotto i 25°)' }, { i: 'hard.png', l: 'Ammorbidisci tutto' }, { i: 'show.png', l: 'Mostra tutte le linee' }],
+    [{ i: 'quads.png', l: 'Quadrati (nascondi le diagonali)' }]] },
   toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.png', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
   fillet_3d: { name: 'robo fillet 3d', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3d: arrotonda o smussa i bordi' }]] },
   doctor: { name: 'robo doctor', groups: [[{ i: 'doctor.png', l: 'robo doctor: controlla e ripara i solidi' }]] },

@@ -413,8 +413,9 @@
         for (var q = 0; q < tb.groups[g].length; q++) {
           var it = tb.groups[g][q];
           total++;
-          btns += '<span class="tb-btn" title="' + esc(it.l) + '"><img src="assets/img/toolbar/' + esc(p.id) + '/' + esc(it.i) + '" alt="' + esc(it.l) + '"></span>';
-          legend += '<li><img src="assets/img/toolbar/' + esc(p.id) + '/' + esc(it.i) + '" alt=""><span>' + esc(it.l) + '</span></li>';
+          var label = tbf(p.id, it.i, it.l); // the name of the button in the language of the page (I18N_TOOLBARS)
+          btns += '<span class="tb-btn" title="' + esc(label) + '"><img src="assets/img/toolbar/' + esc(p.id) + '/' + esc(it.i) + '" alt="' + esc(label) + '"></span>';
+          legend += '<li><img src="assets/img/toolbar/' + esc(p.id) + '/' + esc(it.i) + '" alt=""><span>' + esc(label) + '</span></li>';
         }
         groups += (g ? '<span class="tb-sep"></span>' : '') + btns;
       }

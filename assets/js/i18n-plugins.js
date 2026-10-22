@@ -2941,6 +2941,148 @@ I18N_TOOLBARS.de.quick_align = { 'x_min.png': 'Links ausrichten (rote Achse X)',
 I18N_TOOLBARS.fr.quick_align = { 'x_min.png': 'Aligner à gauche (axe rouge X)', 'x_center.png': 'Aligner au centre (axe rouge X)', 'x_max.png': 'Aligner à droite (axe rouge X)', 'z_min.png': 'Aligner en bas (axe bleu Z)', 'z_center.png': 'Aligner au centre (axe bleu Z)', 'z_max.png': 'Aligner en haut (axe bleu Z)', 'y_min.png': 'Aligner devant (axe vert Y)', 'y_center.png': 'Aligner au centre (axe vert Y)', 'y_max.png': 'Aligner derrière (axe vert Y)' };
 I18N_TOOLBARS.es.quick_align = { 'x_min.png': 'Alinear a la izquierda (eje rojo X)', 'x_center.png': 'Alinear al centro (eje rojo X)', 'x_max.png': 'Alinear a la derecha (eje rojo X)', 'z_min.png': 'Alinear abajo (eje azul Z)', 'z_center.png': 'Alinear al centro (eje azul Z)', 'z_max.png': 'Alinear arriba (eje azul Z)', 'y_min.png': 'Alinear al frente (eje verde Y)', 'y_center.png': 'Alinear al centro (eje verde Y)', 'y_max.png': 'Alinear atrás (eje verde Y)' };
 
+/* ==================================================================== SMOOTH */
+I18N_PLUGINS.en.smooth = {
+  tagline: 'Soften and smooth edges in one click: six commands, no other plugin.',
+  simple: 'Select an object and press a button: the edges between faces that bend a little disappear and the surface becomes smooth, or they all become visible again. In the window you choose the angle with a slider and see the result at once.',
+  intro: [
+    'robo smooth softens and smooths the edges of your models. A soft edge is not seen, and if it is also smooth the light runs over its two faces as over a single piece: this is how cylinders, spheres, terrains and imported objects look curved instead of faceted.',
+    'Six commands, the same that SketchUp users know from JHS PowerBar with AMS Soften Edges and Smooze, rebuilt in robo Tools: no other plugin is needed, and a single Ctrl+Z undoes every command.'
+  ],
+  main: [
+    { t: 'A window with an angle slider', d: 'Choose up to which bend the edges become soft (from 0 to 180 degrees) and five options: smooth, faces on the same plane, curves and arcs, different materials, nested groups. The selection changes as soon as you let go of the slider.' },
+    { t: 'Soften now', d: 'One button applies the angle and the options of last time, without opening the window.' },
+    { t: 'Light, all, show all', d: 'Three quick commands: soften only the edges under 25 degrees without touching the others, soften every edge between two faces, or make every edge visible again.' },
+    { t: 'Quads', d: 'In meshes made of triangles it hides only the diagonals: the surface is seen as squares, easy to read and to edit.' },
+    { t: 'Reversed faces too', d: 'Two faces on the same plane, with one turned the wrong way, are recognised as flat: the edge between them is softened as it should be.' },
+    { t: 'Toolbar, menu and Help', d: 'Six buttons in three groups, the same entries in the Extensions menu, and a Help in five languages that shows the icons of the buttons.' }
+  ],
+  steps: ['Select faces, groups or components.', 'Press a button of the robo smooth toolbar, or open the window and move the angle slider.', 'Look at the result: if you do not like it, a single Ctrl+Z undoes everything.'],
+  how: [
+    { t: 'The problem it solves', d: 'In SketchUp curved surfaces are made of many flat faces. If the edges between those faces stay visible, a cylinder looks like a prism and a terrain like a mosaic. Hiding them one by one is impossible, and the SketchUp command only works on what is selected, without going into groups. robo smooth does it on the whole selection, inside groups and components, in one click.' },
+    { t: 'Soft and smooth', d: 'They are two different things. A soft edge is hidden: you do not see it, but the faces stay faceted. An edge that is also smooth joins the shading of the two faces: the light runs as over a curved surface. With the Smooth option on, edges become soft and smooth together.' },
+    { t: 'The angle', d: 'Every edge lies between two faces that bend by some angle. Edges that bend less than the chosen angle become soft, the others become visible again: at 0 every edge is seen, at 180 every edge is soft. For most curved surfaces 20-40 degrees is right: the real corners stay, the facets disappear.' },
+    { t: 'The quick commands', d: 'Light softens only the edges under 25 degrees and does not touch the others, not even those already soft. All softens every edge between two faces. Show all makes them visible again. These three always work in nested groups and components too, as in JHS PowerBar.' },
+    { t: 'Quads', d: 'Many imported objects, or objects made with organic modelling plugins, are made of triangles that pair up into quadrilaterals. Quads hides the edge the two triangles share, which is the longest side of both, and keeps the others visible: the surface is seen as squares, as in QuadFace Tools.' },
+    { t: 'With nothing selected', d: 'If nothing is selected, the toolbar commands ask whether to work on the whole model, or on the group you have opened. The window, instead, only works on the selection, so moving the slider never changes the whole model by mistake.' },
+    { t: 'Faster and safer', d: 'A component with a hundred copies is done once, because the copies are the same object. An edge is written only when it really changes. Locked objects are not touched. If something goes wrong halfway, the operation cancels itself and the plugin tells you.' }
+  ],
+  pros: ['Six commands in one toolbar, no other plugin', 'The result appears as soon as you let go of the slider', 'Reversed faces are recognised too', 'A single Ctrl+Z undoes every command'],
+  solves: [
+    { p: 'Curved surfaces look faceted, with every edge visible.', s: 'One click softens and smooths the edges: the surface becomes smooth.' },
+    { p: 'These commands needed JHS PowerBar and AMS Soften Edges together.', s: 'robo smooth gathers them in one plugin, with a window and a Help in five languages.' },
+    { p: 'A model made of triangles is hard to read.', s: 'Quads hides the diagonals and shows it as squares.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo smooth'], ['Toolbar', '6 buttons in 3 groups'], ['Window', '360 px, the height follows the content'], ['Angle', 'From 0 to 180 degrees'], ['Undo', 'A single Ctrl+Z per command'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+};
+
+I18N_PLUGINS.de.smooth = {
+  tagline: 'Kanten mit einem Klick abmildern und glätten: sechs Befehle, kein anderes Plugin.',
+  simple: 'Wähle ein Objekt und drücke eine Schaltfläche: die Kanten zwischen leicht geknickten Flächen verschwinden und die Fläche wird glatt, oder alle werden wieder sichtbar. Im Fenster wählst du den Winkel mit einem Schieberegler und siehst das Ergebnis sofort.',
+  intro: [
+    'robo smooth mildert und glättet die Kanten deiner Modelle. Eine abgemilderte Kante ist unsichtbar, und ist sie auch geglättet, läuft das Licht über ihre beiden Flächen wie über ein einziges Stück: so wirken Zylinder, Kugeln, Gelände und importierte Objekte rund statt facettiert.',
+    'Sechs Befehle, dieselben, die SketchUp-Nutzer aus JHS PowerBar mit AMS Soften Edges und Smooze kennen, in robo Tools neu gebaut: kein anderes Plugin nötig, und ein einziges Strg+Z macht jeden Befehl rückgängig.'
+  ],
+  main: [
+    { t: 'Ein Fenster mit Winkelregler', d: 'Wähle, bis zu welchem Knick die Kanten abgemildert werden (0 bis 180 Grad), und fünf Optionen: glätten, Flächen in einer Ebene, Kurven und Bögen, verschiedene Materialien, verschachtelte Gruppen. Die Auswahl ändert sich, sobald du den Regler loslässt.' },
+    { t: 'Sofort abmildern', d: 'Eine Schaltfläche wendet Winkel und Optionen vom letzten Mal an, ohne das Fenster zu öffnen.' },
+    { t: 'Leicht, alles, alle zeigen', d: 'Drei Schnellbefehle: nur die Kanten unter 25 Grad abmildern, ohne die anderen zu berühren, jede Kante zwischen zwei Flächen abmildern oder alle Kanten wieder sichtbar machen.' },
+    { t: 'Vierecke', d: 'In Netzen aus Dreiecken blendet es nur die Diagonalen aus: die Fläche erscheint in Vierecken, leicht zu lesen und zu bearbeiten.' },
+    { t: 'Auch umgedrehte Flächen', d: 'Zwei Flächen in einer Ebene, eine davon falsch herum, werden als eben erkannt: die Kante zwischen ihnen wird abgemildert, wie es sein soll.' },
+    { t: 'Symbolleiste, Menü und Hilfe', d: 'Sechs Schaltflächen in drei Gruppen, dieselben Einträge im Menü Erweiterungen und eine Hilfe in fünf Sprachen mit den Symbolen der Schaltflächen.' }
+  ],
+  steps: ['Wähle Flächen, Gruppen oder Komponenten.', 'Drücke eine Schaltfläche der Symbolleiste robo smooth oder öffne das Fenster und bewege den Winkelregler.', 'Sieh dir das Ergebnis an: gefällt es nicht, macht ein einziges Strg+Z alles rückgängig.'],
+  how: [
+    { t: 'Das Problem, das es löst', d: 'In SketchUp bestehen runde Flächen aus vielen ebenen Flächen. Bleiben die Kanten dazwischen sichtbar, wirkt ein Zylinder wie ein Prisma und ein Gelände wie ein Mosaik. Sie einzeln auszublenden ist unmöglich, und der SketchUp-Befehl arbeitet nur an der Auswahl, ohne in Gruppen zu gehen. robo smooth macht es an der ganzen Auswahl, in Gruppen und Komponenten, mit einem Klick.' },
+    { t: 'Abgemildert und geglättet', d: 'Das sind zwei verschiedene Dinge. Eine abgemilderte Kante ist versteckt: du siehst sie nicht, aber die Flächen bleiben facettiert. Eine auch geglättete Kante verbindet die Schattierung der beiden Flächen: das Licht läuft wie über eine runde Fläche. Mit der Option Glätten werden Kanten zugleich abgemildert und geglättet.' },
+    { t: 'Der Winkel', d: 'Jede Kante liegt zwischen zwei Flächen, die um einen Winkel knicken. Kanten, die weniger als der gewählte Winkel knicken, werden abgemildert, die anderen wieder sichtbar: bei 0 sind alle sichtbar, bei 180 alle abgemildert. Für die meisten runden Flächen passen 20-40 Grad: echte Ecken bleiben, Facetten verschwinden.' },
+    { t: 'Die Schnellbefehle', d: 'Leicht mildert nur die Kanten unter 25 Grad ab und berührt die anderen nicht, auch nicht die schon abgemilderten. Alles mildert jede Kante zwischen zwei Flächen ab. Alle zeigen macht sie wieder sichtbar. Diese drei arbeiten immer auch in verschachtelten Gruppen und Komponenten, wie in JHS PowerBar.' },
+    { t: 'Vierecke', d: 'Viele importierte Objekte oder solche aus Plugins für organisches Modellieren bestehen aus Dreiecken, die paarweise ein Viereck bilden. Vierecke blendet die gemeinsame Kante der beiden Dreiecke aus, also die längste Seite beider, und lässt die anderen sichtbar: die Fläche erscheint in Vierecken, wie in QuadFace Tools.' },
+    { t: 'Ohne Auswahl', d: 'Ist nichts ausgewählt, fragen die Befehle der Symbolleiste, ob am ganzen Modell oder an der geöffneten Gruppe gearbeitet werden soll. Das Fenster arbeitet dagegen nur an der Auswahl, so ändert der Regler nie versehentlich das ganze Modell.' },
+    { t: 'Schneller und sicherer', d: 'Eine Komponente mit hundert Kopien wird einmal bearbeitet, denn die Kopien sind dasselbe Objekt. Eine Kante wird nur geschrieben, wenn sie sich wirklich ändert. Gesperrte Objekte werden nicht berührt. Geht unterwegs etwas schief, wird der Vorgang von selbst zurückgenommen und das Plugin sagt es dir.' }
+  ],
+  pros: ['Sechs Befehle in einer Symbolleiste, kein anderes Plugin', 'Das Ergebnis erscheint, sobald du den Regler loslässt', 'Auch umgedrehte Flächen werden erkannt', 'Ein einziges Strg+Z nimmt jeden Befehl zurück'],
+  solves: [
+    { p: 'Runde Flächen wirken facettiert, mit allen Kanten sichtbar.', s: 'Ein Klick mildert und glättet die Kanten: die Fläche wird glatt.' },
+    { p: 'Für diese Befehle brauchte man JHS PowerBar und AMS Soften Edges zusammen.', s: 'robo smooth vereint sie in einem Plugin, mit Fenster und Hilfe in fünf Sprachen.' },
+    { p: 'Ein Modell aus Dreiecken ist schwer zu lesen.', s: 'Vierecke blendet die Diagonalen aus und zeigt es in Vierecken.' }
+  ],
+  specs: [['Menü', 'Robo Tool › robo smooth'], ['Symbolleiste', '6 Schaltflächen in 3 Gruppen'], ['Fenster', '360 px, die Höhe folgt dem Inhalt'], ['Winkel', '0 bis 180 Grad'], ['Rückgängig', 'Ein Strg+Z pro Befehl'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+};
+
+I18N_PLUGINS.fr.smooth = {
+  tagline: 'Adoucissez et lissez les arêtes en un clic : six commandes, aucun autre plugin.',
+  simple: 'Sélectionnez un objet et appuyez sur un bouton : les arêtes entre les faces qui plient peu disparaissent et la surface devient lisse, ou elles redeviennent toutes visibles. Dans la fenêtre, vous choisissez l’angle avec un curseur et voyez le résultat aussitôt.',
+  intro: [
+    'robo smooth adoucit et lisse les arêtes de vos modèles. Une arête adoucie ne se voit pas, et si elle est aussi lissée la lumière glisse sur ses deux faces comme sur une seule pièce : c’est ainsi que cylindres, sphères, terrains et objets importés paraissent courbes au lieu d’être à facettes.',
+    'Six commandes, les mêmes que les utilisateurs de SketchUp connaissent dans JHS PowerBar avec AMS Soften Edges et Smooze, refaites dans robo Tools : aucun autre plugin n’est nécessaire, et un seul Ctrl+Z annule chaque commande.'
+  ],
+  main: [
+    { t: 'Une fenêtre avec un curseur d’angle', d: 'Choisissez jusqu’à quelle pliure les arêtes sont adoucies (de 0 à 180 degrés) et cinq options : lisser, faces dans le même plan, courbes et arcs, matériaux différents, groupes imbriqués. La sélection change dès que vous relâchez le curseur.' },
+    { t: 'Adoucir tout de suite', d: 'Un bouton applique l’angle et les options de la dernière fois, sans ouvrir la fenêtre.' },
+    { t: 'Léger, tout, tout montrer', d: 'Trois commandes rapides : adoucir seulement les arêtes sous 25 degrés sans toucher les autres, adoucir toute arête entre deux faces, ou rendre de nouveau visibles toutes les arêtes.' },
+    { t: 'Quadrilatères', d: 'Dans les maillages faits de triangles, cache seulement les diagonales : la surface se voit en carrés, facile à lire et à modifier.' },
+    { t: 'Même les faces retournées', d: 'Deux faces dans le même plan, dont une à l’envers, sont reconnues comme planes : l’arête entre elles est adoucie comme il se doit.' },
+    { t: 'Barre, menu et aide', d: 'Six boutons en trois groupes, les mêmes entrées dans le menu Extensions, et une aide en cinq langues qui montre les icônes des boutons.' }
+  ],
+  steps: ['Sélectionnez des faces, des groupes ou des composants.', 'Appuyez sur un bouton de la barre robo smooth, ou ouvrez la fenêtre et déplacez le curseur de l’angle.', 'Regardez le résultat : s’il ne vous plaît pas, un seul Ctrl+Z annule tout.'],
+  how: [
+    { t: 'Le problème qu’il résout', d: 'Dans SketchUp, les surfaces courbes sont faites de nombreuses faces planes. Si les arêtes entre ces faces restent visibles, un cylindre ressemble à un prisme et un terrain à une mosaïque. Les cacher une à une est impossible, et la commande de SketchUp ne travaille que sur la sélection, sans entrer dans les groupes. robo smooth le fait sur toute la sélection, dans les groupes et composants, en un clic.' },
+    { t: 'Adouci et lissé', d: 'Ce sont deux choses différentes. Une arête adoucie est cachée : vous ne la voyez pas, mais les faces restent à facettes. Une arête aussi lissée unit l’ombrage des deux faces : la lumière glisse comme sur une surface courbe. Avec l’option Lisser activée, les arêtes deviennent adoucies et lissées ensemble.' },
+    { t: 'L’angle', d: 'Chaque arête est entre deux faces qui plient d’un certain angle. Les arêtes qui plient de moins que l’angle choisi sont adoucies, les autres redeviennent visibles : à 0 toutes se voient, à 180 toutes sont adoucies. Pour la plupart des surfaces courbes, 20-40 degrés conviennent : les vrais angles restent, les facettes disparaissent.' },
+    { t: 'Les commandes rapides', d: 'Léger adoucit seulement les arêtes sous 25 degrés et ne touche pas les autres, pas même celles déjà adoucies. Tout adoucit toute arête entre deux faces. Tout montrer les rend de nouveau visibles. Ces trois-là travaillent toujours aussi dans les groupes et composants imbriqués, comme dans JHS PowerBar.' },
+    { t: 'Quadrilatères', d: 'Beaucoup d’objets importés, ou faits avec des plugins de modélisation organique, sont faits de triangles qui, deux à deux, forment un quadrilatère. Quadrilatères cache l’arête commune aux deux triangles, c’est-à-dire le côté le plus long des deux, et garde les autres visibles : la surface se voit en carrés, comme dans QuadFace Tools.' },
+    { t: 'Sans sélection', d: 'Si rien n’est sélectionné, les commandes de la barre demandent s’il faut travailler sur tout le modèle, ou sur le groupe ouvert. La fenêtre, elle, ne travaille que sur la sélection : déplacer le curseur ne change jamais tout le modèle par erreur.' },
+    { t: 'Plus rapide et plus sûr', d: 'Un composant avec cent copies est traité une seule fois, car les copies sont le même objet. Une arête n’est écrite que si elle change vraiment. Les objets verrouillés ne sont pas touchés. Si quelque chose tourne mal en cours de route, l’opération s’annule d’elle-même et le plugin vous le dit.' }
+  ],
+  pros: ['Six commandes dans une barre, aucun autre plugin', 'Le résultat apparaît dès que vous relâchez le curseur', 'Les faces retournées sont reconnues aussi', 'Un seul Ctrl+Z annule chaque commande'],
+  solves: [
+    { p: 'Les surfaces courbes paraissent à facettes, avec toutes les arêtes visibles.', s: 'Un clic adoucit et lisse les arêtes : la surface devient lisse.' },
+    { p: 'Ces commandes demandaient JHS PowerBar et AMS Soften Edges ensemble.', s: 'robo smooth les réunit en un seul plugin, avec une fenêtre et une aide en cinq langues.' },
+    { p: 'Un modèle fait de triangles est difficile à lire.', s: 'Quadrilatères cache les diagonales et le montre en carrés.' }
+  ],
+  specs: [['Menu', 'Robo Tool › robo smooth'], ['Barre d’outils', '6 boutons en 3 groupes'], ['Fenêtre', '360 px, la hauteur suit le contenu'], ['Angle', 'De 0 à 180 degrés'], ['Annulation', 'Un seul Ctrl+Z par commande'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+};
+
+I18N_PLUGINS.es.smooth = {
+  tagline: 'Suaviza y alisa las aristas en un clic: seis comandos, ningún otro plugin.',
+  simple: 'Selecciona un objeto y pulsa un botón: las aristas entre caras que se doblan poco desaparecen y la superficie se vuelve lisa, o vuelven a ser visibles todas. En la ventana eliges el ángulo con un cursor y ves el resultado enseguida.',
+  intro: [
+    'robo smooth suaviza y alisa las aristas de tus modelos. Una arista suavizada no se ve, y si además está alisada la luz recorre sus dos caras como si fueran una sola pieza: así cilindros, esferas, terrenos y objetos importados parecen curvos en vez de facetados.',
+    'Son seis comandos, los mismos que los usuarios de SketchUp conocen de JHS PowerBar con AMS Soften Edges y Smooze, rehechos en robo Tools: no hace falta ningún otro plugin, y un solo Ctrl+Z deshace cada comando.'
+  ],
+  main: [
+    { t: 'Una ventana con el cursor del ángulo', d: 'Elige hasta qué doblez las aristas se suavizan (de 0 a 180 grados) y cinco opciones: alisar, caras en el mismo plano, curvas y arcos, materiales distintos, grupos anidados. La selección cambia en cuanto sueltas el cursor.' },
+    { t: 'Suavizar ahora', d: 'Un botón aplica el ángulo y las opciones de la última vez, sin abrir la ventana.' },
+    { t: 'Ligero, todo, mostrar todas', d: 'Tres comandos rápidos: suavizar solo las aristas por debajo de 25 grados sin tocar las demás, suavizar toda arista entre dos caras, o volver a hacer visibles todas las aristas.' },
+    { t: 'Cuadriláteros', d: 'En las mallas hechas de triángulos oculta solo las diagonales: la superficie se ve en cuadrados, fácil de leer y de editar.' },
+    { t: 'También las caras invertidas', d: 'Dos caras en el mismo plano, con una girada al revés, se reconocen como planas: la arista entre ellas se suaviza como debe.' },
+    { t: 'Barra, menú y ayuda', d: 'Seis botones en tres grupos, las mismas entradas en el menú Extensiones, y una ayuda en cinco idiomas que muestra los iconos de los botones.' }
+  ],
+  steps: ['Selecciona caras, grupos o componentes.', 'Pulsa un botón de la barra robo smooth, o abre la ventana y mueve el cursor del ángulo.', 'Mira el resultado: si no te gusta, un solo Ctrl+Z lo deshace todo.'],
+  how: [
+    { t: 'El problema que resuelve', d: 'En SketchUp las superficies curvas están hechas de muchas caras planas. Si las aristas entre esas caras quedan visibles, un cilindro parece un prisma y un terreno un mosaico. Ocultarlas una a una es imposible, y el comando de SketchUp solo trabaja sobre lo seleccionado, sin entrar en los grupos. robo smooth lo hace en toda la selección, dentro de grupos y componentes, con un clic.' },
+    { t: 'Suavizado y alisado', d: 'Son dos cosas distintas. Una arista suavizada está oculta: no la ves, pero las caras siguen facetadas. Una arista también alisada une el sombreado de las dos caras: la luz recorre la superficie como si fuera curva. Con la opción Alisar encendida, las aristas quedan suavizadas y alisadas a la vez.' },
+    { t: 'El ángulo', d: 'Cada arista está entre dos caras que se doblan cierto ángulo. Las aristas que se doblan menos que el ángulo elegido se suavizan, las demás vuelven a ser visibles: con 0 se ven todas, con 180 todas se suavizan. Para la mayoría de las superficies curvas van bien 20-40 grados: las esquinas reales quedan, las facetas desaparecen.' },
+    { t: 'Los comandos rápidos', d: 'Ligero suaviza solo las aristas por debajo de 25 grados y no toca las demás, ni siquiera las ya suavizadas. Todo suaviza toda arista entre dos caras. Mostrar todas las vuelve a hacer visibles. Estos tres trabajan siempre también en grupos y componentes anidados, como en JHS PowerBar.' },
+    { t: 'Cuadriláteros', d: 'Muchos objetos importados, o hechos con plugins de modelado orgánico, están hechos de triángulos que de dos en dos forman un cuadrilátero. Cuadriláteros oculta la arista común de los dos triángulos, que es el lado más largo de ambos, y deja visibles las demás: la superficie se ve en cuadrados, como en QuadFace Tools.' },
+    { t: 'Sin selección', d: 'Si no hay nada seleccionado, los comandos de la barra preguntan si trabajar sobre todo el modelo, o sobre el grupo que has abierto. La ventana, en cambio, solo trabaja sobre la selección, así mover el cursor nunca cambia el modelo entero por error.' },
+    { t: 'Más rápido y más seguro', d: 'Un componente con cien copias se procesa una sola vez, porque las copias son el mismo objeto. Una arista solo se escribe si cambia de verdad. Los objetos bloqueados no se tocan. Si algo sale mal a medio camino, la operación se anula sola y el plugin te lo dice.' }
+  ],
+  pros: ['Seis comandos en una barra, ningún otro plugin', 'El resultado aparece en cuanto sueltas el cursor', 'También reconoce las caras invertidas', 'Un solo Ctrl+Z deshace cada comando'],
+  solves: [
+    { p: 'Las superficies curvas parecen facetadas, con todas las aristas visibles.', s: 'Un clic suaviza y alisa las aristas: la superficie se vuelve lisa.' },
+    { p: 'Para estos comandos hacían falta JHS PowerBar y AMS Soften Edges juntos.', s: 'robo smooth los reúne en un solo plugin, con ventana y ayuda en cinco idiomas.' },
+    { p: 'Un modelo hecho de triángulos es difícil de leer.', s: 'Cuadriláteros oculta las diagonales y lo muestra en cuadrados.' }
+  ],
+  specs: [['Menú', 'Robo Tool › robo smooth'], ['Barra de herramientas', '6 botones en 3 grupos'], ['Ventana', '360 px, la altura sigue el contenido'], ['Ángulo', 'De 0 a 180 grados'], ['Deshacer', 'Un solo Ctrl+Z por comando'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+};
+
+I18N_TOOLBARS.en.smooth = { 'dialog.png': 'Soften… (window with angle and options)', 'run.png': 'Soften now (settings of last time)', 'lite.png': 'Soften light (under 25°)', 'hard.png': 'Soften all', 'show.png': 'Show all edges', 'quads.png': 'Quads (hide the diagonals)' };
+I18N_TOOLBARS.de.smooth = { 'dialog.png': 'Abmildern… (Fenster mit Winkel und Optionen)', 'run.png': 'Sofort abmildern (Einstellungen vom letzten Mal)', 'lite.png': 'Leicht abmildern (unter 25°)', 'hard.png': 'Alles abmildern', 'show.png': 'Alle Kanten zeigen', 'quads.png': 'Vierecke (Diagonalen ausblenden)' };
+I18N_TOOLBARS.fr.smooth = { 'dialog.png': 'Adoucir… (fenêtre avec angle et options)', 'run.png': 'Adoucir tout de suite (réglages de la dernière fois)', 'lite.png': 'Adoucir léger (sous 25°)', 'hard.png': 'Tout adoucir', 'show.png': 'Montrer toutes les arêtes', 'quads.png': 'Quadrilatères (cacher les diagonales)' };
+I18N_TOOLBARS.es.smooth = { 'dialog.png': 'Suavizar… (ventana con ángulo y opciones)', 'run.png': 'Suavizar ahora (ajustes de la última vez)', 'lite.png': 'Suavizar ligero (por debajo de 25°)', 'hard.png': 'Suavizar todo', 'show.png': 'Mostrar todas las aristas', 'quads.png': 'Cuadriláteros (ocultar las diagonales)' };
+
 I18N_PLUGINS.en.fillet_3d = {
   tagline: 'Rounds or chamfers the edges of groups and components, with quads ready for subdivision.',
   simple: 'Select a group or component and choose Rounding or Chamfer 45°: the sharp edges become soft curves made of quads. You can also pick just some edges or faces with the mouse, even inside nested objects.',
