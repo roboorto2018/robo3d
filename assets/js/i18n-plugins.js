@@ -3504,7 +3504,7 @@ I18N_PLUGINS.en.boolean = {
   tagline: 'Union, subtract, intersect, trim, split: boolean operations in two clicks, even on objects that are not solids.',
   simple: 'Press an operation in the toolbar, click the first object (green box) and then the second (orange box): the operation starts at once. With the robo engine installed the computation happens outside SketchUp, fast and with no risk of crashes; a single Ctrl+Z undoes everything.',
   intro: [
-    'robo boolean joins, subtracts, intersects, trims and splits groups and components, like the Solid Tools of SketchUp and BoolTools 2. On top of that there is single object union: a group that holds several overlapping solids becomes one solid.',
+    'robo boolean joins, subtracts, intersects, trims and splits groups and components, like the Solid Tools of SketchUp. On top of that there is single object union: a group that holds several overlapping solids becomes one solid.',
     'It works even when the objects are not perfect solids: holes, extra faces, groups inside groups. You decide whether the result must be closed into a solid or the openings must stay as they are.'
   ],
   main: [
@@ -3541,7 +3541,7 @@ I18N_PLUGINS.de.boolean = {
   tagline: 'Vereinigung, Subtraktion, Schnittmenge, Abschneiden, Teilen: boolesche Operationen mit zwei Klicks, auch bei Objekten, die keine Volumenkörper sind.',
   simple: 'Drücke eine Operation in der Symbolleiste, klicke das erste Objekt (grüner Rahmen) und dann das zweite (oranger Rahmen): Die Operation startet sofort. Mit installierter robo-Engine läuft die Berechnung außerhalb von SketchUp, schnell und ohne Absturzgefahr; ein einziges Strg+Z macht alles rückgängig.',
   intro: [
-    'robo boolean vereinigt, subtrahiert, schneidet, schneidet ab und teilt Gruppen und Komponenten, wie die Volumenkörper-Werkzeuge von SketchUp und BoolTools 2. Dazu kommt die Vereinigung eines Objekts: Eine Gruppe mit mehreren überlappenden Volumenkörpern wird ein einziger Volumenkörper.',
+    'robo boolean vereinigt, subtrahiert, schneidet, schneidet ab und teilt Gruppen und Komponenten, wie die Volumenkörper-Werkzeuge von SketchUp. Dazu kommt die Vereinigung eines Objekts: Eine Gruppe mit mehreren überlappenden Volumenkörpern wird ein einziger Volumenkörper.',
     'Es funktioniert auch, wenn die Objekte keine perfekten Volumenkörper sind: Löcher, überzählige Flächen, Gruppen in Gruppen. Du entscheidest, ob das Ergebnis zu einem Volumenkörper geschlossen wird oder die Öffnungen bleiben, wie sie sind.'
   ],
   main: [
@@ -3578,7 +3578,7 @@ I18N_PLUGINS.fr.boolean = {
   tagline: 'Union, soustraction, intersection, couper, diviser : des opérations booléennes en deux clics, même sur des objets qui ne sont pas des solides.',
   simple: 'Appuyez sur une opération dans la barre, cliquez le premier objet (cadre vert) puis le second (cadre orange) : l’opération démarre tout de suite. Avec le moteur robo installé, le calcul se fait hors de SketchUp, rapide et sans risque de plantage ; un seul Ctrl+Z annule tout.',
   intro: [
-    'robo boolean unit, soustrait, intersecte, coupe et divise groupes et composants, comme les outils Solides de SketchUp et BoolTools 2. En plus, il y a l’union d’un objet : un groupe qui contient plusieurs solides superposés devient un seul solide.',
+    'robo boolean unit, soustrait, intersecte, coupe et divise groupes et composants, comme les outils Solides de SketchUp. En plus, il y a l’union d’un objet : un groupe qui contient plusieurs solides superposés devient un seul solide.',
     'Il fonctionne même quand les objets ne sont pas des solides parfaits : trous, faces en trop, groupes dans des groupes. Vous décidez si le résultat doit être fermé en solide ou si les ouvertures doivent rester telles quelles.'
   ],
   main: [
@@ -3615,7 +3615,7 @@ I18N_PLUGINS.es.boolean = {
   tagline: 'Unión, resta, intersección, recortar, dividir: operaciones booleanas en dos clics, incluso en objetos que no son sólidos.',
   simple: 'Pulsa una operación en la barra, haz clic en el primer objeto (recuadro verde) y luego en el segundo (recuadro naranja): la operación empieza enseguida. Con el motor robo instalado el cálculo se hace fuera de SketchUp, rápido y sin riesgo de cierres; un solo Ctrl+Z lo deshace todo.',
   intro: [
-    'robo boolean une, resta, interseca, recorta y divide grupos y componentes, como las herramientas Sólidos de SketchUp y BoolTools 2. Además está la unión de un objeto: un grupo que contiene varios sólidos superpuestos se convierte en un solo sólido.',
+    'robo boolean une, resta, interseca, recorta y divide grupos y componentes, como las herramientas Sólidos de SketchUp. Además está la unión de un objeto: un grupo que contiene varios sólidos superpuestos se convierte en un solo sólido.',
     'Funciona también cuando los objetos no son sólidos perfectos: agujeros, caras de más, grupos dentro de grupos. Tú decides si el resultado debe cerrarse en sólido o si las aberturas deben quedar como están.'
   ],
   main: [

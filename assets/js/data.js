@@ -64,7 +64,7 @@ var PLUGINS = [
     tagline: 'Unione, sottrazione, intersezione, taglia, dividi: operazioni booleane in due clic, anche su oggetti non solidi.',
     simple: 'Premi un’operazione nella barra, clicca il primo oggetto (riquadro verde) e poi il secondo (riquadro arancione): l’operazione parte subito. Con il motore robo installato il calcolo avviene fuori da SketchUp, veloce e senza rischio di chiusure; un solo Ctrl+Z annulla tutto.',
     intro: [
-      'robo boolean unisce, sottrae, interseca, taglia e divide gruppi e componenti, come i comandi Solidi di SketchUp e di BoolTools 2. In più c’è l’unione di un oggetto: un gruppo che contiene più solidi sovrapposti diventa un solido solo.',
+      'robo boolean unisce, sottrae, interseca, taglia e divide gruppi e componenti, come i comandi Solidi di SketchUp. In più c’è l’unione di un oggetto: un gruppo che contiene più solidi sovrapposti diventa un solido solo.',
       'Funziona anche quando gli oggetti non sono solidi perfetti: buchi, facce in più, gruppi dentro gruppi. Decidi tu se il risultato va chiuso in solido o se le aperture devono restare come sono.'
     ],
     main: [
