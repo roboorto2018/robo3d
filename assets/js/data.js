@@ -55,6 +55,47 @@ var PLUGINS = [
     specs: [['Oggetti', 'Cubo (X, Y, Z collegabili), cilindro, cono, tronco di cono, UV Sphere, icosfera, toro'], ['Barra', 'Fissa in alto a sinistra della vista, su due righe se la vista è stretta'], ['Guida', 'Finestra di 600 px, in 5 lingue'], ['Menu', 'Robo Tool › robo baseform'], ['Barra strumenti', '1 pulsante'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
+  /* --------------------------------------------------------------- BOOLEAN */
+  {
+    id: 'boolean', name: 'robo boolean', version: '1.0', category: 'Modellazione', hue: 0,
+    noDownload: true, installer: true,
+    video: 'wPqJ3tycBi8',
+    images: ['assets/img/screenshots/boolean-1.jpg', 'assets/img/screenshots/boolean-2.jpg', 'assets/img/screenshots/boolean-3.jpg', 'assets/img/screenshots/boolean-4.jpg', 'assets/img/screenshots/boolean-5.jpg'],
+    tagline: 'Unione, sottrazione, intersezione, taglia, dividi: operazioni booleane in due clic, anche su oggetti non solidi.',
+    simple: 'Premi un’operazione nella barra, clicca il primo oggetto (riquadro verde) e poi il secondo (riquadro arancione): l’operazione parte subito. Con il motore robo installato il calcolo avviene fuori da SketchUp, veloce e senza rischio di chiusure; un solo Ctrl+Z annulla tutto.',
+    intro: [
+      'robo boolean unisce, sottrae, interseca, taglia e divide gruppi e componenti, come i comandi Solidi di SketchUp e di BoolTools 2. In più c’è l’unione di un oggetto: un gruppo che contiene più solidi sovrapposti diventa un solido solo.',
+      'Funziona anche quando gli oggetti non sono solidi perfetti: buchi, facce in più, gruppi dentro gruppi. Decidi tu se il risultato va chiuso in solido o se le aperture devono restare come sono.'
+    ],
+    main: [
+      { t: 'Sei operazioni in una barra', d: 'Unione, sottrazione, intersezione, taglia (gli oggetti che tagliano restano, come uno stampo), dividi (tutti i pezzi possibili) e unione di un oggetto. L’ultima icona a destra apre le opzioni.' },
+      { t: 'Due clic, nessuna domanda', d: 'L’oggetto sotto il mouse mostra già il suo riquadro: verde per il primo, arancione per il secondo. Al secondo clic l’operazione parte, senza Invio e senza finestre.' },
+      { t: 'Motore robo, fuori da SketchUp', d: 'Con il motore robo installato (un programma a parte, scritto in Rust) il calcolo avviene in un processo separato: SketchUp resta libero e, se il calcolo fallisce, il modello non cambia. Senza il motore lavora il motore dei solidi di SketchUp, con protezioni sugli oggetti pesanti.' },
+      { t: 'Anche su oggetti non solidi', d: 'Buchi, linee con più di due facce, gruppi dentro gruppi: l’operazione si fa lo stesso. Con «Chiudi in solido» spento le aperture degli oggetti restano aperte; acceso, il plugin prova in tutti i modi a chiudere il risultato.' },
+      { t: 'Materiali e texture al loro posto', d: 'Il colore dato a un intero gruppo passa alle sue facce, le texture restano dove erano e le facce sullo stesso piano tornano una faccia sola.' },
+      { t: 'Opzioni e Aiuto in cinque lingue', d: 'Prima e dopo l’operazione, originali da tenere o nascondere, risultato come componente, linee ammorbidite. Ogni opzione ha la sua spiegazione al passaggio del mouse.' }
+    ],
+    steps: ['Premi un’operazione nella barra robo boolean (o nel menu Estensioni › Robo Tool › robo boolean).', 'Clicca il primo oggetto: riquadro verde. Per l’unione di un oggetto basta questo clic.', 'Clicca il secondo oggetto: riquadro arancione, e l’operazione parte subito. Un solo Ctrl+Z la annulla.'],
+    how: [
+      { t: 'Il problema che risolve', d: 'I comandi Solidi di SketchUp lavorano solo su solidi perfetti e su modelli complessi possono chiudere SketchUp. robo boolean calcola fuori da SketchUp con il motore robo, lavora anche su oggetti con buchi e lascia scegliere se chiuderli.' },
+      { t: 'Le sei operazioni', d: 'Unione: tutti gli oggetti diventano un solido, senza facce dentro. Sottrazione: gli altri oggetti scavano il primo e spariscono. Intersezione: resta solo il volume comune. Taglia: come la sottrazione, ma gli oggetti che tagliano restano. Dividi: due oggetti diventano tre pezzi, il primo, la parte comune e il secondo. Unione di un oggetto: i solidi sovrapposti dentro un gruppo diventano uno solo.' },
+      { t: 'Scegliere gli oggetti', d: 'Quando premi l’operazione la selezione si svuota: gli oggetti si scelgono sempre col mouse. Quello sotto il cursore mostra già il riquadro che avrà, verde per il primo e arancione per il secondo. Esc chiude lo strumento.' },
+      { t: 'Chiudi in solido', d: 'Spento, il plugin fa solo l’operazione booleana: i buchi che gli oggetti avevano restano aperti anche nel risultato. Acceso, prova in tutti i modi a chiudere: prima gli oggetti aperti, poi il risultato, riempiendo ogni buco con facce girate come quelle vicine.' },
+      { t: 'Le altre opzioni', d: 'Prima dell’operazione: ripara i solidi togliendo le linee vaganti, propaga i materiali, ottimizza i modelli piccoli, modalità robusta che riprova a scala più grande. Dopo: unisci le facce sullo stesso piano, ammorbidisci le linee, risultato come componente. Originali: tieni l’oggetto principale o quelli che uniscono e tagliano, e nascondili. Ogni modifica vale subito; Annulla rimette le opzioni com’erano.' },
+      { t: 'Il motore robo', d: 'È un programma a parte, installato dall’installatore fuori dalle cartelle dei plugin. Riceve i triangoli degli oggetti, calcola con manifold-rust e restituisce il risultato, che SketchUp ricostruisce con le facce, i materiali e le texture degli originali. Due sfere di 32.000 triangoli si uniscono in circa un decimo di secondo.' },
+      { t: 'Un esempio concreto', d: 'Hai un blocco di legno con un foro sotto e vuoi scavarci dentro un cilindro. Premi Sottrazione, clicchi il blocco e poi il cilindro: in un decimo di secondo il cilindro diventa un incavo, con la venatura del legno al suo posto. Con «Chiudi in solido» spento il foro sotto resta aperto; acceso, viene chiuso e il blocco diventa un solido.' }
+    ],
+    pros: ['Sei operazioni booleane in una barra', 'Calcolo fuori da SketchUp, senza rischio di chiusure', 'Funziona anche su oggetti non solidi', 'Materiali e texture mantenuti', 'Un solo Ctrl+Z per operazione', 'Aiuto e opzioni in cinque lingue'],
+    solves: [
+      { p: 'I comandi Solidi di SketchUp rifiutano gli oggetti che non sono solidi perfetti.', s: 'robo boolean fa l’operazione lo stesso, e chiude il risultato solo se lo chiedi.' },
+      { p: 'Su modelli complessi un’operazione booleana può chiudere SketchUp.', s: 'Con il motore robo il calcolo avviene in un processo separato: se fallisce, il modello non cambia.' },
+      { p: 'Un modello scaricato è fatto di tanti pezzi sovrapposti dentro un gruppo.', s: 'L’unione di un oggetto li fonde in un solido solo con un clic.' }
+    ],
+    specs: [['Menu', 'Robo Tool › robo boolean'], ['Barra strumenti', '6 operazioni e Opzioni'], ['Richiede', 'SketchUp 2021.1 o successivo, Pro; motore robo per Windows (facoltativo)'], ['Motore', 'robo_bool_engine (Rust + manifold-rust), incluso nell’installatore'], ['Annullamento', 'Un solo Ctrl+Z per operazione'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']],
+    installNote: 'robo boolean non è ancora disponibile per il download: sarà pubblicato appena pronto.',
+    unavailableNote: 'robo boolean non è ancora disponibile per il download: sarà pubblicato appena pronto.'
+  },
+
   /* --------------------------------------------------------------- EXTRACT */
   {
     id: 'extract', name: 'robo extract', version: '1.1', category: 'Modellazione', hue: 170,
@@ -915,6 +956,9 @@ var TOOLBARS = {
   fillet_3d: { name: 'robo fillet 3d', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3d: arrotonda o smussa i bordi' }]] },
   doctor: { name: 'robo doctor', groups: [[{ i: 'doctor.png', l: 'robo doctor: controlla e ripara i solidi' }]] },
   importer: { name: 'robo importer', groups: [[{ i: 'importer.png', l: 'robo importer: importa file STEP e IGES' }]] },
+  boolean: { name: 'robo boolean', groups: [
+    [{ i: 'union.png', l: 'Unione' }, { i: 'subtract.png', l: 'Sottrazione' }, { i: 'intersect.png', l: 'Intersezione' }, { i: 'trim.png', l: 'Taglia' }, { i: 'split.png', l: 'Dividi' }, { i: 'single.png', l: 'Unione di un oggetto' }],
+    [{ i: 'options.png', l: 'Opzioni' }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   export_object: { name: 'robo export object', groups: [[{ i: 'export.png', l: "Esporta la selezione in un nuovo file .skp" }]] },
   library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },
