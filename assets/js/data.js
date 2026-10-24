@@ -872,7 +872,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   },
   /* --------------------------------------------------------------- IMPORTER */
   {
-    id: 'importer', name: 'robo importer', version: '0.6', category: 'Produttività', hue: 205,
+    id: 'importer', name: 'robo importer', version: '0.11', category: 'Produttività', hue: 205,
     video: 'L1wkUY3zzVM',
     images: ['assets/img/screenshots/importer-1.jpg', 'assets/img/screenshots/importer-2.jpg'],
     noDownload: true, installer: true,
