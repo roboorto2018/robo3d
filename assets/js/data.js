@@ -361,37 +361,40 @@ var PLUGINS = [
 
   /* ------------------------------------------------------------- PLACEMENT */
   {
-    id: 'placement', name: 'robo placement', version: '0.9', category: 'Distribuzione', hue: 130,
+    id: 'placement', name: 'robo placement', version: '1.0', category: 'Distribuzione', hue: 130,
     donationPrompt: true,
     video: 'BuxBGvKxEGM',
     images: ['assets/img/screenshots/placement-1.png', 'assets/img/screenshots/placement-2.png', 'assets/img/screenshots/placement-3.png', 'assets/img/screenshots/placement-4.png'],
     tagline: 'Distribuisci oggetti a caso su qualsiasi superficie.',
-    simple: 'Scegli un oggetto (un albero, un sasso, un mobile) e una superficie: Robo ne dispone tante copie sparse in modo naturale, con scala e rotazione leggermente diverse per ogni copia.',
+    simple: 'Seleziona l’oggetto (un albero, un sasso, un mobile) e premi Seleziona Oggetto, poi clicca la superficie, anche dentro gruppi e componenti: Robo ne dispone tante copie sparse in modo naturale, uguali all’oggetto e con scala e rotazione leggermente diverse.',
     intro: [
       'robo placement distribuisce molte copie di un oggetto su una superficie, in modo casuale e naturale. Scegli l\'oggetto e la superficie, regoli quantità e variazioni, e le copie vengono sparse da sole.',
       'Serve per riempire in fretta un terreno di alberi, cespugli o sassi, o per disporre elementi che non devono sembrare messi in fila. Ogni copia ha scala e rotazione leggermente diverse, così il risultato è credibile.'
     ],
     main: [
-      { t: 'Su qualsiasi superficie', d: 'Funziona su facce piane, inclinate e su terreni irregolari.' },
+      { t: 'Su qualsiasi superficie', d: 'Facce piane, inclinate e terreni irregolari, anche dentro gruppi e componenti annidati: la faccia sotto il cursore si illumina di arancione e un clic la sceglie.' },
+      { t: 'Copie uguali all’oggetto', d: 'Ogni copia ha la scala dell’oggetto scelto (anche diversa sui tre assi o specchiata), le sue misure, il materiale, il tag e le opzioni dei componenti dinamici; la scala casuale si aggiunge sopra.' },
       { t: 'Variazioni controllate', d: 'Imposti quantità, scala minima e massima e rotazione. Con lo stesso valore di partenza ottieni lo stesso risultato.' },
-      { t: 'Copie che non si sovrappongono', d: 'Una distanza minima evita che gli oggetti si compenetrino, e puoi indicare zone da evitare.' },
-      { t: 'Anteprima dal vivo', d: 'Vedi le copie sul modello mentre regoli i valori, e la geometria viene creata solo quando confermi.' }
+      { t: 'Collisione sui box veri', d: 'Una sola Distanza tra gli oggetti, misurata sul box vero di ogni copia: 0 le fa toccare senza compenetrarsi, un valore positivo le allontana (fino a lasciarne una sola sulla faccia), uno negativo le fa compenetrare fino a sovrapporle.' },
+      { t: 'Anteprima dal vivo', d: 'Vedi le copie sul modello mentre regoli i valori, come box o come oggetto reale semplificato; la geometria viene creata solo quando premi Applica.' }
     ],
-    steps: ['Seleziona il componente o gruppo da distribuire.', 'Indica la faccia bersaglio e regola quantità, scala e rotazione.', 'Guarda l\'anteprima dal vivo e premi Applica.'],
+    steps: ['Apri robo placement, seleziona l’oggetto con lo strumento Seleziona di SketchUp e premi Seleziona Oggetto.', 'Passa sulla faccia (anche dentro gruppi e componenti) e cliccala: parte l’anteprima delle copie.', 'Regola quantità, collisione, scala e rotazione e premi Applica.'],
     how: [
-      { t: 'Il problema che risolve', d: 'Piazzare a mano decine di alberi, sassi o cespugli su un terreno è lungo, e il risultato viene quasi sempre troppo regolare. Le copie che si compenetrano rovinano il render. robo placement distribuisce fino a 1000 copie in una sola operazione, con variazioni casuali e senza sovrapposizioni.' },
-      { t: 'Passo 1 · Scegli oggetto e superficie', d: 'Seleziona il componente o il gruppo da distribuire, poi indica la faccia bersaglio. Funziona su facce piane, inclinate e su mesh organiche: sceglie i punti sull\'intera superficie collegata, in proporzione alla sua area.' },
-      { t: 'Passo 2 · Regola le variazioni', d: 'Imposti la quantità, da 1 a 1000, la scala minima e massima, la rotazione casuale sui tre assi e l\'allineamento alla normale della superficie. C\'è anche un "seme" (seed): con lo stesso seme ottieni sempre lo stesso risultato, cambiandolo ottieni una disposizione nuova.' },
-      { t: 'Distanza minima e ostacoli', d: 'Un controllo anti-collisione sulle scatole di ingombro evita che le copie si sovrappongano; puoi anche indicare ostacoli da evitare, come un sentiero o una costruzione.' },
-      { t: 'Passo 3 · Anteprima e applica', d: 'Vedi le copie disegnate sopra la vista mentre regoli i parametri, anche durante orbita e pan, senza creare geometria. Solo quando premi Applica le copie vengono create davvero; un solo Ctrl+Z le annulla tutte.' },
-      { t: 'Un esempio concreto', d: 'Hai un terreno collinare e vuoi un boschetto di 150 pini. Selezioni il componente "Pino", indichi il terreno e imposti scala tra 80% e 120%, rotazione casuale e distanza minima 2 m. Guardi l\'anteprima: se non ti piace cambi il seme. Premi Applica e in un attimo hai un bosco naturale, già posato sul pendio.' }
+      { t: 'Il problema che risolve', d: 'Piazzare a mano decine di alberi, sassi o cespugli su un terreno è lungo, e il risultato viene quasi sempre troppo regolare. Le copie che si compenetrano rovinano il render. robo placement distribuisce fino a 1000 copie in una sola operazione, con variazioni casuali e la distanza che vuoi tra una copia e l’altra.' },
+      { t: 'Passo 1 · L’oggetto', d: 'All’apertura la selezione viene rilasciata e lampeggia Seleziona Oggetto. Seleziona nel modello, come sempre con lo strumento Seleziona di SketchUp, il componente o il gruppo da distribuire, poi premi Seleziona Oggetto: niente viene preso da solo.' },
+      { t: 'Passo 2 · La faccia', d: 'Subito dopo lampeggia Seleziona Faccia: passa con il cursore sulle facce, sciolte o dentro gruppi e componenti anche annidati, e la faccia sotto il cursore si illumina di arancione. Un clic la sceglie (una superficie morbida viene presa intera) e solo allora compare l’anteprima. Scelti oggetto e faccia, i due pulsanti si bloccano: per ricominciare premi Reimposta.' },
+      { t: 'Passo 3 · Regola le variazioni', d: 'Imposti la quantità, da 1 a 1000, la scala minima e massima, la rotazione casuale sui tre assi e l’allineamento alla normale della superficie. C’è anche un “seme” (seed): con lo stesso seme ottieni sempre lo stesso risultato, cambiandolo ottieni una disposizione nuova.' },
+      { t: 'Collisione', d: 'Con Collisione attiva le copie vengono allontanate finché i loro box veri non si toccano più, poi un controllo finale toglie quelle rimaste sovrapposte. La Distanza tra gli oggetti va da meno la misura dell’oggetto (copie sovrapposte) alla diagonale della faccia (resta una copia sola).' },
+      { t: 'Passo 4 · Anteprima e applica', d: 'Le copie si vedono sopra la vista mentre regoli i parametri, anche durante orbita e pan. Anteprima oggetto reale, spenta all’avvio, mostra un wireframe leggero dell’oggetto al posto dei box. Applica crea le copie in un gruppo; un solo Ctrl+Z le annulla tutte.' },
+      { t: 'Un esempio concreto', d: 'Hai un terreno collinare e vuoi un boschetto di 150 pini. Selezioni il componente “Pino” e premi Seleziona Oggetto, clicchi il terreno, imposti scala tra 80% e 120%, rotazione casuale e una distanza tra gli oggetti di 50 cm. Se l’anteprima non ti piace cambi il seme. Premi Applica e hai un bosco naturale, già posato sul pendio.' }
     ],
-    pros: ['Risultato naturale, non "a griglia"', 'Ripetibile grazie al seed', 'Anteprima prima di creare qualsiasi cosa', 'Funziona anche su terreni irregolari'],
+    pros: ['Risultato naturale, non “a griglia”', 'Facce anche dentro gruppi e componenti', 'Copie uguali all’oggetto scelto', 'Collisione sui box veri, anche con compenetrazione', 'Ripetibile grazie al seed', 'Anteprima prima di creare qualsiasi cosa'],
     solves: [
       { p: 'Piazzare a mano decine di alberi o sassi è lungo e viene sempre troppo regolare.', s: 'Una sola operazione distribuisce fino a 1000 copie con variazioni casuali.' },
-      { p: 'Le copie che si compenetrano rovinano il render.', s: 'La distanza minima le tiene separate.' }
+      { p: 'Le copie che si compenetrano rovinano il render.', s: 'La Distanza tra gli oggetti le tiene separate sui loro box veri, o le fa compenetrare quanto vuoi.' },
+      { p: 'La faccia giusta è dentro un gruppo o un componente.', s: 'Il cursore la trova a qualunque profondità e un clic la sceglie.' }
     ],
-    specs: [['Finestra', '400 × 567 px, espandibile'], ['Menu', 'Robo Tool › robo placement'], ['Quantità', '1 – 1000 copie'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Finestra', '400 × 567 px, espandibile'], ['Menu', 'Robo Tool › robo placement'], ['Quantità', '1 – 1000 copie'], ['Collisione', 'Distanza tra i box: da meno la misura dell’oggetto alla diagonale della faccia'], ['Lingue', '5 (IT, EN, DE, FR, ES)'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* ----------------------------------------------------------------- PROXY */
@@ -519,12 +522,13 @@ var PLUGINS = [
       { t: 'Linee, curve e anelli', d: 'Il percorso può essere un segmento, una curva o una forma chiusa come un cerchio.' },
       { t: 'Rotazione e scala', d: 'Le copie possono ruotare e cambiare dimensione, in modo casuale o crescente lungo il percorso.' },
       { t: 'Anteprima prima di confermare', d: 'Vedi dove andranno le copie e in che direzione, e modifichi i valori fino al risultato voluto.' },
-      { t: 'Scelta del percorso col mouse e Linea intera', d: 'Con “Scegli segmenti (Maiusc + clic)” scegli il percorso col mouse, anche dentro gruppi e componenti: una linea, il contorno di una faccia, e con Maiusc aggiungi o togli segmenti. Spuntando Full line viene scelta subito tutta la linea, con tutti i segmenti contigui fino a un’interruzione o a una fine.' }
+      { t: 'Scelta del percorso col mouse e Linea intera', d: 'Con “Scegli segmenti” scegli il percorso col mouse, anche dentro gruppi e componenti. Il primo segmento è la partenza: Maiusc + clic prende sempre il tratto dalla partenza al segmento cliccato, più avanti lo allunga, su un segmento già scelto lo accorcia, dall’altra parte lo gira. Il percorso scelto è verde, il segmento sotto il cursore arancione. Spuntando Full line viene presa subito tutta la linea.' },
+      { t: 'Vista libera, anteprima ferma', d: 'Scelti oggetto e percorso, gli strumenti di selezione si fermano: restano Orbita, Panoramica, gli zoom e Vista precedente, e l’anteprima non si perde. Inverti inizio-fine gira il percorso e anche la partenza.' }
     ],
     steps: ['Seleziona l\'oggetto e il percorso (le linee).', 'Scegli "Numero" di copie oppure "Distanza" fissa.', 'Regola rotazione e scala, guarda l\'anteprima e conferma.'],
     how: [
       { t: 'Il problema che risolve', d: 'Copiare e posizionare a mano oggetti lungo una curva dà distanze irregolari, e se cambi idea sul numero di copie devi rifare tutto. robo spacing tool calcola i punti lungo il percorso con precisione, e se modifichi un valore l\'anteprima si aggiorna subito.' },
-      { t: 'Passo 1 · Scegli oggetto e percorso', d: 'Seleziona l\'oggetto da copiare e il percorso, cioè le linee. Il percorso può essere un segmento, un arco, una curva, anche chiusa ad anello. Con "Linea intera" la selezione si estende a tutta la catena di segmenti collegati.' },
+      { t: 'Passo 1 · Scegli oggetto e percorso', d: 'Seleziona l’oggetto da copiare e il percorso. Il percorso può essere un segmento, un arco, una curva, anche chiusa ad anello. Con Scegli segmenti il primo segmento cliccato è la partenza e Maiusc + clic allunga, accorcia o gira il percorso; con “Linea intera” la scelta si estende a tutta la catena di segmenti collegati.' },
       { t: 'Passo 2 · Numero o distanza', d: 'Con "Numero" ottieni N copie equidistanti lungo il percorso. Con "Distanza" ottieni un passo fisso, per esempio 100 cm tra una copia e l\'altra. Puoi impostare anche uno scarto iniziale e finale.' },
       { t: 'Rotazione e scala', d: 'Rotazione e scala possono essere casuali oppure progressive, cioè crescono o diminuiscono con gradualità lungo il percorso. Puoi scegliere l\'asse di inserimento e mantenere la verticale rispetto al mondo.' },
       { t: 'Passo 3 · Anteprima e conferma', d: 'L\'anteprima mostra i contorni degli oggetti e frecce di direzione. Per non rallentare, limita automaticamente il numero di copie disegnate. La finestra non è modale: resta aperta mentre lavori. Un solo Ctrl+Z annulla tutto.' },
@@ -848,46 +852,53 @@ intro: [
 main: [
     { t: 'Controllo del solido', d: 'Per ogni oggetto dice se è Solido, Aperto o Vuoto (un contenitore di altri gruppi) e elenca gli errori trovati: bordi aperti, più di due facce su un bordo, normali incoerenti, vertici quasi coincidenti, linee isolate, normali rivolte all’interno.' },
     { t: 'Errori con i loro colori', d: 'Gli errori compaiono nel modello da soli appena scegli l’oggetto: rosso per i buchi, arancione per quelli che richiedono triangoli, viola, verde, blu, giallo e marrone per gli altri. Le linee si vedono anche attraverso l’oggetto, e il resto del modello viene nascosto finché guardi gli errori.' },
-    { t: 'Elenco dei buchi, con la lente', d: 'Rendi solido apre la finestra con tutti gli errori, senza cambiare nulla. La lente porta lo zoom sul buco, Risolvi lo chiude, e i tre pulsanti in fondo chiudono tutti i rossi, tutti gli arancioni o tutto.' },
+    { t: 'Elenco degli errori, con la lente', d: 'Rendi solido apre la finestra con tutti gli errori, senza cambiare nulla. Ogni riga ha la lente per lo zoom e un clic la disegna in rosso nel modello; Risolvi chiude un buco e i pulsanti in fondo chiudono tutti i rossi, tutti gli arancioni o tutto.' },
+    { t: 'Consigli, come gli strumenti dei solidi', d: 'Gli errori che non sono buchi (bordi con più di due facce, bordi aperti che non chiudono un buco, normali girate, linee isolate) hanno la lampadina: il loro Risolvi toglie facce interne o sporgenti, unisce estremità vicine, gira le facce o cancella le linee. Sono consigli perché possono cambiare il disegno; Risolvi tutti prova anche questi.' },
+    { t: 'Elenco solidi e non solidi', d: 'Un pulsante apre l’elenco di tutti gli oggetti controllati, anche annidati: un clic mostra l’oggetto da solo e ingrandito, Analizza controlla solo quello.' },
     { t: 'Prima i quadrilateri', d: 'I buchi si chiudono con quadrilateri piani, una faccia sola ciascuno. I triangoli, che possono appiattire o deformare l’oggetto dove la superficie è curva, si usano solo quando lo decidi tu, e puoi tornare indietro con Annulla o Ctrl+Z.' },
     { t: 'Pulizia delle linee inutili', d: 'Unisce le facce complanari, anche solo attraverso le linee nascoste o morbide, toglie i triangoli e le diagonali inutili senza aprire buchi e cancella le linee isolate. I colori delle facce si rispettano, a meno che tu scelga di ignorarli.' },
     { t: 'Finestra chiara, in cinque lingue', d: 'Pulsanti sempre visibili in fondo, aiuto integrato con un argomento per ogni tema, scelta della lingua con il globo e opzioni che restano memorizzate. Tutte le operazioni si annullano con Ctrl+Z.' }
 ],
-steps: ['Seleziona un gruppo o un componente (o scegli quello annidato col mouse) e apri robo doctor.', 'Guarda lo stato e gli errori in colore nel modello, poi premi Rendi solido per aprire l’elenco dei buchi.', 'Chiudi i buchi con Risolvi, Chiudi Quad, Chiudi Triangoli o Risolvi tutti, e torna indietro con Annulla se serve.'],
+steps: ['Seleziona un gruppo o un componente (o scegli quello annidato col mouse) e apri robo doctor.', 'Guarda lo stato, gli errori in colore nel modello e, se vuoi, l’elenco degli oggetti; poi premi Rendi solido per aprire l’elenco degli errori.', 'Chiudi i buchi e applica i consigli con Risolvi, oppure usa Chiudi Quad, Chiudi Triangoli o Risolvi tutti; torna indietro con Annulla se serve.'],
 how: [
     { t: 'Il problema che risolve', d: 'In SketchUp è facile creare oggetti che sembrano chiusi ma non lo sono: un buco piccolo, una faccia girata, due punti quasi uguali. Trovarli a occhio è lungo, e chiuderli a mano spesso crea triangoli disordinati. robo doctor li cerca per te e li chiude con quadrilateri.' },
     { t: 'Passo 1 · Scegli l’oggetto', d: 'Seleziona un gruppo o componente, oppure usa “Scegli un gruppo o componente (anche annidato)”: passando il mouse un box azzurro mostra l’oggetto, il clic apre i gruppi fino a lui. Gli oggetti nidificati sono controllati insieme.' },
+    { t: 'L’elenco degli oggetti', d: 'Il pulsante Elenco solidi e non solidi mostra una riga per ogni oggetto, con Solido, Aperto o Vuoto. Clic sulla riga: l’oggetto resta da solo nel modello, con il suo box azzurro, e la vista lo ingrandisce; un altro clic torna a tutti. Analizza seleziona solo quell’oggetto e controlla lui e quelli dentro di lui.' },
     { t: 'Passo 2 · Leggi gli errori', d: 'Ogni tipo di errore ha un colore e una casella per mostrarlo o nasconderlo: bordi aperti (rosso), più di due facce (viola), normali incoerenti (verde), vertici vicini (blu), linee isolate (giallo), normali all’interno (marrone).' },
-    { t: 'Passo 3 · Rendi solido', d: 'Apre la finestra buchi ed errori: ogni buco ha la lente per andarci, il pulsante Risolvi e il colore che dice come si chiuderà. Un buco aperto da una sola linea mancante si chiude congiungendo le due estremità.' },
+    { t: 'Passo 3 · Rendi solido', d: 'Apre la finestra buchi ed errori: ogni riga ha la lente per andarci e un clic la disegna in rosso. Ogni buco ha il pulsante Risolvi e il colore che dice come si chiuderà. Un buco aperto da una sola linea mancante si chiude congiungendo le due estremità.' },
     { t: 'Rossi e arancioni', d: 'Un buco rosso si chiude con quadrilateri piani. Uno arancione ha il bordo non su un piano (angoli arrotondati, superfici curve): servono triangoli, che si possono usare solo quando lo chiedi.' },
-    { t: 'Risolvi tutti', d: 'Chiude tutti i buchi e inoltre unisce i vertici vicini, gira le facce e cancella le linee isolate, poi fa la stessa pulizia del pulsante Pulisci. Chiudi Quad chiude solo i rossi, Chiudi Triangoli solo gli arancioni.' },
+    { t: 'I consigli (lampadina)', d: 'Per gli errori che non sono buchi il pulsante Risolvi è tratteggiato e ha la lampadina: toglie una alla volta le facce interne o sporgenti che danno a un bordo più di due facce, unisce le estremità vicine dei bordi aperti (entro il limite di Chiusura dei buchi), gira le facce, cancella le linee isolate. Possono cambiare il disegno: guarda il risultato e usa Ctrl+Z se non ti piace.' },
+    { t: 'Risolvi tutti', d: 'Chiude tutti i buchi e prova anche tutti i consigli: unisce i vertici vicini, gira le facce, toglie le facce interne o sporgenti e cancella le linee isolate, poi fa la stessa pulizia del pulsante Pulisci. Chiudi Quad chiude solo i rossi, Chiudi Triangoli solo gli arancioni.' },
     { t: 'Annulla e Chiudi', d: 'Il pulsante verde con la freccia annulla l’ultima operazione, come Ctrl+Z, e più clic tornano ancora più indietro. Chiudi esce dalla finestra senza fare nulla.' }
 ],
-pros: ['Controllo del solido con errori in colore', 'Buchi chiusi con quadrilateri piani', 'Triangoli solo quando lo decidi tu', 'Pulizia delle linee inutili', 'Aiuto e interfaccia in cinque lingue'],
+pros: ['Controllo del solido con errori in colore', 'Buchi chiusi con quadrilateri piani', 'Triangoli solo quando lo decidi tu', 'Consigli per gli errori che non sono buchi', 'Elenco oggetti con vista isolata', 'Aiuto e interfaccia in cinque lingue'],
 solves: [
-    { p: 'Un oggetto sembra chiuso ma non lo è, e non si capisce dove.', s: 'Gli errori compaiono nel modello con il loro colore, anche attraverso l’oggetto.' },
-    { p: 'Chiudere i buchi a mano crea triangoli disordinati.', s: 'Il plugin costruisce quadrilateri piani e lascia a te la scelta dei triangoli.' }
+  { p: 'Un oggetto sembra chiuso ma non lo è, e non si capisce dove.', s: 'Gli errori compaiono nel modello con il loro colore, anche attraverso l’oggetto.' },
+  { p: 'Chiudere i buchi a mano crea triangoli disordinati.', s: 'Il plugin costruisce quadrilateri piani e lascia a te la scelta dei triangoli.' },
+  { p: 'Alcuni errori non sono buchi e non si sa come correggerli.', s: 'I consigli con la lampadina provano a correggerli, e Ctrl+Z torna indietro.' }
 ],
 specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Annullamento', 'Ogni chiusura è un’operazione: Ctrl+Z o il pulsante Annulla'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
   /* --------------------------------------------------------------- IMPORTER */
   {
-    id: 'importer', name: 'robo importer', version: '0.11', category: 'Produttività', hue: 205,
+    id: 'importer', name: 'robo importer', version: '0.14', category: 'Produttività', hue: 205,
     video: 'L1wkUY3zzVM',
     images: ['assets/img/screenshots/importer-1.jpg', 'assets/img/screenshots/importer-2.jpg'],
     noDownload: true, installer: true,
-tagline: 'Importa in SketchUp i file STEP, IGES, 3ds Max e SolidWorks, con anteprima, e li posizioni dove vuoi.',
-simple: 'Scegli un file STEP, IGES, 3ds Max o SolidWorks, controlla l’anteprima, imposta dettaglio e orientamento e premi Importa: il modello si attacca al cursore, come quando inserisci un file SKP.',
+tagline: 'Importa in SketchUp i file STEP, IGES, 3ds Max, SolidWorks, FBX, glTF, OBJ, 3MF, PLY e i disegni DXF e DWG (2D e 3D), con anteprima, e li posizioni dove vuoi.',
+simple: 'Scegli un file STEP, IGES, 3ds Max, SolidWorks, FBX, glTF, OBJ, 3MF, PLY, DXF o DWG, controlla l’anteprima, imposta risoluzione, unità e orientamento e premi Importa: il modello si attacca al cursore, come quando inserisci un file SKP.',
 intro: [
-  'robo importer porta in SketchUp i modelli di altri programmi: STEP (.stp, .step), IGES (.igs, .iges), 3ds Max (.max) e SolidWorks (.sldprt). Prima di importare puoi vedere un’anteprima in una finestra (pulsante con l’occhio). La lettura la fa un motore che gira sul tuo computer (OpenCascade per STEP e IGES, un lettore proprio per .max e .sldprt): nessun file va su internet.',
+  'robo importer porta in SketchUp i modelli di altri programmi: STEP (.stp, .step), IGES (.igs, .iges), 3ds Max (.max), SolidWorks (.sldprt), FBX, glTF (.gltf, .glb), OBJ, 3MF, PLY e i disegni di AutoCAD DXF e DWG, in 2D e in 3D. Prima di importare puoi vedere un’anteprima in una finestra (pulsante con l’occhio). La lettura la fa un motore che gira sul tuo computer (OpenCascade per STEP e IGES, Assimp per FBX, glTF, OBJ, 3MF e PLY, un lettore proprio per .max e .sldprt); i DXF li legge il plugin stesso e i DWG passano prima da ODA File Converter, gratuito: nessun file va su internet.',
   'Il modello arriva come un componente con il nome del file, con i gruppi dell’assieme e i colori del file. Si costruisce in un solo passo annullabile e lo posizioni tu con il mouse.'
 ],
 main: [
     { t: 'STEP e IGES con OpenCascade', d: 'Legge .stp, .step, .igs e .iges con il motore OpenCascade (un programma esterno scritto in Rust). IGES conserva meno informazioni di STEP: nomi e assiemi spesso si perdono.' },
-    { t: 'File 3ds Max (.max)', d: 'Legge anche i file .max senza 3ds Max: oggetti Editable Mesh e Editable Poly con nomi, gruppi e posizioni. Modificatori, spline, luci, camere e texture non vengono importati; dei materiali V-Ray si leggono il colore diffuso e la prima immagine (uno per oggetto): con il menu Materiali scegli Nessuno, Colori o Texture (UV), cioè le immagini trovate nella cartella del file .max con la loro mappatura; l’unità del file si sceglie nella barra. Per i file grandi: componenti per gli oggetti ripetuti, semplificazione degli oggetti pesanti, filtro per dimensione.' },
+    { t: 'File 3ds Max (.max)', d: 'Legge anche i file .max senza 3ds Max: oggetti Editable Mesh e Editable Poly con nomi, gruppi e posizioni. Modificatori, spline, luci e camere non vengono importati; dei materiali V-Ray, Corona e Standard si leggono il colore diffuso e la prima immagine, e un Multi/Sub-Object dà un colore a ogni sotto-materiale secondo le facce: con il menu Materiali scegli Nessuno, Colori o Texture (UV), cioè le immagini trovate nella cartella del file .max con la loro mappatura; l’unità del file si sceglie nella barra. Per i file grandi: componenti per gli oggetti ripetuti, semplificazione degli oggetti pesanti, filtro per dimensione.' },
     { t: 'File SolidWorks (.sldprt)', d: 'Legge anche i file .sldprt (SolidWorks 2015 o successivo) senza SolidWorks: si importa la mesh di visualizzazione salvata nel file, in millimetri. Colori, assiemi e solidi importati da STEP non vengono importati.' },
+    { t: 'FBX, glTF, OBJ, 3MF e PLY', d: 'Con la libreria libera Assimp: le mesh dei nodi con nomi e posizioni, i colori dei materiali e, con Texture (UV), le immagini (anche quelle dentro i file FBX e GLB, e quelle del .mtl degli OBJ); le mesh ripetute diventano componenti. Ogni formato ha le sue opzioni: l’unità scritta nel file (FBX, 3MF) o del formato (glTF: metri) oppure scelta da te (OBJ, PLY), gli assi del file portati alla Z in alto di SketchUp, i colori dei vertici delle scansioni PLY. Le nuvole di punti e i glTF compressi con Draco non si importano.' },
+    { t: 'Disegni DXF e DWG, 2D e 3D', d: 'Linee, polilinee, archi, cerchi, ellissi, spline, testi, quote e note con freccia; blocchi come componenti e layer come tag. In 3D: facce 3D, solidi ACIS (3DSOLID, REGION, superfici) e mesh (MESH) diventano facce, con i colori del disegno. Per i DWG serve ODA File Converter (gratuito, da opendesign.com), che il plugin avvia nascosto. Le polilinee si costruiscono tutte insieme: anche i disegni con decine di migliaia di polilinee arrivano in pochi secondi.' },
     { t: 'Assiemi e colori', d: 'Gli assiemi diventano gruppi dentro gruppi, con i nomi del file; i colori diventano materiali chiamati «STEP RRGGBB». Le parti ripetute sono numerate.' },
-    { t: 'Qualità a scelta', d: 'Bozza, Normale, Alta o una tolleranza tua in millimetri: più è piccola, più le curve sono lisce e più il modello è pesante.' },
+    { t: 'Risoluzione a scelta', d: 'Il pulsante del Dettaglio, rosso, mostra la risoluzione in uso (Bozza, Normale, Alta…) e apre la finestra Risoluzione, anche senza file: una barra di regolazione con le frecce di Bozza, Normale e Alta, un campo con il valore e la sua unità (tolleranza per STEP e IGES, triangoli per i formati a mesh, segmenti per cerchio per DXF e DWG) e sotto facce, linee, memoria e tempo di importazione previsti, con la spiegazione di quali valori sono stime.' },
     { t: 'Superfici pulite', d: 'Gli spigoli della triangolazione tra facce piane vengono nascosti, e le superfici curve ammorbidite fino all’angolo che scegli.' },
     { t: 'Barra nel disegno, con simboli', d: 'Il menu è una barra fissa in alto a sinistra della vista, con le aree File, Dettaglio, Orientamento, Opzioni e Azioni. I simboli: cartella per scegliere il file, occhio per l’anteprima, freccia verso il basso per importare, X per chiudere, ? per l’Help e globo per la lingua. I numeri (ammorbidimento, scala) si scrivono direttamente nel campo.' },
     { t: 'Anteprima in finestra e Help in cinque lingue', d: 'L’occhio apre una finestra con l’anteprima da ruotare, ingrandire e spostare; sotto la barra una striscia mostra l’avanzamento. Italiano, inglese, tedesco, francese e spagnolo, con il globo per cambiare lingua.' }
@@ -895,18 +906,19 @@ main: [
 steps: ['Apri robo importer dal menu Robo Tool o dalla barra degli strumenti.', 'Premi la cartella nella barra e scegli il file: premi l’occhio per vedere l’anteprima in una finestra. Regola dettaglio, orientamento e opzioni.', 'Premi la freccia verso il basso (Importa) e clicca nel disegno dove vuoi posizionare il modello.'],
 how: [
     { t: 'Prima di cominciare', d: 'Il plugin ha bisogno del motore esterno (robo_stp_engine, con OpenCascade): senza non funziona. Il programma di installazione lo copia insieme al plugin.' },
-    { t: 'Passo 1 · Scegli il file', d: 'Premi il simbolo della cartella (o il riquadro con il nome) e scegli un file .stp, .step, .igs o .iges. Il file viene copiato in una cartella temporanea per la lettura: l’originale non si tocca.' },
-    { t: 'Passo 2 · Scegli il dettaglio', d: 'Bozza è la più veloce, Alta ha più triangoli e curve più lisce. Con Personalizzata scrivi tu la tolleranza in millimetri.' },
+    { t: 'Passo 1 · Scegli il file', d: 'Premi il simbolo della cartella (o il riquadro con il nome) e scegli un file .stp, .step, .igs, .iges, .max, .sldprt, .fbx, .gltf, .glb, .obj, .3mf, .ply, .dxf o .dwg. Nella barra compaiono le opzioni di quel formato (unità, assi, componenti). L’originale non si tocca.' },
+    { t: 'Passo 2 · Scegli la risoluzione', d: 'Premi Risol.: Bozza è la più veloce, Alta ha più triangoli e curve più lisce, oppure sposta la barra o scrivi il valore. Facce, linee, memoria e tempo previsti cambiano subito, prima di importare. Se cambi file la finestra si chiude.' },
+    { t: 'Unità dei DXF e DWG', d: 'Il disegno arriva nell’unità scritta nel file (se manca, quella di SketchUp). Puoi cambiarla tra le unità del sistema di SketchUp, metrico o imperiale, e il disegno viene davvero riscalato. I file STEP hanno già la loro unità.' },
     { t: 'Passo 3 · Importa e posiziona', d: 'Premi il quadrato con la freccia verso il basso: una striscia sotto la barra mostra l’avanzamento. Alla fine il modello si attacca al cursore: clicca nel punto che vuoi, oppure premi Esc per annullare.' },
     { t: 'Le opzioni', d: 'Un gruppo per ogni parte, come nell’assieme; i colori del file; l’angolo fino al quale gli spigoli tra facce vengono nascosti e ammorbiditi (0 = solo tra facce piane).' },
     { t: 'Se qualcosa non va', d: 'Un file danneggiato o in un formato non riconosciuto dà un messaggio con il motivo. I file molto grandi richiedono tempo: SketchUp non risponde mentre crea i gruppi.' }
 ],
-pros: ['STEP e IGES con un motore CAD libero', 'Assiemi e colori mantenuti', 'Posizionamento libero con il mouse', 'Barra nel disegno con simboli', 'Nessun file va su internet'],
+pros: ['STEP e IGES con un motore CAD libero', 'FBX, glTF, OBJ, 3MF e PLY con Assimp', 'Disegni DXF e DWG 2D e 3D', 'Assiemi, colori e texture mantenuti', 'Posizionamento libero con il mouse', 'Nessun file va su internet'],
 solves: [
     { p: 'I file dei programmi CAD non si aprono direttamente in SketchUp.', s: 'Il plugin li legge con OpenCascade e li porta nel modello come componente.' },
     { p: 'Un modello importato finisce sempre all’origine.', s: 'Il modello si attacca al cursore e lo posizioni dove vuoi.' }
 ],
-specs: [['Menu', 'Robo Tool › robo importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo, Windows'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT), programma esterno incluso nell’installatore'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
+specs: [['Menu', 'Robo Tool › robo importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo, Windows'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT) e Assimp 6.0.2 (BSD 3-Clause), programma esterno incluso nell’installatore'], ['DWG', 'ODA File Converter (gratuito, da installare a parte)'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
 installNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.',
 unavailableNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   }
@@ -955,7 +967,7 @@ var TOOLBARS = {
   toolbar: { name: 'robo toolbar', groups: [[{ i: 'toolbar.png', l: 'robo toolbar: costruisci le tue barre degli strumenti' }]] },
   fillet_3d: { name: 'robo fillet 3d', groups: [[{ i: 'fillet_3d.png', l: 'robo fillet 3d: arrotonda o smussa i bordi' }]] },
   doctor: { name: 'robo doctor', groups: [[{ i: 'doctor.png', l: 'robo doctor: controlla e ripara i solidi' }]] },
-  importer: { name: 'robo importer', groups: [[{ i: 'importer.png', l: 'robo importer: importa file STEP e IGES' }]] },
+  importer: { name: 'robo importer', groups: [[{ i: 'importer.png', l: 'robo importer: importa file STEP, IGES, 3ds Max, SolidWorks, FBX, glTF, OBJ, 3MF, PLY, DXF e DWG' }]] },
   boolean: { name: 'robo boolean', groups: [
     [{ i: 'union.png', l: 'Unione' }, { i: 'subtract.png', l: 'Sottrazione' }, { i: 'intersect.png', l: 'Intersezione' }, { i: 'trim.png', l: 'Taglia' }, { i: 'split.png', l: 'Dividi' }, { i: 'single.png', l: 'Unione di un oggetto' }],
     [{ i: 'options.png', l: 'Opzioni' }]] },
