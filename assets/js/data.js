@@ -518,6 +518,7 @@ var PLUGINS = [
       'Serve per tutto ciò che si ripete con ordine: lampioni lungo una strada, pali di una recinzione, alberi di un viale, sedie attorno a un tavolo. Se cambi idea sul numero o sulla distanza, aggiorni il valore e rivedi subito il risultato.'
     ],
     main: [
+      { t: 'Non distruttivo: si modifica anche dopo', d: 'La distribuzione resta modificabile: il gruppo ricorda impostazioni, percorso e oggetto. Selezionalo e riapri il plugin per cambiare numero, distanza o rotazioni e premere Aggiorna; oppure entra nel gruppo, modifica la linea del percorso e guarda i riquadri sul percorso nuovo: uscendo, le copie lo seguono subito. I ritocchi a mano restano.' },
       { t: 'Numero o distanza', d: 'Scegli quante copie vuoi, equidistanti, oppure un passo fisso, per esempio una ogni metro.' },
       { t: 'Linee, curve e anelli', d: 'Il percorso può essere un segmento, una curva o una forma chiusa come un cerchio.' },
       { t: 'Rotazione e scala', d: 'Le copie possono ruotare e cambiare dimensione, in modo casuale o crescente lungo il percorso.' },
@@ -528,16 +529,17 @@ var PLUGINS = [
     steps: ['Seleziona l\'oggetto e il percorso (le linee).', 'Scegli "Numero" di copie oppure "Distanza" fissa.', 'Regola rotazione e scala, guarda l\'anteprima e conferma.'],
     how: [
       { t: 'Il problema che risolve', d: 'Copiare e posizionare a mano oggetti lungo una curva dà distanze irregolari, e se cambi idea sul numero di copie devi rifare tutto. robo spacing tool calcola i punti lungo il percorso con precisione, e se modifichi un valore l\'anteprima si aggiorna subito.' },
+      { t: 'Non distruttivo: modificare dopo', d: 'Dopo Applica il gruppo «robo Spacing Result» conserva le impostazioni, il percorso (sul tag «Robo Path», nascosto) e una copia dell’oggetto. Per cambiare le impostazioni selezioni il gruppo e apri robo spacing tool: la finestra riparte da quelle di allora, gli oggetti si nascondono e vedi solo l’anteprima; Aggiorna li rimette sul percorso. Per cambiare il percorso entri nel gruppo (la linea compare da sola), poi nel sottogruppo «robo Path», e lo modifichi con gli strumenti di SketchUp: a ogni passo i riquadri mostrano le copie sulla linea nuova, e quando esci le copie la seguono. Le copie ritoccate a mano tengono il ritocco, quelle cancellate restano cancellate; ogni aggiornamento si annulla con un Ctrl+Z.' },
       { t: 'Passo 1 · Scegli oggetto e percorso', d: 'Seleziona l’oggetto da copiare e il percorso. Il percorso può essere un segmento, un arco, una curva, anche chiusa ad anello. Con Scegli segmenti il primo segmento cliccato è la partenza e Maiusc + clic allunga, accorcia o gira il percorso; con “Linea intera” la scelta si estende a tutta la catena di segmenti collegati.' },
       { t: 'Passo 2 · Numero o distanza', d: 'Con "Numero" ottieni N copie equidistanti lungo il percorso. Con "Distanza" ottieni un passo fisso, per esempio 100 cm tra una copia e l\'altra. Puoi impostare anche uno scarto iniziale e finale.' },
       { t: 'Rotazione e scala', d: 'Rotazione e scala possono essere casuali oppure progressive, cioè crescono o diminuiscono con gradualità lungo il percorso. Puoi scegliere l\'asse di inserimento e mantenere la verticale rispetto al mondo.' },
       { t: 'Passo 3 · Anteprima e conferma', d: 'L\'anteprima mostra i contorni degli oggetti e frecce di direzione. Per non rallentare, limita automaticamente il numero di copie disegnate. La finestra non è modale: resta aperta mentre lavori. Un solo Ctrl+Z annulla tutto.' },
       { t: 'Un esempio concreto', d: 'Devi mettere un lampione ogni 12 metri lungo una strada curva. Selezioni il lampione e la linea dell\'asse stradale, scegli "Distanza" e scrivi 12 m. Vedi l\'anteprima con le frecce di direzione, ruoti i lampioni verso la strada e confermi. Se poi il committente chiede 15 metri, annulli e rifai in dieci secondi.' }
     ],
-    pros: ['Spaziatura regolare e ripetibile', 'Funziona su curve e anelli chiusi', 'Rotazione e scala progressive', 'Finestra non modale, sempre a portata'],
+    pros: ['Non distruttivo: modificabile anche dopo', 'Spaziatura regolare e ripetibile', 'Funziona su curve e anelli chiusi', 'Rotazione e scala progressive', 'Finestra non modale, sempre a portata'],
     solves: [
       { p: 'Copiare e posizionare a mano oggetti lungo una curva dà distanze irregolari.', s: 'Robo calcola i punti lungo il percorso con precisione.' },
-      { p: 'Cambiare il numero di copie significa rifare tutto.', s: 'Modifichi il valore e l\'anteprima si aggiorna.' }
+      { p: 'Cambiare il numero di copie significa rifare tutto.', s: 'Selezioni il gruppo, cambi il numero o il percorso e le copie si aggiornano, anche giorni dopo.' }
     ],
     specs: [['Finestra', '500 × 640 px, non modale'], ['Menu', 'Robo Tool › robo spacing tool'], ['Modalità', 'Numero / Distanza'], ['Annullamento', 'Un solo Ctrl+Z']]
   },

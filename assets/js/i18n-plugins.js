@@ -910,10 +910,10 @@ I18N_PLUGINS.en.spacing_tool = {
     { t: 'Rotation and scale', d: 'Rotation and scale can be random or progressive (growing or shrinking gradually along the path). You can choose the insertion axis and keep upright relative to the world.' },
     { t: 'Lightweight preview', d: 'The preview shows the objects\' outlines and direction arrows; to stay fast it automatically caps how many copies are drawn.' }
   ],
-  pros: ['Regular, repeatable spacing', 'Works on closed curves and loops', 'Progressive rotation and scale', 'Non-modal window, always at hand'],
+  pros: ['Non-destructive: editable afterwards', 'Regular, repeatable spacing', 'Works on closed curves and loops', 'Progressive rotation and scale', 'Non-modal window, always at hand'],
   solves: [
     { p: 'Copying and placing objects by hand along a curve gives irregular distances.', s: 'Robo computes the points along the path precisely.' },
-    { p: 'Changing the number of copies means starting over.', s: 'You change the value and the preview updates.' }
+    { p: 'Changing the number of copies means starting over.', s: 'Select the group, change the number or the path and the copies update, even days later.' }
   ],
   specs: [['Window', '500 × 640px, non-modal'], ['Menu', 'Robo Tool › robo spacing tool'], ['Mode', 'Count / Distance'], ['Undo', 'A single Ctrl+Z']]
 };
@@ -927,10 +927,10 @@ I18N_PLUGINS.de.spacing_tool = {
     { t: 'Drehung und Skalierung', d: 'Drehung und Skalierung können zufällig oder progressiv sein (allmählich zu- oder abnehmend entlang des Pfads). Sie können die Einfügeachse wählen und senkrecht zur Welt bleiben.' },
     { t: 'Leichte Vorschau', d: 'Die Vorschau zeigt die Umrisse der Objekte und Richtungspfeile; um schnell zu bleiben, begrenzt sie automatisch, wie viele Kopien gezeichnet werden.' }
   ],
-  pros: ['Regelmäßiger, wiederholbarer Abstand', 'Funktioniert auf geschlossenen Kurven und Schleifen', 'Progressive Drehung und Skalierung', 'Nicht-modales Fenster, immer griffbereit'],
+  pros: ['Nicht destruktiv: nachträglich bearbeitbar', 'Regelmäßiger, wiederholbarer Abstand', 'Funktioniert auf geschlossenen Kurven und Schleifen', 'Progressive Drehung und Skalierung', 'Nicht-modales Fenster, immer griffbereit'],
   solves: [
     { p: 'Objekte von Hand entlang einer Kurve zu kopieren und zu platzieren ergibt unregelmäßige Abstände.', s: 'Robo berechnet die Punkte entlang des Pfads präzise.' },
-    { p: 'Die Anzahl der Kopien zu ändern bedeutet, alles neu zu machen.', s: 'Sie ändern den Wert und die Vorschau aktualisiert sich.' }
+    { p: 'Die Anzahl der Kopien zu ändern bedeutet, alles neu zu machen.', s: 'Gruppe wählen, Anzahl oder Pfad ändern, und die Kopien aktualisieren sich, auch Tage später.' }
   ],
   specs: [['Fenster', '500 × 640px, nicht modal'], ['Menü', 'Robo Tool › robo spacing tool'], ['Modus', 'Anzahl / Distanz'], ['Rückgängig', 'Ein einziges Strg+Z']]
 };
@@ -944,10 +944,10 @@ I18N_PLUGINS.fr.spacing_tool = {
     { t: 'Rotation et échelle', d: 'Rotation et échelle peuvent être aléatoires ou progressives (croissantes ou décroissantes graduellement le long du chemin). Vous pouvez choisir l\'axe d\'insertion et garder la verticale par rapport au monde.' },
     { t: 'Aperçu léger', d: 'L\'aperçu montre les contours des objets et des flèches de direction ; pour rester rapide, il limite automatiquement le nombre de copies dessinées.' }
   ],
-  pros: ['Espacement régulier et reproductible', 'Fonctionne sur courbes et boucles fermées', 'Rotation et échelle progressives', 'Fenêtre non modale, toujours à portée'],
+  pros: ['Non destructif : modifiable après coup', 'Espacement régulier et reproductible', 'Fonctionne sur courbes et boucles fermées', 'Rotation et échelle progressives', 'Fenêtre non modale, toujours à portée'],
   solves: [
     { p: 'Copier et positionner des objets à la main le long d\'une courbe donne des distances irrégulières.', s: 'Robo calcule les points le long du chemin avec précision.' },
-    { p: 'Changer le nombre de copies signifie tout refaire.', s: 'Vous modifiez la valeur et l\'aperçu se met à jour.' }
+    { p: 'Changer le nombre de copies signifie tout refaire.', s: 'Sélectionnez le groupe, changez le nombre ou le chemin et les copies se mettent à jour, même des jours après.' }
   ],
   specs: [['Fenêtre', '500 × 640px, non modale'], ['Menu', 'Robo Tool › robo spacing tool'], ['Mode', 'Nombre / Distance'], ['Annulation', 'Un seul Ctrl+Z']]
 };
@@ -961,10 +961,10 @@ I18N_PLUGINS.es.spacing_tool = {
     { t: 'Rotación y escala', d: 'Rotación y escala pueden ser aleatorias o progresivas (crecen o disminuyen gradualmente a lo largo del recorrido). Puedes elegir el eje de inserción y mantener la vertical respecto al mundo.' },
     { t: 'Vista previa ligera', d: 'La vista previa muestra los contornos de los objetos y flechas de dirección; para no ralentizar, limita automáticamente cuántas copias se dibujan.' }
   ],
-  pros: ['Espaciado regular y repetible', 'Funciona en curvas y anillos cerrados', 'Rotación y escala progresivas', 'Ventana no modal, siempre a mano'],
+  pros: ['No destructivo: editable después', 'Espaciado regular y repetible', 'Funciona en curvas y anillos cerrados', 'Rotación y escala progresivas', 'Ventana no modal, siempre a mano'],
   solves: [
     { p: 'Copiar y colocar objetos a mano a lo largo de una curva da distancias irregulares.', s: 'Robo calcula los puntos a lo largo del recorrido con precisión.' },
-    { p: 'Cambiar el número de copias significa rehacerlo todo.', s: 'Modificas el valor y la vista previa se actualiza.' }
+    { p: 'Cambiar el número de copias significa rehacerlo todo.', s: 'Seleccionas el grupo, cambias el número o la ruta y las copias se actualizan, incluso días después.' }
   ],
   specs: [['Ventana', '500 × 640px, no modal'], ['Menú', 'Robo Tool › robo spacing tool'], ['Modo', 'Número / Distancia'], ['Deshacer', 'Un solo Ctrl+Z']]
 };
@@ -2274,6 +2274,7 @@ I18N_PLUGINS.en.spacing_tool.intro = [
   'It is useful for anything that repeats in an orderly way: street lamps along a road, fence posts, trees along an avenue, chairs around a table. If you change your mind about the number or distance, you update the value and see the result right away.'
 ];
 I18N_PLUGINS.en.spacing_tool.main = [
+  { t: 'Non-destructive: change it afterwards', d: 'The distribution stays editable: the group remembers settings, path and object. Select it and open the plugin again to change number, spacing or rotations and press Update; or enter the group, change the line of the path and watch the boxes on the new path: when you leave, the copies follow it at once. Changes made by hand are kept.' },
   { t: 'Number or distance', d: 'Choose how many copies you want, equally spaced, or a fixed step, for example one every meter.' },
   { t: 'Lines, curves and loops', d: 'The path can be a segment, a curve or a closed shape like a circle.' },
   { t: 'Rotation and scale', d: 'Copies can rotate and change size, randomly or increasing along the path.' },
@@ -2283,6 +2284,7 @@ I18N_PLUGINS.en.spacing_tool.main = [
 ];
 I18N_PLUGINS.en.spacing_tool.how = [
   { t: 'The problem it solves', d: 'Copying and placing objects along a curve by hand gives irregular distances, and if you change your mind about the number of copies you have to start over. robo spacing tool calculates the points along the path precisely, and if you change a value the preview updates right away.' },
+  { t: 'Non-destructive: editing afterwards', d: 'After Apply the group «robo Spacing Result» keeps the settings, the path (on the hidden tag «Robo Path») and a copy of the object. To change the settings select the group and open robo spacing tool: the window starts again from the settings it was made with, the objects are hidden and only the preview is seen; Update puts them back on the path. To change the path enter the group (the line appears by itself), then the sub-group «robo Path», and change it with the SketchUp tools: at every step the boxes show the copies on the new line, and when you leave the copies follow it. Copies changed by hand keep their change, erased ones stay erased; every update is undone with one Ctrl+Z.' },
   { t: 'Step 1 · Choose object and path', d: 'Select the object to copy and the path. The path can be a segment, an arc, a curve, even closed as a loop. With Pick segments the first segment clicked is the start and Shift + click lengthens, shortens or turns the path; with “Whole line” the choice extends to the whole chain of connected segments.' },
   { t: 'Step 2 · Number or distance', d: 'With "Number" you get N equally spaced copies along the path. With "Distance" you get a fixed step, for example 100 cm between one copy and the next. You can also set a start and end offset.' },
   { t: 'Rotation and scale', d: 'Rotation and scale can be random or progressive, meaning they grow or shrink gradually along the path. You can choose the insertion axis and keep the vertical relative to the world.' },
@@ -2295,6 +2297,7 @@ I18N_PLUGINS.de.spacing_tool.intro = [
   'Es ist nützlich für alles, was sich geordnet wiederholt: Straßenlaternen entlang einer Straße, Zaunpfosten, Bäume an einer Allee, Stühle um einen Tisch. Ändern Sie Ihre Meinung über Anzahl oder Abstand, passen Sie den Wert an und sehen sofort das Ergebnis.'
 ];
 I18N_PLUGINS.de.spacing_tool.main = [
+  { t: 'Nicht destruktiv: auch nachträglich änderbar', d: 'Die Verteilung bleibt bearbeitbar: die Gruppe merkt sich Einstellungen, Pfad und Objekt. Wähle sie und öffne das Plugin erneut, um Anzahl, Abstand oder Drehungen zu ändern, und drücke Aktualisieren; oder öffne die Gruppe, ändere die Linie des Pfads und sieh die Kästen auf dem neuen Pfad: beim Verlassen folgen ihm die Kopien sofort. Änderungen von Hand bleiben.' },
   { t: 'Anzahl oder Abstand', d: 'Wählen Sie, wie viele Kopien Sie wollen, gleichmäßig verteilt, oder eine feste Schrittweite, zum Beispiel eine pro Meter.' },
   { t: 'Linien, Kurven und Ringe', d: 'Der Pfad kann ein Segment, eine Kurve oder eine geschlossene Form wie ein Kreis sein.' },
   { t: 'Drehung und Skalierung', d: 'Kopien können sich drehen und die Größe ändern, zufällig oder zunehmend entlang des Pfads.' },
@@ -2304,6 +2307,7 @@ I18N_PLUGINS.de.spacing_tool.main = [
 ];
 I18N_PLUGINS.de.spacing_tool.how = [
   { t: 'Das Problem, das es löst', d: 'Objekte von Hand entlang einer Kurve zu kopieren und zu platzieren ergibt unregelmäßige Abstände, und wenn Sie Ihre Meinung über die Anzahl der Kopien ändern, müssen Sie von vorn beginnen. robo spacing tool berechnet die Punkte entlang des Pfads präzise, und ändern Sie einen Wert, aktualisiert sich die Vorschau sofort.' },
+  { t: 'Nicht destruktiv: nachträglich bearbeiten', d: 'Nach Anwenden behält die Gruppe «robo Spacing Result» die Einstellungen, den Pfad (auf dem ausgeblendeten Tag «Robo Path») und eine Kopie des Objekts. Um die Einstellungen zu ändern, wähle die Gruppe und öffne robo spacing tool: das Fenster beginnt mit den damaligen Einstellungen, die Objekte werden ausgeblendet und nur die Vorschau ist zu sehen; Aktualisieren setzt sie wieder auf den Pfad. Um den Pfad zu ändern, öffne die Gruppe (die Linie erscheint von selbst), dann die Untergruppe «robo Path», und ändere ihn mit den SketchUp-Werkzeugen: bei jedem Schritt zeigen die Kästen die Kopien auf der neuen Linie, und beim Verlassen folgen ihr die Kopien. Von Hand geänderte Kopien behalten die Änderung, gelöschte bleiben gelöscht; jede Aktualisierung wird mit einem Strg+Z rückgängig gemacht.' },
   { t: 'Schritt 1 · Objekt und Pfad wählen', d: 'Wähle das zu kopierende Objekt und den Pfad. Der Pfad kann ein Segment, ein Bogen oder eine Kurve sein, auch als geschlossener Ring. Bei Segmente wählen ist das erste angeklickte Segment der Start, und Umschalt + Klick verlängert, verkürzt oder dreht den Pfad; mit „Ganze Linie“ wird die ganze Kette verbundener Segmente gewählt.' },
   { t: 'Schritt 2 · Anzahl oder Abstand', d: 'Mit „Anzahl“ erhalten Sie N gleichmäßig verteilte Kopien entlang des Pfads. Mit „Abstand“ erhalten Sie eine feste Schrittweite, zum Beispiel 100 cm zwischen den Kopien. Sie können auch einen Anfangs- und Endversatz einstellen.' },
   { t: 'Drehung und Skalierung', d: 'Drehung und Skalierung können zufällig oder progressiv sein, also entlang des Pfads allmählich wachsen oder schrumpfen. Sie können die Einfügeachse wählen und die Vertikale relativ zur Welt beibehalten.' },
@@ -2316,6 +2320,7 @@ I18N_PLUGINS.fr.spacing_tool.intro = [
   'Il sert pour tout ce qui se répète avec ordre : réverbères le long d\'une route, poteaux d\'une clôture, arbres d\'une avenue, chaises autour d\'une table. Si vous changez d\'avis sur le nombre ou la distance, vous modifiez la valeur et voyez tout de suite le résultat.'
 ];
 I18N_PLUGINS.fr.spacing_tool.main = [
+  { t: 'Non destructif : modifiable après coup', d: 'La distribution reste modifiable : le groupe garde réglages, chemin et objet. Sélectionnez-le et rouvrez le plugin pour changer le nombre, l’espacement ou les rotations et appuyez sur Mettre à jour ; ou entrez dans le groupe, modifiez la ligne du chemin et regardez les boîtes sur le nouveau chemin : en sortant, les copies le suivent aussitôt. Les retouches à la main restent.' },
   { t: 'Nombre ou distance', d: 'Choisissez combien de copies vous voulez, équidistantes, ou un pas fixe, par exemple une par mètre.' },
   { t: 'Lignes, courbes et anneaux', d: 'Le chemin peut être un segment, une courbe ou une forme fermée comme un cercle.' },
   { t: 'Rotation et échelle', d: 'Les copies peuvent pivoter et changer de taille, de façon aléatoire ou croissante le long du chemin.' },
@@ -2325,6 +2330,7 @@ I18N_PLUGINS.fr.spacing_tool.main = [
 ];
 I18N_PLUGINS.fr.spacing_tool.how = [
   { t: 'Le problème qu\'il résout', d: 'Copier et placer à la main des objets le long d\'une courbe donne des distances irrégulières, et si vous changez d\'avis sur le nombre de copies, il faut tout refaire. robo spacing tool calcule précisément les points le long du chemin, et si vous modifiez une valeur, l\'aperçu se met à jour tout de suite.' },
+  { t: 'Non destructif : modifier après coup', d: 'Après Appliquer, le groupe « robo Spacing Result » garde les réglages, le chemin (sur la balise masquée « Robo Path ») et une copie de l’objet. Pour changer les réglages, sélectionnez le groupe et ouvrez robo spacing tool : la fenêtre repart des réglages d’origine, les objets sont masqués et seul l’aperçu se voit ; Mettre à jour les remet sur le chemin. Pour changer le chemin, entrez dans le groupe (la ligne apparaît d’elle-même), puis dans le sous-groupe « robo Path », et modifiez-le avec les outils de SketchUp : à chaque étape les boîtes montrent les copies sur la nouvelle ligne, et en sortant les copies la suivent. Les copies retouchées à la main gardent leur retouche, les copies effacées restent effacées ; chaque mise à jour s’annule d’un Ctrl+Z.' },
   { t: 'Étape 1 · Choisissez objet et chemin', d: 'Sélectionnez l’objet à copier et le chemin. Le chemin peut être un segment, un arc, une courbe, même fermée en anneau. Avec Choisir des segments le premier segment cliqué est le départ et Maj + clic allonge, raccourcit ou retourne le chemin ; avec « Ligne entière » le choix s’étend à toute la chaîne de segments reliés.' },
   { t: 'Étape 2 · Nombre ou distance', d: 'Avec « Nombre », vous obtenez N copies équidistantes le long du chemin. Avec « Distance », vous obtenez un pas fixe, par exemple 100 cm entre une copie et la suivante. Vous pouvez aussi régler un décalage de début et de fin.' },
   { t: 'Rotation et échelle', d: 'Rotation et échelle peuvent être aléatoires ou progressives, c\'est-à-dire croître ou diminuer graduellement le long du chemin. Vous pouvez choisir l\'axe d\'insertion et garder la verticale par rapport au monde.' },
@@ -2337,6 +2343,7 @@ I18N_PLUGINS.es.spacing_tool.intro = [
   'Sirve para todo lo que se repite con orden: farolas a lo largo de una calle, postes de una valla, árboles de una avenida, sillas alrededor de una mesa. Si cambias de idea sobre el número o la distancia, modificas el valor y ves enseguida el resultado.'
 ];
 I18N_PLUGINS.es.spacing_tool.main = [
+  { t: 'No destructivo: se cambia también después', d: 'La distribución sigue siendo editable: el grupo recuerda ajustes, ruta y objeto. Selecciónalo y vuelve a abrir el plugin para cambiar el número, la separación o las rotaciones y pulsa Actualizar; o entra en el grupo, cambia la línea de la ruta y mira las cajas sobre la nueva ruta: al salir, las copias la siguen enseguida. Los retoques a mano se conservan.' },
   { t: 'Número o distancia', d: 'Elige cuántas copias quieres, equidistantes, o un paso fijo, por ejemplo una cada metro.' },
   { t: 'Líneas, curvas y anillos', d: 'El recorrido puede ser un segmento, una curva o una forma cerrada como un círculo.' },
   { t: 'Rotación y escala', d: 'Las copias pueden girar y cambiar de tamaño, de forma aleatoria o creciente a lo largo del recorrido.' },
@@ -2346,6 +2353,7 @@ I18N_PLUGINS.es.spacing_tool.main = [
 ];
 I18N_PLUGINS.es.spacing_tool.how = [
   { t: 'El problema que resuelve', d: 'Copiar y colocar a mano objetos a lo largo de una curva da distancias irregulares, y si cambias de idea sobre el número de copias tienes que rehacerlo todo. robo spacing tool calcula con precisión los puntos a lo largo del recorrido, y si modificas un valor la vista previa se actualiza enseguida.' },
+  { t: 'No destructivo: editar después', d: 'Tras Aplicar, el grupo «robo Spacing Result» guarda los ajustes, la ruta (en la etiqueta oculta «Robo Path») y una copia del objeto. Para cambiar los ajustes seleccionas el grupo y abres robo spacing tool: la ventana parte de los ajustes de entonces, los objetos se ocultan y solo se ve la vista previa; Actualizar los vuelve a poner en la ruta. Para cambiar la ruta entras en el grupo (la línea aparece sola), luego en el subgrupo «robo Path», y la cambias con las herramientas de SketchUp: en cada paso las cajas muestran las copias sobre la nueva línea, y al salir las copias la siguen. Las copias retocadas a mano conservan el retoque, las borradas siguen borradas; cada actualización se deshace con un Ctrl+Z.' },
   { t: 'Paso 1 · Elige objeto y recorrido', d: 'Selecciona el objeto que copiar y el recorrido. El recorrido puede ser un segmento, un arco, una curva, también cerrada en anillo. Con Elegir segmentos el primer segmento pulsado es la salida y Mayús + clic alarga, acorta o gira el recorrido; con “Línea completa” la elección se extiende a toda la cadena de segmentos conectados.' },
   { t: 'Paso 2 · Número o distancia', d: 'Con «Número» obtienes N copias equidistantes a lo largo del recorrido. Con «Distancia» obtienes un paso fijo, por ejemplo 100 cm entre una copia y la siguiente. También puedes fijar un desfase inicial y final.' },
   { t: 'Rotación y escala', d: 'Rotación y escala pueden ser aleatorias o progresivas, es decir, crecer o disminuir gradualmente a lo largo del recorrido. Puedes elegir el eje de inserción y mantener la vertical respecto al mundo.' },
