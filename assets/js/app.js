@@ -402,6 +402,7 @@
         '<div class="arrow">' + ARROW + '</div><div class="s"><small>' + tUI('plugin.solve.with') + esc(p.name) + '</small>' + esc(pSolves[d].s) + '</div></div>';
     }
     var specs = '<tr><th>' + tUI('specs.version') + '</th><td>' + esc(p.version) + '</td></tr><tr><th>' + tUI('specs.compat') + '</th><td>' + esc(SITE.compat) + '</td></tr>';
+    if (p.os === 'both') { specs += '<tr><th>' + tUI('specs.os') + '</th><td>' + tUI('os.both') + '</td></tr>'; } // checked for macOS too (not the plugins with an installer)
     for (var e = 0; e < pSpecs.length; e++) { specs += '<tr><th>' + esc(pSpecs[e][0]) + '</th><td>' + esc(pSpecs[e][1]) + '</td></tr>'; }
 
     var tb = TOOLBARS[p.id];
