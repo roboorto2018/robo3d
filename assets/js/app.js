@@ -255,6 +255,17 @@
 
   var CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
   var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  // Operating systems: a window of four panes (Windows) and an apple (macOS), simple drawings
+  var OS_WIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.2l7.5-1v7.3H3zM11.5 4.1L21 3v8.5h-9.5zM3 12.5h7.5v7.3L3 18.8zM11.5 12.5H21V21l-9.5-1.1z"/></svg>';
+  var OS_MAC = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.6c-1.6-1.2-4.4-1.3-5.9.6-1.8 2.2-1.3 6.3.6 9.2 1 1.5 2.1 2.9 3.4 2.7.9-.1 1.2-.6 1.9-.6s1 .5 1.9.6c1.3.2 2.4-1.2 3.4-2.7 1.9-2.9 2.4-7 .6-9.2-1.5-1.9-4.3-1.8-5.9-.6zM12.4 6.4c.2-1.6 1.3-2.9 2.9-3.2-.1 1.6-1.2 3-2.9 3.2z"/></svg>';
+
+  // The systems a plugin works on: Windows always, macOS when its data says os: 'both'
+  function osMac(p) { return p.os === 'both'; }
+  function osIcons(p) {
+    var t = tUI(osMac(p) ? 'os.both' : 'os.win');
+    return '<span class="os" title="' + esc(t) + '" aria-label="' + esc(t) + '">' +
+      '<span class="os-i" title="Windows">' + OS_WIN + '</span>' + (osMac(p) ? '<span class="os-i" title="macOS">' + OS_MAC + '</span>' : '') + '</span>';
+  }
 
   /* metà dei link plugin per ciascuna colonna del footer */
   function half(links, part) {
@@ -327,7 +338,7 @@
   function card(p) {
     return '<a class="card" href="plugin.html?id=' + p.id + '" data-cat="' + esc(p.category) + '">' +
       '<div class="thumb">' + gallery(imgs(p), 0, tUI('gal.previewof').replace('{n}', p.name), '<span class="badge">' + esc(catLabel(p.category)) + '</span>') + '</div>' +
-      '<div class="body"><div class="head">' + icon(p) + '<div><h3>' + esc(p.name) + '</h3><span class="ver">v' + esc(p.version) + '</span></div></div>' +
+      '<div class="body"><div class="head">' + icon(p) + '<div><h3>' + esc(p.name) + '</h3><span class="ver">v' + esc(p.version) + '</span>' + osIcons(p) + '</div></div>' +
       '<p>' + esc(pf(p, 'tagline')) + '</p><span class="more">' + tUI('card.more') + '</span></div></a>';
   }
 
@@ -402,7 +413,7 @@
         '<div class="arrow">' + ARROW + '</div><div class="s"><small>' + tUI('plugin.solve.with') + esc(p.name) + '</small>' + esc(pSolves[d].s) + '</div></div>';
     }
     var specs = '<tr><th>' + tUI('specs.version') + '</th><td>' + esc(p.version) + '</td></tr><tr><th>' + tUI('specs.compat') + '</th><td>' + esc(SITE.compat) + '</td></tr>';
-    if (p.os === 'both') { specs += '<tr><th>' + tUI('specs.os') + '</th><td>' + tUI('os.both') + '</td></tr>'; } // checked for macOS too (not the plugins with an installer)
+    specs += '<tr><th>' + tUI('specs.os') + '</th><td>' + osIcons(p) + ' ' + tUI(osMac(p) ? 'os.both' : 'os.win') + '</td></tr>';
     for (var e = 0; e < pSpecs.length; e++) { specs += '<tr><th>' + esc(pSpecs[e][0]) + '</th><td>' + esc(pSpecs[e][1]) + '</td></tr>'; }
 
     var tb = TOOLBARS[p.id];
@@ -457,7 +468,7 @@
       '<div class="wrap crumbs"><a href="index.html">' + tUI('crumb.home') + '</a> / <a href="index.html#plugin">' + tUI('nav.plugin') + '</a> / ' + esc(p.name) + '</div>' +
       '<div class="p-hero"><div class="wrap"><div>' +
         '<span class="eyebrow">' + esc(catLabel(p.category)) + '</span>' +
-        '<div class="p-title">' + icon(p) + '<h1>' + esc(p.name) + '</h1><span class="pill dark">v' + esc(p.version) + '</span></div>' +
+        '<div class="p-title">' + icon(p) + '<h1>' + esc(p.name) + '</h1><span class="pill dark">v' + esc(p.version) + '</span>' + osIcons(p) + '</div>' +
         '<p class="tag">' + esc(tagline) + '</p>' +
         '<p class="simple">' + esc(simple) + '</p>' +
         '<div class="actions">' + (function () {

@@ -158,6 +158,12 @@ section { padding: 88px 0; }
 .plugin-icon img { width: 30px; height: 30px; object-fit: contain; }
 .card h3 { font-size: 1.12rem; }
 .card .ver { font-size: .78rem; font-weight: 600; color: var(--ink-soft); }
+/* operating systems of a plugin: Windows (window) and macOS (apple) */
+.os { display: inline-flex; align-items: center; gap: 5px; margin-left: 8px; vertical-align: middle; color: var(--ink-soft); }
+.os-i { display: inline-flex; }
+.os svg { width: 15px; height: 15px; fill: currentColor; }
+.p-title .os svg { width: 20px; height: 20px; }
+.specs .os { margin-left: 0; margin-right: 4px; }
 .card p { color: var(--ink-soft); font-size: .95rem; }
 .card .more { margin-top: auto; padding-top: 6px; font-weight: 600; font-size: .92rem; color: var(--red); }
 
