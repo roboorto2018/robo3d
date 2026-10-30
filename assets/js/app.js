@@ -351,6 +351,9 @@
       chips += '<button class="chip" data-f="' + esc(CATEGORIES[i]) + '">' + esc(catLabel(CATEGORIES[i])) + '</button>';
     }
     $('#chips').innerHTML = chips;
+    // what the two symbols on the cards mean
+    $('#os-legend').innerHTML = '<span class="os-l-title">' + tUI('os.legend') + '</span>' +
+      '<span class="os-l"><span class="os">' + OS_WIN + '</span>Windows</span><span class="os-l"><span class="os">' + OS_MAC + '</span>macOS</span>';
     var html = '';
     for (var j = 0; j < PLUGINS.length; j++) { html += card(PLUGINS[j]); }
     $('#grid').innerHTML = html;

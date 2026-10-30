@@ -161,7 +161,11 @@ section { padding: 88px 0; }
 /* operating systems of a plugin: Windows (window) and macOS (apple) */
 .os { display: inline-flex; align-items: center; gap: 5px; margin-left: 8px; vertical-align: middle; color: var(--ink-soft); }
 .os-i { display: inline-flex; }
-.os svg { width: 15px; height: 15px; fill: currentColor; }
+.os svg { width: 17px; height: 17px; fill: currentColor; }
+.os-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; margin: -18px 0 26px; font-size: .9rem; color: var(--ink-soft); }
+.os-l-title { font-weight: 600; }
+.os-l { display: inline-flex; align-items: center; gap: 6px; }
+.os-legend .os { margin-left: 0; }
 .p-title .os svg { width: 20px; height: 20px; }
 .specs .os { margin-left: 0; margin-right: 4px; }
 .card p { color: var(--ink-soft); font-size: .95rem; }
