@@ -186,7 +186,8 @@ var PLUGINS = [
       { t: "Piante pulite", d: "Con «Appiattisci a Z = 0» tutte le linee vanno alla stessa quota e Taglia ed Estendi funzionano; le diagonali dei triangoli non vengono scritte." },
       { t: "Layer, blocchi e unità", d: "Ogni tag diventa un layer con il suo colore, ogni componente un blocco; le misure arrivano in mm, cm, m, pollici o piedi." },
       { t: "OBJ, GLB e FBX con le texture", d: "Le texture vengono copiate accanto al file (OBJ) o messe dentro il file (GLB): non si perdono passando a Blender, al web o alla realtà aumentata." },
-      { t: "SKP: solo la selezione", d: "Gli oggetti selezionati in un nuovo file SketchUp, nella loro posizione e nella versione che scegli; il modello aperto resta com’è." }
+      { t: "SKP: solo la selezione", d: "Gli oggetti selezionati in un nuovo file SketchUp, nella loro posizione e nella versione che scegli; il modello aperto resta com’è." },
+      { t: "SKP anche per le versioni precedenti di SketchUp", d: "Gli oggetti selezionati, o tutto il modello, si salvano anche per SketchUp 2021, 2020, 2019 fino alla 8: così li apre anche chi ha un SketchUp più vecchio. Il modello aperto resta nella sua versione." }
     ],
     steps: ["Seleziona cosa esportare (o niente: tutto il modello).", "Apri robo exporter e scegli il formato: DWG, DXF, OBJ, GLB, FBX o SKP.", "Regola le opzioni e premi Esporta: alla fine la finestra dice cosa ha scritto."],
     how: [
@@ -198,14 +199,15 @@ var PLUGINS = [
       { t: "SKP: solo gli oggetti selezionati", d: "Come faceva robo export object: la selezione viene salvata in un nuovo file SketchUp, nella posizione che ha, anche per una versione più vecchia (da SketchUp 2022). Il modello aperto non viene chiuso, salvato né cambiato." },
       { t: "Un esempio concreto", d: "Hai un progetto con una cucina fatta in SketchUp e lo studio tecnico vuole la pianta in AutoCAD. Selezioni la cucina, scegli DWG, «Appiattisci a Z = 0» e mm: in AutoCAD i piani curvi e le maniglie sono archi veri, i mobili sono blocchi e ogni tag è un layer." }
     ],
-    pros: ["Archi e cerchi veri, anche ricostruiti dai segmenti", "Piante a quota zero, senza diagonali", "Tag come layer e componenti come blocchi", "Texture che non si perdono in OBJ e GLB", "Solo la selezione in un nuovo SKP", "Il modello aperto non viene toccato"],
+    pros: ["Salva in SKP anche per versioni precedenti di SketchUp (fino alla 8)", "Archi e cerchi veri, anche ricostruiti dai segmenti", "Piante a quota zero, senza diagonali", "Tag come layer e componenti come blocchi", "Texture che non si perdono in OBJ e GLB", "Solo la selezione in un nuovo SKP", "Il modello aperto non viene toccato"],
     solves: [
       { p: "In AutoCAD gli archi di SketchUp arrivano spezzati in tanti segmenti.", s: "Arrivano come archi e cerchi veri, anche quelli disegnati a segmenti." },
       { p: "Le linee di una pianta sono a quote diverse e Taglia non funziona.", s: "Un’opzione le mette tutte a Z = 0." },
       { p: "Esportando in OBJ o FBX le texture spariscono.", s: "Vengono copiate accanto al file o messe dentro il GLB." },
-      { p: "Per mandare un solo pezzo si copia, si apre un file nuovo e si incolla.", s: "Con SKP selezioni ed esporti." }
+      { p: "Per mandare un solo pezzo si copia, si apre un file nuovo e si incolla.", s: "Con SKP selezioni ed esporti." },
+      { p: "Chi ha un SketchUp più vecchio non riesce ad aprire il file.", s: "Scegli la versione di salvataggio, dalla 2021 fino alla 8." }
     ],
-    specs: [["Menu", "Robo Tool › robo exporter"], ["Barra strumenti", "1 pulsante"], ["Formati", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, da installare a parte)"], ["FBX", "Esportatore di SketchUp Pro"], ["Annullamento", "Il modello non viene modificato"]],
+    specs: [["Menu", "Robo Tool › robo exporter"], ["Barra strumenti", "1 pulsante"], ["Formati", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, da installare a parte)"], ["Versioni SKP", "Quella in uso e le precedenti, da 2021 a 8 (scelta da SketchUp 2022)"], ["FBX", "Esportatore di SketchUp Pro"], ["Annullamento", "Il modello non viene modificato"]],
     images: ['assets/img/screenshots/exporter-1.png']
   },
 

@@ -2674,7 +2674,8 @@ I18N_PLUGINS.en.exporter = {
     { t: "Clean plans", d: "With «Flatten to Z = 0» every line goes to the same height and Trim and Extend work; the diagonals of triangles are not written." },
     { t: "Layers, blocks and units", d: "Every tag becomes a layer with its colour, every component a block; sizes arrive in mm, cm, m, inches or feet." },
     { t: "OBJ, GLB and FBX with textures", d: "Textures are copied next to the file (OBJ) or put inside the file (GLB): they are not lost on the way to Blender, the web or augmented reality." },
-    { t: "SKP: only the selection", d: "The selected objects in a new SketchUp file, in their place and in the version you choose; the open model stays as it is." }
+    { t: "SKP: only the selection", d: "The selected objects in a new SketchUp file, in their place and in the version you choose; the open model stays as it is." },
+    { t: "SKP for older SketchUp versions too", d: "The selected objects, or the whole model, can also be saved for SketchUp 2021, 2020, 2019 down to 8: so people with an older SketchUp can open them too. The open model stays in its own version." }
   ],
   steps: ["Select what to export (or nothing: the whole model).", "Open robo exporter and choose the format: DWG, DXF, OBJ, GLB, FBX or SKP.", "Set the options and press Export: at the end the window tells what it wrote."],
   how: [
@@ -2686,14 +2687,15 @@ I18N_PLUGINS.en.exporter = {
     { t: "SKP: only the selected objects", d: "As robo export object did: the selection is saved to a new SketchUp file, in its place, also for an older version (from SketchUp 2022). The open model is not closed, saved or changed." },
     { t: "A concrete example", d: "You have a kitchen made in SketchUp and the technical office wants the plan in AutoCAD. Select the kitchen, choose DWG, «Flatten to Z = 0» and mm: in AutoCAD the curved tops and the handles are true arcs, the cabinets are blocks and every tag is a layer." }
   ],
-  pros: ["True arcs and circles, also rebuilt from segments", "Plans at height zero, no diagonals", "Tags as layers and components as blocks", "Textures that are not lost in OBJ and GLB", "Only the selection in a new SKP", "The open model is not touched"],
+  pros: ["Saves SKP for older SketchUp versions too (down to 8)", "True arcs and circles, also rebuilt from segments", "Plans at height zero, no diagonals", "Tags as layers and components as blocks", "Textures that are not lost in OBJ and GLB", "Only the selection in a new SKP", "The open model is not touched"],
   solves: [
     { p: "In AutoCAD SketchUp arcs arrive broken into many segments.", s: "They arrive as true arcs and circles, also those drawn as segments." },
     { p: "The lines of a plan are at different heights and Trim does not work.", s: "An option puts them all at Z = 0." },
     { p: "Exporting to OBJ or FBX the textures disappear.", s: "They are copied next to the file or put inside the GLB." },
-    { p: "To send one part you copy, open a new file and paste.", s: "With SKP you select and export." }
+    { p: "To send one part you copy, open a new file and paste.", s: "With SKP you select and export." },
+    { p: "Someone with an older SketchUp cannot open the file.", s: "Choose the save version, from 2021 down to 8." }
   ],
-  specs: [["Menu", "Robo Tool › robo exporter"], ["Toolbar", "1 button"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "With ODA File Converter (free, installed apart)"], ["FBX", "SketchUp Pro’s exporter"], ["Undo", "The model is not changed"]]
+  specs: [["Menu", "Robo Tool › robo exporter"], ["Toolbar", "1 button"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "With ODA File Converter (free, installed apart)"], ["SKP versions", "The current one and older ones, 2021 to 8 (choice from SketchUp 2022)"], ["FBX", "SketchUp Pro’s exporter"], ["Undo", "The model is not changed"]]
 };
 I18N_TOOLBARS.en.exporter = { 'export.png': "Export to DWG, DXF, OBJ, GLB, FBX or SKP" };
 I18N_PLUGINS.de.exporter = {
@@ -2706,7 +2708,8 @@ I18N_PLUGINS.de.exporter = {
     { t: "Saubere Grundrisse", d: "Mit «Auf Z = 0 abflachen» liegen alle Linien auf gleicher Höhe und Stutzen und Dehnen funktionieren; Dreiecksdiagonalen werden nicht geschrieben." },
     { t: "Layer, Blöcke und Einheiten", d: "Jedes Tag wird ein Layer mit seiner Farbe, jede Komponente ein Block; die Maße kommen in mm, cm, m, Zoll oder Fuß an." },
     { t: "OBJ, GLB und FBX mit Texturen", d: "Texturen werden neben die Datei kopiert (OBJ) oder in die Datei gelegt (GLB): sie gehen auf dem Weg zu Blender, ins Web oder in die Augmented Reality nicht verloren." },
-    { t: "SKP: nur die Auswahl", d: "Die ausgewählten Objekte in einer neuen SketchUp-Datei, an ihrem Platz und in der gewählten Version; das offene Modell bleibt, wie es ist." }
+    { t: "SKP: nur die Auswahl", d: "Die ausgewählten Objekte in einer neuen SketchUp-Datei, an ihrem Platz und in der gewählten Version; das offene Modell bleibt, wie es ist." },
+    { t: "SKP auch für ältere SketchUp-Versionen", d: "Die ausgewählten Objekte oder das ganze Modell lassen sich auch für SketchUp 2021, 2020, 2019 bis 8 speichern: so öffnet sie auch, wer ein älteres SketchUp hat. Das offene Modell bleibt in seiner Version." }
   ],
   steps: ["Wähle aus, was exportiert wird (oder nichts: das ganze Modell).", "Öffne robo exporter und wähle das Format: DWG, DXF, OBJ, GLB, FBX oder SKP.", "Stelle die Optionen ein und drücke Exportieren: am Ende sagt das Fenster, was geschrieben wurde."],
   how: [
@@ -2718,14 +2721,15 @@ I18N_PLUGINS.de.exporter = {
     { t: "SKP: nur die ausgewählten Objekte", d: "Wie robo export object: die Auswahl wird in einer neuen SketchUp-Datei gespeichert, an ihrem Platz, auch für eine ältere Version (ab SketchUp 2022). Das offene Modell wird nicht geschlossen, gespeichert oder verändert." },
     { t: "Ein konkretes Beispiel", d: "Du hast eine Küche in SketchUp und das technische Büro will den Grundriss in AutoCAD. Wähle die Küche, DWG, «Auf Z = 0 abflachen» und mm: in AutoCAD sind gebogene Platten und Griffe echte Bögen, die Schränke Blöcke und jedes Tag ein Layer." }
   ],
-  pros: ["Echte Bögen und Kreise, auch aus Segmenten wiederhergestellt", "Grundrisse auf Höhe null, ohne Diagonalen", "Tags als Layer und Komponenten als Blöcke", "Texturen, die in OBJ und GLB nicht verloren gehen", "Nur die Auswahl in einer neuen SKP", "Das offene Modell bleibt unberührt"],
+  pros: ["Speichert SKP auch für ältere SketchUp-Versionen (bis 8)", "Echte Bögen und Kreise, auch aus Segmenten wiederhergestellt", "Grundrisse auf Höhe null, ohne Diagonalen", "Tags als Layer und Komponenten als Blöcke", "Texturen, die in OBJ und GLB nicht verloren gehen", "Nur die Auswahl in einer neuen SKP", "Das offene Modell bleibt unberührt"],
   solves: [
     { p: "In AutoCAD kommen SketchUp-Bögen in viele Segmente zerteilt an.", s: "Sie kommen als echte Bögen und Kreise an, auch die als Segmente gezeichneten." },
     { p: "Die Linien eines Grundrisses liegen auf verschiedenen Höhen und Stutzen funktioniert nicht.", s: "Eine Option legt sie alle auf Z = 0." },
     { p: "Beim Export nach OBJ oder FBX verschwinden die Texturen.", s: "Sie werden neben die Datei kopiert oder in die GLB gelegt." },
-    { p: "Um ein Teil zu schicken, kopiert man, öffnet eine neue Datei und fügt ein.", s: "Mit SKP wählst du aus und exportierst." }
+    { p: "Um ein Teil zu schicken, kopiert man, öffnet eine neue Datei und fügt ein.", s: "Mit SKP wählst du aus und exportierst." },
+    { p: "Wer ein älteres SketchUp hat, kann die Datei nicht öffnen.", s: "Wähle die Speicherversion, von 2021 bis 8." }
   ],
-  specs: [["Menü", "Robo Tool › robo exporter"], ["Symbolleiste", "1 Schaltfläche"], ["Formate", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Mit ODA File Converter (kostenlos, separat installiert)"], ["FBX", "Exporter von SketchUp Pro"], ["Rückgängig", "Das Modell wird nicht verändert"]]
+  specs: [["Menü", "Robo Tool › robo exporter"], ["Symbolleiste", "1 Schaltfläche"], ["Formate", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Mit ODA File Converter (kostenlos, separat installiert)"], ["SKP-Versionen", "Die aktuelle und ältere, 2021 bis 8 (Wahl ab SketchUp 2022)"], ["FBX", "Exporter von SketchUp Pro"], ["Rückgängig", "Das Modell wird nicht verändert"]]
 };
 I18N_TOOLBARS.de.exporter = { 'export.png': "Export nach DWG, DXF, OBJ, GLB, FBX oder SKP" };
 I18N_PLUGINS.fr.exporter = {
@@ -2738,7 +2742,8 @@ I18N_PLUGINS.fr.exporter = {
     { t: "Plans propres", d: "Avec « Aplatir à Z = 0 » toutes les lignes vont à la même hauteur et Ajuster et Prolonger fonctionnent ; les diagonales des triangles ne sont pas écrites." },
     { t: "Calques, blocs et unités", d: "Chaque balise devient un calque avec sa couleur, chaque composant un bloc ; les mesures arrivent en mm, cm, m, pouces ou pieds." },
     { t: "OBJ, GLB et FBX avec les textures", d: "Les textures sont copiées à côté du fichier (OBJ) ou mises dans le fichier (GLB) : elles ne se perdent pas vers Blender, le web ou la réalité augmentée." },
-    { t: "SKP : seulement la sélection", d: "Les objets sélectionnés dans un nouveau fichier SketchUp, à leur place et dans la version choisie ; le modèle ouvert reste tel quel." }
+    { t: "SKP : seulement la sélection", d: "Les objets sélectionnés dans un nouveau fichier SketchUp, à leur place et dans la version choisie ; le modèle ouvert reste tel quel." },
+    { t: "SKP aussi pour les versions précédentes de SketchUp", d: "Les objets sélectionnés, ou tout le modèle, s’enregistrent aussi pour SketchUp 2021, 2020, 2019 jusqu’à 8 : ainsi les ouvre aussi qui a un SketchUp plus ancien. Le modèle ouvert reste dans sa version." }
   ],
   steps: ["Sélectionnez ce qu’il faut exporter (ou rien : tout le modèle).", "Ouvrez robo exporter et choisissez le format : DWG, DXF, OBJ, GLB, FBX ou SKP.", "Réglez les options et appuyez sur Exporter : à la fin la fenêtre dit ce qu’elle a écrit."],
   how: [
@@ -2750,14 +2755,15 @@ I18N_PLUGINS.fr.exporter = {
     { t: "SKP : seulement les objets sélectionnés", d: "Comme robo export object : la sélection est enregistrée dans un nouveau fichier SketchUp, à sa place, aussi pour une version plus ancienne (à partir de SketchUp 2022). Le modèle ouvert n’est ni fermé, ni enregistré, ni modifié." },
     { t: "Un exemple concret", d: "Vous avez une cuisine faite dans SketchUp et le bureau technique veut le plan dans AutoCAD. Sélectionnez la cuisine, choisissez DWG, « Aplatir à Z = 0 » et mm : dans AutoCAD les plans courbes et les poignées sont de vrais arcs, les meubles des blocs et chaque balise un calque." }
   ],
-  pros: ["Vrais arcs et cercles, même reconstruits depuis les segments", "Plans à hauteur zéro, sans diagonales", "Balises en calques et composants en blocs", "Textures qui ne se perdent pas en OBJ et GLB", "Seulement la sélection dans un nouveau SKP", "Le modèle ouvert n’est pas touché"],
+  pros: ["Enregistre en SKP aussi pour des versions précédentes de SketchUp (jusqu’à 8)", "Vrais arcs et cercles, même reconstruits depuis les segments", "Plans à hauteur zéro, sans diagonales", "Balises en calques et composants en blocs", "Textures qui ne se perdent pas en OBJ et GLB", "Seulement la sélection dans un nouveau SKP", "Le modèle ouvert n’est pas touché"],
   solves: [
     { p: "Dans AutoCAD les arcs de SketchUp arrivent coupés en nombreux segments.", s: "Ils arrivent en vrais arcs et cercles, même ceux dessinés en segments." },
     { p: "Les lignes d’un plan sont à des hauteurs différentes et Ajuster ne marche pas.", s: "Une option les met toutes à Z = 0." },
     { p: "En exportant en OBJ ou FBX les textures disparaissent.", s: "Elles sont copiées à côté du fichier ou mises dans le GLB." },
-    { p: "Pour envoyer une pièce on copie, on ouvre un nouveau fichier et on colle.", s: "Avec SKP vous sélectionnez et exportez." }
+    { p: "Pour envoyer une pièce on copie, on ouvre un nouveau fichier et on colle.", s: "Avec SKP vous sélectionnez et exportez." },
+    { p: "Qui a un SketchUp plus ancien ne peut pas ouvrir le fichier.", s: "Choisissez la version d’enregistrement, de 2021 jusqu’à 8." }
   ],
-  specs: [["Menu", "Robo Tool › robo exporter"], ["Barre d’outils", "1 bouton"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Avec ODA File Converter (gratuit, installé à part)"], ["FBX", "Exportateur de SketchUp Pro"], ["Annulation", "Le modèle n’est pas modifié"]]
+  specs: [["Menu", "Robo Tool › robo exporter"], ["Barre d’outils", "1 bouton"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Avec ODA File Converter (gratuit, installé à part)"], ["Versions SKP", "L’actuelle et les précédentes, de 2021 à 8 (choix à partir de SketchUp 2022)"], ["FBX", "Exportateur de SketchUp Pro"], ["Annulation", "Le modèle n’est pas modifié"]]
 };
 I18N_TOOLBARS.fr.exporter = { 'export.png': "Exporter en DWG, DXF, OBJ, GLB, FBX ou SKP" };
 I18N_PLUGINS.es.exporter = {
@@ -2770,7 +2776,8 @@ I18N_PLUGINS.es.exporter = {
     { t: "Plantas limpias", d: "Con «Aplanar a Z = 0» todas las líneas van a la misma altura y Recortar y Alargar funcionan; las diagonales de los triángulos no se escriben." },
     { t: "Capas, bloques y unidades", d: "Cada etiqueta se vuelve una capa con su color, cada componente un bloque; las medidas llegan en mm, cm, m, pulgadas o pies." },
     { t: "OBJ, GLB y FBX con texturas", d: "Las texturas se copian junto al archivo (OBJ) o se meten dentro del archivo (GLB): no se pierden camino de Blender, la web o la realidad aumentada." },
-    { t: "SKP: solo la selección", d: "Los objetos seleccionados en un nuevo archivo SketchUp, en su sitio y en la versión que elijas; el modelo abierto queda como está." }
+    { t: "SKP: solo la selección", d: "Los objetos seleccionados en un nuevo archivo SketchUp, en su sitio y en la versión que elijas; el modelo abierto queda como está." },
+    { t: "SKP también para versiones anteriores de SketchUp", d: "Los objetos seleccionados, o todo el modelo, se guardan también para SketchUp 2021, 2020, 2019 hasta 8: así los abre también quien tiene un SketchUp más antiguo. El modelo abierto sigue en su versión." }
   ],
   steps: ["Selecciona qué exportar (o nada: todo el modelo).", "Abre robo exporter y elige el formato: DWG, DXF, OBJ, GLB, FBX o SKP.", "Ajusta las opciones y pulsa Exportar: al final la ventana dice qué escribió."],
   how: [
@@ -2782,14 +2789,15 @@ I18N_PLUGINS.es.exporter = {
     { t: "SKP: solo los objetos seleccionados", d: "Como hacía robo export object: la selección se guarda en un nuevo archivo SketchUp, en su sitio, también para una versión más antigua (desde SketchUp 2022). El modelo abierto no se cierra, guarda ni cambia." },
     { t: "Un ejemplo concreto", d: "Tienes una cocina hecha en SketchUp y la oficina técnica quiere la planta en AutoCAD. Selecciona la cocina, elige DWG, «Aplanar a Z = 0» y mm: en AutoCAD las encimeras curvas y los tiradores son arcos verdaderos, los muebles bloques y cada etiqueta una capa." }
   ],
-  pros: ["Arcos y círculos verdaderos, también reconstruidos desde segmentos", "Plantas a altura cero, sin diagonales", "Etiquetas como capas y componentes como bloques", "Texturas que no se pierden en OBJ y GLB", "Solo la selección en un nuevo SKP", "El modelo abierto no se toca"],
+  pros: ["Guarda en SKP también para versiones anteriores de SketchUp (hasta 8)", "Arcos y círculos verdaderos, también reconstruidos desde segmentos", "Plantas a altura cero, sin diagonales", "Etiquetas como capas y componentes como bloques", "Texturas que no se pierden en OBJ y GLB", "Solo la selección en un nuevo SKP", "El modelo abierto no se toca"],
   solves: [
     { p: "En AutoCAD los arcos de SketchUp llegan rotos en muchos segmentos.", s: "Llegan como arcos y círculos verdaderos, también los dibujados con segmentos." },
     { p: "Las líneas de una planta están a alturas distintas y Recortar no funciona.", s: "Una opción las pone todas a Z = 0." },
     { p: "Al exportar a OBJ o FBX las texturas desaparecen.", s: "Se copian junto al archivo o se meten dentro del GLB." },
-    { p: "Para enviar una pieza se copia, se abre un archivo nuevo y se pega.", s: "Con SKP seleccionas y exportas." }
+    { p: "Para enviar una pieza se copia, se abre un archivo nuevo y se pega.", s: "Con SKP seleccionas y exportas." },
+    { p: "Quien tiene un SketchUp más antiguo no puede abrir el archivo.", s: "Elige la versión de guardado, de 2021 hasta 8." }
   ],
-  specs: [["Menú", "Robo Tool › robo exporter"], ["Barra de herramientas", "1 botón"], ["Formatos", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, se instala aparte)"], ["FBX", "Exportador de SketchUp Pro"], ["Deshacer", "El modelo no se modifica"]]
+  specs: [["Menú", "Robo Tool › robo exporter"], ["Barra de herramientas", "1 botón"], ["Formatos", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, se instala aparte)"], ["Versiones SKP", "La actual y las anteriores, de 2021 a 8 (elección desde SketchUp 2022)"], ["FBX", "Exportador de SketchUp Pro"], ["Deshacer", "El modelo no se modifica"]]
 };
 I18N_TOOLBARS.es.exporter = { 'export.png': "Exportar a DWG, DXF, OBJ, GLB, FBX o SKP" };
 I18N_TOOLBARS.en.toolbar = { 'toolbar.png': 'robo toolbar: build your own toolbars' };
