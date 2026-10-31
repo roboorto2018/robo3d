@@ -208,7 +208,7 @@ var PLUGINS = [
       { p: "Chi ha un SketchUp più vecchio non riesce ad aprire il file.", s: "Scegli la versione di salvataggio, dalla 2021 fino alla 8." }
     ],
     specs: [["Menu", "Robo Tool › robo exporter"], ["Barra strumenti", "1 pulsante"], ["Formati", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, da installare a parte)"], ["Versioni SKP", "Quella in uso e le precedenti, da 2021 a 8 (scelta da SketchUp 2022)"], ["FBX", "Esportatore di SketchUp Pro"], ["Annullamento", "Il modello non viene modificato"]],
-    images: ['assets/img/screenshots/exporter-1.png']
+    images: ['assets/img/screenshots/exporter-en-1.png']
   },
 
   /* ---------------------------------------------------------------- FILLET */
