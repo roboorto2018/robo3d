@@ -173,13 +173,13 @@ var PLUGINS = [
     unavailableNote: 'robo demolition non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   },
 
-  /* --------------------------------------------------------------- EXPORTER (in place of robo export object) */
+  /* --------------------------------------------------------------- EXPORTER */
   {
     id: 'exporter', name: 'robo exporter', version: '0.1', os: 'both', category: 'Produttività', hue: 5,
     donationPrompt: true,
     tagline: "Esporta in DWG, DXF, OBJ, GLB, FBX e SKP: archi veri, layer, blocchi e texture al loro posto.",
     simple: "Scegli il formato e premi Esporta. Per AutoCAD gli archi e i cerchi arrivano come archi veri, anche quelli fatti di segmenti, le piante a quota zero, i tag come layer e i componenti come blocchi. Per i programmi 3D le texture non si perdono. E puoi salvare solo gli oggetti selezionati in un nuovo file SketchUp.",
-    intro: ["robo exporter porta il modello di SketchUp negli altri programmi senza i problemi dell’esportazione di sempre: in AutoCAD arriva come un vero disegno tecnico, non come una mesh di segmenti e triangoli.", "Prende anche il posto di robo export object: con il formato SKP salvi solo la selezione in un nuovo file, nella versione di SketchUp che vuoi, senza toccare il modello aperto."],
+    intro: ["robo exporter porta il modello di SketchUp negli altri programmi senza i problemi dell’esportazione di sempre: in AutoCAD arriva come un vero disegno tecnico, non come una mesh di segmenti e triangoli.", "Con il formato SKP salvi solo la selezione in un nuovo file, nella versione di SketchUp che vuoi, senza toccare il modello aperto."],
     main: [
       { t: "Archi e cerchi veri in DWG e DXF", d: "Gli archi e i cerchi di SketchUp diventano ARC e CIRCLE: in AutoCAD si quotano, si raccordano e si misurano esatti. Le curve libere diventano una polilinea sola." },
       { t: "Ricostruzione dagli archi fatti a segmenti", d: "Disegni importati o archi esplosi sono solo segmenti: robo exporter riconosce dove i punti stanno su un cerchio e ricostruisce l’arco o il cerchio, i segmenti allineati diventano una linea sola. Gli spigoli veri restano spigoli." },
@@ -196,7 +196,7 @@ var PLUGINS = [
       { t: "Ricostruzione di archi, cerchi e curve", d: "Prima di esportare legge ogni catena di segmenti: dove i punti stanno su un cerchio, nello stesso piano e girando sempre dalla stessa parte, nasce un ARC (un CIRCLE se è chiusa). Si regolano tolleranza, angolo massimo per segmento e numero minimo di segmenti; con «Solo segmenti regolari» un arco nasce solo da segmenti uguali, come sono fatti gli archi veri. Il centro viene affinato con il cerchio che passa meglio per tutti i punti." },
       { t: "Layer, blocchi, unità", d: "I tag diventano layer (colore, acceso o spento, cartelle nel nome), i componenti blocchi inseriti dove servono, con rotazione, scala e specchio; i gruppi si esplodono. Le misure nell’unità scelta, scritta anche nel file." },
       { t: "OBJ, GLB, FBX", d: "OBJ con i materiali e le texture copiate nella cartella accanto al file, con percorsi relativi; GLB con mesh, materiali e texture in un file solo, in metri e Y in alto; FBX con l’esportatore di SketchUp Pro." },
-      { t: "SKP: solo gli oggetti selezionati", d: "Come faceva robo export object: la selezione viene salvata in un nuovo file SketchUp, nella posizione che ha, anche per una versione più vecchia (da SketchUp 2022). Il modello aperto non viene chiuso, salvato né cambiato." },
+      { t: "SKP: solo gli oggetti selezionati", d: "La selezione viene salvata in un nuovo file SketchUp, nella posizione che ha, anche per una versione più vecchia (da SketchUp 2022). Il modello aperto non viene chiuso, salvato né cambiato." },
       { t: "Un esempio concreto", d: "Hai un progetto con una cucina fatta in SketchUp e lo studio tecnico vuole la pianta in AutoCAD. Selezioni la cucina, scegli DWG, «Appiattisci a Z = 0» e mm: in AutoCAD i piani curvi e le maniglie sono archi veri, i mobili sono blocchi e ogni tag è un layer." }
     ],
     pros: ["Salva in SKP anche per versioni precedenti di SketchUp (fino alla 8)", "Archi e cerchi veri, anche ricostruiti dai segmenti", "Piante a quota zero, senza diagonali", "Tag come layer e componenti come blocchi", "Texture che non si perdono in OBJ e GLB", "Solo la selezione in un nuovo SKP", "Il modello aperto non viene toccato"],
