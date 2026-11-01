@@ -57,7 +57,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- BOOLEAN */
   {
-    id: 'boolean', name: 'robo boolean', version: '1.0', category: 'Modellazione', hue: 0,
+    id: 'boolean', name: 'robo boolean', version: '1.0', os: 'both', category: 'Modellazione', hue: 0,
     noDownload: true, installer: true,
     video: 'wPqJ3tycBi8',
     images: ['assets/img/screenshots/boolean-1.jpg', 'assets/img/screenshots/boolean-2.jpg', 'assets/img/screenshots/boolean-3.jpg', 'assets/img/screenshots/boolean-4.jpg', 'assets/img/screenshots/boolean-5.jpg'],
@@ -91,7 +91,7 @@ var PLUGINS = [
       { p: 'Su modelli complessi un’operazione booleana può chiudere SketchUp.', s: 'Con il motore robo il calcolo avviene in un processo separato: se fallisce, il modello non cambia.' },
       { p: 'Un modello scaricato è fatto di tanti pezzi sovrapposti dentro un gruppo.', s: 'L’unione di un oggetto li fonde in un solido solo con un clic.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo boolean'], ['Barra strumenti', '6 operazioni e Opzioni'], ['Richiede', 'SketchUp 2021.1 o successivo, Pro; motore robo per Windows (facoltativo)'], ['Motore', 'robo_bool_engine (Rust + manifold-rust), incluso nell’installatore'], ['Annullamento', 'Un solo Ctrl+Z per operazione'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']],
+    specs: [['Menu', 'Robo Tool › robo boolean'], ['Barra strumenti', '6 operazioni e Opzioni'], ['Richiede', 'SketchUp 2021.1 o successivo, Pro; motore robo per Windows e macOS (facoltativo)'], ['Motore', 'robo_bool_engine (Rust + manifold-rust), incluso nell’installatore'], ['Annullamento', 'Un solo Ctrl+Z per operazione'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']],
     installNote: 'robo boolean non è ancora disponibile per il download: sarà pubblicato appena pronto.',
     unavailableNote: 'robo boolean non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   },
@@ -135,7 +135,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- DEMOLITION */
   {
-    id: 'demolition', name: 'robo demolition', version: '1.2', category: 'Modellazione', hue: 15,
+    id: 'demolition', name: 'robo demolition', version: '1.2', os: 'both', category: 'Modellazione', hue: 15,
     noDownload: true, installer: true,
     video: 'vXMermVjpUE',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png', 'assets/img/screenshots/demolition-4.png', 'assets/img/screenshots/demolition-5.png'],
@@ -885,7 +885,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   },
   /* --------------------------------------------------------------- IMPORTER */
   {
-    id: 'importer', name: 'robo importer', version: '0.14', category: 'Produttività', hue: 205,
+    id: 'importer', name: 'robo importer', version: '0.14', os: 'both', category: 'Produttività', hue: 205,
     video: 'L1wkUY3zzVM',
     images: ['assets/img/screenshots/importer-1.jpg', 'assets/img/screenshots/importer-2.jpg'],
     noDownload: true, installer: true,
@@ -922,7 +922,7 @@ solves: [
     { p: 'I file dei programmi CAD non si aprono direttamente in SketchUp.', s: 'Il plugin li legge con OpenCascade e li porta nel modello come componente.' },
     { p: 'Un modello importato finisce sempre all’origine.', s: 'Il modello si attacca al cursore e lo posizioni dove vuoi.' }
 ],
-specs: [['Menu', 'Robo Tool › robo importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo, Windows'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT) e Assimp 6.0.2 (BSD 3-Clause), programma esterno incluso nell’installatore'], ['DWG', 'ODA File Converter (gratuito, da installare a parte)'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
+specs: [['Menu', 'Robo Tool › robo importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo, Windows o macOS'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT) e Assimp 6.0.2 (BSD 3-Clause), programma esterno incluso nell’installatore'], ['DWG', 'ODA File Converter (gratuito, da installare a parte)'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
 installNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.',
 unavailableNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   }
