@@ -690,7 +690,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TOOLBAR */
   {
-    id: 'toolbar', name: 'robo toolbar', version: '1.3', os: 'both', category: 'Produttività', hue: 270,
+    id: 'toolbar', name: 'robo toolbar', version: '1.3.1', os: 'both', category: 'Produttività', hue: 270,
     videos: ['hBBJ5wyCEUQ', 'T_43GUUfdlo'],
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Barre degli strumenti tue, con pulsanti per script Ruby e combinazioni di tasti.',
