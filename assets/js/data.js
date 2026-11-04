@@ -175,7 +175,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- EXPORTER */
   {
-    id: 'exporter', name: 'robo exporter', version: '0.1', os: 'both', category: 'Produttività', hue: 5,
+    id: 'exporter', name: 'robo exporter', version: '0.2', os: 'both', category: 'Produttività', hue: 5,
     donationPrompt: true,
     tagline: "Esporta in DWG, DXF, OBJ, GLB, FBX e SKP: archi veri, layer, blocchi e texture al loro posto.",
     simple: "Scegli il formato e premi Esporta. Per AutoCAD gli archi e i cerchi arrivano come archi veri, anche quelli fatti di segmenti, le piante a quota zero, i tag come layer e i componenti come blocchi. Per i programmi 3D le texture non si perdono. E puoi salvare solo gli oggetti selezionati in un nuovo file SketchUp.",
