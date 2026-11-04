@@ -57,7 +57,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- BOOLEAN */
   {
-    id: 'boolean', name: 'robo boolean', version: '1.0', os: 'both', category: 'Modellazione', hue: 0,
+    id: 'boolean', name: 'robo boolean', version: '1.1', os: 'both', category: 'Modellazione', hue: 0,
     noDownload: true, installer: true,
     video: 'wPqJ3tycBi8',
     images: ['assets/img/screenshots/boolean-1.jpg', 'assets/img/screenshots/boolean-2.jpg', 'assets/img/screenshots/boolean-3.jpg', 'assets/img/screenshots/boolean-4.jpg', 'assets/img/screenshots/boolean-5.jpg'],
