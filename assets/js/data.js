@@ -693,8 +693,18 @@ var PLUGINS = [
     id: 'toolbar', name: 'robo toolbar', version: '1.3', os: 'both', category: 'Produttività', hue: 270,
     videos: ['hBBJ5wyCEUQ', 'T_43GUUfdlo'],
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
-    tagline: 'Costruisci le tue barre degli strumenti, trascinando i comandi.',
-    simple: 'Scegli i comandi che usi di più — gli strumenti di SketchUp, i pulsanti dei plugin Robo e le voci del menu Estensioni — e trascinali in una barra tutta tua. Dai un nome alla barra, salvala e la ritrovi in SketchUp, sempre pronta.',
+    tagline: 'Barre degli strumenti tue, con pulsanti per script Ruby e combinazioni di tasti.',
+    simple: 'Scegli i comandi che usi di più — gli strumenti di SketchUp, i pulsanti dei plugin Robo e le voci del menu Estensioni — e trascinali in una barra tutta tua. Dai un nome alla barra, salvala e la ritrovi in SketchUp, sempre pronta. In più crei pulsanti tutti tuoi, con l’icona che vuoi: uno esegue uno script Ruby, anche scritto con l’intelligenza artificiale, l’altro preme una combinazione di tasti.',
+    spotlight: {
+      badge: 'Novità 1.3', h2: 'Pulsanti tuoi: script Ruby e combinazioni di tasti',
+      text: ['La tua barra non contiene più solo i comandi che esistono già: contiene anche quelli che inventi tu. Ogni nuovo pulsante ha il titolo che scegli e un’icona personalizzata di qualsiasi genere.'],
+      items: [
+        { t: 'Script Ruby', c: '#7b3fc4', icon: true, d: 'Un pulsante che esegue il tuo codice Ruby, come la Console Ruby di SketchUp: un’operazione ripetitiva, un controllo del modello, una serie di passaggi, tutto con un solo clic.' },
+        { t: 'Script anche complessi, con l’intelligenza artificiale', c: '#0078d7', d: 'Non serve saper programmare: descrivi a un’intelligenza artificiale (per esempio Claude o ChatGPT) che cosa vuoi che faccia SketchUp, copia lo script che ti scrive e incollalo nel pulsante. Anche script lunghi e complessi diventano così un pulsante della tua barra. Prova sempre uno script nuovo su una copia del modello.' },
+        { t: 'Combinazioni di tasti', c: '#28a745', icon: true, d: 'Un pulsante che preme una combinazione di tasti come la tastiera: esegue il comando che in SketchUp ha quella scorciatoia, anche se non ha un pulsante suo.' },
+        { t: 'Icone personalizzate di qualsiasi genere', c: '#e67e00', d: 'Con la matita dai a ogni pulsante l’icona che vuoi: un disegno tuo, un simbolo, una lettera, un logo. Bastano due immagini PNG da 16 e 24 pixel, oppure un solo file SVG.' }
+      ]
+    },
     intro: [
       'robo toolbar ti permette di creare le tue barre degli strumenti di SketchUp. Apri la finestra, trascini i comandi che ti servono nell’anteprima della barra, li riordini, scrivi il nome e salvi: la barra compare subito in SketchUp.',
       'Serve quando i pulsanti che usi ogni giorno sono sparsi in tante barre e menu. Con robo toolbar li raccogli tutti in un punto solo, nell’ordine che preferisci, e puoi creare quante barre vuoi, una per ogni tipo di lavoro.'
@@ -724,10 +734,11 @@ var PLUGINS = [
       { t: 'L’icona generica e l’icona rossa', d: 'L’icona generica con il crocino rosso indica un comando senza icona propria, che puoi sostituire con la tua. L’icona rossa con il crocino bianco indica un comando non più disponibile, perché il suo plugin è stato eliminato o non è installato: il controllo avviene a ogni avvio di SketchUp e ogni volta che apri la finestra. Nella barra di SketchUp il pulsante rosso mostra un messaggio; nella finestra lo togli con la x rossa.' },
       { t: 'Un esempio concreto', d: 'Lavori spesso con linea, rettangolo, sposta, ruota, scala e hai due plugin Robo che usi di continuo. Apri robo toolbar, li trascini in una barra chiamata “Modellazione”, metti un separatore tra gli strumenti di SketchUp e quelli dei plugin e salvi. Da quel momento hai tutto sotto mano in una sola barra, nell’ordine che hai deciso.' }
     ],
-    pros: ['Barre su misura, quante ne vuoi', 'Pulsanti che eseguono uno script Ruby o una combinazione di tasti', 'Strumenti SketchUp e plugin Robo nello stesso elenco', 'Icone personalizzabili (PNG o SVG)', 'Avviso se hai modifiche non salvate', 'Backup e ripristino anche su un altro SketchUp'],
+    pros: ['Barre su misura, quante ne vuoi', 'Pulsanti con icone tue per script Ruby, anche scritti con l’intelligenza artificiale', 'Pulsanti che eseguono uno script Ruby o una combinazione di tasti', 'Strumenti SketchUp e plugin Robo nello stesso elenco', 'Icone personalizzabili (PNG o SVG)', 'Avviso se hai modifiche non salvate', 'Backup e ripristino anche su un altro SketchUp'],
     solves: [
       { p: 'I comandi che usi più spesso sono sparsi in tante barre e menu.', s: 'Li raccogli in una sola barra, nell’ordine che preferisci.' },
-      { p: 'Alcuni comandi dei plugin non hanno un’icona da mettere in una barra.', s: 'Ricevono un’icona generica che puoi sostituire con la tua.' }
+      { p: 'Alcuni comandi dei plugin non hanno un’icona da mettere in una barra.', s: 'Ricevono un’icona generica che puoi sostituire con la tua.' },
+      { p: 'Un’operazione che fai spesso richiede molti passaggi o non ha un comando.', s: 'Uno script Ruby, anche scritto da un’intelligenza artificiale, la fa con un clic dal tuo pulsante, con l’icona che vuoi.' }
     ],
     specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Backup', 'File .json con barre e icone personalizzate'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },

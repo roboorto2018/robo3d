@@ -464,6 +464,21 @@
         '</div></section>';
     }
 
+    // "spotlight": the news of the plugin, in evidence under the top of the page: { badge, h2, text: [], items: [{ t, d, c }] }
+    // (c: the colour of the item; with "icon" true a button of that colour with a white cross is drawn next to its title)
+    var spot = pf(p, 'spotlight'), spotHtml = '';
+    if (spot && spot.items) {
+      var spotP = '', spotItems = '';
+      for (var sp = 0; sp < (spot.text || []).length; sp++) { spotP += '<p>' + esc(spot.text[sp]) + '</p>'; }
+      for (var si = 0; si < spot.items.length; si++) {
+        var it = spot.items[si], col = esc(it.c || '#e02424');
+        var sym = it.icon ? '<svg width="26" height="26" viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="5" fill="' + col + '" stroke="#1c1c1c" stroke-width="2.6"/><path d="M10 16h12M16 10v12" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>' : '';
+        spotItems += '<div class="item" style="--c:' + col + '"><h3>' + sym + esc(it.t) + '</h3><p>' + esc(it.d) + '</p></div>';
+      }
+      spotHtml = '<section class="spot" id="novita"><div class="wrap"><div class="spot-head"><span class="new">' + esc(spot.badge) + '</span>' +
+        '<h2>' + esc(spot.h2) + '</h2>' + spotP + '</div><div class="spot-grid">' + spotItems + '</div></div></section>';
+    }
+
     var prev = PLUGINS[(idx + PLUGINS.length - 1) % PLUGINS.length];
     var next = PLUGINS[(idx + 1) % PLUGINS.length];
 
@@ -485,6 +500,7 @@
         (pf(p, 'installNote') ? '<p class="inst-note">' + esc(pf(p, 'installNote')) + '</p>' : '') +
       '</div><div class="shot">' + gallery(im, 0, tUI('gal.imageof').replace('{n}', p.name)) + '</div></div></div>' +
 
+      spotHtml +
       aboutHtml +
       tbHtml +
       '<section class="alt"><div class="wrap two"><div class="shot">' + gallery(im, 1, tUI('gal.inuse').replace('{n}', p.name)) + '</div>' +
