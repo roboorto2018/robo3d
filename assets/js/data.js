@@ -176,7 +176,7 @@ var PLUGINS = [
   /* --------------------------------------------------------------- EXPORTER */
   {
     id: 'exporter', name: 'robo exporter', version: '0.2', os: 'both', category: 'Produttività', hue: 5,
-    donationPrompt: true,
+    noDownload: true,
     tagline: "Esporta in DWG, DXF, OBJ, GLB, FBX e SKP: archi veri, layer, blocchi e texture al loro posto.",
     simple: "Scegli il formato e premi Esporta. Per AutoCAD gli archi e i cerchi arrivano come archi veri, anche quelli fatti di segmenti, le piante a quota zero, i tag come layer e i componenti come blocchi. Per i programmi 3D le texture non si perdono. E puoi salvare solo gli oggetti selezionati in un nuovo file SketchUp.",
     intro: ["robo exporter porta il modello di SketchUp negli altri programmi senza i problemi dell’esportazione di sempre: in AutoCAD arriva come un vero disegno tecnico, non come una mesh di segmenti e triangoli.", "Con il formato SKP salvi solo la selezione in un nuovo file, nella versione di SketchUp che vuoi, senza toccare il modello aperto."],
@@ -208,7 +208,9 @@ var PLUGINS = [
       { p: "Chi ha un SketchUp più vecchio non riesce ad aprire il file.", s: "Scegli la versione di salvataggio, dalla 2021 fino alla 8." }
     ],
     specs: [["Menu", "Robo Tool › robo exporter"], ["Barra strumenti", "1 pulsante"], ["Formati", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, da installare a parte)"], ["Versioni SKP", "Quella in uso e le precedenti, da 2021 a 8 (scelta da SketchUp 2022)"], ["FBX", "Esportatore di SketchUp Pro"], ["Annullamento", "Il modello non viene modificato"]],
-    images: ['assets/img/screenshots/exporter-en-1.png']
+    images: ['assets/img/screenshots/exporter-en-1.png'],
+    installNote: 'robo exporter non è ancora disponibile per il download: sarà pubblicato appena pronto.',
+    unavailableNote: 'robo exporter non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   },
 
   /* ---------------------------------------------------------------- FILLET */

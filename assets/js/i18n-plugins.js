@@ -2751,7 +2751,9 @@ I18N_PLUGINS.en.exporter = {
     { p: "To send one part you copy, open a new file and paste.", s: "With SKP you select and export." },
     { p: "Someone with an older SketchUp cannot open the file.", s: "Choose the save version, from 2021 down to 8." }
   ],
-  specs: [["Menu", "Robo Tool › robo exporter"], ["Toolbar", "1 button"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "With ODA File Converter (free, installed apart)"], ["SKP versions", "The current one and older ones, 2021 to 8 (choice from SketchUp 2022)"], ["FBX", "SketchUp Pro’s exporter"], ["Undo", "The model is not changed"]]
+  specs: [["Menu", "Robo Tool › robo exporter"], ["Toolbar", "1 button"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "With ODA File Converter (free, installed apart)"], ["SKP versions", "The current one and older ones, 2021 to 8 (choice from SketchUp 2022)"], ["FBX", "SketchUp Pro’s exporter"], ["Undo", "The model is not changed"]],
+  installNote: "robo exporter is not available for download yet: it will be published as soon as it is ready.",
+  unavailableNote: "robo exporter is not available for download yet: it will be published as soon as it is ready."
 };
 I18N_TOOLBARS.en.exporter = { 'export.png': "Export to DWG, DXF, OBJ, GLB, FBX or SKP" };
 I18N_PLUGINS.de.exporter = {
@@ -2785,7 +2787,9 @@ I18N_PLUGINS.de.exporter = {
     { p: "Um ein Teil zu schicken, kopiert man, öffnet eine neue Datei und fügt ein.", s: "Mit SKP wählst du aus und exportierst." },
     { p: "Wer ein älteres SketchUp hat, kann die Datei nicht öffnen.", s: "Wähle die Speicherversion, von 2021 bis 8." }
   ],
-  specs: [["Menü", "Robo Tool › robo exporter"], ["Symbolleiste", "1 Schaltfläche"], ["Formate", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Mit ODA File Converter (kostenlos, separat installiert)"], ["SKP-Versionen", "Die aktuelle und ältere, 2021 bis 8 (Wahl ab SketchUp 2022)"], ["FBX", "Exporter von SketchUp Pro"], ["Rückgängig", "Das Modell wird nicht verändert"]]
+  specs: [["Menü", "Robo Tool › robo exporter"], ["Symbolleiste", "1 Schaltfläche"], ["Formate", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Mit ODA File Converter (kostenlos, separat installiert)"], ["SKP-Versionen", "Die aktuelle und ältere, 2021 bis 8 (Wahl ab SketchUp 2022)"], ["FBX", "Exporter von SketchUp Pro"], ["Rückgängig", "Das Modell wird nicht verändert"]],
+  installNote: "robo exporter steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.",
+  unavailableNote: "robo exporter steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist."
 };
 I18N_TOOLBARS.de.exporter = { 'export.png': "Export nach DWG, DXF, OBJ, GLB, FBX oder SKP" };
 I18N_PLUGINS.fr.exporter = {
@@ -2819,7 +2823,9 @@ I18N_PLUGINS.fr.exporter = {
     { p: "Pour envoyer une pièce on copie, on ouvre un nouveau fichier et on colle.", s: "Avec SKP vous sélectionnez et exportez." },
     { p: "Qui a un SketchUp plus ancien ne peut pas ouvrir le fichier.", s: "Choisissez la version d’enregistrement, de 2021 jusqu’à 8." }
   ],
-  specs: [["Menu", "Robo Tool › robo exporter"], ["Barre d’outils", "1 bouton"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Avec ODA File Converter (gratuit, installé à part)"], ["Versions SKP", "L’actuelle et les précédentes, de 2021 à 8 (choix à partir de SketchUp 2022)"], ["FBX", "Exportateur de SketchUp Pro"], ["Annulation", "Le modèle n’est pas modifié"]]
+  specs: [["Menu", "Robo Tool › robo exporter"], ["Barre d’outils", "1 bouton"], ["Formats", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Avec ODA File Converter (gratuit, installé à part)"], ["Versions SKP", "L’actuelle et les précédentes, de 2021 à 8 (choix à partir de SketchUp 2022)"], ["FBX", "Exportateur de SketchUp Pro"], ["Annulation", "Le modèle n’est pas modifié"]],
+  installNote: "robo exporter n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.",
+  unavailableNote: "robo exporter n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt."
 };
 I18N_TOOLBARS.fr.exporter = { 'export.png': "Exporter en DWG, DXF, OBJ, GLB, FBX ou SKP" };
 I18N_PLUGINS.es.exporter = {
@@ -2853,7 +2859,9 @@ I18N_PLUGINS.es.exporter = {
     { p: "Para enviar una pieza se copia, se abre un archivo nuevo y se pega.", s: "Con SKP seleccionas y exportas." },
     { p: "Quien tiene un SketchUp más antiguo no puede abrir el archivo.", s: "Elige la versión de guardado, de 2021 hasta 8." }
   ],
-  specs: [["Menú", "Robo Tool › robo exporter"], ["Barra de herramientas", "1 botón"], ["Formatos", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, se instala aparte)"], ["Versiones SKP", "La actual y las anteriores, de 2021 a 8 (elección desde SketchUp 2022)"], ["FBX", "Exportador de SketchUp Pro"], ["Deshacer", "El modelo no se modifica"]]
+  specs: [["Menú", "Robo Tool › robo exporter"], ["Barra de herramientas", "1 botón"], ["Formatos", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, se instala aparte)"], ["Versiones SKP", "La actual y las anteriores, de 2021 a 8 (elección desde SketchUp 2022)"], ["FBX", "Exportador de SketchUp Pro"], ["Deshacer", "El modelo no se modifica"]],
+  installNote: "robo exporter todavía no está disponible para descargar: se publicará en cuanto esté listo.",
+  unavailableNote: "robo exporter todavía no está disponible para descargar: se publicará en cuanto esté listo."
 };
 I18N_TOOLBARS.es.exporter = { 'export.png': "Exportar a DWG, DXF, OBJ, GLB, FBX o SKP" };
 I18N_TOOLBARS.en.toolbar = { 'toolbar.png': 'robo toolbar: build your own toolbars' };
