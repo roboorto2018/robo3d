@@ -692,7 +692,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TOOLBAR */
   {
-    id: 'toolbar', name: 'robo toolbar', version: '1.3.4', os: 'both', category: 'Produttività', hue: 270,
+    id: 'toolbar', name: 'robo toolbar', version: '1.3.5', os: 'both', category: 'Produttività', hue: 270,
     videos: ['hBBJ5wyCEUQ', 'T_43GUUfdlo'],
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Barre degli strumenti tue, con pulsanti per script Ruby e combinazioni di tasti.',
@@ -719,7 +719,6 @@ var PLUGINS = [
       { t: 'Pulsanti Script Ruby e Tasti', d: 'Due pulsanti tuoi, con titolo e icona a scelta: Script Ruby esegue il tuo codice come la Console Ruby, Tasti preme una combinazione come la tastiera ed esegue il comando che la ha nelle scorciatoie di SketchUp.' },
       { t: 'Elenco in ordine alfabetico', d: 'Una casella mette in ordine alfabetico i comandi dell’elenco, e la colonna dell’elenco si allarga o si stringe trascinandone il bordo.' },
       { t: 'Barre salvate, modificabili', d: 'Nell’elenco “Le mie barre” puoi modificare, mostrare o eliminare ogni barra. Se hai modifiche non salvate, il plugin te lo ricorda prima di passare a un’altra barra.' },
-      { t: 'Backup e ripristino', d: 'Con “Esporta backup” salvi tutte le barre (e le icone personalizzate) in un file; con “Importa backup” le ripristini, anche su un altro SketchUp.' },
       { t: 'Avviso sui comandi spariti', d: 'Se il plugin di un pulsante viene eliminato, il pulsante diventa rosso con un crocino bianco e un messaggio ti spiega cosa è successo; lo togli quando vuoi.' },
       { t: 'In cinque lingue', d: 'Finestra, messaggi e guida sono in italiano, inglese, tedesco, francese e spagnolo.' }
     ],
@@ -732,17 +731,16 @@ var PLUGINS = [
       { t: 'Icone generiche: come cambiarle', d: 'I comandi senza icona hanno un’icona generica con un crocino rosso. Passandoci sopra nell’anteprima compare un contorno rosso con una matita: cliccala. Scegli prima un’immagine da 16 × 16 pixel, poi una da 24 × 24 (PNG, JPG o BMP), oppure un solo file SVG, nel qual caso la seconda non serve. Se l’immagine non ha la misura giusta, un messaggio ti dice quanto è grande e quanto serve, e puoi riprovare. L’icona resta legata a quel comando in tutte le barre.' },
       { t: 'Pulsanti Script Ruby e Tasti', d: 'Nella zona viola “Aggiungi alla barra” trascina Script Ruby o Tasti nell’anteprima, oppure clicca il loro +. Poi clicca il simbolo in basso a sinistra del pulsante: scrivi il titolo e lo script, oppure clicca il campo e premi la combinazione di tasti. Con la matita in alto a sinistra dai al pulsante un’icona tua (PNG da 16 e 24 pixel, oppure un SVG). Su Mac, per i Tasti, va consentito SketchUp in Accessibilità.' },
       { t: 'Le mie barre e le modifiche non salvate', d: 'In basso trovi le barre salvate, con i pulsanti Modifica, Mostra ed Elimina (per eliminare si clicca due volte). Se premi Modifica su un’altra barra mentre hai modifiche non salvate, una finestra ti chiede se vuoi salvarle: Sì le salva e apre l’altra barra, No le scarta, Annulla ti lascia dove sei.' },
-      { t: 'Backup delle barre', d: 'In alto trovi Esporta backup e Importa backup. Esporta salva in un unico file .json tutte le barre e le icone personalizzate che hai scelto: serve come copia di sicurezza o per portare le barre su un altro computer. Importa legge il file e ricrea le barre: quelle nuove compaiono subito; se ne esiste già una con lo stesso nome, una finestra chiede se sostituirla (Sì), tenere l’attuale (No) o interrompere (Annulla). I pulsanti ritrovano i comandi per nome, quindi sull’altro computer servono gli stessi plugin.' },
       { t: 'L’icona generica e l’icona rossa', d: 'L’icona generica con il crocino rosso indica un comando senza icona propria, che puoi sostituire con la tua. L’icona rossa con il crocino bianco indica un comando non più disponibile, perché il suo plugin è stato eliminato o non è installato: il controllo avviene a ogni avvio di SketchUp e ogni volta che apri la finestra. Nella barra di SketchUp il pulsante rosso mostra un messaggio; nella finestra lo togli con la x rossa.' },
       { t: 'Un esempio concreto', d: 'Lavori spesso con linea, rettangolo, sposta, ruota, scala e hai due plugin Robo che usi di continuo. Apri robo toolbar, li trascini in una barra chiamata “Modellazione”, metti un separatore tra gli strumenti di SketchUp e quelli dei plugin e salvi. Da quel momento hai tutto sotto mano in una sola barra, nell’ordine che hai deciso.' }
     ],
-    pros: ['Barre su misura, quante ne vuoi', 'Pulsanti con icone tue per script Ruby, anche scritti con l’intelligenza artificiale', 'Pulsanti che eseguono uno script Ruby o una combinazione di tasti', 'Strumenti SketchUp e plugin Robo nello stesso elenco', 'Icone personalizzabili (PNG o SVG)', 'Avviso se hai modifiche non salvate', 'Backup e ripristino anche su un altro SketchUp'],
+    pros: ['Barre su misura, quante ne vuoi', 'Pulsanti con icone tue per script Ruby, anche scritti con l’intelligenza artificiale', 'Pulsanti che eseguono uno script Ruby o una combinazione di tasti', 'Strumenti SketchUp e plugin Robo nello stesso elenco', 'Icone personalizzabili (PNG o SVG)', 'Avviso se hai modifiche non salvate'],
     solves: [
       { p: 'I comandi che usi più spesso sono sparsi in tante barre e menu.', s: 'Li raccogli in una sola barra, nell’ordine che preferisci.' },
       { p: 'Alcuni comandi dei plugin non hanno un’icona da mettere in una barra.', s: 'Ricevono un’icona generica che puoi sostituire con la tua.' },
       { p: 'Un’operazione che fai spesso richiede molti passaggi o non ha un comando.', s: 'Uno script Ruby, anche scritto da un’intelligenza artificiale, la fa con un clic dal tuo pulsante, con l’icona che vuoi.' }
     ],
-    specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Backup', 'File .json con barre e icone personalizzate'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Finestra', '900 × 600 px, ridimensionabile'], ['Menu', 'Robo Tool › robo toolbar'], ['Icone personalizzate', 'PNG 16 e 24 px, oppure SVG'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
 
   /* ----------------------------------------------------------- QUICK ALIGN */
