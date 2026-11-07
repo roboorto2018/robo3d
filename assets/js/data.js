@@ -509,7 +509,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- SPACING */
   {
-    id: 'spacing_tool', name: 'robo spacing tool', version: '1.5', os: 'both', category: 'Distribuzione', hue: 268,
+    id: 'spacing_tool', name: 'robo spacing tool', version: '1.6', os: 'both', category: 'Distribuzione', hue: 268,
     donationPrompt: true,
     videos: ['dlBkhklB3Ds', 'mMk6vg4fEns'],
     images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
@@ -692,7 +692,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TOOLBAR */
   {
-    id: 'toolbar', name: 'robo toolbar', version: '1.3.1', os: 'both', category: 'Produttività', hue: 270,
+    id: 'toolbar', name: 'robo toolbar', version: '1.3.2', os: 'both', category: 'Produttività', hue: 270,
     videos: ['hBBJ5wyCEUQ', 'T_43GUUfdlo'],
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Barre degli strumenti tue, con pulsanti per script Ruby e combinazioni di tasti.',
