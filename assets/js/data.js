@@ -928,16 +928,25 @@ PLUGINS.sort(function (x, y) { return x.name.toLowerCase().localeCompare(y.name.
    pulsanti separato da una linea, come in SketchUp.
    ------------------------------------------------------------------ */
 var TOOLBARS = {
-  baseform: { name: 'robo baseform', groups: [[{ i: 'cube.png', l: 'robo baseform: crea un oggetto 3D' }]],
-    shapesTitle: 'I 7 oggetti che puoi creare',
+  baseform: { name: 'robo baseform', groups: [[{ i: 'cube.png', l: "robo baseform: forme 2D e 3D" }]],
+    shapesTitle: "Le forme della barra",
     shapes: [
-      { i: 'shape_cube.svg', l: 'Cubo', d: 'Cubo o parallelepipedo: X, Y, Z collegabili.' },
-      { i: 'shape_cylinder.svg', l: 'Cilindro', d: 'Raggio, altezza e numero di segmenti.' },
-      { i: 'shape_cone.svg', l: 'Cono', d: 'Base circolare che termina in un punto.' },
-      { i: 'shape_frustum.svg', l: 'Tronco di cono', d: 'Cono con raggio di base e raggio superiore.' },
-      { i: 'shape_uvsphere.svg', l: 'UV Sphere', d: 'Sfera a meridiani e paralleli.' },
-      { i: 'shape_icosphere.svg', l: 'Icosphere', d: 'Sfera a triangoli, con suddivisioni 0–4.' },
-      { i: 'shape_torus.svg', l: 'Toro', d: 'Anello con raggio del cerchio e del tubo.' }
+      { i: "shape_family.svg", l: "2D / 3D", d: "Il primo pulsante passa dalle forme 3D a quelle 2D; la sezione Forma cambia colore." },
+      { h: "h3d", l: "Forme 3D" },
+      { i: "shape_cube.svg", l: "Cubo", d: "Cubo o parallelepipedo: lati collegabili con la catena." },
+      { i: "shape_cylinder.svg", l: "Cilindro", d: "Raggio, altezza e segmenti." },
+      { i: "shape_cone.svg", l: "Cono", d: "Base circolare che termina in un punto." },
+      { i: "shape_frustum.svg", l: "Tronco", d: "Tronco di cono: raggio di base e raggio superiore." },
+      { i: "shape_uvsphere.svg", l: "Sfera UV", d: "Sfera a meridiani e paralleli." },
+      { i: "shape_icosphere.svg", l: "Icosfera", d: "Sfera a triangoli, con suddivisioni da 0 a 4." },
+      { i: "shape_torus.svg", l: "Toro", d: "Anello con raggio dell’anello e del tubo." },
+      { i: "shape_helix.svg", l: "Helix", d: "Curva 3D: due diametri con catena, altezza, spire, segmenti." },
+      { h: "h2d", l: "Forme 2D" },
+      { i: "shape_square.svg", l: "Quadrato", d: "Faccia rettangolare: lati collegabili con la catena." },
+      { i: "shape_circle.svg", l: "Cerchio", d: "Faccia rotonda: raggio e segmenti." },
+      { i: "shape_spiral.svg", l: "Spirale", d: "Curva piatta: due diametri, spire, segmenti; può partire dal centro." },
+      { h: "hobj", l: "Oggetti esistenti" },
+      { i: "shape_object.svg", l: "Oggetto", d: "Sposta o copia un gruppo o un componente su facce e linee." }
     ] },
   fillet: { name: 'robo fillet', groups: [[{ i: 'fillet.png', l: 'robo fillet: raccorda due linee' }]] },
   tangent: { name: 'robo tangent', groups: [[{ i: 'tangent.png', l: 'robo tangent: disegna la tangente' }]] },

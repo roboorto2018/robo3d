@@ -197,8 +197,9 @@ section { padding: 88px 0; }
 .p-hero .wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
 .p-hero .plugin-icon { width: 64px; height: 64px; border-radius: 16px; }
 .p-hero .plugin-icon img { width: 42px; height: 42px; }
-.p-title { display: flex; align-items: center; gap: 16px; margin: 18px 0 18px; }
-.p-title h1 { font-size: clamp(2rem, 4.4vw, 3.2rem); font-weight: 800; }
+.p-title { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 18px 0 18px; }
+/* one line for every plugin, also the longest name (robo group to component): the size is the one that fits it */
+.p-title h1 { font-size: clamp(1.2rem, 2.05vw, 1.55rem); font-weight: 800; white-space: nowrap; }
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #fdecec; color: var(--red); font-weight: 700; font-size: .8rem; }
 .pill.dark { background: var(--ink); color: #fff; }
 .p-hero .tag { font-size: 1.3rem; font-weight: 600; letter-spacing: -.01em; }
@@ -424,6 +425,7 @@ section { padding: 88px 0; }
 .tb-shapes-title { margin: 30px 0 12px; font-size: 1.05rem; }
 .tb-shapes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
 .tb-shapes li { display: flex; align-items: center; gap: 12px; padding: 10px 12px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 12px; }
+.tb-shapes li.tb-shapes-h { grid-column: 1 / -1; padding: 6px 0 0; background: none; border: 0; border-radius: 0; font-weight: 700; color: var(--ink); }
 .tb-shapes img { width: 40px; height: 40px; flex: none; }
 .tb-shapes b { display: block; font-size: .95rem; }
 .tb-shapes span { display: block; font-size: .85rem; color: var(--muted, #666); line-height: 1.35; }

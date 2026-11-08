@@ -436,10 +436,11 @@
       }
       var shapesHtml = '';
       if (tb.shapes) {
-        shapesHtml = '<h3 class="tb-shapes-title">' + esc(tb.shapesTitle || '') + '</h3><ul class="tb-shapes">';
+        shapesHtml = '<h3 class="tb-shapes-title">' + esc(tbf(p.id, 'shapesTitle', tb.shapesTitle || '')) + '</h3><ul class="tb-shapes">';
         for (var w = 0; w < tb.shapes.length; w++) {
           var sh = tb.shapes[w];
-          shapesHtml += '<li><img src="assets/img/toolbar/' + esc(p.id) + '/' + esc(sh.i) + '" alt=""><div><b>' + esc(sh.l) + '</b><span>' + esc(sh.d) + '</span></div></li>';
+          if (sh.h) { shapesHtml += '<li class="tb-shapes-h">' + esc(tbf(p.id, sh.h, sh.l)) + '</li>'; continue; } // a heading across the list
+          shapesHtml += '<li><img src="assets/img/toolbar/' + esc(p.id) + '/' + esc(sh.i) + '" alt=""><div><b>' + esc(tbf(p.id, sh.i, sh.l)) + '</b><span>' + esc(tbf(p.id, sh.i + '.d', sh.d)) + '</span></div></li>';
         }
         shapesHtml += '</ul>';
       }
