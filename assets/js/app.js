@@ -491,7 +491,7 @@
         '<p class="simple">' + esc(simple) + '</p>' +
         '<div class="actions">' + (function () {
           var dlLabel = (p.downloadUrl || p.installer) ? tUI('plugin.download').replace('.rbz', '.exe') : tUI('plugin.download'); // an installer (.exe) instead of the .rbz
-          var rbzUrl = p.downloadUrl ? esc(p.downloadUrl) : 'https://github.com/roboorto2018/robo3d/releases/download/downloads/robo_' + esc(p.id) + '.rbz'; // downloadUrl: a plugin that is installed with its own installer (.exe)
+          var rbzUrl = p.downloadUrl ? esc(p.downloadUrl) : 'https://github.com/roboorto2018/robo3d/releases/download/downloads/' + esc(p.rbzName || ('robo_' + p.id)) + '.rbz'; // downloadUrl: a plugin that is installed with its own installer (.exe)
           if (p.noDownload) { return '<button type="button" class="btn btn-red" id="dl-unavailable">' + dlLabel + '</button>'; }
           if (p.donationPrompt) { return '<button type="button" class="btn btn-red" id="dl-gate" data-url="' + rbzUrl + '">' + dlLabel + '</button>'; }
           return '<a class="btn btn-red" href="' + rbzUrl + '" download>' + dlLabel + '</a>';
