@@ -75,7 +75,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- EXTRACT */
   {
-    id: 'extract', name: 'robo extract', version: '1.1', os: 'both', category: 'Modellazione', hue: 170,
+    id: 'extract', name: 'robo extract', version: '1.2', os: 'both', category: 'Modellazione', hue: 170,
     donationPrompt: true,
     video: 'Gi4nG6UZF0I',
     images: ['assets/img/screenshots/extract-1.png'],
@@ -192,7 +192,7 @@ var PLUGINS = [
 
   /* ---------------------------------------------------------------- FILLET */
   {
-    id: 'fillet', name: 'robo fillet', version: '1.2', os: 'both', category: 'Modellazione', hue: 200,
+    id: 'fillet', name: 'robo fillet', version: '1.3', os: 'both', category: 'Modellazione', hue: 200,
     donationPrompt: true,
     video: 'sGrRxU-Thlo',
     images: ['assets/img/screenshots/fillet-1.png', 'assets/img/screenshots/fillet-2.png', 'assets/img/screenshots/fillet-3.png', 'assets/img/screenshots/fillet-4.png', 'assets/img/screenshots/fillet-5.png'],
@@ -229,7 +229,7 @@ var PLUGINS = [
 
   /* ------------------------------------------------------- GROUP TO COMPONENT */
   {
-    id: 'group_to_component', name: 'robo group to component', version: '1.2', os: 'both', category: 'Organizzazione', hue: 32,
+    id: 'group_to_component', name: 'robo group to component', version: '1.3', os: 'both', category: 'Organizzazione', hue: 32,
     donationPrompt: true,
     video: 'BLo3ZGXY1F4',
     images: ['assets/img/screenshots/group_to_component-1.png', 'assets/img/screenshots/group_to_component-2.png', 'assets/img/screenshots/group_to_component-3.png', 'assets/img/screenshots/group_to_component-4.png'],
@@ -265,7 +265,7 @@ var PLUGINS = [
 
   /* ---------------------------------------------------------------- IMPACT */
   {
-    id: 'impact_object', name: 'robo impact object', version: '1.2', os: 'both', category: 'Ottimizzazione', hue: 348,
+    id: 'impact_object', name: 'robo impact object', version: '1.3', os: 'both', category: 'Ottimizzazione', hue: 348,
     donationPrompt: true,
     video: 'hU1Xp5oTKqg',
     images: ['assets/img/screenshots/impact_object-1.png', 'assets/img/screenshots/impact_object-2.png'],
@@ -302,7 +302,7 @@ var PLUGINS = [
 
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
-    id: 'library_explorer', name: 'robo library explorer', version: '1.2', os: 'both', category: 'Organizzazione', hue: 190,
+    id: 'library_explorer', name: 'robo library explorer', version: '1.3', os: 'both', category: 'Organizzazione', hue: 190,
     donationPrompt: true,
     video: '27grL1GDQQM',
     images: ['assets/img/screenshots/library_explorer-1.png', 'assets/img/screenshots/library_explorer-2.png', 'assets/img/screenshots/library_explorer-3.png', 'assets/img/screenshots/library_explorer-4.png', 'assets/img/screenshots/library_explorer-5.png', 'assets/img/screenshots/library_explorer-6.png', 'assets/img/screenshots/library_explorer-7.png'],
@@ -378,7 +378,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------------- PROXY */
   {
-    id: 'proxy_manager', name: 'robo proxy manager', version: '0.6', os: 'both', category: 'Ottimizzazione', hue: 220,
+    id: 'proxy_manager', name: 'robo proxy manager', version: '0.7', os: 'both', category: 'Ottimizzazione', hue: 220,
     donationPrompt: true,
     video: 'ThxhD9J6eC0',
     images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
@@ -450,7 +450,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- SECTION */
   {
-    id: 'section', name: 'robo section', version: '1.2', os: 'both', category: 'Organizzazione', hue: 210,
+    id: 'section', name: 'robo section', version: '1.3', os: 'both', category: 'Organizzazione', hue: 210,
     donationPrompt: true,
     video: 'KAbKr1Lui84',
     images: ['assets/img/screenshots/section-1.png', 'assets/img/screenshots/section-2.png', 'assets/img/screenshots/section-3.png', 'assets/img/screenshots/section-4.png', 'assets/img/screenshots/section-5.png'],
@@ -527,7 +527,7 @@ var PLUGINS = [
 
   /* ---------------------------------------------------------------- STANDARD */
   {
-    id: 'standard', name: 'robo standard', version: '1.1', os: 'both', category: 'Produttività', hue: 100,
+    id: 'standard', name: 'robo standard', version: '1.2', os: 'both', category: 'Produttività', hue: 100,
     donationPrompt: true,
     tagline: 'I comandi di tutti i giorni in una barra con icone Robo.',
     simple: 'Nuovo, Apri, Salva, Taglia, Copia, Incolla, Annulla… i comandi più usati di SketchUp riuniti in una sola barra, con icone chiare e nello stile Robo.',
@@ -596,7 +596,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TANGENT */
   {
-    id: 'tangent', name: 'robo tangent', version: '1.2', os: 'both', category: 'Modellazione', hue: 160,
+    id: 'tangent', name: 'robo tangent', version: '1.3', os: 'both', category: 'Modellazione', hue: 160,
     donationPrompt: true,
     video: 'RsSOjk3k7NE',
     images: ['assets/img/screenshots/tangent-8.png'],
@@ -633,7 +633,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- UPLEVEL */
   {
-    id: 'uplevel', name: 'robo uplevel', version: '1.0', os: 'both', category: 'Produttività', hue: 45,
+    id: 'uplevel', name: 'robo uplevel', version: '1.1', os: 'both', category: 'Produttività', hue: 45,
     donationPrompt: true,
     video: 'whuBMKHEvjE',
     tagline: 'Porta gli oggetti fuori dal gruppo, senza spostarli.',
@@ -722,7 +722,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------- QUICK ALIGN */
   {
-    id: 'quick_align', name: 'robo quick align', version: '1.0', os: 'both', category: 'Modellazione', hue: 200,
+    id: 'quick_align', name: 'robo quick align', version: '1.1', os: 'both', category: 'Modellazione', hue: 200,
     donationPrompt: true,
     images: ['assets/img/screenshots/quick_align-1.png', 'assets/img/screenshots/quick_align-2.png'],
     tagline: 'Allinea gruppi e componenti sugli assi, con un clic.',
@@ -797,7 +797,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- FILLET 3D */
   {
-    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.1', os: 'both', category: 'Modellazione', hue: 175,
+    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.2', os: 'both', category: 'Modellazione', hue: 175,
     video: 'DTb7IONp4FA',
     images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.jpg', 'assets/img/screenshots/fillet_3d-4.jpg', 'assets/img/screenshots/fillet_3d-5.jpg', 'assets/img/screenshots/fillet_3d-6.jpg', 'assets/img/screenshots/fillet_3d-7.jpg', 'assets/img/screenshots/fillet_3d-8.jpg', 'assets/img/screenshots/fillet_3d-9.jpg', 'assets/img/screenshots/fillet_3d-10.png'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
@@ -835,7 +835,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- DOCTOR */
   {
-    id: 'doctor', name: 'robo doctor', version: '1.0', os: 'both', category: 'Ottimizzazione', hue: 345,
+    id: 'doctor', name: 'robo doctor', version: '1.1', os: 'both', category: 'Ottimizzazione', hue: 345,
     video: 'j1WqYw7o8M4',
     images: ['assets/img/screenshots/doctor-1.png', 'assets/img/screenshots/doctor-2.png', 'assets/img/screenshots/doctor-3.png', 'assets/img/screenshots/doctor-4.png', 'assets/img/screenshots/doctor-5.png', 'assets/img/screenshots/doctor-6.png', 'assets/img/screenshots/doctor-7.png', 'assets/img/screenshots/doctor-8.png', 'assets/img/screenshots/doctor-9.png', 'assets/img/screenshots/doctor-10.png', 'assets/img/screenshots/doctor-11.png', 'assets/img/screenshots/doctor-12.png', 'assets/img/screenshots/doctor-13.png'],
 tagline: 'Controlla se i gruppi e i componenti sono solidi, mostra dove sono buchi ed errori e li ripara con quadrilateri.',
