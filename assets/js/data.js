@@ -874,6 +874,22 @@ solves: [
 ],
 specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo'], ['Annullamento', 'Ogni chiusura è un’operazione: Ctrl+Z o il pulsante Annulla'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
+  /* ------------------------------------------------------------------- CUT */
+  {
+    id: 'cut', name: 'robo cut', version: '0.3', os: 'both', category: 'Modellazione', hue: 200,
+    donationPrompt: true,
+    images: ['assets/img/screenshots/cut-1.png', 'assets/img/screenshots/cut-2.png'],
+    tagline: "Taglia gruppi e componenti con un piano: geometria vera, in due pezzi o solo la sezione.",
+    simple: "Seleziona un gruppo o un componente, scegli il piano e clicca: l’oggetto viene tagliato davvero, non solo nascosto come con un piano di sezione. Tieni i due pezzi, togli la parte sopra o sotto, oppure ottieni solo la sezione.",
+    intro: ["robo cut taglia gruppi e componenti con un piano e crea geometria vera: i pezzi sono oggetti nuovi da spostare, esportare o modificare. Un piano di sezione di SketchUp invece nasconde soltanto una parte del modello.", "Un oggetto chiuso riceve la faccia di taglio solo dove c’è materiale: un tubo diventa un anello, non un disco. Anche le forme organiche e le superfici aperte hanno la loro linea di sezione completa."],
+    main: [{"t": "Quattro piani di taglio", "d": "Orizzontale (blu), verticale rosso, verticale verde o a mano libera: due clic disegnano una linea sullo schermo e il taglio è perpendicolare alla vista. Con le frecce cambi piano mentre lavori."}, {"t": "Cosa ottenere", "d": "Dividi in due, elimina sopra, elimina sotto oppure solo sezione: un gruppo piatto con le facce e le linee di taglio. Con elimina sopra o sotto una linea arancione mostra la parte che resta."}, {"t": "Taglio modificabile", "d": "L’originale resta nascosto nel gruppo del taglio, con il piano e le scelte: puoi spostare il piano, invertire la parte, copiare la sezione o togliere il taglio, dal clic destro o dalla finestra."}, {"t": "Materiali e solidi", "d": "Le facce di taglio prendono il materiale delle facce vicine. Con Rendi solido un pezzo che non è chiuso dopo il taglio viene chiuso dove si può."}, {"t": "Gruppi dentro gruppi", "d": "Il taglio entra in ogni livello di gruppi e componenti annidati. Le copie tagliate diventano uniche, così le altre copie del modello non cambiano."}, {"t": "A tutto campo", "d": "Senza selezionare niente, il piano taglia tutti i gruppi e i componenti visibili che incontra."}],
+    steps: ["Seleziona uno o più gruppi o componenti, oppure accendi A tutto campo.", "Premi robo cut: si apre la finestra e il piano segue il mouse. Scegli il piano e cosa ottenere.", "Clicca: il taglio è fatto, la finestra si chiude e un solo Ctrl+Z lo annulla."],
+    how: [{"t": "Geometria vera, non un piano di sezione", "d": "Ogni pezzo è una copia dell’originale resa unica e tagliata dal piano: le facce dall’altra parte vengono cancellate e il taglio viene chiuso con una faccia."}, {"t": "Solo dove c’è materiale", "d": "Su un oggetto chiuso una prova con un raggio controlla dove il piano attraversa il materiale: un tubo riceve un anello, una scatola vuota solo le sue pareti."}, {"t": "Forme organiche", "d": "Su superfici aperte o non chiuse il taglio non forma anelli e non si può fare una faccia: la sezione contiene comunque tutte le linee di taglio."}, {"t": "Un’operazione sola", "d": "Ogni taglio e ogni modifica è una sola operazione: Ctrl+Z la annulla per intero. Le scelte della finestra restano per la volta dopo."}],
+    pros: ["Pezzi veri, da spostare ed esportare", "Taglio modificabile anche dopo", "Sezioni anche delle forme organiche", "Nessun motore esterno, Windows e macOS"],
+    solves: [{"p": "Un piano di sezione nasconde solo una parte: i pezzi non si possono spostare né esportare.", "s": "robo cut taglia davvero: i pezzi sono oggetti nuovi."}, {"p": "Tagliare a mano un oggetto complesso con Interseca e cancellare le facce richiede molto tempo.", "s": "Un clic taglia tutto, anche dentro gruppi e componenti annidati."}, {"p": "Serve la sezione di un mobile o di un oggetto per un disegno.", "s": "Solo sezione crea un gruppo piatto con le facce e le linee di taglio."}],
+    specs: [["Menu", "Robo Tool › robo cut"], ["Barra strumenti", "1 pulsante"], ["Piani", "Orizzontale, verticale rosso, verticale verde, mano libera"], ["Annullamento", "Ogni taglio è un’operazione: Ctrl+Z"], ["Richiede", "SketchUp 2023 o successivo"], ["Lingue", "Italiano, English, Deutsch, Français, Español"]]
+  },
+
   /* --------------------------------------------------------------- IMPORTER */
   {
     id: 'importer', name: 'robo importer', version: '0.15', os: 'both', category: 'Produttività', hue: 205,
@@ -975,6 +991,7 @@ var TOOLBARS = {
   boolean: { name: 'robo boolean', groups: [
     [{ i: 'union.png', l: 'Unione' }, { i: 'subtract.png', l: 'Sottrazione' }, { i: 'intersect.png', l: 'Intersezione' }, { i: 'trim.png', l: 'Taglia' }, { i: 'split.png', l: 'Dividi' }, { i: 'single.png', l: 'Unione di un oggetto' }],
     [{ i: 'options.png', l: 'Opzioni' }]] },
+  cut: { name: 'robo cut', groups: [[{ i: 'cut.png', l: "robo cut: taglia con un piano" }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   exporter: { name: 'robo exporter', groups: [[{ i: 'export.png', l: "Esporta in DWG, DXF, OBJ, GLB, FBX o SKP" }]] },
   library_explorer: { name: 'robo library explorer', groups: [[{ i: 'explorer.png', l: "Apri robo library explorer" }]] },
