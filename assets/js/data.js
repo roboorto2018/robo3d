@@ -877,6 +877,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   /* ------------------------------------------------------------------- CUT */
   {
     id: 'cut', name: 'robo cut', version: '0.4', os: 'both', category: 'Modellazione', hue: 200,
+    video: 'xjDZstknt6k',
     donationPrompt: true,
     images: ['assets/img/screenshots/cut-3.png', 'assets/img/screenshots/cut-4.png', 'assets/img/screenshots/cut-1.png', 'assets/img/screenshots/cut-2.png'],
     tagline: "Taglia gruppi e componenti con un piano: geometria vera, in due pezzi o solo la sezione.",
