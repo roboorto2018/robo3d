@@ -3327,7 +3327,7 @@ solves: [
     { p: 'The files of CAD programs do not open directly in SketchUp.', s: 'The plugin reads them with OpenCascade and brings them into the model as a component.' },
     { p: 'An imported model always ends up at the origin.', s: 'The model hangs on the cursor and you place it where you want.' }
 ],
-specs: [['Menu', 'Robo Tool › robo importer'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2021.1 or later, Windows or macOS'], ['Engine', 'OpenCascade 7.9.3 (LGPL 2.1 with the OCCT exception) and Assimp 6.0.2 (BSD 3-Clause), external program included in the installer'], ['DWG', 'ODA File Converter (free, installed separately)'], ['Undo', 'The build is one operation: Ctrl+Z']],
+specs: [['Menu', 'Robo Tool › robo importer'], ['Toolbar', '1 button'], ['Requires', 'SketchUp 2023 or later, Windows or macOS'], ['Engine', 'OpenCascade 7.9.3 (LGPL 2.1 with the OCCT exception) and Assimp 6.0.2 (BSD 3-Clause), external program included in the installer'], ['DWG', 'ODA File Converter (free, installed separately)'], ['Undo', 'The build is one operation: Ctrl+Z']],
 installNote: 'robo importer is not available for download yet: it will be published as soon as it is ready.',
 unavailableNote: 'robo importer is not available for download yet: it will be published as soon as it is ready.'
 };
@@ -3368,7 +3368,7 @@ solves: [
     { p: 'Dateien von CAD-Programmen lassen sich nicht direkt in SketchUp öffnen.', s: 'Das Plugin liest sie mit OpenCascade und bringt sie als Komponente ins Modell.' },
     { p: 'Ein importiertes Modell landet immer im Ursprung.', s: 'Das Modell hängt am Cursor und du platzierst es, wo du willst.' }
 ],
-specs: [['Menü', 'Robo Tool › robo importer'], ['Symbolleiste', '1 Schaltfläche'], ['Voraussetzung', 'SketchUp 2021.1 oder neuer, Windows oder macOS'], ['Programm', 'OpenCascade 7.9.3 (LGPL 2.1 mit OCCT-Ausnahme) und Assimp 6.0.2 (BSD 3-Clause), externes Programm im Installationsprogramm enthalten'], ['DWG', 'ODA File Converter (kostenlos, separat zu installieren)'], ['Rückgängig', 'Der Aufbau ist ein Vorgang: Strg+Z']],
+specs: [['Menü', 'Robo Tool › robo importer'], ['Symbolleiste', '1 Schaltfläche'], ['Voraussetzung', 'SketchUp 2023 oder neuer, Windows oder macOS'], ['Programm', 'OpenCascade 7.9.3 (LGPL 2.1 mit OCCT-Ausnahme) und Assimp 6.0.2 (BSD 3-Clause), externes Programm im Installationsprogramm enthalten'], ['DWG', 'ODA File Converter (kostenlos, separat zu installieren)'], ['Rückgängig', 'Der Aufbau ist ein Vorgang: Strg+Z']],
 installNote: 'robo importer steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.',
 unavailableNote: 'robo importer steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.'
 };
@@ -3409,7 +3409,7 @@ solves: [
     { p: 'Les fichiers des logiciels de CAO ne s’ouvrent pas directement dans SketchUp.', s: 'Le plugin les lit avec OpenCascade et les amène dans le modèle comme composant.' },
     { p: 'Un modèle importé finit toujours à l’origine.', s: 'Le modèle se fixe au curseur et vous le placez où vous voulez.' }
 ],
-specs: [['Menu', 'Robo Tool › robo importer'], ['Barre d’outils', '1 bouton'], ['Nécessite', 'SketchUp 2021.1 ou ultérieur, Windows ou macOS'], ['Moteur', 'OpenCascade 7.9.3 (LGPL 2.1 avec l’exception OCCT) et Assimp 6.0.2 (BSD 3-Clause), programme externe inclus dans l’installateur'], ['DWG', 'ODA File Converter (gratuit, à installer à part)'], ['Annulation', 'La construction est une opération : Ctrl+Z']],
+specs: [['Menu', 'Robo Tool › robo importer'], ['Barre d’outils', '1 bouton'], ['Nécessite', 'SketchUp 2023 ou ultérieur, Windows ou macOS'], ['Moteur', 'OpenCascade 7.9.3 (LGPL 2.1 avec l’exception OCCT) et Assimp 6.0.2 (BSD 3-Clause), programme externe inclus dans l’installateur'], ['DWG', 'ODA File Converter (gratuit, à installer à part)'], ['Annulation', 'La construction est une opération : Ctrl+Z']],
 installNote: 'robo importer n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.',
 unavailableNote: 'robo importer n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.'
 };
@@ -3450,7 +3450,7 @@ solves: [
     { p: 'Los archivos de los programas CAD no se abren directamente en SketchUp.', s: 'El plugin los lee con OpenCascade y los lleva al modelo como componente.' },
     { p: 'Un modelo importado acaba siempre en el origen.', s: 'El modelo se pega al cursor y lo colocas donde quieras.' }
 ],
-specs: [['Menú', 'Robo Tool › robo importer'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2021.1 o posterior, Windows o macOS'], ['Motor', 'OpenCascade 7.9.3 (LGPL 2.1 con la excepción OCCT) y Assimp 6.0.2 (BSD 3-Clause), programa externo incluido en el instalador'], ['DWG', 'ODA File Converter (gratuito, se instala aparte)'], ['Deshacer', 'La construcción es una operación: Ctrl+Z']],
+specs: [['Menú', 'Robo Tool › robo importer'], ['Barra de herramientas', '1 botón'], ['Requiere', 'SketchUp 2023 o posterior, Windows o macOS'], ['Motor', 'OpenCascade 7.9.3 (LGPL 2.1 con la excepción OCCT) y Assimp 6.0.2 (BSD 3-Clause), programa externo incluido en el instalador'], ['DWG', 'ODA File Converter (gratuito, se instala aparte)'], ['Deshacer', 'La construcción es una operación: Ctrl+Z']],
 installNote: 'robo importer todavía no está disponible para descargar: se publicará en cuanto esté listo.',
 unavailableNote: 'robo importer todavía no está disponible para descargar: se publicará en cuanto esté listo.'
 };
@@ -3488,7 +3488,7 @@ I18N_PLUGINS.en.boolean = {
     { p: 'On complex models a boolean operation can close SketchUp.', s: 'With the robo engine the computation runs in a separate process: if it fails, the model does not change.' },
     { p: 'A downloaded model is made of many overlapping pieces inside a group.', s: 'Single object union merges them into one solid with one click.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo boolean'], ['Toolbar', '6 operations and Options'], ['Requires', 'SketchUp 2021.1 or later, Pro; robo engine for Windows and macOS (optional)'], ['Engine', 'robo_bool_engine (Rust + manifold-rust), included in the installer'], ['Undo', 'A single Ctrl+Z per operation'], ['Languages', 'Italiano, English, Deutsch, Français, Español']],
+  specs: [['Menu', 'Robo Tool › robo boolean'], ['Toolbar', '6 operations and Options'], ['Requires', 'SketchUp 2023 or later, Pro; robo engine for Windows and macOS (optional)'], ['Engine', 'robo_bool_engine (Rust + manifold-rust), included in the installer'], ['Undo', 'A single Ctrl+Z per operation'], ['Languages', 'Italiano, English, Deutsch, Français, Español']],
   installNote: 'robo boolean is not available for download yet: it will be published as soon as it is ready.',
   unavailableNote: 'robo boolean is not available for download yet: it will be published as soon as it is ready.'
 };
@@ -3525,7 +3525,7 @@ I18N_PLUGINS.de.boolean = {
     { p: 'Bei komplexen Modellen kann eine boolesche Operation SketchUp schließen.', s: 'Mit der robo-Engine läuft die Berechnung in einem separaten Prozess: Scheitert sie, ändert sich das Modell nicht.' },
     { p: 'Ein heruntergeladenes Modell besteht aus vielen überlappenden Teilen in einer Gruppe.', s: 'Die Vereinigung eines Objekts verschmilzt sie mit einem Klick zu einem Volumenkörper.' }
   ],
-  specs: [['Menü', 'Robo Tool › robo boolean'], ['Symbolleiste', '6 Operationen und Optionen'], ['Voraussetzung', 'SketchUp 2021.1 oder neuer, Pro; robo-Engine für Windows und macOS (optional)'], ['Engine', 'robo_bool_engine (Rust + manifold-rust), im Installationsprogramm enthalten'], ['Rückgängig', 'Ein einziges Strg+Z pro Operation'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']],
+  specs: [['Menü', 'Robo Tool › robo boolean'], ['Symbolleiste', '6 Operationen und Optionen'], ['Voraussetzung', 'SketchUp 2023 oder neuer, Pro; robo-Engine für Windows und macOS (optional)'], ['Engine', 'robo_bool_engine (Rust + manifold-rust), im Installationsprogramm enthalten'], ['Rückgängig', 'Ein einziges Strg+Z pro Operation'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']],
   installNote: 'robo boolean steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.',
   unavailableNote: 'robo boolean steht noch nicht zum Download bereit: Es wird veröffentlicht, sobald es fertig ist.'
 };
@@ -3562,7 +3562,7 @@ I18N_PLUGINS.fr.boolean = {
     { p: 'Sur des modèles complexes, une opération booléenne peut fermer SketchUp.', s: 'Avec le moteur robo, le calcul tourne dans un processus séparé : s’il échoue, le modèle ne change pas.' },
     { p: 'Un modèle téléchargé est fait de nombreuses pièces superposées dans un groupe.', s: 'L’union d’un objet les fond en un seul solide d’un clic.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo boolean'], ['Barre d’outils', '6 opérations et Options'], ['Nécessite', 'SketchUp 2021.1 ou plus récent, Pro ; moteur robo pour Windows et macOS (facultatif)'], ['Moteur', 'robo_bool_engine (Rust + manifold-rust), inclus dans l’installateur'], ['Annulation', 'Un seul Ctrl+Z par opération'], ['Langues', 'Italiano, English, Deutsch, Français, Español']],
+  specs: [['Menu', 'Robo Tool › robo boolean'], ['Barre d’outils', '6 opérations et Options'], ['Nécessite', 'SketchUp 2023 ou plus récent, Pro ; moteur robo pour Windows et macOS (facultatif)'], ['Moteur', 'robo_bool_engine (Rust + manifold-rust), inclus dans l’installateur'], ['Annulation', 'Un seul Ctrl+Z par opération'], ['Langues', 'Italiano, English, Deutsch, Français, Español']],
   installNote: 'robo boolean n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.',
   unavailableNote: 'robo boolean n’est pas encore disponible au téléchargement : il sera publié dès qu’il sera prêt.'
 };
@@ -3599,7 +3599,7 @@ I18N_PLUGINS.es.boolean = {
     { p: 'En modelos complejos una operación booleana puede cerrar SketchUp.', s: 'Con el motor robo el cálculo se hace en un proceso separado: si falla, el modelo no cambia.' },
     { p: 'Un modelo descargado está hecho de muchas piezas superpuestas dentro de un grupo.', s: 'La unión de un objeto las funde en un solo sólido con un clic.' }
   ],
-  specs: [['Menú', 'Robo Tool › robo boolean'], ['Barra de herramientas', '6 operaciones y Opciones'], ['Requiere', 'SketchUp 2021.1 o posterior, Pro; motor robo para Windows y macOS (opcional)'], ['Motor', 'robo_bool_engine (Rust + manifold-rust), incluido en el instalador'], ['Deshacer', 'Un solo Ctrl+Z por operación'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']],
+  specs: [['Menú', 'Robo Tool › robo boolean'], ['Barra de herramientas', '6 operaciones y Opciones'], ['Requiere', 'SketchUp 2023 o posterior, Pro; motor robo para Windows y macOS (opcional)'], ['Motor', 'robo_bool_engine (Rust + manifold-rust), incluido en el instalador'], ['Deshacer', 'Un solo Ctrl+Z por operación'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']],
   installNote: 'robo boolean todavía no está disponible para descargar: se publicará en cuanto esté listo.',
   unavailableNote: 'robo boolean todavía no está disponible para descargar: se publicará en cuanto esté listo.'
 };

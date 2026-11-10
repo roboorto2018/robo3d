@@ -8,7 +8,7 @@
    ============================================================================ */
 var SITE = {
   name: 'Robo Tools',
-  compat: 'SketchUp 2021.1 – 2027',
+  compat: 'SketchUp 2023 – 2027',
   menu: 'Estensioni › Robo Tool'
 };
 
@@ -17,7 +17,7 @@ var CATEGORIES = ['Modellazione', 'Distribuzione', 'Organizzazione', 'Ottimizzaz
 var PLUGINS = [
   /* ------------------------------------------------------------------ BASEFORM */
   {
-    id: 'baseform', name: 'robo baseform', version: '2.0', os: 'both', category: 'Modellazione', hue: 12,
+    id: 'baseform', name: 'robo baseform', version: '2.1', os: 'both', category: 'Modellazione', hue: 12,
     donationPrompt: true,
     video: 'Q6nA_fj7CcM',
     images: ['assets/img/screenshots/baseform-1.jpg'],
@@ -34,7 +34,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- BOOLEAN */
   {
-    id: 'boolean', name: 'robo boolean', version: '1.1', os: 'both', category: 'Modellazione', hue: 0,
+    id: 'boolean', name: 'robo boolean', version: '1.2', os: 'both', category: 'Modellazione', hue: 0,
     noDownload: true, installer: true,
     video: 'wPqJ3tycBi8',
     images: ['assets/img/screenshots/boolean-1.jpg', 'assets/img/screenshots/boolean-2.jpg', 'assets/img/screenshots/boolean-3.jpg', 'assets/img/screenshots/boolean-4.jpg', 'assets/img/screenshots/boolean-5.jpg'],
@@ -68,14 +68,14 @@ var PLUGINS = [
       { p: 'Su modelli complessi un’operazione booleana può chiudere SketchUp.', s: 'Con il motore robo il calcolo avviene in un processo separato: se fallisce, il modello non cambia.' },
       { p: 'Un modello scaricato è fatto di tanti pezzi sovrapposti dentro un gruppo.', s: 'L’unione di un oggetto li fonde in un solido solo con un clic.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo boolean'], ['Barra strumenti', '6 operazioni e Opzioni'], ['Richiede', 'SketchUp 2021.1 o successivo, Pro; motore robo per Windows e macOS (facoltativo)'], ['Motore', 'robo_bool_engine (Rust + manifold-rust), incluso nell’installatore'], ['Annullamento', 'Un solo Ctrl+Z per operazione'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']],
+    specs: [['Menu', 'Robo Tool › robo boolean'], ['Barra strumenti', '6 operazioni e Opzioni'], ['Richiede', 'SketchUp 2023 o successivo, Pro; motore robo per Windows e macOS (facoltativo)'], ['Motore', 'robo_bool_engine (Rust + manifold-rust), incluso nell’installatore'], ['Annullamento', 'Un solo Ctrl+Z per operazione'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']],
     installNote: 'robo boolean non è ancora disponibile per il download: sarà pubblicato appena pronto.',
     unavailableNote: 'robo boolean non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   },
 
   /* --------------------------------------------------------------- EXTRACT */
   {
-    id: 'extract', name: 'robo extract', version: '1.2', os: 'both', category: 'Modellazione', hue: 170,
+    id: 'extract', name: 'robo extract', version: '1.3', os: 'both', category: 'Modellazione', hue: 170,
     donationPrompt: true,
     video: 'Gi4nG6UZF0I',
     images: ['assets/img/screenshots/extract-1.png'],
@@ -112,7 +112,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- DEMOLITION */
   {
-    id: 'demolition', name: 'robo demolition', version: '1.2', os: 'both', category: 'Modellazione', hue: 15,
+    id: 'demolition', name: 'robo demolition', version: '1.3', os: 'both', category: 'Modellazione', hue: 15,
     noDownload: true, installer: true,
     video: 'vXMermVjpUE',
     images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png', 'assets/img/screenshots/demolition-4.png', 'assets/img/screenshots/demolition-5.png'],
@@ -152,7 +152,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- EXPORTER */
   {
-    id: 'exporter', name: 'robo exporter', version: '0.2', os: 'both', category: 'Produttività', hue: 5,
+    id: 'exporter', name: 'robo exporter', version: '0.3', os: 'both', category: 'Produttività', hue: 5,
     noDownload: true,
     tagline: "Esporta in DWG, DXF, OBJ, GLB, FBX e SKP: archi veri, layer, blocchi e texture al loro posto.",
     simple: "Scegli il formato e premi Esporta. Per AutoCAD gli archi e i cerchi arrivano come archi veri, anche quelli fatti di segmenti, le piante a quota zero, i tag come layer e i componenti come blocchi. Per i programmi 3D le texture non si perdono. E puoi salvare solo gli oggetti selezionati in un nuovo file SketchUp.",
@@ -192,7 +192,7 @@ var PLUGINS = [
 
   /* ---------------------------------------------------------------- FILLET */
   {
-    id: 'fillet', name: 'robo fillet', version: '1.3', os: 'both', category: 'Modellazione', hue: 200,
+    id: 'fillet', name: 'robo fillet', version: '1.4', os: 'both', category: 'Modellazione', hue: 200,
     donationPrompt: true,
     video: 'sGrRxU-Thlo',
     images: ['assets/img/screenshots/fillet-1.png', 'assets/img/screenshots/fillet-2.png', 'assets/img/screenshots/fillet-3.png', 'assets/img/screenshots/fillet-4.png', 'assets/img/screenshots/fillet-5.png'],
@@ -229,7 +229,7 @@ var PLUGINS = [
 
   /* ------------------------------------------------------- GROUP TO COMPONENT */
   {
-    id: 'group_to_component', name: 'robo group to component', version: '1.3', os: 'both', category: 'Organizzazione', hue: 32,
+    id: 'group_to_component', name: 'robo group to component', version: '1.4', os: 'both', category: 'Organizzazione', hue: 32,
     donationPrompt: true,
     video: 'BLo3ZGXY1F4',
     images: ['assets/img/screenshots/group_to_component-1.png', 'assets/img/screenshots/group_to_component-2.png', 'assets/img/screenshots/group_to_component-3.png', 'assets/img/screenshots/group_to_component-4.png'],
@@ -265,7 +265,7 @@ var PLUGINS = [
 
   /* ---------------------------------------------------------------- IMPACT */
   {
-    id: 'impact_object', name: 'robo impact object', version: '1.3', os: 'both', category: 'Ottimizzazione', hue: 348,
+    id: 'impact_object', name: 'robo impact object', version: '1.4', os: 'both', category: 'Ottimizzazione', hue: 348,
     donationPrompt: true,
     video: 'hU1Xp5oTKqg',
     images: ['assets/img/screenshots/impact_object-1.png', 'assets/img/screenshots/impact_object-2.png'],
@@ -302,7 +302,7 @@ var PLUGINS = [
 
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
-    id: 'library_explorer', name: 'robo library explorer', version: '1.3', os: 'both', category: 'Organizzazione', hue: 190,
+    id: 'library_explorer', name: 'robo library explorer', version: '1.4', os: 'both', category: 'Organizzazione', hue: 190,
     donationPrompt: true,
     video: '27grL1GDQQM',
     images: ['assets/img/screenshots/library_explorer-1.png', 'assets/img/screenshots/library_explorer-2.png', 'assets/img/screenshots/library_explorer-3.png', 'assets/img/screenshots/library_explorer-4.png', 'assets/img/screenshots/library_explorer-5.png', 'assets/img/screenshots/library_explorer-6.png', 'assets/img/screenshots/library_explorer-7.png'],
@@ -326,7 +326,7 @@ var PLUGINS = [
       { t: 'Anteprime reali', d: 'Per i file .skp l\'anteprima è l\'immagine che SketchUp ha salvato dentro il file; per i materiali .skm viene ricavata caricandoli un istante nel modello. Le anteprime mancanti vengono create in background. Per molti file l\'immagine viene letta direttamente dall\'inizio del .skp, senza aprirlo, e la scansione esplora ogni cartella una sola volta: l\'aggiornamento è rapido.' },
       { t: 'Passo 2 · Sfoglia, filtra, cerca', d: 'Scegli la vista a dettagli oppure a icone piccole, medie o grandi. Cerca per nome, etichetta gli oggetti con i tag e segna i preferiti con il cuore per ritrovarli subito.' },
       { t: 'Passo 3 · Inserisci con un clic', d: 'Clicca un componente e viene inserito nel modello; clicca un materiale e viene applicato alla selezione. Se un componente è stato salvato con una versione di SketchUp più recente della tua, viene inserito come con File › Importa (SketchUp ti avvisa) invece di fallire. I file vuoti non vengono elencati.' },
-      { t: 'Proxy, 3D Warehouse e cloud', d: 'Per gli oggetti creati con robo proxy manager mostra anche il proxy. Un pulsante apre il 3D Warehouse per scaricare modelli nella libreria. Il backup nel cloud salva l\'elenco in una cartella OneDrive o Google Drive: la password non passa mai dal plugin.' },
+      { t: 'Proxy e cloud', d: 'Per gli oggetti creati con robo proxy manager mostra anche il proxy. Il backup nel cloud salva l\'elenco in una cartella OneDrive o Google Drive: la password non passa mai dal plugin.' },
       { t: 'Sicurezza', d: 'Il plugin elimina file solo dentro le cartelle di libreria, e solo dopo la tua conferma.' },
       { t: 'Un esempio concreto', d: 'Stai arredando un bagno e ricordi di avere un lavabo "bianco, tondo" da qualche parte tra 400 file. Apri robo library explorer, scrivi "lavabo" nella ricerca e vedi tre anteprime. Clicchi quella giusta e il componente entra nel modello. Lo segni con il cuore: la prossima volta lo trovi tra i preferiti.' }
     ],
@@ -340,7 +340,7 @@ var PLUGINS = [
 
   /* ------------------------------------------------------------- PLACEMENT */
   {
-    id: 'placement', name: 'robo placement', version: '1.0', os: 'both', category: 'Distribuzione', hue: 130,
+    id: 'placement', name: 'robo placement', version: '1.1', os: 'both', category: 'Distribuzione', hue: 130,
     donationPrompt: true,
     video: 'BuxBGvKxEGM',
     images: ['assets/img/screenshots/placement-1.png', 'assets/img/screenshots/placement-2.png', 'assets/img/screenshots/placement-3.png', 'assets/img/screenshots/placement-4.png'],
@@ -378,7 +378,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------------- PROXY */
   {
-    id: 'proxy_manager', name: 'robo proxy manager', version: '0.7', os: 'both', category: 'Ottimizzazione', hue: 220,
+    id: 'proxy_manager', name: 'robo proxy manager', version: '0.8', os: 'both', category: 'Ottimizzazione', hue: 220,
     donationPrompt: true,
     video: 'ThxhD9J6eC0',
     images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
@@ -413,7 +413,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------------- SCALE */
   {
-    id: 'scale_definition', name: 'robo scale definition', version: '0.7', os: 'both', category: 'Organizzazione', hue: 24,
+    id: 'scale_definition', name: 'robo scale definition', version: '0.8', os: 'both', category: 'Organizzazione', hue: 24,
     donationPrompt: true,
     video: 'GI1vYGhCF_E',
     images: ['assets/img/screenshots/scale_definition-1.png', 'assets/img/screenshots/scale_definition-2.png', 'assets/img/screenshots/scale_definition-3.png'],
@@ -450,7 +450,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- SECTION */
   {
-    id: 'section', name: 'robo section', version: '1.3', os: 'both', category: 'Organizzazione', hue: 210,
+    id: 'section', name: 'robo section', version: '1.4', os: 'both', category: 'Organizzazione', hue: 210,
     donationPrompt: true,
     video: 'KAbKr1Lui84',
     images: ['assets/img/screenshots/section-1.png', 'assets/img/screenshots/section-2.png', 'assets/img/screenshots/section-3.png', 'assets/img/screenshots/section-4.png', 'assets/img/screenshots/section-5.png'],
@@ -486,7 +486,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- SPACING */
   {
-    id: 'spacing_tool', name: 'robo spacing tool', version: '1.6', os: 'both', category: 'Distribuzione', hue: 268,
+    id: 'spacing_tool', name: 'robo spacing tool', version: '1.7', os: 'both', category: 'Distribuzione', hue: 268,
     donationPrompt: true,
     videos: ['dlBkhklB3Ds', 'mMk6vg4fEns'],
     images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
@@ -527,7 +527,7 @@ var PLUGINS = [
 
   /* ---------------------------------------------------------------- STANDARD */
   {
-    id: 'standard', name: 'robo standard', version: '1.2', os: 'both', category: 'Produttività', hue: 100,
+    id: 'standard', name: 'robo standard', version: '1.3', os: 'both', category: 'Produttività', hue: 100,
     donationPrompt: true,
     tagline: 'I comandi di tutti i giorni in una barra con icone Robo.',
     simple: 'Nuovo, Apri, Salva, Taglia, Copia, Incolla, Annulla… i comandi più usati di SketchUp riuniti in una sola barra, con icone chiare e nello stile Robo.',
@@ -561,7 +561,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------------- START */
   {
-    id: 'start', name: 'robo start', version: '1.1', os: 'both', category: 'Produttività', hue: 350,
+    id: 'start', name: 'robo start', version: '1.2', os: 'both', category: 'Produttività', hue: 350,
     donationPrompt: true,
     tagline: 'Oltre 20 comandi rapidi in un\'unica barra.',
     simple: 'Una barra con le operazioni di ogni giorno: crea gruppi e componenti, seleziona, nascondi, cancella guide e quote. Ogni pulsante ha una sua icona e una scorciatoia da tastiera. Dalle Impostazioni puoi anche abilitare o disabilitare i singoli pulsanti che vuoi vedere nella barra.',
@@ -596,7 +596,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TANGENT */
   {
-    id: 'tangent', name: 'robo tangent', version: '1.3', os: 'both', category: 'Modellazione', hue: 160,
+    id: 'tangent', name: 'robo tangent', version: '1.4', os: 'both', category: 'Modellazione', hue: 160,
     donationPrompt: true,
     video: 'RsSOjk3k7NE',
     images: ['assets/img/screenshots/tangent-8.png'],
@@ -633,7 +633,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- UPLEVEL */
   {
-    id: 'uplevel', name: 'robo uplevel', version: '1.1', os: 'both', category: 'Produttività', hue: 45,
+    id: 'uplevel', name: 'robo uplevel', version: '1.2', os: 'both', category: 'Produttività', hue: 45,
     donationPrompt: true,
     video: 'whuBMKHEvjE',
     tagline: 'Porta gli oggetti fuori dal gruppo, senza spostarli.',
@@ -669,7 +669,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- TOOLBAR */
   {
-    id: 'toolbar', name: 'robo toolbar', version: '1.4.2', rbzName: '0_robo_toolbar_full', os: 'both', category: 'Produttività', hue: 270,
+    id: 'toolbar', name: 'robo toolbar', version: '1.5', rbzName: '0_robo_toolbar_full', os: 'both', category: 'Produttività', hue: 270,
     videos: ['hBBJ5wyCEUQ', 'T_43GUUfdlo'],
     images: ['assets/img/screenshots/toolbar-1.png', 'assets/img/screenshots/toolbar-2.png'],
     tagline: 'Barre degli strumenti tue, con pulsanti per script Ruby e combinazioni di tasti.',
@@ -722,7 +722,7 @@ var PLUGINS = [
 
   /* ----------------------------------------------------------- QUICK ALIGN */
   {
-    id: 'quick_align', name: 'robo quick align', version: '1.1', os: 'both', category: 'Modellazione', hue: 200,
+    id: 'quick_align', name: 'robo quick align', version: '1.2', os: 'both', category: 'Modellazione', hue: 200,
     donationPrompt: true,
     images: ['assets/img/screenshots/quick_align-1.png', 'assets/img/screenshots/quick_align-2.png'],
     tagline: 'Allinea gruppi e componenti sugli assi, con un clic.',
@@ -759,7 +759,7 @@ var PLUGINS = [
 
   /* ------------------------------------------------------------------ SMOOTH */
   {
-    id: 'smooth', name: 'robo smooth', version: '1.0', os: 'both', category: 'Modellazione', hue: 280,
+    id: 'smooth', name: 'robo smooth', version: '1.1', os: 'both', category: 'Modellazione', hue: 280,
     donationPrompt: true,
     images: ['assets/img/screenshots/smooth-1.png', 'assets/img/screenshots/smooth-2.png'],
     tagline: 'Ammorbidisci e smussa le linee in un clic: sei comandi, nessun altro plugin.',
@@ -797,7 +797,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- FILLET 3D */
   {
-    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.2', os: 'both', category: 'Modellazione', hue: 175,
+    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.3', os: 'both', category: 'Modellazione', hue: 175,
     video: 'DTb7IONp4FA',
     images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.jpg', 'assets/img/screenshots/fillet_3d-4.jpg', 'assets/img/screenshots/fillet_3d-5.jpg', 'assets/img/screenshots/fillet_3d-6.jpg', 'assets/img/screenshots/fillet_3d-7.jpg', 'assets/img/screenshots/fillet_3d-8.jpg', 'assets/img/screenshots/fillet_3d-9.jpg', 'assets/img/screenshots/fillet_3d-10.png'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
@@ -835,7 +835,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- DOCTOR */
   {
-    id: 'doctor', name: 'robo doctor', version: '1.1', os: 'both', category: 'Ottimizzazione', hue: 345,
+    id: 'doctor', name: 'robo doctor', version: '1.2', os: 'both', category: 'Ottimizzazione', hue: 345,
     video: 'j1WqYw7o8M4',
     images: ['assets/img/screenshots/doctor-1.png', 'assets/img/screenshots/doctor-2.png', 'assets/img/screenshots/doctor-3.png', 'assets/img/screenshots/doctor-4.png', 'assets/img/screenshots/doctor-5.png', 'assets/img/screenshots/doctor-6.png', 'assets/img/screenshots/doctor-7.png', 'assets/img/screenshots/doctor-8.png', 'assets/img/screenshots/doctor-9.png', 'assets/img/screenshots/doctor-10.png', 'assets/img/screenshots/doctor-11.png', 'assets/img/screenshots/doctor-12.png', 'assets/img/screenshots/doctor-13.png'],
 tagline: 'Controlla se i gruppi e i componenti sono solidi, mostra dove sono buchi ed errori e li ripara con quadrilateri.',
@@ -876,7 +876,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   },
   /* --------------------------------------------------------------- IMPORTER */
   {
-    id: 'importer', name: 'robo importer', version: '0.14', os: 'both', category: 'Produttività', hue: 205,
+    id: 'importer', name: 'robo importer', version: '0.15', os: 'both', category: 'Produttività', hue: 205,
     video: 'L1wkUY3zzVM',
     images: ['assets/img/screenshots/importer-1.jpg', 'assets/img/screenshots/importer-2.jpg'],
     noDownload: true, installer: true,
@@ -913,7 +913,7 @@ solves: [
     { p: 'I file dei programmi CAD non si aprono direttamente in SketchUp.', s: 'Il plugin li legge con OpenCascade e li porta nel modello come componente.' },
     { p: 'Un modello importato finisce sempre all’origine.', s: 'Il modello si attacca al cursore e lo posizioni dove vuoi.' }
 ],
-specs: [['Menu', 'Robo Tool › robo importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2021.1 o successivo, Windows o macOS'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT) e Assimp 6.0.2 (BSD 3-Clause), programma esterno incluso nell’installatore'], ['DWG', 'ODA File Converter (gratuito, da installare a parte)'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
+specs: [['Menu', 'Robo Tool › robo importer'], ['Barra strumenti', '1 pulsante'], ['Richiede', 'SketchUp 2023 o successivo, Windows o macOS'], ['Motore', 'OpenCascade 7.9.3 (LGPL 2.1 con eccezione OCCT) e Assimp 6.0.2 (BSD 3-Clause), programma esterno incluso nell’installatore'], ['DWG', 'ODA File Converter (gratuito, da installare a parte)'], ['Annullamento', 'La costruzione è un’operazione: Ctrl+Z']],
 installNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.',
 unavailableNote: 'robo importer non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   }
