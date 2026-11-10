@@ -878,7 +878,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   {
     id: 'cut', name: 'robo cut', version: '0.4', os: 'both', category: 'Modellazione', hue: 200,
     donationPrompt: true,
-    images: ['assets/img/screenshots/cut-1.png', 'assets/img/screenshots/cut-2.png'],
+    images: ['assets/img/screenshots/cut-3.png', 'assets/img/screenshots/cut-4.png', 'assets/img/screenshots/cut-1.png', 'assets/img/screenshots/cut-2.png'],
     tagline: "Taglia gruppi e componenti con un piano: geometria vera, in due pezzi o solo la sezione.",
     simple: "Seleziona un gruppo o un componente, scegli il piano e clicca: l’oggetto viene tagliato davvero, non solo nascosto come con un piano di sezione. Tieni i due pezzi, togli la parte sopra o sotto, oppure ottieni solo la sezione.",
     intro: ["robo cut taglia gruppi e componenti con un piano e crea geometria vera: i pezzi sono oggetti nuovi da spostare, esportare o modificare. Un piano di sezione di SketchUp invece nasconde soltanto una parte del modello.", "Un oggetto chiuso riceve la faccia di taglio solo dove c’è materiale: un tubo diventa un anello, non un disco. Anche le forme organiche e le superfici aperte hanno la loro linea di sezione completa."],
