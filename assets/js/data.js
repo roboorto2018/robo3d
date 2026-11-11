@@ -907,6 +907,22 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
     specs: [["Menu", "Robo Tool › robo extrudeBot"], ["Barra strumenti", "1 pulsante"], ["Modi", "Segue il percorso, Resta verticale"], ["Annullamento", "Ogni estrusione è un’operazione: Ctrl+Z"], ["Richiede", "SketchUp 2023 o successivo"], ["Lingue", "Italiano, English, Deutsch, Français, Español"]]
   },
 
+  /* ---------------------------------------------------------------- REAXIS */
+  {
+    id: 'reaxis', name: 'robo reaxis', version: '1.1', os: 'both', category: 'Modellazione', hue: 140,
+    donationPrompt: true,
+    images: ['assets/img/screenshots/reaxis-1.png'],
+    tagline: "Sposta e allinea gli assi di gruppi e componenti: la geometria resta esattamente dov’è.",
+    simple: "Seleziona gruppi o componenti, clicca sul cubo il punto dove portare l’origine (un angolo, la metà di uno spigolo, il centro di una faccia o dell’oggetto), scegli l’orientamento e premi Applica. Cambiano solo gli assi: l’oggetto non si muove.",
+    intro: ["robo reaxis cambia gli assi di gruppi e componenti senza spostare la geometria. È utile prima di ruotare, scalare o allineare un oggetto, o per avere l’origine di un componente in un punto comodo per inserirlo.", "Se un componente ha più copie, cambiano tutte insieme e nessuna si muove. Un solo Ctrl+Z annulla tutto."],
+    main: [{"t": "Origine sul cubo", "d": "Il cubo della finestra è il riquadro dell’oggetto: clicchi uno dei 27 nodi (angoli, metà degli spigoli, centri delle facce, centro) e l’origine va lì. Passando sui nodi vedi dove sono: davanti, al centro o dietro."}, {"t": "Tre orientamenti", "d": "Mantieni: le direzioni non cambiano. Modello: gli assi diventano paralleli a quelli del modello. Adatta: gli assi seguono la geometria, con Z perpendicolare alla faccia più grande."}, {"t": "Tutte le copie insieme", "d": "Su un componente cambiano gli assi della definizione: tutte le copie restano al loro posto e prendono i nuovi assi."}, {"t": "Più oggetti in una volta", "d": "Vale per tutti i gruppi e componenti selezionati; gli oggetti bloccati vengono saltati."}, {"t": "Impostazioni", "d": "Dalle Impostazioni (ingranaggio o menu) puoi far applicare subito le ultime scelte senza aprire la finestra, e scegliere se chiuderla dopo Applica."}],
+    steps: ["Seleziona uno o più gruppi o componenti.", "Premi robo reaxis, clicca sul cubo il nodo dell’origine e scegli l’orientamento.", "Premi Applica: cambiano gli assi, la geometria resta dov’è. Un solo Ctrl+Z annulla tutto."],
+    how: [{"t": "Solo gli assi", "d": "La geometria dentro il gruppo o la definizione viene spostata al contrario di quanto si spostano gli assi: nel modello niente si muove."}, {"t": "Da sapere", "d": "Con più copie dello stesso componente selezionate decide la prima. Con scale diverse sugli assi si sposta solo l’origine; con oggetti specchiati Modello non cambia la direzione."}],
+    pros: ["La geometria non si muove", "Origine in 27 punti con un clic", "Tutte le copie di un componente insieme", "Windows e macOS"],
+    solves: [{"p": "Gli assi di un gruppo o di un componente sono in un punto scomodo o storti.", "s": "Un clic sul cubo e Applica li mettono dove servono, senza spostare niente."}, {"p": "Cambiare gli assi a mano con Modifica assi richiede di entrare nell’oggetto e cliccare tre punti.", "s": "robo reaxis lo fa per tutti gli oggetti selezionati in una volta."}],
+    specs: [["Menu", "Robo Tool › robo reaxis (con le Impostazioni)"], ["Barra strumenti", "1 pulsante"], ["Annullamento", "Un’operazione: Ctrl+Z"], ["Richiede", "SketchUp 2023 o successivo"], ["Lingue", "Italiano, English, Deutsch, Français, Español"]]
+  },
+
   /* --------------------------------------------------------------- IMPORTER */
   {
     id: 'importer', name: 'robo importer', version: '0.15', os: 'both', category: 'Produttività', hue: 205,
@@ -1009,6 +1025,7 @@ var TOOLBARS = {
     [{ i: 'union.png', l: 'Unione' }, { i: 'subtract.png', l: 'Sottrazione' }, { i: 'intersect.png', l: 'Intersezione' }, { i: 'trim.png', l: 'Taglia' }, { i: 'split.png', l: 'Dividi' }, { i: 'single.png', l: 'Unione di un oggetto' }],
     [{ i: 'options.png', l: 'Opzioni' }]] },
   cut: { name: 'robo cut', groups: [[{ i: 'cut.png', l: "robo cut: taglia con un piano" }]] },
+  reaxis: { name: 'robo reaxis', groups: [[{ i: 'reaxis.png', l: "robo reaxis: assi di gruppi e componenti" }]] },
   extrudebot: { name: 'robo extrudeBot', groups: [[{ i: 'extrudebot.png', l: "robo extrudeBot: estrudi lungo un percorso" }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },
   exporter: { name: 'robo exporter', groups: [[{ i: 'export.png', l: "Esporta in DWG, DXF, OBJ, GLB, FBX o SKP" }]] },
