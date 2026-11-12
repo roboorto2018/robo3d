@@ -797,7 +797,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- FILLET 3D */
   {
-    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.3', os: 'both', category: 'Modellazione', hue: 175,
+    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.4', os: 'both', category: 'Modellazione', hue: 175,
     video: 'DTb7IONp4FA',
     images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.jpg', 'assets/img/screenshots/fillet_3d-4.jpg', 'assets/img/screenshots/fillet_3d-5.jpg', 'assets/img/screenshots/fillet_3d-6.jpg', 'assets/img/screenshots/fillet_3d-7.jpg', 'assets/img/screenshots/fillet_3d-8.jpg', 'assets/img/screenshots/fillet_3d-9.jpg', 'assets/img/screenshots/fillet_3d-10.png'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
@@ -876,7 +876,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   },
   /* ------------------------------------------------------------------- CUT */
   {
-    id: 'cut', name: 'robo cut', version: '0.5', os: 'both', category: 'Modellazione', hue: 200,
+    id: 'cut', name: 'robo cut', version: '0.6', os: 'both', category: 'Modellazione', hue: 200,
     video: 'xjDZstknt6k',
     donationPrompt: true,
     images: ['assets/img/screenshots/cut-3.png', 'assets/img/screenshots/cut-4.png', 'assets/img/screenshots/cut-1.png', 'assets/img/screenshots/cut-2.png'],
