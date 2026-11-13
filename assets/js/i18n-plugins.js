@@ -505,7 +505,7 @@ I18N_PLUGINS.en.placement = {
     { p: 'Copies that go into each other ruin the render.', s: 'The Distance between objects keeps them apart on their real boxes, or lets them go into each other as much as you want.' },
     { p: 'The right face is inside a group or a component.', s: 'The cursor finds it at any depth and a click picks it.' }
   ],
-  specs: [['Window', '400 × 567px, expandable'], ['Menu', 'Robo Tool › robo placement'], ['Quantity', '1 – 1000 copies'], ['Collision', 'Distance between the boxes: from minus the object size to the face diagonal'], ['Languages', '5 (IT, EN, DE, FR, ES)'], ['Undo', 'One single Ctrl+Z']]
+  specs: [['Window', '400 × 567px, expandable'], ['Menu', 'Robo Tool › robo placement'], ['Quantity', '1 – 1000 copies, with the Max items limit (50 when it opens)'], ['Collision', 'Distance between the boxes: from minus the object size to the face diagonal'], ['Languages', '5 (IT, EN, DE, FR, ES)'], ['Undo', 'One single Ctrl+Z']]
 };
 I18N_PLUGINS.de.placement = {
   tagline: 'Verteilt Objekte zufällig auf jeder Oberfläche.',
@@ -523,7 +523,7 @@ I18N_PLUGINS.de.placement = {
     { p: 'Kopien, die sich durchdringen, ruinieren das Rendering.', s: 'Der Abstand zwischen Objekten hält sie an ihren echten Boxen getrennt oder lässt sie sich so weit durchdringen, wie du willst.' },
     { p: 'Die richtige Fläche liegt in einer Gruppe oder Komponente.', s: 'Der Cursor findet sie in jeder Tiefe und ein Klick wählt sie.' }
   ],
-  specs: [['Fenster', '400 × 567px, erweiterbar'], ['Menü', 'Robo Tool › robo placement'], ['Menge', '1 – 1000 Kopien'], ['Kollision', 'Abstand der Boxen: von minus der Objektgröße bis zur Flächendiagonale'], ['Sprachen', '5 (IT, EN, DE, FR, ES)'], ['Rückgängig', 'Ein einziges Strg+Z']]
+  specs: [['Fenster', '400 × 567px, erweiterbar'], ['Menü', 'Robo Tool › robo placement'], ['Menge', '1 – 1000 Kopien, mit der Grenze Max. Objekte (50 beim Öffnen)'], ['Kollision', 'Abstand der Boxen: von minus der Objektgröße bis zur Flächendiagonale'], ['Sprachen', '5 (IT, EN, DE, FR, ES)'], ['Rückgängig', 'Ein einziges Strg+Z']]
 };
 I18N_PLUGINS.fr.placement = {
   tagline: 'Distribue des objets aléatoirement sur n\'importe quelle surface.',
@@ -541,7 +541,7 @@ I18N_PLUGINS.fr.placement = {
     { p: 'Les copies qui s’interpénètrent gâchent le rendu.', s: 'La Distance entre les objets les garde séparées sur leurs vraies boîtes, ou les laisse s’interpénétrer autant que vous voulez.' },
     { p: 'La bonne face est dans un groupe ou un composant.', s: 'Le curseur la trouve à n’importe quelle profondeur et un clic la choisit.' }
   ],
-  specs: [['Fenêtre', '400 × 567px, extensible'], ['Menu', 'Robo Tool › robo placement'], ['Quantité', '1 – 1000 copies'], ['Collision', 'Distance entre les boîtes : de moins la taille de l’objet à la diagonale de la face'], ['Langues', '5 (IT, EN, DE, FR, ES)'], ['Annulation', 'Un seul Ctrl+Z']]
+  specs: [['Fenêtre', '400 × 567px, extensible'], ['Menu', 'Robo Tool › robo placement'], ['Quantité', '1 – 1000 copies, avec la limite Max objets (50 à l’ouverture)'], ['Collision', 'Distance entre les boîtes : de moins la taille de l’objet à la diagonale de la face'], ['Langues', '5 (IT, EN, DE, FR, ES)'], ['Annulation', 'Un seul Ctrl+Z']]
 };
 I18N_PLUGINS.es.placement = {
   tagline: 'Distribuye objetos al azar sobre cualquier superficie.',
@@ -559,7 +559,7 @@ I18N_PLUGINS.es.placement = {
     { p: 'Las copias que se compenetran estropean el render.', s: 'La Distancia entre objetos las mantiene separadas en sus cajas reales, o las deja compenetrarse cuanto quieras.' },
     { p: 'La cara correcta está dentro de un grupo o componente.', s: 'El cursor la encuentra a cualquier profundidad y un clic la elige.' }
   ],
-  specs: [['Ventana', '400 × 567px, expandible'], ['Menú', 'Robo Tool › robo placement'], ['Cantidad', '1 – 1000 copias'], ['Colisión', 'Distancia entre cajas: de menos el tamaño del objeto a la diagonal de la cara'], ['Idiomas', '5 (IT, EN, DE, FR, ES)'], ['Deshacer', 'Un solo Ctrl+Z']]
+  specs: [['Ventana', '400 × 567px, expandible'], ['Menú', 'Robo Tool › robo placement'], ['Cantidad', '1 – 1000 copias, con el límite Máx. objetos (50 al abrir)'], ['Colisión', 'Distancia entre cajas: de menos el tamaño del objeto a la diagonal de la cara'], ['Idiomas', '5 (IT, EN, DE, FR, ES)'], ['Deshacer', 'Un solo Ctrl+Z']]
 };
 
 /* ----------------------------------------------------------------- PROXY */
@@ -1647,7 +1647,8 @@ I18N_PLUGINS.en.placement.main = [
   { t: 'Copies the same as the object', d: 'Every copy has the scale of the chosen object (also different on the three axes, or mirrored), its sizes, material, tag and dynamic component options; the random scale is added on top.' },
   { t: 'Controlled variations', d: 'You set quantity, minimum and maximum scale and rotation. With the same starting value you get the same result.' },
   { t: 'Collision on the real boxes', d: 'One single Distance between objects, measured on the real box of every copy: 0 lets them touch without going into each other, a positive value moves them apart (until only one is left on the face), a negative one lets them go into each other until they overlap.' },
-  { t: 'Live preview', d: 'You see the copies on the model while you adjust the values, as boxes or as the simplified real object; geometry is created only when you press Apply.' }
+  { t: 'Live preview', d: 'You see the copies on the model while you adjust the values, as boxes or as the simplified real object; geometry is created only when you press Apply.' },
+  { t: 'Safety limit', d: 'Max items (in red) is the limit of the quantity, 50 when the window opens: raise it with − and + or by typing, up to 1000. Above 50 a message warns that many copies slow SketchUp down and can freeze it: save the model first.' }
 ];
 I18N_PLUGINS.en.placement.how = [
   { t: 'The problem it solves', d: 'Placing dozens of trees, rocks or bushes on a terrain by hand is long, and the result almost always looks too regular. Copies that go into each other ruin the render. robo placement distributes up to 1000 copies in one single operation, with random variations and the distance you want between one copy and the next.' },
@@ -1668,7 +1669,8 @@ I18N_PLUGINS.de.placement.main = [
   { t: 'Kopien wie das Objekt', d: 'Jede Kopie hat die Skalierung des gewählten Objekts (auch auf den drei Achsen verschieden oder gespiegelt), seine Maße, sein Material, seinen Tag und die Optionen dynamischer Komponenten; die zufällige Skalierung kommt dazu.' },
   { t: 'Kontrollierte Variationen', d: 'Du legst Menge, minimale und maximale Skalierung und Drehung fest. Mit demselben Startwert erhältst du dasselbe Ergebnis.' },
   { t: 'Kollision an den echten Boxen', d: 'Ein einziger Abstand zwischen Objekten, gemessen an der echten Box jeder Kopie: 0 lässt sie sich berühren, ohne sich zu durchdringen, ein positiver Wert rückt sie auseinander (bis nur eine auf der Fläche bleibt), ein negativer lässt sie sich durchdringen, bis sie übereinander liegen.' },
-  { t: 'Live-Vorschau', d: 'Du siehst die Kopien im Modell, während du die Werte änderst, als Boxen oder als vereinfachtes echtes Objekt; die Geometrie entsteht erst, wenn du Anwenden drückst.' }
+  { t: 'Live-Vorschau', d: 'Du siehst die Kopien im Modell, während du die Werte änderst, als Boxen oder als vereinfachtes echtes Objekt; die Geometrie entsteht erst, wenn du Anwenden drückst.' },
+  { t: 'Sicherheitsgrenze', d: 'Max. Objekte (in Rot) ist die Grenze der Menge, 50 beim Öffnen des Fensters: mit − und + oder durch Eingabe bis 1000 erhöhen. Über 50 warnt eine Meldung, dass viele Kopien SketchUp verlangsamen und einfrieren können: speichern Sie das Modell vorher.' }
 ];
 I18N_PLUGINS.de.placement.how = [
   { t: 'Das Problem, das es löst', d: 'Dutzende Bäume, Steine oder Büsche von Hand auf einem Gelände zu platzieren dauert lange, und das Ergebnis wirkt fast immer zu regelmäßig. Kopien, die sich durchdringen, ruinieren das Rendering. robo placement verteilt bis zu 1000 Kopien in einem Arbeitsgang, mit zufälligen Variationen und dem gewünschten Abstand zwischen den Kopien.' },
@@ -1689,7 +1691,8 @@ I18N_PLUGINS.fr.placement.main = [
   { t: 'Copies identiques à l’objet', d: 'Chaque copie a l’échelle de l’objet choisi (même différente sur les trois axes ou en miroir), ses dimensions, sa matière, sa balise et les options des composants dynamiques ; l’échelle aléatoire s’ajoute par-dessus.' },
   { t: 'Variations contrôlées', d: 'Vous réglez la quantité, l’échelle minimale et maximale et la rotation. Avec la même valeur de départ vous obtenez le même résultat.' },
   { t: 'Collision sur les vraies boîtes', d: 'Une seule Distance entre les objets, mesurée sur la vraie boîte de chaque copie : 0 les laisse se toucher sans s’interpénétrer, une valeur positive les écarte (jusqu’à n’en laisser qu’une sur la face), une négative les laisse s’interpénétrer jusqu’à se superposer.' },
-  { t: 'Aperçu en direct', d: 'Vous voyez les copies sur le modèle pendant que vous réglez les valeurs, en boîtes ou en objet réel simplifié ; la géométrie n’est créée que lorsque vous appuyez sur Appliquer.' }
+  { t: 'Aperçu en direct', d: 'Vous voyez les copies sur le modèle pendant que vous réglez les valeurs, en boîtes ou en objet réel simplifié ; la géométrie n’est créée que lorsque vous appuyez sur Appliquer.' },
+  { t: 'Limite de sécurité', d: 'Max objets (en rouge) est la limite de la quantité, 50 à l’ouverture de la fenêtre : augmentez-la avec − et + ou en tapant, jusqu’à 1000. Au-delà de 50 un message prévient que de nombreuses copies ralentissent SketchUp et peuvent le bloquer : enregistrez d’abord le modèle.' }
 ];
 I18N_PLUGINS.fr.placement.how = [
   { t: 'Le problème qu’il résout', d: 'Placer à la main des dizaines d’arbres, de rochers ou de buissons sur un terrain est long, et le résultat paraît presque toujours trop régulier. Les copies qui s’interpénètrent gâchent le rendu. robo placement répartit jusqu’à 1000 copies en une seule opération, avec des variations aléatoires et la distance voulue entre les copies.' },
@@ -1710,7 +1713,8 @@ I18N_PLUGINS.es.placement.main = [
   { t: 'Copias iguales al objeto', d: 'Cada copia tiene la escala del objeto elegido (también distinta en los tres ejes o reflejada), sus medidas, su material, su etiqueta y las opciones de los componentes dinámicos; la escala aleatoria se añade encima.' },
   { t: 'Variaciones controladas', d: 'Fijas cantidad, escala mínima y máxima y rotación. Con el mismo valor inicial obtienes el mismo resultado.' },
   { t: 'Colisión en las cajas reales', d: 'Una sola Distancia entre objetos, medida en la caja real de cada copia: 0 las deja tocarse sin compenetrarse, un valor positivo las aleja (hasta dejar una sola en la cara), uno negativo las deja compenetrarse hasta superponerse.' },
-  { t: 'Vista previa en vivo', d: 'Ves las copias en el modelo mientras ajustas los valores, como cajas o como el objeto real simplificado; la geometría se crea solo cuando pulsas Aplicar.' }
+  { t: 'Vista previa en vivo', d: 'Ves las copias en el modelo mientras ajustas los valores, como cajas o como el objeto real simplificado; la geometría se crea solo cuando pulsas Aplicar.' },
+  { t: 'Límite de seguridad', d: 'Máx. objetos (en rojo) es el límite de la cantidad, 50 al abrir la ventana: súbelo con − y + o escribiendo, hasta 1000. Por encima de 50 un mensaje avisa de que muchas copias ralentizan SketchUp y pueden bloquearlo: guarda antes el modelo.' }
 ];
 I18N_PLUGINS.es.placement.how = [
   { t: 'El problema que resuelve', d: 'Colocar a mano decenas de árboles, rocas o arbustos en un terreno es largo, y el resultado casi siempre parece demasiado regular. Las copias que se compenetran estropean el render. robo placement distribuye hasta 1000 copias en una sola operación, con variaciones aleatorias y la distancia que quieras entre una copia y otra.' },
@@ -2735,12 +2739,13 @@ I18N_PLUGINS.en.quick_align = {
   main: [
     { t: 'Nine alignments on three axes', d: 'Red axis: left, center, right. Blue axis (height): bottom, center, top. Green axis: front, center, back.' },
     { t: 'General axes or group axes', d: 'As the base of the alignment you can use the general axes of the model or those of the group or component you have opened for editing. Useful when the group is rotated or tilted.' },
-    { t: 'The choice is remembered', d: 'With two entries at the bottom of the menu you choose which axes to use, and SketchUp remembers it the next time too.' },
+    { t: 'Axes button', d: 'The last button of the toolbar switches from the axes of the open group to the absolute axes of the model. It stays pressed while it is on and a light violet label at the bottom left of the view reminds you; every time SketchUp starts it is off.' },
     { t: 'A single Ctrl+Z', d: 'The whole alignment is one operation: if you do not like it, a single command undoes it.' },
     { t: 'Toolbar and menu', d: 'Nine buttons in three groups, one per colour, and the same entries in the Extensions menu, with the icon in front.' },
-    { t: 'Help in five languages', d: 'A help window explains every alignment with the icons, and menus and messages follow the language of SketchUp.' }
+    { t: 'Help in five languages', d: 'A help window explains every alignment with the icons, and the language can also be chosen from the menu robo quick align › Language: Help, messages and the label in the view change at once.' },
+    { t: 'Equal spaces', d: 'The Automatic distribution button stays on: while it is on, every alignment also spaces the objects equally between their axes. Then type a distance in the Measurements box and press Enter to spread them with that value.' }
   ],
-  steps: ['Select two or more groups or components.', 'Choose the axes to use (general or of the open group) from the robo quick align menu.', 'Click one of the nine buttons: the objects line up, and a single Ctrl+Z undoes everything.'],
+  steps: ['Select two or more groups or components.', 'Choose the axes with the Axes button (open group or absolute axes of the model); for equal spaces also switch on Automatic distribution.', 'Click one of the nine buttons: the objects line up, and a single Ctrl+Z undoes everything.'],
   how: [
     { t: 'The problem it solves', d: 'Aligning objects in SketchUp means measuring positions and moving them one at a time, or trusting your eye. With many objects, or objects of different sizes, it is slow and imprecise: robo quick align does it in one click.' },
     { t: 'Step 1 · Select', d: 'Select two or more groups or components. Loose faces and edges, and locked objects, are ignored: at least two objects are needed.' },
@@ -2748,14 +2753,15 @@ I18N_PLUGINS.en.quick_align = {
     { t: 'General axes or group axes', d: 'Alignments are always calculated against a set of axes, and you can choose which. With the general axes of the model, left and right, top and bottom, front and back are SketchUp’s absolute ones. With the axes of the group or component, the axes of the container you opened for editing apply instead: if that group is rotated by 30 degrees, “left” means left according to the group, not according to the model. The two checked entries are at the bottom of the robo quick align menu; outside any group the two systems coincide.' },
     { t: 'How it is calculated', d: 'For every object the bounding box is taken and its minimum and maximum along the chosen axis are derived. From all the objects the minimum, the maximum and the center of the whole selection are found, and every object is moved by the distance it lacks to reach the reference. The box of a rotated object can be a little larger than the real geometry.' },
     { t: 'A single undo', d: 'All the moves are enclosed in one operation: a single Ctrl+Z puts the objects back where they were. If something fails, the plugin cancels everything and tells you, without leaving the model half done.' },
-    { t: 'A concrete example', d: 'You have five windows of different heights on a facade and you want them all to have the same lintel. You select them, press “Align top” (blue axis) and the tops go to the same level. Then press “Align center” on the red axis to put them on a single vertical line. If the facade group is tilted, open the group and leave the group axes: the alignments follow the tilt of the facade.' }
+    { t: 'A concrete example', d: 'You have five windows of different heights on a facade and you want them all to have the same lintel. You select them, press “Align top” (blue axis) and the tops go to the same level. Then press “Align center” on the red axis to put them on a single vertical line. If the facade group is tilted, open the group and leave the group axes: the alignments follow the tilt of the facade.' },
+    { t: 'Automatic distribution', d: 'With the Automatic distribution button on, every alignment also spreads the objects along the axis on which they are most spread out: the first and the last stay where they are and the centres of the ones in between go to the same distance, whatever their size. At least three objects are needed. Then the Measurements box at the bottom right shows the distance between the axes: type another value and press Enter, and the objects are spread again with the first one fixed. A single Ctrl+Z undoes the alignment and the distribution together.' }
   ],
-  pros: ['Nine alignments in one click', 'Model or group axes, your choice', 'A single Ctrl+Z undoes everything', 'Help with icons in five languages'],
+  pros: ['Nine alignments in one click', 'Model or group axes, your choice', 'A single Ctrl+Z undoes everything', 'Help with icons in five languages', 'Equal spaces, also with a typed distance'],
   solves: [
     { p: 'Aligning objects of different sizes by hand is slow and imprecise.', s: 'One click brings all the objects to the same side or to the same center line.' },
     { p: 'Inside a rotated group the axes of the model do not match those of the drawing.', s: 'You can align along the axes of the open group, or along the general ones.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo quick align'], ['Toolbar', '9 buttons in 3 groups (red, blue, green)'], ['Reference axes', 'Of the model, or of the open group or component'], ['Undo', 'A single Ctrl+Z'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo quick align'], ['Toolbar', '11 buttons: 9 alignments in 3 groups (red, blue, green), Automatic distribution, Axes'], ['Reference axes', 'Of the model, or of the open group or component'], ['Undo', 'A single Ctrl+Z'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_PLUGINS.de.quick_align = {
   tagline: 'Gruppen und Komponenten mit einem Klick an den Achsen ausrichten.',
@@ -2767,12 +2773,13 @@ I18N_PLUGINS.de.quick_align = {
   main: [
     { t: 'Neun Ausrichtungen auf drei Achsen', d: 'Rote Achse: links, zentriert, rechts. Blaue Achse (Höhe): unten, zentriert, oben. Grüne Achse: vorne, zentriert, hinten.' },
     { t: 'Allgemeine Achsen oder Gruppenachsen', d: 'Als Grundlage der Ausrichtung können Sie die allgemeinen Achsen des Modells oder die der Gruppe oder Komponente verwenden, die Sie zum Bearbeiten geöffnet haben. Nützlich, wenn die Gruppe gedreht oder geneigt ist.' },
-    { t: 'Die Wahl wird gespeichert', d: 'Mit zwei Einträgen am Ende des Menüs wählen Sie die Achsen, und SketchUp merkt sich das auch beim nächsten Mal.' },
+    { t: 'Achsen-Schaltfläche', d: 'Die letzte Schaltfläche der Leiste wechselt von den Achsen der geöffneten Gruppe zu den absoluten Achsen des Modells. Sie bleibt gedrückt, solange sie an ist, und eine hellviolette Beschriftung unten links in der Ansicht erinnert daran; bei jedem Start von SketchUp ist sie aus.' },
     { t: 'Ein einziges Strg+Z', d: 'Die gesamte Ausrichtung ist eine einzige Operation: Gefällt sie nicht, macht ein einziger Befehl sie rückgängig.' },
     { t: 'Leiste und Menü', d: 'Neun Schaltflächen in drei Gruppen, eine pro Farbe, und dieselben Einträge im Menü Erweiterungen, mit dem Symbol davor.' },
-    { t: 'Hilfe in fünf Sprachen', d: 'Ein Hilfefenster erklärt jede Ausrichtung mit den Symbolen, und Menüs und Meldungen folgen der Sprache von SketchUp.' }
+    { t: 'Hilfe in fünf Sprachen', d: 'Ein Hilfefenster erklärt jede Ausrichtung mit den Symbolen, und die Sprache lässt sich auch im Menü robo quick align › Sprache wählen: Hilfe, Meldungen und die Beschriftung in der Ansicht ändern sich sofort.' },
+    { t: 'Gleiche Abstände', d: 'Die Schaltfläche Automatische Verteilung bleibt an: Solange sie an ist, verteilt jedes Ausrichten die Objekte auch mit gleichen Abständen zwischen ihren Achsen. Danach einen Abstand in das Feld Maße eingeben und Enter drücken, um sie mit diesem Wert zu verteilen.' }
   ],
-  steps: ['Wählen Sie zwei oder mehr Gruppen oder Komponenten.', 'Wählen Sie im Menü robo quick align die zu verwendenden Achsen (allgemein oder der geöffneten Gruppe).', 'Klicken Sie auf eine der neun Schaltflächen: Die Objekte richten sich aus, und ein einziges Strg+Z macht alles rückgängig.'],
+  steps: ['Wählen Sie zwei oder mehr Gruppen oder Komponenten.', 'Wählen Sie die Achsen mit der Achsen-Schaltfläche (geöffnete Gruppe oder absolute Achsen des Modells); für gleiche Abstände schalten Sie auch Automatische Verteilung ein.', 'Klicken Sie auf eine der neun Schaltflächen: Die Objekte richten sich aus, und ein einziges Strg+Z macht alles rückgängig.'],
   how: [
     { t: 'Das Problem, das es löst', d: 'Objekte in SketchUp auszurichten bedeutet, Positionen zu messen und die Objekte einzeln zu verschieben, oder sich auf das Auge zu verlassen. Bei vielen oder unterschiedlich großen Objekten ist das langsam und ungenau: robo quick align erledigt es mit einem Klick.' },
     { t: 'Schritt 1 · Auswählen', d: 'Wählen Sie zwei oder mehr Gruppen oder Komponenten. Lose Flächen und Kanten sowie gesperrte Objekte werden ignoriert: Es sind mindestens zwei Objekte nötig.' },
@@ -2780,14 +2787,15 @@ I18N_PLUGINS.de.quick_align = {
     { t: 'Allgemeine Achsen oder Gruppenachsen', d: 'Ausrichtungen werden immer gegen ein Achsensystem berechnet, und Sie können wählen, gegen welches. Mit den allgemeinen Achsen des Modells sind links und rechts, oben und unten, vorne und hinten die absoluten von SketchUp. Mit den Achsen der Gruppe oder Komponente gelten stattdessen die Achsen des Containers, den Sie zum Bearbeiten geöffnet haben: Ist diese Gruppe um 30 Grad gedreht, bedeutet „links“ links gemäß der Gruppe, nicht gemäß dem Modell. Die beiden Einträge mit Häkchen stehen am Ende des Menüs robo quick align; außerhalb jeder Gruppe sind beide Systeme gleich.' },
     { t: 'So wird berechnet', d: 'Für jedes Objekt wird der Begrenzungsrahmen genommen und daraus Minimum und Maximum entlang der gewählten Achse abgeleitet. Aus allen Objekten ergeben sich Minimum, Maximum und Mitte der gesamten Auswahl, und jedes Objekt wird um die Strecke verschoben, die ihm bis zur Referenz fehlt. Der Rahmen eines gedrehten Objekts kann etwas größer sein als die tatsächliche Geometrie.' },
     { t: 'Ein einziges Rückgängig', d: 'Alle Verschiebungen sind in einer Operation zusammengefasst: Ein einziges Strg+Z stellt die Objekte wieder her. Schlägt etwas fehl, bricht das Plugin alles ab und sagt es Ihnen, ohne das Modell halb fertig zu lassen.' },
-    { t: 'Ein konkretes Beispiel', d: 'Sie haben fünf Fenster unterschiedlicher Höhe an einer Fassade und alle sollen denselben Sturz haben. Sie wählen sie aus, drücken „Oben ausrichten“ (blaue Achse), und die Oberkanten gehen auf dieselbe Höhe. Dann „Zentriert ausrichten“ auf der roten Achse, um sie auf eine senkrechte Linie zu bringen. Ist die Fassadengruppe geneigt, öffnen Sie die Gruppe und lassen die Gruppenachsen: Die Ausrichtungen folgen der Neigung der Fassade.' }
+    { t: 'Ein konkretes Beispiel', d: 'Sie haben fünf Fenster unterschiedlicher Höhe an einer Fassade und alle sollen denselben Sturz haben. Sie wählen sie aus, drücken „Oben ausrichten“ (blaue Achse), und die Oberkanten gehen auf dieselbe Höhe. Dann „Zentriert ausrichten“ auf der roten Achse, um sie auf eine senkrechte Linie zu bringen. Ist die Fassadengruppe geneigt, öffnen Sie die Gruppe und lassen die Gruppenachsen: Die Ausrichtungen folgen der Neigung der Fassade.' },
+    { t: 'Automatische Verteilung', d: 'Mit eingeschalteter Automatischer Verteilung verteilt jedes Ausrichten die Objekte auch entlang der Achse, auf der sie am weitesten gestreut sind: Das erste und das letzte bleiben stehen, die Mittelpunkte der Objekte dazwischen bekommen denselben Abstand, egal wie groß sie sind. Es braucht mindestens drei Objekte. Danach zeigt das Feld Maße unten rechts den Abstand zwischen den Achsen: einen anderen Wert eingeben und Enter drücken, und die Objekte werden neu verteilt, das erste bleibt stehen. Ein einziges Strg+Z macht Ausrichten und Verteilen zusammen rückgängig.' }
   ],
-  pros: ['Neun Ausrichtungen mit einem Klick', 'Achsen des Modells oder der Gruppe, nach Wahl', 'Ein einziges Strg+Z macht alles rückgängig', 'Hilfe mit Symbolen in fünf Sprachen'],
+  pros: ['Neun Ausrichtungen mit einem Klick', 'Achsen des Modells oder der Gruppe, nach Wahl', 'Ein einziges Strg+Z macht alles rückgängig', 'Hilfe mit Symbolen in fünf Sprachen', 'Gleiche Abstände, auch mit eingegebenem Abstand'],
   solves: [
     { p: 'Objekte unterschiedlicher Größe von Hand auszurichten ist langsam und ungenau.', s: 'Ein Klick bringt alle Objekte an dieselbe Seite oder auf dieselbe Mittellinie.' },
     { p: 'In einer gedrehten Gruppe stimmen die Achsen des Modells nicht mit denen der Zeichnung überein.', s: 'Sie können nach den Achsen der geöffneten Gruppe oder nach den allgemeinen ausrichten.' }
   ],
-  specs: [['Menü', 'Robo Tool › robo quick align'], ['Symbolleiste', '9 Schaltflächen in 3 Gruppen (rot, blau, grün)'], ['Bezugsachsen', 'Des Modells oder der geöffneten Gruppe bzw. Komponente'], ['Rückgängig', 'Ein einziges Strg+Z'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menü', 'Robo Tool › robo quick align'], ['Symbolleiste', '11 Schaltflächen: 9 Ausrichtungen in 3 Gruppen (rot, blau, grün), Automatische Verteilung, Achsen'], ['Bezugsachsen', 'Des Modells oder der geöffneten Gruppe bzw. Komponente'], ['Rückgängig', 'Ein einziges Strg+Z'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_PLUGINS.fr.quick_align = {
   tagline: 'Alignez groupes et composants sur les axes, en un clic.',
@@ -2799,12 +2807,13 @@ I18N_PLUGINS.fr.quick_align = {
   main: [
     { t: 'Neuf alignements sur trois axes', d: 'Axe rouge : gauche, centre, droite. Axe bleu (hauteur) : bas, centre, haut. Axe vert : devant, centre, derrière.' },
     { t: 'Axes généraux ou axes du groupe', d: 'Comme base de l’alignement, vous pouvez utiliser les axes généraux du modèle ou ceux du groupe ou composant que vous avez ouvert pour le modifier. Utile quand le groupe est pivoté ou incliné.' },
-    { t: 'Le choix est mémorisé', d: 'Avec deux entrées en bas du menu, vous choisissez les axes à utiliser, et SketchUp s’en souvient aussi à la prochaine ouverture.' },
+    { t: 'Bouton Axes', d: 'Le dernier bouton de la barre passe des axes du groupe ouvert aux axes absolus du modèle. Il reste enfoncé tant qu’il est actif et une étiquette violet clair en bas à gauche de la vue le rappelle ; à chaque démarrage de SketchUp il est désactivé.' },
     { t: 'Un seul Ctrl+Z', d: 'Tout l’alignement est une seule opération : s’il ne vous plaît pas, une seule commande l’annule.' },
     { t: 'Barre et menu', d: 'Neuf boutons en trois groupes, un par couleur, et les mêmes entrées dans le menu Extensions, avec l’icône devant.' },
-    { t: 'Aide en cinq langues', d: 'Une fenêtre d’aide explique chaque alignement avec les icônes, et menus et messages suivent la langue de SketchUp.' }
+    { t: 'Aide en cinq langues', d: 'Une fenêtre d’aide explique chaque alignement avec les icônes, et la langue se choisit aussi dans le menu robo quick align › Langue : aide, messages et étiquette dans la vue changent tout de suite.' },
+    { t: 'Espaces égaux', d: 'Le bouton Répartition automatique reste actif : tant qu’il l’est, chaque alignement répartit aussi les objets à espaces égaux entre leurs axes. Tapez ensuite une distance dans la boîte Mesures et appuyez sur Entrée pour les répartir avec cette valeur.' }
   ],
-  steps: ['Sélectionnez deux groupes ou composants ou plus.', 'Choisissez les axes à utiliser (généraux ou du groupe ouvert) dans le menu robo quick align.', 'Cliquez sur l’un des neuf boutons : les objets s’alignent, et un seul Ctrl+Z annule tout.'],
+  steps: ['Sélectionnez deux groupes ou composants ou plus.', 'Choisissez les axes avec le bouton Axes (groupe ouvert ou axes absolus du modèle) ; pour des espaces égaux, activez aussi la Répartition automatique.', 'Cliquez sur l’un des neuf boutons : les objets s’alignent, et un seul Ctrl+Z annule tout.'],
   how: [
     { t: 'Le problème résolu', d: 'Aligner des objets dans SketchUp, c’est mesurer des positions et les déplacer un par un, ou se fier à l’œil. Avec beaucoup d’objets, ou d’objets de tailles différentes, c’est long et imprécis : robo quick align le fait en un clic.' },
     { t: 'Étape 1 · Sélectionnez', d: 'Sélectionnez deux groupes ou composants ou plus. Les faces et arêtes isolées, ainsi que les objets verrouillés, sont ignorés : il faut au moins deux objets.' },
@@ -2812,14 +2821,15 @@ I18N_PLUGINS.fr.quick_align = {
     { t: 'Axes généraux ou axes du groupe', d: 'Les alignements sont toujours calculés par rapport à un système d’axes, et vous pouvez choisir lequel. Avec les axes généraux du modèle, gauche et droite, haut et bas, devant et derrière sont ceux, absolus, de SketchUp. Avec les axes du groupe ou composant, ce sont les axes du conteneur que vous avez ouvert pour le modifier : si ce groupe est pivoté de 30 degrés, « à gauche » signifie à gauche selon le groupe, pas selon le modèle. Les deux entrées cochées sont en bas du menu robo quick align ; en dehors de tout groupe, les deux systèmes coïncident.' },
     { t: 'Comment c’est calculé', d: 'Pour chaque objet, on prend la boîte englobante et on en tire le minimum et le maximum le long de l’axe choisi. De tous les objets, on tire le minimum, le maximum et le centre de toute la sélection, et chaque objet est déplacé de la distance qui lui manque pour atteindre la référence. La boîte d’un objet pivoté peut être un peu plus grande que la géométrie réelle.' },
     { t: 'Une seule annulation', d: 'Tous les déplacements sont réunis en une seule opération : un seul Ctrl+Z remet les objets où ils étaient. Si quelque chose échoue, le plugin annule tout et vous le dit, sans laisser le modèle à moitié fait.' },
-    { t: 'Un exemple concret', d: 'Vous avez cinq fenêtres de hauteurs différentes sur une façade et vous voulez qu’elles aient toutes le même linteau. Vous les sélectionnez, appuyez sur « Aligner en haut » (axe bleu) et les sommets vont au même niveau. Puis « Aligner au centre » sur l’axe rouge pour les mettre sur une seule ligne verticale. Si le groupe de la façade est incliné, ouvrez le groupe et gardez les axes du groupe : les alignements suivent l’inclinaison de la façade.' }
+    { t: 'Un exemple concret', d: 'Vous avez cinq fenêtres de hauteurs différentes sur une façade et vous voulez qu’elles aient toutes le même linteau. Vous les sélectionnez, appuyez sur « Aligner en haut » (axe bleu) et les sommets vont au même niveau. Puis « Aligner au centre » sur l’axe rouge pour les mettre sur une seule ligne verticale. Si le groupe de la façade est incliné, ouvrez le groupe et gardez les axes du groupe : les alignements suivent l’inclinaison de la façade.' },
+    { t: 'Répartition automatique', d: 'Avec le bouton Répartition automatique actif, chaque alignement répartit aussi les objets le long de l’axe sur lequel ils sont le plus dispersés : le premier et le dernier ne bougent pas, et les centres de ceux du milieu se placent à la même distance, quelle que soit leur taille. Il faut au moins trois objets. Ensuite la boîte Mesures en bas à droite montre la distance entre les axes : tapez une autre valeur et appuyez sur Entrée, et les objets sont répartis de nouveau, le premier restant fixe. Un seul Ctrl+Z annule l’alignement et la répartition ensemble.' }
   ],
-  pros: ['Neuf alignements en un clic', 'Axes du modèle ou du groupe, au choix', 'Un seul Ctrl+Z annule tout', 'Aide avec icônes en cinq langues'],
+  pros: ['Neuf alignements en un clic', 'Axes du modèle ou du groupe, au choix', 'Un seul Ctrl+Z annule tout', 'Aide avec icônes en cinq langues', 'Espaces égaux, aussi avec une distance tapée'],
   solves: [
     { p: 'Aligner à la main des objets de tailles différentes est long et imprécis.', s: 'Un clic amène tous les objets sur le même côté ou sur la même ligne de centre.' },
     { p: 'Dans un groupe pivoté, les axes du modèle ne correspondent pas à ceux du dessin.', s: 'Vous pouvez aligner selon les axes du groupe ouvert, ou selon les axes généraux.' }
   ],
-  specs: [['Menu', 'Robo Tool › robo quick align'], ['Barre d’outils', '9 boutons en 3 groupes (rouge, bleu, vert)'], ['Axes de référence', 'Du modèle, ou du groupe ou composant ouvert'], ['Annulation', 'Un seul Ctrl+Z'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menu', 'Robo Tool › robo quick align'], ['Barre d’outils', '11 boutons : 9 alignements en 3 groupes (rouge, bleu, vert), Répartition automatique, Axes'], ['Axes de référence', 'Du modèle, ou du groupe ou composant ouvert'], ['Annulation', 'Un seul Ctrl+Z'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
 };
 I18N_PLUGINS.es.quick_align = {
   tagline: 'Alinea grupos y componentes en los ejes, con un clic.',
@@ -2831,12 +2841,13 @@ I18N_PLUGINS.es.quick_align = {
   main: [
     { t: 'Nueve alineaciones en tres ejes', d: 'Eje rojo: izquierda, centro, derecha. Eje azul (altura): abajo, centro, arriba. Eje verde: frente, centro, atrás.' },
     { t: 'Ejes generales o ejes del grupo', d: 'Como base de la alineación puedes usar los ejes generales del modelo o los del grupo o componente que has abierto para editarlo. Útil cuando el grupo está girado o inclinado.' },
-    { t: 'La elección se recuerda', d: 'Con dos entradas al final del menú eliges qué ejes usar, y SketchUp lo recuerda también la próxima vez.' },
+    { t: 'Botón Ejes', d: 'El último botón de la barra pasa de los ejes del grupo abierto a los ejes absolutos del modelo. Queda pulsado mientras está activo y una etiqueta violeta claro abajo a la izquierda de la vista lo recuerda; cada vez que se inicia SketchUp está apagado.' },
     { t: 'Un solo Ctrl+Z', d: 'Toda la alineación es una sola operación: si no te gusta, un solo comando la deshace.' },
     { t: 'Barra y menú', d: 'Nueve botones en tres grupos, uno por color, y las mismas entradas en el menú Extensiones, con el icono delante.' },
-    { t: 'Ayuda en cinco idiomas', d: 'Una ventana de ayuda explica cada alineación con los iconos, y los menús y mensajes siguen el idioma de SketchUp.' }
+    { t: 'Ayuda en cinco idiomas', d: 'Una ventana de ayuda explica cada alineación con los iconos, y el idioma también se elige en el menú robo quick align › Idioma: la ayuda, los mensajes y la etiqueta en la vista cambian enseguida.' },
+    { t: 'Espacios iguales', d: 'El botón Distribución automática queda activo: mientras lo está, cada alineación también reparte los objetos con espacios iguales entre sus ejes. Luego escribe una distancia en la casilla Medidas y pulsa Intro para repartirlos con ese valor.' }
   ],
-  steps: ['Selecciona dos o más grupos o componentes.', 'Elige los ejes a usar (generales o del grupo abierto) en el menú robo quick align.', 'Haz clic en uno de los nueve botones: los objetos se alinean, y un solo Ctrl+Z lo deshace todo.'],
+  steps: ['Selecciona dos o más grupos o componentes.', 'Elige los ejes con el botón Ejes (grupo abierto o ejes absolutos del modelo); para espacios iguales activa también la Distribución automática.', 'Haz clic en uno de los nueve botones: los objetos se alinean, y un solo Ctrl+Z lo deshace todo.'],
   how: [
     { t: 'El problema que resuelve', d: 'Alinear objetos en SketchUp significa medir posiciones y moverlos uno a uno, o fiarse del ojo. Con muchos objetos, o de tamaños distintos, es lento e impreciso: robo quick align lo hace con un clic.' },
     { t: 'Paso 1 · Selecciona', d: 'Selecciona dos o más grupos o componentes. Las caras y aristas sueltas, y los objetos bloqueados, se ignoran: se necesitan al menos dos objetos.' },
@@ -2844,19 +2855,20 @@ I18N_PLUGINS.es.quick_align = {
     { t: 'Ejes generales o ejes del grupo', d: 'Las alineaciones se calculan siempre respecto a un sistema de ejes, y puedes elegir cuál. Con los ejes generales del modelo, izquierda y derecha, arriba y abajo, frente y atrás son los absolutos de SketchUp. Con los ejes del grupo o componente, valen en cambio los ejes del contenedor que has abierto para editarlo: si ese grupo está girado 30 grados, «a la izquierda» significa a la izquierda según el grupo, no según el modelo. Las dos entradas con marca están al final del menú robo quick align; fuera de cualquier grupo los dos sistemas coinciden.' },
     { t: 'Cómo se calcula', d: 'De cada objeto se toma la caja delimitadora y se obtiene su mínimo y máximo a lo largo del eje elegido. De todos los objetos se obtienen el mínimo, el máximo y el centro de toda la selección, y cada objeto se mueve la distancia que le falta para llegar a la referencia. La caja de un objeto girado puede ser algo mayor que la geometría real.' },
     { t: 'Un solo deshacer', d: 'Todos los movimientos están reunidos en una operación: un solo Ctrl+Z devuelve los objetos a su sitio. Si algo falla, el plugin lo cancela todo y te lo dice, sin dejar el modelo a medias.' },
-    { t: 'Un ejemplo concreto', d: 'Tienes cinco ventanas de alturas distintas en una fachada y quieres que todas tengan el mismo dintel. Las seleccionas, pulsas «Alinear arriba» (eje azul) y las partes superiores van al mismo nivel. Luego «Alinear al centro» en el eje rojo para ponerlas en una sola línea vertical. Si el grupo de la fachada está inclinado, abre el grupo y deja los ejes del grupo: las alineaciones siguen la inclinación de la fachada.' }
+    { t: 'Un ejemplo concreto', d: 'Tienes cinco ventanas de alturas distintas en una fachada y quieres que todas tengan el mismo dintel. Las seleccionas, pulsas «Alinear arriba» (eje azul) y las partes superiores van al mismo nivel. Luego «Alinear al centro» en el eje rojo para ponerlas en una sola línea vertical. Si el grupo de la fachada está inclinado, abre el grupo y deja los ejes del grupo: las alineaciones siguen la inclinación de la fachada.' },
+    { t: 'Distribución automática', d: 'Con el botón Distribución automática activo, cada alineación también reparte los objetos a lo largo del eje en el que están más dispersos: el primero y el último no se mueven y los centros de los del medio quedan a la misma distancia, sea cual sea su tamaño. Se necesitan al menos tres objetos. Después la casilla Medidas abajo a la derecha muestra la distancia entre los ejes: escribe otro valor y pulsa Intro, y los objetos se reparten de nuevo con el primero fijo. Un solo Ctrl+Z deshace la alineación y la distribución juntas.' }
   ],
-  pros: ['Nueve alineaciones con un clic', 'Ejes del modelo o del grupo, a elegir', 'Un solo Ctrl+Z lo deshace todo', 'Ayuda con iconos en cinco idiomas'],
+  pros: ['Nueve alineaciones con un clic', 'Ejes del modelo o del grupo, a elegir', 'Un solo Ctrl+Z lo deshace todo', 'Ayuda con iconos en cinco idiomas', 'Espacios iguales, también con una distancia escrita'],
   solves: [
     { p: 'Alinear a mano objetos de distintos tamaños es lento e impreciso.', s: 'Un clic lleva todos los objetos al mismo lado o a la misma línea central.' },
     { p: 'Dentro de un grupo girado, los ejes del modelo no coinciden con los del dibujo.', s: 'Puedes alinear según los ejes del grupo abierto, o según los generales.' }
   ],
-  specs: [['Menú', 'Robo Tool › robo quick align'], ['Barra de herramientas', '9 botones en 3 grupos (rojo, azul, verde)'], ['Ejes de referencia', 'Del modelo, o del grupo o componente abierto'], ['Deshacer', 'Un solo Ctrl+Z'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Menú', 'Robo Tool › robo quick align'], ['Barra de herramientas', '11 botones: 9 alineaciones en 3 grupos (rojo, azul, verde), Distribución automática, Ejes'], ['Ejes de referencia', 'Del modelo, o del grupo o componente abierto'], ['Deshacer', 'Un solo Ctrl+Z'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
 };
-I18N_TOOLBARS.en.quick_align = { 'x_min.png': 'Align left (red axis X)', 'x_center.png': 'Align center (red axis X)', 'x_max.png': 'Align right (red axis X)', 'z_min.png': 'Align bottom (blue axis Z)', 'z_center.png': 'Align center (blue axis Z)', 'z_max.png': 'Align top (blue axis Z)', 'y_min.png': 'Align front (green axis Y)', 'y_center.png': 'Align center (green axis Y)', 'y_max.png': 'Align back (green axis Y)' };
-I18N_TOOLBARS.de.quick_align = { 'x_min.png': 'Links ausrichten (rote Achse X)', 'x_center.png': 'Zentriert ausrichten (rote Achse X)', 'x_max.png': 'Rechts ausrichten (rote Achse X)', 'z_min.png': 'Unten ausrichten (blaue Achse Z)', 'z_center.png': 'Zentriert ausrichten (blaue Achse Z)', 'z_max.png': 'Oben ausrichten (blaue Achse Z)', 'y_min.png': 'Vorne ausrichten (grüne Achse Y)', 'y_center.png': 'Zentriert ausrichten (grüne Achse Y)', 'y_max.png': 'Hinten ausrichten (grüne Achse Y)' };
-I18N_TOOLBARS.fr.quick_align = { 'x_min.png': 'Aligner à gauche (axe rouge X)', 'x_center.png': 'Aligner au centre (axe rouge X)', 'x_max.png': 'Aligner à droite (axe rouge X)', 'z_min.png': 'Aligner en bas (axe bleu Z)', 'z_center.png': 'Aligner au centre (axe bleu Z)', 'z_max.png': 'Aligner en haut (axe bleu Z)', 'y_min.png': 'Aligner devant (axe vert Y)', 'y_center.png': 'Aligner au centre (axe vert Y)', 'y_max.png': 'Aligner derrière (axe vert Y)' };
-I18N_TOOLBARS.es.quick_align = { 'x_min.png': 'Alinear a la izquierda (eje rojo X)', 'x_center.png': 'Alinear al centro (eje rojo X)', 'x_max.png': 'Alinear a la derecha (eje rojo X)', 'z_min.png': 'Alinear abajo (eje azul Z)', 'z_center.png': 'Alinear al centro (eje azul Z)', 'z_max.png': 'Alinear arriba (eje azul Z)', 'y_min.png': 'Alinear al frente (eje verde Y)', 'y_center.png': 'Alinear al centro (eje verde Y)', 'y_max.png': 'Alinear atrás (eje verde Y)' };
+I18N_TOOLBARS.en.quick_align = { 'x_min.png': 'Align left (red axis X)', 'x_center.png': 'Align center (red axis X)', 'x_max.png': 'Align right (red axis X)', 'z_min.png': 'Align bottom (blue axis Z)', 'z_center.png': 'Align center (blue axis Z)', 'z_max.png': 'Align top (blue axis Z)', 'y_min.png': 'Align front (green axis Y)', 'y_center.png': 'Align center (green axis Y)', 'y_max.png': 'Align back (green axis Y)', 'dist_auto.png': 'Automatic distribution with every alignment', 'axes.png': 'Absolute axes of the model (off: axes of the open group)' };
+I18N_TOOLBARS.de.quick_align = { 'x_min.png': 'Links ausrichten (rote Achse X)', 'x_center.png': 'Zentriert ausrichten (rote Achse X)', 'x_max.png': 'Rechts ausrichten (rote Achse X)', 'z_min.png': 'Unten ausrichten (blaue Achse Z)', 'z_center.png': 'Zentriert ausrichten (blaue Achse Z)', 'z_max.png': 'Oben ausrichten (blaue Achse Z)', 'y_min.png': 'Vorne ausrichten (grüne Achse Y)', 'y_center.png': 'Zentriert ausrichten (grüne Achse Y)', 'y_max.png': 'Hinten ausrichten (grüne Achse Y)', 'dist_auto.png': 'Automatische Verteilung bei jedem Ausrichten', 'axes.png': 'Absolute Achsen des Modells (aus: Achsen der geöffneten Gruppe)' };
+I18N_TOOLBARS.fr.quick_align = { 'x_min.png': 'Aligner à gauche (axe rouge X)', 'x_center.png': 'Aligner au centre (axe rouge X)', 'x_max.png': 'Aligner à droite (axe rouge X)', 'z_min.png': 'Aligner en bas (axe bleu Z)', 'z_center.png': 'Aligner au centre (axe bleu Z)', 'z_max.png': 'Aligner en haut (axe bleu Z)', 'y_min.png': 'Aligner devant (axe vert Y)', 'y_center.png': 'Aligner au centre (axe vert Y)', 'y_max.png': 'Aligner derrière (axe vert Y)', 'dist_auto.png': 'Répartition automatique à chaque alignement', 'axes.png': 'Axes absolus du modèle (désactivé : axes du groupe ouvert)' };
+I18N_TOOLBARS.es.quick_align = { 'x_min.png': 'Alinear a la izquierda (eje rojo X)', 'x_center.png': 'Alinear al centro (eje rojo X)', 'x_max.png': 'Alinear a la derecha (eje rojo X)', 'z_min.png': 'Alinear abajo (eje azul Z)', 'z_center.png': 'Alinear al centro (eje azul Z)', 'z_max.png': 'Alinear arriba (eje azul Z)', 'y_min.png': 'Alinear al frente (eje verde Y)', 'y_center.png': 'Alinear al centro (eje verde Y)', 'y_max.png': 'Alinear atrás (eje verde Y)', 'dist_auto.png': 'Distribución automática con cada alineación', 'axes.png': 'Ejes absolutos del modelo (apagado: ejes del grupo abierto)' };
 
 /* ==================================================================== SMOOTH */
 I18N_PLUGINS.en.smooth = {
@@ -3013,7 +3025,8 @@ I18N_PLUGINS.en.fillet_3d = {
     { t: 'Green or purple preview, and transparency', d: 'The guide lines show where the rounding (green) or the chamfer (purple) starts and follow every change, also when you change the selection. The Transparency box shows the model in X-ray so you can see them behind the object too.' },
     { t: 'Edges picked with the mouse', d: 'Point at a line or a face and click: also from outside, at any level of nested groups and components. Shift adds or removes. If the group contains others, choose with the mouse the one to round.' },
     { t: 'Regular quads', d: 'Every non-flat quad is built with its diagonal hidden, soft and smooth. Faces with holes and concave corners are handled, and the joins between two edges are clean mitres.' },
-    { t: 'A clear window, in five languages', d: 'Fields with SketchUp’s units and decimals, up and down arrows, an icon for every option, built-in help and messages in SketchUp’s language. After Apply the window closes and a single Ctrl+Z undoes everything.' }
+    { t: 'A clear window, in five languages', d: 'Fields with SketchUp’s units and decimals, up and down arrows, an icon for every option, built-in help and messages in SketchUp’s language. After Apply the window closes and a single Ctrl+Z undoes everything.' },
+    { t: 'Remembers your choices', d: 'After the first use the window opens with every option you changed the last time, the Tri-Planar projection (World or Fit) too; only the edges picked with the mouse are not kept.' }
   ],
   steps: ['Select one or more groups or components and open robo fillet 3d.', 'Choose Rounding or Chamfer 45°, type the offset and watch the preview (green for the rounding, purple for the chamfer).', 'Press Apply: the new rounded group is made, and a single Ctrl+Z undoes everything.'],
   how: [
@@ -3048,7 +3061,8 @@ I18N_PLUGINS.de.fillet_3d = {
     { t: 'Grüne oder violette Vorschau und Transparenz', d: 'Die Hilfslinien zeigen, wo die Rundung (grün) oder die Fase (violett) beginnt, und folgen jeder Änderung, auch beim Wechsel der Auswahl. Das Feld Transparenz zeigt das Modell als X-Ray, damit man sie auch hinter dem Objekt sieht.' },
     { t: 'Kanten mit der Maus gewählt', d: 'Zeigen Sie auf eine Linie oder Fläche und klicken Sie: auch von außen, auf jeder Ebene verschachtelter Gruppen und Komponenten. Mit Umschalt fügen Sie hinzu oder entfernen. Enthält die Gruppe weitere, wählen Sie mit der Maus die zu rundende.' },
     { t: 'Regelmäßige Vierecke', d: 'Jedes nicht ebene Viereck wird mit versteckter, weicher und geglätteter Diagonale gebaut. Flächen mit Löchern und konkave Ecken werden berücksichtigt, und die Verbindungen zweier Kanten sind saubere Gehrungen.' },
-    { t: 'Klares Fenster, in fünf Sprachen', d: 'Felder mit den Einheiten und Dezimalstellen von SketchUp, Pfeile auf und ab, ein Symbol für jede Option, integrierte Hilfe und Meldungen in der Sprache von SketchUp. Nach Anwenden schließt sich das Fenster, ein einziges Strg+Z macht alles rückgängig.' }
+    { t: 'Klares Fenster, in fünf Sprachen', d: 'Felder mit den Einheiten und Dezimalstellen von SketchUp, Pfeile auf und ab, ein Symbol für jede Option, integrierte Hilfe und Meldungen in der Sprache von SketchUp. Nach Anwenden schließt sich das Fenster, ein einziges Strg+Z macht alles rückgängig.' },
+    { t: 'Merkt sich Ihre Wahl', d: 'Nach der ersten Nutzung öffnet sich das Fenster mit allen Optionen, die Sie zuletzt geändert haben, auch der Tri-Planar-Projektion (World oder Fit); nur die mit der Maus gewählten Kanten werden nicht behalten.' }
   ],
   steps: ['Wählen Sie eine oder mehrere Gruppen oder Komponenten und öffnen Sie robo fillet 3d.', 'Wählen Sie Rundung oder Fase 45°, geben Sie den Abstand ein und sehen Sie die Vorschau (grün bei der Rundung, violett bei der Fase).', 'Klicken Sie auf Anwenden: die neue gerundete Gruppe entsteht, ein einziges Strg+Z macht alles rückgängig.'],
   how: [
@@ -3083,7 +3097,8 @@ I18N_PLUGINS.fr.fillet_3d = {
     { t: 'Aperçu vert ou violet, et transparence', d: 'Les lignes guides montrent où commence l’arrondi (vert) ou le chanfrein (violet) et suivent chaque changement, même quand vous changez la sélection. La case Transparence affiche le modèle en X-ray pour les voir aussi derrière l’objet.' },
     { t: 'Arêtes choisies à la souris', d: 'Pointez une ligne ou une face et cliquez : même de l’extérieur, à tout niveau de groupes et composants imbriqués. Maj ajoute ou retire. Si le groupe en contient d’autres, choisissez à la souris celui à arrondir.' },
     { t: 'Quadrilatères réguliers', d: 'Chaque quadrilatère non plan est construit avec sa diagonale masquée, adoucie et lissée. Les faces avec trous et les coins concaves sont gérés, et les jonctions entre deux arêtes sont de onglets propres.' },
-    { t: 'Une fenêtre claire, en cinq langues', d: 'Champs avec les unités et décimales de SketchUp, flèches haut et bas, une icône pour chaque option, aide intégrée et messages dans la langue de SketchUp. Après Appliquer la fenêtre se ferme et un seul Ctrl+Z annule tout.' }
+    { t: 'Une fenêtre claire, en cinq langues', d: 'Champs avec les unités et décimales de SketchUp, flèches haut et bas, une icône pour chaque option, aide intégrée et messages dans la langue de SketchUp. Après Appliquer la fenêtre se ferme et un seul Ctrl+Z annule tout.' },
+    { t: 'Mémorise vos choix', d: 'Après la première utilisation, la fenêtre s’ouvre avec toutes les options modifiées la dernière fois, y compris la projection Tri-Planaire (World ou Fit) ; seules les arêtes choisies à la souris ne sont pas gardées.' }
   ],
   steps: ['Sélectionnez un ou plusieurs groupes ou composants et ouvrez robo fillet 3d.', 'Choisissez Arrondi ou Chanfrein 45°, saisissez le décalage et regardez l’aperçu (vert pour l’arrondi, violet pour le chanfrein).', 'Cliquez sur Appliquer : le nouveau groupe arrondi est créé, et un seul Ctrl+Z annule tout.'],
   how: [
@@ -3118,7 +3133,8 @@ I18N_PLUGINS.es.fillet_3d = {
     { t: 'Vista previa verde o violeta, y transparencia', d: 'Las líneas guía muestran dónde empieza el redondeo (verde) o el bisel (violeta) y siguen cada cambio, también al cambiar la selección. La casilla Transparencia muestra el modelo en X-ray para verlas también detrás del objeto.' },
     { t: 'Bordes elegidos con el ratón', d: 'Apunta a una línea o una cara y haz clic: también desde fuera, en cualquier nivel de grupos y componentes anidados. Con Mayús añades o quitas. Si el grupo contiene otros, eliges con el ratón el que redondear.' },
     { t: 'Cuadriláteros regulares', d: 'Cada cuadrilátero no plano se construye con la diagonal oculta, suave y alisada. Se gestionan caras con agujeros y esquinas cóncavas, y las uniones entre dos bordes son ingletas limpias.' },
-    { t: 'Ventana clara, en cinco idiomas', d: 'Campos con las unidades y decimales de SketchUp, flechas arriba y abajo, un icono para cada opción, ayuda integrada y mensajes en el idioma de SketchUp. Tras Aplicar la ventana se cierra y un solo Ctrl+Z lo deshace todo.' }
+    { t: 'Ventana clara, en cinco idiomas', d: 'Campos con las unidades y decimales de SketchUp, flechas arriba y abajo, un icono para cada opción, ayuda integrada y mensajes en el idioma de SketchUp. Tras Aplicar la ventana se cierra y un solo Ctrl+Z lo deshace todo.' },
+    { t: 'Recuerda tus elecciones', d: 'Tras el primer uso la ventana se abre con todas las opciones que cambiaste la última vez, también la proyección Tri-Planar (World o Fit); solo los bordes elegidos con el ratón no se guardan.' }
   ],
   steps: ['Selecciona uno o más grupos o componentes y abre robo fillet 3d.', 'Elige Redondeo o Bisel 45°, escribe el desplazamiento y mira la vista previa (verde para el redondeo, violeta para el bisel).', 'Pulsa Aplicar: se crea el nuevo grupo redondeado, y un solo Ctrl+Z lo deshace todo.'],
   how: [

@@ -20,7 +20,7 @@ var PLUGINS = [
     id: 'baseform', name: 'robo baseform', version: '2.2', os: 'both', category: 'Modellazione', hue: 12,
     donationPrompt: true,
     video: 'Q6nA_fj7CcM',
-    images: ['assets/img/screenshots/baseform-1.jpg'],
+    images: ['assets/img/screenshots/baseform-1.jpg', 'assets/img/screenshots/baseform-2.jpg'],
     tagline: "Solidi 3D, forme 2D e curve, posati su facce e linee con un clic.",
     simple: "Scegli se lavorare in 3D o in 2D, scegli la forma nella barra in alto a sinistra della vista e scrivi le misure: l’anteprima si aggiorna mentre scrivi. Clicca su una faccia o su una linea e la forma nasce lì, sempre perpendicolare, anche dentro gruppi e componenti senza aprirli.",
     intro: ["robo baseform è una barra fissa nella vista di SketchUp per creare in pochi secondi solidi, forme piane e curve: cubo, cilindro, cono, tronco di cono, sfera, icosfera, toro, helix, quadrato, cerchio e spirale. Scrivi le misure e la forma è pronta, già chiusa e liscia.", "Dalla versione 2.0 ogni forma si posa su facce e linee, anche su quelle dentro gruppi e componenti, senza entrarci: perpendicolare alle facce e, dalla 2.2, di traverso su linee e curve, con l’asse Z blu lungo il segmento (una forma 2D diventa un profilo per Seguimi). Con la stessa barra puoi anche spostare o copiare un gruppo o un componente che esiste già."],
@@ -37,7 +37,7 @@ var PLUGINS = [
     id: 'boolean', name: 'robo boolean', version: '1.2', os: 'both', category: 'Modellazione', hue: 0,
     noDownload: true, installer: true,
     video: 'wPqJ3tycBi8',
-    images: ['assets/img/screenshots/boolean-1.jpg', 'assets/img/screenshots/boolean-2.jpg', 'assets/img/screenshots/boolean-3.jpg', 'assets/img/screenshots/boolean-4.jpg', 'assets/img/screenshots/boolean-5.jpg'],
+    images: ['assets/img/screenshots/boolean-1.jpg'],
     tagline: 'Unione, sottrazione, intersezione, taglia, dividi: operazioni booleane in due clic, anche su oggetti non solidi.',
     simple: 'Premi un’operazione nella barra, clicca il primo oggetto (riquadro verde) e poi il secondo (riquadro arancione): l’operazione parte subito. Con il motore robo installato il calcolo avviene fuori da SketchUp, veloce e senza rischio di chiusure; un solo Ctrl+Z annulla tutto.',
     intro: [
@@ -78,7 +78,7 @@ var PLUGINS = [
     id: 'extract', name: 'robo extract', version: '1.3', os: 'both', category: 'Modellazione', hue: 170,
     donationPrompt: true,
     video: 'Gi4nG6UZF0I',
-    images: ['assets/img/screenshots/extract-1.png'],
+    images: ['assets/img/screenshots/extract-1.jpg'],
     tagline: 'Copia facce e linee fuori dai gruppi, nella stessa posizione.',
     simple: 'Passa il mouse su una faccia o una linea di qualsiasi gruppo o componente, anche chiuso: Robo la evidenzia e, con un clic, ne crea una copia fuori dal gruppo, nella stessa identica posizione e inclinazione. Funziona su piani inclinati e su forme organiche, e non serve aprire né selezionare nulla.',
     intro: [
@@ -115,7 +115,7 @@ var PLUGINS = [
     id: 'demolition', name: 'robo demolition', version: '1.3', os: 'both', category: 'Modellazione', hue: 15,
     noDownload: true, installer: true,
     video: 'vXMermVjpUE',
-    images: ['assets/img/screenshots/demolition-1.png', 'assets/img/screenshots/demolition-2.png', 'assets/img/screenshots/demolition-3.png', 'assets/img/screenshots/demolition-4.png', 'assets/img/screenshots/demolition-5.png'],
+    images: ['assets/img/screenshots/demolition-1.jpg', 'assets/img/screenshots/demolition-2.jpg', 'assets/img/screenshots/demolition-3.jpg', 'assets/img/screenshots/demolition-4.jpg'],
     tagline: 'Riduce i triangoli di una mesh pesante, mantenendo la forma.',
     simple: 'Seleziona facce, gruppi o componenti pesanti: robo demolition ne mostra in anteprima la versione più leggera, disegnata sul modello, e con una barra decidi quanto demolire. Il motore è incluso nel plugin, non serve installare nulla; gli oggetti interni restano oggetti e i materiali restano al loro posto.',
     intro: [
@@ -185,7 +185,7 @@ var PLUGINS = [
       { p: "Chi ha un SketchUp più vecchio non riesce ad aprire il file.", s: "Scegli la versione di salvataggio, dalla 2021 fino alla 8." }
     ],
     specs: [["Menu", "Robo Tool › robo exporter"], ["Barra strumenti", "1 pulsante"], ["Formati", "DWG, DXF, OBJ, GLB, FBX, SKP"], ["DWG", "Con ODA File Converter (gratuito, da installare a parte)"], ["Versioni SKP", "Quella in uso e le precedenti, da 2021 a 8 (scelta da SketchUp 2022)"], ["FBX", "Esportatore di SketchUp Pro"], ["Annullamento", "Il modello non viene modificato"]],
-    images: ['assets/img/screenshots/exporter-en-1.png'],
+    images: ['assets/img/screenshots/exporter-1.jpg', 'assets/img/screenshots/exporter-2.jpg', 'assets/img/screenshots/exporter-3.jpg'],
     installNote: 'robo exporter non è ancora disponibile per il download: sarà pubblicato appena pronto.',
     unavailableNote: 'robo exporter non è ancora disponibile per il download: sarà pubblicato appena pronto.'
   },
@@ -195,7 +195,7 @@ var PLUGINS = [
     id: 'fillet', name: 'robo fillet', version: '1.4', os: 'both', category: 'Modellazione', hue: 200,
     donationPrompt: true,
     video: 'sGrRxU-Thlo',
-    images: ['assets/img/screenshots/fillet-1.png', 'assets/img/screenshots/fillet-2.png', 'assets/img/screenshots/fillet-3.png', 'assets/img/screenshots/fillet-4.png', 'assets/img/screenshots/fillet-5.png'],
+    images: ['assets/img/screenshots/fillet-1.jpg', 'assets/img/screenshots/fillet-2.jpg', 'assets/img/screenshots/fillet-3.jpg'],
     tagline: 'Raccordi e smussi tra due linee, su qualsiasi piano.',
     simple: 'Clicca due linee che si incontrano in un angolo, scegli il raggio: l\'angolo spigoloso diventa una curva morbida (oppure uno smusso). Funziona su qualsiasi piano nello spazio, non solo sul pavimento.',
     intro: [
@@ -232,7 +232,7 @@ var PLUGINS = [
     id: 'group_to_component', name: 'robo group to component', version: '1.4', os: 'both', category: 'Organizzazione', hue: 32,
     donationPrompt: true,
     video: 'BLo3ZGXY1F4',
-    images: ['assets/img/screenshots/group_to_component-1.png', 'assets/img/screenshots/group_to_component-2.png', 'assets/img/screenshots/group_to_component-3.png', 'assets/img/screenshots/group_to_component-4.png'],
+    images: ['assets/img/screenshots/group_to_component-1.jpg', 'assets/img/screenshots/group_to_component-2.jpg', 'assets/img/screenshots/group_to_component-3.jpg'],
     tagline: 'Trasforma i gruppi in componenti, unendo quelli identici.',
     simple: 'Seleziona molti gruppi: Robo riconosce quelli con la stessa forma e li trasforma in copie dello stesso componente. Il file diventa più leggero e, modificandone uno, cambiano tutti.',
     intro: [
@@ -268,7 +268,7 @@ var PLUGINS = [
     id: 'impact_object', name: 'robo impact object', version: '1.4', os: 'both', category: 'Ottimizzazione', hue: 348,
     donationPrompt: true,
     video: 'hU1Xp5oTKqg',
-    images: ['assets/img/screenshots/impact_object-1.png', 'assets/img/screenshots/impact_object-2.png'],
+    images: ['assets/img/screenshots/impact_object-1.jpg'],
     tagline: 'Scopri quali oggetti appesantiscono il tuo modello.',
     simple: 'Una tabella ordinabile ti mostra quanto "pesa" ogni componente del modello, tenendo conto anche di quante volte è ripetuto. Così trovi subito alberi, arredi o dettagli che rallentano SketchUp.',
     intro: [
@@ -305,7 +305,7 @@ var PLUGINS = [
     id: 'library_explorer', name: 'robo library explorer', version: '1.4', os: 'both', category: 'Organizzazione', hue: 190,
     donationPrompt: true,
     video: '27grL1GDQQM',
-    images: ['assets/img/screenshots/library_explorer-1.png', 'assets/img/screenshots/library_explorer-2.png', 'assets/img/screenshots/library_explorer-3.png', 'assets/img/screenshots/library_explorer-4.png', 'assets/img/screenshots/library_explorer-5.png', 'assets/img/screenshots/library_explorer-6.png', 'assets/img/screenshots/library_explorer-7.png'],
+    images: ['assets/img/screenshots/library_explorer-1.jpg'],
     tagline: 'Sfoglia le tue librerie con anteprime vere e inserisci con un clic.',
     simple: 'Indica le cartelle dove tieni componenti e materiali: Robo li mostra con le anteprime, ordinati per cartella, con tag e preferiti. Un clic e l\'oggetto entra nel modello.',
     intro: [
@@ -343,7 +343,7 @@ var PLUGINS = [
     id: 'placement', name: 'robo placement', version: '1.1', os: 'both', category: 'Distribuzione', hue: 130,
     donationPrompt: true,
     video: 'BuxBGvKxEGM',
-    images: ['assets/img/screenshots/placement-1.png', 'assets/img/screenshots/placement-2.png', 'assets/img/screenshots/placement-3.png', 'assets/img/screenshots/placement-4.png'],
+    images: ['assets/img/screenshots/placement-1.jpg', 'assets/img/screenshots/placement-2.jpg', 'assets/img/screenshots/placement-3.jpg', 'assets/img/screenshots/placement-4.jpg'],
     tagline: 'Distribuisci oggetti a caso su qualsiasi superficie.',
     simple: 'Seleziona l’oggetto (un albero, un sasso, un mobile) e premi Seleziona Oggetto, poi clicca la superficie, anche dentro gruppi e componenti: Robo ne dispone tante copie sparse in modo naturale, uguali all’oggetto e con scala e rotazione leggermente diverse.',
     intro: [
@@ -355,7 +355,8 @@ var PLUGINS = [
       { t: 'Copie uguali all’oggetto', d: 'Ogni copia ha la scala dell’oggetto scelto (anche diversa sui tre assi o specchiata), le sue misure, il materiale, il tag e le opzioni dei componenti dinamici; la scala casuale si aggiunge sopra.' },
       { t: 'Variazioni controllate', d: 'Imposti quantità, scala minima e massima e rotazione. Con lo stesso valore di partenza ottieni lo stesso risultato.' },
       { t: 'Collisione sui box veri', d: 'Una sola Distanza tra gli oggetti, misurata sul box vero di ogni copia: 0 le fa toccare senza compenetrarsi, un valore positivo le allontana (fino a lasciarne una sola sulla faccia), uno negativo le fa compenetrare fino a sovrapporle.' },
-      { t: 'Anteprima dal vivo', d: 'Vedi le copie sul modello mentre regoli i valori, come box o come oggetto reale semplificato; la geometria viene creata solo quando premi Applica.' }
+      { t: 'Anteprima dal vivo', d: 'Vedi le copie sul modello mentre regoli i valori, come box o come oggetto reale semplificato; la geometria viene creata solo quando premi Applica.' },
+      { t: 'Limite di sicurezza', d: 'Max oggetti (in rosso) è il limite della quantità, 50 all’apertura della finestra: si alza con − e + o scrivendo, fino a 1000. Sopra 50 un messaggio avvisa che molte copie rallentano SketchUp e possono bloccarlo: salva prima il modello.' }
     ],
     steps: ['Apri robo placement, seleziona l’oggetto con lo strumento Seleziona di SketchUp e premi Seleziona Oggetto.', 'Passa sulla faccia (anche dentro gruppi e componenti) e cliccala: parte l’anteprima delle copie.', 'Regola quantità, collisione, scala e rotazione e premi Applica.'],
     how: [
@@ -373,7 +374,7 @@ var PLUGINS = [
       { p: 'Le copie che si compenetrano rovinano il render.', s: 'La Distanza tra gli oggetti le tiene separate sui loro box veri, o le fa compenetrare quanto vuoi.' },
       { p: 'La faccia giusta è dentro un gruppo o un componente.', s: 'Il cursore la trova a qualunque profondità e un clic la sceglie.' }
     ],
-    specs: [['Finestra', '400 × 567 px, espandibile'], ['Menu', 'Robo Tool › robo placement'], ['Quantità', '1 – 1000 copie'], ['Collisione', 'Distanza tra i box: da meno la misura dell’oggetto alla diagonale della faccia'], ['Lingue', '5 (IT, EN, DE, FR, ES)'], ['Annullamento', 'Un solo Ctrl+Z']]
+    specs: [['Finestra', '400 × 567 px, espandibile'], ['Menu', 'Robo Tool › robo placement'], ['Quantità', '1 – 1000 copie, con limite Max oggetti (50 all’apertura)'], ['Collisione', 'Distanza tra i box: da meno la misura dell’oggetto alla diagonale della faccia'], ['Lingue', '5 (IT, EN, DE, FR, ES)'], ['Annullamento', 'Un solo Ctrl+Z']]
   },
 
   /* ----------------------------------------------------------------- PROXY */
@@ -381,7 +382,7 @@ var PLUGINS = [
     id: 'proxy_manager', name: 'robo proxy manager', version: '0.8', os: 'both', category: 'Ottimizzazione', hue: 220,
     donationPrompt: true,
     video: 'ThxhD9J6eC0',
-    images: ['assets/img/screenshots/proxy_manager-1.png', 'assets/img/screenshots/proxy_manager-2.png', 'assets/img/screenshots/proxy_manager-3.png', 'assets/img/screenshots/proxy_manager-4.png'],
+    images: ['assets/img/screenshots/proxy_manager-1.jpg', 'assets/img/screenshots/proxy_manager-2.jpg', 'assets/img/screenshots/proxy_manager-3.jpg', 'assets/img/screenshots/proxy_manager-4.jpg', 'assets/img/screenshots/proxy_manager-5.jpg', 'assets/img/screenshots/proxy_manager-6.jpg'],
     tagline: 'Sostituisci gli oggetti pesanti con proxy leggeri.',
     simple: 'Alberi, arredi e persone dettagliati rendono il modello lentissimo. Con Robo li sostituisci con "segnaposto" leggeri e li ritrovi identici quando ti servono, con un clic destro.',
     intro: [
@@ -416,7 +417,7 @@ var PLUGINS = [
     id: 'scale_definition', name: 'robo scale definition', version: '0.8', os: 'both', category: 'Organizzazione', hue: 24,
     donationPrompt: true,
     video: 'GI1vYGhCF_E',
-    images: ['assets/img/screenshots/scale_definition-1.png', 'assets/img/screenshots/scale_definition-2.png', 'assets/img/screenshots/scale_definition-3.png'],
+    images: ['assets/img/screenshots/scale_definition-1.jpg'],
     tagline: 'Fissa la scala nella geometria e riporta tutto a 1.0.',
     simple: 'Se hai ingrandito o rimpicciolito un componente, SketchUp ricorda quel "fattore di scala" a parte. Robo lo incorpora nella geometria e riporta la scala a 1.0: dimensioni e materiali diventano corretti per il rendering.',
     intro: [
@@ -453,7 +454,7 @@ var PLUGINS = [
     id: 'section', name: 'robo section', version: '1.4', os: 'both', category: 'Organizzazione', hue: 210,
     donationPrompt: true,
     video: 'KAbKr1Lui84',
-    images: ['assets/img/screenshots/section-1.png', 'assets/img/screenshots/section-2.png', 'assets/img/screenshots/section-3.png', 'assets/img/screenshots/section-4.png', 'assets/img/screenshots/section-5.png'],
+    images: ['assets/img/screenshots/section-1.jpg', 'assets/img/screenshots/section-2.jpg', 'assets/img/screenshots/section-3.jpg'],
     tagline: 'Tutti i piani di sezione in un solo pannello.',
     simple: 'Nei modelli complessi i piani di sezione sono sparsi dentro gruppi e componenti. Robo li trova tutti, li mostra in un elenco e ti permette di attivarli, rinominarli, spostarli e collegarli alle scene.',
     intro: [
@@ -489,7 +490,7 @@ var PLUGINS = [
     id: 'spacing_tool', name: 'robo spacing tool', version: '1.7', os: 'both', category: 'Distribuzione', hue: 268,
     donationPrompt: true,
     videos: ['dlBkhklB3Ds', 'mMk6vg4fEns'],
-    images: ['assets/img/screenshots/spacing_tool-1.png', 'assets/img/screenshots/spacing_tool-2.png', 'assets/img/screenshots/spacing_tool-3.png', 'assets/img/screenshots/spacing_tool-4.png', 'assets/img/screenshots/spacing_tool-5.png', 'assets/img/screenshots/spacing_tool-6.png', 'assets/img/screenshots/spacing_tool-7.png', 'assets/img/screenshots/spacing_tool-8.png', 'assets/img/screenshots/spacing_tool-9.png', 'assets/img/screenshots/spacing_tool-10.png', 'assets/img/screenshots/spacing_tool-11.png', 'assets/img/screenshots/spacing_tool-12.png'],
+    images: ['assets/img/screenshots/spacing_tool-1.jpg', 'assets/img/screenshots/spacing_tool-2.jpg', 'assets/img/screenshots/spacing_tool-3.jpg', 'assets/img/screenshots/spacing_tool-4.jpg', 'assets/img/screenshots/spacing_tool-5.jpg', 'assets/img/screenshots/spacing_tool-6.jpg', 'assets/img/screenshots/spacing_tool-7.jpg', 'assets/img/screenshots/spacing_tool-8.jpg', 'assets/img/screenshots/spacing_tool-9.jpg', 'assets/img/screenshots/spacing_tool-10.jpg', 'assets/img/screenshots/spacing_tool-11.jpg', 'assets/img/screenshots/spacing_tool-12.jpg'],
     tagline: 'Copie perfettamente spaziate lungo una linea o una curva.',
     simple: 'Scegli un oggetto e un percorso (una linea, un arco, una curva anche chiusa): Robo mette le copie a distanza regolare lungo il percorso, come lampioni lungo una strada o sedie attorno a un tavolo.',
     intro: [
@@ -556,7 +557,7 @@ var PLUGINS = [
       { p: 'Incollare nella posizione originale richiede di cercare il comando nei menu.', s: 'Un pulsante dedicato.' }
     ],
     specs: [['Menu', 'Robo Tool › robo standard (11 voci)'], ['Barra strumenti', '11 pulsanti in 4 gruppi'], ['Comandi', 'Nuovo, Apri, Salva, Salva con nome, Taglia, Copia, Incolla, Incolla sul posto, Elimina, Annulla, Ripristina'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
-    images: ['assets/img/screenshots/standard-1.png']
+    images: ['assets/img/screenshots/standard-1.jpg']
   },
 
   /* ----------------------------------------------------------------- START */
@@ -591,7 +592,7 @@ var PLUGINS = [
       { p: 'Rimuovere guide o quote sparse nel modello è noioso.', s: 'Un pulsante le rimuove tutte.' }
     ],
     specs: [['Menu', 'Robo Tool › robo start (Elenco scorciatoie, Impostazioni, Guida)'], ['Barra strumenti', 'robo start, personalizzabile'], ['Guida', 'Finestra con elenco comandi'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
-    images: ['assets/img/screenshots/start-1.png']
+    images: ['assets/img/screenshots/start-1.jpg', 'assets/img/screenshots/start-2.jpg']
   },
 
   /* --------------------------------------------------------------- TANGENT */
@@ -599,7 +600,7 @@ var PLUGINS = [
     id: 'tangent', name: 'robo tangent', version: '1.4', os: 'both', category: 'Modellazione', hue: 160,
     donationPrompt: true,
     video: 'RsSOjk3k7NE',
-    images: ['assets/img/screenshots/tangent-8.png'],
+    images: ['assets/img/screenshots/tangent-1.jpg', 'assets/img/screenshots/tangent-2.jpg'],
     tagline: 'La tangente esatta tra archi, cerchi e segmenti.',
     simple: 'Clicca due cerchi (o un cerchio e una linea) e lo strumento disegna la linea che li tocca esattamente in un punto ciascuno. Vedi le possibilità in anteprima e scegli quella che ti serve muovendo il mouse.',
     intro: [
@@ -724,7 +725,7 @@ var PLUGINS = [
   {
     id: 'quick_align', name: 'robo quick align', version: '1.2', os: 'both', category: 'Modellazione', hue: 200,
     donationPrompt: true,
-    images: ['assets/img/screenshots/quick_align-1.png', 'assets/img/screenshots/quick_align-2.png'],
+    images: ['assets/img/screenshots/quick_align-1.jpg'],
     tagline: 'Allinea gruppi e componenti sugli assi, con un clic.',
     simple: 'Seleziona due o più gruppi o componenti e allineali a sinistra, al centro o a destra — oppure in basso, al centro e in alto, o davanti e dietro. Scegli tu se usare gli assi generali del modello o quelli del gruppo o componente in cui stai lavorando.',
     intro: [
@@ -734,12 +735,13 @@ var PLUGINS = [
     main: [
       { t: 'Nove allineamenti su tre assi', d: 'Asse rosso: a sinistra, al centro, a destra. Asse blu (altezza): in basso, al centro, in alto. Asse verde: davanti, al centro, dietro.' },
       { t: 'Assi generali o assi del gruppo', d: 'Puoi usare come base dell’allineamento gli assi generali del modello oppure quelli del gruppo o componente che hai aperto per modificarlo. Utile quando il gruppo è ruotato o inclinato.' },
-      { t: 'La scelta si ricorda', d: 'Con due voci in fondo al menu scegli quali assi usare, e SketchUp se lo ricorda anche alla prossima apertura.' },
+      { t: 'Pulsante Assi', d: 'L’ultimo pulsante della barra passa dagli assi del gruppo aperto agli assi assoluti del modello. Resta premuto finché è acceso e una scritta viola chiaro in basso a sinistra nella vista lo ricorda; a ogni avvio di SketchUp è spento.' },
       { t: 'Un solo Ctrl+Z', d: 'L’intero allineamento è un’unica operazione: se non ti piace, lo annulli con un solo comando.' },
       { t: 'Barra e menu', d: 'Nove pulsanti in tre gruppi, uno per colore, e le stesse voci nel menu Estensioni, con l’icona davanti.' },
-      { t: 'Aiuto in cinque lingue', d: 'Una finestra di aiuto spiega ogni allineamento con le icone, e menu e messaggi seguono la lingua di SketchUp.' }
+      { t: 'Aiuto in cinque lingue', d: 'Una finestra di aiuto spiega ogni allineamento con le icone, e la lingua si sceglie anche dal menu robo quick align › Lingua: aiuto, messaggi e scritta nella vista cambiano subito.' },
+      { t: 'Distribuzione a spazi uguali', d: 'Il pulsante Distribuzione automatica resta acceso: finché lo è, ogni allineamento distribuisce anche gli oggetti a spazi uguali tra i loro assi. Poi scrivi una distanza nella casella Misure e premi Invio per ridistribuirli con quella misura.' }
     ],
-    steps: ['Seleziona due o più gruppi o componenti.', 'Scegli gli assi da usare (generali o del gruppo aperto) dal menu robo quick align.', 'Clicca uno dei nove pulsanti: gli oggetti si allineano, e un solo Ctrl+Z annulla tutto.'],
+    steps: ['Seleziona due o più gruppi o componenti.', 'Scegli gli assi con il pulsante Assi (gruppo aperto o assi assoluti del modello); per spazi uguali accendi anche Distribuzione automatica.', 'Clicca uno dei nove pulsanti: gli oggetti si allineano, e un solo Ctrl+Z annulla tutto.'],
     how: [
       { t: 'Il problema che risolve', d: 'Allineare degli oggetti in SketchUp significa misurare le posizioni e spostarli uno alla volta, oppure fidarsi dell’occhio. Con molti oggetti, o con oggetti di misure diverse, è lungo e impreciso: robo quick align lo fa in un clic.' },
       { t: 'Passo 1 · Seleziona', d: 'Seleziona due o più gruppi o componenti. Facce e spigoli sciolti, e gli oggetti bloccati, vengono ignorati: servono almeno due oggetti.' },
@@ -747,21 +749,22 @@ var PLUGINS = [
       { t: 'Assi generali o assi del gruppo', d: 'Gli allineamenti si calcolano sempre rispetto a un sistema di assi, e puoi scegliere quale. Con gli assi generali del modello, sinistra e destra, alto e basso, davanti e dietro sono quelli assoluti di SketchUp. Con gli assi del gruppo o componente, valgono invece gli assi del contenitore che hai aperto per modificarlo: se quel gruppo è ruotato di 30 gradi, “a sinistra” significa a sinistra secondo il gruppo, non secondo il modello. Le due voci con la spunta sono in fondo al menu robo quick align; fuori da ogni gruppo i due sistemi coincidono.' },
       { t: 'Come si calcola', d: 'Per ogni oggetto si prende il riquadro (BoundingBox) e se ne ricava il valore minimo e massimo lungo l’asse scelto. Da tutti gli oggetti si ricavano il minimo, il massimo e il centro dell’intera selezione, e ogni oggetto viene spostato della distanza che gli manca per arrivare al riferimento. Il riquadro di un oggetto ruotato può essere un po’ più grande della geometria reale.' },
       { t: 'Un solo annullamento', d: 'Tutti gli spostamenti sono racchiusi in un’unica operazione: un solo Ctrl+Z riporta gli oggetti dov’erano. Se qualcosa non riesce, il plugin annulla tutto e te lo dice, senza lasciare il modello a metà.' },
-      { t: 'Un esempio concreto', d: 'Hai cinque finestre di altezze diverse su una facciata e vuoi che abbiano tutte la stessa architrave. Le selezioni, premi “Allinea in alto” (asse blu) e le sommità si portano alla stessa quota. Poi premi “Allinea al centro” sull’asse rosso per distribuirle su un unico filo verticale. Se il gruppo della facciata è inclinato, apri il gruppo e lascia gli assi del gruppo: gli allineamenti seguono l’inclinazione della facciata.' }
+      { t: 'Un esempio concreto', d: 'Hai cinque finestre di altezze diverse su una facciata e vuoi che abbiano tutte la stessa architrave. Le selezioni, premi “Allinea in alto” (asse blu) e le sommità si portano alla stessa quota. Poi premi “Allinea al centro” sull’asse rosso per distribuirle su un unico filo verticale. Se il gruppo della facciata è inclinato, apri il gruppo e lascia gli assi del gruppo: gli allineamenti seguono l’inclinazione della facciata.' },
+      { t: 'Distribuzione automatica', d: 'Con il pulsante Distribuzione automatica acceso, ogni allineamento distribuisce anche gli oggetti lungo l’asse su cui sono più sparsi: il primo e l’ultimo restano fermi e i centri di quelli in mezzo si mettono alla stessa distanza, qualunque sia la loro misura. Servono almeno tre oggetti. Dopo, la casella Misure in basso a destra mostra la distanza tra gli assi: scrivi un’altra misura e premi Invio, e gli oggetti si ridistribuiscono con il primo fermo. Un solo Ctrl+Z annulla allineamento e distribuzione insieme.' }
     ],
-    pros: ['Nove allineamenti con un clic', 'Assi del modello o del gruppo, a scelta', 'Un solo Ctrl+Z annulla tutto', 'Aiuto con le icone in cinque lingue'],
+    pros: ['Nove allineamenti con un clic', 'Assi del modello o del gruppo, a scelta', 'Un solo Ctrl+Z annulla tutto', 'Aiuto con le icone in cinque lingue', 'Distribuzione a spazi uguali, anche con una distanza scritta'],
     solves: [
       { p: 'Allineare a mano oggetti di misure diverse è lungo e impreciso.', s: 'Un clic porta tutti gli oggetti sullo stesso lato o sulla stessa linea di centro.' },
       { p: 'Dentro un gruppo ruotato gli assi del modello non coincidono con quelli del disegno.', s: 'Puoi allineare secondo gli assi del gruppo aperto, oppure secondo quelli generali.' }
     ],
-    specs: [['Menu', 'Robo Tool › robo quick align'], ['Barra strumenti', '9 pulsanti in 3 gruppi (rosso, blu, verde)'], ['Assi di riferimento', 'Del modello oppure del gruppo o componente aperto'], ['Annullamento', 'Un solo Ctrl+Z'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
+    specs: [['Menu', 'Robo Tool › robo quick align'], ['Barra strumenti', '11 pulsanti: 9 allineamenti in 3 gruppi (rosso, blu, verde), Distribuzione automatica, Assi'], ['Assi di riferimento', 'Del modello oppure del gruppo o componente aperto'], ['Annullamento', 'Un solo Ctrl+Z'], ['Lingue', 'Italiano, English, Deutsch, Français, Español']]
   },
 
   /* ------------------------------------------------------------------ SMOOTH */
   {
     id: 'smooth', name: 'robo smooth', version: '1.1', os: 'both', category: 'Modellazione', hue: 280,
     donationPrompt: true,
-    images: ['assets/img/screenshots/smooth-1.png', 'assets/img/screenshots/smooth-2.png'],
+    images: ['assets/img/screenshots/smooth-1.jpg', 'assets/img/screenshots/smooth-2.jpg', 'assets/img/screenshots/smooth-3.jpg'],
     tagline: 'Ammorbidisci e smussa le linee in un clic: sei comandi, nessun altro plugin.',
     simple: 'Seleziona un oggetto e premi un pulsante: le linee tra le facce che piegano poco spariscono e la superficie diventa liscia, oppure tornano tutte visibili. Dalla finestra scegli l’angolo con un cursore e vedi subito il risultato.',
     intro: [
@@ -799,7 +802,7 @@ var PLUGINS = [
   {
     id: 'fillet_3d', name: 'robo fillet 3d', version: '1.4', os: 'both', category: 'Modellazione', hue: 175,
     video: 'DTb7IONp4FA',
-    images: ['assets/img/screenshots/fillet_3d-1.png', 'assets/img/screenshots/fillet_3d-2.png', 'assets/img/screenshots/fillet_3d-3.jpg', 'assets/img/screenshots/fillet_3d-4.jpg', 'assets/img/screenshots/fillet_3d-5.jpg', 'assets/img/screenshots/fillet_3d-6.jpg', 'assets/img/screenshots/fillet_3d-7.jpg', 'assets/img/screenshots/fillet_3d-8.jpg', 'assets/img/screenshots/fillet_3d-9.jpg', 'assets/img/screenshots/fillet_3d-10.png'],
+    images: ['assets/img/screenshots/fillet_3d-1.jpg', 'assets/img/screenshots/fillet_3d-2.jpg', 'assets/img/screenshots/fillet_3d-3.jpg'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
     simple: 'Seleziona un gruppo o un componente e scegli Arrotondamento o Smusso 45°: i bordi vivi diventano curve morbide fatte di quadrilateri. Puoi scegliere anche solo certi bordi o facce col mouse, anche dentro oggetti nidificati.',
     intro: [
@@ -812,7 +815,8 @@ var PLUGINS = [
       { t: 'Anteprima verde o viola, e trasparenza', d: 'Le linee guida mostrano dove inizia l’arrotondamento (verdi) o lo smusso (viola) e seguono ogni modifica, anche quando cambi la selezione. La casella Trasparenza mostra il modello in X-ray per vederle anche dietro l’oggetto.' },
       { t: 'Bordi scelti col mouse', d: 'Passa su una linea o su una faccia e fai clic: anche da fuori, a qualsiasi livello di gruppi e componenti nidificati. Con Maiusc aggiungi o togli. Se il gruppo ne contiene altri, scegli col mouse quello da arrotondare.' },
       { t: 'Quadrilateri regolari', d: 'Ogni quadrilatero non piano è costruito con la diagonale nascosta, ammorbidita e smussata. Facce con fori e angoli concavi sono gestiti, e le giunzioni tra due bordi sono a mitra pulita.' },
-      { t: 'Finestra chiara, in cinque lingue', d: 'Campi con le unità e i decimali di SketchUp, frecce su e giù, icone per ogni opzione, aiuto integrato e messaggi nella lingua di SketchUp. Dopo Applica la finestra si chiude e un solo Ctrl+Z annulla tutto.' }
+      { t: 'Finestra chiara, in cinque lingue', d: 'Campi con le unità e i decimali di SketchUp, frecce su e giù, icone per ogni opzione, aiuto integrato e messaggi nella lingua di SketchUp. Dopo Applica la finestra si chiude e un solo Ctrl+Z annulla tutto.' },
+      { t: 'Ricorda le tue scelte', d: 'Dopo il primo uso la finestra si apre con tutte le opzioni che hai cambiato l’ultima volta, compresa la Proiezione Tri-Planare (World o Fit); solo i bordi scelti col mouse non vengono tenuti.' }
     ],
     steps: ['Seleziona uno o più gruppi o componenti e apri robo fillet 3d.', 'Scegli Arrotondamento o Smusso 45°, scrivi lo scostamento e guarda l’anteprima (verde per l’arrotondamento, viola per lo smusso).', 'Premi Applica: nasce il nuovo gruppo arrotondato, e un solo Ctrl+Z annulla tutto.'],
     how: [
@@ -837,7 +841,7 @@ var PLUGINS = [
   {
     id: 'doctor', name: 'robo doctor', version: '1.2', os: 'both', category: 'Ottimizzazione', hue: 345,
     video: 'j1WqYw7o8M4',
-    images: ['assets/img/screenshots/doctor-1.png', 'assets/img/screenshots/doctor-2.png', 'assets/img/screenshots/doctor-3.png', 'assets/img/screenshots/doctor-4.png', 'assets/img/screenshots/doctor-5.png', 'assets/img/screenshots/doctor-6.png', 'assets/img/screenshots/doctor-7.png', 'assets/img/screenshots/doctor-8.png', 'assets/img/screenshots/doctor-9.png', 'assets/img/screenshots/doctor-10.png', 'assets/img/screenshots/doctor-11.png', 'assets/img/screenshots/doctor-12.png', 'assets/img/screenshots/doctor-13.png'],
+    images: ['assets/img/screenshots/doctor-1.jpg', 'assets/img/screenshots/doctor-2.jpg', 'assets/img/screenshots/doctor-3.jpg', 'assets/img/screenshots/doctor-4.jpg'],
 tagline: 'Controlla se i gruppi e i componenti sono solidi, mostra dove sono buchi ed errori e li ripara con quadrilateri.',
 simple: 'Seleziona un gruppo o un componente: robo doctor ti dice se è solido (chiuso, senza buchi, con le facce rivolte verso l’esterno) e disegna nel modello, con colori diversi, i punti da correggere. Poi chiudi i buchi uno per uno o tutti insieme.',
 intro: [
@@ -879,7 +883,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
     id: 'cut', name: 'robo cut', version: '0.6', os: 'both', category: 'Modellazione', hue: 200,
     video: 'xjDZstknt6k',
     donationPrompt: true,
-    images: ['assets/img/screenshots/cut-3.png', 'assets/img/screenshots/cut-4.png', 'assets/img/screenshots/cut-1.png', 'assets/img/screenshots/cut-2.png'],
+    images: ['assets/img/screenshots/cut-1.jpg', 'assets/img/screenshots/cut-2.jpg'],
     tagline: "Taglia gruppi e componenti con un piano: geometria vera, in due pezzi o solo la sezione.",
     simple: "Seleziona un gruppo o un componente, scegli il piano e clicca: l’oggetto viene tagliato davvero, non solo nascosto come con un piano di sezione. Tieni i due pezzi, togli la parte sopra o sotto, oppure ottieni solo la sezione.",
     intro: ["robo cut taglia gruppi e componenti con un piano e crea geometria vera: i pezzi sono oggetti nuovi da spostare, esportare o modificare. Un piano di sezione di SketchUp invece nasconde soltanto una parte del modello.", "Un oggetto chiuso riceve la faccia di taglio solo dove c’è materiale: un tubo diventa un anello, non un disco. Anche le forme organiche e le superfici aperte hanno la loro linea di sezione completa."],
@@ -895,7 +899,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   {
     id: 'extrudebot', name: 'robo extrudeBot', version: '1.5', os: 'both', category: 'Modellazione', hue: 15,
     donationPrompt: true,
-    images: ['assets/img/screenshots/extrudebot-1.png', 'assets/img/screenshots/extrudebot-2.png', 'assets/img/screenshots/extrudebot-3.png', 'assets/img/screenshots/extrudebot-4.png', 'assets/img/screenshots/extrudebot-5.png'],
+    images: ['assets/img/screenshots/extrudebot-1.jpg', 'assets/img/screenshots/extrudebot-2.jpg', 'assets/img/screenshots/extrudebot-3.jpg', 'assets/img/screenshots/extrudebot-4.jpg', 'assets/img/screenshots/extrudebot-5.jpg', 'assets/img/screenshots/extrudebot-6.jpg', 'assets/img/screenshots/extrudebot-7.jpg', 'assets/img/screenshots/extrudebot-8.jpg', 'assets/img/screenshots/extrudebot-9.jpg'],
     tagline: "Estrude una faccia lungo un percorso, come Seguimi, ma con quadrati piani, anteprima e percorso modificabile.",
     simple: "Clicca la faccia del profilo e il percorso: l’anteprima mostra subito l’estrusione. Scegli se il profilo segue il percorso o resta verticale e premi Invio. Con Modificabile il percorso resta nel gruppo: doppio clic e sposti i suoi punti, e l’estrusione si rifà.",
     intro: ["robo extrudeBot estrude una faccia (il profilo) lungo un percorso di spigoli, come lo strumento Seguimi di SketchUp. Il menu è una barra nella vista, come in robo baseform: scegli faccia e percorso con il mouse e vedi l’estrusione in anteprima prima di costruirla.", "Con Segue il percorso, la scelta normale, i lati sono fatti solo di quadrati piani, senza triangoli: pronti per SubD e QuadFace Tools. Con Resta verticale il profilo non si inclina mai, per corrimano, strade, binari e muretti su un terreno in pendenza."],
@@ -911,7 +915,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   {
     id: 'reaxis', name: 'robo reaxis', version: '1.1', os: 'both', category: 'Modellazione', hue: 140,
     donationPrompt: true,
-    images: ['assets/img/screenshots/reaxis-1.png'],
+    images: ['assets/img/screenshots/reaxis-1.jpg', 'assets/img/screenshots/reaxis-2.jpg', 'assets/img/screenshots/reaxis-3.jpg', 'assets/img/screenshots/reaxis-4.jpg', 'assets/img/screenshots/reaxis-5.jpg', 'assets/img/screenshots/reaxis-6.jpg'],
     tagline: "Sposta e allinea gli assi di gruppi e componenti: la geometria resta esattamente dov’è.",
     simple: "Seleziona gruppi o componenti, clicca sul cubo il punto dove portare l’origine (un angolo, la metà di uno spigolo, il centro di una faccia o dell’oggetto), scegli l’orientamento e premi Applica. Cambiano solo gli assi: l’oggetto non si muove.",
     intro: ["robo reaxis cambia gli assi di gruppi e componenti senza spostare la geometria. È utile prima di ruotare, scalare o allineare un oggetto, o per avere l’origine di un componente in un punto comodo per inserirlo.", "Se un componente ha più copie, cambiano tutte insieme e nessuna si muove. Un solo Ctrl+Z annulla tutto."],
@@ -927,7 +931,7 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
   {
     id: 'importer', name: 'robo importer', version: '0.15', os: 'both', category: 'Produttività', hue: 205,
     video: 'L1wkUY3zzVM',
-    images: ['assets/img/screenshots/importer-1.jpg', 'assets/img/screenshots/importer-2.jpg'],
+    images: ['assets/img/screenshots/importer-1.jpg', 'assets/img/screenshots/importer-2.jpg', 'assets/img/screenshots/importer-3.jpg'],
     noDownload: true, installer: true,
 tagline: 'Importa in SketchUp i file STEP, IGES, 3ds Max, SolidWorks, FBX, glTF, OBJ, 3MF, PLY e i disegni DXF e DWG (2D e 3D), con anteprima, e li posizioni dove vuoi.',
 simple: 'Scegli un file STEP, IGES, 3ds Max, SolidWorks, FBX, glTF, OBJ, 3MF, PLY, DXF o DWG, controlla l’anteprima, imposta risoluzione, unità e orientamento e premi Importa: il modello si attacca al cursore, come quando inserisci un file SKP.',
@@ -1012,7 +1016,8 @@ var TOOLBARS = {
   quick_align: { name: 'robo quick align', groups: [
     [{ i: 'x_min.png', l: 'Allinea a sinistra (asse rosso X)' }, { i: 'x_center.png', l: 'Allinea al centro (asse rosso X)' }, { i: 'x_max.png', l: 'Allinea a destra (asse rosso X)' }],
     [{ i: 'z_min.png', l: 'Allinea in basso (asse blu Z)' }, { i: 'z_center.png', l: 'Allinea al centro (asse blu Z)' }, { i: 'z_max.png', l: 'Allinea in alto (asse blu Z)' }],
-    [{ i: 'y_min.png', l: 'Allinea davanti (asse verde Y)' }, { i: 'y_center.png', l: 'Allinea al centro (asse verde Y)' }, { i: 'y_max.png', l: 'Allinea dietro (asse verde Y)' }]] },
+    [{ i: 'y_min.png', l: 'Allinea davanti (asse verde Y)' }, { i: 'y_center.png', l: 'Allinea al centro (asse verde Y)' }, { i: 'y_max.png', l: 'Allinea dietro (asse verde Y)' }],
+    [{ i: 'dist_auto.png', l: 'Distribuzione automatica a ogni allineamento' }, { i: 'axes.png', l: 'Assi assoluti del modello (spento: assi del gruppo aperto)' }]] },
   smooth: { name: 'robo smooth', groups: [
     [{ i: 'dialog.png', l: 'Ammorbidisci… (finestra con angolo e opzioni)' }, { i: 'run.png', l: 'Ammorbidisci subito (impostazioni dell’ultima volta)' }],
     [{ i: 'lite.png', l: 'Ammorbidisci leggero (sotto i 25°)' }, { i: 'hard.png', l: 'Ammorbidisci tutto' }, { i: 'show.png', l: 'Mostra tutte le linee' }],
