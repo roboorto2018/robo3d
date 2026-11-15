@@ -593,7 +593,7 @@ var PLUGINS = [
       { p: 'Rimuovere guide o quote sparse nel modello è noioso.', s: 'Un pulsante le rimuove tutte.' }
     ],
     specs: [['Menu', 'Robo Tool › robo start (Elenco scorciatoie, Impostazioni, Guida)'], ['Barra strumenti', 'robo start, personalizzabile'], ['Guida', 'Finestra con elenco comandi'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
-    images: ['assets/img/screenshots/start-1.jpg']
+    images: ['assets/img/screenshots/start-help.jpg']
   },
 
   /* --------------------------------------------------------------- TANGENT */
