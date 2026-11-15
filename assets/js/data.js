@@ -558,7 +558,7 @@ var PLUGINS = [
       { p: 'Incollare nella posizione originale richiede di cercare il comando nei menu.', s: 'Un pulsante dedicato.' }
     ],
     specs: [['Menu', 'Robo Tool › robo standard (11 voci)'], ['Barra strumenti', '11 pulsanti in 4 gruppi'], ['Comandi', 'Nuovo, Apri, Salva, Salva con nome, Taglia, Copia, Incolla, Incolla sul posto, Elimina, Annulla, Ripristina'], ['Annullamento', 'Un solo Ctrl+Z per azione']],
-    images: ['assets/img/screenshots/standard-1.jpg']
+    images: ['assets/img/screenshots/standard-1.png']
   },
 
   /* ----------------------------------------------------------------- START */
