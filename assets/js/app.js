@@ -62,6 +62,23 @@
         '<span class="gal-dots">' + d + '</span>' : '') + '</div>';
   }
 
+  /* immagini molto piu larghe o piu strette del riquadro 16:9 (es. una barra strumenti):
+     intere e centrate, senza ritaglio e senza ingrandirle oltre la loro misura. */
+  function fitGalleryImage(img) {
+    var slide = img.parentNode, w = img.naturalWidth, h = img.naturalHeight;
+    if (!slide || !slide.classList || !slide.classList.contains('gal-slide') || slide.hasAttribute('data-video') || !w || !h) { return; }
+    var r = w / h;
+    if (r > 2.2 || r < 1.4) { slide.classList.add('fit'); }
+  }
+  document.addEventListener('load', function (e) {
+    if (e.target && e.target.tagName === 'IMG') { fitGalleryImage(e.target); }
+  }, true);
+  function fitLoadedGalleryImages() {
+    var imgs = document.querySelectorAll('.gal-slide img');
+    for (var i = 0; i < imgs.length; i++) { if (imgs[i].complete) { fitGalleryImage(imgs[i]); } }
+  }
+  window.addEventListener('load', fitLoadedGalleryImages);
+
   /* lightbox: apre foto o video (YouTube) ingranditi, sopra il resto della pagina.
      Se la galleria di origine ha più di un elemento, mostra anche le frecce
      prev/next e un contatore, così si può scorrere l'intera galleria del
