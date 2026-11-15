@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <title>robo opening: the door cuts the wall, the jambs are closed</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf3fc"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <linearGradient id="wallF" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9d4cc"/><stop offset="1" stop-color="#cfc9c0"/></linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#sky)"/>
+  <!-- ground -->
+  <polygon points="80,600 1120,600 1180,690 20,690" fill="#e4e8ec"/>
+  <!-- wall: front face, top and side -->
+  <polygon points="150,600 950,600 950,210 150,210" fill="url(#wallF)" stroke="#8d877e" stroke-width="3"/>
+  <polygon points="150,210 950,210 1030,160 230,160" fill="#e8e3db" stroke="#8d877e" stroke-width="3"/>
+  <polygon points="950,600 1030,550 1030,160 950,210" fill="#bcb5ab" stroke="#8d877e" stroke-width="3"/>
+  <!-- the hole in the wall, with its jambs (the depth of the wall) -->
+  <polygon points="430,600 590,600 590,300 430,300" fill="#f4f7fa"/>
+  <polygon points="430,300 590,300 670,250 510,250" fill="#cfc9c0"/>
+  <polygon points="430,600 430,300 510,250 510,550" fill="#b3aca2"/>
+  <!-- the door standing in the hole -->
+  <polygon points="452,600 572,600 572,318 452,318" fill="#2e86de" fill-opacity="0.85" stroke="#14558f" stroke-width="3"/>
+  <circle cx="556" cy="465" r="7" fill="#ffffff"/>
+  <!-- the margins of the hole: red dashed box -->
+  <polygon points="430,600 590,600 590,300 430,300" fill="none" stroke="#e00000" stroke-width="4" stroke-dasharray="14 9"/>
+  <!-- a second hole made by a window -->
+  <polygon points="690,470 860,470 860,320 690,320" fill="#f4f7fa"/>
+  <polygon points="690,320 860,320 940,270 770,270" fill="#cfc9c0"/>
+  <polygon points="690,470 690,320 770,270 770,420" fill="#b3aca2"/>
+  <polygon points="702,460 848,460 848,330 702,330" fill="#7fb8ec" fill-opacity="0.75" stroke="#14558f" stroke-width="3"/>
+  <line x1="775" y1="330" x2="775" y2="460" stroke="#14558f" stroke-width="3"/>
+  <polygon points="690,470 860,470 860,320 690,320" fill="none" stroke="#e00000" stroke-width="4" stroke-dasharray="14 9"/>
+  <!-- small window of the plugin -->
+  <g transform="translate(60 40)">
+    <rect width="300" height="150" rx="8" fill="#ffffff" stroke="#c3d6f7" stroke-width="2"/>
+    <circle cx="22" cy="24" r="6" fill="#0078d7"/>
+    <text x="36" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#111">robo opening</text>
+    <rect x="14" y="48" width="272" height="40" rx="5" fill="#eaf7ec" stroke="#bfe3c4"/>
+    <rect x="24" y="58" width="60" height="20" rx="3" fill="#ffffff" stroke="#ccc"/>
+    <rect x="94" y="58" width="60" height="20" rx="3" fill="#ffffff" stroke="#ccc"/>
+    <rect x="164" y="58" width="60" height="20" rx="3" fill="#ffffff" stroke="#ccc"/>
+    <rect x="14" y="100" width="130" height="34" rx="4" fill="#e0e0e0"/>
+    <rect x="156" y="100" width="130" height="34" rx="4" fill="#0078d7"/>
+  </g>
+</svg>

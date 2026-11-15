@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <title>robo opening, Place object: the door follows the mouse on the wall, straight, on the floor, at a typed distance from the edge</title>
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6f6f5"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0000ff"/></marker>
+  </defs>
+  <rect width="1200" height="750" fill="url(#sky2)"/>
+  <polygon points="60,620 1140,620 1190,700 10,700" fill="#e4e8ec"/>
+  <!-- wall -->
+  <polygon points="120,620 1000,620 1000,190 120,190" fill="#d6d0c7" stroke="#8d877e" stroke-width="3"/>
+  <polygon points="120,190 1000,190 1070,145 190,145" fill="#e8e3db" stroke="#8d877e" stroke-width="3"/>
+  <polygon points="1000,620 1070,575 1070,145 1000,190" fill="#bcb5ab" stroke="#8d877e" stroke-width="3"/>
+  <!-- the door in hand: a light blue preview, standing on the floor -->
+  <polygon points="520,620 660,620 660,320 520,320" fill="#2e86de" fill-opacity="0.28" stroke="#14558f" stroke-width="3"/>
+  <line x1="520" y1="320" x2="660" y2="620" stroke="#14558f" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="660" y1="320" x2="520" y2="620" stroke="#14558f" stroke-width="1.5" stroke-opacity="0.5"/>
+  <!-- the dashed orange line: distance from the vertical edge of the wall -->
+  <line x1="120" y1="470" x2="520" y2="470" stroke="#e67800" stroke-width="5" stroke-dasharray="16 10"/>
+  <line x1="120" y1="440" x2="120" y2="500" stroke="#e67800" stroke-width="5"/>
+  <line x1="520" y1="440" x2="520" y2="500" stroke="#e67800" stroke-width="5"/>
+  <rect x="250" y="420" width="140" height="38" rx="6" fill="#ffffff" stroke="#e67800" stroke-width="2"/>
+  <text x="320" y="446" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#a04800">80 cm</text>
+  <!-- the point under the mouse and the axes -->
+  <circle cx="590" cy="620" r="11" fill="none" stroke="#2e86de" stroke-width="4"/>
+  <line x1="590" y1="620" x2="680" y2="620" stroke="#ff0000" stroke-width="5"/>
+  <line x1="590" y1="620" x2="590" y2="530" stroke="#00b400" stroke-width="5"/>
+  <line x1="590" y1="620" x2="540" y2="665" stroke="#0000ff" stroke-width="5" marker-end="url(#arr)"/>
+  <!-- the Position section of the window -->
+  <g transform="translate(720 40)">
+    <rect width="430" height="168" rx="8" fill="#e6f6f5" stroke="#aedcda" stroke-width="2"/>
+    <text x="18" y="32" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f6f6b">POSIZIONE</text>
+    <rect x="18" y="46" width="300" height="34" rx="4" fill="#0f8f8a"/>
+    <rect x="328" y="46" width="38" height="34" rx="4" fill="#0078d7"/>
+    <rect x="374" y="46" width="38" height="34" rx="4" fill="#ffffff" stroke="#ccc"/>
+    <rect x="18" y="92" width="38" height="30" rx="4" fill="#0078d7"/>
+    <rect x="62" y="92" width="38" height="30" rx="4" fill="#ffffff" stroke="#ccc"/>
+    <rect x="106" y="92" width="38" height="30" rx="4" fill="#ffffff" stroke="#ccc"/>
+    <rect x="150" y="92" width="38" height="30" rx="4" fill="#ffffff" stroke="#ccc"/>
+    <rect x="230" y="92" width="38" height="30" rx="4" fill="#ffffff" stroke="#ccc"/>
+    <rect x="274" y="92" width="70" height="30" rx="4" fill="#ffffff" stroke="#ccc"/>
+    <text x="309" y="113" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f6f6b">Auto</text>
+    <rect x="350" y="92" width="38" height="30" rx="4" fill="#ffffff" stroke="#ccc"/>
+    <rect x="230" y="130" width="38" height="28" rx="4" fill="#0078d7"/>
+    <rect x="274" y="130" width="38" height="28" rx="4" fill="#0078d7"/>
+    <rect x="320" y="130" width="70" height="28" rx="3" fill="#ffffff" stroke="#ccc"/>
+  </g>
+</svg>
