@@ -3794,7 +3794,9 @@ I18N_PLUGINS.en.opening = {
   how: [{"t":"The hidden copy of the wall","d":"The wall keeps inside a hidden copy of how it was before the hole: it is used to make the hole again when the object moves or the margins change."},{"t":"Good to know","d":"The wall must be a group or a component in the same context as the object; locked walls are skipped."},{"t": "Walls changed by hand", "d": "If you change the wall by hand, the wall as it is becomes the new base of its holes: a linked hole keeps following its object, and a hole closed by hand stays closed. Every level of a wall inside a group (the wall, the frames, the inner groups) keeps its own hidden copy, so doors, frames and inner walls stay the same objects and stay linked."}],
   pros: ["Hole and jambs with one click","The hole follows the object","Door straight on the wall with one click","Windows and macOS"],
   solves: [{"p":"Cutting the wall by hand for every door and window takes time, and the hole does not follow the object.","s":"robo opening makes the hole from the box of the object and makes it again when you move it."},{"p":"Putting a door straight into the wall means turning and aligning it.","s":"With Place object and axis Auto the door goes in straight with one click, on the floor and at the distance typed."}],
-  specs: [["Menu","Robo Tool › robo opening (with the Settings)"],["Toolbar","2 buttons"],["Undo","One operation: Ctrl+Z"],["Requires","SketchUp 2023 or later"],["Languages","Italiano, English, Deutsch, Français, Español"]]
+  specs: [["Menu","Robo Tool › robo opening (with the Settings)"],["Toolbar","2 buttons"],["Undo","One operation: Ctrl+Z"],["Requires","SketchUp 2023 or later"],["Languages","Italiano, English, Deutsch, Français, Español"]],
+  installNote: "robo opening is not available for download from the site.",
+  unavailableNote: "robo opening is not available for download from the site."
 };
 I18N_PLUGINS.de.opening = {
   tagline: "Türen und Fenster, die die Wand durchbrechen: Ränder, geschlossene Laibungen und ein Loch, das dem Objekt folgt.",
@@ -3805,7 +3807,9 @@ I18N_PLUGINS.de.opening = {
   how: [{"t":"Die verborgene Kopie der Wand","d":"Die Wand behält eine verborgene Kopie ihres Zustands vor dem Loch: damit wird das Loch neu gemacht, wenn sich das Objekt bewegt oder die Ränder ändern."},{"t":"Gut zu wissen","d":"Die Wand muss eine Gruppe oder Komponente im selben Kontext wie das Objekt sein; gesperrte Wände werden übersprungen."},{"t": "Von Hand geänderte Wände", "d": "Ändern Sie die Wand von Hand, wird die Wand so, wie sie ist, die neue Grundlage ihrer Öffnungen: Eine verknüpfte Öffnung folgt weiter ihrem Objekt, und eine von Hand geschlossene Öffnung bleibt geschlossen. Jede Ebene einer Wand in einer Gruppe (die Wand, die Rahmen, die inneren Gruppen) behält ihre eigene verborgene Kopie, so bleiben Türen, Rahmen und innere Wände dieselben Objekte und bleiben verknüpft."}],
   pros: ["Loch und Laibungen mit einem Klick","Das Loch folgt dem Objekt","Tür mit einem Klick gerade an der Wand","Windows und macOS"],
   solves: [{"p":"Die Wand für jede Tür und jedes Fenster von Hand zu öffnen kostet Zeit, und das Loch folgt dem Objekt nicht.","s":"robo opening macht das Loch aus dem Rahmen des Objekts und macht es neu, wenn du es verschiebst."},{"p":"Eine Tür gerade in die Wand zu setzen heißt, sie zu drehen und auszurichten.","s":"Mit Objekt platzieren und Achse Auto geht die Tür mit einem Klick gerade hinein, auf dem Boden und im getippten Abstand."}],
-  specs: [["Menü","Robo Tool › robo opening (mit den Einstellungen)"],["Symbolleiste","2 Schaltflächen"],["Rückgängig","Ein Vorgang: Strg+Z"],["Benötigt","SketchUp 2023 oder neuer"],["Sprachen","Italiano, English, Deutsch, Français, Español"]]
+  specs: [["Menü","Robo Tool › robo opening (mit den Einstellungen)"],["Symbolleiste","2 Schaltflächen"],["Rückgängig","Ein Vorgang: Strg+Z"],["Benötigt","SketchUp 2023 oder neuer"],["Sprachen","Italiano, English, Deutsch, Français, Español"]],
+  installNote: "robo opening steht auf der Website nicht zum Download bereit.",
+  unavailableNote: "robo opening steht auf der Website nicht zum Download bereit."
 };
 I18N_PLUGINS.fr.opening = {
   tagline: "Des portes et des fenêtres qui percent le mur : marges, tableaux fermés et un trou qui suit l’objet.",
@@ -3816,7 +3820,9 @@ I18N_PLUGINS.fr.opening = {
   how: [{"t":"La copie cachée du mur","d":"Le mur garde en lui une copie cachée de son état avant le trou : elle sert à refaire le trou quand l’objet bouge ou que les marges changent."},{"t":"Bon à savoir","d":"Le mur doit être un groupe ou un composant dans le même contexte que l’objet ; les murs verrouillés sont ignorés."},{"t": "Murs modifiés à la main", "d": "Si vous modifiez le mur à la main, le mur tel qu’il est devient la nouvelle base de ses trous : un trou lié continue de suivre son objet, et un trou fermé à la main reste fermé. Chaque niveau d’un mur dans un groupe (le mur, les cadres, les groupes intérieurs) garde sa propre copie cachée : portes, cadres et murs intérieurs restent les mêmes objets et restent liés."}],
   pros: ["Trou et tableaux en un clic","Le trou suit l’objet","Porte droite sur le mur en un clic","Windows et macOS"],
   solves: [{"p":"Percer le mur à la main pour chaque porte et fenêtre prend du temps, et le trou ne suit pas l’objet.","s":"robo opening fait le trou depuis la boîte de l’objet et le refait quand vous le déplacez."},{"p":"Mettre une porte droite dans le mur oblige à la tourner et à l’aligner.","s":"Avec Placer l’objet et l’axe Auto la porte entre droite d’un clic, au sol et à la distance tapée."}],
-  specs: [["Menu","Robo Tool › robo opening (avec les Réglages)"],["Barre d’outils","2 boutons"],["Annulation","Une opération : Ctrl+Z"],["Nécessite","SketchUp 2023 ou plus récent"],["Langues","Italiano, English, Deutsch, Français, Español"]]
+  specs: [["Menu","Robo Tool › robo opening (avec les Réglages)"],["Barre d’outils","2 boutons"],["Annulation","Une opération : Ctrl+Z"],["Nécessite","SketchUp 2023 ou plus récent"],["Langues","Italiano, English, Deutsch, Français, Español"]],
+  installNote: "robo opening n’est pas disponible au téléchargement sur le site.",
+  unavailableNote: "robo opening n’est pas disponible au téléchargement sur le site."
 };
 I18N_PLUGINS.es.opening = {
   tagline: "Puertas y ventanas que perforan la pared: márgenes, jambas cerradas y un hueco que sigue al objeto.",
@@ -3827,7 +3833,9 @@ I18N_PLUGINS.es.opening = {
   how: [{"t":"La copia oculta de la pared","d":"La pared guarda dentro una copia oculta de cómo era antes del hueco: sirve para rehacerlo cuando el objeto se mueve o cambian los márgenes."},{"t":"Conviene saber","d":"La pared debe ser un grupo o un componente en el mismo contexto que el objeto; las paredes bloqueadas se omiten."},{"t": "Muros cambiados a mano", "d": "Si cambias el muro a mano, el muro tal como está pasa a ser la nueva base de sus huecos: un hueco vinculado sigue a su objeto, y un hueco cerrado a mano sigue cerrado. Cada nivel de un muro dentro de un grupo (el muro, los marcos, los grupos interiores) guarda su propia copia oculta, así puertas, marcos y muros interiores siguen siendo los mismos objetos y siguen vinculados."}],
   pros: ["Hueco y jambas con un clic","El hueco sigue al objeto","Puerta recta en la pared con un clic","Windows y macOS"],
   solves: [{"p":"Perforar la pared a mano para cada puerta y ventana lleva tiempo, y el hueco no sigue al objeto.","s":"robo opening hace el hueco desde la caja del objeto y lo rehace cuando lo mueves."},{"p":"Poner una puerta recta en la pared obliga a girarla y alinearla.","s":"Con Colocar objeto y eje Auto la puerta entra recta con un clic, en el suelo y a la distancia escrita."}],
-  specs: [["Menú","Robo Tool › robo opening (con los Ajustes)"],["Barra de herramientas","2 botones"],["Deshacer","Una operación: Ctrl+Z"],["Requiere","SketchUp 2023 o posterior"],["Idiomas","Italiano, English, Deutsch, Français, Español"]]
+  specs: [["Menú","Robo Tool › robo opening (con los Ajustes)"],["Barra de herramientas","2 botones"],["Deshacer","Una operación: Ctrl+Z"],["Requiere","SketchUp 2023 o posterior"],["Idiomas","Italiano, English, Deutsch, Français, Español"]],
+  installNote: "robo opening no está disponible para descargar desde el sitio.",
+  unavailableNote: "robo opening no está disponible para descargar desde el sitio."
 };
 I18N_TOOLBARS.en.opening = { 'opening.png': "robo opening: cut the wall with doors and windows", 'settings.png': "robo opening Settings" };
 I18N_TOOLBARS.de.opening = { 'opening.png': "robo opening: Wände mit Türen und Fenstern schneiden", 'settings.png': "Einstellungen von robo opening" };

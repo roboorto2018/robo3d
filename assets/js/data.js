@@ -840,7 +840,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- FILLET 3D */
   {
-    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.5', os: 'both', category: 'Modellazione', hue: 175,
+    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.6', os: 'both', category: 'Modellazione', hue: 175,
     video: '5ZWZOCEclp8',
     images: ['assets/img/screenshots/fillet_3d-1.jpg', 'assets/img/screenshots/fillet_3d-2.jpg', 'assets/img/screenshots/fillet_3d-3.jpg'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
@@ -969,7 +969,8 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
     specs: [["Menu", "Robo Tool › robo reaxis (con le Impostazioni)"], ["Barra strumenti", "1 pulsante"], ["Annullamento", "Un’operazione: Ctrl+Z"], ["Richiede", "SketchUp 2023 o successivo"], ["Lingue", "Italiano, English, Deutsch, Français, Español"]]
   },
   {
-    id: 'opening', name: 'robo opening', version: '1.2', os: 'both', category: 'Modellazione', hue: 25,
+    id: 'opening', name: 'robo opening', version: '1.3', os: 'both', category: 'Modellazione', hue: 25,
+    noDownload: true,
     donationPrompt: true,
     images: ['assets/img/screenshots/opening-1.svg', 'assets/img/screenshots/opening-2.svg'],
     tagline: "Porte e finestre che bucano il muro: margini, spallette chiuse e un buco che segue l’oggetto.",
@@ -980,7 +981,9 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
     how: [{"t":"La copia nascosta del muro","d":"Il muro tiene dentro una copia nascosta di com’era prima del buco: serve per rifarlo quando l’oggetto si sposta o cambiano i margini."},{"t":"Da sapere","d":"Il muro deve essere un gruppo o un componente nello stesso contesto dell’oggetto; i muri bloccati vengono saltati."},{"t": "Muri modificati a mano", "d": "Se cambi il muro a mano, il muro così com’è diventa la nuova base dei suoi buchi: un buco collegato continua a seguire il suo oggetto, e un buco chiuso a mano resta chiuso. Ogni livello di un muro dentro un gruppo (il muro, i telai, i gruppi interni) tiene la sua copia nascosta, così porte, telai e muri interni restano gli stessi oggetti e restano collegati."}],
     pros: ["Buco e spallette in un clic","Il buco segue l’oggetto","Porta dritta sul muro con un clic","Windows e macOS"],
     solves: [{"p":"Bucare a mano il muro per ogni porta e finestra richiede tempo, e il buco non segue l’oggetto.","s":"robo opening fa il buco dal riquadro dell’oggetto e lo rifà quando lo sposti."},{"p":"Mettere una porta dritta nel muro richiede di ruotarla e allinearla.","s":"Con Posiziona oggetto e asse Auto la porta entra dritta con un clic, a terra e alla distanza scritta."}],
-    specs: [["Menu","Robo Tool › robo opening (con le Impostazioni)"],["Barra strumenti","2 pulsanti"],["Annullamento","Un’operazione: Ctrl+Z"],["Richiede","SketchUp 2023 o successivo"],["Lingue","Italiano, English, Deutsch, Français, Español"]]
+    specs: [["Menu","Robo Tool › robo opening (con le Impostazioni)"],["Barra strumenti","2 pulsanti"],["Annullamento","Un’operazione: Ctrl+Z"],["Richiede","SketchUp 2023 o successivo"],["Lingue","Italiano, English, Deutsch, Français, Español"]],
+    installNote: 'robo opening non è disponibile per il download dal sito.',
+    unavailableNote: 'robo opening non è disponibile per il download dal sito.'
   },
 
   /* --------------------------------------------------------------- IMPORTER */
