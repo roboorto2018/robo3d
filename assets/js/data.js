@@ -567,7 +567,7 @@ var PLUGINS = [
 
   /* ---------------------------------------------------------------- STANDARD */
   {
-    id: 'standard', name: 'robo standard', version: '1.5', os: 'both', category: 'Produttività', hue: 100,
+    id: 'standard', name: 'robo standard', version: '1.6', os: 'both', category: 'Produttività', hue: 100,
     donationPrompt: true,
     tagline: 'I comandi di tutti i giorni in una barra con icone Robo.',
     simple: 'Nuovo, Apri, Salva, Taglia, Copia, Incolla, Annulla… i comandi più usati di SketchUp riuniti in una sola barra, con icone chiare e nello stile Robo.',
