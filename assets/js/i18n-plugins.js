@@ -3953,7 +3953,7 @@ I18N_PLUGINS.es.mold = {
   unavailableNote: "robo mold todavía no está disponible para descargar: se publicará en cuanto esté listo."
 };
 
-I18N_TOOLBARS.en.mold = { 'mold.png': "robo mold: bend an object onto a surface" };
-I18N_TOOLBARS.de.mold = { 'mold.png': "robo mold: ein Objekt auf eine Fläche biegen" };
-I18N_TOOLBARS.fr.mold = { 'mold.png': "robo mold : plier un objet sur une surface" };
-I18N_TOOLBARS.es.mold = { 'mold.png': "robo mold: doblar un objeto sobre una superficie" };
+I18N_TOOLBARS.en.mold = { 'mold2.png': "robo mold: bend an object onto a surface" };
+I18N_TOOLBARS.de.mold = { 'mold2.png': "robo mold: ein Objekt auf eine Fläche biegen" };
+I18N_TOOLBARS.fr.mold = { 'mold2.png': "robo mold : plier un objet sur une surface" };
+I18N_TOOLBARS.es.mold = { 'mold2.png': "robo mold: doblar un objeto sobre una superficie" };

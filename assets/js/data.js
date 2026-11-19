@@ -380,7 +380,7 @@ var PLUGINS = [
 
   /* ------------------------------------------------------------------ MOLD */
   {
-    id: 'mold', name: 'robo mold', version: '0.3', os: 'both', category: 'Modellazione', hue: 0,
+    id: 'mold', name: 'robo mold', icon: 'assets/img/icons/mold2.png', version: '0.3', os: 'both', category: 'Modellazione', hue: 0,
     noDownload: true,
     video: '5qOKNxdprD8',
     images: ['assets/img/screenshots/mold-1.jpg', 'assets/img/screenshots/mold-2.jpg', 'assets/img/screenshots/mold-3.jpg'],
@@ -1062,7 +1062,7 @@ var TOOLBARS = {
   group_to_component: { name: 'robo group to component', groups: [[{ i: 'g2c.png', l: 'Converti i gruppi in componenti' }]] },
   impact_object: { name: 'robo impact object', groups: [[{ i: 'impact.png', l: 'Apri il report del peso geometrico' }]] },
   placement: { name: 'robo placement', groups: [[{ i: 'placement.png', l: 'robo placement: distribuisci su superficie' }]] },
-  mold: { name: 'robo mold', groups: [[{ i: 'mold.png', l: "robo mold: piega un oggetto su una superficie" }]] },
+  mold: { name: 'robo mold', groups: [[{ i: 'mold2.png', l: "robo mold: piega un oggetto su una superficie" }]] },
   placement_2: { name: 'robo placement 2', groups: [[{ i: 'placement_2.png', l: "robo placement 2: sparge più oggetti su una superficie" }]] },
   spacing_tool: { name: 'robo spacing tool', groups: [[{ i: 'spacing.png', l: 'robo spacing tool: copie lungo un percorso' }]] },
   proxy_manager: { name: 'robo proxy manager', groups: [[{ i: 'bbox.png', l: 'Crea proxy (scatola)' }, { i: 'lowres.png', l: 'Crea proxy (bassa risoluzione)' }, { i: 'restore.png', l: 'Ripristina proxy' }, { i: 'manager.png', l: 'Proxy Manager' }, { i: 'settings.png', l: 'Impostazioni' }, { i: 'help.png', l: 'Guida' }]] },
