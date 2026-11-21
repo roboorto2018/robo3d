@@ -17,7 +17,7 @@ var CATEGORIES = ['Modellazione', 'Distribuzione', 'Organizzazione', 'Ottimizzaz
 var PLUGINS = [
   /* ------------------------------------------------------------------ BASEFORM */
   {
-    id: 'baseform', name: 'robo baseform', version: '2.3', os: 'both', category: 'Modellazione', hue: 12,
+    id: 'baseform', name: 'robo baseform', version: '2.4', os: 'both', category: 'Modellazione', hue: 12,
     donationPrompt: true,
     video: 'HNateALn77s',
     images: ['assets/img/screenshots/baseform-1.jpg', 'assets/img/screenshots/baseform-2.jpg'],
