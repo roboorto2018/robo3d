@@ -799,7 +799,7 @@ var PLUGINS = [
 
   /* --------------------------------------------------------------- FILLET 3D */
   {
-    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.7', os: 'both', category: 'Modellazione', hue: 175,
+    id: 'fillet_3d', name: 'robo fillet 3d', version: '1.8', os: 'both', category: 'Modellazione', hue: 175,
     video: '5ZWZOCEclp8',
     images: ['assets/img/screenshots/fillet_3d-1.jpg', 'assets/img/screenshots/fillet_3d-2.jpg', 'assets/img/screenshots/fillet_3d-3.jpg'],
     tagline: 'Arrotonda o smussa i bordi di gruppi e componenti, con quadrilateri pronti per la suddivisione.',
