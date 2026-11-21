@@ -969,10 +969,10 @@ specs: [['Menu', 'Robo Tool › robo doctor'], ['Barra strumenti', '1 pulsante']
     specs: [["Menu", "Robo Tool › robo reaxis (con le Impostazioni)"], ["Barra strumenti", "1 pulsante"], ["Annullamento", "Un’operazione: Ctrl+Z"], ["Richiede", "SketchUp 2023 o successivo"], ["Lingue", "Italiano, English, Deutsch, Français, Español"]]
   },
   {
-    id: 'opening', name: 'robo opening', version: '1.4', os: 'both', category: 'Modellazione', hue: 25,
+    id: 'opening', name: 'robo opening', icon: 'assets/img/icons/opening2.png', version: '1.4', os: 'both', category: 'Modellazione', hue: 25,
     noDownload: true,
     donationPrompt: true,
-    video: 'DGsf7CMlNvg',
+    videos: ['DGsf7CMlNvg', 'aYO7T7z3pvw'],
     images: ['assets/img/screenshots/opening14-1.jpg', 'assets/img/screenshots/opening14-2.jpg', 'assets/img/screenshots/opening14-3.jpg', 'assets/img/screenshots/opening14-4.jpg', 'assets/img/screenshots/opening14-5.jpg'],
     tagline: "Porte e finestre che bucano il muro: margini, spallette chiuse e un buco che segue l’oggetto.",
     simple: "Metti la porta o la finestra nel muro, apri robo opening e fai clic sulla porta e poi sul muro: il buco si vede in rosso. Scegli il Contorno e premi Buca. Con Posiziona oggetto la porta va dritta sul muro con un clic e il buco nasce subito.",
@@ -1092,7 +1092,7 @@ var TOOLBARS = {
     [{ i: 'union.png', l: 'Unione' }, { i: 'subtract.png', l: 'Sottrazione' }, { i: 'intersect.png', l: 'Intersezione' }, { i: 'trim.png', l: 'Taglia' }, { i: 'split.png', l: 'Dividi' }, { i: 'single.png', l: 'Unione di un oggetto' }],
     [{ i: 'options.png', l: 'Opzioni' }]] },
   cut: { name: 'robo cut', groups: [[{ i: 'cut.png', l: "robo cut: taglia con un piano" }]] },
-  opening: { name: 'robo opening', groups: [[{ i: 'opening.png', l: "robo opening: buca il muro con porte e finestre" }, { i: 'settings.png', l: "Impostazioni di robo opening" }]] },
+  opening: { name: 'robo opening', groups: [[{ i: 'opening2.png', l: "robo opening: buca il muro con porte e finestre" }, { i: 'settings.png', l: "Impostazioni di robo opening" }]] },
   reaxis: { name: 'robo reaxis', groups: [[{ i: 'reaxis.png', l: "robo reaxis: assi di gruppi e componenti" }]] },
   extrudebot: { name: 'robo extrudeBot', groups: [[{ i: 'extrudebot.png', l: "robo extrudeBot: estrudi lungo un percorso" }]] },
   demolition: { name: 'robo demolition', groups: [[{ i: 'demolition.png', l: 'robo demolition: riduce i triangoli della selezione' }]] },

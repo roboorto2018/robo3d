@@ -3837,10 +3837,10 @@ I18N_PLUGINS.es.opening = {
   installNote: "robo opening no está disponible para descargar desde el sitio.",
   unavailableNote: "robo opening no está disponible para descargar desde el sitio."
 };
-I18N_TOOLBARS.en.opening = { 'opening.png': "robo opening: cut the wall with doors and windows", 'settings.png': "robo opening Settings" };
-I18N_TOOLBARS.de.opening = { 'opening.png': "robo opening: Wände mit Türen und Fenstern schneiden", 'settings.png': "Einstellungen von robo opening" };
-I18N_TOOLBARS.fr.opening = { 'opening.png': "robo opening : percer le mur avec portes et fenêtres", 'settings.png': "Réglages de robo opening" };
-I18N_TOOLBARS.es.opening = { 'opening.png': "robo opening: perforar la pared con puertas y ventanas", 'settings.png': "Ajustes de robo opening" };
+I18N_TOOLBARS.en.opening = { 'opening2.png': "robo opening: cut the wall with doors and windows", 'settings.png': "robo opening Settings" };
+I18N_TOOLBARS.de.opening = { 'opening2.png': "robo opening: Wände mit Türen und Fenstern schneiden", 'settings.png': "Einstellungen von robo opening" };
+I18N_TOOLBARS.fr.opening = { 'opening2.png': "robo opening : percer le mur avec portes et fenêtres", 'settings.png': "Réglages de robo opening" };
+I18N_TOOLBARS.es.opening = { 'opening2.png': "robo opening: perforar la pared con puertas y ventanas", 'settings.png': "Ajustes de robo opening" };
 
 /* ============================================================= PLACEMENT 2 */
 I18N_PLUGINS.en.placement_2 = {
