@@ -423,7 +423,7 @@ I18N_PLUGINS.en.library_explorer = {
     { t: 'Files from newer versions', d: 'If a component was saved with a newer SketchUp than yours, it is inserted the way File › Import does (SketchUp warns you) instead of failing or loading only part of it. Empty files (0 bytes) are no longer listed.' },
     { t: 'Faster Refresh and previews', d: 'The scan walks each folder only once and, for many files, the preview is read straight from the start of the .skp, without opening it.' }
   ],
-  pros: ['Real previews, not just file names', 'One-click insertion', 'Tags, favourites and search', 'Files on disk are never touched'],
+  pros: ['Duplicates, measures and similar objects', 'Real previews, not just file names', 'One-click insertion', 'Tags, favourites and search', 'Files on disk are never touched'],
   solves: [
     { p: 'Finding a component among hundreds of files forces you to open them one by one.', s: 'The previews and filters show it right away.' },
     { p: 'Libraries scattered across many folders are hard to keep tidy.', s: 'One panel collects them all, each with its own list.' }
@@ -442,7 +442,7 @@ I18N_PLUGINS.de.library_explorer = {
     { t: 'Dateien aus neueren Versionen', d: 'Wurde eine Komponente mit einem neueren SketchUp als deinem gespeichert, wird sie wie bei Datei › Importieren eingefügt (SketchUp warnt dich), statt zu scheitern oder nur teilweise zu laden. Leere Dateien (0 Byte) werden nicht mehr aufgelistet.' },
     { t: 'Schnelleres Aktualisieren und Vorschauen', d: 'Der Scan durchläuft jeden Ordner nur einmal, und bei vielen Dateien wird die Vorschau direkt vom Anfang der .skp gelesen, ohne sie zu öffnen.' }
   ],
-  pros: ['Echte Vorschauen, nicht nur Dateinamen', 'Einfügen mit einem Klick', 'Tags, Favoriten und Suche', 'Dateien auf der Festplatte werden nie berührt'],
+  pros: ['Duplikate, Maße und ähnliche Objekte', 'Echte Vorschauen, nicht nur Dateinamen', 'Einfügen mit einem Klick', 'Tags, Favoriten und Suche', 'Dateien auf der Festplatte werden nie berührt'],
   solves: [
     { p: 'Eine Komponente unter Hunderten Dateien zu finden zwingt, sie einzeln zu öffnen.', s: 'Die Vorschauen und Filter zeigen sie sofort.' },
     { p: 'Über viele Ordner verstreute Bibliotheken sind schwer zu ordnen.', s: 'Ein einziges Panel sammelt sie alle, jede mit ihrer eigenen Liste.' }
@@ -461,7 +461,7 @@ I18N_PLUGINS.fr.library_explorer = {
     { t: 'Fichiers de versions plus récentes', d: 'Si un composant a été enregistré avec une version de SketchUp plus récente que la tienne, il est inséré comme avec Fichier › Importer (SketchUp t\'avertit) au lieu d\'échouer ou de n\'en charger qu\'une partie. Les fichiers vides (0 octet) ne sont plus listés.' },
     { t: 'Actualisation et aperçus plus rapides', d: 'L\'analyse ne parcourt chaque dossier qu\'une fois et, pour beaucoup de fichiers, l\'aperçu est lu directement au début du .skp, sans l\'ouvrir.' }
   ],
-  pros: ['De vrais aperçus, pas seulement des noms de fichiers', 'Insertion en un clic', 'Tags, favoris et recherche', 'Les fichiers sur le disque ne sont jamais touchés'],
+  pros: ['Doublons, mesures et objets semblables', 'De vrais aperçus, pas seulement des noms de fichiers', 'Insertion en un clic', 'Tags, favoris et recherche', 'Les fichiers sur le disque ne sont jamais touchés'],
   solves: [
     { p: 'Trouver un composant parmi des centaines de fichiers oblige à les ouvrir un par un.', s: 'Les aperçus et les filtres le montrent immédiatement.' },
     { p: 'Les bibliothèques dispersées dans de nombreux dossiers sont difficiles à ranger.', s: 'Un seul panneau les rassemble, chacune avec sa propre liste.' }
@@ -480,7 +480,7 @@ I18N_PLUGINS.es.library_explorer = {
     { t: 'Archivos de versiones más recientes', d: 'Si un componente se guardó con un SketchUp más reciente que el tuyo, se inserta como con Archivo › Importar (SketchUp te avisa) en lugar de fallar o cargar solo una parte. Los archivos vacíos (0 bytes) ya no se listan.' },
     { t: 'Actualizar y vistas previas más rápidas', d: 'El análisis recorre cada carpeta una sola vez y, en muchos archivos, la vista previa se lee directamente del inicio del .skp, sin abrirlo.' }
   ],
-  pros: ['Vistas previas reales, no solo nombres de archivo', 'Inserción con un clic', 'Etiquetas, favoritos y búsqueda', 'Los archivos del disco nunca se tocan'],
+  pros: ['Duplicados, medidas y objetos parecidos', 'Vistas previas reales, no solo nombres de archivo', 'Inserción con un clic', 'Etiquetas, favoritos y búsqueda', 'Los archivos del disco nunca se tocan'],
   solves: [
     { p: 'Encontrar un componente entre cientos de archivos obliga a abrirlos uno a uno.', s: 'Las vistas previas y los filtros lo muestran de inmediato.' },
     { p: 'Las bibliotecas dispersas en muchas carpetas son difíciles de mantener ordenadas.', s: 'Un solo panel las reúne, cada una con su propia lista.' }
@@ -1485,7 +1485,11 @@ I18N_PLUGINS.en.library_explorer.main = [
   { t: 'One-click insertion', d: 'Click a component and you insert it into the model, click a material and you apply it to the selection.' },
   { t: 'Search, filter and organize', d: 'Search by name, tags to classify objects, and a heart for favorites.' },
   { t: 'One list per folder', d: 'Each folder you add becomes a list with its subfolders. The files on disk are not touched.' },
-  { t: 'Views of your choice', d: 'Switch from a detailed list to small, medium or large icons, depending on how you like to work.' }
+  { t: 'Views of your choice', d: 'Switch from a detailed list to small, medium or large icons, depending on how you like to work.' },
+  { t: 'Smart tools', d: 'See which library items are in the model, find duplicate files even under other names and the files to check (heavy, many faces).' },
+  { t: 'Measures and similar objects', d: 'The plugin reads the measures and faces of every file: filter by width, depth and height and find similar objects.' },
+  { t: 'Many cards at once, coloured tags', d: 'Ctrl or Shift + click to give tags and favorites to many files at once; coloured tags and tags suggested from the name and materials.' },
+  { t: 'Place on faces, 3D preview, team', d: 'Alt + click places the object on faces and lines; rotating 3D preview; team folder with shared tags and favorites.' }
 ];
 I18N_PLUGINS.en.library_explorer.how = [
   { t: 'The problem it solves', d: 'Anyone who has worked for years has hundreds of components and materials scattered across many folders. Finding one means opening files one by one or remembering the exact name. robo library explorer gathers them in a single panel, with real previews, and inserts them into the model with a click.' },
@@ -1495,7 +1499,8 @@ I18N_PLUGINS.en.library_explorer.how = [
   { t: 'Step 3 · Insert with a click', d: 'Click a component and it is inserted into the model; click a material and it is applied to the selection. If a component was saved with a SketchUp version newer than yours, it is inserted as with File › Import (SketchUp warns you) instead of failing. Empty files are not listed.' },
   { t: 'Proxy, 3D Warehouse and cloud', d: 'For objects created with robo proxy manager it also shows the proxy. A button opens the 3D Warehouse to download models into the library. Cloud backup saves the list in a OneDrive or Google Drive folder: your password never goes through the plugin.' },
   { t: 'Safety', d: 'The plugin deletes files only inside the library folders, and only after your confirmation.' },
-  { t: 'A concrete example', d: 'You are furnishing a bathroom and remember having a "white, round" sink somewhere among 400 files. You open robo library explorer, type "sink" in the search and see three previews. You click the right one and the component enters the model. You mark it with the heart: next time you find it among the favorites.' }
+  { t: 'A concrete example', d: 'You are furnishing a bathroom and remember having a "white, round" sink somewhere among 400 files. You open robo library explorer, type "sink" in the search and see three previews. You click the right one and the component enters the model. You mark it with the heart: next time you find it among the favorites.' },
+  { t: 'What is new in version 1.7', d: 'Tools button (In the model, Duplicates, Files to check, Filter by measures); the measures and faces of every file; a green mark on the cards of the objects that are in the model and an orange arrow when the library file is newer, with Update in the model (a single Undo); Recent and Most used lists; selection of several cards; coloured and suggested tags; place on faces and lines with Alt + click; 3D preview; similar objects; team folder. When it opens, the plugin only checks whether something was added and works only on the new files, with a bar that shows what it is doing. The plugin never changes the files of the library.' }
 ];
 I18N_PLUGINS.de.library_explorer = I18N_PLUGINS.de.library_explorer || {};
 I18N_PLUGINS.de.library_explorer.intro = [
@@ -1507,7 +1512,11 @@ I18N_PLUGINS.de.library_explorer.main = [
   { t: 'Einfügen mit einem Klick', d: 'Klicken Sie auf eine Komponente, und sie wird ins Modell eingefügt; klicken Sie auf ein Material, und es wird auf die Auswahl angewendet.' },
   { t: 'Suchen, filtern und ordnen', d: 'Suche nach Name, Tags zur Klassifizierung der Objekte und ein Herz für Favoriten.' },
   { t: 'Eine Liste je Ordner', d: 'Jeder hinzugefügte Ordner wird zu einer Liste mit seinen Unterordnern. Die Dateien auf der Festplatte werden nicht angetastet.' },
-  { t: 'Ansichten nach Wahl', d: 'Wechseln Sie von der Detailliste zu kleinen, mittleren oder großen Symbolen, je nachdem, wie Sie gern arbeiten.' }
+  { t: 'Ansichten nach Wahl', d: 'Wechseln Sie von der Detailliste zu kleinen, mittleren oder großen Symbolen, je nachdem, wie Sie gern arbeiten.' },
+  { t: 'Clevere Werkzeuge', d: 'Sieh, welche Elemente der Bibliothek im Modell sind, finde doppelte Dateien auch unter anderem Namen und zu prüfende Dateien (schwer, viele Flächen).' },
+  { t: 'Maße und ähnliche Objekte', d: 'Das Plugin liest Maße und Flächen jeder Datei: filtere nach Breite, Tiefe und Höhe und finde ähnliche Objekte.' },
+  { t: 'Viele Karten auf einmal, farbige Tags', d: 'Strg oder Umschalt + Klick, um vielen Dateien gleichzeitig Tags und Favoriten zu geben; farbige Tags und Vorschläge aus Name und Materialien.' },
+  { t: 'Auf Flächen setzen, 3D-Vorschau, Team', d: 'Alt + Klick setzt das Objekt auf Flächen und Linien; drehbare 3D-Vorschau; Teamordner mit geteilten Tags und Favoriten.' }
 ];
 I18N_PLUGINS.de.library_explorer.how = [
   { t: 'Das Problem, das es löst', d: 'Wer seit Jahren arbeitet, hat Hunderte Komponenten und Materialien in vielen Ordnern verstreut. Eine zu finden bedeutet, Dateien einzeln zu öffnen oder sich den genauen Namen zu merken. robo library explorer sammelt sie in einem Fenster, mit echten Vorschaubildern, und fügt sie mit einem Klick ins Modell ein.' },
@@ -1517,7 +1526,8 @@ I18N_PLUGINS.de.library_explorer.how = [
   { t: 'Schritt 3 · Mit einem Klick einfügen', d: 'Klicken Sie auf eine Komponente, und sie wird ins Modell eingefügt; klicken Sie auf ein Material, und es wird auf die Auswahl angewendet. Wurde eine Komponente mit einer neueren SketchUp-Version als Ihrer gespeichert, wird sie wie bei Datei › Importieren eingefügt (SketchUp warnt Sie), statt zu scheitern. Leere Dateien werden nicht aufgelistet.' },
   { t: 'Proxy, 3D Warehouse und Cloud', d: 'Bei mit robo proxy manager erstellten Objekten zeigt es auch den Proxy an. Eine Schaltfläche öffnet das 3D Warehouse, um Modelle in die Bibliothek herunterzuladen. Das Cloud-Backup speichert die Liste in einem OneDrive- oder Google-Drive-Ordner: Ihr Passwort läuft nie über das Plugin.' },
   { t: 'Sicherheit', d: 'Das Plugin löscht Dateien nur innerhalb der Bibliotheksordner, und nur nach Ihrer Bestätigung.' },
-  { t: 'Ein konkretes Beispiel', d: 'Sie richten ein Bad ein und erinnern sich, irgendwo unter 400 Dateien ein „weißes, rundes“ Waschbecken zu haben. Sie öffnen robo library explorer, geben „Waschbecken“ in die Suche ein und sehen drei Vorschauen. Sie klicken auf die richtige, und die Komponente kommt ins Modell. Sie markieren sie mit dem Herz: Beim nächsten Mal finden Sie sie bei den Favoriten.' }
+  { t: 'Ein konkretes Beispiel', d: 'Sie richten ein Bad ein und erinnern sich, irgendwo unter 400 Dateien ein „weißes, rundes“ Waschbecken zu haben. Sie öffnen robo library explorer, geben „Waschbecken“ in die Suche ein und sehen drei Vorschauen. Sie klicken auf die richtige, und die Komponente kommt ins Modell. Sie markieren sie mit dem Herz: Beim nächsten Mal finden Sie sie bei den Favoriten.' },
+  { t: 'Neu in Version 1.7', d: 'Knopf Werkzeuge (Im Modell, Duplikate, Zu prüfende Dateien, Nach Maßen filtern); Maße und Flächen jeder Datei; grünes Zeichen auf den Karten der Objekte im Modell und oranger Pfeil, wenn die Datei der Bibliothek neuer ist, mit Im Modell aktualisieren (ein Rückgängig); Listen Zuletzt und Meistgenutzt; Auswahl mehrerer Karten; farbige und vorgeschlagene Tags; auf Flächen und Linien setzen mit Alt + Klick; 3D-Vorschau; ähnliche Objekte; Teamordner. Beim Öffnen prüft das Plugin nur, ob etwas hinzugekommen ist, und arbeitet nur an den neuen Dateien, mit einem Balken, der zeigt, was es tut. Das Plugin ändert die Dateien der Bibliothek nie.' }
 ];
 I18N_PLUGINS.fr.library_explorer = I18N_PLUGINS.fr.library_explorer || {};
 I18N_PLUGINS.fr.library_explorer.intro = [
@@ -1529,7 +1539,11 @@ I18N_PLUGINS.fr.library_explorer.main = [
   { t: 'Insertion en un clic', d: 'Cliquez sur un composant pour l\'insérer dans le modèle, sur un matériau pour l\'appliquer à la sélection.' },
   { t: 'Rechercher, filtrer, organiser', d: 'Recherche par nom, tags pour classer les objets et cœur pour les favoris.' },
   { t: 'Une liste par dossier', d: 'Chaque dossier ajouté devient une liste avec ses sous-dossiers. Les fichiers sur le disque ne sont pas touchés.' },
-  { t: 'Vues au choix', d: 'Passez de la liste détaillée aux petites, moyennes ou grandes icônes, selon votre façon de travailler.' }
+  { t: 'Vues au choix', d: 'Passez de la liste détaillée aux petites, moyennes ou grandes icônes, selon votre façon de travailler.' },
+  { t: 'Outils intelligents', d: 'Voyez quels éléments de la bibliothèque sont dans le modèle, trouvez les doublons même sous d’autres noms et les fichiers à vérifier (lourds, beaucoup de faces).' },
+  { t: 'Mesures et objets semblables', d: 'Le plugin lit les mesures et les faces de chaque fichier : filtrez par largeur, profondeur et hauteur et trouvez les objets semblables.' },
+  { t: 'Plusieurs fiches à la fois, tags colorés', d: 'Ctrl ou Maj + clic pour donner tags et favoris à beaucoup de fichiers à la fois ; tags colorés et tags suggérés par le nom et les matériaux.' },
+  { t: 'Pose sur les faces, aperçu 3D, équipe', d: 'Alt + clic pose l’objet sur les faces et les lignes ; aperçu 3D orientable ; dossier d’équipe avec tags et favoris partagés.' }
 ];
 I18N_PLUGINS.fr.library_explorer.how = [
   { t: 'Le problème qu\'il résout', d: 'Quand on travaille depuis des années, on a des centaines de composants et de matériaux éparpillés dans de nombreux dossiers. En trouver un oblige à ouvrir les fichiers un par un ou à se souvenir du nom exact. robo library explorer les réunit dans un seul panneau, avec de vraies miniatures, et les insère dans le modèle d\'un clic.' },
@@ -1539,7 +1553,8 @@ I18N_PLUGINS.fr.library_explorer.how = [
   { t: 'Étape 3 · Insérez d\'un clic', d: 'Cliquez sur un composant et il est inséré dans le modèle ; cliquez sur un matériau et il est appliqué à la sélection. Si un composant a été enregistré avec une version de SketchUp plus récente que la vôtre, il est inséré comme avec Fichier › Importer (SketchUp vous avertit) au lieu d\'échouer. Les fichiers vides ne sont pas listés.' },
   { t: 'Proxy, 3D Warehouse et cloud', d: 'Pour les objets créés avec robo proxy manager, il affiche aussi le proxy. Un bouton ouvre le 3D Warehouse pour télécharger des modèles dans la bibliothèque. La sauvegarde dans le cloud enregistre la liste dans un dossier OneDrive ou Google Drive : votre mot de passe ne passe jamais par le plugin.' },
   { t: 'Sécurité', d: 'Le plugin ne supprime des fichiers que dans les dossiers de bibliothèque, et seulement après votre confirmation.' },
-  { t: 'Un exemple concret', d: 'Vous aménagez une salle de bains et vous vous souvenez d\'avoir un lavabo « blanc, rond » quelque part parmi 400 fichiers. Vous ouvrez robo library explorer, saisissez « lavabo » dans la recherche et voyez trois miniatures. Vous cliquez sur la bonne et le composant entre dans le modèle. Vous le marquez avec le cœur : la prochaine fois, vous le trouvez parmi les favoris.' }
+  { t: 'Un exemple concret', d: 'Vous aménagez une salle de bains et vous vous souvenez d\'avoir un lavabo « blanc, rond » quelque part parmi 400 fichiers. Vous ouvrez robo library explorer, saisissez « lavabo » dans la recherche et voyez trois miniatures. Vous cliquez sur la bonne et le composant entre dans le modèle. Vous le marquez avec le cœur : la prochaine fois, vous le trouvez parmi les favoris.' },
+  { t: 'Nouveautés de la version 1.7', d: 'Bouton Outils (Dans le modèle, Doublons, Fichiers à vérifier, Filtrer par mesures) ; les mesures et les faces de chaque fichier ; une marque verte sur les fiches des objets présents dans le modèle et une flèche orange quand le fichier de la bibliothèque est plus récent, avec Mettre à jour dans le modèle (une seule annulation) ; listes Récents et Plus utilisés ; sélection de plusieurs fiches ; tags colorés et suggérés ; pose sur faces et lignes avec Alt + clic ; aperçu 3D ; objets semblables ; dossier d’équipe. À l’ouverture, le plugin vérifie seulement si quelque chose a été ajouté et ne travaille que sur les nouveaux fichiers, avec une barre qui montre ce qu’il fait. Le plugin ne modifie jamais les fichiers de la bibliothèque.' }
 ];
 I18N_PLUGINS.es.library_explorer = I18N_PLUGINS.es.library_explorer || {};
 I18N_PLUGINS.es.library_explorer.intro = [
@@ -1551,7 +1566,11 @@ I18N_PLUGINS.es.library_explorer.main = [
   { t: 'Inserción con un clic', d: 'Haz clic en un componente y lo insertas en el modelo, haz clic en un material y lo aplicas a la selección.' },
   { t: 'Buscar, filtrar y organizar', d: 'Búsqueda por nombre, etiquetas para clasificar los objetos y corazón para los favoritos.' },
   { t: 'Una lista por carpeta', d: 'Cada carpeta añadida se convierte en una lista con sus subcarpetas. Los archivos del disco no se tocan.' },
-  { t: 'Vistas a elegir', d: 'Pasa de la lista con detalles a iconos pequeños, medianos o grandes, según cómo prefieras trabajar.' }
+  { t: 'Vistas a elegir', d: 'Pasa de la lista con detalles a iconos pequeños, medianos o grandes, según cómo prefieras trabajar.' },
+  { t: 'Herramientas inteligentes', d: 'Ves qué elementos de la biblioteca están en el modelo, encuentras archivos duplicados aunque tengan otro nombre y los archivos que revisar (pesados, muchas caras).' },
+  { t: 'Medidas y objetos parecidos', d: 'El plugin lee las medidas y caras de cada archivo: filtras por ancho, profundidad y alto y encuentras objetos parecidos.' },
+  { t: 'Varias fichas a la vez, etiquetas de color', d: 'Ctrl o Mayús + clic para dar etiquetas y favoritos a muchos archivos a la vez; etiquetas de color y sugeridas por el nombre y los materiales.' },
+  { t: 'Colocar en caras, vista 3D, equipo', d: 'Alt + clic coloca el objeto en caras y líneas; vista previa 3D giratoria; carpeta de equipo con etiquetas y favoritos compartidos.' }
 ];
 I18N_PLUGINS.es.library_explorer.how = [
   { t: 'El problema que resuelve', d: 'Quien trabaja desde hace años tiene cientos de componentes y materiales repartidos en muchas carpetas. Encontrar uno obliga a abrir archivos uno a uno o a recordar el nombre exacto. robo library explorer los reúne en un solo panel, con miniaturas reales, y los inserta en el modelo con un clic.' },
@@ -1561,7 +1580,8 @@ I18N_PLUGINS.es.library_explorer.how = [
   { t: 'Paso 3 · Inserta con un clic', d: 'Haz clic en un componente y se inserta en el modelo; haz clic en un material y se aplica a la selección. Si un componente se guardó con una versión de SketchUp más reciente que la tuya, se inserta como con Archivo › Importar (SketchUp te avisa) en lugar de fallar. Los archivos vacíos no se listan.' },
   { t: 'Proxy, 3D Warehouse y nube', d: 'Para los objetos creados con robo proxy manager muestra también el proxy. Un botón abre el 3D Warehouse para descargar modelos a la biblioteca. La copia de seguridad en la nube guarda la lista en una carpeta de OneDrive o Google Drive: tu contraseña nunca pasa por el plugin.' },
   { t: 'Seguridad', d: 'El plugin elimina archivos solo dentro de las carpetas de la biblioteca, y solo tras tu confirmación.' },
-  { t: 'Un ejemplo concreto', d: 'Estás amueblando un baño y recuerdas tener un lavabo «blanco, redondo» en algún lugar entre 400 archivos. Abres robo library explorer, escribes «lavabo» en la búsqueda y ves tres miniaturas. Haces clic en la correcta y el componente entra en el modelo. Lo marcas con el corazón: la próxima vez lo encuentras entre los favoritos.' }
+  { t: 'Un ejemplo concreto', d: 'Estás amueblando un baño y recuerdas tener un lavabo «blanco, redondo» en algún lugar entre 400 archivos. Abres robo library explorer, escribes «lavabo» en la búsqueda y ves tres miniaturas. Haces clic en la correcta y el componente entra en el modelo. Lo marcas con el corazón: la próxima vez lo encuentras entre los favoritos.' },
+  { t: 'Novedades de la versión 1.7', d: 'Botón Herramientas (En el modelo, Duplicados, Archivos que revisar, Filtrar por medidas); las medidas y caras de cada archivo; marca verde en las fichas de los objetos que están en el modelo y flecha naranja cuando el archivo de la biblioteca es más nuevo, con Actualizar en el modelo (un solo Deshacer); listas Recientes y Más usados; selección de varias fichas; etiquetas de color y sugeridas; colocar en caras y líneas con Alt + clic; vista previa 3D; objetos parecidos; carpeta de equipo. Al abrirse, el plugin solo comprueba si se añadió algo y trabaja solo con los archivos nuevos, con una barra que muestra lo que hace. El plugin nunca modifica los archivos de la biblioteca.' }
 ];
 I18N_PLUGINS.en.proxy_manager = I18N_PLUGINS.en.proxy_manager || {};
 I18N_PLUGINS.en.proxy_manager.intro = [

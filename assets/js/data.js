@@ -303,7 +303,7 @@ var PLUGINS = [
 
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
-    id: 'library_explorer', name: 'robo library explorer', version: '1.6', os: 'both', category: 'Organizzazione', hue: 190,
+    id: 'library_explorer', name: 'robo library explorer', version: '1.7', os: 'both', category: 'Organizzazione', hue: 190,
     donationPrompt: true,
     videos: ['zV-D6e0V4NQ', 'v_EKDpbxICo'],
     images: ['assets/img/screenshots/library_explorer-1.jpg'],
@@ -318,7 +318,11 @@ var PLUGINS = [
       { t: 'Inserimento con un clic', d: 'Clicchi un componente e lo inserisci nel modello, clicchi un materiale e lo applichi alla selezione.' },
       { t: 'Cerca, filtra e organizza', d: 'Ricerca per nome, tag per classificare gli oggetti e cuore per i preferiti.' },
       { t: 'Una voce per cartella', d: 'Ogni cartella aggiunta diventa un elenco con le sue sottocartelle. I file sul disco non vengono toccati.' },
-      { t: 'Viste a scelta', d: 'Passi da elenco con dettagli a icone piccole, medie o grandi, secondo come preferisci lavorare.' }
+      { t: 'Viste a scelta', d: 'Passi da elenco con dettagli a icone piccole, medie o grandi, secondo come preferisci lavorare.' },
+      { t: 'Strumenti intelligenti', d: 'Vedi cosa della libreria c’è nel modello, trovi i file duplicati anche con nomi diversi e i file da controllare (pesanti, con molte facce).' },
+      { t: 'Misure e oggetti simili', d: 'Il plugin legge misure e facce di ogni file: filtri per larghezza, profondità e altezza e trovi gli oggetti simili.' },
+      { t: 'Più schede insieme, tag colorati', d: 'Ctrl o Maiusc + clic per dare tag e preferiti a molti file insieme; tag colorati e tag suggeriti dal nome e dai materiali.' },
+      { t: 'Posa su facce, anteprima 3D, squadra', d: 'Alt + clic posa l’oggetto su facce e linee; anteprima 3D girevole; cartella di squadra con tag e preferiti condivisi.' }
     ],
     steps: ['Premi "Cartella" e scegli la cartella della tua libreria.', 'Sfoglia le anteprime, filtra per tag o cerca per nome.', 'Clicca un componente per inserirlo, un materiale per applicarlo alla selezione.'],
     how: [
@@ -329,9 +333,10 @@ var PLUGINS = [
       { t: 'Passo 3 · Inserisci con un clic', d: 'Clicca un componente e viene inserito nel modello; clicca un materiale e viene applicato alla selezione. Se un componente è stato salvato con una versione di SketchUp più recente della tua, viene inserito come con File › Importa (SketchUp ti avvisa) invece di fallire. I file vuoti non vengono elencati.' },
       { t: 'Proxy e cloud', d: 'Per gli oggetti creati con robo proxy manager mostra anche il proxy. Il backup nel cloud salva l\'elenco in una cartella OneDrive o Google Drive: la password non passa mai dal plugin.' },
       { t: 'Sicurezza', d: 'Il plugin elimina file solo dentro le cartelle di libreria, e solo dopo la tua conferma.' },
-      { t: 'Un esempio concreto', d: 'Stai arredando un bagno e ricordi di avere un lavabo "bianco, tondo" da qualche parte tra 400 file. Apri robo library explorer, scrivi "lavabo" nella ricerca e vedi tre anteprime. Clicchi quella giusta e il componente entra nel modello. Lo segni con il cuore: la prossima volta lo trovi tra i preferiti.' }
+      { t: 'Un esempio concreto', d: 'Stai arredando un bagno e ricordi di avere un lavabo "bianco, tondo" da qualche parte tra 400 file. Apri robo library explorer, scrivi "lavabo" nella ricerca e vedi tre anteprime. Clicchi quella giusta e il componente entra nel modello. Lo segni con il cuore: la prossima volta lo trovi tra i preferiti.' },
+      { t: 'Novità della versione 1.7', d: 'Pulsante Strumenti (Nel modello, Duplicati, File da controllare, Filtro misure); le misure e le facce di ogni file; segno verde sulle schede degli oggetti presenti nel modello e freccia arancione quando il file della libreria è più nuovo, con Aggiorna nel modello (un solo Annulla); elenchi Recenti e Più usati; selezione di più schede; tag colorati e suggeriti; posa su facce e linee con Alt + clic; anteprima 3D; oggetti simili; cartella di squadra. All’apertura il plugin controlla solo se è stato aggiunto qualcosa e lavora solo sui file nuovi, con una barra che mostra cosa sta facendo. Il plugin non modifica mai i file della libreria.' }
     ],
-    pros: ['Anteprime vere, non solo nomi di file', 'Inserimento con un clic', 'Tag, preferiti e ricerca', 'I file sul disco non vengono toccati'],
+    pros: ['Anteprime vere, non solo nomi di file', 'Duplicati, misure e oggetti simili', 'Inserimento con un clic', 'Tag, preferiti e ricerca', 'I file sul disco non vengono toccati'],
     solves: [
       { p: 'Trovare un componente tra centinaia di file obbliga ad aprirli uno a uno.', s: 'Le anteprime e i filtri lo mostrano subito.' },
       { p: 'Le librerie sparse in molte cartelle sono difficili da tenere in ordine.', s: 'Un unico pannello le raccoglie, ciascuna con il suo elenco.' }
