@@ -303,7 +303,7 @@ var PLUGINS = [
 
   /* -------------------------------------------------------------- LIBRARY EXPLORER */
   {
-    id: 'library_explorer', name: 'robo library explorer', version: '1.5', os: 'both', category: 'Organizzazione', hue: 190,
+    id: 'library_explorer', name: 'robo library explorer', version: '1.6', os: 'both', category: 'Organizzazione', hue: 190,
     donationPrompt: true,
     videos: ['zV-D6e0V4NQ', 'v_EKDpbxICo'],
     images: ['assets/img/screenshots/library_explorer-1.jpg'],
