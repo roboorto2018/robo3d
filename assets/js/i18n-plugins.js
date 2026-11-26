@@ -2249,13 +2249,13 @@ I18N_PLUGINS.en.toolbar = {
   tagline: 'Toolbars of your own, with buttons for Ruby scripts and key combinations.',
   simple: 'Pick the commands you use most — SketchUp tools, Robo plugin buttons and Extensions menu items — and drag them into a toolbar of your own. Give it a name, save it and it is there in SketchUp, always ready. On top of that you make buttons all of your own, with the icon you want: one runs a Ruby script, even one written with artificial intelligence, the other presses a key combination.',
   spotlight: {
-    badge: 'New in 1.3', h2: 'Buttons of your own: Ruby scripts and key combinations',
-    text: ['Your toolbar no longer holds only the commands that already exist: it also holds the ones you invent. Every new button has the title you choose and a custom icon of any kind.'],
+    badge: 'New in 1.8', h2: 'Toolbar backup: Export and Import',
+    text: ['All the toolbars you built, with their icons and buttons, fit in one file. Keep it as a safety copy or take it to another computer, and the toolbars come back as they were with one click.'],
     items: [
-      { t: 'Ruby script', c: '#7b3fc4', icon: true, d: 'A button that runs your Ruby code, like SketchUp’s Ruby Console: a repetitive operation, a check of the model, a series of steps, all with one click.' },
-      { t: 'Even complex scripts, with artificial intelligence', c: '#0078d7', d: 'You do not need to know how to program: tell an artificial intelligence (for example Claude or ChatGPT) what you want SketchUp to do, copy the script it writes and paste it into the button. Even long and complex scripts become a button of your toolbar. Always try a new script on a copy of the model.' },
-      { t: 'Key combinations', c: '#28a745', icon: true, d: 'A button that presses a key combination like the keyboard: it runs the command that has that shortcut in SketchUp, even one with no button of its own.' },
-      { t: 'Custom icons of any kind', c: '#e67e00', d: 'With the pencil you give every button the icon you want: a drawing of yours, a symbol, a letter, a logo. Two PNG images of 16 and 24 pixels are enough, or a single SVG file.' }
+      { t: 'Export backup', c: '#0f6f6b', d: 'In “My toolbars” it saves all the toolbars in a .json file, with the chosen icons, the Ruby script and Keys buttons and the names given with Rename.' },
+      { t: 'Import backup', c: '#0078d7', d: 'It makes the toolbars again from the file, also on another computer or another SketchUp: they appear at once. If a toolbar has the same name as one of yours, you choose whether to replace it or keep yours.' },
+      { t: 'Ruby scripts kept safe', c: '#7b3fc4', icon: true, d: 'If the backup holds Ruby scripts, robo toolbar warns you before importing them. Each one runs only after you have read its code and pressed “Approve and run”.' },
+      { t: 'A checked file', c: '#28a745', d: 'Only the data robo toolbar knows is taken from the file, each item checked; icons must be PNG of 16 and 24 pixels or SVG. No code runs by itself.' }
     ]
   },
   intro: [
@@ -2271,7 +2271,9 @@ I18N_PLUGINS.en.toolbar = {
     { t: 'List in alphabetical order', d: 'A box puts the commands of the list in alphabetical order, and the list column gets wider or narrower when you drag its edge.' },
     { t: 'Saved toolbars, editable', d: 'In the “My toolbars” list you can edit, show or delete each toolbar. If you have unsaved changes, the plugin reminds you before you switch to another toolbar.' },
     { t: 'Warning for vanished commands', d: 'If the plugin behind a button is deleted, the button turns red with a white cross and a message explains what happened; you remove it whenever you like.' },
-    { t: 'In five languages', d: 'Window, messages and help are in Italian, English, German, French and Spanish.' }
+    { t: 'In five languages', d: 'Window, messages and help are in Italian, English, German, French and Spanish.' },
+    { t: 'Toolbar backup', d: 'Export backup saves all the toolbars in a file, with icons, buttons and names; Import backup makes them again, also on another computer.' },
+    { t: 'Even complex scripts, with artificial intelligence', d: 'You do not need to know how to program: tell an artificial intelligence (for example Claude or ChatGPT) what you want SketchUp to do, copy the script it writes and paste it into the button. Even long and complex scripts become a button of your toolbar. Always try a new script on a copy of the model.' }
   ],
   steps: ['Open robo toolbar from Extensions › Robo Tool.', 'Drag the commands into the toolbar preview and reorder them.', 'Type the toolbar name and press Save toolbar: it appears in SketchUp right away.'],
   how: [
@@ -2283,27 +2285,29 @@ I18N_PLUGINS.en.toolbar = {
     { t: 'Ruby script and Keys buttons', d: 'In the purple region “Add to the toolbar” drag Ruby script or Keys into the preview, or click their +. Then click the symbol at the bottom left of the button: type the title and the script, or click the field and press the key combination. With the pencil at the top left you give the button an icon of your own (PNG of 16 and 24 pixels, or one SVG). On a Mac, for Keys, allow SketchUp in Accessibility.' },
     { t: 'My toolbars and unsaved changes', d: 'Below you find the saved toolbars, with the Edit, Show and Delete buttons (click twice to delete). If you press Edit on another toolbar while you have unsaved changes, a window asks whether to save them: Yes saves them and opens the other toolbar, No discards them, Cancel leaves you where you are.' },
     { t: 'The generic and the red icon', d: 'The generic icon with a red cross marks a command without an icon of its own, which you can replace with yours. The red icon with a white cross marks a command that is no longer available, because its plugin was deleted or is not installed: the check runs at every SketchUp start and every time you open the window. In the SketchUp toolbar the red button shows a message; in the window you remove it with the red x.' },
+    { t: 'Export and Import backup', d: 'At the top right of “My toolbars” you find Export backup and Import backup. Export saves all the toolbars in a .json file, with the chosen icons, the Ruby script and Keys buttons and the names given with Rename. Import makes the toolbars again from that file, also on another computer, and shows them in SketchUp at once: if a toolbar has the same name as one of yours, Yes replaces it, No keeps yours, Cancel stops. The Ruby scripts of the backup come in only if you confirm, and each one runs only after you have read the code and pressed “Approve and run”: import scripts only from backups of yours or of people you trust.' },
     { t: 'A concrete example', d: 'You often work with line, rectangle, move, rotate and scale, and you have two Robo plugins you use all the time. Open robo toolbar, drag them into a toolbar called “Modeling”, put a separator between the SketchUp tools and the plugin ones, and save. From then on everything is at hand in a single toolbar, in the order you decided.' }
   ],
-  pros: ['Custom toolbars, as many as you like', 'Buttons with your own icons for Ruby scripts, even written with artificial intelligence', 'Buttons that run a Ruby script or a key combination', 'SketchUp tools and Robo plugins in the same list', 'Customizable icons (PNG or SVG)', 'A warning if you have unsaved changes'],
+  pros: ['Custom toolbars, as many as you like', 'Buttons with your own icons for Ruby scripts, even written with artificial intelligence', 'Buttons that run a Ruby script or a key combination', 'SketchUp tools and Robo plugins in the same list', 'Customizable icons (PNG or SVG)', 'A warning if you have unsaved changes', 'Backup of all your toolbars in one file, to restore also on another computer'],
   solves: [
     { p: 'The commands you use most are scattered across many toolbars and menus.', s: 'You gather them in a single toolbar, in the order you prefer.' },
     { p: 'Some plugin commands have no icon to put in a toolbar.', s: 'They get a generic icon that you can replace with your own.' },
-    { p: 'An operation you do often takes many steps or has no command.', s: 'A Ruby script, even written by an artificial intelligence, does it with one click from your button, with the icon you want.' }
+    { p: 'An operation you do often takes many steps or has no command.', s: 'A Ruby script, even written by an artificial intelligence, does it with one click from your button, with the icon you want.' },
+    { p: 'You change computer or reinstall SketchUp and lose the toolbars you built.', s: 'Export backup saves them in a file, Import backup makes them again in a moment.' }
   ],
-  specs: [['Window', '900 × 600 px, resizable'], ['Menu', 'Robo Tool › robo toolbar'], ['Custom icons', 'PNG 16 and 24 px, or SVG'], ['Languages', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Window', '900 × 600 px, resizable'], ['Menu', 'Robo Tool › robo toolbar'], ['Custom icons', 'PNG 16 and 24 px, or SVG'], ['Languages', 'Italiano, English, Deutsch, Français, Español'], ['Backup', '.json file (Export / Import)']]
 };
 I18N_PLUGINS.de.toolbar = {
   tagline: 'Eigene Symbolleisten, mit Schaltflächen für Ruby-Skripte und Tastenkombinationen.',
   simple: 'Wählen Sie die Befehle, die Sie am meisten brauchen — SketchUp-Werkzeuge, Schaltflächen der Robo-Plugins und Einträge des Menüs Erweiterungen — und ziehen Sie sie in eine eigene Leiste. Namen vergeben, speichern, und die Leiste ist in SketchUp immer bereit. Dazu legen Sie ganz eigene Schaltflächen an, mit dem Symbol, das Sie wollen: eine führt ein Ruby-Skript aus, auch eines, das mit künstlicher Intelligenz geschrieben wurde, die andere drückt eine Tastenkombination.',
   spotlight: {
-    badge: 'Neu in 1.3', h2: 'Eigene Schaltflächen: Ruby-Skripte und Tastenkombinationen',
-    text: ['Ihre Leiste enthält nicht mehr nur die Befehle, die es schon gibt: sie enthält auch die, die Sie selbst erfinden. Jede neue Schaltfläche hat den Titel, den Sie wählen, und ein eigenes Symbol jeder Art.'],
+    badge: 'Neu in 1.8', h2: 'Backup der Leisten: Exportieren und Importieren',
+    text: ['Alle Leisten, die Sie gebaut haben, mit ihren Symbolen und Schaltflächen, passen in eine einzige Datei. Bewahren Sie sie als Sicherung auf oder nehmen Sie sie auf einen anderen Computer mit, und die Leisten sind mit einem Klick wieder wie vorher da.'],
     items: [
-      { t: 'Ruby-Skript', c: '#7b3fc4', icon: true, d: 'Eine Schaltfläche, die Ihren Ruby-Code ausführt, wie die Ruby-Konsole von SketchUp: ein wiederkehrender Vorgang, eine Prüfung des Modells, eine Reihe von Schritten, alles mit einem Klick.' },
-      { t: 'Auch komplexe Skripte, mit künstlicher Intelligenz', c: '#0078d7', d: 'Sie müssen nicht programmieren können: beschreiben Sie einer künstlichen Intelligenz (zum Beispiel Claude oder ChatGPT), was SketchUp tun soll, kopieren Sie das Skript, das sie schreibt, und fügen Sie es in die Schaltfläche ein. So werden auch lange und komplexe Skripte zu einer Schaltfläche Ihrer Leiste. Probieren Sie ein neues Skript immer an einer Kopie des Modells aus.' },
-      { t: 'Tastenkombinationen', c: '#28a745', icon: true, d: 'Eine Schaltfläche, die eine Tastenkombination drückt wie die Tastatur: sie führt den Befehl aus, der in SketchUp dieses Tastenkürzel hat, auch wenn er keine eigene Schaltfläche hat.' },
-      { t: 'Eigene Symbole jeder Art', c: '#e67e00', d: 'Mit dem Stift geben Sie jeder Schaltfläche das Symbol, das Sie wollen: eine eigene Zeichnung, ein Zeichen, einen Buchstaben, ein Logo. Es reichen zwei PNG-Bilder mit 16 und 24 Pixel oder eine einzige SVG-Datei.' }
+      { t: 'Backup exportieren', c: '#0f6f6b', d: 'In „Meine Leisten“ speichert es alle Leisten in einer .json-Datei, mit den gewählten Symbolen, den Schaltflächen Ruby-Skript und Tasten und den mit Umbenennen gegebenen Namen.' },
+      { t: 'Backup importieren', c: '#0078d7', d: 'Es legt die Leisten aus der Datei wieder an, auch auf einem anderen Computer oder mit einem anderen SketchUp: sie erscheinen sofort. Hat eine Leiste den Namen einer Ihrer Leisten, wählen Sie, ob sie ersetzt wird oder Ihre bleibt.' },
+      { t: 'Ruby-Skripte in Sicherheit', c: '#7b3fc4', icon: true, d: 'Enthält das Backup Ruby-Skripte, warnt robo toolbar vor dem Import. Jedes läuft erst, nachdem Sie seinen Code gelesen und „Freigeben und ausführen“ gedrückt haben.' },
+      { t: 'Geprüfte Datei', c: '#28a745', d: 'Aus der Datei werden nur die Daten übernommen, die robo toolbar kennt, jede einzeln geprüft; Symbole müssen PNG mit 16 und 24 Pixel oder SVG sein. Kein Code läuft von selbst.' }
     ]
   },
   intro: [
@@ -2319,7 +2323,9 @@ I18N_PLUGINS.de.toolbar = {
     { t: 'Liste in alphabetischer Reihenfolge', d: 'Ein Kästchen ordnet die Befehle der Liste alphabetisch, und die Spalte der Liste wird breiter oder schmaler, wenn Sie ihren Rand ziehen.' },
     { t: 'Gespeicherte Leisten, bearbeitbar', d: 'In der Liste „Meine Leisten“ können Sie jede Leiste bearbeiten, anzeigen oder löschen. Bei ungespeicherten Änderungen erinnert Sie das Plugin, bevor Sie zu einer anderen Leiste wechseln.' },
     { t: 'Hinweis auf verschwundene Befehle', d: 'Wird das Plugin hinter einer Schaltfläche gelöscht, wird sie rot mit weißem Kreuz, und eine Meldung erklärt, was passiert ist; Sie entfernen sie, wann Sie möchten.' },
-    { t: 'In fünf Sprachen', d: 'Fenster, Meldungen und Hilfe gibt es auf Italienisch, Englisch, Deutsch, Französisch und Spanisch.' }
+    { t: 'In fünf Sprachen', d: 'Fenster, Meldungen und Hilfe gibt es auf Italienisch, Englisch, Deutsch, Französisch und Spanisch.' },
+    { t: 'Backup der Leisten', d: 'Backup exportieren speichert alle Leisten in einer Datei, mit Symbolen, Schaltflächen und Namen; Backup importieren legt sie wieder an, auch auf einem anderen Computer.' },
+    { t: 'Auch komplexe Skripte, mit künstlicher Intelligenz', d: 'Sie müssen nicht programmieren können: beschreiben Sie einer künstlichen Intelligenz (zum Beispiel Claude oder ChatGPT), was SketchUp tun soll, kopieren Sie das Skript, das sie schreibt, und fügen Sie es in die Schaltfläche ein. So werden auch lange und komplexe Skripte zu einer Schaltfläche Ihrer Leiste. Probieren Sie ein neues Skript immer an einer Kopie des Modells aus.' }
   ],
   steps: ['Öffnen Sie robo toolbar über Erweiterungen › Robo Tool.', 'Ziehen Sie die Befehle in die Leistenvorschau und ordnen Sie sie.', 'Geben Sie den Namen der Leiste ein und klicken Sie auf Leiste speichern: Sie erscheint sofort in SketchUp.'],
   how: [
@@ -2331,27 +2337,29 @@ I18N_PLUGINS.de.toolbar = {
     { t: 'Schaltflächen Ruby-Skript und Tasten', d: 'Im violetten Bereich „Zur Leiste hinzufügen“ ziehen Sie Ruby-Skript oder Tasten in die Vorschau oder klicken ihr +. Dann klicken Sie das Symbol unten links der Schaltfläche: Titel und Skript eingeben, oder in das Feld klicken und die Tastenkombination drücken. Mit dem Stift oben links geben Sie der Schaltfläche ein eigenes Symbol (PNG mit 16 und 24 Pixel oder ein SVG). Auf dem Mac SketchUp für Tasten in den Bedienungshilfen erlauben.' },
     { t: 'Meine Leisten und ungespeicherte Änderungen', d: 'Unten stehen die gespeicherten Leisten mit den Schaltflächen Bearbeiten, Anzeigen und Löschen (zum Löschen zweimal klicken). Wenn Sie bei ungespeicherten Änderungen auf Bearbeiten einer anderen Leiste klicken, fragt ein Fenster, ob gespeichert werden soll: Ja speichert und öffnet die andere Leiste, Nein verwirft die Änderungen, Abbrechen lässt alles, wie es ist.' },
     { t: 'Das generische und das rote Symbol', d: 'Das generische Symbol mit rotem Kreuz kennzeichnet einen Befehl ohne eigenes Symbol, das Sie durch ein eigenes ersetzen können. Das rote Symbol mit weißem Kreuz kennzeichnet einen nicht mehr verfügbaren Befehl, weil sein Plugin gelöscht oder nicht installiert ist: Die Prüfung läuft bei jedem Start von SketchUp und jedes Mal, wenn Sie das Fenster öffnen. In der SketchUp-Leiste zeigt die rote Schaltfläche eine Meldung; im Fenster entfernen Sie sie mit dem roten x.' },
+    { t: 'Backup exportieren und importieren', d: 'Oben rechts in „Meine Leisten“ finden Sie Backup exportieren und Backup importieren. Exportieren speichert alle Leisten in einer .json-Datei, mit den gewählten Symbolen, den Schaltflächen Ruby-Skript und Tasten und den mit Umbenennen gegebenen Namen. Importieren legt die Leisten aus dieser Datei wieder an, auch auf einem anderen Computer, und zeigt sie sofort in SketchUp: hat eine Leiste den Namen einer Ihrer Leisten, ersetzt Ja sie, Nein behält Ihre, Abbrechen hält an. Die Ruby-Skripte des Backups kommen nur herein, wenn Sie es bestätigen, und jedes läuft erst, nachdem Sie den Code gelesen und „Freigeben und ausführen“ gedrückt haben: importieren Sie Skripte nur aus eigenen Backups oder von Personen, denen Sie vertrauen.' },
     { t: 'Ein konkretes Beispiel', d: 'Sie arbeiten oft mit Linie, Rechteck, Verschieben, Drehen und Skalieren und haben zwei Robo-Plugins, die Sie ständig brauchen. Sie öffnen robo toolbar, ziehen sie in eine Leiste namens „Modellierung“, setzen eine Trennlinie zwischen SketchUp-Werkzeuge und Plugin-Befehle und speichern. Ab jetzt ist alles in einer Leiste griffbereit, in der von Ihnen bestimmten Reihenfolge.' }
   ],
-  pros: ['Eigene Leisten, so viele Sie möchten', 'Schaltflächen mit eigenen Symbolen für Ruby-Skripte, auch mit künstlicher Intelligenz geschrieben', 'Schaltflächen, die ein Ruby-Skript oder eine Tastenkombination ausführen', 'SketchUp-Werkzeuge und Robo-Plugins in derselben Liste', 'Anpassbare Symbole (PNG oder SVG)', 'Warnung bei ungespeicherten Änderungen'],
+  pros: ['Eigene Leisten, so viele Sie möchten', 'Schaltflächen mit eigenen Symbolen für Ruby-Skripte, auch mit künstlicher Intelligenz geschrieben', 'Schaltflächen, die ein Ruby-Skript oder eine Tastenkombination ausführen', 'SketchUp-Werkzeuge und Robo-Plugins in derselben Liste', 'Anpassbare Symbole (PNG oder SVG)', 'Warnung bei ungespeicherten Änderungen', 'Backup aller Leisten in einer Datei, auch auf einem anderen Computer wiederherstellbar'],
   solves: [
     { p: 'Die am häufigsten genutzten Befehle sind über viele Leisten und Menüs verteilt.', s: 'Sie sammeln sie in einer Leiste, in der gewünschten Reihenfolge.' },
     { p: 'Manche Plugin-Befehle haben kein Symbol für eine Leiste.', s: 'Sie erhalten ein generisches Symbol, das Sie durch ein eigenes ersetzen können.' },
-    { p: 'Ein Vorgang, den Sie oft machen, braucht viele Schritte oder hat keinen Befehl.', s: 'Ein Ruby-Skript, auch von einer künstlichen Intelligenz geschrieben, erledigt ihn mit einem Klick auf Ihre Schaltfläche, mit dem Symbol, das Sie wollen.' }
+    { p: 'Ein Vorgang, den Sie oft machen, braucht viele Schritte oder hat keinen Befehl.', s: 'Ein Ruby-Skript, auch von einer künstlichen Intelligenz geschrieben, erledigt ihn mit einem Klick auf Ihre Schaltfläche, mit dem Symbol, das Sie wollen.' },
+    { p: 'Sie wechseln den Computer oder installieren SketchUp neu und verlieren die Leisten, die Sie gebaut hatten.', s: 'Backup exportieren speichert sie in einer Datei, Backup importieren legt sie im Nu wieder an.' }
   ],
-  specs: [['Fenster', '900 × 600 px, skalierbar'], ['Menü', 'Robo Tool › robo toolbar'], ['Eigene Symbole', 'PNG 16 und 24 px oder SVG'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Fenster', '900 × 600 px, skalierbar'], ['Menü', 'Robo Tool › robo toolbar'], ['Eigene Symbole', 'PNG 16 und 24 px oder SVG'], ['Sprachen', 'Italiano, English, Deutsch, Français, Español'], ['Backup', '.json-Datei (Exportieren / Importieren)']]
 };
 I18N_PLUGINS.fr.toolbar = {
   tagline: 'Vos propres barres d’outils, avec des boutons pour scripts Ruby et combinaisons de touches.',
   simple: 'Choisissez les commandes que vous utilisez le plus — outils SketchUp, boutons des plugins Robo et éléments du menu Extensions — et faites-les glisser dans une barre à vous. Donnez-lui un nom, enregistrez-la et elle est là dans SketchUp, toujours prête. En plus, vous créez des boutons bien à vous, avec l’icône que vous voulez : l’un exécute un script Ruby, même écrit avec l’intelligence artificielle, l’autre appuie sur une combinaison de touches.',
   spotlight: {
-    badge: 'Nouveau 1.3', h2: 'Vos propres boutons : scripts Ruby et combinaisons de touches',
-    text: ['Votre barre ne contient plus seulement les commandes qui existent déjà : elle contient aussi celles que vous inventez. Chaque nouveau bouton a le titre que vous choisissez et une icône personnalisée de tout genre.'],
+    badge: 'Nouveau en 1.8', h2: 'Sauvegarde des barres : Exporter et Importer',
+    text: ['Toutes les barres que vous avez construites, avec leurs icônes et leurs boutons, tiennent dans un seul fichier. Gardez-le comme copie de sécurité ou emportez-le sur un autre ordinateur, et les barres reviennent comme avant d’un clic.'],
     items: [
-      { t: 'Script Ruby', c: '#7b3fc4', icon: true, d: 'Un bouton qui exécute votre code Ruby, comme la Console Ruby de SketchUp : une opération répétitive, un contrôle du modèle, une série d’étapes, le tout en un clic.' },
-      { t: 'Des scripts même complexes, avec l’intelligence artificielle', c: '#0078d7', d: 'Pas besoin de savoir programmer : décrivez à une intelligence artificielle (par exemple Claude ou ChatGPT) ce que SketchUp doit faire, copiez le script qu’elle écrit et collez-le dans le bouton. Même des scripts longs et complexes deviennent ainsi un bouton de votre barre. Essayez toujours un nouveau script sur une copie du modèle.' },
-      { t: 'Combinaisons de touches', c: '#28a745', icon: true, d: 'Un bouton qui appuie sur une combinaison de touches comme le clavier : il exécute la commande qui a ce raccourci dans SketchUp, même si elle n’a pas de bouton à elle.' },
-      { t: 'Icônes personnalisées de tout genre', c: '#e67e00', d: 'Avec le crayon, vous donnez à chaque bouton l’icône que vous voulez : un dessin à vous, un symbole, une lettre, un logo. Deux images PNG de 16 et 24 pixels suffisent, ou un seul fichier SVG.' }
+      { t: 'Exporter la sauvegarde', c: '#0f6f6b', d: 'Dans « Mes barres », enregistre dans un fichier .json toutes les barres, avec les icônes choisies, les boutons Script Ruby et Touches et les noms donnés avec Renommer.' },
+      { t: 'Importer la sauvegarde', c: '#0078d7', d: 'Recrée les barres depuis le fichier, même sur un autre ordinateur ou un autre SketchUp : elles apparaissent tout de suite. Si une barre porte le nom d’une des vôtres, vous choisissez de la remplacer ou de garder la vôtre.' },
+      { t: 'Scripts Ruby en sécurité', c: '#7b3fc4', icon: true, d: 'Si la sauvegarde contient des scripts Ruby, robo toolbar vous prévient avant de les importer. Chacun ne s’exécute qu’après que vous avez lu son code et appuyé sur « Approuver et exécuter ».' },
+      { t: 'Fichier contrôlé', c: '#28a745', d: 'Seules les données que robo toolbar connaît sont prises du fichier, chacune contrôlée ; les icônes doivent être des PNG de 16 et 24 pixels ou des SVG. Aucun code ne s’exécute tout seul.' }
     ]
   },
   intro: [
@@ -2367,7 +2375,9 @@ I18N_PLUGINS.fr.toolbar = {
     { t: 'Liste par ordre alphabétique', d: 'Une case met les commandes de la liste par ordre alphabétique, et la colonne de la liste s’élargit ou se rétrécit en faisant glisser son bord.' },
     { t: 'Barres enregistrées, modifiables', d: 'Dans la liste « Mes barres », vous pouvez modifier, afficher ou supprimer chaque barre. En cas de modifications non enregistrées, le plugin vous le rappelle avant de passer à une autre barre.' },
     { t: 'Alerte sur les commandes disparues', d: 'Si le plugin d’un bouton est supprimé, le bouton devient rouge avec une croix blanche et un message explique ce qui s’est passé ; vous le retirez quand vous voulez.' },
-    { t: 'En cinq langues', d: 'Fenêtre, messages et aide sont en italien, anglais, allemand, français et espagnol.' }
+    { t: 'En cinq langues', d: 'Fenêtre, messages et aide sont en italien, anglais, allemand, français et espagnol.' },
+    { t: 'Sauvegarde des barres', d: 'Exporter la sauvegarde enregistre toutes les barres dans un fichier, avec icônes, boutons et noms ; Importer la sauvegarde les recrée, même sur un autre ordinateur.' },
+    { t: 'Des scripts même complexes, avec l’intelligence artificielle', d: 'Pas besoin de savoir programmer : décrivez à une intelligence artificielle (par exemple Claude ou ChatGPT) ce que SketchUp doit faire, copiez le script qu’elle écrit et collez-le dans le bouton. Même des scripts longs et complexes deviennent ainsi un bouton de votre barre. Essayez toujours un nouveau script sur une copie du modèle.' }
   ],
   steps: ['Ouvrez robo toolbar depuis Extensions › Robo Tool.', 'Faites glisser les commandes dans l’aperçu de la barre et réorganisez-les.', 'Saisissez le nom de la barre et cliquez sur Enregistrer la barre : elle apparaît tout de suite dans SketchUp.'],
   how: [
@@ -2379,27 +2389,29 @@ I18N_PLUGINS.fr.toolbar = {
     { t: 'Boutons Script Ruby et Touches', d: 'Dans la zone violette « Ajouter à la barre », faites glisser Script Ruby ou Touches dans l’aperçu, ou cliquez sur leur +. Cliquez ensuite sur le symbole en bas à gauche du bouton : tapez le titre et le script, ou cliquez dans le champ et appuyez sur la combinaison de touches. Avec le crayon en haut à gauche, donnez au bouton votre propre icône (PNG de 16 et 24 pixels, ou un SVG). Sur Mac, pour Touches, autorisez SketchUp dans Accessibilité.' },
     { t: 'Mes barres et modifications non enregistrées', d: 'En bas se trouvent les barres enregistrées, avec les boutons Modifier, Afficher et Supprimer (cliquez deux fois pour supprimer). Si vous cliquez sur Modifier pour une autre barre alors que vous avez des modifications non enregistrées, une fenêtre demande s’il faut les enregistrer : Oui les enregistre et ouvre l’autre barre, Non les abandonne, Annuler vous laisse où vous êtes.' },
     { t: 'L’icône générique et l’icône rouge', d: 'L’icône générique avec une croix rouge signale une commande sans icône propre, que vous pouvez remplacer par la vôtre. L’icône rouge avec une croix blanche signale une commande qui n’est plus disponible, car son plugin a été supprimé ou n’est pas installé : la vérification a lieu à chaque démarrage de SketchUp et chaque fois que vous ouvrez la fenêtre. Dans la barre SketchUp, le bouton rouge affiche un message ; dans la fenêtre, vous le retirez avec le x rouge.' },
+    { t: 'Exporter et Importer la sauvegarde', d: 'En haut à droite de « Mes barres » se trouvent Exporter la sauvegarde et Importer la sauvegarde. Exporter enregistre toutes les barres dans un fichier .json, avec les icônes choisies, les boutons Script Ruby et Touches et les noms donnés avec Renommer. Importer recrée les barres depuis ce fichier, même sur un autre ordinateur, et les affiche tout de suite dans SketchUp : si une barre porte le nom d’une des vôtres, Oui la remplace, Non garde la vôtre, Annuler arrête. Les scripts Ruby de la sauvegarde n’entrent que si vous le confirmez, et chacun ne s’exécute qu’après que vous avez lu le code et appuyé sur « Approuver et exécuter » : n’importez des scripts que depuis vos sauvegardes ou celles de personnes de confiance.' },
     { t: 'Un exemple concret', d: 'Vous travaillez souvent avec ligne, rectangle, déplacer, pivoter et échelle, et vous avez deux plugins Robo que vous utilisez en permanence. Vous ouvrez robo toolbar, vous les faites glisser dans une barre appelée « Modélisation », vous mettez un séparateur entre les outils SketchUp et ceux des plugins, puis vous enregistrez. Dès lors, tout est à portée de main dans une seule barre, dans l’ordre que vous avez décidé.' }
   ],
-  pros: ['Barres sur mesure, autant que vous voulez', 'Boutons avec vos icônes pour des scripts Ruby, même écrits avec l’intelligence artificielle', 'Boutons qui exécutent un script Ruby ou une combinaison de touches', 'Outils SketchUp et plugins Robo dans la même liste', 'Icônes personnalisables (PNG ou SVG)', 'Avertissement en cas de modifications non enregistrées'],
+  pros: ['Barres sur mesure, autant que vous voulez', 'Boutons avec vos icônes pour des scripts Ruby, même écrits avec l’intelligence artificielle', 'Boutons qui exécutent un script Ruby ou une combinaison de touches', 'Outils SketchUp et plugins Robo dans la même liste', 'Icônes personnalisables (PNG ou SVG)', 'Avertissement en cas de modifications non enregistrées', 'Sauvegarde de toutes les barres dans un fichier, à restaurer même sur un autre ordinateur'],
   solves: [
     { p: 'Les commandes les plus utilisées sont dispersées dans de nombreuses barres et menus.', s: 'Vous les réunissez dans une seule barre, dans l’ordre que vous préférez.' },
     { p: 'Certaines commandes de plugins n’ont pas d’icône à placer dans une barre.', s: 'Elles reçoivent une icône générique que vous pouvez remplacer par la vôtre.' },
-    { p: 'Une opération que vous faites souvent demande de nombreuses étapes ou n’a pas de commande.', s: 'Un script Ruby, même écrit par une intelligence artificielle, la fait en un clic depuis votre bouton, avec l’icône que vous voulez.' }
+    { p: 'Une opération que vous faites souvent demande de nombreuses étapes ou n’a pas de commande.', s: 'Un script Ruby, même écrit par une intelligence artificielle, la fait en un clic depuis votre bouton, avec l’icône que vous voulez.' },
+    { p: 'Vous changez d’ordinateur ou réinstallez SketchUp et perdez les barres que vous aviez construites.', s: 'Exporter la sauvegarde les enregistre dans un fichier, Importer la sauvegarde les recrée en un instant.' }
   ],
-  specs: [['Fenêtre', '900 × 600 px, redimensionnable'], ['Menu', 'Robo Tool › robo toolbar'], ['Icônes personnalisées', 'PNG 16 et 24 px, ou SVG'], ['Langues', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Fenêtre', '900 × 600 px, redimensionnable'], ['Menu', 'Robo Tool › robo toolbar'], ['Icônes personnalisées', 'PNG 16 et 24 px, ou SVG'], ['Langues', 'Italiano, English, Deutsch, Français, Español'], ['Sauvegarde', 'fichier .json (Exporter / Importer)']]
 };
 I18N_PLUGINS.es.toolbar = {
   tagline: 'Barras de herramientas tuyas, con botones para scripts Ruby y combinaciones de teclas.',
   simple: 'Elige los comandos que más usas — herramientas de SketchUp, botones de los plugins Robo y elementos del menú Extensiones — y arrástralos a una barra tuya. Ponle un nombre, guárdala y la tendrás en SketchUp, siempre lista. Además creas botones totalmente tuyos, con el icono que quieras: uno ejecuta un script Ruby, incluso escrito con inteligencia artificial, el otro pulsa una combinación de teclas.',
   spotlight: {
-    badge: 'Novedad 1.3', h2: 'Botones tuyos: scripts Ruby y combinaciones de teclas',
-    text: ['Tu barra ya no contiene solo los comandos que ya existen: contiene también los que inventas tú. Cada botón nuevo tiene el título que eliges y un icono personalizado de cualquier tipo.'],
+    badge: 'Novedad 1.8', h2: 'Copia de las barras: Exportar e Importar',
+    text: ['Todas las barras que has construido, con sus iconos y sus botones, caben en un solo archivo. Guárdalo como copia de seguridad o llévalo a otro ordenador, y las barras vuelven como estaban con un clic.'],
     items: [
-      { t: 'Script Ruby', c: '#7b3fc4', icon: true, d: 'Un botón que ejecuta tu código Ruby, como la Consola Ruby de SketchUp: una operación repetitiva, un control del modelo, una serie de pasos, todo con un solo clic.' },
-      { t: 'Scripts incluso complejos, con inteligencia artificial', c: '#0078d7', d: 'No hace falta saber programar: describe a una inteligencia artificial (por ejemplo Claude o ChatGPT) lo que quieres que haga SketchUp, copia el script que te escribe y pégalo en el botón. Así incluso scripts largos y complejos se convierten en un botón de tu barra. Prueba siempre un script nuevo en una copia del modelo.' },
-      { t: 'Combinaciones de teclas', c: '#28a745', icon: true, d: 'Un botón que pulsa una combinación de teclas como el teclado: ejecuta el comando que tiene ese atajo en SketchUp, aunque no tenga un botón propio.' },
-      { t: 'Iconos personalizados de cualquier tipo', c: '#e67e00', d: 'Con el lápiz das a cada botón el icono que quieras: un dibujo tuyo, un símbolo, una letra, un logo. Bastan dos imágenes PNG de 16 y 24 píxeles, o un solo archivo SVG.' }
+      { t: 'Exportar copia', c: '#0f6f6b', d: 'En «Mis barras» guarda en un archivo .json todas las barras, con los iconos elegidos, los botones Script Ruby y Teclas y los nombres dados con Cambiar nombre.' },
+      { t: 'Importar copia', c: '#0078d7', d: 'Vuelve a crear las barras desde el archivo, también en otro ordenador o con otro SketchUp: aparecen enseguida. Si una barra tiene el mismo nombre que una tuya, eliges si reemplazarla o mantener la tuya.' },
+      { t: 'Scripts Ruby seguros', c: '#7b3fc4', icon: true, d: 'Si la copia contiene scripts Ruby, robo toolbar te avisa antes de importarlos. Cada uno se ejecuta solo después de que hayas leído su código y pulsado «Aprobar y ejecutar».' },
+      { t: 'Archivo comprobado', c: '#28a745', d: 'Del archivo solo se toman los datos que robo toolbar conoce, cada uno comprobado; los iconos deben ser PNG de 16 y 24 píxeles o SVG. Ningún código se ejecuta solo.' }
     ]
   },
   intro: [
@@ -2415,7 +2427,9 @@ I18N_PLUGINS.es.toolbar = {
     { t: 'Lista en orden alfabético', d: 'Una casilla pone en orden alfabético los comandos de la lista, y la columna de la lista se ensancha o se estrecha arrastrando su borde.' },
     { t: 'Barras guardadas, editables', d: 'En la lista «Mis barras» puedes editar, mostrar o eliminar cada barra. Si tienes cambios sin guardar, el plugin te lo recuerda antes de pasar a otra barra.' },
     { t: 'Aviso de comandos desaparecidos', d: 'Si se elimina el plugin de un botón, el botón se vuelve rojo con una cruz blanca y un mensaje explica lo ocurrido; lo quitas cuando quieras.' },
-    { t: 'En cinco idiomas', d: 'La ventana, los mensajes y la ayuda están en italiano, inglés, alemán, francés y español.' }
+    { t: 'En cinco idiomas', d: 'La ventana, los mensajes y la ayuda están en italiano, inglés, alemán, francés y español.' },
+    { t: 'Copia de las barras', d: 'Exportar copia guarda todas las barras en un archivo, con iconos, botones y nombres; Importar copia las vuelve a crear, también en otro ordenador.' },
+    { t: 'Scripts incluso complejos, con inteligencia artificial', d: 'No hace falta saber programar: describe a una inteligencia artificial (por ejemplo Claude o ChatGPT) lo que quieres que haga SketchUp, copia el script que te escribe y pégalo en el botón. Así incluso scripts largos y complejos se convierten en un botón de tu barra. Prueba siempre un script nuevo en una copia del modelo.' }
   ],
   steps: ['Abre robo toolbar desde Extensiones › Robo Tool.', 'Arrastra los comandos a la vista previa de la barra y reordénalos.', 'Escribe el nombre de la barra y pulsa Guardar barra: aparece enseguida en SketchUp.'],
   how: [
@@ -2427,15 +2441,17 @@ I18N_PLUGINS.es.toolbar = {
     { t: 'Botones Script Ruby y Teclas', d: 'En la zona morada «Añadir a la barra» arrastra Script Ruby o Teclas a la vista previa, o pulsa su +. Luego pulsa el símbolo abajo a la izquierda del botón: escribe el título y el script, o pulsa en el campo y pulsa la combinación de teclas. Con el lápiz arriba a la izquierda das al botón un icono tuyo (PNG de 16 y 24 píxeles, o un SVG). En Mac, para Teclas, permite SketchUp en Accesibilidad.' },
     { t: 'Mis barras y cambios sin guardar', d: 'Abajo están las barras guardadas, con los botones Editar, Mostrar y Eliminar (haz clic dos veces para eliminar). Si pulsas Editar en otra barra mientras tienes cambios sin guardar, una ventana pregunta si quieres guardarlos: Sí los guarda y abre la otra barra, No los descarta, Cancelar te deja donde estás.' },
     { t: 'El icono genérico y el icono rojo', d: 'El icono genérico con una cruz roja señala un comando sin icono propio, que puedes sustituir por el tuyo. El icono rojo con una cruz blanca señala un comando que ya no está disponible, porque su plugin se eliminó o no está instalado: la comprobación se hace en cada inicio de SketchUp y cada vez que abres la ventana. En la barra de SketchUp el botón rojo muestra un mensaje; en la ventana lo quitas con la x roja.' },
+    { t: 'Exportar e Importar copia', d: 'Arriba a la derecha de «Mis barras» están Exportar copia e Importar copia. Exportar guarda todas las barras en un archivo .json, con los iconos elegidos, los botones Script Ruby y Teclas y los nombres dados con Cambiar nombre. Importar vuelve a crear las barras desde ese archivo, también en otro ordenador, y las muestra enseguida en SketchUp: si una barra tiene el mismo nombre que una tuya, Sí la reemplaza, No mantiene la tuya, Cancelar se detiene. Los scripts Ruby de la copia entran solo si lo confirmas, y cada uno se ejecuta solo después de que hayas leído el código y pulsado «Aprobar y ejecutar»: importa scripts solo de copias tuyas o de personas de confianza.' },
     { t: 'Un ejemplo concreto', d: 'Trabajas a menudo con línea, rectángulo, mover, rotar y escalar, y tienes dos plugins Robo que usas continuamente. Abres robo toolbar, los arrastras a una barra llamada «Modelado», pones un separador entre las herramientas de SketchUp y las de los plugins y guardas. Desde ese momento tienes todo a mano en una sola barra, en el orden que decidiste.' }
   ],
-  pros: ['Barras a medida, tantas como quieras', 'Botones con iconos tuyos para scripts Ruby, incluso escritos con inteligencia artificial', 'Botones que ejecutan un script Ruby o una combinación de teclas', 'Herramientas de SketchUp y plugins Robo en la misma lista', 'Iconos personalizables (PNG o SVG)', 'Aviso si tienes cambios sin guardar'],
+  pros: ['Barras a medida, tantas como quieras', 'Botones con iconos tuyos para scripts Ruby, incluso escritos con inteligencia artificial', 'Botones que ejecutan un script Ruby o una combinación de teclas', 'Herramientas de SketchUp y plugins Robo en la misma lista', 'Iconos personalizables (PNG o SVG)', 'Aviso si tienes cambios sin guardar', 'Copia de todas las barras en un archivo, para restaurarlas también en otro ordenador'],
   solves: [
     { p: 'Los comandos que más usas están repartidos entre muchas barras y menús.', s: 'Los reúnes en una sola barra, en el orden que prefieras.' },
     { p: 'Algunos comandos de plugins no tienen un icono para poner en una barra.', s: 'Reciben un icono genérico que puedes sustituir por el tuyo.' },
-    { p: 'Una operación que haces a menudo requiere muchos pasos o no tiene comando.', s: 'Un script Ruby, incluso escrito por una inteligencia artificial, la hace con un clic desde tu botón, con el icono que quieras.' }
+    { p: 'Una operación que haces a menudo requiere muchos pasos o no tiene comando.', s: 'Un script Ruby, incluso escrito por una inteligencia artificial, la hace con un clic desde tu botón, con el icono que quieras.' },
+    { p: 'Cambias de ordenador o reinstalas SketchUp y pierdes las barras que habías construido.', s: 'Exportar copia las guarda en un archivo, Importar copia las vuelve a crear en un momento.' }
   ],
-  specs: [['Ventana', '900 × 600 px, redimensionable'], ['Menú', 'Robo Tool › robo toolbar'], ['Iconos personalizados', 'PNG 16 y 24 px, o SVG'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español']]
+  specs: [['Ventana', '900 × 600 px, redimensionable'], ['Menú', 'Robo Tool › robo toolbar'], ['Iconos personalizados', 'PNG 16 y 24 px, o SVG'], ['Idiomas', 'Italiano, English, Deutsch, Français, Español'], ['Copia', 'archivo .json (Exportar / Importar)']]
 };
 I18N_PLUGINS.en.exporter = {
   tagline: "Export to DWG, DXF, OBJ, GLB, FBX and SKP: true arcs, layers, blocks and textures in place.",
